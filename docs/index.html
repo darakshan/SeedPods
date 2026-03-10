@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seed Nuggets</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,600;1,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1612;
+      --paper: #f5f0e8;
+      --gold: #c8922a;
+      --rust: #9b3d1a;
+      --sage: #4a6741;
+      --muted: #8a7f72;
+      --rule: #d4c9b8;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: 'Fraunces', Georgia, serif;
+      min-height: 100vh;
+    }
+
+    /* Grain overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 1000;
+      opacity: 0.4;
+    }
+
+    header {
+      border-bottom: 1px solid var(--rule);
+      padding: 2rem 4rem;
+      display: flex;
+      align-items: baseline;
+      gap: 1.5rem;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      font-weight: 300;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+
+    header h1 em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    header nav {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--muted);
+      display: flex;
+      gap: 1.5rem;
+      margin-left: auto;
+    }
+
+    header nav a {
+      color: var(--muted);
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      transition: color 0.2s;
+    }
+
+    header nav a:hover { color: var(--gold); }
+
+    .hero {
+      padding: 5rem 4rem 3rem;
+      max-width: 780px;
+    }
+
+    .hero .eyebrow {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--gold);
+      margin-bottom: 1.2rem;
+    }
+
+    .hero p {
+      font-size: 1.35rem;
+      font-weight: 300;
+      line-height: 1.75;
+      color: var(--ink);
+    }
+
+    .hero p + p { margin-top: 1rem; }
+
+    .divider {
+      margin: 3rem 4rem;
+      border: none;
+      border-top: 1px solid var(--rule);
+    }
+
+    /* About section */
+    section.about {
+      padding: 0 4rem 3rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      max-width: 1100px;
+    }
+
+    section.about h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      margin-bottom: 1.2rem;
+      color: var(--rust);
+      font-style: italic;
+    }
+
+    section.about p {
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: #3a3530;
+      font-weight: 300;
+    }
+
+    section.about p + p { margin-top: 0.8rem; }
+
+    .nugget-anatomy {
+      background: white;
+      border: 1px solid var(--rule);
+      border-radius: 2px;
+      padding: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .nugget-anatomy h3 {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .anatomy-item {
+      display: flex;
+      gap: 0.8rem;
+      align-items: baseline;
+      padding: 0.4rem 0;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .anatomy-item:last-child { border-bottom: none; }
+
+    .anatomy-item .label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--gold);
+      min-width: 90px;
+      text-transform: uppercase;
+    }
+
+    .anatomy-item .desc {
+      font-size: 0.85rem;
+      color: var(--muted);
+      font-weight: 300;
+      line-height: 1.5;
+    }
+
+    /* Nuggets list page link */
+    .nuggets-link {
+      margin: 0 4rem 4rem;
+    }
+
+    .nuggets-link a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--sage);
+      text-decoration: none;
+      border: 1px solid var(--sage);
+      padding: 0.6rem 1.2rem;
+      border-radius: 1px;
+      transition: all 0.2s;
+    }
+
+    .nuggets-link a:hover {
+      background: var(--sage);
+      color: var(--paper);
+    }
+
+    .nuggets-link a::after { content: '→'; }
+
+    footer {
+      border-top: 1px solid var(--rule);
+      padding: 1.5rem 4rem;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    /* Animations */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    header { animation: fadeUp 0.5s ease both; }
+    .hero { animation: fadeUp 0.5s 0.1s ease both; }
+    section.about { animation: fadeUp 0.5s 0.2s ease both; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1><em>Seed</em> Nuggets</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="nuggets.html">All Nuggets</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <div class="eyebrow">About this site</div>
+    <p>A conversation between a human and an AI — exploring how modern machine intelligence actually works, from the physics of silicon up to the geography of data centers.</p>
+    <p>Each <em>nugget</em> is a self-contained explanation of one idea: precise enough to be useful, approachable enough to be readable. The goal is a reference you can actually navigate — not a stack of chat transcripts.</p>
+    <p>The site grows as the conversation grows. Pages begin as stubs and fill in as topics are explored. Claude generates the content; the human curates, edits, and publishes.</p>
+  </div>
+
+  <hr class="divider">
+
+  <section class="about">
+    <div>
+      <h2>What we're building</h2>
+      <p>Most explanations of AI live at one of two extremes: pop-science hand-waving, or academic papers that assume you already know everything. This site aims at the gap — technically honest, but written for someone who thinks carefully and wants real understanding.</p>
+      <p>Topics follow a natural hierarchy: computation at the lowest level, then memory, then parallelism, then systems, then the model itself. Each layer depends on the ones below it.</p>
+      <p>The conversation that produces each nugget is preserved in spirit: you'll often see the question that prompted it, because the question is half the understanding.</p>
+    </div>
+
+    <div>
+      <h2>Anatomy of a nugget</h2>
+      <div class="nugget-anatomy">
+        <h3>Every nugget contains</h3>
+        <div class="anatomy-item">
+          <span class="label">Question</span>
+          <span class="desc">The prompt or intuition that motivated the explanation</span>
+        </div>
+        <div class="anatomy-item">
+          <span class="label">Core idea</span>
+          <span class="desc">The one thing to walk away understanding</span>
+        </div>
+        <div class="anatomy-item">
+          <span class="label">Mechanism</span>
+          <span class="desc">How it actually works, with diagrams or code where useful</span>
+        </div>
+        <div class="anatomy-item">
+          <span class="label">Why it matters</span>
+          <span class="desc">The consequence or constraint this creates at higher levels</span>
+        </div>
+        <div class="anatomy-item">
+          <span class="label">Links</span>
+          <span class="desc">Related nuggets above and below in the hierarchy</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="nuggets-link">
+    <a href="nuggets.html">Browse all nuggets</a>
+  </div>
+
+  <footer>
+    Seed Nuggets &mdash; generated in conversation with Claude &mdash; hosted on GitHub Pages
+  </footer>
+
+</body>
+</html>

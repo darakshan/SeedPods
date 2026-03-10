@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Nuggets — Seed Nuggets</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,600;1,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1612;
+      --paper: #f5f0e8;
+      --gold: #c8922a;
+      --rust: #9b3d1a;
+      --sage: #4a6741;
+      --muted: #8a7f72;
+      --rule: #d4c9b8;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: 'Fraunces', Georgia, serif;
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 1000;
+      opacity: 0.4;
+    }
+
+    header {
+      border-bottom: 1px solid var(--rule);
+      padding: 2rem 4rem;
+      display: flex;
+      align-items: baseline;
+      gap: 1.5rem;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      font-weight: 300;
+      letter-spacing: -0.02em;
+    }
+
+    header h1 em { font-style: italic; color: var(--gold); }
+
+    header nav {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--muted);
+      display: flex;
+      gap: 1.5rem;
+      margin-left: auto;
+    }
+
+    header nav a {
+      color: var(--muted);
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      transition: color 0.2s;
+    }
+
+    header nav a:hover { color: var(--gold); }
+
+    .page-title {
+      padding: 3rem 4rem 2rem;
+    }
+
+    .page-title .eyebrow {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--gold);
+      margin-bottom: 0.8rem;
+    }
+
+    .page-title h2 {
+      font-size: 2rem;
+      font-weight: 300;
+      font-style: italic;
+    }
+
+    .page-title p {
+      margin-top: 0.8rem;
+      font-size: 0.95rem;
+      color: var(--muted);
+      font-weight: 300;
+      max-width: 600px;
+      line-height: 1.7;
+    }
+
+    .nugget-group {
+      padding: 0 4rem 3rem;
+      max-width: 900px;
+    }
+
+    .group-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--rust);
+      margin-bottom: 0.8rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .nugget-list {
+      list-style: none;
+      margin-bottom: 2.5rem;
+    }
+
+    .nugget-item {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--rule);
+      animation: fadeUp 0.4s ease both;
+    }
+
+    .nugget-item:last-child { border-bottom: none; }
+
+    .nugget-num {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--muted);
+      min-width: 2rem;
+    }
+
+    .nugget-title {
+      font-size: 1rem;
+      font-weight: 300;
+      flex: 1;
+    }
+
+    .nugget-title a {
+      color: var(--ink);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nugget-title a:hover { color: var(--gold); }
+
+    .nugget-title.stub {
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    .nugget-status {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 0.15rem 0.5rem;
+      border-radius: 1px;
+    }
+
+    .status-done {
+      background: var(--sage);
+      color: var(--paper);
+    }
+
+    .status-stub {
+      background: var(--rule);
+      color: var(--muted);
+    }
+
+    footer {
+      border-top: 1px solid var(--rule);
+      padding: 1.5rem 4rem;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .nugget-item:nth-child(1) { animation-delay: 0.05s; }
+    .nugget-item:nth-child(2) { animation-delay: 0.1s; }
+    .nugget-item:nth-child(3) { animation-delay: 0.15s; }
+    .nugget-item:nth-child(4) { animation-delay: 0.2s; }
+    .nugget-item:nth-child(5) { animation-delay: 0.25s; }
+    .nugget-item:nth-child(6) { animation-delay: 0.3s; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1><em>Seed</em> Nuggets</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="nuggets.html">All Nuggets</a>
+    </nav>
+  </header>
+
+  <div class="page-title">
+    <div class="eyebrow">Index</div>
+    <h2>All Nuggets</h2>
+    <p>Each nugget is a self-contained explanation. Green means the page exists; grey means it's a planned stub. The hierarchy runs from silicon physics at the bottom to distributed systems at the top.</p>
+  </div>
+
+  <div class="nugget-group">
+    <div class="group-label">Layer 1 — Computation</div>
+    <ul class="nugget-list">
+      <li class="nugget-item">
+        <span class="nugget-num">01</span>
+        <span class="nugget-title"><a href="nuggets/matrix-multiply.html">Matrix multiplication as the primitive operation of AI</a></span>
+        <span class="nugget-status status-stub">stub</span>
+      </li>
+      <li class="nugget-item">
+        <span class="nugget-num">02</span>
+        <span class="nugget-title stub">Why matmul is recursively self-similar</span>
+        <span class="nugget-status status-stub">stub</span>
+      </li>
+      <li class="nugget-item">
+        <span class="nugget-num">03</span>
+        <span class="nugget-title stub">Tensor Cores: multiply-accumulate in hardware</span>
+        <span class="nugget-status status-stub">stub</span>
+      </li>
+    </ul>
+
+    <div class="group-label">Layer 2 — Memory Hierarchy (single GPU)</div>
+    <ul class="nugget-list">
+      <li class="nugget-item">
+        <span class="nugget-num">04</span>
+        <span class="nugget-title"><a href="nuggets/tiling.html">Tiling: breaking big matmuls into pieces a GPU can hold</a></span>
+        <span class="nugget-status status-stub">stub</span>
+      </li>
+      <li class="nugget-item">
+        <span class="nugget-num">05</span>
+        <span class="nugget-title stub">The GPU memory hierarchy: registers, SRAM, HBM</span>
+        <span class="nugget-status status-stub">stub</span>
+      </li>
+      <li class="nugget-item">
+        <span class="nugget-num">06</span>
+        <span class="nugget-title stub">Arithmetic intensity: the ratio that determines everything</span>
+        <span class="nugget-status status-stub">stub</span>
+      </li>
+      <li class="nugget-item">
+        <span class="nugget-num">07</span>
+        <span class="nugget-title stub">FlashAttention: fusing kernels to avoid HBM round-trips</span>
+        <span class="nugget-status status-stub">stub</span>
+      </li>
+    </ul>
+
+    <div class="group-label">Layer 3 — Parallelism (multi-GPU, multi-node, multi-DC)</div>
+    <ul class="nugget-list">
+      <li class="nugget-item">
+        <span class="nugget-num">08</span>
+        <span class="nugget-title"><a href="nuggets/tensor-parallelism.html">Tensor parallelism: splitting weight matrices across GPUs</a></span>
+        <span class="nugget-status status-stub">stub</span>
+      </li>
+      <li class="nugget-item">
+        <span class="nugget-num">09</span>
+        <span class="nugget-title stub">Pipeline parallelism: layers as an assembly line across nodes</span>
+        <span class="nugget-status status-stub">stub</span>
+      </li>
+      <li class="nugget-item">
+        <span class="nugget-num">10</span>
+        <span class="nugget-title stub">Data parallelism: replicas processing different examples</span>
+        <span class="nugget-status status-stub">stub</span>
+      </li>
+      <li class="nugget-item">
+        <span class="nugget-num">11</span>
+        <span class="nugget-title stub">3D parallelism: combining all three strategies</span>
+        <span class="nugget-status status-stub">stub</span>
+      </li>
+      <li class="nugget-item">
+        <span class="nugget-num">12</span>
+        <span class="nugget-title stub">Interconnects: NVLink, InfiniBand, and WAN — the speed ladder</span>
+        <span class="nugget-status status-stub">stub</span>
+      </li>
+      <li class="nugget-item">
+        <span class="nugget-num">13</span>
+        <span class="nugget-title stub">Why training stays in one data center</span>
+        <span class="nugget-status status-stub">stub</span>
+      </li>
+    </ul>
+
+    <div class="group-label">Layer 4 — Architecture (coming soon)</div>
+    <ul class="nugget-list">
+      <li class="nugget-item">
+        <span class="nugget-num">14</span>
+        <span class="nugget-title stub">The transformer: attention as dynamic routing</span>
+        <span class="nugget-status status-stub">stub</span>
+      </li>
+      <li class="nugget-item">
+        <span class="nugget-num">15</span>
+        <span class="nugget-title stub">Why batch size matters so much for GPU utilization</span>
+        <span class="nugget-status status-stub">stub</span>
+      </li>
+    </ul>
+  </div>
+
+  <footer>
+    Seed Nuggets &mdash; generated in conversation with Claude &mdash; hosted on GitHub Pages
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tensor Parallelism — Seed Nuggets</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,600;1,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1612;
+      --paper: #f5f0e8;
+      --gold: #c8922a;
+      --rust: #9b3d1a;
+      --sage: #4a6741;
+      --muted: #8a7f72;
+      --rule: #d4c9b8;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: var(--paper); color: var(--ink); font-family: 'Fraunces', Georgia, serif; min-height: 100vh; }
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 1000; opacity: 0.4;
+    }
+    header { border-bottom: 1px solid var(--rule); padding: 2rem 4rem; display: flex; align-items: baseline; gap: 1.5rem; }
+    header h1 { font-size: 2.8rem; font-weight: 300; letter-spacing: -0.02em; }
+    header h1 em { font-style: italic; color: var(--gold); }
+    header nav { font-family: 'DM Mono', monospace; font-size: 0.75rem; color: var(--muted); display: flex; gap: 1.5rem; margin-left: auto; }
+    header nav a { color: var(--muted); text-decoration: none; text-transform: uppercase; letter-spacing: 0.1em; transition: color 0.2s; }
+    header nav a:hover { color: var(--gold); }
+
+    .nugget-header { padding: 3rem 4rem 2rem; max-width: 780px; }
+    .breadcrumb { font-family: 'DM Mono', monospace; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--muted); margin-bottom: 1rem; }
+    .breadcrumb a { color: var(--gold); text-decoration: none; }
+    .nugget-num-label { font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--gold); margin-bottom: 0.5rem; }
+    .nugget-header h2 { font-size: 2.2rem; font-weight: 300; font-style: italic; line-height: 1.25; margin-bottom: 1rem; }
+    .core-idea { background: white; border-left: 3px solid var(--gold); padding: 1.2rem 1.5rem; margin-top: 1.5rem; font-size: 1.05rem; font-weight: 300; line-height: 1.7; font-style: italic; color: #3a3530; }
+
+    .nugget-body { padding: 2rem 4rem; max-width: 780px; }
+    .nugget-body h3 { font-family: 'DM Mono', monospace; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--rust); margin: 2.5rem 0 1rem; padding-bottom: 0.4rem; border-bottom: 1px solid var(--rule); }
+    .nugget-body p { font-size: 0.97rem; line-height: 1.85; color: #3a3530; font-weight: 300; margin-bottom: 1rem; }
+
+    pre {
+      background: #1a1612; color: #f5f0e8;
+      font-family: 'DM Mono', monospace; font-size: 0.78rem; line-height: 1.6;
+      padding: 1.5rem; border-radius: 2px; overflow-x: auto; margin: 1.5rem 0;
+    }
+
+    table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.88rem; }
+    th { font-family: 'DM Mono', monospace; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); text-align: left; padding: 0.5rem 0.8rem; border-bottom: 2px solid var(--rule); }
+    td { padding: 0.6rem 0.8rem; border-bottom: 1px solid var(--rule); font-weight: 300; color: #3a3530; }
+    tr:last-child td { border-bottom: none; }
+    td:first-child { font-family: 'DM Mono', monospace; font-size: 0.8rem; color: var(--gold); }
+
+    .links-section { padding: 2rem 4rem 4rem; max-width: 780px; }
+    .links-section h3 { font-family: 'DM Mono', monospace; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--muted); margin-bottom: 1rem; }
+    .link-chips { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+    .link-chip { font-family: 'DM Mono', monospace; font-size: 0.7rem; padding: 0.3rem 0.8rem; border: 1px solid var(--rule); border-radius: 1px; color: var(--muted); text-decoration: none; transition: all 0.2s; }
+    .link-chip:hover { border-color: var(--gold); color: var(--gold); }
+
+    footer { border-top: 1px solid var(--rule); padding: 1.5rem 4rem; font-family: 'DM Mono', monospace; font-size: 0.65rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1><em>Seed</em> Nuggets</h1>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../nuggets.html">All Nuggets</a>
+    </nav>
+  </header>
+
+  <div class="nugget-header">
+    <div class="breadcrumb"><a href="../nuggets.html">All nuggets</a> › Layer 3 — Parallelism</div>
+    <div class="nugget-num-label">Nugget 08</div>
+    <h2>Tensor parallelism: splitting weight matrices across GPUs</h2>
+    <div class="core-idea">
+      When a single weight matrix is too large (or too slow) for one GPU, it can be sliced into vertical columns and distributed across multiple GPUs. Each GPU computes its portion simultaneously; results are summed with an AllReduce. This requires very high-bandwidth interconnect because it happens inside every single layer.
+    </div>
+  </div>
+
+  <div class="nugget-body">
+
+    <h3>The question</h3>
+    <p>We've seen how tiling breaks a matmul into pieces within a single GPU. But what about when the model itself is too large for one GPU, or when we want more GPUs working on the same layer at the same time?</p>
+
+    <h3>Mechanism</h3>
+    <p>In tensor parallelism, the weight matrix W is split column-wise across N GPUs. Each GPU receives the full input activation A, multiplies it against its slice of W, and produces a partial output. These partial outputs are then summed across all GPUs via an <em>AllReduce</em> collective operation.</p>
+
+<pre>Input A (full, replicated on all GPUs)
+
+GPU 0: A × W[:, 0:2048]   ──┐
+GPU 1: A × W[:, 2048:4096] ──┼──► AllReduce (sum) ──► output
+GPU 2: A × W[:, 4096:6144] ──┘
+
+All GPUs participate simultaneously, then synchronize.</pre>
+
+    <p>The AllReduce is the critical synchronization point. Every GPU must send its partial result to every other GPU, and all must wait for the sum before proceeding to the next layer. This is why tensor parallelism is so sensitive to interconnect speed.</p>
+
+    <h3>Why NVLink, not PCIe</h3>
+    <p>Tensor parallelism works within a single server node because NVLink provides ~900 GB/s of bidirectional bandwidth between GPUs — fast enough that the AllReduce cost is small relative to the compute time. Over PCIe (~64 GB/s), the communication would dominate and efficiency would collapse. Over InfiniBand (inter-node), it would be essentially unusable at this level of synchronization frequency.</p>
+
+    <table>
+      <tr><th>Interconnect</th><th>Bandwidth</th><th>Tensor parallel viable?</th></tr>
+      <tr><td>NVLink (intra-node)</td><td>~900 GB/s</td><td>Yes — designed for this</td></tr>
+      <tr><td>PCIe (intra-node)</td><td>~64 GB/s</td><td>Marginal — too slow</td></tr>
+      <tr><td>InfiniBand (inter-node)</td><td>~50 GB/s</td><td>No — use pipeline parallelism instead</td></tr>
+    </table>
+
+    <h3>Why it matters</h3>
+    <p>Tensor parallelism is what allows a single transformer layer to be computed by 8 GPUs simultaneously. Without it, very large layers would simply not fit in a single GPU's memory, and even if they did, one GPU would be the bottleneck while 7 others sat idle.</p>
+
+    <p>The tradeoff is tight coupling: all 8 GPUs must stay in lockstep, which means one slow GPU stalls all the others. This is why the 8 GPUs in a tensor-parallel group are always on the same physical server, connected by NVLink, with matched hardware.</p>
+
+    <h3>How it combines with other strategies</h3>
+    <p>In practice, tensor parallelism handles the <em>within-node</em> dimension of a much larger 3D parallelism scheme. Pipeline parallelism handles the <em>between-node</em> dimension (different nodes run different layers), and data parallelism handles the <em>between-replica</em> dimension (different node groups run different training examples). A 1,024-GPU training run might be: 8-way tensor parallel × 8-way pipeline parallel × 16-way data parallel.</p>
+
+  </div>
+
+  <div class="links-section">
+    <h3>Related nuggets</h3>
+    <div class="link-chips">
+      <a class="link-chip" href="tiling.html">← 04: Tiling</a>
+      <a class="link-chip" href="#">09: Pipeline parallelism →</a>
+      <a class="link-chip" href="#">10: Data parallelism →</a>
+      <a class="link-chip" href="#">11: 3D parallelism →</a>
+      <a class="link-chip" href="#">12: Interconnects →</a>
+    </div>
+  </div>
+
+  <footer>
+    Seed Nuggets &mdash; generated in conversation with Claude &mdash; hosted on GitHub Pages
+  </footer>
+
+</body>
+</html>

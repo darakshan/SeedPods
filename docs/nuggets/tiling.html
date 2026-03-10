@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tiling — Seed Nuggets</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,600;1,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1612;
+      --paper: #f5f0e8;
+      --gold: #c8922a;
+      --rust: #9b3d1a;
+      --sage: #4a6741;
+      --muted: #8a7f72;
+      --rule: #d4c9b8;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: var(--paper); color: var(--ink); font-family: 'Fraunces', Georgia, serif; min-height: 100vh; }
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 1000; opacity: 0.4;
+    }
+    header { border-bottom: 1px solid var(--rule); padding: 2rem 4rem; display: flex; align-items: baseline; gap: 1.5rem; }
+    header h1 { font-size: 2.8rem; font-weight: 300; letter-spacing: -0.02em; }
+    header h1 em { font-style: italic; color: var(--gold); }
+    header nav { font-family: 'DM Mono', monospace; font-size: 0.75rem; color: var(--muted); display: flex; gap: 1.5rem; margin-left: auto; }
+    header nav a { color: var(--muted); text-decoration: none; text-transform: uppercase; letter-spacing: 0.1em; transition: color 0.2s; }
+    header nav a:hover { color: var(--gold); }
+
+    .nugget-header { padding: 3rem 4rem 2rem; max-width: 780px; }
+    .breadcrumb { font-family: 'DM Mono', monospace; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--muted); margin-bottom: 1rem; }
+    .breadcrumb a { color: var(--gold); text-decoration: none; }
+    .nugget-num-label { font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--gold); margin-bottom: 0.5rem; }
+    .nugget-header h2 { font-size: 2.2rem; font-weight: 300; font-style: italic; line-height: 1.25; margin-bottom: 1rem; }
+    .core-idea { background: white; border-left: 3px solid var(--gold); padding: 1.2rem 1.5rem; margin-top: 1.5rem; font-size: 1.05rem; font-weight: 300; line-height: 1.7; font-style: italic; color: #3a3530; }
+
+    .nugget-body { padding: 2rem 4rem; max-width: 780px; }
+    .nugget-body h3 { font-family: 'DM Mono', monospace; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--rust); margin: 2.5rem 0 1rem; padding-bottom: 0.4rem; border-bottom: 1px solid var(--rule); }
+    .nugget-body p { font-size: 0.97rem; line-height: 1.85; color: #3a3530; font-weight: 300; margin-bottom: 1rem; }
+
+    pre {
+      background: #1a1612;
+      color: #f5f0e8;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.78rem;
+      line-height: 1.6;
+      padding: 1.5rem;
+      border-radius: 2px;
+      overflow-x: auto;
+      margin: 1.5rem 0;
+    }
+
+    table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.88rem; }
+    th { font-family: 'DM Mono', monospace; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); text-align: left; padding: 0.5rem 0.8rem; border-bottom: 2px solid var(--rule); }
+    td { padding: 0.6rem 0.8rem; border-bottom: 1px solid var(--rule); font-weight: 300; color: #3a3530; }
+    tr:last-child td { border-bottom: none; }
+    td:first-child { font-family: 'DM Mono', monospace; font-size: 0.8rem; color: var(--gold); }
+
+    .links-section { padding: 2rem 4rem 4rem; max-width: 780px; }
+    .links-section h3 { font-family: 'DM Mono', monospace; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--muted); margin-bottom: 1rem; }
+    .link-chips { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+    .link-chip { font-family: 'DM Mono', monospace; font-size: 0.7rem; padding: 0.3rem 0.8rem; border: 1px solid var(--rule); border-radius: 1px; color: var(--muted); text-decoration: none; transition: all 0.2s; }
+    .link-chip:hover { border-color: var(--gold); color: var(--gold); }
+
+    footer { border-top: 1px solid var(--rule); padding: 1.5rem 4rem; font-family: 'DM Mono', monospace; font-size: 0.65rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1><em>Seed</em> Nuggets</h1>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../nuggets.html">All Nuggets</a>
+    </nav>
+  </header>
+
+  <div class="nugget-header">
+    <div class="breadcrumb"><a href="../nuggets.html">All nuggets</a> › Layer 2 — Memory Hierarchy</div>
+    <div class="nugget-num-label">Nugget 04</div>
+    <h2>Tiling: breaking big matmuls into pieces a GPU can hold</h2>
+    <div class="core-idea">
+      A GPU's arithmetic units are so fast that the bottleneck is almost always memory bandwidth. Tiling keeps data in fast on-chip memory as long as possible, maximizing the number of multiply-accumulates per byte loaded from slow main memory.
+    </div>
+  </div>
+
+  <div class="nugget-body">
+
+    <h3>The question</h3>
+    <p>GPUs can do enormous numbers of multiplications in parallel — but even so, a single large matrix multiply for a big transformer layer involves far more data than fits in the GPU's fastest memory. How does the hardware break it up?</p>
+
+    <h3>Mechanism</h3>
+    <p>A matrix multiply C = A × B where A is (M×K) and B is (K×N) requires M×N×K multiply-accumulate operations. For a large transformer layer, these dimensions can be 8192×8192 — way too large to fit in registers or shared memory (SRAM).</p>
+
+    <p>The solution is <strong>tiling</strong> (also called blocking): subdivide A and B into smaller rectangular tiles, compute partial results, and accumulate them into the output. Each output tile C[i,j] is the sum of a sequence of A-tile × B-tile products across the K dimension.</p>
+
+<pre>A (M×K)              B (K×N)
+┌──┬──┬──┐           ┌──┬──┐
+│A₀│A₁│A₂│     ×    │B₀│B₃│
+├──┼──┼──┤           ├──┼──┤
+│A₃│A₄│A₅│           │B₁│B₄│
+└──┴──┴──┘           ├──┼──┤
+                     │B₂│B₅│
+                     └──┴──┘
+
+C[0,0] = A₀×B₀ + A₁×B₁ + A₂×B₂   ← accumulates across K</pre>
+
+    <h3>Three levels of tiling</h3>
+    <p>Tiling maps directly onto the GPU's three-level memory hierarchy, and each level requires a different tile size:</p>
+
+    <table>
+      <tr><th>Level</th><th>Unit</th><th>Memory used</th><th>Tile size (typical)</th></tr>
+      <tr><td>Grid</td><td>Streaming Multiprocessors (SMs)</td><td>HBM → SRAM</td><td>128 × 128</td></tr>
+      <tr><td>Warp</td><td>32-thread warps within an SM</td><td>SRAM → registers</td><td>64 × 64</td></tr>
+      <tr><td>Thread</td><td>Individual threads / Tensor Cores</td><td>Registers only</td><td>16 × 16</td></tr>
+    </table>
+
+    <p>The K (inner) dimension is handled by iterating: each SM loops through K in chunks, accumulating partial sums into register-resident accumulators. This is what makes tiling different from just splitting in 2D — the reduction across K is sequential within each output tile.</p>
+
+    <h3>Why it matters</h3>
+    <p>The key metric is <em>arithmetic intensity</em>: how many floating-point operations you perform per byte loaded from slow memory. A perfectly tiled matrix multiply achieves intensity proportional to the tile size — meaning you load each byte once, then reuse it for an entire tile's worth of computation. This is why GPU utilization is so sensitive to matrix shape: small or "skinny" matrices tile poorly and leave the hardware waiting on memory.</p>
+
+    <p>FlashAttention applies the same insight to the attention operation, fusing the softmax and matmul into one kernel so intermediate N×N attention scores never have to be written back to HBM at all.</p>
+
+    <h3>The punchline</h3>
+    <p>Tiling is the bridge between the theoretical peak FLOP/s of a GPU and what you actually get in practice. All of the higher-level parallelism strategies (tensor parallelism, pipeline parallelism) are built on top of this foundation — they assume that within each GPU, tiling is already handling the memory hierarchy optimally.</p>
+
+  </div>
+
+  <div class="links-section">
+    <h3>Related nuggets</h3>
+    <div class="link-chips">
+      <a class="link-chip" href="#">← 03: Tensor Cores</a>
+      <a class="link-chip" href="#">05: GPU memory hierarchy →</a>
+      <a class="link-chip" href="#">06: Arithmetic intensity →</a>
+      <a class="link-chip" href="#">07: FlashAttention →</a>
+    </div>
+  </div>
+
+  <footer>
+    Seed Nuggets &mdash; generated in conversation with Claude &mdash; hosted on GitHub Pages
+  </footer>
+
+</body>
+</html>
