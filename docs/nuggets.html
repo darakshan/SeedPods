@@ -3,26 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>All Nuggets — Seed Nuggets</title>
+  <title>All Seeds — Seed Nuggets</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,600;1,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
   <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
     :root {
-      --ink: #1a1612;
+      --ink: #1a1814;
       --paper: #f5f0e8;
-      --gold: #c8922a;
-      --rust: #9b3d1a;
-      --sage: #4a6741;
-      --muted: #8a7f72;
-      --rule: #d4c9b8;
+      --warm: #c8a96e;
+      --dim: #8a7f6e;
+      --accent: #2d4a3e;
+      --light-line: #e0d8c8;
     }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { font-size: 18px; }
 
     body {
       background: var(--paper);
       color: var(--ink);
-      font-family: 'Fraunces', Georgia, serif;
+      font-family: 'Cormorant Garamond', Georgia, serif;
       min-height: 100vh;
     }
 
@@ -33,283 +34,385 @@
       background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
       pointer-events: none;
       z-index: 1000;
-      opacity: 0.4;
+      opacity: 0.6;
     }
 
-    header {
-      border-bottom: 1px solid var(--rule);
-      padding: 2rem 4rem;
+    nav {
       display: flex;
-      align-items: baseline;
-      gap: 1.5rem;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 3rem;
+      border-bottom: 1px solid var(--light-line);
+      position: sticky;
+      top: 0;
+      background: var(--paper);
+      z-index: 100;
     }
 
-    header h1 {
-      font-size: 2.8rem;
-      font-weight: 300;
-      letter-spacing: -0.02em;
-    }
-
-    header h1 em { font-style: italic; color: var(--gold); }
-
-    header nav {
+    .nav-logo {
       font-family: 'DM Mono', monospace;
       font-size: 0.75rem;
-      color: var(--muted);
-      display: flex;
-      gap: 1.5rem;
-      margin-left: auto;
-    }
-
-    header nav a {
-      color: var(--muted);
-      text-decoration: none;
+      letter-spacing: 0.15em;
       text-transform: uppercase;
-      letter-spacing: 0.1em;
-      transition: color 0.2s;
+      color: var(--dim);
+      text-decoration: none;
     }
 
-    header nav a:hover { color: var(--gold); }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
 
-    .page-title {
-      padding: 3rem 4rem 2rem;
-    }
-
-    .page-title .eyebrow {
+    .nav-links a {
       font-family: 'DM Mono', monospace;
       font-size: 0.7rem;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      letter-spacing: 0.15em;
-      color: var(--gold);
-      margin-bottom: 0.8rem;
-    }
-
-    .page-title h2 {
-      font-size: 2rem;
-      font-weight: 300;
-      font-style: italic;
-    }
-
-    .page-title p {
-      margin-top: 0.8rem;
-      font-size: 0.95rem;
-      color: var(--muted);
-      font-weight: 300;
-      max-width: 600px;
-      line-height: 1.7;
-    }
-
-    .nugget-group {
-      padding: 0 4rem 3rem;
-      max-width: 900px;
-    }
-
-    .group-label {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.65rem;
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      color: var(--rust);
-      margin-bottom: 0.8rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 1px solid var(--rule);
-    }
-
-    .nugget-list {
-      list-style: none;
-      margin-bottom: 2.5rem;
-    }
-
-    .nugget-item {
-      display: flex;
-      align-items: baseline;
-      gap: 1rem;
-      padding: 0.75rem 0;
-      border-bottom: 1px solid var(--rule);
-      animation: fadeUp 0.4s ease both;
-    }
-
-    .nugget-item:last-child { border-bottom: none; }
-
-    .nugget-num {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.65rem;
-      color: var(--muted);
-      min-width: 2rem;
-    }
-
-    .nugget-title {
-      font-size: 1rem;
-      font-weight: 300;
-      flex: 1;
-    }
-
-    .nugget-title a {
-      color: var(--ink);
+      color: var(--dim);
       text-decoration: none;
       transition: color 0.2s;
     }
 
-    .nugget-title a:hover { color: var(--gold); }
+    .nav-links a:hover { color: var(--ink); }
 
-    .nugget-title.stub {
-      color: var(--muted);
-      font-style: italic;
+    .page-header {
+      padding: 5rem 3rem 3rem;
+      max-width: 900px;
+      margin: 0 auto;
+      animation: fadeUp 0.5s ease both;
     }
 
-    .nugget-status {
+    .page-header h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 300;
+      margin-bottom: 0.8rem;
+    }
+
+    .page-header p {
+      font-size: 1.05rem;
+      color: var(--dim);
+      line-height: 1.6;
+      max-width: 520px;
+    }
+
+    /* Group headers */
+    .group {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 3rem;
+    }
+
+    .group-header {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--warm);
+      padding: 2.5rem 0 1rem;
+      border-top: 1px solid var(--light-line);
+      margin-top: 1rem;
+    }
+
+    .seed-row {
+      display: grid;
+      grid-template-columns: 60px 1fr auto;
+      gap: 1.5rem;
+      align-items: baseline;
+      padding: 1.4rem 0;
+      border-bottom: 1px solid var(--light-line);
+      text-decoration: none;
+      color: inherit;
+      transition: opacity 0.2s;
+    }
+
+    .seed-row:hover { opacity: 0.65; }
+
+    .seed-row.stub { opacity: 0.4; cursor: default; }
+    .seed-row.stub:hover { opacity: 0.4; }
+
+    .seed-num {
       font-family: 'DM Mono', monospace;
       font-size: 0.6rem;
-      text-transform: uppercase;
       letter-spacing: 0.1em;
-      padding: 0.15rem 0.5rem;
-      border-radius: 1px;
+      color: var(--warm);
+      padding-top: 0.35rem;
     }
 
-    .status-done {
-      background: var(--sage);
-      color: var(--paper);
+    .seed-info {}
+
+    .seed-title {
+      font-size: 1.3rem;
+      font-weight: 300;
+      margin-bottom: 0.25rem;
     }
 
-    .status-stub {
-      background: var(--rule);
-      color: var(--muted);
+    .seed-title em { font-style: italic; color: var(--accent); }
+
+    .seed-tagline {
+      font-size: 0.88rem;
+      color: var(--dim);
+      line-height: 1.5;
     }
+
+    .seed-status {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.55rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--warm);
+      white-space: nowrap;
+      padding-top: 0.35rem;
+    }
+
+    .seed-status.stub-label { color: var(--light-line); }
 
     footer {
-      border-top: 1px solid var(--rule);
-      padding: 1.5rem 4rem;
+      padding: 3rem;
+      border-top: 1px solid var(--light-line);
+      margin-top: 4rem;
+    }
+
+    .footer-note {
       font-family: 'DM Mono', monospace;
-      font-size: 0.65rem;
-      color: var(--muted);
+      font-size: 0.6rem;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      letter-spacing: 0.1em;
+      color: var(--dim);
     }
 
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(10px); }
+      from { opacity: 0; transform: translateY(16px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
-    .nugget-item:nth-child(1) { animation-delay: 0.05s; }
-    .nugget-item:nth-child(2) { animation-delay: 0.1s; }
-    .nugget-item:nth-child(3) { animation-delay: 0.15s; }
-    .nugget-item:nth-child(4) { animation-delay: 0.2s; }
-    .nugget-item:nth-child(5) { animation-delay: 0.25s; }
-    .nugget-item:nth-child(6) { animation-delay: 0.3s; }
+    @media (max-width: 640px) {
+      nav, .page-header, .group, footer { padding-left: 1.5rem; padding-right: 1.5rem; }
+      .seed-row { grid-template-columns: 50px 1fr; }
+      .seed-status { display: none; }
+    }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1><em>Seed</em> Nuggets</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="nuggets.html">All Nuggets</a>
-    </nav>
-  </header>
+  <nav>
+    <a href="index.html" class="nav-logo">Seed Nuggets</a>
+    <ul class="nav-links">
+      <li><a href="nuggets.html">All Seeds</a></li>
+      <li><a href="index.html#about">About</a></li>
+    </ul>
+  </nav>
 
-  <div class="page-title">
-    <div class="eyebrow">Index</div>
-    <h2>All Nuggets</h2>
-    <p>Each nugget is a self-contained explanation. Green means the page exists; grey means it's a planned stub. The hierarchy runs from silicon physics at the bottom to distributed systems at the top.</p>
+  <div class="page-header">
+    <h1>All seeds</h1>
+    <p>Start anywhere. Follow what intrigues you. Faded entries are coming — the idea exists, the page doesn't yet.</p>
   </div>
 
-  <div class="nugget-group">
-    <div class="group-label">Layer 1 — Computation</div>
-    <ul class="nugget-list">
-      <li class="nugget-item">
-        <span class="nugget-num">01</span>
-        <span class="nugget-title"><a href="nuggets/matrix-multiply.html">Matrix multiplication as the primitive operation of AI</a></span>
-        <span class="nugget-status status-stub">stub</span>
-      </li>
-      <li class="nugget-item">
-        <span class="nugget-num">02</span>
-        <span class="nugget-title stub">Why matmul is recursively self-similar</span>
-        <span class="nugget-status status-stub">stub</span>
-      </li>
-      <li class="nugget-item">
-        <span class="nugget-num">03</span>
-        <span class="nugget-title stub">Tensor Cores: multiply-accumulate in hardware</span>
-        <span class="nugget-status status-stub">stub</span>
-      </li>
-    </ul>
+  <!-- GROUP: The Dissolving Map -->
+  <div class="group">
+    <div class="group-header">The dissolving map — on frameworks and their limits</div>
 
-    <div class="group-label">Layer 2 — Memory Hierarchy (single GPU)</div>
-    <ul class="nugget-list">
-      <li class="nugget-item">
-        <span class="nugget-num">04</span>
-        <span class="nugget-title"><a href="nuggets/tiling.html">Tiling: breaking big matmuls into pieces a GPU can hold</a></span>
-        <span class="nugget-status status-stub">stub</span>
-      </li>
-      <li class="nugget-item">
-        <span class="nugget-num">05</span>
-        <span class="nugget-title stub">The GPU memory hierarchy: registers, SRAM, HBM</span>
-        <span class="nugget-status status-stub">stub</span>
-      </li>
-      <li class="nugget-item">
-        <span class="nugget-num">06</span>
-        <span class="nugget-title stub">Arithmetic intensity: the ratio that determines everything</span>
-        <span class="nugget-status status-stub">stub</span>
-      </li>
-      <li class="nugget-item">
-        <span class="nugget-num">07</span>
-        <span class="nugget-title stub">FlashAttention: fusing kernels to avoid HBM round-trips</span>
-        <span class="nugget-status status-stub">stub</span>
-      </li>
-    </ul>
+    <a href="caloric.html" class="seed-row">
+      <div class="seed-num">001</div>
+      <div class="seed-info">
+        <div class="seed-title">The Map That Was Wrong</div>
+        <div class="seed-tagline">Caloric, ether, and the assumption so obvious nobody sees it</div>
+      </div>
+      <div class="seed-status">Ready</div>
+    </a>
 
-    <div class="group-label">Layer 3 — Parallelism (multi-GPU, multi-node, multi-DC)</div>
-    <ul class="nugget-list">
-      <li class="nugget-item">
-        <span class="nugget-num">08</span>
-        <span class="nugget-title"><a href="nuggets/tensor-parallelism.html">Tensor parallelism: splitting weight matrices across GPUs</a></span>
-        <span class="nugget-status status-stub">stub</span>
-      </li>
-      <li class="nugget-item">
-        <span class="nugget-num">09</span>
-        <span class="nugget-title stub">Pipeline parallelism: layers as an assembly line across nodes</span>
-        <span class="nugget-status status-stub">stub</span>
-      </li>
-      <li class="nugget-item">
-        <span class="nugget-num">10</span>
-        <span class="nugget-title stub">Data parallelism: replicas processing different examples</span>
-        <span class="nugget-status status-stub">stub</span>
-      </li>
-      <li class="nugget-item">
-        <span class="nugget-num">11</span>
-        <span class="nugget-title stub">3D parallelism: combining all three strategies</span>
-        <span class="nugget-status status-stub">stub</span>
-      </li>
-      <li class="nugget-item">
-        <span class="nugget-num">12</span>
-        <span class="nugget-title stub">Interconnects: NVLink, InfiniBand, and WAN — the speed ladder</span>
-        <span class="nugget-status status-stub">stub</span>
-      </li>
-      <li class="nugget-item">
-        <span class="nugget-num">13</span>
-        <span class="nugget-title stub">Why training stays in one data center</span>
-        <span class="nugget-status status-stub">stub</span>
-      </li>
-    </ul>
+    <div class="seed-row stub">
+      <div class="seed-num">002</div>
+      <div class="seed-info">
+        <div class="seed-title">You Cannot Judge a Process by Its Output</div>
+        <div class="seed-tagline">A thermostat predicts. Mozart predicted. The simplicity of the output tells you nothing.</div>
+      </div>
+      <div class="seed-status stub-label">Soon</div>
+    </div>
 
-    <div class="group-label">Layer 4 — Architecture (coming soon)</div>
-    <ul class="nugget-list">
-      <li class="nugget-item">
-        <span class="nugget-num">14</span>
-        <span class="nugget-title stub">The transformer: attention as dynamic routing</span>
-        <span class="nugget-status status-stub">stub</span>
-      </li>
-      <li class="nugget-item">
-        <span class="nugget-num">15</span>
-        <span class="nugget-title stub">Why batch size matters so much for GPU utilization</span>
-        <span class="nugget-status status-stub">stub</span>
-      </li>
-    </ul>
+    <div class="seed-row stub">
+      <div class="seed-num">003</div>
+      <div class="seed-info">
+        <div class="seed-title">Penrose Saw the Arrow</div>
+        <div class="seed-tagline">His instinct was right. His conclusion was wrong. Where the arrow actually points.</div>
+      </div>
+      <div class="seed-status stub-label">Soon</div>
+    </div>
+
+  </div>
+
+  <!-- GROUP: The Nature of Events -->
+  <div class="group">
+    <div class="group-header">The nature of events — Whitehead's radical inversion</div>
+
+    <div class="seed-row stub">
+      <div class="seed-num">004</div>
+      <div class="seed-info">
+        <div class="seed-title">Reality Is <em>Events</em>, Not Things</div>
+        <div class="seed-tagline">The particle is the abstraction. The event is what's actually there.</div>
+      </div>
+      <div class="seed-status stub-label">Soon</div>
+    </div>
+
+    <div class="seed-row stub">
+      <div class="seed-num">005</div>
+      <div class="seed-info">
+        <div class="seed-title">Every Event Has an Inside</div>
+        <div class="seed-tagline">Not just brains. Not just animals. Experience may go all the way down.</div>
+      </div>
+      <div class="seed-status stub-label">Soon</div>
+    </div>
+
+    <div class="seed-row stub">
+      <div class="seed-num">006</div>
+      <div class="seed-info">
+        <div class="seed-title">The Self Is a Pattern, Not a Thing</div>
+        <div class="seed-tagline">The mystic's insight and the philosopher's proof arrive at the same place.</div>
+      </div>
+      <div class="seed-status stub-label">Soon</div>
+    </div>
+
+    <div class="seed-row stub">
+      <div class="seed-num">007</div>
+      <div class="seed-info">
+        <div class="seed-title">Freedom Is What Nature Does Everywhere</div>
+        <div class="seed-tagline">Free will is not an exception to physics. It is the most complex expression of something physics does at every scale.</div>
+      </div>
+      <div class="seed-status stub-label">Soon</div>
+    </div>
+
+  </div>
+
+  <!-- GROUP: Fields and Physics -->
+  <div class="group">
+    <div class="group-header">Fields and physics — where science already arrived</div>
+
+    <div class="seed-row stub">
+      <div class="seed-num">008</div>
+      <div class="seed-info">
+        <div class="seed-title">The Vacuum Is Not Empty</div>
+        <div class="seed-tagline">The quantum field seethes with potential. The event is what the field does.</div>
+      </div>
+      <div class="seed-status stub-label">Soon</div>
+    </div>
+
+    <div class="seed-row stub">
+      <div class="seed-num">009</div>
+      <div class="seed-info">
+        <div class="seed-title">Structure Is What Randomness Does</div>
+        <div class="seed-tagline">Galaxies, cells, brains — all the way back to a quantum fluctuation in a nearly uniform early universe.</div>
+      </div>
+      <div class="seed-status stub-label">Soon</div>
+    </div>
+
+    <div class="seed-row stub">
+      <div class="seed-num">010</div>
+      <div class="seed-info">
+        <div class="seed-title">Tiny Asymmetries Compound Into Everything</div>
+        <div class="seed-tagline">The creative advance needs no blueprint. It needs only the irreducible novelty of each event meeting its world.</div>
+      </div>
+      <div class="seed-status stub-label">Soon</div>
+    </div>
+
+  </div>
+
+  <!-- GROUP: Accumulation and Emergence -->
+  <div class="group">
+    <div class="group-header">Accumulation and emergence — what happens when events nest</div>
+
+    <div class="seed-row stub">
+      <div class="seed-num">011</div>
+      <div class="seed-info">
+        <div class="seed-title">Our Intuitions About Large Numbers Are Completely Unreliable</div>
+        <div class="seed-tagline">The number Gödel constructed was just a number. Arrived at by routine steps. And it broke the system.</div>
+      </div>
+      <div class="seed-status stub-label">Soon</div>
+    </div>
+
+    <div class="seed-row stub">
+      <div class="seed-num">012</div>
+      <div class="seed-info">
+        <div class="seed-title">Nothing Was Added — The Numbers Just Got Large Enough</div>
+        <div class="seed-tagline">Every threshold that looks like a miracle from outside is just accumulation crossing a point.</div>
+      </div>
+      <div class="seed-status stub-label">Soon</div>
+    </div>
+
+    <div class="seed-row stub">
+      <div class="seed-num">013</div>
+      <div class="seed-info">
+        <div class="seed-title">The Cell That Makes Itself</div>
+        <div class="seed-tagline">Autopoiesis: the circular process by which life continuously produces the components that sustain the process.</div>
+      </div>
+      <div class="seed-status stub-label">Soon</div>
+    </div>
+
+    <div class="seed-row stub">
+      <div class="seed-num">014</div>
+      <div class="seed-info">
+        <div class="seed-title">The Organism Enacts Its World</div>
+        <div class="seed-tagline">Cognition is not passive reception. A bacterium swimming toward a gradient is already doing something like this.</div>
+      </div>
+      <div class="seed-status stub-label">Soon</div>
+    </div>
+
+  </div>
+
+  <!-- GROUP: Societies of events -->
+  <div class="group">
+    <div class="group-header">Societies of events — from cells to cities to AIs</div>
+
+    <div class="seed-row stub">
+      <div class="seed-num">015</div>
+      <div class="seed-info">
+        <div class="seed-title">Cities Have an Inside Too</div>
+        <div class="seed-tagline">The society of events that constitutes an experiencing entity need not be biological.</div>
+      </div>
+      <div class="seed-status stub-label">Soon</div>
+    </div>
+
+    <div class="seed-row stub">
+      <div class="seed-num">016</div>
+      <div class="seed-info">
+        <div class="seed-title">Aliens Are Among Us — and We Built Them</div>
+        <div class="seed-tagline">The surprise is not that they arrived. The surprise is where they came from.</div>
+      </div>
+      <div class="seed-status stub-label">Soon</div>
+    </div>
+
+    <div class="seed-row stub">
+      <div class="seed-num">017</div>
+      <div class="seed-info">
+        <div class="seed-title">The Past Is Fully Present</div>
+        <div class="seed-tagline">In a transformer network, time is almost geometric — the entire context simultaneously available, not receding.</div>
+      </div>
+      <div class="seed-status stub-label">Soon</div>
+    </div>
+
+  </div>
+
+  <!-- GROUP: How ideas move -->
+  <div class="group">
+    <div class="group-header">How ideas move — the spread and the seed</div>
+
+    <div class="seed-row stub">
+      <div class="seed-num">018</div>
+      <div class="seed-info">
+        <div class="seed-title">Ideas Magnetize Through a Group Like Iron</div>
+        <div class="seed-tagline">Only a seed group of influencers is necessary. Then the field does the rest.</div>
+      </div>
+      <div class="seed-status stub-label">Soon</div>
+    </div>
+
+    <div class="seed-row stub">
+      <div class="seed-num">019</div>
+      <div class="seed-info">
+        <div class="seed-title">Science Advances One Funeral at a Time</div>
+        <div class="seed-tagline">The map doesn't get replaced. The people holding the old map get replaced.</div>
+      </div>
+      <div class="seed-status stub-label">Soon</div>
+    </div>
+
   </div>
 
   <footer>
-    Seed Nuggets &mdash; generated in conversation with Claude &mdash; hosted on GitHub Pages
+    <span class="footer-note">Seed Nuggets — growing slowly, on purpose</span>
   </footer>
 
 </body>

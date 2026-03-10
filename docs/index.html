@@ -5,25 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Seed Nuggets</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,600;1,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
   <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
     :root {
-      --ink: #1a1612;
+      --ink: #1a1814;
       --paper: #f5f0e8;
-      --gold: #c8922a;
-      --rust: #9b3d1a;
-      --sage: #4a6741;
-      --muted: #8a7f72;
-      --rule: #d4c9b8;
+      --warm: #c8a96e;
+      --dim: #8a7f6e;
+      --accent: #2d4a3e;
+      --light-line: #e0d8c8;
     }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { font-size: 18px; }
 
     body {
       background: var(--paper);
       color: var(--ink);
-      font-family: 'Fraunces', Georgia, serif;
+      font-family: 'Cormorant Garamond', Georgia, serif;
       min-height: 100vh;
+      overflow-x: hidden;
     }
 
     /* Grain overlay */
@@ -34,256 +36,508 @@
       background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
       pointer-events: none;
       z-index: 1000;
-      opacity: 0.4;
+      opacity: 0.6;
     }
 
-    header {
-      border-bottom: 1px solid var(--rule);
-      padding: 2rem 4rem;
+    nav {
       display: flex;
-      align-items: baseline;
-      gap: 1.5rem;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 3rem;
+      border-bottom: 1px solid var(--light-line);
+      position: sticky;
+      top: 0;
+      background: var(--paper);
+      z-index: 100;
     }
 
-    header h1 {
-      font-size: 2.8rem;
-      font-weight: 300;
-      letter-spacing: -0.02em;
-      color: var(--ink);
-    }
-
-    header h1 em {
-      font-style: italic;
-      color: var(--gold);
-    }
-
-    header nav {
+    .nav-logo {
       font-family: 'DM Mono', monospace;
       font-size: 0.75rem;
-      color: var(--muted);
-      display: flex;
-      gap: 1.5rem;
-      margin-left: auto;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--dim);
+      text-decoration: none;
     }
 
-    header nav a {
-      color: var(--muted);
-      text-decoration: none;
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      letter-spacing: 0.1em;
+      color: var(--dim);
+      text-decoration: none;
       transition: color 0.2s;
     }
 
-    header nav a:hover { color: var(--gold); }
+    .nav-links a:hover { color: var(--ink); }
 
+    /* Hero */
     .hero {
-      padding: 5rem 4rem 3rem;
-      max-width: 780px;
+      padding: 7rem 3rem 5rem;
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
     }
 
-    .hero .eyebrow {
+    .hero-eyebrow {
       font-family: 'DM Mono', monospace;
-      font-size: 0.7rem;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
-      letter-spacing: 0.15em;
-      color: var(--gold);
-      margin-bottom: 1.2rem;
+      color: var(--warm);
+      margin-bottom: 2rem;
+      display: block;
     }
 
-    .hero p {
-      font-size: 1.35rem;
+    .hero h1 {
+      font-size: clamp(3rem, 7vw, 6rem);
       font-weight: 300;
-      line-height: 1.75;
-      color: var(--ink);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      margin-bottom: 2rem;
     }
 
-    .hero p + p { margin-top: 1rem; }
-
-    .divider {
-      margin: 3rem 4rem;
-      border: none;
-      border-top: 1px solid var(--rule);
-    }
-
-    /* About section */
-    section.about {
-      padding: 0 4rem 3rem;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      max-width: 1100px;
-    }
-
-    section.about h2 {
-      font-size: 1.1rem;
-      font-weight: 600;
-      letter-spacing: 0.02em;
-      margin-bottom: 1.2rem;
-      color: var(--rust);
+    .hero h1 em {
       font-style: italic;
+      color: var(--accent);
     }
 
-    section.about p {
+    .hero-sub {
+      font-size: 1.3rem;
+      font-weight: 300;
+      line-height: 1.6;
+      color: var(--dim);
+      max-width: 580px;
+      margin-bottom: 3rem;
+    }
+
+    .hero-divider {
+      width: 60px;
+      height: 1px;
+      background: var(--warm);
+      margin-bottom: 3rem;
+    }
+
+    .hero-body {
+      font-size: 1.15rem;
+      line-height: 1.8;
+      max-width: 620px;
+      color: #3a3530;
+    }
+
+    .hero-body p + p { margin-top: 1.2rem; }
+
+    /* Floating seed illustration */
+    .seed-illustration {
+      position: absolute;
+      right: 0;
+      top: 6rem;
+      width: 280px;
+      opacity: 0.12;
+      pointer-events: none;
+    }
+
+    /* What is a seed nugget */
+    .anatomy {
+      background: var(--accent);
+      color: var(--paper);
+      padding: 5rem 3rem;
+      margin: 4rem 0;
+    }
+
+    .anatomy-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .anatomy h2 {
+      font-size: 2.2rem;
+      font-weight: 300;
+      margin-bottom: 0.5rem;
+    }
+
+    .anatomy h2 em { font-style: italic; color: var(--warm); }
+
+    .anatomy-intro {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      opacity: 0.75;
+      max-width: 560px;
+      margin-bottom: 3.5rem;
+      margin-top: 1rem;
+    }
+
+    .layers {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2rem;
+    }
+
+    .layer {
+      border-top: 1px solid rgba(200, 169, 110, 0.4);
+      padding-top: 1.5rem;
+    }
+
+    .layer-name {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--warm);
+      margin-bottom: 0.8rem;
+    }
+
+    .layer h3 {
+      font-size: 1.3rem;
+      font-weight: 400;
+      margin-bottom: 0.6rem;
+    }
+
+    .layer p {
       font-size: 0.95rem;
+      line-height: 1.65;
+      opacity: 0.7;
+    }
+
+    /* Nuggets preview */
+    .nuggets-section {
+      padding: 5rem 3rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 3rem;
+      border-bottom: 1px solid var(--light-line);
+      padding-bottom: 1rem;
+    }
+
+    .section-header h2 {
+      font-size: 1.8rem;
+      font-weight: 300;
+    }
+
+    .section-header a {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--dim);
+      text-decoration: none;
+    }
+
+    .section-header a:hover { color: var(--accent); }
+
+    .nugget-card {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 1.5rem;
+      padding: 2rem 0;
+      border-bottom: 1px solid var(--light-line);
+      text-decoration: none;
+      color: inherit;
+      transition: opacity 0.2s;
+    }
+
+    .nugget-card:hover { opacity: 0.7; }
+
+    .nugget-number {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      color: var(--warm);
+      padding-top: 0.4rem;
+    }
+
+    .nugget-title {
+      font-size: 1.5rem;
+      font-weight: 300;
+      margin-bottom: 0.4rem;
+    }
+
+    .nugget-title em { font-style: italic; color: var(--accent); }
+
+    .nugget-tagline {
+      font-size: 0.95rem;
+      color: var(--dim);
+      line-height: 1.5;
+      margin-bottom: 0.8rem;
+    }
+
+    .nugget-tags {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--dim);
+      border: 1px solid var(--light-line);
+      padding: 0.2rem 0.5rem;
+      border-radius: 2px;
+    }
+
+    .stub-card {
+      opacity: 0.45;
+      cursor: default;
+    }
+
+    .stub-card:hover { opacity: 0.45; }
+
+    /* Philosophy section */
+    .philosophy {
+      padding: 5rem 3rem;
+      background: #eee8d8;
+      border-top: 1px solid var(--light-line);
+      border-bottom: 1px solid var(--light-line);
+    }
+
+    .philosophy-inner {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .philosophy blockquote {
+      font-size: 1.6rem;
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.5;
+      color: var(--accent);
+      margin-bottom: 2rem;
+      position: relative;
+      padding-left: 2rem;
+    }
+
+    .philosophy blockquote::before {
+      content: '\201C';
+      position: absolute;
+      left: 0;
+      top: -0.2rem;
+      font-size: 3rem;
+      color: var(--warm);
+      line-height: 1;
+    }
+
+    .philosophy-body {
+      font-size: 1.05rem;
       line-height: 1.8;
       color: #3a3530;
-      font-weight: 300;
     }
 
-    section.about p + p { margin-top: 0.8rem; }
+    .philosophy-body p + p { margin-top: 1.2rem; }
 
-    .nugget-anatomy {
-      background: white;
-      border: 1px solid var(--rule);
-      border-radius: 2px;
-      padding: 1.5rem;
-      margin-top: 1.5rem;
-    }
-
-    .nugget-anatomy h3 {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.65rem;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      color: var(--muted);
-      margin-bottom: 1rem;
-    }
-
-    .anatomy-item {
-      display: flex;
-      gap: 0.8rem;
-      align-items: baseline;
-      padding: 0.4rem 0;
-      border-bottom: 1px solid var(--rule);
-    }
-
-    .anatomy-item:last-child { border-bottom: none; }
-
-    .anatomy-item .label {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.7rem;
-      color: var(--gold);
-      min-width: 90px;
-      text-transform: uppercase;
-    }
-
-    .anatomy-item .desc {
-      font-size: 0.85rem;
-      color: var(--muted);
-      font-weight: 300;
-      line-height: 1.5;
-    }
-
-    /* Nuggets list page link */
-    .nuggets-link {
-      margin: 0 4rem 4rem;
-    }
-
-    .nuggets-link a {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.6rem;
-      font-family: 'DM Mono', monospace;
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--sage);
-      text-decoration: none;
-      border: 1px solid var(--sage);
-      padding: 0.6rem 1.2rem;
-      border-radius: 1px;
-      transition: all 0.2s;
-    }
-
-    .nuggets-link a:hover {
-      background: var(--sage);
-      color: var(--paper);
-    }
-
-    .nuggets-link a::after { content: '→'; }
-
+    /* Footer */
     footer {
-      border-top: 1px solid var(--rule);
-      padding: 1.5rem 4rem;
+      padding: 3rem;
+      border-top: 1px solid var(--light-line);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-note {
       font-family: 'DM Mono', monospace;
-      font-size: 0.65rem;
-      color: var(--muted);
+      font-size: 0.6rem;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      letter-spacing: 0.1em;
+      color: var(--dim);
     }
 
     /* Animations */
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(16px); }
+      from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
-    header { animation: fadeUp 0.5s ease both; }
-    .hero { animation: fadeUp 0.5s 0.1s ease both; }
-    section.about { animation: fadeUp 0.5s 0.2s ease both; }
+    .hero-eyebrow { animation: fadeUp 0.6s ease both; }
+    .hero h1 { animation: fadeUp 0.6s 0.1s ease both; }
+    .hero-sub { animation: fadeUp 0.6s 0.2s ease both; }
+    .hero-divider { animation: fadeUp 0.6s 0.3s ease both; }
+    .hero-body { animation: fadeUp 0.6s 0.4s ease both; }
+
+    @media (max-width: 640px) {
+      nav { padding: 1.2rem 1.5rem; }
+      .hero, .nuggets-section { padding-left: 1.5rem; padding-right: 1.5rem; }
+      .anatomy { padding: 3rem 1.5rem; }
+      .philosophy { padding: 3rem 1.5rem; }
+      footer { padding: 2rem 1.5rem; flex-direction: column; gap: 1rem; }
+      .seed-illustration { display: none; }
+    }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1><em>Seed</em> Nuggets</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="nuggets.html">All Nuggets</a>
-    </nav>
-  </header>
+  <nav>
+    <a href="index.html" class="nav-logo">Seed Nuggets</a>
+    <ul class="nav-links">
+      <li><a href="nuggets.html">All Seeds</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </nav>
 
-  <div class="hero">
-    <div class="eyebrow">About this site</div>
-    <p>A conversation between a human and an AI — exploring how modern machine intelligence actually works, from the physics of silicon up to the geography of data centers.</p>
-    <p>Each <em>nugget</em> is a self-contained explanation of one idea: precise enough to be useful, approachable enough to be readable. The goal is a reference you can actually navigate — not a stack of chat transcripts.</p>
-    <p>The site grows as the conversation grows. Pages begin as stubs and fill in as topics are explored. Claude generates the content; the human curates, edits, and publishes.</p>
-  </div>
+  <section class="hero">
 
-  <hr class="divider">
+    <svg class="seed-illustration" viewBox="0 0 200 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="100" cy="180" rx="55" ry="90" stroke="#1a1814" stroke-width="1.5"/>
+      <path d="M100 90 C100 90 60 130 60 180 C60 230 100 270 100 270" stroke="#1a1814" stroke-width="1"/>
+      <path d="M100 90 C100 90 140 130 140 180 C140 230 100 270 100 270" stroke="#1a1814" stroke-width="1"/>
+      <path d="M100 90 Q80 150 100 270" stroke="#1a1814" stroke-width="0.5" stroke-dasharray="4 4"/>
+      <path d="M100 90 Q120 150 100 270" stroke="#1a1814" stroke-width="0.5" stroke-dasharray="4 4"/>
+      <line x1="100" y1="90" x2="100" y2="20" stroke="#1a1814" stroke-width="1.5"/>
+      <path d="M100 20 C100 20 85 5 70 10" stroke="#1a1814" stroke-width="1" stroke-linecap="round"/>
+      <path d="M100 20 C100 20 115 5 130 10" stroke="#1a1814" stroke-width="1" stroke-linecap="round"/>
+    </svg>
 
-  <section class="about">
-    <div>
-      <h2>What we're building</h2>
-      <p>Most explanations of AI live at one of two extremes: pop-science hand-waving, or academic papers that assume you already know everything. This site aims at the gap — technically honest, but written for someone who thinks carefully and wants real understanding.</p>
-      <p>Topics follow a natural hierarchy: computation at the lowest level, then memory, then parallelism, then systems, then the model itself. Each layer depends on the ones below it.</p>
-      <p>The conversation that produces each nugget is preserved in spirit: you'll often see the question that prompted it, because the question is half the understanding.</p>
+    <span class="hero-eyebrow">A living collection of ideas</span>
+
+    <h1>Small seeds.<br><em>Large trees.</em></h1>
+
+    <p class="hero-sub">Each seed nugget is a single idea that changes how you see. Start anywhere. Follow what intrigues you.</p>
+
+    <div class="hero-divider"></div>
+
+    <div class="hero-body" id="about">
+      <p>We are living through a moment of genuine confusion. Machines talk to us, reason with us, surprise us. Ancient assumptions about mind, matter, and experience are wobbling. And most of the available explanations feel either too technical or too mystical to be any use.</p>
+      <p>These seeds are an attempt at a bridge — between science and spirituality, between the cutting edge and the perennial, between what we know and what we might need to see differently. They are not a course with a fixed sequence. They are a garden. Enter anywhere. The connections will find you.</p>
+      <p>The goal is not to inform. It is to slowly reorient — to offer lenses through which the world looks different, and more coherent, and perhaps less frightening than it did before.</p>
     </div>
 
-    <div>
-      <h2>Anatomy of a nugget</h2>
-      <div class="nugget-anatomy">
-        <h3>Every nugget contains</h3>
-        <div class="anatomy-item">
-          <span class="label">Question</span>
-          <span class="desc">The prompt or intuition that motivated the explanation</span>
+  </section>
+
+  <section class="anatomy">
+    <div class="anatomy-inner">
+      <h2>Anatomy of a <em>seed nugget</em></h2>
+      <p class="anatomy-intro">Every seed has the same five layers. You can read just the surface and move on, or dig as deep as you like.</p>
+      <div class="layers">
+        <div class="layer">
+          <div class="layer-name">Layer 01</div>
+          <h3>Surface</h3>
+          <p>The accessible version. Concrete language, relatable examples, no jargon. The goal is recognition — <em>oh, I've felt that, I just didn't have words for it.</em></p>
         </div>
-        <div class="anatomy-item">
-          <span class="label">Core idea</span>
-          <span class="desc">The one thing to walk away understanding</span>
+        <div class="layer">
+          <div class="layer-name">Layer 02</div>
+          <h3>Depth</h3>
+          <p>The intellectual version. Where the philosophy, science, and history of ideas live. Connects to Whitehead, Gödel, quantum fields, and the rest.</p>
         </div>
-        <div class="anatomy-item">
-          <span class="label">Mechanism</span>
-          <span class="desc">How it actually works, with diagrams or code where useful</span>
+        <div class="layer">
+          <div class="layer-name">Layer 03</div>
+          <h3>Provenance</h3>
+          <p>The roots. Glossary of key terms, bibliography, links to primary sources. Intellectual honesty baked into the structure.</p>
         </div>
-        <div class="anatomy-item">
-          <span class="label">Why it matters</span>
-          <span class="desc">The consequence or constraint this creates at higher levels</span>
+        <div class="layer">
+          <div class="layer-name">Layer 04</div>
+          <h3>Script</h3>
+          <p>The three-minute version. Designed for compression and feeling — the seed as a short piece of entertainment that lands before it explains.</p>
         </div>
-        <div class="anatomy-item">
-          <span class="label">Links</span>
-          <span class="desc">Related nuggets above and below in the hierarchy</span>
+        <div class="layer">
+          <div class="layer-name">Layer 05</div>
+          <h3>Images</h3>
+          <p>The visual language. Each seed has an image that can stand alone and still transmit something — shareable, wordless, immediate.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <div class="nuggets-link">
-    <a href="nuggets.html">Browse all nuggets</a>
-  </div>
+  <section class="nuggets-section">
+    <div class="section-header">
+      <h2>The seeds so far</h2>
+      <a href="nuggets.html">View all →</a>
+    </div>
+
+    <a href="caloric.html" class="nugget-card">
+      <div class="nugget-number">001</div>
+      <div>
+        <div class="nugget-title">The Map That Was Wrong</div>
+        <div class="nugget-tagline">Every era has a framework so obvious it's invisible — until it isn't. Caloric, ether, and what comes next.</div>
+        <div class="nugget-tags">
+          <span class="tag">History of science</span>
+          <span class="tag">Consciousness</span>
+          <span class="tag">AI</span>
+        </div>
+      </div>
+    </a>
+
+    <div class="nugget-card stub-card">
+      <div class="nugget-number">002</div>
+      <div>
+        <div class="nugget-title">Reality Is Events, Not Things</div>
+        <div class="nugget-tagline">A mathematician named Whitehead noticed that science had its foundations backwards. The event is primary. The particle is the abstraction.</div>
+        <div class="nugget-tags">
+          <span class="tag">Whitehead</span>
+          <span class="tag">Physics</span>
+          <span class="tag">Coming soon</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="nugget-card stub-card">
+      <div class="nugget-number">003</div>
+      <div>
+        <div class="nugget-title">Every Event Has an Inside</div>
+        <div class="nugget-tagline">Not just brains. Not just animals. The interior dimension of experience may go all the way down.</div>
+        <div class="nugget-tags">
+          <span class="tag">Consciousness</span>
+          <span class="tag">Panpsychism</span>
+          <span class="tag">Coming soon</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="nugget-card stub-card">
+      <div class="nugget-number">004</div>
+      <div>
+        <div class="nugget-title">You Cannot Judge a Process by Its Output</div>
+        <div class="nugget-tagline">A thermostat predicts. Mozart predicted. The simplicity of the output tells you nothing about the depth of what generated it.</div>
+        <div class="nugget-tags">
+          <span class="tag">AI</span>
+          <span class="tag">Intelligence</span>
+          <span class="tag">Coming soon</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="nugget-card stub-card">
+      <div class="nugget-number">005</div>
+      <div>
+        <div class="nugget-title">Structure Is What Randomness Does</div>
+        <div class="nugget-tagline">Galaxies, cells, brains — all the way back to a quantum fluctuation in an almost-uniform early universe.</div>
+        <div class="nugget-tags">
+          <span class="tag">Physics</span>
+          <span class="tag">Emergence</span>
+          <span class="tag">Coming soon</span>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="philosophy">
+    <div class="philosophy-inner">
+      <blockquote>Science advances one funeral at a time.</blockquote>
+      <div class="philosophy-body">
+        <p>Max Planck said this with painful honesty. The people who grew up with the old map mostly never abandon it — not because they're stubborn, but because it was never a theory to them. It was just <em>how things are.</em></p>
+        <p>These seeds are for the people who haven't calcified yet. And for the people who sense, even if they can't say why, that the current map has some explaining to do.</p>
+      </div>
+    </div>
+  </section>
 
   <footer>
-    Seed Nuggets &mdash; generated in conversation with Claude &mdash; hosted on GitHub Pages
+    <span class="footer-note">Seed Nuggets — a living collection</span>
+    <span class="footer-note">Thinking in progress</span>
   </footer>
 
 </body>
