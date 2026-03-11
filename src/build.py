@@ -111,14 +111,18 @@ def about_body_to_html(body):
             rest = "\n".join(lines[1:]).strip()
             if rest:
                 for p in re.split(r"\n\n+", rest):
-                    if p.strip():
-                        out.append(f"<p>{p.strip().replace(chr(10), ' ')}</p>")
+                    t = p.strip().replace(chr(10), " ")
+                    if t:
+                        cls = " class=\"dim placeholder\"" if t in ("TBD", "No reviews completed yet.") else ""
+                        out.append(f"<p{cls}>{t}</p>")
         elif all(L.strip().startswith("- ") for L in lines):
             items = [f"<li>{L.strip()[2:].replace(chr(10), ' ')}</li>" for L in lines]
             out.append(f"<ul>\n" + "\n".join(items) + "\n</ul>")
         else:
             for line in lines:
-                out.append(f"<p>{line.strip().replace(chr(10), ' ')}</p>")
+                t = line.strip().replace(chr(10), " ")
+                cls = " class=\"dim placeholder\"" if t in ("TBD", "No reviews completed yet.") else ""
+                out.append(f"<p{cls}>{t}</p>")
     return "\n".join(out)
 
 
@@ -185,11 +189,13 @@ def load_groups_data():
 
 # ── HTML helpers ──────────────────────────────────────────────────────────────
 
-CSS = """
+HEAD_LINKS = """
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+<link rel="stylesheet" href="site.css">
+"""
+
+CSS_CONTENT = """*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{--ink:#1a1814;--paper:#f5f0e8;--warm:#c8a96e;--dim:#8a7f6e;--accent:#2d4a3e;--line:#e0d8c8}
 html{font-size:18px}
 body{background:var(--paper);color:var(--ink);font-family:'Cormorant Garamond',Georgia,serif;min-height:100vh}
@@ -238,18 +244,22 @@ td a:hover{color:var(--accent)}
 .premise{font-size:1.15rem;font-style:italic;color:var(--dim);border-left:2px solid var(--warm);padding-left:1.2rem;margin-top:1.2rem;line-height:1.5}
 .layer-tabs{position:sticky;top:57px;background:var(--paper);border-bottom:1px solid var(--line);z-index:90;overflow-x:auto}
 .layer-tabs-inner{display:flex;padding:0 3rem;gap:0}
-.tab{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:var(--dim);padding:.9rem 1.1rem;cursor:pointer;border:none;border-bottom:2px solid transparent;background:none;transition:all .2s;white-space:nowrap}
-.tab:hover{color:var(--ink)}
-.tab.active{color:var(--accent);border-bottom-color:var(--accent)}
-.panel{display:none;padding:3rem 0}
-.panel.active{display:block;animation:fadeUp .3s ease both}
+.layer-tab{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:var(--dim);padding:.9rem 1.1rem;text-decoration:none;border-bottom:2px solid transparent;background:none;transition:all .2s;white-space:nowrap;display:inline-block}
+.layer-tab:hover{color:var(--accent)}
+.layer-section{scroll-margin-top:5rem;padding:3rem 0;border-top:1px solid var(--line)}
+.layer-section:first-of-type{border-top:none}
 .cta{background:var(--accent);color:var(--paper);padding:1.4rem 1.8rem;margin-top:2rem;font-size:1rem;line-height:1.7;font-style:italic}
 .related-section{margin-top:3rem;padding-top:2rem;border-top:1px solid var(--line)}
+.related-label{margin-bottom:.5rem}
 .related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;margin-top:1rem}
 .related-card{border:1px solid var(--line);padding:1rem;text-decoration:none;color:inherit;transition:border-color .2s}
 .related-card:hover{border-color:var(--accent)}
 .related-num{font-family:'DM Mono',monospace;font-size:.58rem;color:var(--warm);margin-bottom:.3rem}
 .related-title{font-size:1rem;font-weight:300}
+.placeholder{font-style:italic}
+.script-direction{font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:var(--warm);margin-top:1.5rem}
+.script-punch{font-size:1.3rem;font-style:italic;color:var(--accent);margin-top:1.5rem}
+.script-line{margin-bottom:.6rem}
 /* Group page */
 .group-block{margin-bottom:3rem}
 .group-label{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--warm);padding:2rem 0 .8rem;border-top:1px solid var(--line)}
@@ -266,7 +276,33 @@ td a:hover{color:var(--accent)}
 .page-body h2{font-size:1.4rem;font-weight:400;color:var(--accent);margin:2.5rem 0 .8rem}
 .page-body ul{margin-left:1.5rem;margin-bottom:1.2rem}
 .page-body li{font-size:1.05rem;line-height:1.7;color:#2a2520;margin-bottom:.4rem}
-</style>
+/* Index */
+.hero{padding:5rem 0 2rem}
+.hero-notice{display:block;margin-bottom:1.5rem}
+.hero-tagline{font-size:1.2rem;color:var(--dim);margin-top:1rem;max-width:520px;line-height:1.6}
+.hero-stats{display:flex;gap:3rem;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--line)}
+.hero-stat-label{font-size:.85rem;color:var(--dim);margin-top:.2rem}
+.seed-list-section{padding:2rem 0 4rem}
+.section-head{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:.8rem;margin-bottom:.5rem}
+.link-mono-small{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);text-decoration:none}
+.link-mono-small:hover{color:var(--ink)}
+.seed-list-more-wrap{padding:1.5rem 0}
+.link-mono-accent{font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);text-decoration:none}
+.link-mono-accent:hover{color:var(--ink)}
+.about-block{padding:2.5rem 0;border-top:1px solid var(--line)}
+.about-block-label{margin-bottom:1.2rem}
+.about-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:.8rem}
+.about-card{color:var(--ink);text-decoration:none;padding:.8rem;border:1px solid var(--line);font-size:.95rem;display:block}
+.about-card:hover{color:var(--accent);border-color:var(--accent)}
+/* Repository */
+.repo-intro{margin-top:.8rem;font-size:.95rem}
+.repo-cell-mono{font-size:.8rem}
+.repo-subtitle{font-size:.82rem;color:var(--dim)}
+.repo-date{font-size:.75rem}
+.repo-tags{font-size:.8rem;color:var(--dim)}
+/* Groups */
+.groups-intro{color:var(--dim);margin-top:.5rem;font-size:.95rem}
+.group-label-sub{font-style:italic;font-weight:300}
 """
 
 def nav(about_pages):
@@ -304,7 +340,7 @@ def head(title, extra=""):
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{title} — Seed Nuggets</title>
-{CSS}
+{HEAD_LINKS}
 {extra}
 </head>
 <body>"""
@@ -315,7 +351,7 @@ def close():
 def text_to_html(text):
     """Convert plain text with --- dividers and paragraphs to HTML."""
     if text.strip() == "TBD":
-        return '<p class="dim" style="font-style:italic">This layer is not yet written.</p>'
+        return '<p class="dim placeholder">This layer is not yet written.</p>'
     parts = text.split("\n---\n")
     html_parts = []
     for part in parts:
@@ -327,20 +363,19 @@ def text_to_html(text):
 def script_to_html(text):
     """Format script text with direction lines highlighted."""
     if text.strip() == "TBD":
-        return '<p class="dim" style="font-style:italic">Script not yet written.</p>'
+        return '<p class="dim placeholder">Script not yet written.</p>'
     lines = text.strip().splitlines()
     out = []
     for line in lines:
         line = line.strip()
         if not line:
             continue
-        # Lines in ALL CAPS or starting with CUT/OPEN/etc. are directions
         if line.isupper() or re.match(r'^(CUT|OPEN|FADE|PAUSE|SLOW|CLOSE|END)', line):
-            out.append(f'<p style="font-family:\'DM Mono\',monospace;font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:var(--warm);margin-top:1.5rem">{line}</p>')
+            out.append(f'<p class="script-direction">{line}</p>')
         elif line.startswith("What does") or line.startswith("What if"):
-            out.append(f'<p style="font-size:1.3rem;font-style:italic;color:var(--accent);margin-top:1.5rem">{line}</p>')
+            out.append(f'<p class="script-punch">{line}</p>')
         else:
-            out.append(f'<p style="margin-bottom:.6rem">{line}</p>')
+            out.append(f'<p class="script-line">{line}</p>')
     return "\n".join(out)
 
 # ── Page builders ─────────────────────────────────────────────────────────────
@@ -375,7 +410,7 @@ def build_nugget(n, all_nuggets, about_pages):
       </a>"""
         related_html = f"""
     <div class="related-section">
-      <div class="mono small warm" style="margin-bottom:.5rem">Related seeds</div>
+      <div class="mono small warm related-label">Related seeds</div>
       <div class="related-grid">{cards}
       </div>
     </div>"""
@@ -397,16 +432,6 @@ def build_nugget(n, all_nuggets, about_pages):
     html = head(f"{num} — {title}")
     html += nav(about_pages)
     html += f"""
-<div class="layer-tabs">
-  <div class="layer-tabs-inner">
-    <button class="tab active" onclick="show('surface',this)">Surface</button>
-    <button class="tab" onclick="show('depth',this)">Depth</button>
-    <button class="tab" onclick="show('provenance',this)">Provenance</button>
-    <button class="tab" onclick="show('script',this)">Script</button>
-    <button class="tab" onclick="show('images',this)">Images</button>
-  </div>
-</div>
-
 <div class="wrap">
   <div class="nugget-header fade">
     <div class="meta-row">
@@ -418,38 +443,39 @@ def build_nugget(n, all_nuggets, about_pages):
     <p class="premise">{subtitle}</p>
   </div>
 
-  <div id="surface" class="panel active">
+  <div class="layer-tabs">
+    <div class="layer-tabs-inner">
+      <a href="#surface" class="layer-tab">Surface</a>
+      <a href="#depth" class="layer-tab">Depth</a>
+      <a href="#provenance" class="layer-tab">Provenance</a>
+      <a href="#script" class="layer-tab">Script</a>
+      <a href="#images" class="layer-tab">Images</a>
+    </div>
+  </div>
+
+  <section id="surface" class="layer-section">
     <div class="prose">{surface_html}</div>
     {related_html}
-  </div>
+  </section>
 
-  <div id="depth" class="panel">
+  <section id="depth" class="layer-section">
     <div class="prose">{depth_html}</div>
-  </div>
+  </section>
 
-  <div id="provenance" class="panel">
+  <section id="provenance" class="layer-section">
     <div class="prose">{prov_html}</div>
-  </div>
+  </section>
 
-  <div id="script" class="panel">
+  <section id="script" class="layer-section">
     <div class="prose">{script_html}</div>
-  </div>
+  </section>
 
-  <div id="images" class="panel">
+  <section id="images" class="layer-section">
     <div class="prose">{images_html}</div>
-  </div>
+  </section>
 </div>
 """
     html += foot()
-    html += """
-<script>
-function show(id,btn){
-  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
-  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-  btn.classList.add('active');
-}
-</script>"""
     html += close()
     return html
 
@@ -468,12 +494,12 @@ def build_repository(nuggets, about_pages):
         status_class = f"status-{status.replace(' ','')}"
         rows += f"""
     <tr>
-      <td class="mono" style="font-size:.8rem">{num}</td>
-      <td class="mono" style="font-size:.8rem">{shortname}</td>
-      <td><a href="{fname}">{title}</a><br><span style="font-size:.82rem;color:var(--dim)">{subtitle}</span></td>
+      <td class="mono repo-cell-mono">{num}</td>
+      <td class="mono repo-cell-mono">{shortname}</td>
+      <td><a href="{fname}">{title}</a><br><span class="repo-subtitle">{subtitle}</span></td>
       <td class="{status_class}">{status}</td>
-      <td class="mono" style="font-size:.75rem">{date}</td>
-      <td style="font-size:.8rem;color:var(--dim)">{tags}</td>
+      <td class="mono repo-date">{date}</td>
+      <td class="repo-tags">{tags}</td>
     </tr>"""
 
     html = head("Repository")
@@ -482,7 +508,7 @@ def build_repository(nuggets, about_pages):
 <div class="wrap">
   <div class="page-body fade">
     <h1>Repository</h1>
-    <p class="dim" style="margin-top:.8rem;font-size:.95rem">All seed nuggets. The canonical list. Generated from source files.</p>
+    <p class="dim repo-intro">All seed nuggets. The canonical list. Generated from source files.</p>
     <table>
       <thead>
         <tr>
@@ -509,11 +535,11 @@ def build_groups(nuggets, groups_data, about_pages):
     html += nav(about_pages)
     html += '<div class="wrap"><div class="page-body fade">'
     html += "<h1>Seeds by group</h1>\n"
-    html += '<p style="color:var(--dim);margin-top:.5rem;font-size:.95rem">Thematic clusters. Each seed may appear in more than one group.</p>\n'
+    html += '<p class="groups-intro">Thematic clusters. Each seed may appear in more than one group.</p>\n'
 
     for group_title, group_sub, nums in groups_data:
         html += f'<div class="group-block">'
-        html += f'<div class="group-label">{group_title} — <span style="font-style:italic;font-weight:300">{group_sub}</span></div>'
+        html += f'<div class="group-label">{group_title} — <span class="group-label-sub">{group_sub}</span></div>'
         for num in nums:
             n = nugget_by_number(nuggets, num)
             if not n:
@@ -568,44 +594,44 @@ def build_index(nuggets, index_copy, about_pages):
     view_all_text = (c.get("view_all") or "View all {n} seeds →").replace("{n}", str(total))
     about_cards = []
     for stem, title, _ in about_pages:
-        about_cards.append(f'<a href="{stem}.html" style="color:var(--ink);text-decoration:none;padding:.8rem;border:1px solid var(--line);font-size:.95rem">{title}</a>')
-    about_cards.append(f'<a href="groups.html" style="color:var(--ink);text-decoration:none;padding:.8rem;border:1px solid var(--line);font-size:.95rem">{c.get("groups", "By Group")}</a>')
+        about_cards.append(f'<a href="{stem}.html" class="about-card">{title}</a>')
+    about_cards.append(f'<a href="groups.html" class="about-card">{c.get("groups", "By Group")}</a>')
 
     html = head("Seed Nuggets")
     html += nav(about_pages)
     html += f"""
 <div class="wrap">
-  <div style="padding:5rem 0 2rem" class="fade">
-    <span class="mono small warm" style="display:block;margin-bottom:1.5rem">{c.get("notice", "")}</span>
+  <div class="hero fade">
+    <span class="mono small warm hero-notice">{c.get("notice", "")}</span>
     <h1>Seed<br><em>Nuggets</em></h1>
-    <p style="font-size:1.2rem;color:var(--dim);margin-top:1rem;max-width:520px;line-height:1.6">{c.get("tagline", "")}</p>
+    <p class="hero-tagline">{c.get("tagline", "")}</p>
 
-    <div style="display:flex;gap:3rem;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--line)">
+    <div class="hero-stats">
       <div>
         <div class="mono small warm">{total}</div>
-        <div style="font-size:.85rem;color:var(--dim);margin-top:.2rem">{c.get("stat_label_1", "seeds defined")}</div>
+        <div class="hero-stat-label">{c.get("stat_label_1", "seeds defined")}</div>
       </div>
       <div>
         <div class="mono small warm">{ready_count}</div>
-        <div style="font-size:.85rem;color:var(--dim);margin-top:.2rem">{c.get("stat_label_2", "with content")}</div>
+        <div class="hero-stat-label">{c.get("stat_label_2", "with content")}</div>
       </div>
     </div>
   </div>
 
-  <div style="padding:2rem 0 4rem">
-    <div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:.8rem;margin-bottom:.5rem">
+  <div class="seed-list-section">
+    <div class="section-head">
       <span class="mono small">{c.get("section_head", "All seeds")}</span>
-      <a href="repository.html" style="font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);text-decoration:none">{c.get("repo_link", "Full repository →")}</a>
+      <a href="repository.html" class="link-mono-small">{c.get("repo_link", "Full repository →")}</a>
     </div>
     {recent_html}
-    <div style="padding:1.5rem 0">
-      <a href="repository.html" style="font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);text-decoration:none">{view_all_text}</a>
+    <div class="seed-list-more-wrap">
+      <a href="repository.html" class="link-mono-accent">{view_all_text}</a>
     </div>
   </div>
 
-  <div style="padding:2.5rem 0;border-top:1px solid var(--line)">
-    <div class="mono small warm" style="margin-bottom:1.2rem">{c.get("about_heading", "About this project")}</div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:.8rem">
+  <div class="about-block">
+    <div class="mono small warm about-block-label">{c.get("about_heading", "About this project")}</div>
+    <div class="about-grid">
       {"".join(about_cards)}
     </div>
   </div>
@@ -655,6 +681,9 @@ def main():
         print(f"  Built {fname}")
 
     if not filter_num:
+        (SITE_DIR / "site.css").write_text(CSS_CONTENT, encoding="utf-8")
+        print("  Built site.css")
+
         (SITE_DIR / "repository.html").write_text(build_repository(nuggets, about_pages), encoding="utf-8")
         print("  Built repository.html")
 
