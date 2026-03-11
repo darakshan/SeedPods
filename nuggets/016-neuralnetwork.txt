@@ -2,7 +2,7 @@
 #shortname neuralnetwork
 #title The Network Is a Field Having Occasions
 #subtitle A neural network is not analogous to Whitehead's picture. It is a concrete instance of it.
-#status empty
+#status prelim
 #date 2026-03-11
 #tags AI, neural-networks, whitehead, consciousness, fields
 #related 015, 017, 008, 006

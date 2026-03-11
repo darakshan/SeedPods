@@ -2,7 +2,7 @@
 #shortname self
 #title The Self Is a Pattern, Not a Thing
 #subtitle The mystic's insight and the philosopher's proof arrive at the same place.
-#status empty
+#status prelim
 #date 2026-03-11
 #tags whitehead, buddhism, mysticism, identity, self
 #related 003, 005, 002, 006

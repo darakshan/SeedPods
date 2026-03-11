@@ -2,7 +2,7 @@
 #shortname funerals
 #title Science Advances One Funeral at a Time
 #subtitle The map doesn't get replaced. The people holding the old map get replaced.
-#status empty
+#status prelim
 #date 2026-03-11
 #tags paradigm-shift, history-of-science, change, kuhn, planck
 #related 001, 018, 010, 011

@@ -223,7 +223,8 @@ h2{font-size:1.6rem;font-weight:300;margin-bottom:1rem}
 .prose p+p{margin-top:1.3rem}
 .prose hr{border:none;border-top:1px solid var(--line);margin:2rem 0}
 .prose em{font-style:italic}
-.tag{font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);border:1px solid var(--line);padding:.18rem .45rem;border-radius:2px}
+.tag{font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);border:1px solid var(--line);padding:.18rem .45rem;border-radius:2px;text-decoration:none;display:inline-block}
+.tag:hover{color:var(--accent);border-color:var(--accent)}
 footer{padding:3rem;border-top:1px solid var(--line);margin-top:4rem;display:flex;justify-content:space-between}
 footer span{font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
 @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
@@ -236,19 +237,21 @@ td{padding:.9rem 1rem .9rem 0;border-bottom:1px solid var(--line);vertical-align
 td a{color:var(--ink);text-decoration:none}
 td a:hover{color:var(--accent)}
 .status-draft1{color:var(--accent);font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.08em}
+.status-prelim{color:var(--warm);font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.08em}
 .status-partial{color:var(--warm);font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.08em}
 .status-empty{color:var(--line);font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.08em}
 /* Nugget page */
 .nugget-header{padding:4rem 0 2.5rem}
 .meta-row{display:flex;gap:1.2rem;align-items:center;margin-bottom:1.5rem;flex-wrap:wrap}
 .premise{font-size:1.15rem;font-style:italic;color:var(--dim);border-left:2px solid var(--warm);padding-left:1.2rem;margin-top:1.2rem;line-height:1.5}
+.nugget-tags{margin-top:1.5rem}
 .layer-tabs{position:sticky;top:57px;background:var(--paper);border-bottom:1px solid var(--line);z-index:90}
-.layer-tabs-inner{display:flex;align-items:center;flex-wrap:wrap;padding:.4rem 3rem;gap:0;row-gap:0}
+.layer-tabs-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:.4rem 3rem;gap:0;row-gap:0}
 .layer-tabs-prev,.layer-tabs-next{flex-shrink:0;padding:.5rem .25rem;font-size:1rem;line-height:1}
 .layer-tabs-prev a,.layer-tabs-next a{color:var(--dim);text-decoration:none}
 .layer-tabs-prev a:hover,.layer-tabs-next a:hover{color:var(--accent)}
-.layer-tabs-center{display:flex;flex-wrap:wrap;align-items:center;flex:1;min-width:0}
-.layer-tab{font-family:'DM Mono',monospace;font-size:.55rem;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);padding:.5rem .4rem;text-decoration:none;border-bottom:2px solid transparent;background:none;transition:all .2s;white-space:nowrap;display:inline-block}
+.layer-tabs-center{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;flex:1;min-width:0}
+.layer-tab{font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);padding:.5rem .4rem;text-decoration:none;border-bottom:2px solid transparent;background:none;transition:all .2s;white-space:nowrap;display:inline-block}
 .layer-tab:hover{color:var(--accent)}
 .layer-tab-disabled{color:var(--line);cursor:default;pointer-events:none}
 .layer-tab-disabled:hover{color:var(--line)}
@@ -313,6 +316,11 @@ td a:hover{color:var(--accent)}
 .repo-subtitle{font-size:.82rem;color:var(--dim)}
 .repo-date{font-size:.75rem}
 .repo-tags{font-size:.8rem;color:var(--dim)}
+/* Tags page */
+.index-section-head{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--warm);padding:2rem 0 .8rem;border-top:1px solid var(--line);margin-top:2rem}
+.tags-table th:first-child,.tags-table td:first-child{min-width:8rem}
+.tags-table .repo-tag-label{font-size:1rem;font-weight:400;font-family:'DM Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--warm);scroll-margin-top:5rem;vertical-align:top;padding-top:.9rem}
+.tags-table .repo-tag-label-empty{vertical-align:top}
 /* Groups */
 .groups-intro{color:var(--dim);margin-top:.5rem;font-size:.95rem}
 .group-label-sub{font-style:italic;font-weight:300}
@@ -328,6 +336,7 @@ def nav(about_pages):
   <a href="index.html" class="nav-logo">Seed Nuggets</a>
   <ul class="nav-links">
     <li><a href="repository.html">Repository</a></li>
+    <li><a href="tags.html">Index</a></li>
     <li><a href="groups.html">By Group</a></li>
     <li class="nav-item-dropdown">
       <details>
@@ -396,7 +405,7 @@ def script_to_html(text):
 LAYER_ORDER = [
     ("surface", "Surface"),
     ("depth", "Depth"),
-    ("provenance", "Provenance"),
+    ("provenance", "Reference"),
     ("script", "Script"),
     ("images", "Images"),
     ("related", "Related"),
@@ -414,7 +423,7 @@ def build_nugget(n, all_nuggets, about_pages):
     layers = n.get("layers", {})
     shortname = n.get("shortname", "")
 
-    tag_html = " ".join(f'<span class="tag">{t}</span>' for t in tags)
+    tag_html = " ".join(f'<a href="tags.html#{tag_slug(t)}" class="tag">{t}</a>' for t in tags)
 
     rel_nuggets = [nugget_by_number(all_nuggets, r) for r in related_nums]
     rel_nuggets = [r for r in rel_nuggets if r]
@@ -427,7 +436,7 @@ def build_nugget(n, all_nuggets, about_pages):
             rtitle = r.get("title", "")
             cards += f"""
       <a href="{rfile}" class="related-card">
-        <div class="related-num">{rnum}</div>
+        <div class="related-num">{display_number(rnum)}</div>
         <div class="related-title">{rtitle}</div>
       </a>"""
         related_cards_html = f'<div class="related-grid">{cards}\n      </div>'
@@ -485,20 +494,10 @@ def build_nugget(n, all_nuggets, about_pages):
     prev_html = f'<a href="{prev_n.get("filename", "")}.html">&laquo;</a>' if prev_n else ''
     next_html = f'<a href="{next_n.get("filename", "")}.html">&raquo;</a>' if next_n else ''
 
-    html = head(f"{num} — {title}")
+    html = head(f"{display_number(num)} — {title}")
     html += nav(about_pages)
     html += f"""
 <div class="wrap">
-  <div class="nugget-header fade">
-    <div class="meta-row">
-      <span class="mono small warm">Seed {num}</span>
-      {tag_html}
-      <span class="mono small dim">{status} · {date}</span>
-    </div>
-    <h1>{title}</h1>
-    <p class="premise">{subtitle}</p>
-  </div>
-
   <div class="layer-tabs">
     <div class="layer-tabs-inner">
       <span class="layer-tabs-prev">{prev_html}</span>
@@ -507,6 +506,16 @@ def build_nugget(n, all_nuggets, about_pages):
       </div>
       <span class="layer-tabs-next">{next_html}</span>
     </div>
+  </div>
+
+  <div class="nugget-header fade">
+    <div class="meta-row">
+      <span class="mono small warm">Seed {display_number(num)}</span>
+      <span class="mono small dim"> · {status} · {date}</span>
+    </div>
+    <h1>{title}</h1>
+    <p class="premise">{subtitle}</p>
+    <div class="nugget-tags">{tag_html}</div>
   </div>
 
 {sections_html}
@@ -526,17 +535,17 @@ def build_repository(nuggets, about_pages):
         subtitle = n.get("subtitle", "")
         status = n.get("status", "empty")
         date = n.get("date", "")
-        tags = ", ".join(n.get("tags", []))
+        tag_links = " ".join(f'<a href="tags.html#{tag_slug(t)}" class="tag">{t}</a>' for t in n.get("tags", []))
         fname = n.get("filename", "") + ".html"
         status_class = f"status-{status.replace(' ','')}"
         rows += f"""
     <tr>
-      <td class="mono repo-cell-mono">{num}</td>
+      <td class="mono repo-cell-mono">{display_number(num)}</td>
       <td class="mono repo-cell-mono">{shortname}</td>
       <td><a href="{fname}">{title}</a><br><span class="repo-subtitle">{subtitle}</span></td>
       <td class="{status_class}">{status}</td>
       <td class="mono repo-date">{date}</td>
-      <td class="repo-tags">{tags}</td>
+      <td class="repo-tags">{tag_links}</td>
     </tr>"""
 
     html = head("Repository")
@@ -567,6 +576,87 @@ def build_repository(nuggets, about_pages):
     return html
 
 
+def tag_slug(tag):
+    return tag.replace(" ", "-")
+
+
+def display_number(num):
+    """Strip leading zeros for display only; keep filenames/URLs/lookup as-is."""
+    if num and num.isdigit():
+        return str(int(num))
+    return num or "?"
+
+
+def build_tags_page(nuggets, about_pages):
+    all_tags = set()
+    for n in nuggets:
+        all_tags.update(n.get("tags", []))
+    sorted_tags = sorted(all_tags)
+
+    status_order = ("draft1", "partial", "prelim", "empty")
+    all_statuses = set(n.get("status", "empty") for n in nuggets)
+    sorted_statuses = sorted(all_statuses, key=lambda s: (status_order.index(s) if s in status_order else 99, s))
+
+    def row_block(label, slug, matching):
+        block = ""
+        for i, n in enumerate(matching):
+            num = n.get("number", "")
+            title = n.get("title", "")
+            subtitle = n.get("subtitle", "")
+            fname = n.get("filename", "") + ".html"
+            title_display = f"{display_number(num)}. {title}" if num else title
+            if i == 0:
+                tag_cell = f'<td id="{slug}" class="repo-tag-label">{label}</td>'
+            else:
+                tag_cell = '<td class="repo-tag-label-empty"></td>'
+            block += f"""
+    <tr>
+      {tag_cell}
+      <td><a href="{fname}">{title_display}</a><br><span class="repo-subtitle">{subtitle}</span></td>
+    </tr>"""
+        return block
+
+    tag_rows = ""
+    for tag in sorted_tags:
+        tag_rows += row_block(tag, tag_slug(tag), [n for n in nuggets if tag in n.get("tags", [])])
+    status_rows = ""
+    for status in sorted_statuses:
+        status_rows += row_block(status, f"status-{status}", [n for n in nuggets if n.get("status", "empty") == status])
+
+    html = head("Index")
+    html += nav(about_pages)
+    html += f"""
+<div class="wrap">
+  <div class="page-body fade">
+    <h1>Index</h1>
+    <table class="tags-table">
+      <thead>
+        <tr>
+          <th>Tag</th>
+          <th>Title / Subtitle</th>
+        </tr>
+      </thead>
+      <tbody>{tag_rows}
+      </tbody>
+    </table>
+    <h2 class="index-section-head">Statuses</h2>
+    <table class="tags-table">
+      <thead>
+        <tr>
+          <th>Tag</th>
+          <th>Title / Subtitle</th>
+        </tr>
+      </thead>
+      <tbody>{status_rows}
+      </tbody>
+    </table>
+  </div>
+</div>"""
+    html += foot()
+    html += close()
+    return html
+
+
 def build_groups(nuggets, groups_data, about_pages):
     html = head("Seeds by Group")
     html += nav(about_pages)
@@ -588,7 +678,7 @@ def build_groups(nuggets, groups_data, about_pages):
             stub_class = " stub" if status == "empty" else ""
             html += f"""
       <a href="{fname}" class="seed-row{stub_class}">
-        <div class="seed-num">{num}</div>
+        <div class="seed-num">{display_number(n.get("number", ""))}</div>
         <div>
           <div class="seed-title">{title}</div>
           <div class="seed-sub">{subtitle}</div>
@@ -620,7 +710,7 @@ def build_index(nuggets, index_copy, about_pages):
         stub = " stub" if status == "empty" else ""
         recent_html += f"""
     <a href="{fname}" class="seed-row{stub}">
-      <div class="seed-num">{num}</div>
+      <div class="seed-num">{display_number(num)}</div>
       <div>
         <div class="seed-title">{title}</div>
         <div class="seed-sub">{subtitle}</div>
@@ -693,10 +783,10 @@ def build_map_body(nuggets):
     nums = [n.get("number", "") for n in sorted_nuggets]
     related_sets = {n.get("number", ""): set(n.get("related", [])) for n in sorted_nuggets}
     rows = []
-    header_cells = ["<th></th>"] + [f'<th class="map-col-label">{num}</th>' for num in nums]
+    header_cells = ["<th></th>"] + [f'<th class="map-col-label">{display_number(num)}</th>' for num in nums]
     rows.append("<tr>" + "".join(header_cells) + "</tr>")
     for from_num, n in zip(nums, sorted_nuggets):
-        cells = [f'<th class="map-row-label">{from_num}</th>']
+        cells = [f'<th class="map-row-label">{display_number(from_num)}</th>']
         for to_num in nums:
             linked = to_num in related_sets.get(from_num, set())
             cls = "map-cell-linked" if linked else "map-cell-empty"
@@ -743,6 +833,9 @@ def main():
 
         (SITE_DIR / "repository.html").write_text(build_repository(nuggets, about_pages), encoding="utf-8")
         print("  Built repository.html")
+
+        (SITE_DIR / "tags.html").write_text(build_tags_page(nuggets, about_pages), encoding="utf-8")
+        print("  Built tags.html")
 
         (SITE_DIR / "groups.html").write_text(build_groups(nuggets, groups_data, about_pages), encoding="utf-8")
         print("  Built groups.html")

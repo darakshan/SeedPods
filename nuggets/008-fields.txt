@@ -2,7 +2,7 @@
 #shortname fields
 #title The Field Is the Medium of Feeling
 #subtitle Physics and Whitehead converged on the same discovery from opposite directions.
-#status empty
+#status prelim
 #date 2026-03-11
 #tags physics, whitehead, fields, quantum-mechanics, prehension
 #related 007, 002, 003, 009

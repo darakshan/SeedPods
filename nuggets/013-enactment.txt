@@ -2,7 +2,7 @@
 #shortname enactment
 #title The Organism Enacts Its World
 #subtitle Cognition is not passive reception. The organism and its environment co-arise.
-#status empty
+#status prelim
 #date 2026-03-11
 #tags enactivism, cognition, thompson, biology, perception
 #related 012, 003, 002, 004

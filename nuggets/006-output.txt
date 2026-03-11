@@ -2,7 +2,7 @@
 #shortname output
 #title You Cannot Judge a Process by Its Output
 #subtitle A thermostat predicts. Mozart predicted. The simplicity of the output tells you nothing.
-#status empty
+#status prelim
 #date 2026-03-11
 #tags AI, intelligence, consciousness, cognition
 #related 001, 016, 017, 003

@@ -2,7 +2,7 @@
 #shortname accumulation
 #title Nothing Was Added — The Numbers Just Got Large Enough
 #subtitle Every threshold that looks like a miracle from outside is just accumulation crossing a point.
-#status empty
+#status prelim
 #date 2026-03-11
 #tags emergence, complexity, consciousness, evolution
 #related 009, 010, 012, 013

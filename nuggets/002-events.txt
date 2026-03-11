@@ -2,7 +2,7 @@
 #shortname events
 #title Reality Is Events, Not Things
 #subtitle The particle is the abstraction. The event is what's actually there.
-#status empty
+#status prelim
 #date 2026-03-11
 #tags whitehead, physics, ontology, process-philosophy
 #related 001, 003, 008, 004

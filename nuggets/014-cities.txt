@@ -2,7 +2,7 @@
 #shortname cities
 #title Cities Have an Inside Too
 #subtitle The society of events that constitutes an experiencing entity need not be biological.
-#status empty
+#status prelim
 #date 2026-03-11
 #tags cities, consciousness, emergence, collective-experience
 #related 003, 015, 011, 012

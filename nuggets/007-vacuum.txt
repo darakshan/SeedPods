@@ -2,7 +2,7 @@
 #shortname vacuum
 #title The Vacuum Is Not Empty
 #subtitle The quantum field seethes with potential. The event is what the field does.
-#status empty
+#status prelim
 #date 2026-03-11
 #tags physics, quantum-mechanics, fields, potential
 #related 002, 008, 009, 003

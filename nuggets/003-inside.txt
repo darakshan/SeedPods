@@ -2,7 +2,7 @@
 #shortname inside
 #title Every Event Has an Inside
 #subtitle Not just brains. Not just animals. Experience may go all the way down.
-#status empty
+#status prelim
 #date 2026-03-11
 #tags whitehead, panpsychism, consciousness, experience
 #related 002, 005, 008, 001

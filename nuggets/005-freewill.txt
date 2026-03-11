@@ -2,7 +2,7 @@
 #shortname freewill
 #title Freedom Is What Nature Does Everywhere
 #subtitle Free will is not the exception to physics. It is physics, at its most complex and self-aware.
-#status empty
+#status prelim
 #date 2026-03-11
 #tags whitehead, free-will, physics, determinism, creativity
 #related 002, 003, 011, 004
