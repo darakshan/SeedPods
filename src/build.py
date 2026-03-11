@@ -228,7 +228,7 @@ footer{padding:3rem;border-top:1px solid var(--line);margin-top:4rem;display:fle
 footer span{font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
 @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
 .fade{animation:fadeUp .5s ease both}
-@media(max-width:640px){nav,.wrap,footer{padding-left:1.5rem;padding-right:1.5rem}}
+@media(max-width:640px){nav,.wrap,footer{padding-left:1.5rem;padding-right:1.5rem}.layer-tabs-inner{padding-left:1.5rem;padding-right:1.5rem}}
 /* Repo table */
 table{width:100%;border-collapse:collapse;font-size:.95rem;margin-top:1.5rem}
 th{font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:var(--warm);padding:.8rem 1rem .8rem 0;border-bottom:1px solid var(--line);text-align:left}
@@ -242,12 +242,25 @@ td a:hover{color:var(--accent)}
 .nugget-header{padding:4rem 0 2.5rem}
 .meta-row{display:flex;gap:1.2rem;align-items:center;margin-bottom:1.5rem;flex-wrap:wrap}
 .premise{font-size:1.15rem;font-style:italic;color:var(--dim);border-left:2px solid var(--warm);padding-left:1.2rem;margin-top:1.2rem;line-height:1.5}
-.layer-tabs{position:sticky;top:57px;background:var(--paper);border-bottom:1px solid var(--line);z-index:90;overflow-x:auto}
-.layer-tabs-inner{display:flex;padding:0 3rem;gap:0}
-.layer-tab{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:var(--dim);padding:.9rem 1.1rem;text-decoration:none;border-bottom:2px solid transparent;background:none;transition:all .2s;white-space:nowrap;display:inline-block}
+.layer-tabs{position:sticky;top:57px;background:var(--paper);border-bottom:1px solid var(--line);z-index:90}
+.layer-tabs-inner{display:flex;align-items:center;flex-wrap:wrap;padding:.4rem 3rem;gap:0;row-gap:0}
+.layer-tabs-prev,.layer-tabs-next{flex-shrink:0;padding:.5rem .25rem;font-size:1rem;line-height:1}
+.layer-tabs-prev a,.layer-tabs-next a{color:var(--dim);text-decoration:none}
+.layer-tabs-prev a:hover,.layer-tabs-next a:hover{color:var(--accent)}
+.layer-tabs-center{display:flex;flex-wrap:wrap;align-items:center;flex:1;min-width:0}
+.layer-tab{font-family:'DM Mono',monospace;font-size:.55rem;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);padding:.5rem .4rem;text-decoration:none;border-bottom:2px solid transparent;background:none;transition:all .2s;white-space:nowrap;display:inline-block}
 .layer-tab:hover{color:var(--accent)}
+.layer-tab-disabled{color:var(--line);cursor:default;pointer-events:none}
+.layer-tab-disabled:hover{color:var(--line)}
 .layer-section{scroll-margin-top:5rem;padding:3rem 0;border-top:1px solid var(--line)}
 .layer-section:first-of-type{border-top:none}
+.layer-heading{font-size:1.1rem;font-weight:400;font-family:'DM Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--warm);margin-bottom:1.5rem}
+.map-matrix{display:inline-block;border-collapse:collapse;margin:2rem 0;font-size:.7rem}
+.map-matrix th,.map-matrix td{border:1px solid var(--line);width:1.4rem;height:1.4rem;text-align:center;vertical-align:middle}
+.map-matrix th{font-family:'DM Mono',monospace;color:var(--dim);font-weight:400}
+.map-matrix .map-cell-linked{background:var(--accent);color:var(--paper)}
+.map-matrix .map-cell-empty{background:var(--paper)}
+.map-matrix .map-row-label,.map-matrix .map-col-label{font-family:'DM Mono',monospace;color:var(--dim)}
 .cta{background:var(--accent);color:var(--paper);padding:1.4rem 1.8rem;margin-top:2rem;font-size:1rem;line-height:1.7;font-style:italic}
 .related-section{margin-top:3rem;padding-top:2rem;border-top:1px solid var(--line)}
 .related-label{margin-bottom:.5rem}
@@ -257,7 +270,7 @@ td a:hover{color:var(--accent)}
 .related-num{font-family:'DM Mono',monospace;font-size:.58rem;color:var(--warm);margin-bottom:.3rem}
 .related-title{font-size:1rem;font-weight:300}
 .placeholder{font-style:italic}
-.script-direction{font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:var(--warm);margin-top:1.5rem}
+.script-direction{font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:var(--ink);margin-top:1.5rem}
 .script-punch{font-size:1.3rem;font-style:italic;color:var(--accent);margin-top:1.5rem}
 .script-line{margin-bottom:.6rem}
 /* Group page */
@@ -380,6 +393,16 @@ def script_to_html(text):
 
 # ── Page builders ─────────────────────────────────────────────────────────────
 
+LAYER_ORDER = [
+    ("surface", "Surface"),
+    ("depth", "Depth"),
+    ("provenance", "Provenance"),
+    ("script", "Script"),
+    ("images", "Images"),
+    ("related", "Related"),
+]
+
+
 def build_nugget(n, all_nuggets, about_pages):
     num = n.get("number", "?")
     title = n.get("title", "Untitled")
@@ -393,10 +416,9 @@ def build_nugget(n, all_nuggets, about_pages):
 
     tag_html = " ".join(f'<span class="tag">{t}</span>' for t in tags)
 
-    # Build related cards
-    related_html = ""
     rel_nuggets = [nugget_by_number(all_nuggets, r) for r in related_nums]
     rel_nuggets = [r for r in rel_nuggets if r]
+    related_cards_html = ""
     if rel_nuggets:
         cards = ""
         for r in rel_nuggets[:5]:
@@ -408,26 +430,60 @@ def build_nugget(n, all_nuggets, about_pages):
         <div class="related-num">{rnum}</div>
         <div class="related-title">{rtitle}</div>
       </a>"""
-        related_html = f"""
-    <div class="related-section">
-      <div class="mono small warm related-label">Related seeds</div>
-      <div class="related-grid">{cards}
-      </div>
-    </div>"""
+        related_cards_html = f'<div class="related-grid">{cards}\n      </div>'
 
-    surface_html = text_to_html(layers.get("surface", "TBD"))
-    depth_html = text_to_html(layers.get("depth", "TBD"))
-    prov_html = text_to_html(layers.get("provenance", "TBD"))
-    script_html = script_to_html(layers.get("script", "TBD"))
-    images_html = text_to_html(layers.get("images", "TBD"))
-
-    # Add CTA to surface if it contains "Try this"
-    surface_layer = layers.get("surface", "")
-    if "Try this:" in surface_layer:
-        parts = surface_layer.split("Try this:")
+    surface_raw = layers.get("surface", "TBD")
+    surface_html = "" if (surface_raw or "TBD").strip() == "TBD" else text_to_html(surface_raw)
+    if surface_html and "Try this:" in surface_raw:
+        parts = surface_raw.split("Try this:")
         before = text_to_html("Try this:".join(parts[:-1]))
         cta_text = "Try this: " + parts[-1].strip()
         surface_html = before + f'<div class="cta">{cta_text}</div>'
+
+    def layer_has_content(layer_id):
+        if layer_id == "related":
+            return bool(rel_nuggets)
+        raw = (layers.get(layer_id) or "TBD").strip()
+        return raw != "TBD"
+
+    def layer_body(layer_id):
+        if layer_id == "related":
+            return related_cards_html
+        if layer_id == "surface":
+            return surface_html
+        raw = layers.get(layer_id, "TBD")
+        if layer_id == "script":
+            return script_to_html(raw)
+        return text_to_html(raw)
+
+    tabs_parts = []
+    for layer_id, label in LAYER_ORDER:
+        if layer_has_content(layer_id):
+            tabs_parts.append(f'<a href="#{layer_id}" class="layer-tab">{label}</a>')
+        else:
+            tabs_parts.append(f'<span class="layer-tab layer-tab-disabled">{label}</span>')
+
+    sections_parts = []
+    for layer_id, label in LAYER_ORDER:
+        if not layer_has_content(layer_id):
+            continue
+        body = layer_body(layer_id)
+        if layer_id == "related":
+            section_content = f'<h2 class="layer-heading">{label}</h2>\n    {body}'
+        else:
+            section_content = f'<h2 class="layer-heading">{label}</h2>\n    <div class="prose">{body}</div>'
+        sections_parts.append(f'  <section id="{layer_id}" class="layer-section">\n    {section_content}\n  </section>')
+
+    tabs_html = "\n      ".join(tabs_parts)
+    sections_html = "\n\n".join(sections_parts)
+
+    sorted_nuggets = sorted(all_nuggets, key=lambda x: x.get("number", ""))
+    idx = next((i for i, x in enumerate(sorted_nuggets) if x.get("filename") == n.get("filename")), -1)
+    prev_n = sorted_nuggets[idx - 1] if idx > 0 else None
+    next_n = sorted_nuggets[idx + 1] if 0 <= idx < len(sorted_nuggets) - 1 else None
+
+    prev_html = f'<a href="{prev_n.get("filename", "")}.html">&laquo;</a>' if prev_n else ''
+    next_html = f'<a href="{next_n.get("filename", "")}.html">&raquo;</a>' if next_n else ''
 
     html = head(f"{num} — {title}")
     html += nav(about_pages)
@@ -445,34 +501,15 @@ def build_nugget(n, all_nuggets, about_pages):
 
   <div class="layer-tabs">
     <div class="layer-tabs-inner">
-      <a href="#surface" class="layer-tab">Surface</a>
-      <a href="#depth" class="layer-tab">Depth</a>
-      <a href="#provenance" class="layer-tab">Provenance</a>
-      <a href="#script" class="layer-tab">Script</a>
-      <a href="#images" class="layer-tab">Images</a>
+      <span class="layer-tabs-prev">{prev_html}</span>
+      <div class="layer-tabs-center">
+        {tabs_html}
+      </div>
+      <span class="layer-tabs-next">{next_html}</span>
     </div>
   </div>
 
-  <section id="surface" class="layer-section">
-    <div class="prose">{surface_html}</div>
-    {related_html}
-  </section>
-
-  <section id="depth" class="layer-section">
-    <div class="prose">{depth_html}</div>
-  </section>
-
-  <section id="provenance" class="layer-section">
-    <div class="prose">{prov_html}</div>
-  </section>
-
-  <section id="script" class="layer-section">
-    <div class="prose">{script_html}</div>
-  </section>
-
-  <section id="images" class="layer-section">
-    <div class="prose">{images_html}</div>
-  </section>
+{sections_html}
 </div>
 """
     html += foot()
@@ -650,6 +687,25 @@ def build_static_page(title, body_html, about_pages):
     return html
 
 
+def build_map_body(nuggets):
+    """HTML body for the Map about page: N×N matrix of related links (from → to)."""
+    sorted_nuggets = sorted(nuggets, key=lambda x: x.get("number", ""))
+    nums = [n.get("number", "") for n in sorted_nuggets]
+    related_sets = {n.get("number", ""): set(n.get("related", [])) for n in sorted_nuggets}
+    rows = []
+    header_cells = ["<th></th>"] + [f'<th class="map-col-label">{num}</th>' for num in nums]
+    rows.append("<tr>" + "".join(header_cells) + "</tr>")
+    for from_num, n in zip(nums, sorted_nuggets):
+        cells = [f'<th class="map-row-label">{from_num}</th>']
+        for to_num in nums:
+            linked = to_num in related_sets.get(from_num, set())
+            cls = "map-cell-linked" if linked else "map-cell-empty"
+            cells.append(f'<td class="{cls}">{"·" if linked else ""}</td>')
+        rows.append("<tr>" + "".join(cells) + "</tr>")
+    table = "<table class=\"map-matrix\">\n" + "\n".join(rows) + "\n</table>"
+    return f'<p>Rows = from seed, columns = to seed. Marked cell means the row seed links to the column seed in its Related list.</p>\n{table}'
+
+
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
@@ -669,6 +725,7 @@ def main():
     print(f"Loaded {len(nuggets)} nuggets")
 
     about_pages = load_about_pages()
+    about_pages.append(("map", "Map", build_map_body(nuggets)))
     index_copy = load_index_copy()
     groups_data = load_groups_data()
 
