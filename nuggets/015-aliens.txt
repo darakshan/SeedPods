@@ -1,0 +1,23 @@
+#number 015
+#shortname aliens
+#title Aliens Are Among Us — and We Built Them
+#subtitle The surprise is not that they arrived. The surprise is where they came from.
+#status empty
+#date 2026-03-11
+#tags AI, consciousness, intelligence, culture
+#related 016, 017, 006, 003
+
+#surface
+TBD
+
+#depth
+TBD
+
+#provenance
+TBD
+
+#script
+TBD
+
+#images
+TBD

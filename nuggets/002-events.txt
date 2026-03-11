@@ -1,0 +1,23 @@
+#number 002
+#shortname events
+#title Reality Is Events, Not Things
+#subtitle The particle is the abstraction. The event is what's actually there.
+#status empty
+#date 2026-03-11
+#tags whitehead, physics, ontology, process-philosophy
+#related 001, 003, 008, 004
+
+#surface
+TBD
+
+#depth
+Whitehead's core inversion: modern science abstracted the particle from the event, then forgot it had done so. The concrete reality is the happening — the moment of occurrence. Enduring things are societies of events stable enough to seem permanent. This move was made philosophically at roughly the same moment quantum field theory made it physically, for structurally similar reasons.
+
+#provenance
+TBD
+
+#script
+TBD
+
+#images
+TBD

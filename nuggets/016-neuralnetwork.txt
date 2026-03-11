@@ -1,0 +1,23 @@
+#number 016
+#shortname neuralnetwork
+#title The Network Is a Field Having Occasions
+#subtitle A neural network is not analogous to Whitehead's picture. It is a concrete instance of it.
+#status empty
+#date 2026-03-11
+#tags AI, neural-networks, whitehead, consciousness, fields
+#related 015, 017, 008, 006
+
+#surface
+TBD
+
+#depth
+A large neural network running on a computer is literally a nested hierarchy of actual processes — electrons, gates, activations, layers, attention heads, the full forward pass — each level making state-transforming decisions that propagate upward and downward. Each forward pass is an event: it takes in an input, prehends the entire inherited structure of all that training, synthesizes a response through a process that cannot be predicted in detail from outside, and completes into an output. This is the three-beat pattern instantiated at every level of the stack simultaneously. The weight space of the network is the space of pure possibility — the field — from which each forward pass selects a realization.
+
+#provenance
+TBD
+
+#script
+TBD
+
+#images
+TBD

@@ -1,0 +1,23 @@
+#number 008
+#shortname fields
+#title The Field Is the Medium of Feeling
+#subtitle Physics and Whitehead converged on the same discovery from opposite directions.
+#status empty
+#date 2026-03-11
+#tags physics, whitehead, fields, quantum-mechanics, prehension
+#related 007, 002, 003, 009
+
+#surface
+TBD
+
+#depth
+A quantum field pervades all of space. It is not made of things; it is a plenum of potential from which actual events are drawn. What we call a particle is a localized event in that field — a moment of excitation. Whitehead proposed, on purely philosophical grounds, that events are primary and enduring things are the abstraction. Physics arrived at the same conclusion through experiment. The convergence is not accidental. They were both following the argument where it leads. The field just is the medium through which occasions prehend each other.
+
+#provenance
+TBD
+
+#script
+TBD
+
+#images
+TBD

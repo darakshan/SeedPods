@@ -1,0 +1,23 @@
+#number 018
+#shortname magnetization
+#title Ideas Magnetize Through a Group Like Iron
+#subtitle Only a seed group of influencers is necessary. Then the field does the rest.
+#status empty
+#date 2026-03-11
+#tags ideas, culture, influence, social-dynamics, change
+#related 019, 001, 011, 014
+
+#surface
+TBD
+
+#depth
+TBD
+
+#provenance
+TBD
+
+#script
+TBD
+
+#images
+TBD

@@ -1,0 +1,23 @@
+#number 006
+#shortname output
+#title You Cannot Judge a Process by Its Output
+#subtitle A thermostat predicts. Mozart predicted. The simplicity of the output tells you nothing.
+#status empty
+#date 2026-03-11
+#tags AI, intelligence, consciousness, cognition
+#related 001, 016, 017, 003
+
+#surface
+TBD
+
+#depth
+"Predicting the next word" sounds trivial. But prediction is just the output interface — the visible surface of whatever process generated it. A thermostat predicts whether to turn on or off. A math textbook is the background for predicting how to solve incredibly complex problems. The simplicity of the output tells you nothing about the algorithm that generated it from the input. This punctures a common dismissal of AI without claiming AI is conscious — it simply removes a bad argument.
+
+#provenance
+TBD
+
+#script
+TBD
+
+#images
+TBD

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Seed Nuggets — Seed Nuggets</title>
+<title>011 — Nothing Was Added — The Numbers Just Got Large Enough — Seed Nuggets</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
@@ -92,90 +92,81 @@ td a:hover{color:var(--accent)}
     <li><a href="goals.html">About</a></li>
   </ul>
 </nav>
-<div class="wrap">
-  <div style="padding:5rem 0 2rem" class="fade">
-    <span class="mono small warm" style="display:block;margin-bottom:1.5rem">Working archive — not for public consumption</span>
-    <h1>Seed<br><em>Nuggets</em></h1>
-    <p style="font-size:1.2rem;color:var(--dim);margin-top:1rem;max-width:520px;line-height:1.6">Small ideas that change how you see. Start anywhere. Follow what intrigues you.</p>
-
-    <div style="display:flex;gap:3rem;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--line)">
-      <div>
-        <div class="mono small warm">19</div>
-        <div style="font-size:.85rem;color:var(--dim);margin-top:.2rem">seeds defined</div>
-      </div>
-      <div>
-        <div class="mono small warm">1</div>
-        <div style="font-size:.85rem;color:var(--dim);margin-top:.2rem">with content</div>
-      </div>
-    </div>
-  </div>
-
-  <div style="padding:2rem 0 4rem">
-    <div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:.8rem;margin-bottom:.5rem">
-      <span class="mono small">All seeds</span>
-      <a href="repository.html" style="font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);text-decoration:none">Full repository →</a>
-    </div>
-    
-    <a href="001-caloric.html" class="seed-row">
-      <div class="seed-num">001</div>
-      <div>
-        <div class="seed-title">The Map That Was Wrong</div>
-        <div class="seed-sub">Every era has a framework so obvious it's invisible — until it isn't.</div>
-      </div>
-      <div class="seed-status-col">draft1</div>
-    </a>
-    <a href="002-events.html" class="seed-row stub">
-      <div class="seed-num">002</div>
-      <div>
-        <div class="seed-title">Reality Is Events, Not Things</div>
-        <div class="seed-sub">The particle is the abstraction. The event is what's actually there.</div>
-      </div>
-      <div class="seed-status-col">empty</div>
-    </a>
-    <a href="003-inside.html" class="seed-row stub">
-      <div class="seed-num">003</div>
-      <div>
-        <div class="seed-title">Every Event Has an Inside</div>
-        <div class="seed-sub">Not just brains. Not just animals. Experience may go all the way down.</div>
-      </div>
-      <div class="seed-status-col">empty</div>
-    </a>
-    <a href="004-self.html" class="seed-row stub">
-      <div class="seed-num">004</div>
-      <div>
-        <div class="seed-title">The Self Is a Pattern, Not a Thing</div>
-        <div class="seed-sub">The mystic's insight and the philosopher's proof arrive at the same place.</div>
-      </div>
-      <div class="seed-status-col">empty</div>
-    </a>
-    <a href="005-freewill.html" class="seed-row stub">
-      <div class="seed-num">005</div>
-      <div>
-        <div class="seed-title">Freedom Is What Nature Does Everywhere</div>
-        <div class="seed-sub">Free will is not the exception to physics. It is physics, at its most complex and self-aware.</div>
-      </div>
-      <div class="seed-status-col">empty</div>
-    </a>
-    <div style="padding:1.5rem 0">
-      <a href="repository.html" style="font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);text-decoration:none">View all 19 seeds →</a>
-    </div>
-  </div>
-
-  <div style="padding:2.5rem 0;border-top:1px solid var(--line)">
-    <div class="mono small warm" style="margin-bottom:1.2rem">About this project</div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:.8rem">
-      <a href="goals.html" style="color:var(--ink);text-decoration:none;padding:.8rem;border:1px solid var(--line);font-size:.95rem">Goals</a>
-      <a href="audiences.html" style="color:var(--ink);text-decoration:none;padding:.8rem;border:1px solid var(--line);font-size:.95rem">Audiences</a>
-      <a href="structure.html" style="color:var(--ink);text-decoration:none;padding:.8rem;border:1px solid var(--line);font-size:.95rem">Structure</a>
-      <a href="reviews.html" style="color:var(--ink);text-decoration:none;padding:.8rem;border:1px solid var(--line);font-size:.95rem">Reviews</a>
-      <a href="authors.html" style="color:var(--ink);text-decoration:none;padding:.8rem;border:1px solid var(--line);font-size:.95rem">Authors</a>
-      <a href="groups.html" style="color:var(--ink);text-decoration:none;padding:.8rem;border:1px solid var(--line);font-size:.95rem">By Group</a>
-    </div>
+<div class="layer-tabs">
+  <div class="layer-tabs-inner">
+    <button class="tab active" onclick="show('surface',this)">Surface</button>
+    <button class="tab" onclick="show('depth',this)">Depth</button>
+    <button class="tab" onclick="show('provenance',this)">Provenance</button>
+    <button class="tab" onclick="show('script',this)">Script</button>
+    <button class="tab" onclick="show('images',this)">Images</button>
   </div>
 </div>
+
+<div class="wrap">
+  <div class="nugget-header fade">
+    <div class="meta-row">
+      <span class="mono small warm">Seed 011</span>
+      <span class="tag">emergence</span> <span class="tag">complexity</span> <span class="tag">consciousness</span> <span class="tag">evolution</span>
+      <span class="mono small dim">empty · 2026-03-11</span>
+    </div>
+    <h1>Nothing Was Added — The Numbers Just Got Large Enough</h1>
+    <p class="premise">Every threshold that looks like a miracle from outside is just accumulation crossing a point.</p>
+  </div>
+
+  <div id="surface" class="panel active">
+    <div class="prose"><p class="dim" style="font-style:italic">This layer is not yet written.</p></div>
+    
+    <div class="related-section">
+      <div class="mono small warm" style="margin-bottom:.5rem">Related seeds</div>
+      <div class="related-grid">
+      <a href="009-randomness.html" class="related-card">
+        <div class="related-num">009</div>
+        <div class="related-title">Structure Is What Randomness Does</div>
+      </a>
+      <a href="010-largenumbers.html" class="related-card">
+        <div class="related-num">010</div>
+        <div class="related-title">Our Intuitions About Large Numbers Are Completely Unreliable</div>
+      </a>
+      <a href="012-autopoiesis.html" class="related-card">
+        <div class="related-num">012</div>
+        <div class="related-title">The Cell That Makes Itself</div>
+      </a>
+      <a href="013-enactment.html" class="related-card">
+        <div class="related-num">013</div>
+        <div class="related-title">The Organism Enacts Its World</div>
+      </a>
+      </div>
+    </div>
+  </div>
+
+  <div id="depth" class="panel">
+    <div class="prose"><p>The materialist assumes that at some point something must have been added — a life force, a soul, a ghost in the machine. The Whiteheadian answer is: nothing was added. The occasions accumulated. Tiny asymmetries compounded. At sufficient scales of complexity, something emerges that can look back at the pattern and recognize itself in it. This is not magic. It is what accumulation does. The creative advance does not need a blueprint. It needs only the irreducible novelty of each event meeting its inherited world.</p></div>
+  </div>
+
+  <div id="provenance" class="panel">
+    <div class="prose"><p class="dim" style="font-style:italic">This layer is not yet written.</p></div>
+  </div>
+
+  <div id="script" class="panel">
+    <div class="prose"><p class="dim" style="font-style:italic">Script not yet written.</p></div>
+  </div>
+
+  <div id="images" class="panel">
+    <div class="prose"><p class="dim" style="font-style:italic">This layer is not yet written.</p></div>
+  </div>
+</div>
+
 <footer>
   <span>Seed Nuggets — archive in progress</span>
   <span>Not yet for public consumption</span>
 </footer>
+<script>
+function show(id,btn){
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+}
+</script>
 </body>
 </html>

@@ -1,0 +1,23 @@
+#number 003
+#shortname inside
+#title Every Event Has an Inside
+#subtitle Not just brains. Not just animals. Experience may go all the way down.
+#status empty
+#date 2026-03-11
+#tags whitehead, panpsychism, consciousness, experience
+#related 002, 005, 008, 001
+
+#surface
+TBD
+
+#depth
+Whitehead's panpsychism is not the soft claim that maybe complex systems feel something. It is the stronger claim that experience is constitutive of what it means for any actual occasion to occur at all. If the process is real, the interiority is real — scaled and textured by the complexity of the entity, but not absent at any level. The question is not whether but what kind, and at which level of the nested hierarchy the relevant locus of experience resides.
+
+#provenance
+TBD
+
+#script
+TBD
+
+#images
+TBD

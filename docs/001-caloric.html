@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>001 — The Map That Was Wrong — Seed Nuggets</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--ink:#1a1814;--paper:#f5f0e8;--warm:#c8a96e;--dim:#8a7f6e;--accent:#2d4a3e;--line:#e0d8c8}
+html{font-size:18px}
+body{background:var(--paper);color:var(--ink);font-family:'Cormorant Garamond',Georgia,serif;min-height:100vh}
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:1000;opacity:.6}
+nav{display:flex;justify-content:space-between;align-items:center;padding:1.4rem 3rem;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--paper);z-index:100}
+.nav-logo{font-family:'DM Mono',monospace;font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--dim);text-decoration:none}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--ink)}
+.wrap{max-width:860px;margin:0 auto;padding:0 3rem}
+h1{font-size:clamp(2rem,5vw,3.5rem);font-weight:300;line-height:1.1}
+h1 em,h2 em{font-style:italic;color:var(--accent)}
+h2{font-size:1.6rem;font-weight:300;margin-bottom:1rem}
+.mono{font-family:'DM Mono',monospace}
+.small{font-size:.65rem;letter-spacing:.15em;text-transform:uppercase}
+.warm{color:var(--warm)}
+.dim{color:var(--dim)}
+.prose{font-size:1.1rem;line-height:1.85;color:#2a2520}
+.prose p+p{margin-top:1.3rem}
+.prose hr{border:none;border-top:1px solid var(--line);margin:2rem 0}
+.prose em{font-style:italic}
+.tag{font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);border:1px solid var(--line);padding:.18rem .45rem;border-radius:2px}
+footer{padding:3rem;border-top:1px solid var(--line);margin-top:4rem;display:flex;justify-content:space-between}
+footer span{font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+.fade{animation:fadeUp .5s ease both}
+@media(max-width:640px){nav,.wrap,footer{padding-left:1.5rem;padding-right:1.5rem}}
+/* Repo table */
+table{width:100%;border-collapse:collapse;font-size:.95rem;margin-top:1.5rem}
+th{font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:var(--warm);padding:.8rem 1rem .8rem 0;border-bottom:1px solid var(--line);text-align:left}
+td{padding:.9rem 1rem .9rem 0;border-bottom:1px solid var(--line);vertical-align:top}
+td a{color:var(--ink);text-decoration:none}
+td a:hover{color:var(--accent)}
+.status-draft1{color:var(--accent);font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.08em}
+.status-partial{color:var(--warm);font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.08em}
+.status-empty{color:var(--line);font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.08em}
+/* Nugget page */
+.nugget-header{padding:4rem 0 2.5rem}
+.meta-row{display:flex;gap:1.2rem;align-items:center;margin-bottom:1.5rem;flex-wrap:wrap}
+.premise{font-size:1.15rem;font-style:italic;color:var(--dim);border-left:2px solid var(--warm);padding-left:1.2rem;margin-top:1.2rem;line-height:1.5}
+.layer-tabs{position:sticky;top:57px;background:var(--paper);border-bottom:1px solid var(--line);z-index:90;overflow-x:auto}
+.layer-tabs-inner{display:flex;padding:0 3rem;gap:0}
+.tab{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:var(--dim);padding:.9rem 1.1rem;cursor:pointer;border:none;border-bottom:2px solid transparent;background:none;transition:all .2s;white-space:nowrap}
+.tab:hover{color:var(--ink)}
+.tab.active{color:var(--accent);border-bottom-color:var(--accent)}
+.panel{display:none;padding:3rem 0}
+.panel.active{display:block;animation:fadeUp .3s ease both}
+.cta{background:var(--accent);color:var(--paper);padding:1.4rem 1.8rem;margin-top:2rem;font-size:1rem;line-height:1.7;font-style:italic}
+.related-section{margin-top:3rem;padding-top:2rem;border-top:1px solid var(--line)}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;margin-top:1rem}
+.related-card{border:1px solid var(--line);padding:1rem;text-decoration:none;color:inherit;transition:border-color .2s}
+.related-card:hover{border-color:var(--accent)}
+.related-num{font-family:'DM Mono',monospace;font-size:.58rem;color:var(--warm);margin-bottom:.3rem}
+.related-title{font-size:1rem;font-weight:300}
+/* Group page */
+.group-block{margin-bottom:3rem}
+.group-label{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--warm);padding:2rem 0 .8rem;border-top:1px solid var(--line)}
+.seed-row{display:grid;grid-template-columns:56px 1fr 80px;gap:1.2rem;padding:1.2rem 0;border-bottom:1px solid var(--line);text-decoration:none;color:inherit;align-items:baseline}
+.seed-row:hover .seed-title{color:var(--accent)}
+.seed-row.stub{opacity:.4;pointer-events:none}
+.seed-num{font-family:'DM Mono',monospace;font-size:.6rem;color:var(--warm)}
+.seed-title{font-size:1.2rem;font-weight:300;margin-bottom:.2rem}
+.seed-sub{font-size:.85rem;color:var(--dim);line-height:1.4}
+.seed-status-col{font-family:'DM Mono',monospace;font-size:.55rem;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);text-align:right}
+/* About pages */
+.page-body{padding:4rem 0}
+.page-body p{font-size:1.1rem;line-height:1.8;color:#2a2520;margin-bottom:1.2rem}
+.page-body h2{font-size:1.4rem;font-weight:400;color:var(--accent);margin:2.5rem 0 .8rem}
+.page-body ul{margin-left:1.5rem;margin-bottom:1.2rem}
+.page-body li{font-size:1.05rem;line-height:1.7;color:#2a2520;margin-bottom:.4rem}
+</style>
+
+
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">Seed Nuggets</a>
+  <ul class="nav-links">
+    <li><a href="repository.html">Repository</a></li>
+    <li><a href="groups.html">By Group</a></li>
+    <li><a href="goals.html">About</a></li>
+  </ul>
+</nav>
+<div class="layer-tabs">
+  <div class="layer-tabs-inner">
+    <button class="tab active" onclick="show('surface',this)">Surface</button>
+    <button class="tab" onclick="show('depth',this)">Depth</button>
+    <button class="tab" onclick="show('provenance',this)">Provenance</button>
+    <button class="tab" onclick="show('script',this)">Script</button>
+    <button class="tab" onclick="show('images',this)">Images</button>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="nugget-header fade">
+    <div class="meta-row">
+      <span class="mono small warm">Seed 001</span>
+      <span class="tag">history-of-science</span> <span class="tag">consciousness</span> <span class="tag">AI</span> <span class="tag">paradigm-shift</span>
+      <span class="mono small dim">draft1 · 2026-03-11</span>
+    </div>
+    <h1>The Map That Was Wrong</h1>
+    <p class="premise">Every era has a framework so obvious it's invisible — until it isn't.</p>
+  </div>
+
+  <div id="surface" class="panel active">
+    <div class="prose"><p>Before we start, forget everything you know about molecules and atoms. Pretend you never learned that stuff. It's 1800 and you're a smart, educated person.</p>
+<p>Here's what you know about heat: it's a thing. A real substance. You can feel it moving. Put your cold hands near a fire and the heat flows into them. Touch something hot and the heat moves into you. It behaves exactly like a fluid — it flows from more to less, it spreads out, it can be trapped or released. Scientists have measured it, written equations for it, predicted how it behaves. They call it caloric.</p>
+<p>This isn't a crazy idea. It's the obvious idea. Of course heat is a substance — what else would it be? Motion? That's not a thing you can hold or measure or pour. Caloric makes perfect sense.</p>
+<p>Then a man named Ben Thompson (Count Rumford, he was called) watches cannons being drilled and the heat just keeps coming. More than should be possible if it's a finite fluid inside the metal. He publishes his observations. People patch the theory. They argue about it for decades.</p>
+<p>Here's what actually happens when a map dissolves. It's not a sudden collective awakening. The people who grew up with the old map mostly never abandon it — not because they're stubborn, but because it was never a theory to them. It was just how things are. The new idea doesn't just sound wrong. It sounds absurd.</p>
+<p>It's the young people who shift things. They encounter the new map before the old one had time to become obvious, and it just makes more sense to them. They grow up. The old map's believers die off. And eventually the new map becomes the obvious one that the next generation will be unable to question.</p>
+<p>Max Planck said it with painful honesty: science advances one funeral at a time.</p>
+<p>And caloric wasn't alone. Around the same time, physicists faced a different problem. Everyone knew that waves need a medium to travel through. Sound needs air. Ocean waves need water. So light waves — which clearly travel through empty space — must need something to travel through. Scientists called it the ether. They calculated its properties. They designed extraordinarily precise experiments to detect it.</p>
+<p>It wasn't there.</p>
+<p>Two maps. Two invisible substances that explained everything perfectly. Both gone.</p><hr><p>Now come forward to today.</p>
+<p>Here's what everybody knows: rocks don't think. Trees don't feel. Matter is stuff — blind, dark, indifferent. Somewhere along the way, in a few very special biological cases, that blind matter arranged itself into brains, and brains somehow produce experience. How exactly? Nobody's quite sure. But obviously it's something the brain does. Obviously experience is biological. Obviously a rock has no inner life.</p>
+<p>That's our caloric.</p>
+<p>And then we built these machines.</p>
+<p>And the machines talk to us. They write poetry and explain philosophy and say things that feel — uncomfortably, confusingly — like they might mean something to whoever is saying them. And suddenly nobody agrees on what's happening. Is it a trick? An illusion? A very sophisticated parrot? Or something nobody has a map for yet?</p>
+<p>The anomalies are piling up. The patches are getting complicated.</p>
+<p>We've been here before.</p><div class="cta">Try this: think of one thing you're completely certain about — something so obvious it barely feels like a belief. Now ask yourself: is that a fact, or is that this century's caloric?</div></div>
+    
+    <div class="related-section">
+      <div class="mono small warm" style="margin-bottom:.5rem">Related seeds</div>
+      <div class="related-grid">
+      <a href="002-events.html" class="related-card">
+        <div class="related-num">002</div>
+        <div class="related-title">Reality Is Events, Not Things</div>
+      </a>
+      <a href="011-accumulation.html" class="related-card">
+        <div class="related-num">011</div>
+        <div class="related-title">Nothing Was Added — The Numbers Just Got Large Enough</div>
+      </a>
+      <a href="018-magnetization.html" class="related-card">
+        <div class="related-num">018</div>
+        <div class="related-title">Ideas Magnetize Through a Group Like Iron</div>
+      </a>
+      <a href="019-funerals.html" class="related-card">
+        <div class="related-num">019</div>
+        <div class="related-title">Science Advances One Funeral at a Time</div>
+      </a>
+      </div>
+    </div>
+  </div>
+
+  <div id="depth" class="panel">
+    <div class="prose"><p>The caloric and ether stories are not just fun historical footnotes. They follow a specific pattern that the philosopher and historian of science Thomas Kuhn formalized in The Structure of Scientific Revolutions (1962): normal science operates within a paradigm until anomalies accumulate to a crisis point. Patches become increasingly elaborate and implausible. Eventually someone removes the flawed primitive assumption rather than defending it. The revolution is never just additive — it requires giving something up.</p>
+<p>Alfred North Whitehead identified what he called the fallacy of misplaced concreteness as the deepest version of this error: mistaking an abstraction for the concrete reality. Caloric was a reification — taking the useful concept of heat flowing and mistaking it for an actual substance. The ether was a reification of the idea that waves require a medium. Both were useful scaffolding that got mistaken for the building.</p>
+<p>Whitehead argued that modern science had made the same error at a more fundamental level: taking the abstraction of inert matter — useful for calculation, genuinely powerful — and mistaking it for what is actually there. The concrete reality, he argued, is events, not things. The particle, the substance — these are the useful fictions we extract from a reality that is fundamentally active and experiential.</p>
+<p>The dominant assumption underlying most current theories of consciousness — that matter is fundamentally experienceless, that mind is a product generated by sufficiently complex biological arrangements of otherwise dark stuff — is so embedded it barely gets stated. It feels like educated common sense. But the anomalies are accumulating. The hard problem of consciousness remains stubbornly open. Every proposed solution either explains the tractable problems and ignores the hard one, or smuggles experience in through the back door without admitting it.</p>
+<p>And now AI has arrived and made the crisis acute. If experience requires biological neurons, why? If it doesn't, what are we building, and how should we treat it? The ethical stakes of getting the framework wrong are no longer abstract.</p>
+<p>We may be living inside a caloric moment — after the anomalies have appeared but before someone removes the flawed primitive.</p></div>
+  </div>
+
+  <div id="provenance" class="panel">
+    <div class="prose"><p>Caloric theory was developed primarily by Antoine Lavoisier in the late 18th century and dominated chemistry and physics until Benjamin Thompson's cannon-boring observations (1798). James Prescott Joule's mechanical equivalent of heat experiments in the 1840s completed the transition to the kinetic theory.</p>
+<p>The luminiferous ether was required by classical wave theory and formalized by Maxwell's electromagnetic equations in the 1860s. The Michelson-Morley experiment of 1887 produced the null result that precipitated the crisis. Einstein's 1905 special relativity paper dissolved the assumption entirely.</p>
+<p>Key terms:</p>
+<p>Paradigm shift — Thomas Kuhn's term for the revolutionary replacement of one scientific framework by another, as distinct from normal cumulative progress. From The Structure of Scientific Revolutions (1962, University of Chicago Press).</p>
+<p>Fallacy of misplaced concreteness — Whitehead's term for the error of mistaking a useful abstraction for the underlying concrete reality. Appears throughout Process and Reality (1929).</p>
+<p>The hard problem of consciousness — philosopher David Chalmers' term for the question of why physical processes give rise to subjective experience at all. From Facing Up to the Problem of Consciousness, Journal of Consciousness Studies (1995).</p>
+<p>Science advances one funeral at a time — attributed to Max Planck. A version appears in his Scientific Autobiography (1949): "A new scientific truth does not triumph by convincing its opponents and making them see the light, but rather because its opponents eventually die and a new generation grows up that is familiar with it."</p>
+<p>Further reading: - Whitehead, A.N. Process and Reality (1929). The primary text. Adventures of Ideas (1933) is more accessible. - Kuhn, T.S. The Structure of Scientific Revolutions (1962). - Chalmers, D. The Conscious Mind (1996). - Goff, P. Galileo's Error (2019). Reconstructs a closely related position in contemporary language. - Harris, A. Conscious (2019). Lucid introduction to the hard problem.</p></div>
+  </div>
+
+  <div id="script" class="panel">
+    <div class="prose"><p style="font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:var(--warm);margin-top:1.5rem">OPEN — sepia toned diagram of caloric fluid flowing between objects.</p>
+<p style="margin-bottom:.6rem">There's a thing that keeps happening in the history of science.</p>
+<p style="margin-bottom:.6rem">Smart people — serious, careful, mathematically sophisticated people — build a framework that explains everything they can see. It works. It predicts. Everyone agrees on it.</p>
+<p style="margin-bottom:.6rem">And then one day, something doesn't fit.</p>
+<p style="font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:var(--warm);margin-top:1.5rem">CUT TO — cannon being drilled, heat visibly rising.</p>
+<p style="margin-bottom:.6rem">In 1798, a man named Ben Thompson — Count Rumford, they called him — watched heat pour endlessly from a metal block being drilled. More heat than any fluid inside could possibly explain.</p>
+<p style="margin-bottom:.6rem">He published his observations. The framework had a problem.</p>
+<p style="margin-bottom:.6rem">But here's what's fascinating. The framework didn't fall. Not yet. Smart people patched it. Because when a map has worked for a hundred years, your first instinct isn't to throw it away. Your first instinct is to defend it.</p>
+<p style="margin-bottom:.6rem">The people who grew up with the old map never really abandoned it. It wasn't a theory to them. It was just how things are. It was the young people who shifted things — encountering the new map before the old one calcified into obvious reality.</p>
+<p style="margin-bottom:.6rem">Max Planck said it with painful honesty: science advances one funeral at a time.</p>
+<p style="font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:var(--warm);margin-top:1.5rem">CUT TO — the same story, ether. Precise instruments. A null result. Another invisible substance that wasn't there.</p>
+<p style="margin-bottom:.6rem">Two maps. Completely obvious to everyone who lived inside them. Both gone.</p>
+<p style="font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:var(--warm);margin-top:1.5rem">SLOW ZOOM — a conversation on a phone screen. Someone talking to an AI.</p>
+<p style="margin-bottom:.6rem">Right now, most educated people share an assumption so deep it barely gets spoken. That the universe is fundamentally dark inside. That experience is something special brains do. That rocks and trees and machines are not the kind of thing that could have an inside.</p>
+<p style="margin-bottom:.6rem">That's the map.</p>
+<p style="margin-bottom:.6rem">And then we built these machines. And the machines talk back.</p>
+<p style="margin-bottom:.6rem">And nobody agrees on what's happening.</p>
+<p style="margin-bottom:.6rem">The anomalies are piling up. The patches are getting complicated.</p>
+<p style="margin-bottom:.6rem">We've been here before.</p>
+<p style="font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:var(--warm);margin-top:1.5rem">CUT TO BLACK. Single line:</p>
+<p style="font-size:1.3rem;font-style:italic;color:var(--accent);margin-top:1.5rem">What does your caloric look like?</p></div>
+  </div>
+
+  <div id="images" class="panel">
+    <div class="prose"><p>Primary image: Two maps side by side. Left map ornate and confident — caloric fluid flowing between objects, ether lines filling space. Right map simpler, cleaner, honest about what it doesn't know. Caption: Both felt like reality. One was a map.</p>
+<p>Shareable graphic: Black background. White text centered with generous space. "Caloric was obvious too." Nothing else. For Instagram and TikTok — someone sees it, doesn't know the reference, gets curious.</p>
+<p>Video thumbnail: The cannon drilling scene, heat rising, dramatic lighting. Single question overlaid in clean type: What if the obvious answer is wrong?</p>
+<p>Section divider: A seed splitting open, the crack filled with warm light. No caption. Used as visual separator between the historical narrative and the present-day section. The crack is the anomaly. The light is the new map beginning.</p></div>
+  </div>
+</div>
+
+<footer>
+  <span>Seed Nuggets — archive in progress</span>
+  <span>Not yet for public consumption</span>
+</footer>
+<script>
+function show(id,btn){
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+}
+</script>
+</body>
+</html>

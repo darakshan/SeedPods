@@ -1,0 +1,23 @@
+#number 009
+#shortname randomness
+#title Structure Is What Randomness Does
+#subtitle Galaxies, cells, brains — all tracing back to a quantum fluctuation in a nearly uniform early universe.
+#status empty
+#date 2026-03-11
+#tags physics, emergence, complexity, evolution, symmetry-breaking
+#related 007, 010, 011, 008
+
+#surface
+TBD
+
+#depth
+The early universe was almost perfectly uniform. Almost, but not quite. Quantum fluctuations — irreducibly random, foundationally indeterminate — broke the symmetry in the tiniest ways. Gravity amplified them. What began as a near-featureless field became, over billions of years, galaxies, stars, planets, oceans, cells. All structure traces its ancestry to that original breaking of symmetry by events too small to see. Pure randomness, given sufficient events and sufficient time, generates structure necessarily — not despite the randomness but almost because of it.
+
+#provenance
+Prigogine's dissipative structures. Kauffman's autocatalytic sets and "order for free." Standard cosmological inflation and structure formation.
+
+#script
+TBD
+
+#images
+TBD
