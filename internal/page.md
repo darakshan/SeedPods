@@ -22,5 +22,3 @@ Here is an essay was written just before this website was built:
 --- 
 
 @include context.md
-
-Last built: @timestamp

@@ -11,3 +11,5 @@
 ---
 
 - [Internal documentation](internal.html) — structure, grammar, context
+
+This website was built on: @timestamp
