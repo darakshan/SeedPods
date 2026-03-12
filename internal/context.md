@@ -1,20 +1,14 @@
-# CONTEXT.md — Seed Nuggets Project
+## Context
 
-TODO: This document is a few days old.  Some sections can be removed because the info can be found elsewhere.
+This document is a few days old.  Much of it is redundant or obsolete.  What's not should be integrated into the other sections
 
-New thoughts to integrate:
-- beware, website is cached by github or your AI and what you see may be out of date
-- track latest nugged number internally, you may add some and need to number them sequentially 
-  before they are integrated into the source files
-
-
-## Briefing for a new AI working session
+### Briefing for a new AI working session
 
 This document gives a new AI assistant (in Cursor or elsewhere) the full context needed to continue this project without losing the thinking behind it.
 
 ---
 
-## What this project is
+### What this project is
 
 **Seed Nuggets** is a living archive of short philosophical ideas — each called a "seed nugget" — intended to slowly shift how people see the world. The goal is a bridge between science and spirituality, aimed especially at younger audiences and people confused or frightened by the arrival of AI.
 
@@ -26,7 +20,7 @@ Inspirations for format and tone: Jason Silva, Michael Garfield, Jacob Collier. 
 
 ---
 
-## Project structure
+### Project structure
 
 ```
 seednuggets/
@@ -49,7 +43,7 @@ python build.py --nugget 001
 
 ---
 
-## The source file format
+### The source file format
 
 Each nugget is a plain text file in `nuggets/`. Example: `001-caloric.txt`
 

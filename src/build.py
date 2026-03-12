@@ -25,6 +25,7 @@ except ImportError:
 _ROOT = Path(__file__).resolve().parent.parent
 NUGGETS_DIR = _ROOT / "nuggets"
 ABOUT_DIR = _ROOT / "about"
+INTERNAL_DIR = _ROOT / "internal"
 CONTENT_DIR = _ROOT / "content"
 SITE_DIR = _ROOT / "d"
 
@@ -161,27 +162,6 @@ def about_body_to_html(body):
     return html
 
 
-def parse_about_file(filepath):
-    """Parse an about .md file: first line = title, rest = body (Markdown). Returns (title, body_html)."""
-    text = filepath.read_text(encoding="utf-8")
-    lines = text.splitlines()
-    if not lines:
-        return ("Untitled", "")
-    title = lines[0].strip()
-    body = "\n".join(lines[1:]).strip()
-    body_html = about_body_to_html(body) if body else ""
-    return (title, body_html)
-
-
-def load_about_pages():
-    """Load all about/*.md. Returns list of (stem, title, body_html) sorted by stem."""
-    pages = []
-    for f in sorted(ABOUT_DIR.glob("*.md")):
-        title, body_html = parse_about_file(f)
-        pages.append((f.stem, title, body_html))
-    return pages
-
-
 def load_index_copy():
     """Load content/index.txt as key: value dict."""
     p = CONTENT_DIR / "index.txt"
@@ -197,28 +177,60 @@ def load_index_copy():
     return out
 
 
-def load_resources_content():
-    """Load content/resources.md, expanding @include filename (relative to content/). Returns markdown string."""
-    p = CONTENT_DIR / "resources.md"
-    if not p.exists():
-        raise SystemExit("Required file missing: content/resources.md")
-    text = p.read_text(encoding="utf-8")
+def _expand_includes(text, base_dir):
+    """Replace lines @include filename with file contents from base_dir. Paths resolved under base_dir."""
+    base_dir = Path(base_dir).resolve()
     out = []
     for line in text.splitlines():
         stripped = line.strip()
         if stripped.startswith("@include "):
             name = stripped[8:].strip()
-            inc_path = (CONTENT_DIR / name).resolve()
-            if not str(inc_path).startswith(str(CONTENT_DIR.resolve())):
-                _warn(f"Warning: resources.md @include {name!r} resolves outside content/")
+            inc_path = (base_dir / name).resolve()
+            if not str(inc_path).startswith(str(base_dir)):
+                _warn(f"Warning: @include {name!r} resolves outside {base_dir}")
                 continue
             if not inc_path.exists():
-                _warn(f"Warning: resources.md @include {name!r} not found")
+                _warn(f"Warning: @include {name!r} not found")
                 continue
             out.append(inc_path.read_text(encoding="utf-8"))
         else:
             out.append(line)
     return "\n".join(out)
+
+
+def load_page_md(dir_path, main_filename, required=False):
+    """Load a directory page: main file with @include, or all .md alphabetically with ## heading. Returns markdown."""
+    dir_path = Path(dir_path)
+    main_path = dir_path / main_filename
+    if main_path.exists():
+        return _expand_includes(main_path.read_text(encoding="utf-8"), dir_path)
+    if required:
+        raise SystemExit(f"Required file missing: {main_path}")
+    parts = []
+    for f in sorted(dir_path.glob("*.md")):
+        parts.append(f"## {f.stem}\n\n{f.read_text(encoding='utf-8')}")
+    return "\n\n".join(parts) if parts else ""
+
+
+def load_resources_content():
+    """Load content/resources.md (with @include). Required."""
+    if not (CONTENT_DIR / "resources.md").exists():
+        raise SystemExit("Required file missing: content/resources.md")
+    return load_page_md(CONTENT_DIR, "resources.md")
+
+
+def load_about_page_content():
+    """Load about/page.md (with @include). Required."""
+    if not (ABOUT_DIR / "page.md").exists():
+        raise SystemExit("Required file missing: about/page.md")
+    return load_page_md(ABOUT_DIR, "page.md", required=True)
+
+
+def load_internal_page_content():
+    """Load internal/page.md (with @include). Required."""
+    if not (INTERNAL_DIR / "page.md").exists():
+        raise SystemExit("Required file missing: internal/page.md")
+    return load_page_md(INTERNAL_DIR, "page.md", required=True)
 
 
 def load_groups_data():
@@ -255,25 +267,16 @@ def _head_links(css_href="site.css"):
 <link rel="stylesheet" href="{css_href}">
 """
 
-def nav(about_pages, from_d=False):
-    """about_pages: list of (stem, title) for dropdown. from_d=True for pages under d/."""
+def nav(from_d=False):
+    """Single Resources and About links. from_d=True for pages under d/."""
     prefix = "" if from_d else "d/"
-    about_items = "".join(
-        f'<li><a href="{prefix}{stem}.html">{title}</a></li>' for stem, title, _ in about_pages
-    )
     index_href = "../index.html" if from_d else "index.html"
     return f"""
 <nav>
   <a href="{index_href}" class="nav-logo">Seed Nuggets</a>
   <ul class="nav-links">
     <li><a href="{prefix}resources.html">Resources</a></li>
-    <li class="nav-item-dropdown">
-      <details>
-        <summary>About</summary>
-        <ul class="nav-dropdown">{about_items}
-        </ul>
-      </details>
-    </li>
+    <li><a href="{prefix}about.html">About</a></li>
   </ul>
 </nav>"""
 
@@ -396,7 +399,7 @@ INDEX_TABLE_HEAD = """
       </thead>"""
 
 
-def build_nugget(n, all_nuggets, about_pages):
+def build_nugget(n, all_nuggets):
     num = n.get("number", "?")
     title = n.get("title", "Untitled")
     subtitle = n.get("subtitle", "")
@@ -493,7 +496,7 @@ def build_nugget(n, all_nuggets, about_pages):
     next_html = f'<a href="{next_n.get("filename", "")}.html">&raquo;</a>' if next_n else ''
 
     html = head(f"{display_number(num)} — {title}")
-    html += nav(about_pages, from_d=True)
+    html += nav(from_d=True)
     html += f"""
 <div class="wrap">
   <div class="layer-tabs">
@@ -524,7 +527,7 @@ def build_nugget(n, all_nuggets, about_pages):
     return html
 
 
-def build_repository(nuggets, about_pages):
+def build_repository(nuggets):
     rows = ""
     for n in nuggets:
         num = n.get("number", "")
@@ -547,7 +550,7 @@ def build_repository(nuggets, about_pages):
     </tr>"""
 
     html = head("Repository")
-    html += nav(about_pages, from_d=True)
+    html += nav(from_d=True)
     html += f"""
 <div class="wrap">
   <div class="page-body fade">
@@ -585,7 +588,7 @@ def display_number(num):
     return num or "?"
 
 
-def build_tags_page(nuggets, about_pages):
+def build_tags_page(nuggets):
     all_tags = set()
     for n in nuggets:
         all_tags.update(n.get("tags", []))
@@ -621,7 +624,7 @@ def build_tags_page(nuggets, about_pages):
         status_rows += row_block(status, f"status-{status}", [n for n in nuggets if n.get("status", "empty") == status])
 
     html = head("Index")
-    html += nav(about_pages, from_d=True)
+    html += nav(from_d=True)
     html += f"""
 <div class="wrap">
   <div class="page-body fade">
@@ -642,9 +645,9 @@ def build_tags_page(nuggets, about_pages):
     return html
 
 
-def build_groups(nuggets, groups_data, about_pages):
+def build_groups(nuggets, groups_data):
     html = head("Seeds by Group")
-    html += nav(about_pages, from_d=True)
+    html += nav(from_d=True)
     html += '<div class="wrap"><div class="page-body fade">'
     html += "<h1>Seeds by group</h1>\n"
     html += '<p class="groups-intro">Thematic clusters. Each seed may appear in more than one group.</p>\n'
@@ -679,7 +682,7 @@ def build_groups(nuggets, groups_data, about_pages):
     return html
 
 
-def build_index(nuggets, index_copy, about_pages):
+def build_index(nuggets, index_copy):
     c = index_copy
     ready = [n for n in nuggets if n.get("status") not in ("empty",)]
     total = len(nuggets)
@@ -706,13 +709,13 @@ def build_index(nuggets, index_copy, about_pages):
     </a>"""
 
     view_all_text = (c.get("view_all") or "View all {n} seeds →").replace("{n}", str(total))
-    about_cards = []
-    for stem, title, _ in about_pages:
-        about_cards.append(f'<a href="{d}{stem}.html" class="about-card">{title}</a>')
-    about_cards.append(f'<a href="{d}groups.html" class="about-card">{c.get("groups", "By Group")}</a>')
+    about_cards = [
+        f'<a href="{d}about.html" class="about-card">About</a>',
+        f'<a href="{d}groups.html" class="about-card">{c.get("groups", "By Group")}</a>',
+    ]
 
     html = head("Seed Nuggets", at_root=True)
-    html += nav(about_pages)
+    html += nav()
     html += f"""
 <div class="wrap">
   <div class="hero fade">
@@ -756,22 +759,46 @@ def build_index(nuggets, index_copy, about_pages):
     return html
 
 
-def build_static_page(title, body_html, about_pages):
+def build_static_page(title, body_html):
     html = head(title)
-    html += nav(about_pages, from_d=True)
+    html += nav(from_d=True)
     html += f'<div class="wrap"><div class="page-body fade"><h1>{title}</h1>{body_html}</div></div>'
     html += foot()
     html += close()
     return html
 
 
-def build_resources_page(about_pages):
+def build_resources_page():
     """Build Resources page from content/resources.md (with @include). Body contains its own heading."""
     raw = load_resources_content()
     body_html = about_body_to_html(raw) if raw.strip() else ""
     html = head("Resources")
-    html += nav(about_pages, from_d=True)
+    html += nav(from_d=True)
     html += f'<div class="wrap"><div class="page-body fade">{body_html}</div></div>'
+    html += foot()
+    html += close()
+    return html
+
+
+def build_about_page():
+    """Build About page from about/page.md (with @include)."""
+    raw = load_about_page_content()
+    body_html = about_body_to_html(raw) if raw.strip() else ""
+    html = head("About")
+    html += nav(from_d=True)
+    html += f'<div class="wrap"><div class="page-body fade"><h1>About</h1>{body_html}</div></div>'
+    html += foot()
+    html += close()
+    return html
+
+
+def build_internal_page():
+    """Build Internal page from internal/page.md (with @include)."""
+    raw = load_internal_page_content()
+    body_html = about_body_to_html(raw) if raw.strip() else ""
+    html = head("Internal")
+    html += nav(from_d=True)
+    html += f'<div class="wrap"><div class="page-body fade"><h1>Internal</h1>{body_html}</div></div>'
     html += foot()
     html += close()
     return html
@@ -825,7 +852,8 @@ def main():
             else:
                 seen_num[num] = n.get("filename")
 
-    about_pages = load_about_pages()
+    load_about_page_content()
+    load_internal_page_content()
     index_copy = load_index_copy()
     groups_data = load_groups_data()
 
@@ -834,33 +862,35 @@ def main():
             continue
         fname = n.get("filename", "") + ".html"
         out = SITE_DIR / fname
-        out.write_text(build_nugget(n, nuggets, about_pages), encoding="utf-8")
+        out.write_text(build_nugget(n, nuggets), encoding="utf-8")
         print(f"  Built {fname}")
 
     if not filter_num:
         shutil.copy(CONTENT_DIR / "site.css", SITE_DIR / "site.css")
         print("  Built site.css")
 
-        (SITE_DIR / "repository.html").write_text(build_repository(nuggets, about_pages), encoding="utf-8")
+        (SITE_DIR / "repository.html").write_text(build_repository(nuggets), encoding="utf-8")
         print("  Built repository.html")
 
-        (SITE_DIR / "tags.html").write_text(build_tags_page(nuggets, about_pages), encoding="utf-8")
+        (SITE_DIR / "tags.html").write_text(build_tags_page(nuggets), encoding="utf-8")
         print("  Built tags.html")
 
-        (SITE_DIR / "groups.html").write_text(build_groups(nuggets, groups_data, about_pages), encoding="utf-8")
+        (SITE_DIR / "groups.html").write_text(build_groups(nuggets, groups_data), encoding="utf-8")
         print("  Built groups.html")
 
-        (SITE_DIR / "resources.html").write_text(build_resources_page(about_pages), encoding="utf-8")
+        (SITE_DIR / "resources.html").write_text(build_resources_page(), encoding="utf-8")
         print("  Built resources.html")
 
-        (_ROOT / "index.html").write_text(build_index(nuggets, index_copy, about_pages), encoding="utf-8")
+        (SITE_DIR / "about.html").write_text(build_about_page(), encoding="utf-8")
+        print("  Built about.html")
+
+        (SITE_DIR / "internal.html").write_text(build_internal_page(), encoding="utf-8")
+        print("  Built internal.html")
+
+        (_ROOT / "index.html").write_text(build_index(nuggets, index_copy), encoding="utf-8")
         print("  Built index.html")
 
-        for stem, title, body_html in about_pages:
-            (SITE_DIR / f"{stem}.html").write_text(build_static_page(title, body_html, about_pages), encoding="utf-8")
-            print(f"  Built {stem}.html")
-
-        (SITE_DIR / "map.html").write_text(build_static_page("Map", build_map_body(nuggets), about_pages), encoding="utf-8")
+        (SITE_DIR / "map.html").write_text(build_static_page("Map", build_map_body(nuggets)), encoding="utf-8")
         print("  Built map.html")
 
     print(f"\nDone. Site written to repo root (index.html) and {SITE_DIR.relative_to(_ROOT)}/ (docs)")

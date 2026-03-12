@@ -1,1 +1,3 @@
-remove #number from nugget specification; use number from filename.  Update /internal
+- remove #number from nugget specification; use number from filename.  Update /internal
+- integrate internal/context.md into other documents
+

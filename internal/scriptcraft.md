@@ -1,9 +1,6 @@
-# Notes on Script Craft — Seed Nuggets
-## Learned in practice, session of 2026-03-11
+## ScriptCraft
 
-These notes are intended for addition to the Structure page under Layer 4: Script.
-
----
+These notes are intended for addition to the Structure page under Layer 4: Script.  Learned in practice, session of 2026-03-11
 
 The script is not an illustrated voiceover. It is a film. Start from what the camera can show and earn every word of narration.
 
