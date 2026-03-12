@@ -3,7 +3,7 @@
 build.py — Seed Nuggets site generator
 Reads nugget .txt files from repo nuggets/, writes HTML to repo d/.
 Generates: nugget pages, repository.html, tags.html (Index), groups.html,
-index.html, about pages (including map.html), site.css.
+index.html, about pages, resources (with map), site.css.
 
 Usage:
     python src/build.py   (from repo root)
@@ -197,6 +197,30 @@ def load_index_copy():
     return out
 
 
+def load_resources_content():
+    """Load content/resources.md, expanding @include filename (relative to content/). Returns markdown string."""
+    p = CONTENT_DIR / "resources.md"
+    if not p.exists():
+        raise SystemExit("Required file missing: content/resources.md")
+    text = p.read_text(encoding="utf-8")
+    out = []
+    for line in text.splitlines():
+        stripped = line.strip()
+        if stripped.startswith("@include "):
+            name = stripped[8:].strip()
+            inc_path = (CONTENT_DIR / name).resolve()
+            if not str(inc_path).startswith(str(CONTENT_DIR.resolve())):
+                _warn(f"Warning: resources.md @include {name!r} resolves outside content/")
+                continue
+            if not inc_path.exists():
+                _warn(f"Warning: resources.md @include {name!r} not found")
+                continue
+            out.append(inc_path.read_text(encoding="utf-8"))
+        else:
+            out.append(line)
+    return "\n".join(out)
+
+
 def load_groups_data():
     """Load content/groups.txt. Returns list of (title, subtitle, [num, ...])."""
     p = CONTENT_DIR / "groups.txt"
@@ -242,9 +266,7 @@ def nav(about_pages, from_d=False):
 <nav>
   <a href="{index_href}" class="nav-logo">Seed Nuggets</a>
   <ul class="nav-links">
-    <li><a href="{prefix}repository.html">Repository</a></li>
-    <li><a href="{prefix}tags.html">Index</a></li>
-    <li><a href="{prefix}groups.html">By Group</a></li>
+    <li><a href="{prefix}resources.html">Resources</a></li>
     <li class="nav-item-dropdown">
       <details>
         <summary>About</summary>
@@ -743,6 +765,18 @@ def build_static_page(title, body_html, about_pages):
     return html
 
 
+def build_resources_page(about_pages):
+    """Build Resources page from content/resources.md (with @include). Body contains its own heading."""
+    raw = load_resources_content()
+    body_html = about_body_to_html(raw) if raw.strip() else ""
+    html = head("Resources")
+    html += nav(about_pages, from_d=True)
+    html += f'<div class="wrap"><div class="page-body fade">{body_html}</div></div>'
+    html += foot()
+    html += close()
+    return html
+
+
 def build_map_body(nuggets):
     """HTML body for the Map about page: N×N matrix of related links (from → to)."""
     sorted_nuggets = sorted(nuggets, key=lambda x: x.get("number", ""))
@@ -792,7 +826,6 @@ def main():
                 seen_num[num] = n.get("filename")
 
     about_pages = load_about_pages()
-    about_pages.append(("map", "Map", build_map_body(nuggets)))
     index_copy = load_index_copy()
     groups_data = load_groups_data()
 
@@ -817,12 +850,18 @@ def main():
         (SITE_DIR / "groups.html").write_text(build_groups(nuggets, groups_data, about_pages), encoding="utf-8")
         print("  Built groups.html")
 
+        (SITE_DIR / "resources.html").write_text(build_resources_page(about_pages), encoding="utf-8")
+        print("  Built resources.html")
+
         (_ROOT / "index.html").write_text(build_index(nuggets, index_copy, about_pages), encoding="utf-8")
         print("  Built index.html")
 
         for stem, title, body_html in about_pages:
             (SITE_DIR / f"{stem}.html").write_text(build_static_page(title, body_html, about_pages), encoding="utf-8")
             print(f"  Built {stem}.html")
+
+        (SITE_DIR / "map.html").write_text(build_static_page("Map", build_map_body(nuggets), about_pages), encoding="utf-8")
+        print("  Built map.html")
 
     print(f"\nDone. Site written to repo root (index.html) and {SITE_DIR.relative_to(_ROOT)}/ (docs)")
     if _warn_count:
