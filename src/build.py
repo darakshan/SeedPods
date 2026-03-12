@@ -2,7 +2,7 @@
 """
 build.py — Seed Nuggets site generator
 Reads nugget .txt files from repo nuggets/, writes HTML to repo d/.
-Generates: nugget pages, repository.html, tags.html (Index), groups.html,
+Generates: nugget pages, list.html, tags.html (Index),
 index.html, about pages, resources (with map), site.css.
 
 Usage:
@@ -24,7 +24,8 @@ except ImportError:
     markdown = None
 
 _ROOT = Path(__file__).resolve().parent.parent
-NUGGETS_DIR = _ROOT / "nuggets"
+from nugget_parser import NUGGETS_DIR, load_all_nuggets, nugget_by_number, expand_nugget_directives
+
 ABOUT_DIR = _ROOT / "about"
 INTERNAL_DIR = _ROOT / "internal"
 CONTENT_DIR = _ROOT / "content"
@@ -37,129 +38,6 @@ def _warn(msg):
     global _warn_count
     print(msg, file=sys.stderr)
     _warn_count += 1
-
-# ── Parser ────────────────────────────────────────────────────────────────────
-
-def parse_nugget(filepath):
-    """Parse a nugget .txt file into a dict."""
-    text = filepath.read_text(encoding="utf-8")
-    lines = text.splitlines()
-
-    meta = {}
-    layers = {}
-    refs = []
-    terms = []
-    current_layer = None
-    buffer = []
-
-    # Single-line meta fields
-    SINGLE_LINE = {"number", "shortname", "title", "subtitle", "status",
-                   "date", "tags", "related"}
-
-    def flush():
-        if current_layer and current_layer not in SINGLE_LINE:
-            layers[current_layer] = "\n".join(buffer).strip()
-        buffer.clear()
-
-    for line in lines:
-        if line.startswith("#"):
-            parts = line[1:].split(None, 1)
-            if not parts:
-                continue
-            key = parts[0].lower()
-            value = parts[1] if len(parts) > 1 else ""
-
-            if key == "ref":
-                if current_layer == "provenance":
-                    refs.append(value.strip())
-                else:
-                    _warn(f"Warning: {filepath}: #ref only allowed in #provenance (found in or before {current_layer or 'metadata'})")
-                continue
-            if key == "term":
-                if current_layer == "provenance":
-                    raw = value.strip()
-                    if " — " in raw:
-                        term_part, def_part = raw.split(" — ", 1)
-                        terms.append((term_part.strip(), def_part.strip()))
-                    else:
-                        terms.append((raw, ""))
-                else:
-                    _warn(f"Warning: {filepath}: #term only allowed in #provenance (found in or before {current_layer or 'metadata'})")
-                continue
-            elif key in SINGLE_LINE:
-                flush()
-                current_layer = None
-                if key in meta:
-                    _warn(f"Warning: {filepath}: duplicate #{key}, keeping first value.")
-                else:
-                    if not value.strip():
-                        _warn(f"Warning: {filepath}: #{key} has no value on same line.")
-                    meta[key] = value.strip()
-            else:
-                flush()
-                if key in layers:
-                    _warn(f"Warning: {filepath}: duplicate #{key}, keeping first.")
-                    current_layer = None
-                    buffer = []
-                else:
-                    current_layer = key
-                    buffer = []
-        else:
-            if current_layer and current_layer not in SINGLE_LINE:
-                buffer.append(line)
-
-    flush()
-
-    # Parse list fields
-    meta["tags"] = [t.strip() for t in meta.get("tags", "").split(",") if t.strip()]
-    raw_related = [r.strip() for r in meta.get("related", "").split(",") if r.strip()]
-    related_parsed = []
-    for r in raw_related:
-        if re.match(r"^\d+$", r):
-            related_parsed.append(r)
-        else:
-            _warn(f"Warning: {filepath}: related entry {r!r} is not a valid nugget number (digits only).")
-            m = re.match(r"^(\d+)", r)
-            if m:
-                related_parsed.append(m.group(1))
-    meta["related"] = related_parsed
-    meta["refs"] = refs
-    meta["terms"] = terms
-
-    meta["layers"] = {
-        "surface": layers.get("surface", "TBD"),
-        "depth": layers.get("depth", "TBD"),
-        "provenance": layers.get("provenance", "TBD"),
-        "script": layers.get("script", "TBD"),
-        "images": layers.get("images", "TBD"),
-    }
-
-    stem = filepath.stem
-    prefix = stem.split("-")[0] if "-" in stem else ""
-    if prefix.isdigit() and meta.get("number") and meta["number"] != prefix:
-        _warn(f"Warning: {filepath}: filename prefix {prefix} does not match #number {meta['number']}.")
-
-    return meta
-
-
-def load_all_nuggets():
-    nuggets = []
-    for f in sorted(NUGGETS_DIR.glob("*.txt")):
-        try:
-            n = parse_nugget(f)
-            n["filename"] = f.stem  # e.g. 001-caloric
-            nuggets.append(n)
-        except Exception as e:
-            _warn(f"Warning: could not parse {f}: {e}")
-    return nuggets
-
-
-def nugget_by_number(nuggets, num):
-    for n in nuggets:
-        if n.get("number") == num:
-            return n
-    return None
-
 
 def about_body_to_html(body):
     """Convert about-page body from Markdown to HTML. Requires the markdown package (pip install markdown)."""
@@ -181,6 +59,8 @@ def about_body_to_html(body):
         r'<p class="dim placeholder">\1</p>',
         html,
     )
+    t = (BUILD_TIME or datetime.now(ZoneInfo("America/Los_Angeles"))).strftime("%Y-%m-%d %H:%M Pacific")
+    html = html.replace("@timestamp", t)
     return html
 
 
@@ -264,31 +144,6 @@ def load_status_order():
     return order
 
 
-def load_groups_data():
-    """Load content/groups.txt. Returns list of (title, subtitle, [num, ...])."""
-    p = CONTENT_DIR / "groups.txt"
-    if not p.exists():
-        return []
-    text = p.read_text(encoding="utf-8")
-    groups = []
-    for block in text.strip().split("\n---\n"):
-        block = block.strip()
-        if not block:
-            continue
-        title = subtitle = ""
-        seeds = []
-        for line in block.splitlines():
-            line = line.strip()
-            if line.startswith("title:"):
-                title = line[6:].strip()
-            elif line.startswith("subtitle:"):
-                subtitle = line[9:].strip()
-            elif line.startswith("seeds:"):
-                seeds = [s.strip() for s in line[6:].split(",") if s.strip()]
-        if title:
-            groups.append((title, subtitle, seeds))
-    return groups
-
 # ── HTML helpers ──────────────────────────────────────────────────────────────
 
 def _head_links(css_href="site.css"):
@@ -299,15 +154,16 @@ def _head_links(css_href="site.css"):
 """
 
 def nav(from_d=False):
-    """Single Resources and About links. from_d=True for pages under d/."""
+    """About, List, Resources. from_d=True for pages under d/."""
     prefix = "" if from_d else "d/"
     index_href = "../index.html" if from_d else "index.html"
     return f"""
 <nav>
   <a href="{index_href}" class="nav-logo">Seed Nuggets</a>
   <ul class="nav-links">
-    <li><a href="{prefix}resources.html">Resources</a></li>
     <li><a href="{prefix}about.html">About</a></li>
+    <li><a href="{prefix}list.html">List</a></li>
+    <li><a href="{prefix}resources.html">Resources</a></li>
   </ul>
 </nav>"""
 
@@ -419,15 +275,6 @@ LAYER_ORDER = [
     ("references", "References"),
 ]
 
-INDEX_TABLE_HEAD = """
-      <thead>
-        <tr>
-          <th>Tag</th>
-          <th>Title / Subtitle</th>
-        </tr>
-      </thead>"""
-
-
 def build_nugget(n, all_nuggets):
     num = n.get("number", "?")
     title = n.get("title", "Untitled")
@@ -452,17 +299,20 @@ def build_nugget(n, all_nuggets):
             rfile = r.get("filename", "") + ".html"
             rnum = r.get("number", "")
             rtitle = r.get("title", "")
+            rstatus = r.get("status", "empty")
+            card_class = "related-card related-card-prelim" if rstatus in ("empty", "prelim") else "related-card"
             cards += f"""
-      <a href="{rfile}" class="related-card">
+      <a href="{rfile}" class="{card_class}">
         <div class="related-num">{display_number(rnum)}</div>
         <div class="related-title">{rtitle}</div>
       </a>"""
         related_cards_html = f'<div class="related-grid">{cards}\n      </div>'
 
     surface_raw = layers.get("surface", "TBD")
-    surface_html = "" if (surface_raw or "TBD").strip() == "TBD" else text_to_html(surface_raw)
-    if surface_html and "Try this:" in surface_raw:
-        parts = surface_raw.split("Try this:")
+    surface_expanded = expand_nugget_directives(surface_raw, all_nuggets) if surface_raw else surface_raw
+    surface_html = "" if (surface_expanded or "TBD").strip() == "TBD" else text_to_html(surface_expanded)
+    if surface_html and "Try this:" in surface_expanded:
+        parts = surface_expanded.split("Try this:")
         before = text_to_html("Try this:".join(parts[:-1]))
         cta_text = "Try this: " + parts[-1].strip()
         surface_html = before + f'<div class="cta">{cta_text}</div>'
@@ -477,7 +327,8 @@ def build_nugget(n, all_nuggets):
     def layer_body(layer_id):
         if layer_id == "references":
             prov_raw = layers.get("provenance", "TBD")
-            prov_html = text_to_html(prov_raw) if (prov_raw or "TBD").strip() != "TBD" else ""
+            prov_expanded = expand_nugget_directives(prov_raw, all_nuggets) if prov_raw else prov_raw
+            prov_html = text_to_html(prov_expanded) if (prov_expanded or "TBD").strip() != "TBD" else ""
             parts = []
             if prov_html:
                 parts.append(f'<div class="prose">{prov_html}</div>')
@@ -499,9 +350,10 @@ def build_nugget(n, all_nuggets):
         if layer_id == "surface":
             return surface_html
         raw = layers.get(layer_id, "TBD")
+        expanded = expand_nugget_directives(raw, all_nuggets) if raw else raw
         if layer_id == "script":
-            return script_to_html(raw)
-        return text_to_html(raw)
+            return script_to_html(expanded)
+        return text_to_html(expanded)
 
     tabs_parts = []
     for layer_id, label in LAYER_ORDER:
@@ -564,7 +416,7 @@ def build_nugget(n, all_nuggets):
     return html
 
 
-def build_repository(nuggets, status_order):
+def build_list(nuggets, status_order):
     status_rank = {s: i for i, s in enumerate(status_order)}
     key_status = lambda n: status_rank.get(n.get("status", "empty"), len(status_order))
     key_num = lambda n: int(n.get("number", "0")) if (n.get("number") or "").isdigit() else 0
@@ -614,12 +466,12 @@ def build_repository(nuggets, status_order):
   sortTable(sel.value);
 })();
 </script>"""
-    html = head("Repository")
+    html = head("List")
     html += nav(from_d=True)
     html += f"""
 <div class="wrap">
   <div class="page-body fade">
-    <h1>Repository</h1>
+    <h1>List</h1>
     <p class="dim repo-intro">All seed nuggets. The canonical list. Generated from source files.</p>
     <p class="repo-sort-wrap"><label for="repo-sort">Sort: </label><select id="repo-sort" class="repo-sort" aria-label="Sort table">
       <option value="status">By status</option>
@@ -659,40 +511,44 @@ def display_number(num):
     return num or "?"
 
 
-def build_tags_page(nuggets):
+def display_number_map(num):
+    """Two-digit label for map row/column headers (no spaces)."""
+    if num and num.isdigit():
+        return str(int(num)).zfill(2)
+    return num or "??"
+
+
+def build_tags_page(nuggets, status_order):
     all_tags = set()
     for n in nuggets:
         all_tags.update(n.get("tags", []))
     sorted_tags = sorted(all_tags)
 
     all_statuses = set(n.get("status", "empty") for n in nuggets)
-    sorted_statuses = sorted(all_statuses)
+    sorted_statuses = [s for s in status_order if s in all_statuses]
 
-    def row_block(label, slug, matching):
-        block = ""
+    def block_for_tag(label, slug, matching):
+        parts = [f'<hr class="index-tag-rule"><div id="{slug}" class="index-tag-name">{_html.escape(label)}</div>']
         for i, n in enumerate(matching):
             num = n.get("number", "")
             title = n.get("title", "")
             subtitle = n.get("subtitle", "")
             fname = n.get("filename", "") + ".html"
             title_display = f"{display_number(num)}. {title}" if num else title
-            if i == 0:
-                tag_cell = f'<td id="{slug}" class="repo-tag-label">{label}</td>'
-            else:
-                tag_cell = '<td class="repo-tag-label-empty"></td>'
-            block += f"""
-    <tr>
-      {tag_cell}
-      <td><a href="{fname}">{title_display}</a><br><span class="repo-subtitle">{subtitle}</span></td>
-    </tr>"""
-        return block
+            if i > 0:
+                parts.append('<hr class="index-entry-rule">')
+            parts.append(
+                f'<div class="index-entry"><a href="{fname}">{_html.escape(title_display)}</a>'
+                f'<br><span class="repo-subtitle">{_html.escape(subtitle)}</span></div>'
+            )
+        return "\n    ".join(parts)
 
-    tag_rows = ""
+    tag_blocks = ""
     for tag in sorted_tags:
-        tag_rows += row_block(tag, tag_slug(tag), [n for n in nuggets if tag in n.get("tags", [])])
-    status_rows = ""
+        tag_blocks += block_for_tag(tag, tag_slug(tag), [n for n in nuggets if tag in n.get("tags", [])])
+    status_blocks = ""
     for status in sorted_statuses:
-        status_rows += row_block(status, f"status-{status}", [n for n in nuggets if n.get("status", "empty") == status])
+        status_blocks += block_for_tag(status, f"status-{status}", [n for n in nuggets if n.get("status", "empty") == status])
 
     html = head("Index")
     html += nav(from_d=True)
@@ -700,54 +556,15 @@ def build_tags_page(nuggets):
 <div class="wrap">
   <div class="page-body fade">
     <h1>Index</h1>
-    <table class="tags-table">{INDEX_TABLE_HEAD}
-      <tbody>{tag_rows}
-      </tbody>
-    </table>
+    <div class="index-by-tag">
+    {tag_blocks}
+    </div>
     <h2 class="index-section-head">Statuses</h2>
-    <table class="tags-table">{INDEX_TABLE_HEAD}
-      <tbody>{status_rows}
-      </tbody>
-    </table>
+    <div class="index-by-tag">
+    {status_blocks}
+    </div>
   </div>
 </div>"""
-    html += foot()
-    html += close()
-    return html
-
-
-def build_groups(nuggets, groups_data):
-    html = head("Seeds by Group")
-    html += nav(from_d=True)
-    html += '<div class="wrap"><div class="page-body fade">'
-    html += "<h1>Seeds by group</h1>\n"
-    html += '<p class="groups-intro">Thematic clusters. Each seed may appear in more than one group.</p>\n'
-
-    for group_title, group_sub, nums in groups_data:
-        html += f'<div class="group-block">'
-        html += f'<div class="group-label">{group_title} — <span class="group-label-sub">{group_sub}</span></div>'
-        for num in nums:
-            n = nugget_by_number(nuggets, num)
-            if not n:
-                _warn(f"Warning: groups.txt: seed {num!r} in group {group_title!r} does not match any nugget.")
-                continue
-            fname = n.get("filename", "") + ".html"
-            title = n.get("title", "")
-            subtitle = n.get("subtitle", "")
-            status = n.get("status", "empty")
-            stub_class = " stub" if status == "empty" else ""
-            html += f"""
-      <a href="{fname}" class="seed-row{stub_class}">
-        <div class="seed-num">{display_number(n.get("number", ""))}</div>
-        <div>
-          <div class="seed-title">{title}</div>
-          <div class="seed-sub">{subtitle}</div>
-        </div>
-        <div class="seed-status-col">{status}</div>
-      </a>"""
-        html += "</div>"
-
-    html += "</div></div>"
     html += foot()
     html += close()
     return html
@@ -786,7 +603,6 @@ def build_index(nuggets, index_copy, status_order):
     view_all_text = (c.get("view_all") or "View all {n} seeds →").replace("{n}", str(total))
     about_cards = [
         f'<a href="{d}about.html" class="about-card">About</a>',
-        f'<a href="{d}groups.html" class="about-card">{c.get("groups", "By Group")}</a>',
     ]
 
     html = head("Seed Nuggets", at_root=True)
@@ -814,11 +630,11 @@ def build_index(nuggets, index_copy, status_order):
   <div class="seed-list-section">
     <div class="section-head">
       <span class="mono small">{c.get("section_head", "All seeds")}</span>
-      <a href="{d}repository.html" class="link-mono-small">{c.get("repo_link", "Full repository →")}</a>
+      <a href="{d}list.html" class="link-mono-small">{c.get("repo_link", "Full repository →")}</a>
     </div>
     {recent_html}
     <div class="seed-list-more-wrap">
-      <a href="{d}repository.html" class="link-mono-accent">{view_all_text}</a>
+      <a href="{d}list.html" class="link-mono-accent">{view_all_text}</a>
     </div>
   </div>
 
@@ -868,11 +684,9 @@ def build_about_page():
 
 
 def build_internal_page():
-    """Build Internal page from internal/page.md (with @include). Expands @timestamp to build time."""
+    """Build Internal page from internal/page.md (with @include)."""
     raw = load_internal_page_content()
     body_html = about_body_to_html(raw) if raw.strip() else ""
-    t = (BUILD_TIME or datetime.now(ZoneInfo("America/Los_Angeles"))).strftime("%Y-%m-%d %H:%M Pacific")
-    body_html = body_html.replace("@timestamp", t)
     html = head("Internal")
     html += nav(from_d=True)
     html += f'<div class="wrap"><div class="page-body fade">{body_html}</div></div>'
@@ -908,7 +722,7 @@ def build_bibliography_page(nuggets):
     body = "\n".join(parts) if parts else "<p class=\"dim\">No references yet. Add <code>#ref</code> lines (full citation text) inside <code>#provenance</code> in any nugget.</p>"
     html = head("Bibliography")
     html += nav(from_d=True)
-    html += f'<div class="wrap"><div class="page-body fade"><h1>Bibliography</h1><p class="dim repo-intro">References from all nuggets.</p>{body}</div></div>'
+    html += f'<div class="wrap"><div class="page-body fade"><h1>Bibliography</h1><p class="dim repo-intro">References from all nuggets.  Duplicates will be merged later.</p>{body}</div></div>'
     html += foot()
     html += close()
     return html
@@ -969,10 +783,11 @@ def build_map_body(nuggets):
     nums = [n.get("number", "") for n in sorted_nuggets]
     related_sets = {n.get("number", ""): set(n.get("related", [])) for n in sorted_nuggets}
     rows = []
-    header_cells = ["<th></th>"] + [f'<th class="map-col-label">{display_number(num)}</th>' for num in nums]
+    pad = [display_number_map(num) for num in nums]
+    header_cells = ["<th></th>"] + [f'<th class="map-col-label">{p[0]}<br>{p[1]}</th>' for p in pad]
     rows.append("<tr>" + "".join(header_cells) + "</tr>")
     for from_num, n in zip(nums, sorted_nuggets):
-        cells = [f'<th class="map-row-label">{display_number(from_num)}</th>']
+        cells = [f'<th class="map-row-label">{display_number_map(from_num)}</th>']
         for to_num in nums:
             linked = to_num in related_sets.get(from_num, set())
             cls = "map-cell-linked" if linked else "map-cell-empty"
@@ -1021,7 +836,7 @@ def main():
             shutil.rmtree(SITE_DIR)
         SITE_DIR.mkdir(parents=True)
 
-    nuggets = load_all_nuggets()
+    nuggets = load_all_nuggets(warn=_warn)
     print(f"Loaded {len(nuggets)} nuggets")
     seen_num = {}
     for n in nuggets:
@@ -1036,7 +851,6 @@ def main():
     load_internal_page_content()
     status_order = load_status_order()
     index_copy = load_index_copy()
-    groups_data = load_groups_data()
 
     for n in nuggets:
         s = n.get("status", "empty")
@@ -1055,14 +869,11 @@ def main():
         shutil.copy(CONTENT_DIR / "site.css", SITE_DIR / "site.css")
         print("  Built site.css")
 
-        (SITE_DIR / "repository.html").write_text(build_repository(nuggets, status_order), encoding="utf-8")
-        print("  Built repository.html")
+        (SITE_DIR / "list.html").write_text(build_list(nuggets, status_order), encoding="utf-8")
+        print("  Built list.html")
 
-        (SITE_DIR / "tags.html").write_text(build_tags_page(nuggets), encoding="utf-8")
+        (SITE_DIR / "tags.html").write_text(build_tags_page(nuggets, status_order), encoding="utf-8")
         print("  Built tags.html")
-
-        (SITE_DIR / "groups.html").write_text(build_groups(nuggets, groups_data), encoding="utf-8")
-        print("  Built groups.html")
 
         (SITE_DIR / "resources.html").write_text(build_resources_page(), encoding="utf-8")
         print("  Built resources.html")

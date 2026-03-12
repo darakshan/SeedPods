@@ -84,8 +84,8 @@ td a:hover{color:var(--accent)}
 .layer-section{scroll-margin-top:5rem;padding:3rem 0;border-top:1px solid var(--line)}
 .layer-section:first-of-type{border-top:none}
 .layer-heading{font-size:1.1rem;font-weight:400;font-family:'DM Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--warm);margin-bottom:1.5rem}
-.map-matrix{display:inline-block;border-collapse:collapse;margin:2rem 0;font-size:.7rem}
-.map-matrix th,.map-matrix td{border:1px solid var(--line);width:1.4rem;height:1.4rem;text-align:center;vertical-align:middle}
+.map-matrix{display:inline-block;border-collapse:collapse;margin:2rem 0;font-size:.7rem;line-height:1}
+.map-matrix th,.map-matrix td{border:1px solid var(--line);width:1.4rem;text-align:center;vertical-align:middle;padding:0;line-height:1}
 .map-matrix th{font-family:'DM Mono',monospace;color:var(--dim);font-weight:400}
 .map-matrix .map-cell-linked{background:var(--accent);color:var(--paper)}
 .map-matrix .map-cell-empty{background:var(--paper)}
@@ -96,6 +96,9 @@ td a:hover{color:var(--accent)}
 .related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;margin-top:1rem}
 .related-card{border:1px solid var(--line);padding:1rem;text-decoration:none;color:inherit;transition:border-color .2s}
 .related-card:hover{border-color:var(--accent)}
+.related-card-prelim{color:var(--dim);border-color:var(--line)}
+.related-card-prelim .related-num,.related-card-prelim .related-title{color:var(--dim)}
+.related-card-prelim:hover{border-color:var(--warm)}
 .related-num{font-family:'DM Mono',monospace;font-size:.58rem;color:var(--warm);margin-bottom:.3rem}
 .related-title{font-size:1rem;font-weight:300}
 .placeholder{font-style:italic}
@@ -143,11 +146,15 @@ td a:hover{color:var(--accent)}
 .repo-subtitle{font-size:.82rem;color:var(--dim)}
 .repo-date{font-size:.75rem}
 .repo-tags{font-size:.8rem;color:var(--dim)}
-/* Tags page */
+/* Tags page (index) */
 .index-section-head{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--warm);padding:2rem 0 .8rem;border-top:1px solid var(--line);margin-top:2rem}
-.tags-table th:first-child,.tags-table td:first-child{min-width:8rem}
-.tags-table .repo-tag-label{font-size:1rem;font-weight:400;font-family:'DM Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--warm);scroll-margin-top:5rem;vertical-align:top;padding-top:.9rem}
-.tags-table .repo-tag-label-empty{vertical-align:top}
+.index-by-tag{margin-top:1rem}
+.index-tag-rule{border:none;border-top:1px solid var(--dim);margin:0;padding:0}
+.index-entry-rule{border:none;border-top:1px solid var(--line);margin:0;padding:0}
+.index-tag-name{font-weight:700;font-size:1rem;font-family:'DM Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--warm);scroll-margin-top:5rem;padding:.5rem 0}
+.index-entry{padding:.5rem 0}
+.index-entry a{color:var(--ink);text-decoration:none}
+.index-entry a:hover{color:var(--accent)}
 /* Groups */
 .groups-intro{color:var(--dim);margin-top:.5rem;font-size:.95rem}
 .group-label-sub{font-style:italic;font-weight:300}
