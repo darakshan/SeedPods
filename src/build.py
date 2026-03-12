@@ -10,6 +10,7 @@ Usage:
     python build.py --nugget 001   # rebuild single nugget
 """
 
+import html as _html
 import re
 import shutil
 import sys
@@ -231,6 +232,15 @@ def load_internal_page_content():
     if not (INTERNAL_DIR / "page.md").exists():
         raise SystemExit("Required file missing: internal/page.md")
     return load_page_md(INTERNAL_DIR, "page.md", required=True)
+
+
+def load_status_order():
+    """Load content/status.txt: one status per line, in sort order (most ready first). Required."""
+    p = CONTENT_DIR / "status.txt"
+    if not p.exists():
+        raise SystemExit("Required file missing: content/status.txt")
+    order = [line.strip() for line in p.read_text(encoding="utf-8").splitlines() if line.strip()]
+    return order
 
 
 def load_groups_data():
@@ -527,9 +537,13 @@ def build_nugget(n, all_nuggets):
     return html
 
 
-def build_repository(nuggets):
+def build_repository(nuggets, status_order):
+    status_rank = {s: i for i, s in enumerate(status_order)}
+    key_status = lambda n: status_rank.get(n.get("status", "empty"), len(status_order))
+    key_num = lambda n: int(n.get("number", "0")) if (n.get("number") or "").isdigit() else 0
+    sorted_nuggets = sorted(nuggets, key=lambda n: (key_status(n), key_num(n)))
     rows = ""
-    for n in nuggets:
+    for n in sorted_nuggets:
         num = n.get("number", "")
         shortname = n.get("shortname", "")
         title = n.get("title", "")
@@ -539,8 +553,12 @@ def build_repository(nuggets):
         tag_links = " ".join(f'<a href="tags.html#{tag_slug(t)}" class="tag">{t}</a>' for t in n.get("tags", []))
         fname = n.get("filename", "") + ".html"
         status_class = f"status-{status.replace(' ','')}"
+        rank = status_rank.get(status, len(status_order))
+        num_val = key_num(n)
+        date_val = date.strip() or "0000-00-00"
+        title_attr = _html.escape(title, quote=True)
         rows += f"""
-    <tr>
+    <tr data-num="{num_val}" data-date="{date_val}" data-status-rank="{rank}" data-title="{title_attr}">
       <td class="mono repo-cell-mono">{display_number(num)}</td>
       <td class="mono repo-cell-mono">{shortname}</td>
       <td><a href="{fname}">{title}</a><br><span class="repo-subtitle">{subtitle}</span></td>
@@ -549,6 +567,26 @@ def build_repository(nuggets):
       <td class="repo-tags">{tag_links}</td>
     </tr>"""
 
+    sort_script = """
+<script>
+(function(){
+  var tbody = document.querySelector('.repo-table tbody');
+  var sel = document.getElementById('repo-sort');
+  if (!tbody || !sel) return;
+  function sortTable(by){
+    var rows = [].slice.call(tbody.querySelectorAll('tr'));
+    rows.sort(function(a,b){
+      if (by === 'alpha') return (a.dataset.title || '').toLowerCase().localeCompare((b.dataset.title || '').toLowerCase());
+      if (by === 'recent') return (b.dataset.date || '').localeCompare(a.dataset.date || '');
+      if (by === 'number') return (+a.dataset.num) - (+b.dataset.num);
+      return (+a.dataset.statusRank) - (+b.dataset.statusRank) || (+a.dataset.num) - (+b.dataset.num);
+    });
+    rows.forEach(function(r){ tbody.appendChild(r); });
+  }
+  sel.addEventListener('change', function(){ sortTable(this.value); });
+  sortTable(sel.value);
+})();
+</script>"""
     html = head("Repository")
     html += nav(from_d=True)
     html += f"""
@@ -556,7 +594,13 @@ def build_repository(nuggets):
   <div class="page-body fade">
     <h1>Repository</h1>
     <p class="dim repo-intro">All seed nuggets. The canonical list. Generated from source files.</p>
-    <table>
+    <p class="repo-sort-wrap"><label for="repo-sort">Sort: </label><select id="repo-sort" class="repo-sort" aria-label="Sort table">
+      <option value="status">By status</option>
+      <option value="number">By number</option>
+      <option value="alpha">Alphabetical</option>
+      <option value="recent">By most recent</option>
+    </select></p>
+    <table class="repo-table">
       <thead>
         <tr>
           <th>#</th>
@@ -571,7 +615,7 @@ def build_repository(nuggets):
       </tbody>
     </table>
   </div>
-</div>"""
+</div>{sort_script}"""
     html += foot()
     html += close()
     return html
@@ -682,14 +726,18 @@ def build_groups(nuggets, groups_data):
     return html
 
 
-def build_index(nuggets, index_copy):
+def build_index(nuggets, index_copy, status_order):
     c = index_copy
+    status_rank = {s: i for i, s in enumerate(status_order)}
+    key_status = lambda n: status_rank.get(n.get("status", "empty"), len(status_order))
+    key_num = lambda n: int(n.get("number", "0")) if (n.get("number") or "").isdigit() else 0
+    by_ready = sorted(nuggets, key=lambda n: (key_status(n), key_num(n)))
     ready = [n for n in nuggets if n.get("status") not in ("empty",)]
     total = len(nuggets)
     ready_count = len(ready)
     d = "d/"
 
-    recent = nuggets[:5]
+    recent = by_ready[:5]
     recent_html = ""
     for n in recent:
         fname = n.get("filename", "") + ".html"
@@ -854,8 +902,14 @@ def main():
 
     load_about_page_content()
     load_internal_page_content()
+    status_order = load_status_order()
     index_copy = load_index_copy()
     groups_data = load_groups_data()
+
+    for n in nuggets:
+        s = n.get("status", "empty")
+        if s not in status_order:
+            _warn(f"Error: nugget {n.get('filename', '?')}: status {s!r} not in content/status.txt")
 
     for n in nuggets:
         if filter_num and n.get("number") != filter_num:
@@ -869,7 +923,7 @@ def main():
         shutil.copy(CONTENT_DIR / "site.css", SITE_DIR / "site.css")
         print("  Built site.css")
 
-        (SITE_DIR / "repository.html").write_text(build_repository(nuggets), encoding="utf-8")
+        (SITE_DIR / "repository.html").write_text(build_repository(nuggets, status_order), encoding="utf-8")
         print("  Built repository.html")
 
         (SITE_DIR / "tags.html").write_text(build_tags_page(nuggets), encoding="utf-8")
@@ -887,7 +941,7 @@ def main():
         (SITE_DIR / "internal.html").write_text(build_internal_page(), encoding="utf-8")
         print("  Built internal.html")
 
-        (_ROOT / "index.html").write_text(build_index(nuggets, index_copy), encoding="utf-8")
+        (_ROOT / "index.html").write_text(build_index(nuggets, index_copy, status_order), encoding="utf-8")
         print("  Built index.html")
 
         (SITE_DIR / "map.html").write_text(build_static_page("Map", build_map_body(nuggets)), encoding="utf-8")
