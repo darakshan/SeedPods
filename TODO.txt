@@ -1,0 +1,1 @@
+remove #number from nugget specification; use number from filename.  Update /internal

@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
 build.py — Seed Nuggets site generator
-Reads nugget .txt files from ./nuggets/, writes HTML to ./docs/
+Reads nugget .txt files from repo nuggets/, writes HTML to repo d/.
 Generates: nugget pages, repository.html, tags.html (Index), groups.html,
 index.html, about pages (including map.html), site.css.
 
 Usage:
-    python build.py
+    python src/build.py   (from repo root)
     python build.py --nugget 001   # rebuild single nugget
 """
 
@@ -22,10 +22,11 @@ try:
 except ImportError:
     markdown = None
 
-NUGGETS_DIR = Path("nuggets")
-ABOUT_DIR = Path("about")
-CONTENT_DIR = Path("content")
-SITE_DIR = Path("docs")
+_ROOT = Path(__file__).resolve().parent.parent
+NUGGETS_DIR = _ROOT / "nuggets"
+ABOUT_DIR = _ROOT / "about"
+CONTENT_DIR = _ROOT / "content"
+SITE_DIR = _ROOT / "d"
 
 BUILD_TIME = None
 _warn_count = 0
@@ -223,24 +224,27 @@ def load_groups_data():
 
 # ── HTML helpers ──────────────────────────────────────────────────────────────
 
-HEAD_LINKS = """
+def _head_links(css_href="site.css"):
+    return f"""
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="site.css">
+<link rel="stylesheet" href="{css_href}">
 """
 
-def nav(about_pages):
-    """about_pages: list of (stem, title) for dropdown."""
+def nav(about_pages, from_d=False):
+    """about_pages: list of (stem, title) for dropdown. from_d=True for pages under d/."""
+    prefix = "" if from_d else "d/"
     about_items = "".join(
-        f'<li><a href="{stem}.html">{title}</a></li>' for stem, title, _ in about_pages
+        f'<li><a href="{prefix}{stem}.html">{title}</a></li>' for stem, title, _ in about_pages
     )
+    index_href = "../index.html" if from_d else "index.html"
     return f"""
 <nav>
-  <a href="index.html" class="nav-logo">Seed Nuggets</a>
+  <a href="{index_href}" class="nav-logo">Seed Nuggets</a>
   <ul class="nav-links">
-    <li><a href="repository.html">Repository</a></li>
-    <li><a href="tags.html">Index</a></li>
-    <li><a href="groups.html">By Group</a></li>
+    <li><a href="{prefix}repository.html">Repository</a></li>
+    <li><a href="{prefix}tags.html">Index</a></li>
+    <li><a href="{prefix}groups.html">By Group</a></li>
     <li class="nav-item-dropdown">
       <details>
         <summary>About</summary>
@@ -259,14 +263,15 @@ def foot():
   <span>Built {t}</span>
 </footer>"""
 
-def head(title, extra=""):
+def head(title, extra="", at_root=False):
+    links = _head_links("d/site.css" if at_root else "site.css")
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{title} — Seed Nuggets</title>
-{HEAD_LINKS}
+{links}
 {extra}
 </head>
 <body>"""
@@ -466,7 +471,7 @@ def build_nugget(n, all_nuggets, about_pages):
     next_html = f'<a href="{next_n.get("filename", "")}.html">&raquo;</a>' if next_n else ''
 
     html = head(f"{display_number(num)} — {title}")
-    html += nav(about_pages)
+    html += nav(about_pages, from_d=True)
     html += f"""
 <div class="wrap">
   <div class="layer-tabs">
@@ -520,7 +525,7 @@ def build_repository(nuggets, about_pages):
     </tr>"""
 
     html = head("Repository")
-    html += nav(about_pages)
+    html += nav(about_pages, from_d=True)
     html += f"""
 <div class="wrap">
   <div class="page-body fade">
@@ -594,7 +599,7 @@ def build_tags_page(nuggets, about_pages):
         status_rows += row_block(status, f"status-{status}", [n for n in nuggets if n.get("status", "empty") == status])
 
     html = head("Index")
-    html += nav(about_pages)
+    html += nav(about_pages, from_d=True)
     html += f"""
 <div class="wrap">
   <div class="page-body fade">
@@ -617,7 +622,7 @@ def build_tags_page(nuggets, about_pages):
 
 def build_groups(nuggets, groups_data, about_pages):
     html = head("Seeds by Group")
-    html += nav(about_pages)
+    html += nav(about_pages, from_d=True)
     html += '<div class="wrap"><div class="page-body fade">'
     html += "<h1>Seeds by group</h1>\n"
     html += '<p class="groups-intro">Thematic clusters. Each seed may appear in more than one group.</p>\n'
@@ -657,6 +662,7 @@ def build_index(nuggets, index_copy, about_pages):
     ready = [n for n in nuggets if n.get("status") not in ("empty",)]
     total = len(nuggets)
     ready_count = len(ready)
+    d = "d/"
 
     recent = nuggets[:5]
     recent_html = ""
@@ -668,7 +674,7 @@ def build_index(nuggets, index_copy, about_pages):
         status = n.get("status", "empty")
         stub = " stub" if status == "empty" else ""
         recent_html += f"""
-    <a href="{fname}" class="seed-row{stub}">
+    <a href="{d}{fname}" class="seed-row{stub}">
       <div class="seed-num">{display_number(num)}</div>
       <div>
         <div class="seed-title">{title}</div>
@@ -680,10 +686,10 @@ def build_index(nuggets, index_copy, about_pages):
     view_all_text = (c.get("view_all") or "View all {n} seeds →").replace("{n}", str(total))
     about_cards = []
     for stem, title, _ in about_pages:
-        about_cards.append(f'<a href="{stem}.html" class="about-card">{title}</a>')
-    about_cards.append(f'<a href="groups.html" class="about-card">{c.get("groups", "By Group")}</a>')
+        about_cards.append(f'<a href="{d}{stem}.html" class="about-card">{title}</a>')
+    about_cards.append(f'<a href="{d}groups.html" class="about-card">{c.get("groups", "By Group")}</a>')
 
-    html = head("Seed Nuggets")
+    html = head("Seed Nuggets", at_root=True)
     html += nav(about_pages)
     html += f"""
 <div class="wrap">
@@ -708,11 +714,11 @@ def build_index(nuggets, index_copy, about_pages):
   <div class="seed-list-section">
     <div class="section-head">
       <span class="mono small">{c.get("section_head", "All seeds")}</span>
-      <a href="repository.html" class="link-mono-small">{c.get("repo_link", "Full repository →")}</a>
+      <a href="{d}repository.html" class="link-mono-small">{c.get("repo_link", "Full repository →")}</a>
     </div>
     {recent_html}
     <div class="seed-list-more-wrap">
-      <a href="repository.html" class="link-mono-accent">{view_all_text}</a>
+      <a href="{d}repository.html" class="link-mono-accent">{view_all_text}</a>
     </div>
   </div>
 
@@ -730,7 +736,7 @@ def build_index(nuggets, index_copy, about_pages):
 
 def build_static_page(title, body_html, about_pages):
     html = head(title)
-    html += nav(about_pages)
+    html += nav(about_pages, from_d=True)
     html += f'<div class="wrap"><div class="page-body fade"><h1>{title}</h1>{body_html}</div></div>'
     html += foot()
     html += close()
@@ -811,14 +817,14 @@ def main():
         (SITE_DIR / "groups.html").write_text(build_groups(nuggets, groups_data, about_pages), encoding="utf-8")
         print("  Built groups.html")
 
-        (SITE_DIR / "index.html").write_text(build_index(nuggets, index_copy, about_pages), encoding="utf-8")
+        (_ROOT / "index.html").write_text(build_index(nuggets, index_copy, about_pages), encoding="utf-8")
         print("  Built index.html")
 
         for stem, title, body_html in about_pages:
             (SITE_DIR / f"{stem}.html").write_text(build_static_page(title, body_html, about_pages), encoding="utf-8")
             print(f"  Built {stem}.html")
 
-    print(f"\nDone. Site written to ./{SITE_DIR}/")
+    print(f"\nDone. Site written to repo root (index.html) and {SITE_DIR.relative_to(_ROOT)}/ (docs)")
     if _warn_count:
         sys.exit(1)
 

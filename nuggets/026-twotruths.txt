@@ -1,4 +1,4 @@
-#number 024
+#number 026
 #shortname twotruths
 #title Two Things Can Be True at Once
 #subtitle Contradiction is often the sign of a framework too small for the reality it's trying to hold.
