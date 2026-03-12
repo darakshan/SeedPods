@@ -53,12 +53,6 @@ Further reading:
 - Ryle, G. The Concept of Mind (1949)
 - Whitehead, A.N. Process and Reality (1929)
 - Dennett, D. Intuition Pumps and Other Tools for Thinking (2013)
-- Nugget #1: The Map That Was Wrong
-- Nugget #6: You Can't Judge a Process by Its Output
-- Nugget #22: The Channel Is Not the Capacity
-
-#related
-001, 006, 022, 003?, 011?
 
 #script
 [A casual food place. Two YOUNG MEN at a table. Trays, drinks, the usual noise.]

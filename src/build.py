@@ -28,6 +28,12 @@ CONTENT_DIR = Path("content")
 SITE_DIR = Path("docs")
 
 BUILD_TIME = None
+_warn_count = 0
+
+def _warn(msg):
+    global _warn_count
+    print(msg, file=sys.stderr)
+    _warn_count += 1
 
 # ── Parser ────────────────────────────────────────────────────────────────────
 
@@ -61,11 +67,21 @@ def parse_nugget(filepath):
             if key in SINGLE_LINE:
                 flush()
                 current_layer = None
-                meta[key] = value.strip()
+                if key in meta:
+                    _warn(f"Warning: {filepath}: duplicate #{key}, keeping first value.")
+                else:
+                    if not value.strip():
+                        _warn(f"Warning: {filepath}: #{key} has no value on same line.")
+                    meta[key] = value.strip()
             else:
                 flush()
-                current_layer = key
-                buffer = []
+                if key in layers:
+                    _warn(f"Warning: {filepath}: duplicate #{key}, keeping first.")
+                    current_layer = None
+                    buffer = []
+                else:
+                    current_layer = key
+                    buffer = []
         else:
             if current_layer and current_layer not in SINGLE_LINE:
                 buffer.append(line)
@@ -74,7 +90,17 @@ def parse_nugget(filepath):
 
     # Parse list fields
     meta["tags"] = [t.strip() for t in meta.get("tags", "").split(",") if t.strip()]
-    meta["related"] = [r.strip() for r in meta.get("related", "").split(",") if r.strip()]
+    raw_related = [r.strip() for r in meta.get("related", "").split(",") if r.strip()]
+    related_parsed = []
+    for r in raw_related:
+        if re.match(r"^\d+$", r):
+            related_parsed.append(r)
+        else:
+            _warn(f"Warning: {filepath}: related entry {r!r} is not a valid nugget number (digits only).")
+            m = re.match(r"^(\d+)", r)
+            if m:
+                related_parsed.append(m.group(1))
+    meta["related"] = related_parsed
 
     meta["layers"] = {
         "surface": layers.get("surface", "TBD"),
@@ -83,6 +109,11 @@ def parse_nugget(filepath):
         "script": layers.get("script", "TBD"),
         "images": layers.get("images", "TBD"),
     }
+
+    stem = filepath.stem
+    prefix = stem.split("-")[0] if "-" in stem else ""
+    if prefix.isdigit() and meta.get("number") and meta["number"] != prefix:
+        _warn(f"Warning: {filepath}: filename prefix {prefix} does not match #number {meta['number']}.")
 
     return meta
 
@@ -95,7 +126,7 @@ def load_all_nuggets():
             n["filename"] = f.stem  # e.g. 001-caloric
             nuggets.append(n)
         except Exception as e:
-            print(f"Warning: could not parse {f}: {e}")
+            _warn(f"Warning: could not parse {f}: {e}")
     return nuggets
 
 
@@ -351,6 +382,9 @@ def build_nugget(n, all_nuggets, about_pages):
     tag_html = " ".join(f'<a href="tags.html#{tag_slug(t)}" class="tag">{t}</a>' for t in tags)
 
     rel_nuggets = [nugget_by_number(all_nuggets, r) for r in related_nums]
+    for r in related_nums:
+        if not nugget_by_number(all_nuggets, r):
+            _warn(f"Warning: nugget {n.get('number')} ({n.get('filename')}): related {r} does not match any nugget.")
     rel_nuggets = [r for r in rel_nuggets if r]
     related_cards_html = ""
     if rel_nuggets:
@@ -594,6 +628,7 @@ def build_groups(nuggets, groups_data, about_pages):
         for num in nums:
             n = nugget_by_number(nuggets, num)
             if not n:
+                _warn(f"Warning: groups.txt: seed {num!r} in group {group_title!r} does not match any nugget.")
                 continue
             fname = n.get("filename", "") + ".html"
             title = n.get("title", "")
@@ -741,6 +776,14 @@ def main():
 
     nuggets = load_all_nuggets()
     print(f"Loaded {len(nuggets)} nuggets")
+    seen_num = {}
+    for n in nuggets:
+        num = n.get("number")
+        if num:
+            if num in seen_num:
+                _warn(f"Warning: duplicate #number {num} (in {seen_num[num]}.txt and {n.get('filename')}.txt).")
+            else:
+                seen_num[num] = n.get("filename")
 
     about_pages = load_about_pages()
     about_pages.append(("map", "Map", build_map_body(nuggets)))
@@ -776,6 +819,8 @@ def main():
             print(f"  Built {stem}.html")
 
     print(f"\nDone. Site written to ./{SITE_DIR}/")
+    if _warn_count:
+        sys.exit(1)
 
 if __name__ == "__main__":
     main()
