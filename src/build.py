@@ -10,6 +10,7 @@ Usage:
     python build.py --nugget 001   # rebuild single nugget
 """
 
+import hashlib
 import html as _html
 import re
 import shutil
@@ -29,10 +30,48 @@ from nugget_parser import NUGGETS_DIR, load_all_nuggets, nugget_by_number, expan
 ABOUT_DIR = _ROOT / "about"
 INTERNAL_DIR = _ROOT / "internal"
 CONTENT_DIR = _ROOT / "content"
+NOTES_DIR = _ROOT / "notes"
+EXPLAINERS_MD = NOTES_DIR / "explainers-for-terms.md"
 SITE_DIR = _ROOT / "d"
 
 BUILD_TIME = None
 _warn_count = 0
+BUILD_STATE_FILE = _ROOT / ".buildstate"
+
+def _input_files_for_page(main_path):
+    base_dir = main_path.parent.resolve()
+    out = {main_path}
+    if not main_path.exists():
+        return out
+    for line in main_path.read_text(encoding="utf-8").splitlines():
+        stripped = line.strip()
+        if stripped.startswith("@include "):
+            name = stripped[8:].strip()
+            inc_path = (base_dir / name).resolve()
+            if str(inc_path).startswith(str(base_dir)) and inc_path.exists():
+                out.add(inc_path)
+    return out
+
+def get_build_input_files():
+    files = set()
+    for p in NUGGETS_DIR.glob("*.txt"):
+        files.add(p)
+    for name in ["index.txt", "status.txt", "resources.md", "site.css"]:
+        p = CONTENT_DIR / name
+        if p.exists():
+            files.add(p)
+    if EXPLAINERS_MD.exists():
+        files.add(EXPLAINERS_MD)
+    for main in [CONTENT_DIR / "resources.md", ABOUT_DIR / "page.md", INTERNAL_DIR / "page.md"]:
+        if main.exists():
+            files.update(_input_files_for_page(main))
+    return sorted(files, key=lambda p: str(p))
+
+def get_build_input_hash():
+    h = hashlib.sha256()
+    for path in get_build_input_files():
+        h.update(path.read_bytes())
+    return h.hexdigest()
 
 def _warn(msg):
     global _warn_count
@@ -504,6 +543,106 @@ def tag_slug(tag):
     return tag.replace(" ", "-")
 
 
+def term_slug(term):
+    """Slug for explainer term anchors: lowercase, spaces to hyphens, parentheticals to one word."""
+    s = re.sub(r"\s*\([^)]*\)\s*", " ", term).strip()
+    s = s.lower().replace(" ", "-")
+    s = re.sub(r"[^a-z0-9-]", "", s)
+    return s or "term"
+
+
+def parse_explainers_md(path, nuggets):
+    """Parse explainers-for-terms.md. Skip header; collect terms and bullets until 'Still to search'.
+    Returns list of dicts: term, slug, nugget_nums, links [(url, link_text)], notes [str].
+    """
+    if not path.exists():
+        return []
+    text = path.read_text(encoding="utf-8")
+    lines = text.splitlines()
+    term_line_re = re.compile(r"^\*\*(.+?)\*\*(\s*\([^)]*\))?\s*[—\-]\s*(.+)$")
+    url_re = re.compile(r"^\s*-\s*(https://\S+)(?:\s+(\(.+\)))?\s*$")
+    still_re = re.compile(r"^\*\*Still to search\*\*", re.I)
+    result = []
+    i = 0
+    while i < len(lines):
+        m = term_line_re.match(lines[i])
+        if m:
+            part1 = m.group(1).strip()
+            part2 = (m.group(2) or "").strip()
+            if part2:
+                inner = part2.lstrip(" (").rstrip(")")
+                term = f"{part1} ({inner})" if inner else part1
+            else:
+                term = part1
+            refs_str = m.group(3).strip()
+            nugget_nums = [x.strip() for x in refs_str.split(",") if x.strip() and re.match(r"^\d+$", x.strip())]
+            links = []
+            notes = []
+            i += 1
+            while i < len(lines) and not term_line_re.match(lines[i]) and not still_re.match(lines[i].strip()):
+                line = lines[i]
+                if line.strip().startswith("- "):
+                    rest = line.strip()[2:].strip()
+                    url_m = re.match(r"(https://\S+)(?:\s+(\(.+\)))?\s*$", rest)
+                    if url_m:
+                        url = url_m.group(1).strip()
+                        link_text = url_m.group(2).strip() if url_m.group(2) else "Watch"
+                        if link_text.startswith("(") and link_text.endswith(")"):
+                            link_text = link_text[1:-1].strip()
+                        links.append((url, link_text))
+                    else:
+                        notes.append(rest)
+                i += 1
+            result.append({"term": term, "slug": term_slug(term), "nugget_nums": nugget_nums, "links": links, "notes": notes})
+            continue
+        i += 1
+    return result
+
+
+def _clean_explainer_link_text(text):
+    """Remove 'check duration; ' and 'check duration, ' from link text; use 'Watch' if empty."""
+    for prefix in ("check duration; ", "check duration, "):
+        if text.startswith(prefix):
+            text = text[len(prefix) :].strip()
+    if not text or text in ("(", ")", "()"):
+        return "Watch"
+    return text
+
+
+def build_explainers_page(nuggets, explainer_terms):
+    """Build explainers.html from parsed explainers data. Terms sorted alphabetically; uses glossary styles."""
+    if not explainer_terms:
+        body = '<p class="dim">No explainers list. Add <code>notes/explainers-for-terms.md</code>.</p>'
+    else:
+        sorted_terms = sorted(explainer_terms, key=lambda t: t["term"].lower())
+        parts = []
+        for entry in sorted_terms:
+            term = entry["term"]
+            slug = entry["slug"]
+            term_esc = _html.escape(term)
+            link_items = []
+            for url, link_text in entry["links"]:
+                url_esc = _html.escape(url)
+                cleaned = _clean_explainer_link_text(link_text)
+                text_esc = _html.escape(cleaned)
+                link_items.append(f'<a href="{url_esc}" target="_blank" rel="noopener">{text_esc}</a>')
+            links_inline = " ".join(link_items) if link_items else ""
+            links_block = f'<div class="gloss-defs"><div class="gloss-def-block">{links_inline}</div></div>' if links_inline else ""
+            parts.append(
+                f'<div id="{_html.escape(slug)}" class="gloss-entry">'
+                f'<div class="gloss-term-line"><strong class="gloss-term">{term_esc}</strong></div>'
+                f'{links_block}'
+                f"</div>"
+            )
+        body = "\n".join(parts)
+    html = head("Explainers")
+    html += nav(from_d=True)
+    html += f'<div class="wrap"><div class="page-body fade"><h1>Explainers</h1><p class="dim repo-intro">Video explainers for glossary terms.</p>{body}</div></div>'
+    html += foot()
+    html += close()
+    return html
+
+
 def display_number(num):
     """Strip leading zeros for display only; keep filenames/URLs/lookup as-is."""
     if num and num.isdigit():
@@ -518,7 +657,7 @@ def display_number_map(num):
     return num or "??"
 
 
-def build_tags_page(nuggets, status_order):
+def build_tags_page(nuggets, status_order, explainer_terms=None):
     all_tags = set()
     for n in nuggets:
         all_tags.update(n.get("tags", []))
@@ -550,6 +689,24 @@ def build_tags_page(nuggets, status_order):
     for status in sorted_statuses:
         status_blocks += block_for_tag(status, f"status-{status}", [n for n in nuggets if n.get("status", "empty") == status])
 
+    terms_block = ""
+    if explainer_terms:
+        sorted_explainer = sorted(explainer_terms, key=lambda t: t["term"].lower())
+        term_parts = []
+        for entry in sorted_explainer:
+            term_esc = _html.escape(entry["term"])
+            slug = entry["slug"]
+            term_parts.append(f'<div class="index-entry"><a href="explainers.html#{_html.escape(slug)}">{term_esc}</a> 📺</div>')
+        terms_block = "\n    ".join(term_parts)
+
+    terms_section = ""
+    if terms_block:
+        terms_section = f"""
+    <h2 class="index-section-head">Terms</h2>
+    <div class="index-by-tag">
+    {terms_block}
+    </div>"""
+
     html = head("Index")
     html += nav(from_d=True)
     html += f"""
@@ -562,7 +719,7 @@ def build_tags_page(nuggets, status_order):
     <h2 class="index-section-head">Statuses</h2>
     <div class="index-by-tag">
     {status_blocks}
-    </div>
+    </div>{terms_section}
   </div>
 </div>"""
     html += foot()
@@ -728,8 +885,9 @@ def build_bibliography_page(nuggets):
     return html
 
 
-def build_glossary_page(nuggets):
+def build_glossary_page(nuggets, explainer_terms=None):
     """Build Glossary from #term (Term — Definition) in #provenance of all nuggets. Grouped by term; term in bold, definitions indented."""
+    explainer_slugs = {e["slug"] for e in (explainer_terms or [])}
     by_entry = {}
     for n in nuggets:
         num = n.get("number", "")
@@ -749,18 +907,21 @@ def build_glossary_page(nuggets):
     parts = []
     for term in sorted(by_term.keys(), key=lambda t: t.lower()):
         term_esc = _html.escape(term)
+        slug = term_slug(term)
+        explainer_link = f' <a href="explainers.html#{_html.escape(slug)}" class="gloss-explainer" aria-label="Explainers">📺</a>' if slug in explainer_slugs else ""
         def_blocks = []
-        for definition, nugget_list in by_term[term]:
+        for i, (definition, nugget_list) in enumerate(by_term[term]):
             nugget_links = " ".join(f'<a href="{fname}">{disp}</a>' for disp, fname in nugget_list)
             def_esc = _html.escape(definition)
+            first_line = (i == 0) and explainer_link
             if definition:
                 def_blocks.append(
                     f'<div class="gloss-def-block"><span class="gloss-def">{def_esc}</span> '
-                    f'<span class="gloss-in">In:</span> {nugget_links}</div>'
+                    f'<span class="gloss-in">In:</span> {nugget_links}{explainer_link if first_line else ""}</div>'
                 )
             else:
                 def_blocks.append(
-                    f'<div class="gloss-def-block"><span class="gloss-in">In:</span> {nugget_links}</div>'
+                    f'<div class="gloss-def-block"><span class="gloss-in">In:</span> {nugget_links}{explainer_link if first_line else ""}</div>'
                 )
         parts.append(
             f'<div class="gloss-entry">'
@@ -822,12 +983,28 @@ def build_nuggets_index():
 
 def main():
     global BUILD_TIME
-    BUILD_TIME = datetime.now(ZoneInfo("America/Los_Angeles"))
-
     filter_num = None
     if "--nugget" in sys.argv:
         idx = sys.argv.index("--nugget")
         filter_num = sys.argv[idx + 1]
+
+    nothing_changed = False
+    if not filter_num:
+        current_hash = get_build_input_hash()
+        if BUILD_STATE_FILE.exists():
+            lines = BUILD_STATE_FILE.read_text(encoding="utf-8").splitlines()
+            if len(lines) >= 2 and lines[0].strip() == current_hash:
+                try:
+                    BUILD_TIME = datetime.fromisoformat(lines[1].strip())
+                    nothing_changed = True
+                except ValueError:
+                    BUILD_TIME = datetime.now(ZoneInfo("America/Los_Angeles"))
+            else:
+                BUILD_TIME = datetime.now(ZoneInfo("America/Los_Angeles"))
+        else:
+            BUILD_TIME = datetime.now(ZoneInfo("America/Los_Angeles"))
+    else:
+        BUILD_TIME = datetime.now(ZoneInfo("America/Los_Angeles"))
 
     if filter_num:
         SITE_DIR.mkdir(exist_ok=True)
@@ -872,7 +1049,11 @@ def main():
         (SITE_DIR / "list.html").write_text(build_list(nuggets, status_order), encoding="utf-8")
         print("  Built list.html")
 
-        (SITE_DIR / "tags.html").write_text(build_tags_page(nuggets, status_order), encoding="utf-8")
+        explainer_terms = parse_explainers_md(EXPLAINERS_MD, nuggets)
+        (SITE_DIR / "explainers.html").write_text(build_explainers_page(nuggets, explainer_terms), encoding="utf-8")
+        print("  Built explainers.html")
+
+        (SITE_DIR / "tags.html").write_text(build_tags_page(nuggets, status_order, explainer_terms), encoding="utf-8")
         print("  Built tags.html")
 
         (SITE_DIR / "resources.html").write_text(build_resources_page(), encoding="utf-8")
@@ -887,7 +1068,7 @@ def main():
         (SITE_DIR / "bibliography.html").write_text(build_bibliography_page(nuggets), encoding="utf-8")
         print("  Built bibliography.html")
 
-        (SITE_DIR / "glossary.html").write_text(build_glossary_page(nuggets), encoding="utf-8")
+        (SITE_DIR / "glossary.html").write_text(build_glossary_page(nuggets, explainer_terms), encoding="utf-8")
         print("  Built glossary.html")
 
         (_ROOT / "index.html").write_text(build_index(nuggets, index_copy, status_order), encoding="utf-8")
@@ -899,7 +1080,14 @@ def main():
         build_nuggets_index()
         print("  Built nuggets/index.html")
 
+        BUILD_STATE_FILE.write_text(
+            current_hash + "\n" + BUILD_TIME.isoformat(),
+            encoding="utf-8",
+        )
+
     print(f"\nDone. Site written to repo root (index.html) and {SITE_DIR.relative_to(_ROOT)}/ (docs)")
+    if nothing_changed:
+        print("Nothing changed; timestamp unchanged.")
     if _warn_count:
         sys.exit(1)
 

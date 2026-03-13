@@ -62,6 +62,8 @@ td a:hover{color:var(--accent)}
 .gloss-in{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.08em;color:var(--dim);margin-right:.35rem}
 .gloss-def-block a{color:var(--accent);text-decoration:none}
 .gloss-def-block a:hover{text-decoration:underline}
+.gloss-explainer{font-weight:400;text-decoration:none;margin-left:.25rem}
+.gloss-explainer:hover{opacity:.8}
 /* Further reading (nugget page) */
 .ref-heading{margin-top:1.5rem}
 .ref-list{margin-top:1rem}
