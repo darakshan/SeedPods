@@ -12,6 +12,7 @@ Usage:
 
 import hashlib
 import html as _html
+import os
 import re
 import shutil
 import sys
@@ -959,7 +960,10 @@ def build_map_body(nuggets):
 
 
 def build_nuggets_index():
-    """Write nuggets/index.html so that ../nuggets/ resolves on static hosts (e.g. GitHub Pages) that require an index."""
+    """Write nuggets/index.html with absolute URLs so standalone readers (e.g. Claude) can follow links."""
+    base = os.environ.get("SITE_BASE_URL", "https://darakshan.github.io/SeedNuggets").rstrip("/")
+    site_url = f"{base}/d/"
+    nuggets_base = f"{base}/nuggets/"
     txt_files = sorted(NUGGETS_DIR.glob("*.txt"))
     lines = [
         "<!DOCTYPE html>",
@@ -967,12 +971,12 @@ def build_nuggets_index():
         "<head><meta charset=\"utf-8\"><title>Source nuggets</title></head>",
         "<body>",
         "<h1>Source nuggets</h1>",
-        "<p>Raw nugget files. See the <a href=\"../d/\">site</a> for the built pages.</p>",
+        f"<p>Raw nugget files. See the <a href=\"{_html.escape(site_url)}\">site</a> for the built pages.</p>",
         "<ul>",
     ]
     for p in txt_files:
         name = p.name
-        lines.append(f'  <li><a href="{_html.escape(name)}">{_html.escape(name)}</a></li>')
+        lines.append(f'  <li><a href="{_html.escape(nuggets_base + name)}">{_html.escape(name)}</a></li>')
     lines.append("</ul>")
     lines.append("</body>")
     lines.append("</html>")
