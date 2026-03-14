@@ -1,5 +1,5 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--ink:#1a1814;--paper:#f5f0e8;--warm:#c8a96e;--dim:#8a7f6e;--accent:#2d4a3e;--line:#e0d8c8}
+:root{--ink:#000;--paper:#f5f0e8;--warm:#c8a96e;--dim:#8a7f6e;--accent:#2d4a3e;--line:#e0d8c8}
 html{font-size:18px}
 body{background:var(--paper);color:var(--ink);font-family:'Cormorant Garamond',Georgia,serif;min-height:100vh}
 body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:1000;opacity:.6}
@@ -30,7 +30,7 @@ h2{font-size:1.6rem;font-weight:300;margin-bottom:1rem}
 .small{font-size:.65rem;letter-spacing:.15em;text-transform:uppercase}
 .warm{color:var(--warm)}
 .dim{color:var(--dim)}
-.prose{font-size:1.1rem;line-height:1.85;color:#2a2520}
+.prose{font-size:1.1rem;line-height:1.85;color:#000}
 .prose p+p{margin-top:1.3rem}
 .prose hr{border:none;border-top:1px solid var(--line);margin:2rem 0}
 .prose em{font-style:italic}
@@ -135,10 +135,10 @@ body.nav-scrolled .layer-tabs-inner{padding:.25rem 3rem}
 .seed-status{font-family:'DM Mono',monospace;font-size:.7em;letter-spacing:.1em;text-transform:uppercase;color:var(--warm);opacity:.9}
 /* About pages */
 .page-body{padding:4rem 0}
-.page-body p{font-size:1.1rem;line-height:1.8;color:#2a2520;margin-bottom:1.2rem}
+.page-body p{font-size:1.1rem;line-height:1.8;color:#000;margin-bottom:1.2rem}
 .page-body h2{font-size:1.4rem;font-weight:400;color:var(--accent);margin:2.5rem 0 .8rem}
 .page-body ul{margin-left:1.5rem;margin-bottom:1.2rem}
-.page-body li{font-size:1.05rem;line-height:1.7;color:#2a2520;margin-bottom:.4rem}
+.page-body li{font-size:1.05rem;line-height:1.7;color:#000;margin-bottom:.4rem}
 /* Index (home page from home.md: h4=notice, h1=title, h2=tagline, p=purpose, h3=about heading) */
 .page-body.home-page{padding:2rem 0 2rem}
 .page-body.home-page > h3:first-child{margin-top:0}
