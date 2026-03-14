@@ -1,4 +1,4 @@
-nav: about, list, resources
+nav: about, list, more
 
 section_head: All seeds
 repo_link: Full repository →

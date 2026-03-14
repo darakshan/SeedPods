@@ -31,12 +31,16 @@ CONTENT_DIR = _ROOT / "content"
 EXPLAINERS_CSV = CONTENT_DIR / "explainers.csv"
 SITE_DIR = _ROOT / "d"
 
-MD_PAGE_PATHS = [
-    CONTENT_DIR / "home.md",
-    _ROOT / "resources.md",
-    ABOUT_DIR / "page.md",
-    INTERNAL_DIR / "page.md",
-]
+def _get_md_page_paths():
+    """Main MD pages for @link scanning and required-file check: home, internal, plus nav file/dir pages."""
+    index_copy = load_index_copy()
+    paths = [CONTENT_DIR / "home.md", INTERNAL_DIR / "page.md"]
+    for _href, _label, kind, path in get_nav_items(index_copy):
+        if kind == "file" and path:
+            paths.append(path)
+        elif kind == "dir" and path:
+            paths.append(path / "page.md")
+    return paths
 
 BUILD_TIME = None
 _warn_count = 0
@@ -60,7 +64,7 @@ def _input_files_for_page(main_path):
 def _referenced_md_from_md_pages():
     """Set of .md paths referenced via @link(locator, text) from main MD pages (transitive)."""
     refs = set()
-    to_scan = list(MD_PAGE_PATHS)
+    to_scan = list(_get_md_page_paths())
     while to_scan:
         path = to_scan.pop(0)
         if not path.exists():
@@ -83,11 +87,9 @@ def get_build_input_files():
         p = CONTENT_DIR / name
         if p.exists():
             files.add(p)
-    if (_ROOT / "resources.md").exists():
-        files.add(_ROOT / "resources.md")
     if EXPLAINERS_CSV.exists():
         files.add(EXPLAINERS_CSV)
-    for main in MD_PAGE_PATHS:
+    for main in _get_md_page_paths():
         if main.exists():
             files.update(_input_files_for_page(main))
     files.update(_referenced_md_from_md_pages())
@@ -135,23 +137,19 @@ def _first_h1(path):
 
 def get_nav_items(index_copy=None):
     """Resolve nav key from index.txt to list of (href, label, kind, path).
-    kind is 'list', 'file', or 'dir'. path is None for 'list', else Path.
-    Default nav if key missing: about, list, resources."""
-    raw = (index_copy or load_index_copy()).get("nav", "about, list, resources")
+    nav value is comma-separated tokens. Label = token title-cased. Single source of truth."""
+    raw = (index_copy or load_index_copy()).get("nav", "about, list, more")
     tokens = [t.strip() for t in raw.split(",") if t.strip()]
     out = []
     for token in tokens:
-        if token == "list":
-            out.append(("list.html", "List", "list", None))
-            continue
+        label = token.replace("-", " ").title()
         md_file = _ROOT / f"{token}.md"
         if md_file.exists():
-            label = _first_h1(md_file) or md_file.stem.replace("-", " ").title()
             out.append((f"{token}.html", label, "file", md_file))
             continue
         dir_path = _ROOT / token
         if dir_path.is_dir() and (dir_path / "page.md").exists():
-            out.append((f"{token}.html", token.replace("-", " ").title(), "dir", dir_path))
+            out.append((f"{token}.html", label, "dir", dir_path))
             continue
         _warn(f"nav item {token!r} not found: no {token}.md nor {token}/page.md in repo root")
     return out
@@ -221,8 +219,16 @@ NAV_SCROLL_SCRIPT = """
 </script>
 """
 
-def foot():
-    return NAV_SCROLL_SCRIPT
+def foot(logo_href="logo.svg"):
+    home_href = "index.html" if logo_href.startswith("d/") else "../index.html"
+    logo_block = f'''
+<div class="page-end">
+  <a href="{home_href}" class="page-end-logo" aria-label="Seed Nuggets home">
+    <img src="{logo_href}" alt="" width="32" height="32">
+  </a>
+</div>
+'''
+    return logo_block + "\n" + NAV_SCROLL_SCRIPT
 
 def head(title, extra="", at_root=False):
     links = _head_links(
@@ -376,7 +382,7 @@ def build_nugget(n, all_nuggets):
             prov_raw = layers.get("provenance", "TBD")
             prov_expanded = expand_nugget_directives(prov_raw, all_nuggets) if prov_raw else prov_raw
             prov_has_content = (prov_expanded or "TBD").strip() != "TBD"
-            return prov_has_content or bool(n.get("refs")) or bool(rel_nuggets)
+            return prov_has_content or bool(n.get("refs"))
         raw = (layers.get(layer_id) or "TBD").strip()
         return raw != "TBD"
 
@@ -419,6 +425,7 @@ def build_nugget(n, all_nuggets):
             tabs_parts.append(f'<span class="layer-tab layer-tab-disabled">{label}</span>')
 
     sections_parts = []
+    refs_section_shown = layer_has_content("references")
     for layer_id, label in LAYER_ORDER:
         if not layer_has_content(layer_id):
             continue
@@ -427,6 +434,8 @@ def build_nugget(n, all_nuggets):
             section_content = f'<h2 class="layer-heading">{label}</h2>\n    {body}'
         else:
             section_content = f'<h2 class="layer-heading">{label}</h2>\n    <div class="prose">{body}</div>'
+        if layer_id == "surface" and rel_nuggets and not refs_section_shown:
+            section_content += f'\n    <div class="related-section"><h3 class="layer-heading related-label">Related seeds</h3>\n      {related_cards_html}\n    </div>'
         sections_parts.append(f'  <section id="{layer_id}" class="layer-section">\n    {section_content}\n  </section>')
 
     tabs_html = "\n      ".join(tabs_parts)
@@ -467,80 +476,6 @@ def build_nugget(n, all_nuggets):
 {sections_html}
 </div>
 """
-    html += foot()
-    html += close()
-    return html
-
-
-def build_list(nuggets, status_order):
-    status_rank = {s: i for i, s in enumerate(status_order)}
-    key_status = lambda n: status_rank.get(n.get("status", "empty"), len(status_order))
-    key_num = lambda n: int(n.get("number", "0")) if (n.get("number") or "").isdigit() else 0
-    sorted_nuggets = sorted(nuggets, key=lambda n: (key_status(n), key_num(n)))
-    rows = ""
-    for n in sorted_nuggets:
-        num = n.get("number", "")
-        shortname = n.get("shortname", "")
-        title = n.get("title", "")
-        subtitle = n.get("subtitle", "")
-        status = n.get("status", "empty")
-        date = n.get("date", "")
-        tag_links = " ".join(f'<a href="tags.html#{tag_slug(t)}" class="tag">{t}</a>' for t in n.get("tags", []))
-        fname = n.get("filename", "") + ".html"
-        status_class = f"status-{status.replace(' ','')}"
-        rank = status_rank.get(status, len(status_order))
-        num_val = key_num(n)
-        date_val = date.strip() or "0000-00-00"
-        title_attr = _html.escape(title, quote=True)
-        meta_parts = [f'<span class="{status_class}">{status}</span>']
-        if date.strip():
-            meta_parts.append(f'<span class="mono repo-date">{date}</span>')
-        meta_parts.append(f'<span class="repo-tags">{tag_links}</span>')
-        meta_line = " · ".join(meta_parts)
-        rows += f"""
-    <tr data-num="{num_val}" data-date="{date_val}" data-status-rank="{rank}" data-title="{title_attr}">
-      <td><div class="repo-list-title"><span class="mono repo-cell-mono">{display_number(num)}</span> <a href="{fname}">{title}</a></div><div class="repo-list-meta">{meta_line}</div></td>
-    </tr>"""
-
-    sort_script = """
-<script>
-(function(){
-  var tbody = document.querySelector('.repo-table tbody');
-  var sel = document.getElementById('repo-sort');
-  if (!tbody || !sel) return;
-  function sortTable(by){
-    var rows = [].slice.call(tbody.querySelectorAll('tr'));
-    rows.sort(function(a,b){
-      if (by === 'alpha') return (a.dataset.title || '').toLowerCase().localeCompare((b.dataset.title || '').toLowerCase());
-      if (by === 'recent') return (b.dataset.date || '').localeCompare(a.dataset.date || '');
-      if (by === 'number') return (+a.dataset.num) - (+b.dataset.num);
-      return (+a.dataset.statusRank) - (+b.dataset.statusRank) || (+a.dataset.num) - (+b.dataset.num);
-    });
-    rows.forEach(function(r){ tbody.appendChild(r); });
-  }
-  sel.addEventListener('change', function(){ sortTable(this.value); });
-  sortTable(sel.value);
-})();
-</script>"""
-    html = head("List")
-    html += nav(from_d=True)
-    html += f"""
-<div class="wrap wrap--list">
-  <div class="page-body fade">
-    <h1>List</h1>
-    <p class="dim repo-intro">All seed nuggets. The canonical list. Generated from source files.</p>
-    <p class="repo-sort-wrap"><label for="repo-sort">Sort: </label><select id="repo-sort" class="repo-sort" aria-label="Sort table">
-      <option value="status">By status</option>
-      <option value="number">By number</option>
-      <option value="alpha">By name</option>
-      <option value="recent">By most recent</option>
-    </select></p>
-    <table class="repo-table">
-      <tbody>{rows}
-      </tbody>
-    </table>
-  </div>
-</div>{sort_script}"""
     html += foot()
     html += close()
     return html
@@ -811,7 +746,7 @@ def build_index(nuggets, index_copy, status_order, collected_md_refs=None):
     html = head("Seed Nuggets", at_root=True)
     html += nav()
     html += f'<div class="wrap"><div class="page-body home-page fade">{body_html}</div></div>'
-    html += foot()
+    html += foot("d/logo.svg")
     html += close()
     return html
 
@@ -825,8 +760,13 @@ def build_static_page(title, body_html):
     return html
 
 
-def build_md_file_page(md_path, nuggets=None, collected_md_refs=None):
-    context = _md_context(nuggets=nuggets or [])
+def build_md_file_page(md_path, nuggets=None, collected_md_refs=None, status_order=None, index_copy=None):
+    context = _md_context(
+        nuggets=nuggets or [],
+        status_order=status_order,
+        copy=index_copy,
+        page=md_path.stem,
+    )
     body_html = process_md_to_html(md_path, context, collected_md_refs=collected_md_refs)
     title = _first_h1(md_path) or md_path.stem.replace("-", " ").title()
     html = head(title)
@@ -1034,7 +974,7 @@ def main():
             else:
                 seen_num[num] = n.get("filename")
 
-    for md_path in MD_PAGE_PATHS:
+    for md_path in _get_md_page_paths():
         if not md_path.exists():
             raise SystemExit(f"Required file missing: {md_path}")
     status_order = load_status_order()
@@ -1074,11 +1014,11 @@ def main():
         collected_md_refs = set()
         nav_items = get_nav_items(index_copy)
         for href, label, kind, path in nav_items:
-            if kind == "list":
-                (SITE_DIR / "list.html").write_text(build_list(nuggets, status_order), encoding="utf-8")
-                print("  Built list.html")
-            elif kind == "file":
-                (SITE_DIR / href).write_text(build_md_file_page(path, nuggets, collected_md_refs), encoding="utf-8")
+            if kind == "file":
+                (SITE_DIR / href).write_text(
+                    build_md_file_page(path, nuggets, collected_md_refs, status_order, index_copy),
+                    encoding="utf-8",
+                )
                 print(f"  Built {href}")
             elif kind == "dir":
                 (SITE_DIR / href).write_text(build_md_dir_page(path, nuggets, collected_md_refs), encoding="utf-8")

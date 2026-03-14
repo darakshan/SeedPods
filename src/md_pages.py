@@ -98,15 +98,25 @@ def expand_includes(text, base_dir, warn=None):
     return "\n".join(out)
 
 
-def _render_samples_html(nuggets, status_order, copy, count=5, full_section=False):
-    """Render sample seed rows (or full seed-list-section when full_section=True). copy = index.txt dict."""
+def _render_samples_html(
+    nuggets,
+    status_order,
+    copy,
+    count=5,
+    full_section=False,
+    include_view_all=True,
+    include_repo_link=True,
+    base_href="d/",
+):
+    """Render sample seed rows (or full seed-list-section when full_section=True). copy = index.txt dict.
+    count=None means all nuggets. base_href is prefix for links (e.g. '' for list page, 'd/' for index)."""
     status_rank = {s: i for i, s in enumerate(status_order)}
     key_status = lambda n: status_rank.get(n.get("status", "empty"), len(status_order))
     key_num = lambda n: int(n.get("number", "0")) if (n.get("number") or "").isdigit() else 0
     by_ready = sorted(nuggets, key=lambda n: (key_status(n), key_num(n)))
-    recent = by_ready[:count]
-    d = "d/"
+    recent = by_ready if count is None else by_ready[:count]
     rows_html = ""
+    sortable = full_section and count is None
     for n in recent:
         fname = n.get("filename", "") + ".html"
         num = n.get("number", "")
@@ -114,29 +124,79 @@ def _render_samples_html(nuggets, status_order, copy, count=5, full_section=Fals
         subtitle = n.get("subtitle", "")
         status = n.get("status", "empty")
         stub = " stub" if status == "empty" else ""
+        num_display = _display_number(num)
+        title_line = f"{num_display}. {title}" if num_display else title
+        status_span = f'<span class="seed-status">{_html.escape(status)}</span>'
+        byline = f"{_html.escape(subtitle)} · {status_span}" if subtitle else status_span
+        num_val = int(num) if (num or "").isdigit() else 0
+        date_val = (n.get("date") or "").strip() or "0000-00-00"
+        rank = status_rank.get(status, len(status_order))
+        data_attrs = ""
+        if sortable:
+            data_attrs = f' data-num="{num_val}" data-date="{_html.escape(date_val)}" data-status-rank="{rank}" data-title="{_html.escape(title)}"'
         rows_html += f"""
-    <a href="{d}{fname}" class="seed-row{stub}">
-      <div class="seed-num">{_display_number(num)}</div>
+    <a href="{base_href}{fname}" class="seed-row{stub}"{data_attrs}>
       <div>
-        <div class="seed-title">{title}</div>
-        <div class="seed-sub">{subtitle}</div>
+        <div class="seed-title">{_html.escape(title_line)}</div>
+        <div class="seed-sub">{byline}</div>
       </div>
-      <div class="seed-status-col">{status}</div>
     </a>"""
     if not full_section:
         return rows_html.strip()
-    total = len(nuggets)
-    view_all_text = (copy.get("view_all") or "View all {n} seeds →").replace("{n}", str(total))
+    head_right = ""
+    if include_repo_link:
+        head_right = f'<a href="{base_href}list.html" class="link-mono-small">{copy.get("repo_link", "Full repository →")}</a>'
+    more_wrap = ""
+    if include_view_all:
+        total = len(nuggets)
+        view_all_text = (copy.get("view_all") or "View all {n} seeds →").replace("{n}", str(total))
+        more_wrap = f"""
+    <div class="seed-list-more-wrap">
+      <a href="{base_href}list.html" class="link-mono-accent">{view_all_text}</a>
+    </div>"""
+    sort_ui = ""
+    sort_script = ""
+    if sortable:
+        sort_ui = """
+    <p class="repo-sort-wrap"><label for="repo-sort">Sort: </label><select id="repo-sort" class="repo-sort" aria-label="Sort list">
+      <option value="status">By status</option>
+      <option value="number">By number</option>
+      <option value="alpha">By name</option>
+      <option value="recent">By most recent</option>
+    </select></p>
+    <div id="seed-list-rows">"""
+        sort_script = """
+    </div>
+    <script>
+    (function(){
+      var container = document.getElementById("seed-list-rows");
+      var sel = document.getElementById("repo-sort");
+      if (!container || !sel) return;
+      function sortKey(s){ var t = (s || "").toLowerCase(); return t.indexOf("the ") === 0 ? t.slice(4) : t; }
+      function sortRows(by){
+        var rows = [].slice.call(container.querySelectorAll(".seed-row"));
+        rows.sort(function(a,b){
+          if (by === "alpha") return sortKey(a.dataset.title).localeCompare(sortKey(b.dataset.title));
+          if (by === "recent") return (b.dataset.date || "").localeCompare(a.dataset.date || "");
+          if (by === "number") return (+a.dataset.num) - (+b.dataset.num);
+          return (+a.dataset.statusRank) - (+b.dataset.statusRank) || (+a.dataset.num) - (+b.dataset.num);
+        });
+        rows.forEach(function(r){ container.appendChild(r); });
+      }
+      sel.addEventListener("change", function(){ sortRows(this.value); });
+      sortRows(sel.value);
+    })();
+    </script>"""
     return f"""
   <div class="seed-list-section">
     <div class="section-head">
       <span class="mono small">{copy.get("section_head", "All seeds")}</span>
-      <a href="{d}list.html" class="link-mono-small">{copy.get("repo_link", "Full repository →")}</a>
+      {head_right}
     </div>
+    {sort_ui}
     {rows_html}
-    <div class="seed-list-more-wrap">
-      <a href="{d}list.html" class="link-mono-accent">{view_all_text}</a>
-    </div>
+    {more_wrap}
+    {sort_script}
   </div>"""
 
 
@@ -163,8 +223,35 @@ def expand_page_directives(text, context):
                 count = min(int(rest), 50)
             if nuggets and status_order:
                 full = page == "home"
-                block = _render_samples_html(nuggets, status_order, copy, count=count, full_section=full)
+                base_href = "" if page == "list" else "d/"
+                block = _render_samples_html(
+                    nuggets,
+                    status_order,
+                    copy,
+                    count=count,
+                    full_section=full,
+                    include_view_all=full,
+                    include_repo_link=False,
+                    base_href=base_href,
+                )
                 placeholder = "{{SAMPLES}}"
+                replacements[placeholder] = block
+                out.append(placeholder)
+            continue
+        if stripped.startswith("@nuggets"):
+            if nuggets and status_order:
+                base_href = "" if page == "list" else "d/"
+                block = _render_samples_html(
+                    nuggets,
+                    status_order,
+                    copy,
+                    count=None,
+                    full_section=True,
+                    include_view_all=False,
+                    include_repo_link=False,
+                    base_href=base_href,
+                )
+                placeholder = "{{NUGGETS}}"
                 replacements[placeholder] = block
                 out.append(placeholder)
             continue

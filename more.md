@@ -1,4 +1,4 @@
-# Resources
+# More
 
 - @link(bibliography.html, Bibliography) — references from nuggets
 - @link(glossary.html, Glossary) — key terms from nuggets
