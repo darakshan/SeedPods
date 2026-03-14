@@ -47,6 +47,7 @@ Status reflects how many of the four main layers (Surface, Depth, Script, Images
 | **empty**  | Nothing written yet | 0 |
 | **prelim** | First layer in progress | 1 |
 | **partial** | Two or three layers done | 2 or 3 |
+| **rough** | All four layers present but need a lot of work | 4 |
 | **draft1** or **final** | Complete; all four layers have content | 4 |
 
-Use **draft1** when the nugget is complete but still open to revision, **final** when it is locked. The check tool reports a mismatch if status does not match the section count.
+Use **rough** when the nugget has all sections but they need substantial revision. Use **draft1** when the nugget is complete but still open to revision, **final** when it is locked. The check tool reports a mismatch if status does not match the section count.

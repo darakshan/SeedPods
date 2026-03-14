@@ -4,10 +4,9 @@ check.py — Review nuggets for structure guidelines.
 - Surface/depth word counts vs config/index.txt limits
 - Every nugget pointed to by at least min_related_in_degree others (#related)
 - Underlinked: nuggets with 0 #related
-- Final + TBD: status final but any layer still TBD
 - #related max 5
 - Report #note directives (editorial comments; ignored in page generation)
-- Status vs sections (surface, depth, script, images; provenance ignored): empty=0, prelim=1, partial=2–3, complete=4
+- Status vs sections (surface, depth, script, images; provenance ignored): section counts and valid statuses from config/status.txt; word count for statuses from top of config up through last draft*
 
 Usage:
   python src/check.py              # summary + detailed findings (all nuggets)
@@ -51,11 +50,30 @@ def load_index_params():
     return out
 
 
-def _status_at_least_draft(status, status_order):
+def _complete_statuses(status_order):
+    """Statuses that mean 'has all 4 sections': first two in config."""
     if not status_order:
-        return status in ("draft1", "final")
-    draft_or_better = {status_order[0], "final"}
-    return status in draft_or_better
+        return set()
+    return set(status_order[:2])
+
+
+def _run_word_count_statuses(status_order):
+    """Statuses that get surface/depth word-count checks: from top of config up through last draft*."""
+    if not status_order:
+        return set()
+    last_draft_i = -1
+    for i, s in enumerate(status_order):
+        if s.startswith("draft"):
+            last_draft_i = i
+    if last_draft_i < 0:
+        return set()
+    return set(status_order[: last_draft_i + 1])
+
+
+def _run_other_limits(status, status_order):
+    """True if nugget gets in-degree and #related checks (complete but maybe rough)."""
+    complete = _complete_statuses(status_order)
+    return status in complete
 
 
 def main():
@@ -99,16 +117,17 @@ def main():
         depth = layers.get("depth", "TBD")
         s_words = _word_count(surface)
         d_words = _word_count(depth)
-        run_limits = _status_at_least_draft(status, status_order)
+        run_word_count = status in _run_word_count_statuses(status_order)
+        run_limits = _run_other_limits(status, status_order)
 
-        if run_limits and not section_is_tbd(surface):
+        if run_word_count and not section_is_tbd(surface):
             lo, hi = params["surface_min_words"], params["surface_max_words"]
             if s_words < lo:
                 errors.append(("length", f"{fn}: surface has {s_words} words (min {lo})"))
             elif s_words > hi:
                 errors.append(("length", f"{fn}: surface has {s_words} words (max {hi})"))
 
-        if run_limits and not section_is_tbd(depth):
+        if run_word_count and not section_is_tbd(depth):
             lo, hi = params["depth_min_words"], params["depth_max_words"]
             if d_words < lo:
                 errors.append(("length", f"{fn}: depth has {d_words} words (min {lo})"))
@@ -127,24 +146,23 @@ def main():
         elif run_limits and len(related) > 5:
             errors.append(("over_related", f"{fn}: #related has {len(related)} entries (max 5)"))
 
-        if status == "final":
-            for layer_name in ("surface", "depth", "provenance", "script", "images"):
-                if section_is_tbd(layers.get(layer_name)):
-                    errors.append(("final_tbd", f"{fn}: status final but #{layer_name} is TBD"))
-
         section_names = ("surface", "depth", "script", "images")
         n_sections = sum(1 for name in section_names if not section_is_tbd(layers.get(name)))
-        if n_sections == 0:
+        if not status_order:
             expected_status = "empty"
+        elif n_sections == 0:
+            expected_status = status_order[-1]
         elif n_sections == 1:
-            expected_status = "prelim"
+            expected_status = status_order[-3] if len(status_order) >= 3 else status_order[-1]
         elif n_sections <= 3:
-            expected_status = "partial"
+            expected_status = status_order[-2] if len(status_order) >= 2 else status_order[-1]
         else:
             expected_status = "complete"
+        complete_statuses = _complete_statuses(status_order)
         if expected_status == "complete":
-            if status in ("empty", "prelim", "partial"):
-                errors.append(("status", f"{fn}: has all 4 sections but status is {status!r} (expected draft1/final)"))
+            if status not in complete_statuses:
+                expected_str = ", ".join(sorted(complete_statuses))
+                errors.append(("status", f"{fn}: has all 4 sections but status is {status!r} (expected one of: {expected_str})"))
         elif status != expected_status:
             errors.append(("status", f"{fn}: has {n_sections} section(s) but status is {status!r} (expected {expected_status})"))
 
@@ -162,8 +180,6 @@ def main():
         parts.append(f"{counts['in_degree']} in-degree")
     if counts.get("underlinked"):
         parts.append(f"{counts['underlinked']} underlinked")
-    if counts.get("final_tbd"):
-        parts.append(f"{counts['final_tbd']} final+TBD")
     if counts.get("over_related"):
         parts.append(f"{counts['over_related']} over-related")
     if counts.get("status"):

@@ -68,7 +68,7 @@ Multi-line layer sections start with just `#layername` on its own line:
 [full text of depth layer]
 ```
 
-**Status values:** `empty` | `partial` | `draft1` | `final`
+**Status values:** `empty` | `partial` | `prelim` | `rough` | `draft1` | `final`
 
 **Related field:** comma-separated nugget numbers only (not names). Max 5. The build script resolves numbers to titles automatically.
 

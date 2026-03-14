@@ -1,0 +1,33 @@
+#number 033
+#shortname edge
+#title The Edge Is Where Everything Happens
+#subtitle The Mandelbrot Boundary
+#status rough
+#date 2026-03-14
+#tags mandelbrot, fractal, farey, consonance, everett, boundary
+#related 002, 007, 009, 030, 005
+
+#surface
+The Mandelbrot set has an inside and an outside. The inside is stable — points that keep returning. The outside escapes to infinity. The boundary between them is infinitely complex, self-similar at every scale, and inexhaustible. That boundary is where everything interesting happens. Including you.
+
+#depth
+The bulbs of the Mandelbrot set appear at positions governed by the Farey sequence and Stern-Brocot tree — the same mathematics that governs musical consonance. The 1/2 bulb corresponds to the octave. The 1/3 bulb to the fifth. Stability under iteration justifies music. Each bulb sprouts branching structures whose branching number equals the bulb's period — the complexity of the resonance determines the complexity of the choices that emerge from it. Those branches are bifurcations. Each bifurcation is a world-split in Everett's sense. The entire fractal boundary is a map of possibility space — the holographic surface between the stable interior and the infinite branching exterior. Consciousness may be what it feels like to be a point on that boundary.
+
+#provenance
+#ref Mandelbrot — fractal geometry, the boundary between order and chaos
+#ref Farey sequence — rational numbers ordered by denominator size, governing bulb positions
+#ref Stern-Brocot tree — the complete ordered tree of rational numbers, mediating consonance and bulb structure
+#ref Douady & Hubbard — mathematical analysis of Mandelbrot bulb structure and periods
+#ref Everett (1957) — bifurcations at the boundary as world-splits
+#ref Whitehead — each actual occasion as an iteration, creative advance as the iteration rule
+#ref Pythagoras — consonance as simple integer ratios, now understood as stability under iteration
+#ref Crystals — Mandelbrot-like structure found in magnetic domain boundaries and quasicrystals, same iterative mathematics running in physical substrate
+
+#script
+Zoom into the Mandelbrot boundary. Deeper. Deeper. It never resolves. At every scale the same complexity returns. Cut to: a coastline from a plane. Then from space. Then a neuron branching. The camera asks: is this the same thing? It is.
+
+#images
+Mandelbrot boundary zoom sequence
+Farey sequence diagram
+Coastline fractal comparison
+Neuron branching structure

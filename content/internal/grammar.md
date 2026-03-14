@@ -22,7 +22,7 @@ The build script parses nugget files strictly. Follow this grammar so new or rev
   - `#shortname` — one word or hyphenated phrase, lowercase, no spaces (e.g. caloric, inside, past-present). Must match the shortname in the filename.
   - `#title` — full title; may contain spaces and punctuation.
   - `#subtitle` — one sentence; may contain spaces and punctuation.
-  - `#status` — exactly one of: empty | partial | draft1 | final
+  - `#status` — exactly one of: empty | partial | prelim | rough | draft1 | final
   - `#date` — date string (e.g. 2026-03-11).
   - `#tags` — comma-separated list. Each tag: lowercase, multi-word tags hyphenated (e.g. history-of-science, AI). No spaces after commas required but allowed.
   - `#related` — comma-separated list of other nugget numbers. Use the same string as each target nugget’s `#number` (e.g. 002, 011, 018). Max 5. Links resolve by string equality, so "1" will not match a nugget whose `#number` is "001".

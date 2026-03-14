@@ -55,11 +55,19 @@ def load_index_copy():
 
 
 def load_status_order(path=None):
-    """One status per line from path (default config/status.txt). Returns [] if missing."""
+    """One status per line from path (default config/status.txt). Returns [] if missing. Inline # comments stripped."""
     p = path if path is not None else CONFIG_DIR / "status.txt"
     if not p.exists():
         return []
-    return [line.strip() for line in p.read_text(encoding="utf-8").splitlines() if line.strip()]
+    result = []
+    for line in p.read_text(encoding="utf-8").splitlines():
+        if "#" in line:
+            line = line[: line.index("#")].strip()
+        else:
+            line = line.strip()
+        if line:
+            result.append(line)
+    return result
 
 
 def nugget_by_number_flex(nuggets, num_str):

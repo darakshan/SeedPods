@@ -1,0 +1,33 @@
+#number 036
+#shortname universenoticing
+#title You Are the Universe Noticing Something
+#subtitle Teilhard and Whitehead
+#status rough
+#date 2026-03-14
+#tags teilhard, whitehead, omega-point, process, consciousness
+#related 002, 003, 008, 032, 009
+
+#surface
+When you have a thought, something is happening that took fourteen billion years to arrange. Not as background. Not as coincidence. As the point. The universe is not a machine that accidentally produced minds. It is a process that was always heading somewhere. You are what it looks like when it arrives.
+
+#depth
+Whitehead saw that every event in the universe — not just brains, not just living things, every event — has an interior. It grasps its past and contributes something forward. This is not metaphor. It is the only way to account for how experience arises at all without magic. Teilhard saw the direction — from the Big Bang through matter, life, and mind toward what he called the Omega Point: the universe becoming fully aware of itself. Neither had the other's insight. Together they form something neither achieved alone. Whitehead gives the mechanism — experience all the way down, accumulating. Teilhard gives the vector — a direction to the accumulation that isn't random. The universe isn't drifting. It's developing. Every actual occasion a step. Every mind a threshold crossed. You are not in the universe observing it. You are the universe, at a particular moment of its self-discovery.
+
+#provenance
+#ref Teilhard de Chardin — The Phenomenon of Man, the Omega Point, the noosphere
+#ref Whitehead — Process and Reality, prehension, the creative advance into novelty
+#ref John B. Cobb Jr. — process theology, synthesis of Whitehead and evolutionary thought, still active at 99
+#ref Sagan — 'we are a way for the cosmos to know itself' — the surface version of this idea
+#ref Evan Thompson — Mind in Life, experience as continuous with life as continuous with matter
+#ref Thomas Nagel — Mind and Cosmos, the insufficiency of purely mechanical evolution
+#ref Eric Chaisson — measurable directionality in cosmic evolution toward complexity
+#note Teilhard and Whitehead were near-contemporaries. No documented direct exchange. Teilhard's major works suppressed by the Church, circulating only in manuscript. The synthesis had to wait.
+
+#script
+Open on the cosmic microwave background — the earliest light, nearly uniform, nearly featureless. Pull forward through time. Galaxies forming. Stars. A planet. A cell. An eye opening. Hold on the eye. This is not the end of a story about matter. This is matter reaching a threshold it was always approaching. Cut to: the same eye, looking up at the cosmic microwave background on a screen. The universe looking at its own baby picture.
+
+#images
+Cosmic microwave background map
+Hubble deep field
+A human eye in close-up
+The eye reflected in a screen showing the CMB
