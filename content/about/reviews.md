@@ -19,6 +19,7 @@ This page tracks intended and completed reviews of the Seed Nuggets project. Rev
 - Jason Silva — filmmaker, ideas and wonder
 - Michael Garfield — writer, science and culture
 - Tam Hunt — UCSB, Mind World God (2017)
+- Hard Fork folks
 
 ## Intended reviewers — AI systems
 

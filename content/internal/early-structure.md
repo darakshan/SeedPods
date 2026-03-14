@@ -88,7 +88,7 @@ The build script renders each layer as a tab on the nugget page.
 
 ---
 
-## The 19 seed nuggets defined so far
+## The 19 seed nuggets that were defined when this page was written (we have 30 now)
 
 | # | Shortname | Title | Status |
 |---|-----------|-------|--------|

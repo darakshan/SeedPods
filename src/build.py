@@ -2,6 +2,7 @@
 """
 build.py — Seed Nuggets site generator
 Reads from content/ and config/; writes to d/ (and index.html at root).
+Website root = project root: / serves index.html, /d/ has built HTML, /content/ has source.
 Generates: nugget pages, list.html, tags.html (Index),
 index.html, about pages, resources (with map), site.css.
 
@@ -179,9 +180,9 @@ def _head_links(css_href="site.css", icon_href="d/logo.svg"):
 """
 
 def nav(from_d=False, from_nuggets=False, layer_tabs_html=None):
-    """Top nav: logo left; menu items from config index (nav key). from_d=True for pages under d/; from_nuggets=True for d/nuggets/index.html."""
+    """Top nav: logo left; menu items from config index (nav key). from_d=True for pages under d/; from_nuggets=True for d/nuggets/index.html. Site root = project root."""
     if from_nuggets:
-        prefix, index_href, logo_src = "../", "../index.html", "../logo.svg"
+        prefix, index_href, logo_src = "../", "../../index.html", "../logo.svg"
     elif from_d:
         prefix, index_href, logo_src = "", "../index.html", "logo.svg"
     else:
@@ -220,7 +221,12 @@ NAV_SCROLL_SCRIPT = """
 """
 
 def foot(logo_href="logo.svg"):
-    home_href = "index.html" if logo_href.startswith("d/") else "../index.html"
+    if logo_href.startswith("../"):
+        home_href = "../../index.html"
+    elif logo_href.startswith("d/"):
+        home_href = "index.html"
+    else:
+        home_href = "../index.html"
     logo_block = f'''
 <div class="page-end">
   <a href="{home_href}" class="page-end-logo" aria-label="Seed Nuggets home">
@@ -929,12 +935,14 @@ def build_map_body(nuggets):
 
 
 def build_nuggets_index(index_copy=None):
-    """Write nuggets/index.html with absolute URLs for .txt links so standalone readers can follow them; same style as rest of site."""
+    """Write nuggets/index.html with links to source .txt under content/nuggets/ (site root = project root)."""
     copy = index_copy or load_index_copy()
     base = (copy.get("site_base") or "https://darakshan.github.io/SeedNuggets").strip().rstrip("/")
     site_url = f"{base}/"
-    nuggets_base = f"{base}/nuggets/"
     txt_files = sorted(NUGGETS_DIR.glob("*.txt"))
+    nuggets_out = SITE_DIR / "nuggets"
+    nuggets_out.mkdir(parents=True, exist_ok=True)
+    content_nuggets_href = "../../content/nuggets/"
     html = head("Source nuggets", css_href="../site.css", icon_href="../logo.svg")
     html += nav(from_nuggets=True)
     html += """
@@ -946,16 +954,14 @@ def build_nuggets_index(index_copy=None):
 """
     for p in txt_files:
         name = p.name
-        full_url = nuggets_base + name
-        html += f'  <li><a href="{_html.escape(full_url)}">{_html.escape(full_url)}</a></li>\n'
+        html += f'  <li><a href="{_html.escape(content_nuggets_href + name)}">{_html.escape(name)}</a></li>\n'
     html += """    </ul>
   </div>
 </div>
 """
     html += foot("../logo.svg")
     html += close()
-    (SITE_DIR / "nuggets").mkdir(parents=True, exist_ok=True)
-    (SITE_DIR / "nuggets" / "index.html").write_text(html, encoding="utf-8")
+    (nuggets_out / "index.html").write_text(html, encoding="utf-8")
 
 
 # ── Main ──────────────────────────────────────────────────────────────────────
