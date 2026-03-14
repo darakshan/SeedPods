@@ -23,6 +23,7 @@ body.nav-scrolled .nav-logo-icon{height:1.4em;margin-top:0;margin-bottom:0}
 .nav-dropdown a{display:block;padding:.4rem 1rem;white-space:nowrap}
 .wrap{max-width:860px;margin:0 auto;padding:0 3rem}
 .wrap--list{max-width:none;margin-left:2rem;margin-right:2rem}
+.wrap--full{max-width:none}
 h1{font-size:clamp(2rem,5vw,3.5rem);font-weight:300;line-height:1.1;margin-bottom:1.25rem}
 h1 em,h2 em{font-style:italic;color:var(--accent)}
 h2{font-size:1.6rem;font-weight:300;margin-bottom:1rem}
@@ -109,6 +110,13 @@ body.nav-scrolled .layer-tabs-inner{padding:.25rem 3rem}
 .map-matrix .map-cell-linked{background:var(--accent);color:var(--paper)}
 .map-matrix .map-cell-empty{background:var(--paper)}
 .map-matrix .map-row-label,.map-matrix .map-col-label{font-family:'DM Mono',monospace;color:var(--dim)}
+.map-graph-wrap{margin:2rem 0;max-width:100%;overflow:auto}
+.map-graph-svg{display:block;color:var(--ink)}
+.map-graph-edge{stroke:var(--line);stroke-width:1.5;fill:none}
+.map-graph-node{fill:var(--paper);stroke:var(--accent);stroke-width:1.5}
+.map-graph-label{font-family:'DM Mono',monospace;font-size:.5rem;fill:var(--ink)}
+.map-graph-node-link{color:inherit;text-decoration:none}
+.map-graph-node-link:hover .map-graph-node{stroke:var(--warm);stroke-width:2}
 .cta{background:var(--accent);color:var(--paper);padding:1.4rem 1.8rem;margin-top:2rem;font-size:1rem;line-height:1.7;font-style:italic}
 .related-section{margin-top:3rem;padding-top:2rem;border-top:1px solid var(--line)}
 .related-label{margin-bottom:.5rem}

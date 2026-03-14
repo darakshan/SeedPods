@@ -3,7 +3,7 @@
 - @link(bibliography.html, Bibliography) — references from nuggets
 - @link(glossary.html, Glossary) — key terms from nuggets
 - @link(tags.html, Index) — by tag and status
-- @link(map.html, Map) — related-seeds matrix
+- @link(map-graph.html, Map graph) — force-directed graph of related seeds
 
 ---
 

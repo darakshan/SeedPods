@@ -23,6 +23,7 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 _ROOT = Path(__file__).resolve().parent.parent
+from graph_svg import build_graph_svg
 from nugget_parser import (
     CONFIG_DIR,
     CONTENT_DIR,
@@ -668,13 +669,6 @@ def build_explainers_page(nuggets, explainer_terms):
     return html
 
 
-def display_number_map(num):
-    """Two-digit label for map row/column headers (no spaces)."""
-    if num and num.isdigit():
-        return str(int(num)).zfill(2)
-    return num or "??"
-
-
 def build_tags_page(nuggets, status_order, explainer_terms=None):
     all_tags = set()
     for n in nuggets:
@@ -763,13 +757,21 @@ def build_index(nuggets, index_copy, status_order, collected_md_refs=None):
     return html
 
 
-def build_static_page(title, body_html):
+def build_static_page(title, body_html, wrap_class=""):
     html = head(title)
     html += nav(from_d=True)
-    html += f'<div class="wrap"><div class="page-body fade">{body_html}</div></div>'
+    wrap_attr = f' class="wrap {wrap_class}"' if wrap_class else ' class="wrap"'
+    html += f'<div{wrap_attr}><div class="page-body fade">{body_html}</div></div>'
     html += foot()
     html += close()
     return html
+
+
+def build_map_graph_page(nuggets):
+    """Full page with standard nav and background that embeds the map graph SVG."""
+    svg = build_graph_svg(nuggets, show_title=False, link_nuggets=True)
+    body_html = '<h1>Map</h1>\n<p class="dim">How the Seed Nuggets are related.</p>\n<div class="map-graph-wrap">' + svg + '</div>'
+    return build_static_page("Map graph", body_html, wrap_class="wrap--full")
 
 
 def build_md_file_page(md_path, nuggets=None, collected_md_refs=None, status_order=None, index_copy=None):
@@ -903,26 +905,6 @@ def build_glossary_page(nuggets, explainer_terms=None):
     html += foot()
     html += close()
     return html
-
-
-def build_map_body(nuggets):
-    """HTML body for the Map about page: N×N matrix of related links (from → to)."""
-    sorted_nuggets = sorted(nuggets, key=lambda x: x.get("number", ""))
-    nums = [n.get("number", "") for n in sorted_nuggets]
-    related_sets = {n.get("number", ""): set(n.get("related", [])) for n in sorted_nuggets}
-    rows = []
-    pad = [display_number_map(num) for num in nums]
-    header_cells = ["<th></th>"] + [f'<th class="map-col-label">{p[0]}<br>{p[1]}</th>' for p in pad]
-    rows.append("<tr>" + "".join(header_cells) + "</tr>")
-    for from_num, n in zip(nums, sorted_nuggets):
-        cells = [f'<th class="map-row-label">{display_number_map(from_num)}</th>']
-        for to_num in nums:
-            linked = to_num in related_sets.get(from_num, set())
-            cls = "map-cell-linked" if linked else "map-cell-empty"
-            cells.append(f'<td class="{cls}">{"·" if linked else ""}</td>')
-        rows.append("<tr>" + "".join(cells) + "</tr>")
-    table = "<table class=\"map-matrix\">\n" + "\n".join(rows) + "\n</table>"
-    return f'<h1>Map</h1>\n<p>Rows = from seed, columns = to seed. Marked cell means the row seed links to the column seed in its Related list.</p>\n{table}'
 
 
 def build_4u_ai_txt():
@@ -1067,8 +1049,10 @@ def main():
             print("  Built favicon.svg")
         print("  Built index.html")
 
-        (SITE_DIR / "map.html").write_text(build_static_page("Map", build_map_body(nuggets)), encoding="utf-8")
-        print("  Built map.html")
+        (SITE_DIR / "map.svg").write_text(build_graph_svg(nuggets, show_title=False, link_nuggets=True), encoding="utf-8")
+        print("  Built map.svg")
+        (SITE_DIR / "map-graph.html").write_text(build_map_graph_page(nuggets), encoding="utf-8")
+        print("  Built map-graph.html")
 
         build_4u_ai_txt()
         print("  Built 4u-ai.txt")
