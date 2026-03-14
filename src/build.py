@@ -181,11 +181,14 @@ def _head_links(css_href="site.css", icon_href="d/logo.svg"):
 <link rel="icon" type="image/svg+xml" href="{icon_href}">
 """
 
-def nav(from_d=False, layer_tabs_html=None):
-    """Top nav: logo left; menu items from index.txt (nav key). from_d=True for pages under d/. layer_tabs_html optional for nugget pages."""
-    prefix = "" if from_d else "d/"
-    index_href = "../index.html" if from_d else "index.html"
-    logo_src = "logo.svg" if from_d else "d/logo.svg"
+def nav(from_d=False, from_nuggets=False, layer_tabs_html=None):
+    """Top nav: logo left; menu items from index.txt (nav key). from_d=True for pages under d/; from_nuggets=True for nuggets/index.html."""
+    if from_nuggets:
+        prefix, index_href, logo_src = "../d/", "../index.html", "../d/logo.svg"
+    elif from_d:
+        prefix, index_href, logo_src = "", "index.html", "logo.svg"
+    else:
+        prefix, index_href, logo_src = "d/", "index.html", "d/logo.svg"
     links = "".join(
         f'<li><a href="{prefix}{href}">{_html.escape(label)}</a></li>'
         for href, label, _, _ in _nav_items()
@@ -230,11 +233,12 @@ def foot(logo_href="logo.svg"):
 '''
     return logo_block + "\n" + NAV_SCROLL_SCRIPT
 
-def head(title, extra="", at_root=False):
-    links = _head_links(
-        "d/site.css" if at_root else "site.css",
-        "favicon.svg" if at_root else "logo.svg",
-    )
+def head(title, extra="", at_root=False, css_href=None, icon_href=None):
+    if css_href is None:
+        css_href = "d/site.css" if at_root else "site.css"
+    if icon_href is None:
+        icon_href = "favicon.svg" if at_root else "logo.svg"
+    links = _head_links(css_href=css_href, icon_href=icon_href)
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -907,28 +911,33 @@ def build_map_body(nuggets):
     return f'<h1>Map</h1>\n<p>Rows = from seed, columns = to seed. Marked cell means the row seed links to the column seed in its Related list.</p>\n{table}'
 
 
-def build_nuggets_index():
-    """Write nuggets/index.html with absolute URLs so standalone readers (e.g. Claude) can follow links."""
-    base = os.environ.get("SITE_BASE_URL", "https://darakshan.github.io/SeedNuggets").rstrip("/")
-    site_url = f"{base}/d/"
+def build_nuggets_index(index_copy=None):
+    """Write nuggets/index.html with absolute URLs for .txt links so standalone readers can follow them; same style as rest of site."""
+    copy = index_copy or load_index_copy()
+    base = (copy.get("site_base") or "https://darakshan.github.io/SeedNuggets").strip().rstrip("/")
+    site_url = f"{base}/"
     nuggets_base = f"{base}/nuggets/"
     txt_files = sorted(NUGGETS_DIR.glob("*.txt"))
-    lines = [
-        "<!DOCTYPE html>",
-        "<html lang=\"en\">",
-        "<head><meta charset=\"utf-8\"><title>Source nuggets</title></head>",
-        "<body>",
-        "<h1>Source nuggets</h1>",
-        f"<p>Raw nugget files. See the <a href=\"{_html.escape(site_url)}\">site</a> for the built pages.</p>",
-        "<ul>",
-    ]
+    html = head("Source nuggets", css_href="../d/site.css", icon_href="../d/logo.svg")
+    html += nav(from_nuggets=True)
+    html += """
+<div class="wrap">
+  <div class="page-body fade">
+    <h1>Source nuggets</h1>
+    <p class="dim">Raw nugget files. See the <a href=\"""" + _html.escape(site_url) + """\">""" + _html.escape(site_url) + """</a> for the built pages.</p>
+    <ul>
+"""
     for p in txt_files:
         name = p.name
-        lines.append(f'  <li><a href="{_html.escape(nuggets_base + name)}">{_html.escape(name)}</a></li>')
-    lines.append("</ul>")
-    lines.append("</body>")
-    lines.append("</html>")
-    (NUGGETS_DIR / "index.html").write_text("\n".join(lines), encoding="utf-8")
+        full_url = nuggets_base + name
+        html += f'  <li><a href="{_html.escape(full_url)}">{_html.escape(full_url)}</a></li>\n'
+    html += """    </ul>
+  </div>
+</div>
+"""
+    html += foot("../d/logo.svg")
+    html += close()
+    (NUGGETS_DIR / "index.html").write_text(html, encoding="utf-8")
 
 
 # ── Main ──────────────────────────────────────────────────────────────────────
@@ -1059,7 +1068,7 @@ def main():
         (SITE_DIR / "map.html").write_text(build_static_page("Map", build_map_body(nuggets)), encoding="utf-8")
         print("  Built map.html")
 
-        build_nuggets_index()
+        build_nuggets_index(index_copy)
         print("  Built nuggets/index.html")
 
         BUILD_STATE_FILE.write_text(

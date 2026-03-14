@@ -1,4 +1,5 @@
 nav: about, list, more
+site_base: https://darakshan.github.io/SeedNuggets/
 
 section_head: All seeds
 repo_link: Full repository →

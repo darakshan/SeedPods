@@ -8,7 +8,7 @@
 
 ---
 
-- @link(../nuggets/, Source nuggets) — raw nugget files in the repo
+- @link(../nuggets/index.html, Source nuggets) — raw nugget files in the repo
 - @link(internal.html, Internal documentation) — structure, grammar, context
 
 This website was built on: @timestamp
