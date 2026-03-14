@@ -11,7 +11,8 @@ import networkx as nx
 
 
 def _node_edge_lists(nuggets):
-    """From nuggets list, return (nodes, edges). nodes = [(id, label, filename)], edges = [(from_id, to_id)]."""
+    """From nuggets list, return (nodes, edges). nodes = [(id, label, tag)], edges = [(from_id, to_id)]."""
+    from nugget_parser import nugget_tag
     sorted_nuggets = sorted(nuggets, key=lambda n: (n.get("number", "").zfill(3), n.get("number", "")))
     nodes = []
     for n in sorted_nuggets:
@@ -19,8 +20,8 @@ def _node_edge_lists(nuggets):
         if not num:
             continue
         label = n.get("title", "Untitled") or "Untitled"
-        filename = n.get("filename", "") or ""
-        nodes.append((num, label, filename))
+        tag = nugget_tag(n)
+        nodes.append((num, label, tag))
     edges = []
     for n in sorted_nuggets:
         from_id = n.get("number", "")
@@ -92,7 +93,7 @@ def build_graph_svg(
     nuggets: list of nugget dicts (number, title, filename, related).
     width, height: SVG viewBox (defaults give room for titles).
     node_radius: circle radius for each node.
-    show_title: if True, use title as label; else use filename (e.g. 003-inside).
+    show_title: if True, use title as label; else use nugget tag (e.g. 003-inside).
     link_nuggets: if True, wrap each node in <a> to its nugget page.
     """
     nodes, edges = _node_edge_lists(nuggets)
@@ -134,9 +135,9 @@ def build_graph_svg(
             )
         )
 
-    for nid, label, fname in nodes:
+    for nid, label, tag in nodes:
         x, y = pos[nid]
-        label_text = label if show_title else (fname or nid)
+        label_text = label if show_title else (tag or nid)
         label_esc = _html.escape(str(label_text))
         node_content = (
             '    <circle r="{}" class="map-graph-node"/>'.format(node_radius)
@@ -144,8 +145,8 @@ def build_graph_svg(
                 label_esc
             )
         )
-        if link_nuggets and fname:
-            href = _html.escape(fname + ".html")
+        if link_nuggets and tag:
+            href = _html.escape(tag + ".html")
             lines.append('  <a href="{}" class="map-graph-node-link">'.format(href))
             lines.append('    <g transform="translate({},{})">'.format(x, y))
             lines.append(node_content.replace("    ", "      "))

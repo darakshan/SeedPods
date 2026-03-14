@@ -67,12 +67,12 @@ The channel is not the capacity. Widening the channel doesn't create the source.
 #term Presume competence — a principle in disability advocacy and education: treat cognitive capacity as present until there is genuine evidence otherwise, rather than assuming absence because familiar output is missing.
 #term Category mistake — Ryle's term for applying a description from one category as if it were a complete account of something in another. See nugget #21.
 #term Facilitated communication (FC) — a technique in which a facilitator supports a nonspeaking person's hand or arm while they type or point to letters. Widely used with nonspeaking autistic individuals. Scientifically contested: controlled studies have repeatedly shown that in many cases the facilitator, not the person, is the source of the communication — often unconsciously. The controversy does not settle the question of what nonspeaking individuals understand or experience; it only complicates the question of how to reliably access it.
-#ref Bauby, J-D. The Diving Bell and the Butterfly. Knopf, 1997. The primary text. Essential.
-#ref Laureys, S. et al. Unresponsive wakefulness syndrome: a new name for the vegetative state or apallic syndrome. BMC Medicine, 2010.
-#ref Ryle, G. The Concept of Mind. Hutchinson, 1949. Source of the category mistake.
-#ref Dickens, K. The Telepathy Tapes. Podcast, Season 1, 2024.
-#ref Vyse, S. The Telepathy Tapes: A Skeptical Analysis. Skeptical Inquirer, 2025.
-#ref Schnabel, J. (dir.) The Diving Bell and the Butterfly. Film, 2007.
+#ref bauby Bauby, J-D. The Diving Bell and the Butterfly. Knopf, 1997. The primary text. Essential.
+#ref laureys Laureys, S. et al. Unresponsive wakefulness syndrome: a new name for the vegetative state or apallic syndrome. BMC Medicine, 2010.
+#ref ryle Ryle, G. The Concept of Mind. Hutchinson, 1949. Source of the category mistake.
+#ref dickens Dickens, K. The Telepathy Tapes. Podcast, Season 1, 2024.
+#ref vyse Vyse, S. The Telepathy Tapes: A Skeptical Analysis. Skeptical Inquirer, 2025.
+#ref schnabel Schnabel, J. (dir.) The Diving Bell and the Butterfly. Film, 2007.
 
 #script
 TITLE CARD: 1983.

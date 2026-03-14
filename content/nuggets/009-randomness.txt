@@ -75,14 +75,14 @@ In computer science and optimization, the simulated annealing algorithm (Kirkpat
 
 In philosophy, Whitehead's process philosophy (Process and Reality, 1929) provides the deepest frame: genuine novelty — the creative advance into novelty — is constitutive of reality at every scale. Not a property of complex systems only, but the basic character of each actual occasion.
 
-#ref Prigogine, I. and Stengers, I. Order Out of Chaos. Bantam, 1984. Accessible account of dissipative structures and self-organization.
-#ref Kauffman, S. The Origins of Order. Oxford University Press, 1993. Autocatalytic sets and order for free.
-#ref Kauffman, S. At Home in the Universe. Oxford University Press, 1995. More accessible version of the same ideas.
-#ref Kirkpatrick, S., Gelatt, C.D., Vecchi, M.P. Optimization by Simulated Annealing. Science, 220(4598), 1983.
-#ref Whitehead, A.N. Process and Reality. Macmillan, 1929.
-#ref Maturana, H. and Varela, F. Autopoiesis and Cognition. Reidel, 1980.
-#ref Gleick, J. Chaos: Making a New Science. Viking, 1987. Accessible entry point to deterministic chaos and its relationship to randomness.
-#ref Darwin, C. On the Origin of Species. John Murray, 1859.
+#ref prigogine Prigogine, I. and Stengers, I. Order Out of Chaos. Bantam, 1984. Accessible account of dissipative structures and self-organization.
+#ref kauffman Kauffman, S. The Origins of Order. Oxford University Press, 1993. Autocatalytic sets and order for free.
+#ref kauffman Kauffman, S. At Home in the Universe. Oxford University Press, 1995. More accessible version of the same ideas.
+#ref kirkpatrick Kirkpatrick, S., Gelatt, C.D., Vecchi, M.P. Optimization by Simulated Annealing. Science, 220(4598), 1983.
+#ref whitehead Whitehead, A.N. Process and Reality. Macmillan, 1929.
+#ref maturana Maturana, H. and Varela, F. Autopoiesis and Cognition. Reidel, 1980.
+#ref gleick Gleick, J. Chaos: Making a New Science. Viking, 1987. Accessible entry point to deterministic chaos and its relationship to randomness.
+#ref darwin Darwin, C. On the Origin of Species. John Murray, 1859.
 
 #script
 MUSIC NOTE TO COMPOSER

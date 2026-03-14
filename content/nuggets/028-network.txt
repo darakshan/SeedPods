@@ -60,11 +60,11 @@ Prehension — Whitehead's term for the way each event takes in and responds to 
 
 Panpsychism — the philosophical position that experience or something like it is a fundamental and ubiquitous feature of reality, not a late biological emergence. Distinguished from animism by its philosophical rigor; from mysticism by its grounding in physics and mathematics. See nugget #3.
 
-#ref Whitehead, A.N. Process and Reality. Macmillan, 1929.
-#ref Einstein, A. On the Electrodynamics of Moving Bodies. Annalen der Physik, 1905. The special relativity paper whose implications include the photon's reference frame.
-#ref Feynman, R. The Development of the Space-Time View of Quantum Electrodynamics. Nobel Lecture, 1965. Contains Feynman's account of Wheeler's one-electron proposal.
-#ref Goff, P. Galileo's Error. Pantheon, 2019. Contemporary panpsychism; the philosophical framework that makes the cosmological speculation here coherent.
-#ref Rovelli, C. The Order of Time. Riverhead, 2018. Accessible treatment of how time looks from modern physics — useful background for the photon reference frame discussion.
+#ref whitehead Whitehead, A.N. Process and Reality. Macmillan, 1929.
+#ref einstein Einstein, A. On the Electrodynamics of Moving Bodies. Annalen der Physik, 1905. The special relativity paper whose implications include the photon's reference frame.
+#ref feynman Feynman, R. The Development of the Space-Time View of Quantum Electrodynamics. Nobel Lecture, 1965. Contains Feynman's account of Wheeler's one-electron proposal.
+#ref goff Goff, P. Galileo's Error. Pantheon, 2019. Contemporary panpsychism; the philosophical framework that makes the cosmological speculation here coherent.
+#ref rovelli Rovelli, C. The Order of Time. Riverhead, 2018. Accessible treatment of how time looks from modern physics — useful background for the photon reference frame discussion.
 
 #script
 TBD

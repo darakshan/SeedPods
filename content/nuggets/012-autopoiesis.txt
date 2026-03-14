@@ -66,12 +66,12 @@ Whitehead's process philosophy runs as a parallel current throughout. His concep
 #term Society of occasions — Whitehead's term for a persistent pattern of actual occasions organized with sufficient coherence and closure to act as a unit through time. The metaphysical counterpart to the autopoietic organization.
 #term Negative entropy — Schrödinger's term for the ordered structure that living systems import from their environment to offset internal disorder. The thermodynamic face of what autopoiesis achieves organizationally.
 
-#ref Maturana, H. and Varela, F. Autopoiesis and Cognition (1980). The founding text.
-#ref Maturana, H. and Varela, F. The Tree of Knowledge (1987). More accessible; develops the cognitive implications.
-#ref Varela, F., Thompson, E., Rosch, E. The Embodied Mind (1991). Extends autopoiesis into cognitive science and phenomenology.
-#ref Thompson, E. Mind in Life (2007). The full development of enactivism; essential bridge to consciousness.
-#ref Schrödinger, E. What is Life? (1944). The thermodynamic framing that set the question.
-#ref Prigogine, I. and Stengers, I. Order Out of Chaos (1984). Dissipative structures and the thermodynamics of living systems.
+#ref maturana Maturana, H. and Varela, F. Autopoiesis and Cognition (1980). The founding text.
+#ref maturana Maturana, H. and Varela, F. The Tree of Knowledge (1987). More accessible; develops the cognitive implications.
+#ref varela Varela, F., Thompson, E., Rosch, E. The Embodied Mind (1991). Extends autopoiesis into cognitive science and phenomenology.
+#ref thompson Thompson, E. Mind in Life (2007). The full development of enactivism; essential bridge to consciousness.
+#ref schrdinger Schrödinger, E. What is Life? (1944). The thermodynamic framing that set the question.
+#ref prigogine Prigogine, I. and Stengers, I. Order Out of Chaos (1984). Dissipative structures and the thermodynamics of living systems.
 
 #script
 MUSIC NOTE: Opens with a single sparse theme — low, unresolved, patient. As the breathing from the bed intensifies, the theme builds in tension without releasing. A brief sting at the cut — sharp, not melodramatic. During the zoom into the cell, the music becomes dense and quickening, something between wonder and urgency, the same harmonic material transformed. As we zoom back out, it thins and returns to the opening theme — the same notes, but settled now, as if the question has not been answered but has been befriended. No resolution. Just a quieter version of the same patience.

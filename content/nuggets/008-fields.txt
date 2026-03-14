@@ -50,9 +50,9 @@ The convergence is the point. Two entirely different lines of inquiry — one tr
 
 #term Diffraction — the spreading and interference of waves when they pass through a gap or around an obstacle. Visible when light passes through a mesh screen. Evidence that light is a field phenomenon, not a particle traveling a straight path.
 
-#ref Maxwell, J.C. A Treatise on Electricity and Magnetism. Oxford, 1873. The foundational text of classical electromagnetism.
-#ref Whitehead, A.N. Process and Reality. Macmillan, 1929. The primary philosophical text. See especially Part III on prehension.
-#ref Feynman, R. The Feynman Lectures on Physics, Vol. 2. Addison-Wesley, 1964. The clearest physical account of electromagnetism available.
+#ref maxwell Maxwell, J.C. A Treatise on Electricity and Magnetism. Oxford, 1873. The foundational text of classical electromagnetism.
+#ref whitehead Whitehead, A.N. Process and Reality. Macmillan, 1929. The primary philosophical text. See especially Part III on prehension.
+#ref feynman Feynman, R. The Feynman Lectures on Physics, Vol. 2. Addison-Wesley, 1964. The clearest physical account of electromagnetism available.
 
 #script
 SKELETON ONLY — not ready to draft.

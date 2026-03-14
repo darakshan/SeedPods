@@ -48,9 +48,9 @@ The locked-in syndrome literature, and more recently research on non-speaking au
 
 Douglas Hofstadter's Gödel, Escher, Bach (1979) circles this territory from the angle of formal systems — what can and cannot be inferred about a system from its outputs.
 
-#ref Whitehead, A.N. Process and Reality (1929). Part I for the metaphysical framing.
-#ref Turing, A. Computing Machinery and Intelligence (1950). Short, readable, still radical.
-#ref Thompson, E. Mind in Life. Biological processes and their expressive surfaces.
+#ref whitehead Whitehead, A.N. Process and Reality (1929). Part I for the metaphysical framing.
+#ref turing Turing, A. Computing Machinery and Intelligence (1950). Short, readable, still radical.
+#ref thompson Thompson, E. Mind in Life. Biological processes and their expressive surfaces.
 
 #script
 [A Victorian street fair. Noise, crowds, torchlight.]

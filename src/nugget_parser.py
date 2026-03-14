@@ -31,6 +31,11 @@ def display_number(num):
     return num or "?"
 
 
+def nugget_tag(n):
+    """Return the number + short name tag for a nugget (e.g. 001-caloric, 033-edge)."""
+    return n.get("filename", "")
+
+
 def load_key_value_file(path):
     """Read key: value lines from path. Lines starting with # and trailing # comments are ignored."""
     if not path.exists():
@@ -114,7 +119,17 @@ def parse_nugget(filepath, warn=None):
 
             if key == "ref":
                 if current_layer == "provenance":
-                    refs.append(value.strip())
+                    raw = value.strip()
+                    if not raw:
+                        continue
+                    parts = raw.split(None, 1)
+                    if len(parts) == 2 and parts[0].lower() == parts[0] and parts[0].replace("-", "").replace("_", "").isalnum():
+                        keyword, ref_text = parts[0], parts[1]
+                    else:
+                        first_word = raw.split(None, 1)[0].rstrip(".,;")
+                        keyword = re.sub(r"[^a-z0-9\-]", "", first_word.lower()) or first_word.lower()
+                        ref_text = raw
+                    refs.append((keyword, ref_text))
                 else:
                     w(f"Warning: {filepath}: #ref only allowed in #provenance (found in or before {current_layer or 'metadata'})")
                 continue

@@ -14,17 +14,17 @@ A child stops everything for a soap bubble. There's something revelatory about i
 The holographic principle — Bekenstein, Hawking. All the information in a volume is encoded on its boundary. The interior is a projection of the surface. This isn't metaphor. It's physics. And it means interiority isn't hidden behind the surface — it's what the surface does. At every scale: cell membrane, skull, galactic boundary. The within of things is the boundary of things.
 
 #provenance
-#ref Bekenstein (1972) — information content proportional to surface area, not volume
-#ref Hawking — black hole thermodynamics, boundary entropy
-#ref Van Raamsdonk — spacetime geometry emerging from entanglement structure
-#ref Maldacena — AdS/CFT correspondence: lower-dimensional boundary fully encodes higher-dimensional interior
-#ref Susskind & t'Hooft — developed the holographic principle explicitly
-#ref Whitehead — 'the within of things,' prehension as interiority at every scale
-#ref Teilhard de Chardin — interior dimension of matter, present from the beginning not added at complexity
-#ref Maturana & Varela — autopoiesis: cell membrane as boundary that constitutes interiority and identity
-#ref Evan Thompson — Mind in Life: every living boundary is a subject-object distinction made physical
-#ref Leibniz — monads as windowless interiors, first philosopher to argue interiority is fundamental
-#ref Berkeley — esse est percipi, productive tension with holographic picture
+#ref bekenstein Bekenstein (1972) — information content proportional to surface area, not volume
+#ref hawking Hawking — black hole thermodynamics, boundary entropy
+#ref van Van Raamsdonk — spacetime geometry emerging from entanglement structure
+#ref maldacena Maldacena — AdS/CFT correspondence: lower-dimensional boundary fully encodes higher-dimensional interior
+#ref susskind Susskind & t'Hooft — developed the holographic principle explicitly
+#ref whitehead Whitehead — 'the within of things,' prehension as interiority at every scale
+#ref teilhard Teilhard de Chardin — interior dimension of matter, present from the beginning not added at complexity
+#ref maturana Maturana & Varela — autopoiesis: cell membrane as boundary that constitutes interiority and identity
+#ref evan Evan Thompson — Mind in Life: every living boundary is a subject-object distinction made physical
+#ref leibniz Leibniz — monads as windowless interiors, first philosopher to argue interiority is fundamental
+#ref berkeley Berkeley — esse est percipi, productive tension with holographic picture
 
 #script
 Open on a child's face. A soap bubble drifting. She's not thinking about physics. But her stillness is recognition. Cut to: black hole boundary. Same geometry. Different scale.

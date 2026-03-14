@@ -64,13 +64,13 @@ The implications run through all of these seed nuggets. If events are primary an
 #term Family resemblance — Wittgenstein's term for the way members of a category (chairs, games, languages) share overlapping similarities without any single feature common to all. The category is held together by a web of resemblances, not by a shared essence.
 #term Relational quantum mechanics — Carlo Rovelli's interpretation of quantum mechanics, in which quantum states are relative to observers or measuring systems rather than absolute. Properties do not exist independently of interactions.
 
-#ref Whitehead, A.N. Process and Reality. Macmillan, 1929. The primary text. Part I develops the fallacy of misplaced concreteness; Part II develops the doctrine of actual occasions.
-#ref Whitehead, A.N. Science and the Modern World. Macmillan, 1925. More accessible introduction to the critique of substance-based thinking.
-#ref Wittgenstein, L. Philosophical Investigations. Blackwell, 1953. §47 on the simple parts of a chair; §66–67 on family resemblance.
-#ref Kant, I. Critique of Pure Reason. 1781. The foundational text on the thing-in-itself and the limits of human knowledge.
-#ref Rovelli, C. Relational Quantum Mechanics. International Journal of Theoretical Physics, 1996. The original paper proposing that quantum states are relative to observers, not absolute.
-#ref Rovelli, C. Reality Is Not What It Seems. Riverhead, 2017. A physicist's accessible account of the dissolution of the object in quantum gravity.
-#ref Rovelli, C. The Order of Time. Riverhead, 2018. On the dissolution of the thing-based picture of time; convergent with Whitehead from within physics.
+#ref whitehead Whitehead, A.N. Process and Reality. Macmillan, 1929. The primary text. Part I develops the fallacy of misplaced concreteness; Part II develops the doctrine of actual occasions.
+#ref whitehead Whitehead, A.N. Science and the Modern World. Macmillan, 1925. More accessible introduction to the critique of substance-based thinking.
+#ref wittgenstein Wittgenstein, L. Philosophical Investigations. Blackwell, 1953. §47 on the simple parts of a chair; §66–67 on family resemblance.
+#ref kant Kant, I. Critique of Pure Reason. 1781. The foundational text on the thing-in-itself and the limits of human knowledge.
+#ref rovelli Rovelli, C. Relational Quantum Mechanics. International Journal of Theoretical Physics, 1996. The original paper proposing that quantum states are relative to observers, not absolute.
+#ref rovelli Rovelli, C. Reality Is Not What It Seems. Riverhead, 2017. A physicist's accessible account of the dissolution of the object in quantum gravity.
+#ref rovelli Rovelli, C. The Order of Time. Riverhead, 2018. On the dissolution of the thing-based picture of time; convergent with Whitehead from within physics.
 
 #script
 OPEN — a chair. Ordinary. Wooden. Sits in a pool of light in an otherwise dark room.

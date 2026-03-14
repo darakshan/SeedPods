@@ -8,7 +8,7 @@ import html as _html
 import re
 from pathlib import Path
 
-from nugget_parser import display_number
+from nugget_parser import display_number, nugget_tag
 
 try:
     import markdown
@@ -51,7 +51,7 @@ def expand_links(text, context, base_dir, collected_md_refs=None):
             if not n:
                 context.get("warn", lambda msg: None)(f"@link: nugget {locator!r} not found")
                 return m.group(0)
-            href = n.get("filename", "") + ".html"
+            href = nugget_tag(n) + ".html"
             return f'<a href="{href}">{_html.escape(link_text)}</a>'
         if locator.endswith(".md"):
             content_root = context.get("content_dir") or _ROOT
@@ -113,7 +113,7 @@ def _render_samples_html(
     rows_html = ""
     sortable = full_section and count is None
     for n in recent:
-        fname = n.get("filename", "") + ".html"
+        fname = nugget_tag(n) + ".html"
         num = n.get("number", "")
         title = n.get("title", "")
         subtitle = n.get("subtitle", "")

@@ -56,9 +56,8 @@ td a:hover{color:var(--accent)}
 /* Bibliography */
 .bib-entry{margin-bottom:1rem;font-size:.95rem}
 .bib-text{font-style:italic}
-.bib-in{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.08em;color:var(--dim);margin-right:.35rem}
-.bib-entry a{color:var(--accent);text-decoration:none}
-.bib-entry a:hover{text-decoration:underline}
+.bib-entry .bib-tag{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.08em;color:var(--dim);margin-right:.35rem;text-decoration:none}
+.bib-entry .bib-tag:hover{text-decoration:underline;color:var(--accent)}
 /* Glossary */
 .gloss-entry{margin-bottom:2rem;font-size:.95rem}
 .gloss-term-line{margin-bottom:.35rem}

@@ -71,11 +71,11 @@ The luminiferous ether was required by classical wave theory and formalized by M
 #term The hard problem of consciousness — philosopher David Chalmers' term for the question of why physical processes give rise to subjective experience at all. From Facing Up to the Problem of Consciousness, Journal of Consciousness Studies (1995).
 #term Science advances one funeral at a time — attributed to Max Planck. A version appears in his Scientific Autobiography (1949): "A new scientific truth does not triumph by convincing its opponents and making them see the light, but rather because its opponents eventually die and a new generation grows up that is familiar with it."
 
-#ref Whitehead, A.N. Process and Reality (1929). The primary text. Adventures of Ideas (1933) is more accessible.
-#ref Kuhn, T.S. The Structure of Scientific Revolutions (1962).
-#ref Chalmers, D. The Conscious Mind (1996).
-#ref Goff, P. Galileo's Error (2019). Reconstructs a closely related position in contemporary language.
-#ref Harris, A. Conscious (2019). Lucid introduction to the hard problem.
+#ref whitehead Whitehead, A.N. Process and Reality (1929). The primary text. Adventures of Ideas (1933) is more accessible.
+#ref kuhn Kuhn, T.S. The Structure of Scientific Revolutions (1962).
+#ref chalmers Chalmers, D. The Conscious Mind (1996).
+#ref goff Goff, P. Galileo's Error (2019). Reconstructs a closely related position in contemporary language.
+#ref harris Harris, A. Conscious (2019). Lucid introduction to the hard problem.
 
 #script
 OPEN — sepia toned diagram of caloric fluid flowing between objects.

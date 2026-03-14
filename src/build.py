@@ -34,6 +34,7 @@ from nugget_parser import (
     load_index_copy,
     load_status_order,
     nugget_by_number,
+    nugget_tag,
     section_is_tbd,
 )
 from md_pages import process_md_to_html, expand_includes, _md_link_output_name
@@ -355,7 +356,7 @@ def build_nugget(n, all_nuggets):
     if rel_nuggets:
         cards = ""
         for r in rel_nuggets[:5]:
-            rfile = r.get("filename", "") + ".html"
+            rfile = nugget_tag(r) + ".html"
             rnum = r.get("number", "")
             rtitle = r.get("title", "")
             rstatus = r.get("status", "empty")
@@ -395,7 +396,8 @@ def build_nugget(n, all_nuggets):
             if refs_list:
                 parts.append('<h3 class="layer-heading ref-heading">Further reading</h3>')
                 parts.append('<div class="prose ref-list">')
-                for ref_text in refs_list:
+                for ref_item in refs_list:
+                    ref_text = ref_item[1] if isinstance(ref_item, tuple) else ref_item
                     if ref_text:
                         parts.append(f'<p class="ref-entry">{_html.escape(ref_text)}</p>')
                 parts.append("</div>")
@@ -439,12 +441,12 @@ def build_nugget(n, all_nuggets):
     sections_html = "\n\n".join(sections_parts)
 
     sorted_nuggets = sorted(all_nuggets, key=lambda x: x.get("number", ""))
-    idx = next((i for i, x in enumerate(sorted_nuggets) if x.get("filename") == n.get("filename")), -1)
+    idx = next((i for i, x in enumerate(sorted_nuggets) if nugget_tag(x) == nugget_tag(n)), -1)
     prev_n = sorted_nuggets[idx - 1] if idx > 0 else None
     next_n = sorted_nuggets[idx + 1] if 0 <= idx < len(sorted_nuggets) - 1 else None
 
-    prev_html = f'<a href="{prev_n.get("filename", "")}.html">&lt;&lt;</a>' if prev_n else ''
-    next_html = f'<a href="{next_n.get("filename", "")}.html">&gt;&gt;</a>' if next_n else ''
+    prev_html = f'<a href="{nugget_tag(prev_n)}.html">&lt;&lt;</a>' if prev_n else ''
+    next_html = f'<a href="{nugget_tag(next_n)}.html">&gt;&gt;</a>' if next_n else ''
 
     layer_tabs_html = f"""  <div class="layer-tabs">
     <div class="layer-tabs-inner">
@@ -684,7 +686,7 @@ def build_tags_page(nuggets, status_order, explainer_terms=None):
             num = n.get("number", "")
             title = n.get("title", "")
             subtitle = n.get("subtitle", "")
-            fname = n.get("filename", "") + ".html"
+            fname = nugget_tag(n) + ".html"
             title_display = f"{display_number(num)}. {title}" if num else title
             if i > 0:
                 parts.append('<hr class="index-entry-rule">')
@@ -816,33 +818,43 @@ def build_internal_page(nuggets=None, collected_md_refs=None):
 
 
 def build_bibliography_page(nuggets):
-    """Build Bibliography from #ref (full text) in #provenance of all nuggets. Sorted by exact ref text; lists which nuggets cite each."""
-    by_text = {}
+    """Build Bibliography from #ref (keyword + full text) in #provenance. Grouped by keyword with headings; lists which nuggets cite each."""
+    by_keyword = {}
     for n in nuggets:
-        num = n.get("number", "")
-        fname = n.get("filename", "") + ".html"
-        title_display = display_number(num)
-        for ref_text in n.get("refs", []):
-            ref_text = (ref_text or "").strip()
+        tag = nugget_tag(n)
+        fname = tag + ".html"
+        for ref_item in n.get("refs", []):
+            if isinstance(ref_item, tuple):
+                keyword, ref_text = ref_item[0], (ref_item[1] or "").strip()
+            else:
+                ref_text = (ref_item or "").strip()
+                keyword = ref_text.split(None, 1)[0].lower() if ref_text else ""
             if not ref_text:
                 continue
-            if ref_text not in by_text:
-                by_text[ref_text] = []
-            by_text[ref_text].append((title_display, fname))
-    entries = sorted(by_text.items(), key=lambda x: x[0].lower())
+            if keyword not in by_keyword:
+                by_keyword[keyword] = {}
+            if ref_text not in by_keyword[keyword]:
+                by_keyword[keyword][ref_text] = []
+            by_keyword[keyword][ref_text].append((tag, fname))
     parts = []
-    for ref_text, nugget_list in entries:
-        sorted_nugs = sorted(nugget_list, key=lambda x: (int(x[0]) if x[0].isdigit() else 999, x[0]))
-        nugget_links = " ".join(f'<a href="{fname}">{disp}</a>' for disp, fname in sorted_nugs)
-        ref_esc = _html.escape(ref_text)
-        parts.append(
-            f'<div class="bib-entry"><span class="bib-text">{ref_esc}</span> '
-            f'<span class="bib-in">In:</span> {nugget_links}</div>'
-        )
-    body = "\n".join(parts) if parts else "<p class=\"dim\">No references yet. Add <code>#ref</code> lines (full citation text) inside <code>#provenance</code> in any nugget.</p>"
+    for keyword in sorted(by_keyword.keys(), key=str.lower):
+        keyword_esc = _html.escape(keyword)
+        count = len(by_keyword[keyword])
+        heading = f"{keyword_esc} ({count})" if count > 1 else keyword_esc
+        parts.append(f'<hr class="index-tag-rule"><div id="{keyword_esc}" class="index-tag-name">{heading}</div>')
+        entries = sorted(by_keyword[keyword].items(), key=lambda x: x[0].lower())
+        for ref_text, nugget_list in entries:
+            sort_key = lambda x: (int(x[0].split("-")[0]) if x[0].split("-")[0].isdigit() else 999, x[0])
+            sorted_nugs = sorted(nugget_list, key=sort_key)
+            nugget_links = " ".join(f'<a href="{fname}" class="bib-tag">{_html.escape(disp)}</a>' for disp, fname in sorted_nugs)
+            ref_esc = _html.escape(ref_text)
+            parts.append(
+                f'<div class="bib-entry"><span class="bib-text">{ref_esc}</span> {nugget_links}</div>'
+            )
+    body = "\n".join(parts) if parts else "<p class=\"dim\">No references yet. Add <code>#ref</code> lines (keyword + citation text) inside <code>#provenance</code> in any nugget.</p>"
     html = head("Bibliography")
     html += nav(from_d=True)
-    html += f'<div class="wrap"><div class="page-body fade"><h1>Bibliography</h1><p class="dim repo-intro">References from all nuggets.  Duplicates will be merged later.</p>{body}</div></div>'
+    html += f'<div class="wrap"><div class="page-body fade"><h1>Bibliography</h1><p class="dim repo-intro">References from all nuggets, grouped by keyword.</p>{body}</div></div>'
     html += foot()
     html += close()
     return html
@@ -854,7 +866,7 @@ def build_glossary_page(nuggets, explainer_terms=None):
     by_entry = {}
     for n in nuggets:
         num = n.get("number", "")
-        fname = n.get("filename", "") + ".html"
+        fname = nugget_tag(n) + ".html"
         title_display = display_number(num)
         for term, definition in n.get("terms", []):
             entry_key = (term, definition)
@@ -978,7 +990,7 @@ def main():
     for n in nuggets:
         if filter_num and n.get("number") != filter_num:
             continue
-        fname = n.get("filename", "") + ".html"
+        fname = nugget_tag(n) + ".html"
         out = SITE_DIR / fname
         out.write_text(build_nugget(n, nuggets), encoding="utf-8")
         print(f"  Built {fname}")

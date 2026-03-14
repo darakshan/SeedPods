@@ -59,12 +59,12 @@ This has direct implications for how we think about AI. A neural network trained
 #term Hard problem of consciousness — David Chalmers' term (1995) for the question of why any physical process gives rise to subjective experience at all. Distinguished from the "easy problems" of explaining attention, memory, and behavior — which are hard in practice but tractable in principle. The hard problem is why there is something it is like to be a system at all.
 #term Prehension — Whitehead's term for the way each actual occasion takes in and registers what surrounds it before completing itself. Plain English equivalent: feeling, taking-in. The root is the same as "apprehend."
 
-#ref Whitehead, A.N. Process and Reality. Macmillan, 1929. The primary text. Dense but foundational.
-#ref Whitehead, A.N. Adventures of Ideas. Macmillan, 1933. More accessible; Part III is directly relevant.
-#ref Goff, P. Galileo's Error. Pantheon, 2019. The clearest contemporary reconstruction of panpsychism in analytic idiom.
-#ref Chalmers, D. The Conscious Mind. Oxford, 1996. Introduced the hard problem; argues for a position close to property dualism.
-#ref Nagel, T. What Is It Like to Be a Bat? Philosophical Review, 1974. The classic paper establishing that subjective experience cannot be fully captured from an objective viewpoint.
-#ref Goff, P., Seager, W., Allen-Hermanson, S. Panpsychism. Stanford Encyclopedia of Philosophy, 2022. Comprehensive overview of the philosophical landscape.
+#ref whitehead Whitehead, A.N. Process and Reality. Macmillan, 1929. The primary text. Dense but foundational.
+#ref whitehead Whitehead, A.N. Adventures of Ideas. Macmillan, 1933. More accessible; Part III is directly relevant.
+#ref goff Goff, P. Galileo's Error. Pantheon, 2019. The clearest contemporary reconstruction of panpsychism in analytic idiom.
+#ref chalmers Chalmers, D. The Conscious Mind. Oxford, 1996. Introduced the hard problem; argues for a position close to property dualism.
+#ref nagel Nagel, T. What Is It Like to Be a Bat? Philosophical Review, 1974. The classic paper establishing that subjective experience cannot be fully captured from an objective viewpoint.
+#ref goff Goff, P., Seager, W., Allen-Hermanson, S. Panpsychism. Stanford Encyclopedia of Philosophy, 2022. Comprehensive overview of the philosophical landscape.
 
 #script
 OPEN — extreme close-up of a human eye. Iris in full detail. Light moving across it.

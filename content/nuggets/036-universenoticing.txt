@@ -14,13 +14,13 @@ When you have a thought, something is happening that took fourteen billion years
 Whitehead saw that every event in the universe — not just brains, not just living things, every event — has an interior. It grasps its past and contributes something forward. This is not metaphor. It is the only way to account for how experience arises at all without magic. Teilhard saw the direction — from the Big Bang through matter, life, and mind toward what he called the Omega Point: the universe becoming fully aware of itself. Neither had the other's insight. Together they form something neither achieved alone. Whitehead gives the mechanism — experience all the way down, accumulating. Teilhard gives the vector — a direction to the accumulation that isn't random. The universe isn't drifting. It's developing. Every actual occasion a step. Every mind a threshold crossed. You are not in the universe observing it. You are the universe, at a particular moment of its self-discovery.
 
 #provenance
-#ref Teilhard de Chardin — The Phenomenon of Man, the Omega Point, the noosphere
-#ref Whitehead — Process and Reality, prehension, the creative advance into novelty
-#ref John B. Cobb Jr. — process theology, synthesis of Whitehead and evolutionary thought, still active at 99
-#ref Sagan — 'we are a way for the cosmos to know itself' — the surface version of this idea
-#ref Evan Thompson — Mind in Life, experience as continuous with life as continuous with matter
-#ref Thomas Nagel — Mind and Cosmos, the insufficiency of purely mechanical evolution
-#ref Eric Chaisson — measurable directionality in cosmic evolution toward complexity
+#ref teilhard Teilhard de Chardin — The Phenomenon of Man, the Omega Point, the noosphere
+#ref whitehead Whitehead — Process and Reality, prehension, the creative advance into novelty
+#ref john John B. Cobb Jr. — process theology, synthesis of Whitehead and evolutionary thought, still active at 99
+#ref sagan Sagan — 'we are a way for the cosmos to know itself' — the surface version of this idea
+#ref evan Evan Thompson — Mind in Life, experience as continuous with life as continuous with matter
+#ref thomas Thomas Nagel — Mind and Cosmos, the insufficiency of purely mechanical evolution
+#ref eric Eric Chaisson — measurable directionality in cosmic evolution toward complexity
 #note Teilhard and Whitehead were near-contemporaries. No documented direct exchange. Teilhard's major works suppressed by the Church, circulating only in manuscript. The synthesis had to wait.
 
 #script
