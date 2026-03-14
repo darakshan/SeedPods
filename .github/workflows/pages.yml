@@ -4,8 +4,7 @@ on:
   push:
     branches: ["main"]
     paths:
-      - "nuggets/**"
-      - "about/**"
+      - "config/**"
       - "content/**"
       - "src/**"
       - ".github/workflows/pages.yml"
@@ -40,7 +39,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: docs
 
   deploy:
     needs: build

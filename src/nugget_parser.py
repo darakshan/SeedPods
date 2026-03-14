@@ -32,12 +32,16 @@ def display_number(num):
 
 
 def load_key_value_file(path):
-    """Read key: value lines from path. Returns dict; empty if path missing."""
+    """Read key: value lines from path. Lines starting with # and trailing # comments are ignored."""
     if not path.exists():
         return {}
     out = {}
     for line in path.read_text(encoding="utf-8").splitlines():
         line = line.strip()
+        if not line or line.startswith("#"):
+            continue
+        if " #" in line:
+            line = line[: line.index(" #")].strip()
         if not line or ":" not in line:
             continue
         key, _, value = line.partition(":")
