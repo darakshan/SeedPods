@@ -1,5 +1,5 @@
 # List
 
-All seed nuggets. The canonical list. Generated from source files.
+All currently defined seed nuggets. (They are always changing and growing!)
 
 @nuggets

@@ -6,13 +6,9 @@ The deeper purpose of this project is intuition repair — our own as much as an
  
  Some day, inshallah, some or all of these nuggets will turned into a book, or a movie, or a series of articles, or who knows what, in a linear progression. Time will tell.
 
-### On this page:
-What are the goals of this project?  
-Who are the audiences we hope to reach?  
-
-### Additional information:
-Tell me about the @link(about/authors.md, authors).
-We hope to get @link(about/reviews.md, reviews).
+### See also these very early pages:
+- @link(about/authors.md, Authors)
+- @link(about/reviews.md, Reviews)
 
 ---
 

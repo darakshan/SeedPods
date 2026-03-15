@@ -14,6 +14,8 @@ Style guidlines for writing prose: @link(internal/style-guidelines.md, style)
 
 Style guidelines for writing scripts: @link(internal/scriptcraft.md, scriptcraft)
 
+How the static site is generated: @link(internal/build.md, build)
+
 An essay that inspired this website: @link(internal/inside.md, The Inside of Everything)
 
 Older and probably obsolete documentation: @link(internal/early-structure.md, Early Structure)
