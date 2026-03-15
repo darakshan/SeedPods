@@ -46,7 +46,7 @@ The build script parses nugget files strictly. Follow this grammar so new or rev
 - Section start: a line that is exactly `#surface`, `#depth`, `#provenance`, `#script`, or `#images` (no text after the name). Parser treats these as layer names, not metadata.
 - Section body: all following lines that do not start with `#`. Blank lines are kept. Body ends at the next line starting with `#` or end of file.
 - All five layer headers must appear in this order: `#surface`, `#depth`, `#provenance`, `#script`, `#images`. If a layer has no content yet, write the header and put `TBD` (or a single line of placeholder text) as the body so the section exists.
-- Layer content is free-form text. No special syntax required. Use `TBD` for placeholder sections.
+- Layer content is free-form text. No special syntax required. Use `TBD` for placeholder sections. In any prose layer you may use **@exercise(Try this: ...)** — the text inside the parentheses (typically starting with “Try this: ”) is rendered as a call-to-action block at that position. Use balanced parentheses if the text contains `)`.
 
 ###Parsing rules (what the build does)
 

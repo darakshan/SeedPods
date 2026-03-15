@@ -307,6 +307,73 @@ def text_to_html(text):
         html_parts.append("\n".join(part_html))
     return "<hr>".join(html_parts)
 
+def _expand_exercise_directives(text, all_nuggets):
+    """Replace each @exercise(...) (balanced parens) with a placeholder; return (segments, cta_htmls). Each directive turns its argument into HTML (expand @nugget, text_to_html, wrap in div.cta) without knowing which layer it's in."""
+    segments = []
+    cta_htmls = []
+    i = 0
+    while i < len(text):
+        match = re.search(r"@exercise\s*\(", text[i:])
+        if not match:
+            segments.append(text[i:])
+            break
+        start = i + match.start()
+        segments.append(text[i:start])
+        paren_start = i + match.end() - 1
+        depth = 1
+        j = paren_start + 1
+        while j < len(text) and depth:
+            if text[j] == "(":
+                depth += 1
+            elif text[j] == ")":
+                depth -= 1
+            j += 1
+        if depth != 0:
+            segments.append(text[start:j])
+            i = j
+            continue
+        inner = text[paren_start + 1 : j - 1].strip()
+        expanded = expand_nugget_directives(inner, all_nuggets) if inner else ""
+        cta_html = text_to_html(expanded) if expanded else ""
+        placeholder = f"{{{{EXERCISE_{len(cta_htmls)}}}}}"
+        segments.append(placeholder)
+        cta_htmls.append(f'<div class="cta">{cta_html}</div>' if cta_html else "")
+        i = j
+    return segments, cta_htmls
+
+
+def expand_layer_directives(raw, all_nuggets):
+    """Expand @nugget and @exercise in layer text. Returns (segments, cta_htmls). Same expansion for every layer; caller chooses how to render each text segment (prose vs script)."""
+    expanded = expand_nugget_directives(raw, all_nuggets) if raw else raw
+    return _expand_exercise_directives(expanded, all_nuggets)
+
+
+def _assemble_layer_html(segments, cta_htmls, segment_renderer):
+    """Turn (segments, cta_htmls) into final HTML. segment_renderer(seg) is used for each text segment; placeholders are replaced by the corresponding cta_htmls entry."""
+    parts = []
+    for seg in segments:
+        if seg.startswith("{{EXERCISE_") and seg.endswith("}}"):
+            try:
+                i = int(seg[11:-2])
+                if i < len(cta_htmls) and cta_htmls[i]:
+                    parts.append(cta_htmls[i])
+            except ValueError:
+                parts.append(segment_renderer(seg))
+        else:
+            parts.append(segment_renderer(seg))
+    return "".join(parts)
+
+
+def _layer_prose_to_html(raw, all_nuggets):
+    """Prose layers: expand directives, then render each segment with text_to_html."""
+    if section_is_tbd(raw):
+        return '<p class="dim placeholder">This layer is not yet written.</p>'
+    segments, cta_htmls = expand_layer_directives(raw, all_nuggets)
+    return _assemble_layer_html(
+        segments, cta_htmls, lambda seg: "" if section_is_tbd(seg) else text_to_html(seg)
+    )
+
+
 def script_to_html(text):
     """Format script text with direction lines highlighted."""
     if section_is_tbd(text):
@@ -368,14 +435,7 @@ def build_nugget(n, all_nuggets):
       </a>"""
         related_cards_html = f'<div class="related-grid">{cards}\n      </div>'
 
-    surface_raw = layers.get("surface", "TBD")
-    surface_expanded = expand_nugget_directives(surface_raw, all_nuggets) if surface_raw else surface_raw
-    surface_html = "" if section_is_tbd(surface_expanded) else text_to_html(surface_expanded)
-    if surface_html and "Try this:" in surface_expanded:
-        parts = surface_expanded.split("Try this:")
-        before = text_to_html("Try this:".join(parts[:-1]))
-        cta_text = "Try this: " + parts[-1].strip()
-        surface_html = before + f'<div class="cta">{cta_text}</div>'
+    surface_html = _layer_prose_to_html(layers.get("surface", "TBD"), all_nuggets)
 
     def layer_has_content(layer_id):
         if layer_id == "references":
@@ -387,8 +447,7 @@ def build_nugget(n, all_nuggets):
     def layer_body(layer_id):
         if layer_id == "references":
             prov_raw = layers.get("provenance", "TBD")
-            prov_expanded = expand_nugget_directives(prov_raw, all_nuggets) if prov_raw else prov_raw
-            prov_html = text_to_html(prov_expanded) if not section_is_tbd(prov_expanded) else ""
+            prov_html = "" if section_is_tbd(prov_raw) else _layer_prose_to_html(prov_raw, all_nuggets)
             parts = []
             if prov_html:
                 parts.append(f'<div class="prose">{prov_html}</div>')
@@ -411,10 +470,10 @@ def build_nugget(n, all_nuggets):
         if layer_id == "surface":
             return surface_html
         raw = layers.get(layer_id, "TBD")
-        expanded = expand_nugget_directives(raw, all_nuggets) if raw else raw
         if layer_id == "script":
-            return script_to_html(expanded)
-        return text_to_html(expanded)
+            segments, cta_htmls = expand_layer_directives(raw, all_nuggets)
+            return _assemble_layer_html(segments, cta_htmls, script_to_html)
+        return _layer_prose_to_html(raw, all_nuggets)
 
     tabs_parts = []
     for layer_id, label in LAYER_ORDER:

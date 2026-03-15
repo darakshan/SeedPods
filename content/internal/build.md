@@ -101,11 +101,10 @@ The five @ directives are:
 
 ## @ directive in nugget .txt files
 
-Inside nugget source files (`content/nuggets/*.txt`), a different directive is used:
+Inside nugget source files (`content/nuggets/*.txt`), these directives are used (they are expanded when building nugget HTML, not in the Markdown pipeline):
 
-- **@nugget(NNN)** — In layer text (e.g. Surface, Depth, Provenance), this is replaced by an italicized link to the nugget with that number: `<em><a href="NNN-name.html">Title</a></em>`. If no nugget matches the number, the directive is left as-is.
-
-This is processed when nugget content is expanded for HTML; it is not part of the Markdown @-directive pipeline.
+- **@nugget(NNN)** — In layer text (e.g. Surface, Depth, Provenance), replaced by an italicized link to that nugget: `<em><a href="NNN-name.html">Title</a></em>`. If no nugget matches the number, the directive is left as-is.
+- **@exercise(Try this: ...)** — In any prose layer (surface, depth, provenance, images), the text inside the parentheses is rendered as a call-to-action block (`<div class="cta">...</div>`) at that position. Parentheses must balance if the text contains `)`. The inner text may contain @nugget(NNN).
 
 (This is an inconsistency that might be rectified.)
 

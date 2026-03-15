@@ -46,7 +46,7 @@ We have been here before. The ant knew nothing about Aunt Hillary. We knew somet
 
 ---
 
-Try this: next time you laugh at something, try to find the exact word that made it funny. Notice that you can't. The laugh was never in any one place. It was in the count.
+@exercise(Try this: next time you laugh at something, try to find the exact word that made it funny. Notice that you can't. The laugh was never in any one place. It was in the count.)
 
 #depth
 In 1972 the physicist Philip Anderson published a short paper called "More Is Different." He was arguing against an assumption so embedded in science it rarely gets stated: that if you understand the lower level, you understand the higher one. That chemistry is just applied physics. That biology is just applied chemistry. That psychology is just applied biology.

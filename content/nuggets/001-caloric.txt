@@ -46,7 +46,7 @@ The anomalies are piling up. The patches are getting complicated.
 
 We've been here before.
 
-Try this: think of one thing you're completely certain about — something so obvious it barely feels like a belief. Now ask yourself: is that a fact, or is that this century's caloric?
+@exercise(Try this: think of one thing you're completely certain about — something so obvious it barely feels like a belief. Now ask yourself: is that a fact, or is that this century's caloric?)
 
 #depth
 The caloric and ether stories are not just fun historical footnotes. They follow a specific pattern that the philosopher and historian of science Thomas Kuhn formalized in The Structure of Scientific Revolutions (1962): normal science operates within a paradigm until anomalies accumulate to a crisis point. Patches become increasingly elaborate and implausible. Eventually someone removes the flawed primitive assumption rather than defending it. The revolution is never just additive — it requires giving something up.
