@@ -81,11 +81,11 @@ A related but distinct phenomenon — what happens when formal complexity genera
 #term More is different — Philip Anderson's phrase (1972) for the principle that each level of complexity has emergent properties that cannot be derived from the level below. Not a violation of lower-level laws, but genuinely new phenomena requiring their own description.
 #term Society of actual occasions — Whitehead's term for a stable pattern of events organized around a common characteristic that persists through time. Ant colonies, cities, brains, and neural networks are all societies in this sense.
 
-#ref Anderson, P.W. More Is Different. Science, 177(4047), 1972. Four pages. Still radical.
-#ref Koestler, A. The Act of Creation. Hutchinson, 1964. Bisociation as the common structure of humor, discovery, and art.
-#ref Koestler, A. The Ghost in the Machine. Hutchinson, 1967. Holons and hierarchical organization. See also @link(024).
-#ref Hofstadter, D. Gödel, Escher, Bach. Basic Books, 1979. Aunt Hillary and the ant colony; strange loops and emergent levels.
-#ref Whitehead, A.N. Process and Reality. Macmillan, 1929. Societies of actual occasions as the basis of enduring entities.
+#ref anderson Anderson, P.W. More Is Different. Science, 177(4047), 1972. Four pages. Still radical.
+#ref koestler Koestler, A. The Act of Creation. Hutchinson, 1964. Bisociation as the common structure of humor, discovery, and art.
+#ref koestler Koestler, A. The Ghost in the Machine. Hutchinson, 1967. Holons and hierarchical organization. See also @link(024).
+#ref hofstadter Hofstadter, D. Gödel, Escher, Bach. Basic Books, 1979. Aunt Hillary and the ant colony; strange loops and emergent levels.
+#ref whitehead Whitehead, A.N. Process and Reality. Macmillan, 1929. Societies of actual occasions as the basis of enduring entities.
 
 #script
 NOTE ON MUSIC: Gershwin's Rhapsody in Blue (1924, public domain) is the tonal reference — its movement between pastoral spaciousness and dense urban energy mirrors the script's arc exactly. Use a public domain recording, commission a new performance, or compose something in that spirit.

@@ -27,6 +27,18 @@ Use @link(NNN) to reference another nugget. Never precede it with the word
 
 ---
 
+### References
+
+References to outside work aer indicated in the Provenance section using #ref.
+References have a keyword to make them unique and should always be of the form 
+
+#ref keyword lastname ...
+
+identifying the last name of the first author.  If there is only one name (e.g. Pythagor) that should be used.  Don't use #ref for ideas without an other, in that case use #tag (which can be anywhere).
+
+
+---
+
 ### Referring to structure
 
 When a later section of a nugget refers back to something established
