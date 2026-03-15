@@ -36,10 +36,10 @@ This matters beyond love and chemistry. The same move appears wherever hard ques
 Note for revision: find a better Ryle example — the ghost in the machine may be closer than the Oxford/University example. Also consider: ghost in the machine as its own nugget.
 
 #provenance
-#term Just (explanatory) — when deployed to present a description of mechanism as a complete account of experience or process. Makes a claim of sufficiency that is never argued. Distinct from its innocent uses: timing ("I just arrived"), limitation ("I just want water"), or emphasis.
-#term Category mistake — Ryle's term for applying an explanation from one category to something in a different category, then treating it as complete. The Concept of Mind (1949).
-#term Intuition pump — Dennett's term for a device that makes a conclusion feel obvious without establishing it through argument. Intuition Pumps and Other Tools for Thinking (2013).
-#term Fallacy of misplaced concreteness — Whitehead's term for mistaking a useful abstraction for the full concrete reality it was extracted from. Process and Reality (1929).
+#term Just (explanatory): when deployed to present a description of mechanism as a complete account of experience or process. Makes a claim of sufficiency that is never argued. Distinct from its innocent uses: timing ("I just arrived"), limitation ("I just want water"), or emphasis.
+#term Category mistake: Ryle's term for applying an explanation from one category to something in a different category, then treating it as complete. The Concept of Mind (1949).
+#term Intuition pump: Dennett's term for a device that makes a conclusion feel obvious without establishing it through argument. Intuition Pumps and Other Tools for Thinking (2013).
+#term Fallacy of misplaced concreteness: Whitehead's term for mistaking a useful abstraction for the full concrete reality it was extracted from. Process and Reality (1929).
 #ref ryle Ryle, G. The Concept of Mind (1949).
 #ref whitehead Whitehead, A.N. Process and Reality (1929).
 #ref dennett Dennett, D. Intuition Pumps and Other Tools for Thinking (2013).

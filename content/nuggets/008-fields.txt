@@ -40,13 +40,13 @@ The convergence is the point. Two entirely different lines of inquiry — one tr
 @nugget(008) doesn't assert that the field is conscious. That question lives in @nugget(003). What it asserts is more modest and stranger: that the boundary we assumed between the physical medium and the experiencing subject was never as clear as we thought. If prehension is real — if reaching and feeling go all the way down — then the field was never merely a medium. It was always the inside of what physics describes from the outside. That is a different investigation than the one we thought we were conducting.
 
 #provenance
-#term Electromagnetic field — the unified field described by James Clerk Maxwell's equations (1865), of which electricity, magnetism, and light are all aspects. Not a medium that contains these phenomena but the phenomenon itself. Pervades all of space.
+#term Electromagnetic field: the unified field described by James Clerk Maxwell's equations (1865), of which electricity, magnetism, and light are all aspects. Not a medium that contains these phenomena but the phenomenon itself. Pervades all of space.
 
-#term Radiation — what the electromagnetic field does when a charged particle accelerates. The disturbance propagates outward as light. A stationary charge is silent; only acceleration speaks.
+#term Radiation: what the electromagnetic field does when a charged particle accelerates. The disturbance propagates outward as light. A stationary charge is silent; only acceleration speaks.
 
-#term Prehension — Alfred North Whitehead's term for the fundamental act by which any event takes in and is shaped by what surrounds it. Not a metaphor for perception but a proposed feature of reality at every scale: each occasion reaches out and feels its environment before it can become itself. Whitehead argued the electromagnetic field is the physical medium through which this reaching occurs.
+#term Prehension: Alfred North Whitehead's term for the fundamental act by which any event takes in and is shaped by what surrounds it. Not a metaphor for perception but a proposed feature of reality at every scale: each occasion reaches out and feels its environment before it can become itself. Whitehead argued the electromagnetic field is the physical medium through which this reaching occurs.
 
-#term Diffraction — the spreading and interference of waves when they pass through a gap or around an obstacle. Visible when light passes through a mesh screen. Evidence that light is a field phenomenon, not a particle traveling a straight path.
+#term Diffraction: the spreading and interference of waves when they pass through a gap or around an obstacle. Visible when light passes through a mesh screen. Evidence that light is a field phenomenon, not a particle traveling a straight path.
 
 #ref maxwell Maxwell, J.C. A Treatise on Electricity and Magnetism. Oxford, 1873. The foundational text of classical electromagnetism.
 #ref whitehead Whitehead, A.N. Process and Reality. Macmillan, 1929. The primary philosophical text. See especially Part III on prehension.

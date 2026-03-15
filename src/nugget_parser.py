@@ -55,8 +55,8 @@ def load_key_value_file(path):
 
 
 def load_index_copy():
-    """Config index.txt as key: value dict."""
-    return load_key_value_file(CONFIG_DIR / "index.txt")
+    """Config settings.txt as key: value dict."""
+    return load_key_value_file(CONFIG_DIR / "settings.txt")
 
 
 def load_status_order(path=None):
@@ -134,8 +134,8 @@ def parse_nugget(filepath, warn=None):
                 continue
             if key == "term":
                 raw = value.strip()
-                if " — " in raw:
-                    term_part, def_part = raw.split(" — ", 1)
+                if ": " in raw:
+                    term_part, def_part = raw.split(": ", 1)
                     terms.append((term_part.strip(), def_part.strip()))
                 else:
                     terms.append((raw, ""))

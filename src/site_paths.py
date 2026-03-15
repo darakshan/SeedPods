@@ -1,9 +1,24 @@
 """
 Output path convention: no directories under site_dir; path segments become a single filename with "-".
-Used for content .md → .html and for "more" section built pages (e.g. more-bibliography.html).
+Used for content .md → .html.
 """
 
 from pathlib import Path
+
+
+def parse_list_menu(raw):
+    """Parse list_menu value: comma-separated items, each 'Label | target'. Target is a content path (e.g. list, glossary). Returns [(label, target), ...]."""
+    if not raw or not raw.strip():
+        return []
+    out = []
+    for part in (p.strip() for p in raw.split(",") if p.strip()):
+        if "|" not in part:
+            continue
+        label, _, target = part.partition("|")
+        label, target = label.strip(), target.strip()
+        if label and target:
+            out.append((label, target))
+    return out
 
 
 def content_path_to_output_name(md_path, content_root):
@@ -21,12 +36,3 @@ def content_path_to_output_name(md_path, content_root):
     return "-".join(parts)
 
 
-def more_page_output_name(key):
-    """Output filename for a built page in the logical 'more' section. E.g. bibliography → more-bibliography.html."""
-    return f"more-{key}.html"
-
-
-def get_more_pages(index_copy):
-    """Parse more_pages from config index (comma-separated). Returns list of keys, e.g. ['bibliography', 'glossary', 'tags', 'map']."""
-    raw = (index_copy or {}).get("more_pages", "bibliography, glossary, tags, map")
-    return [t.strip() for t in raw.split(",") if t.strip()]

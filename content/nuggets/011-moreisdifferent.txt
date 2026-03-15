@@ -72,10 +72,10 @@ The weight matrix of a large neural network is the contemporary instance of Ande
 A related but distinct phenomenon — what happens when formal complexity generates self-reference rather than emergence — is the territory of @link(010). The architecture behind both, the nested vocabulary by which each level's stable outputs become the primitive units of the next level up, is @link(037).
 
 #provenance
-#term Holon — Arthur Koestler's term for any entity that is simultaneously a whole in its own right and a part of a larger whole. Reality in Koestler's picture is a nested hierarchy of holons rather than parts assembling into wholes.
-#term Bisociation — Koestler's term for the collision of two independent frames of reference that releases energy as laughter, insight, or aesthetic emotion. His claim: this is the common structure of humor, scientific discovery, and artistic creation.
-#term More is different — Philip Anderson's phrase (1972) for the principle that each level of complexity has emergent properties that cannot be derived from the level below. Not a violation of lower-level laws, but genuinely new phenomena requiring their own description.
-#term Society of actual occasions — Whitehead's term for a stable pattern of events organized around a common characteristic that persists through time. Ant colonies, cities, brains, and neural networks are all societies in this sense.
+#term Holon: Arthur Koestler's term for any entity that is simultaneously a whole in its own right and a part of a larger whole. Reality in Koestler's picture is a nested hierarchy of holons rather than parts assembling into wholes.
+#term Bisociation: Koestler's term for the collision of two independent frames of reference that releases energy as laughter, insight, or aesthetic emotion. His claim: this is the common structure of humor, scientific discovery, and artistic creation.
+#term More is different: Philip Anderson's phrase (1972) for the principle that each level of complexity has emergent properties that cannot be derived from the level below. Not a violation of lower-level laws, but genuinely new phenomena requiring their own description.
+#term Society of actual occasions: Whitehead's term for a stable pattern of events organized around a common characteristic that persists through time. Ant colonies, cities, brains, and neural networks are all societies in this sense.
 
 #ref anderson Anderson, P.W. More Is Different. Science, 177(4047), 1972. Four pages. Still radical.
 #ref koestler Koestler, A. The Act of Creation. Hutchinson, 1964. Bisociation as the common structure of humor, discovery, and art.

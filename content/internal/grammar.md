@@ -32,7 +32,7 @@ The build script parses nugget files strictly. Follow this grammar so new or rev
 
 ###Key terms (#term)
 
-- **Anywhere in a nugget.** Each line: `#term` followed by a space and the term, then an em dash (`—`), then the definition (e.g. `#term Paradigm — Thomas Kuhn's term for the framework...`). One term per line.
+- **Anywhere in a nugget.** Each line: `#term` followed by a space and the term, then a colon (`:`), then the definition (e.g. `#term Paradigm: Thomas Kuhn's term for the framework...`). One term per line.
 - The build collects terms from **all** nuggets and generates the Glossary page: terms sorted alphabetically, grouped so the same term from multiple nuggets appears once with each definition indented; each entry lists which nuggets define it (In: …).
 
 ###Editorial notes (#note)

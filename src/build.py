@@ -3,7 +3,7 @@
 build.py — Seed Nuggets site generator
 Reads from content/ and config/; writes to d/ (and index.html at root).
 Website root = project root: / serves index.html, /d/ has built HTML, /content/ has source.
-Generates: nugget pages, list.html, more-* (bibliography, glossary, tags, map),
+Generates: nugget pages, list.html, glossary/bibliography/tags/map from content .md (via @ directives),
 index.html, about pages, resources (with map), site.css.
 
 Usage:
@@ -38,7 +38,7 @@ from nugget_parser import (
     section_is_tbd,
 )
 from md_pages import process_md_to_html, expand_includes
-from site_paths import content_path_to_output_name, more_page_output_name, get_more_pages
+from site_paths import content_path_to_output_name, parse_list_menu
 
 ABOUT_DIR = CONTENT_DIR / "about"
 INTERNAL_DIR = CONTENT_DIR / "internal"
@@ -102,7 +102,7 @@ def get_build_input_files():
     files = set()
     for p in NUGGETS_DIR.glob("*.txt"):
         files.add(p)
-    for name in ["index.txt", "status.txt", "site.css", "logo.svg"]:
+    for name in ["settings.txt", "status.txt", "site.css", "logo.svg"]:
         p = CONFIG_DIR / name
         if p.exists():
             files.add(p)
@@ -163,6 +163,35 @@ def get_nav_items(index_copy=None):
     return out
 
 
+def _content_path_for_token(token):
+    """Resolve content path token to (href, path). path is the .md file to build, or None."""
+    token = token.strip()
+    md_file = CONTENT_DIR / f"{token}.md"
+    if md_file.exists():
+        return (f"{token}.html", md_file)
+    dir_path = CONTENT_DIR / token
+    if dir_path.is_dir() and (dir_path / "page.md").exists():
+        return (f"{token}.html", dir_path / "page.md")
+    return (None, None)
+
+
+def get_list_menu_items(index_copy=None):
+    """Resolve list_menu from config to [(label, href, path)]. Target is content path only. Returns [] when list_menu unset. path is source .md for building."""
+    copy = index_copy or load_index_copy()
+    raw = copy.get("list_menu", "").strip()
+    if not raw:
+        return []
+    entries = parse_list_menu(raw)
+    out = []
+    for label, target in entries:
+        href, path = _content_path_for_token(target)
+        if href and path:
+            out.append((label, href, path))
+        else:
+            _warn(f"list_menu target {target!r} not found: no content/{target}.md nor content/{target}/page.md")
+    return out
+
+
 def _nav_items():
     global _NAV_ITEMS
     if _NAV_ITEMS is None:
@@ -195,20 +224,21 @@ def nav(from_d=False, from_nuggets=False, layer_tabs_html=None):
     """Top nav: logo left; menu items from config index (nav key). All output is under SITE_DIR, which is the web root (same-dir links)."""
     prefix, index_href, logo_src = "", "index.html", "logo.svg"
     link_parts = []
-    more_pages = get_more_pages(load_index_copy())
+    list_menu_items = get_list_menu_items(load_index_copy())
     for href, label, _, _ in _nav_items():
         if href == "list.html":
-            dropdown_items = [f'<li><a href="{prefix}list.html">Nuggets</a></li>']
-            for key in more_pages:
-                dropdown_items.append(f'<li><a href="{prefix}{more_page_output_name(key)}">{_html.escape(_more_page_label(key))}</a></li>')
-            link_parts.append(
-                '<li class="nav-item-dropdown nav-lists-dropdown">'
-                f'<a href="{prefix}list.html">Lists</a>'
-                '<button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-label="Lists menu">▾</button>'
-                '<ul class="nav-dropdown">'
-                + "".join(dropdown_items) +
-                '</ul></li>'
-            )
+            if list_menu_items:
+                dropdown_items = [f'<li><a href="{prefix}{item_href}">{_html.escape(item_label)}</a></li>' for item_label, item_href, _ in list_menu_items]
+                link_parts.append(
+                    '<li class="nav-item-dropdown nav-lists-dropdown">'
+                    f'<a href="{prefix}list.html">Lists</a>'
+                    '<button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-label="Lists menu">▾</button>'
+                    '<ul class="nav-dropdown">'
+                    + "".join(dropdown_items) +
+                    '</ul></li>'
+                )
+            else:
+                link_parts.append(f'<li><a href="{prefix}list.html">{_html.escape(label)}</a></li>')
         else:
             link_parts.append(f'<li><a href="{prefix}{href}">{_html.escape(label)}</a></li>')
     links = "".join(link_parts)
@@ -462,7 +492,7 @@ def build_nugget(n, all_nuggets):
     related_nums = n.get("related", [])
     layers = n.get("layers", {})
 
-    tags_href = more_page_output_name("tags")
+    tags_href = "tags.html"
     tag_html = " ".join(f'<a href="{tags_href}#{tag_slug(t)}" class="tag">{t}</a>' for t in tags)
 
     rel_nuggets = [nugget_by_number(all_nuggets, r) for r in related_nums]
@@ -785,12 +815,12 @@ def build_explainers_page(nuggets, explainer_terms):
     return html
 
 
-def build_tags_page(nuggets, status_order, explainer_terms=None):
+def build_tags_body(nuggets, status_order):
+    """Index-by-tag and by-status HTML. For @index directive."""
     all_tags = set()
     for n in nuggets:
         all_tags.update(n.get("tags", []))
     sorted_tags = sorted(all_tags)
-
     all_statuses = set(n.get("status", "empty") for n in nuggets)
     sorted_statuses = [s for s in status_order if s in all_statuses]
 
@@ -816,22 +846,20 @@ def build_tags_page(nuggets, status_order, explainer_terms=None):
     status_blocks = ""
     for status in sorted_statuses:
         status_blocks += block_for_tag(status, f"status-{status}", [n for n in nuggets if n.get("status", "empty") == status])
-
-    html = head("Index")
-    html += nav(from_d=True)
-    html += f"""
-<div class="wrap">
-  <div class="page-body fade">
-    <h1>Index</h1>
-    <div class="index-by-tag">
+    return f"""<div class="index-by-tag">
     {tag_blocks}
     </div>
     <h2 class="index-section-head">Statuses</h2>
     <div class="index-by-tag">
     {status_blocks}
-    </div>
-  </div>
-</div>"""
+    </div>"""
+
+
+def build_tags_page(nuggets, status_order, explainer_terms=None):
+    body = build_tags_body(nuggets, status_order)
+    html = head("Index")
+    html += nav(from_d=True)
+    html += f'<div class="wrap"><div class="page-body fade"><h1>Index</h1>{body}</div></div>'
     html += foot()
     html += close()
     return html
@@ -841,6 +869,16 @@ def _md_context(**overrides):
     """Default context for process_md_to_html: warn, build_time, content_dir, site_dir. Merge with overrides."""
     copy = overrides.get("copy", load_index_copy())
     return {"warn": _warn, "build_time": BUILD_TIME, "content_dir": CONTENT_DIR, "site_dir": (copy.get("site_dir") or "").strip(), **overrides}
+
+
+def _md_context_with_special(nuggets, status_order, explainer_terms=None, **overrides):
+    """Context for process_md_to_html including @glossary, @bibliography, @index, @map placeholder HTML."""
+    ctx = _md_context(nuggets=nuggets, status_order=status_order, **overrides)
+    ctx["glossary_html"] = build_glossary_body(nuggets, explainer_terms)
+    ctx["bibliography_html"] = build_bibliography_body(nuggets)
+    ctx["index_html"] = build_tags_body(nuggets, status_order)
+    ctx["map_html"] = build_map_body(nuggets, status_order)
+    return ctx
 
 
 def build_index(nuggets, index_copy, status_order, collected_md_refs=None):
@@ -868,8 +906,8 @@ def build_static_page(title, body_html, wrap_class=""):
 MIN_TAG_COUNT_FOR_MAP = 3
 
 
-def build_map_graph_page(nuggets, status_order):
-    """Full page with standard nav and background that embeds the map graph SVG and filter menus."""
+def build_map_body(nuggets, status_order):
+    """Map graph filters + SVG + filter script. For @map directive."""
     tag_counts = {}
     for n in nuggets:
         for t in n.get("tags", []):
@@ -924,23 +962,17 @@ def build_map_graph_page(nuggets, status_order):
 })();
 </script>"""
     svg = build_graph_svg(nuggets, show_title=False, link_nuggets=True, node_radius=40)
-    body_html = (
-        filters_html
-        + '\n<div class="map-graph-wrap">'
-        + svg
-        + '</div>'
-        + script
-    )
-    return build_static_page("Map", body_html, wrap_class="wrap--full")
+    return filters_html + '\n<div class="map-graph-wrap">' + svg + '</div>' + script
 
 
-def build_md_file_page(md_path, nuggets=None, collected_md_refs=None, status_order=None, index_copy=None):
-    context = _md_context(
-        nuggets=nuggets or [],
-        status_order=status_order,
-        copy=index_copy,
-        page=md_path.stem,
-    )
+def build_map_graph_page(nuggets, status_order):
+    return build_static_page("Map", build_map_body(nuggets, status_order), wrap_class="wrap--full")
+
+
+def build_md_file_page(md_path, nuggets=None, collected_md_refs=None, status_order=None, index_copy=None, explainer_terms=None):
+    nuggets = nuggets or []
+    status_order = status_order or []
+    context = _md_context_with_special(nuggets, status_order, explainer_terms, copy=index_copy, page=md_path.stem)
     body_html = process_md_to_html(md_path, context, collected_md_refs=collected_md_refs)
     title = _first_h1(md_path) or md_path.stem.replace("-", " ").title()
     html = head(title)
@@ -951,9 +983,11 @@ def build_md_file_page(md_path, nuggets=None, collected_md_refs=None, status_ord
     return html
 
 
-def build_md_dir_page(dir_path, nuggets=None, collected_md_refs=None):
+def build_md_dir_page(dir_path, nuggets=None, collected_md_refs=None, status_order=None, explainer_terms=None):
     page_md = dir_path / "page.md"
-    context = _md_context(nuggets=nuggets or [])
+    nuggets = nuggets or []
+    status_order = status_order or []
+    context = _md_context_with_special(nuggets, status_order, explainer_terms, page=dir_path.name)
     body_html = process_md_to_html(page_md, context, collected_md_refs=collected_md_refs)
     title = _first_h1(page_md) or dir_path.name.replace("-", " ").title()
     html = head(title)
@@ -975,8 +1009,8 @@ def build_internal_page(nuggets=None, collected_md_refs=None):
     return html
 
 
-def build_bibliography_page(nuggets):
-    """Build Bibliography from #ref (keyword + full text) in #provenance. Grouped by keyword with headings; lists which nuggets cite each."""
+def build_bibliography_body(nuggets):
+    """Bibliography table HTML from #ref in #provenance. For @bibliography directive."""
     by_keyword = {}
     for n in nuggets:
         tag = nugget_tag(n)
@@ -1009,7 +1043,11 @@ def build_bibliography_page(nuggets):
             parts.append(
                 f'<div class="bib-entry"><span class="bib-text">{ref_esc}</span> {nugget_links}</div>'
             )
-    body = "\n".join(parts) if parts else "<p class=\"dim\">No references yet. Add <code>#ref</code> lines (keyword + citation text) inside <code>#provenance</code> in any nugget.</p>"
+    return "\n".join(parts) if parts else "<p class=\"dim\">No references yet. Add <code>#ref</code> lines (keyword + citation text) inside <code>#provenance</code> in any nugget.</p>"
+
+
+def build_bibliography_page(nuggets):
+    body = build_bibliography_body(nuggets)
     html = head("Bibliography")
     html += nav(from_d=True)
     html += f'<div class="wrap"><div class="page-body fade"><h1>Bibliography</h1><p class="dim repo-intro">References from all nuggets, grouped by keyword.</p>{body}</div></div>'
@@ -1018,8 +1056,8 @@ def build_bibliography_page(nuggets):
     return html
 
 
-def build_glossary_page(nuggets, explainer_terms=None):
-    """Build Glossary from #term (Term — Definition) in all nuggets. Grouped by term; term in bold, definitions indented. Explainers merged below each term's definition."""
+def build_glossary_body(nuggets, explainer_terms=None):
+    """Glossary entries HTML from #term in nuggets. For @glossary directive."""
     explainer_by_slug = {e["slug"]: e for e in (explainer_terms or [])}
     by_entry = {}
     for n in nuggets:
@@ -1070,7 +1108,11 @@ def build_glossary_page(nuggets, explainer_terms=None):
             f'<div class="gloss-defs">' + "\n".join(def_blocks) + '</div>'
             f'</div>'
         )
-    body = "\n".join(parts) if parts else "<p class=\"dim\">No terms yet. Add <code>#term Term — Definition</code> lines in any nugget.</p>"
+    return "\n".join(parts) if parts else "<p class=\"dim\">No terms yet. Add <code>#term Term : Definition</code> lines in any nugget.</p>"
+
+
+def build_glossary_page(nuggets, explainer_terms=None):
+    body = build_glossary_body(nuggets, explainer_terms)
     html = head("Glossary")
     html += nav(from_d=True)
     html += f'<div class="wrap"><div class="page-body fade"><h1>Glossary</h1><p class="dim repo-intro">Key terms from all nuggets.</p>{body}</div></div>'
@@ -1096,7 +1138,7 @@ def main():
     index_copy = load_index_copy()
     site_dir = (index_copy.get("site_dir") or "").strip()
     if not site_dir:
-        raise SystemExit("config/index.txt must set site_dir")
+        raise SystemExit("config/settings.txt must set site_dir")
     SITE_DIR = _ROOT / site_dir
     filter_num = None
     if "--nugget" in sys.argv:
@@ -1168,33 +1210,29 @@ def main():
 
         explainer_terms = load_explainers_csv(EXPLAINERS_CSV) if EXPLAINERS_CSV.exists() else []
 
-        for key in get_more_pages(index_copy):
-            out_name = more_page_output_name(key)
-            if key == "bibliography":
-                (SITE_DIR / out_name).write_text(build_bibliography_page(nuggets), encoding="utf-8")
-            elif key == "glossary":
-                (SITE_DIR / out_name).write_text(build_glossary_page(nuggets, explainer_terms), encoding="utf-8")
-            elif key == "tags":
-                (SITE_DIR / out_name).write_text(build_tags_page(nuggets, status_order, explainer_terms), encoding="utf-8")
-            elif key == "map":
-                (SITE_DIR / out_name).write_text(build_map_graph_page(nuggets, status_order), encoding="utf-8")
-            else:
-                _warn(f"more_pages key {key!r} has no builder")
-                continue
-            print(f"  Built {out_name}")
-
         collected_md_refs = set()
         nav_items = get_nav_items(index_copy)
+        nav_built_paths = set()
         for href, label, kind, path in nav_items:
             if kind == "file":
+                nav_built_paths.add(path)
                 (SITE_DIR / href).write_text(
-                    build_md_file_page(path, nuggets, collected_md_refs, status_order, index_copy),
+                    build_md_file_page(path, nuggets, collected_md_refs, status_order, index_copy, explainer_terms),
                     encoding="utf-8",
                 )
                 print(f"  Built {href}")
             elif kind == "dir":
-                (SITE_DIR / href).write_text(build_md_dir_page(path, nuggets, collected_md_refs), encoding="utf-8")
+                nav_built_paths.add(path / "page.md")
+                (SITE_DIR / href).write_text(build_md_dir_page(path, nuggets, collected_md_refs, status_order, explainer_terms), encoding="utf-8")
                 print(f"  Built {href}")
+
+        for _label, list_href, list_path in get_list_menu_items(index_copy):
+            if list_path and list_path not in nav_built_paths:
+                (SITE_DIR / list_href).write_text(
+                    build_md_file_page(list_path, nuggets, collected_md_refs, status_order, index_copy, explainer_terms),
+                    encoding="utf-8",
+                )
+                print(f"  Built {list_href}")
 
         (SITE_DIR / "internal.html").write_text(build_internal_page(nuggets, collected_md_refs), encoding="utf-8")
         print("  Built internal.html")
@@ -1206,7 +1244,7 @@ def main():
             if md_path in built_md_refs:
                 continue
             built_md_refs.add(md_path)
-            body_html = process_md_to_html(md_path, _md_context(nuggets=nuggets), collected_md_refs)
+            body_html = process_md_to_html(md_path, _md_context_with_special(nuggets, status_order, explainer_terms), collected_md_refs)
             title = md_path.stem.replace("-", " ").title()
             out_name = content_path_to_output_name(md_path, CONTENT_DIR)
             if out_name:

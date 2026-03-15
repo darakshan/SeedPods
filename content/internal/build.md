@@ -12,9 +12,9 @@ Do not run `python3 src/build.py` directly; use the justfile so the venv (with t
 
 ---
 
-## config/index.txt
+## config/settings.txt
 
-The build requires `config/index.txt`. It is a **key–value config file**: one `key: value` per line. Empty lines and lines whose first non-space character is `#` are skipped. Trailing comments are supported: anything after ` #` on a line is ignored (the space before `#` matters).
+The build requires `config/settings.txt`. It is a **key–value config file**: one `key: value` per line. Empty lines and lines whose first non-space character is `#` are skipped. Trailing comments are supported: anything after ` #` on a line is ignored (the space before `#` matters).
 
 ### Required key
 
@@ -27,6 +27,10 @@ The build requires `config/index.txt`. It is a **key–value config file**: one 
   - **Directory**: if `content/<token>/` is a directory and `content/<token>/page.md` exists, that directory is the page; the content is taken from `content/<token>/page.md` and emitted as `<token>.html`.
 
   The link label in the nav is the token with hyphens replaced by spaces and title-cased (e.g. `about` → "About", `more-is-different` → "More Is Different"). If neither the file nor the directory exists, the build warns and the item is still listed but the target is missing.
+
+- **list_menu** — Optional. When the nav includes `list`, this key controls the **Lists** pulldown. If `list_menu` is missing or empty, the Lists nav item is a single link to `list.html` (no dropdown). If set, it defines the dropdown entries: comma-separated items, each of the form `Label | target`. **Target** is always a **content path**: a token that resolves like nav (e.g. `list` → `content/list.md` → `list.html`, `glossary` → `content/glossary.md` → `glossary.html`). Each target must have either `content/<token>.md` or `content/<token>/page.md`. Pages for list_menu targets are built if not already built from nav.
+
+  Example: `list_menu: Nuggets | list, Index | tags, Bibliography | bibliography, Glossary | glossary, Map | map`
 
 ### Other keys (used by the build or MD pipeline)
 
@@ -58,13 +62,17 @@ The same applies to `internal`: `content/internal/page.md` is the main Internal 
 
 In `.md` files under `content/` (home, nav file/dir pages, internal, and any referenced docs), the pipeline is: **@include**, then **@samples** / **@nuggets** / **@timestamp**, then **@link**, then Markdown → HTML. The order is fixed and affects both what is valid and how output is produced: @include must run first so included content is processed by the rest of the pipeline; the line-based directives must run before @link so that link text (e.g. `@link(002, @samples)`) is not interpreted as a directive; then Markdown runs on the result.
 
-The five @ directives are:
+The @ directives are:
 
 1. **@include**  
 2. **@samples**  
 3. **@nuggets**  
-4. **@timestamp**  
-5. **@link(locator, text)**
+4. **@glossary**  
+5. **@bibliography**  
+6. **@index**  
+7. **@map**  
+8. **@timestamp**  
+9. **@link(locator, text)**
 
 ### @include
 
@@ -81,6 +89,26 @@ The five @ directives are:
 
 - **Syntax**: A line that is exactly `@nuggets` (or starting with `@nuggets`).
 - **Effect**: The line is replaced by the full list of all nugget rows (same block as the list page), with sort UI. No “view all” link is added (the page is the full list).
+
+### @glossary
+
+- **Syntax**: A line that is exactly `@glossary`.
+- **Effect**: The line is replaced by the glossary table (terms and definitions from all nuggets, grouped by term). Use in any `.md` file (e.g. `content/glossary.md`) to build a glossary page.
+
+### @bibliography
+
+- **Syntax**: A line that is exactly `@bibliography`.
+- **Effect**: The line is replaced by the bibliography (references from `#ref` in `#provenance`, grouped by keyword). Use in any `.md` file (e.g. `content/bibliography.md`) to build a bibliography page.
+
+### @index
+
+- **Syntax**: A line that is exactly `@index`.
+- **Effect**: The line is replaced by the index (nuggets by tag and by status). Use in any `.md` file (e.g. `content/tags.md`) to build an index page.
+
+### @map
+
+- **Syntax**: A line that is exactly `@map`.
+- **Effect**: The line is replaced by the map (graph of nuggets with category/status filters). Use in any `.md` file (e.g. `content/map.md`) to build a map page.
 
 ### @timestamp
 
@@ -112,12 +140,13 @@ Inside nugget source files (`content/nuggets/*.txt`), these directives are used 
 
 ## Build order and outputs
 
-1. **Config**: `config/index.txt` is read; `site_dir` must be set.
+1. **Config**: `config/settings.txt` is read; `site_dir` must be set.
 2. **Nuggets**: All `content/nuggets/*.txt` are parsed; nugget pages are written to `site_dir/<tag>.html`.
 3. **Assets**: `config/site.css` and `config/logo.svg` are copied into `site_dir`.
 4. **Nav-derived pages**: For each nav item, either `content/<token>.md` or `content/<token>/page.md` is built to `site_dir/<token>.html`.
 5. **Internal**: `content/internal/page.md` is always built as `site_dir/internal.html`.
 6. **Referenced .md**: Any `.md` file reached by @link from the main MD pages (transitively) is built to `site_dir` with the path-based name (e.g. `internal-inside.html`).
-7. **Index, list, tags, etc.**: `site_dir/index.html` (from `content/home.md`), `tags.html`, `list.html` (if list is in nav), `bibliography.html`, `glossary.html`, `map.svg`, `map-graph.html`, and `4u-ai.txt` are generated as needed.
+7. **List-menu pages**: For each target in `list_menu` (e.g. glossary, bibliography, tags, map) that is not already built from nav, the corresponding `content/<token>.md` (or `content/<token>/page.md`) is built to `site_dir/<token>.html`. Those `.md` files use @glossary, @bibliography, @index, or @map to inject the built table or graph.
+8. **Index and assets**: `site_dir/index.html` (from `content/home.md`), `map.svg`, and `4u-ai.txt` are generated.
 
 Required files for a full build include: `content/home.md`, `content/internal/page.md`, and for each nav token either `content/<token>.md` or `content/<token>/page.md`. `config/status.txt` is also required.

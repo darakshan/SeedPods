@@ -98,7 +98,7 @@ def _render_samples_html(
     include_repo_link=True,
     base_href="d/",
 ):
-    """Render sample seed rows (or full seed-list-section when full_section=True). copy = index.txt dict.
+    """Render sample seed rows (or full seed-list-section when full_section=True). copy = settings.txt dict.
     count=None means all nuggets. base_href is prefix for links (e.g. '' for list page, 'd/' for index)."""
     status_rank = {s: i for i, s in enumerate(status_order)}
     key_status = lambda n: status_rank.get(n.get("status", "empty"), len(status_order))
@@ -188,7 +188,7 @@ def _render_samples_html(
 
 def expand_page_directives(text, context):
     """Replace @directives in page content. Returns (text_with_placeholders, {placeholder: html}).
-    context: nuggets, status_order, copy (from index.txt), build_time, page.
+    context: nuggets, status_order, copy (from settings.txt), build_time, page.
     @timestamp is replaced everywhere it appears (whole line or inline)."""
     if not text:
         return text, {}
@@ -241,6 +241,22 @@ def expand_page_directives(text, context):
                 replacements[placeholder] = block
                 out.append(placeholder)
             continue
+        if stripped == "@glossary" and context.get("glossary_html") is not None:
+            replacements["{{GLOSSARY}}"] = context["glossary_html"]
+            out.append("{{GLOSSARY}}")
+            continue
+        if stripped == "@bibliography" and context.get("bibliography_html") is not None:
+            replacements["{{BIBLIOGRAPHY}}"] = context["bibliography_html"]
+            out.append("{{BIBLIOGRAPHY}}")
+            continue
+        if stripped == "@index" and context.get("index_html") is not None:
+            replacements["{{INDEX}}"] = context["index_html"]
+            out.append("{{INDEX}}")
+            continue
+        if stripped == "@map" and context.get("map_html") is not None:
+            replacements["{{MAP}}"] = context["map_html"]
+            out.append("{{MAP}}")
+            continue
         if stripped == "@timestamp" and timestamp_str:
             out.append(timestamp_str)
             continue
@@ -252,7 +268,7 @@ def expand_page_directives(text, context):
 
 def process_md_to_html(md_path, context=None, collected_md_refs=None):
     """Single pipeline for .md → HTML: load file, @include, @directives, @link, markdown. Returns body HTML.
-    context: copy (index.txt), nuggets, status_order, page, build_time, warn (callable).
+    context: copy (settings.txt), nuggets, status_order, page, build_time, warn (callable).
     collected_md_refs: optional set; referenced .md paths (for @link) are added for build to emit."""
     if context is None:
         context = {}

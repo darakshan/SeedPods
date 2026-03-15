@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 check.py — Review nuggets for structure guidelines.
-- Surface/depth word counts vs config/index.txt limits
+- Surface/depth word counts vs config/settings.txt limits
 - Every nugget pointed to by at least min_related_in_degree others (#related)
 - Underlinked: nuggets with 0 #related
 - #related max 5

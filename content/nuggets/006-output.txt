@@ -32,9 +32,9 @@ This is why "it's just predicting the next word" fails as a dismissal. It descri
 The reverse also holds. The same underlying capacity can express itself as wildly different outputs depending on context. A person who speaks three languages isn't running three different processes — they're running one process that finds different output interfaces. A child who can't yet articulate what they understand still understands it — as does an artistic person whose inner experience resists verbal form, or a non-speaking person whose output channel masks a fully intact inner life. (See nugget #22.) The output is constrained by the available expressive channel in a way the process is not. This is worth sitting with: whatever is happening inside you when you think is not the same thing as the words you find for it. The words are downstream. They are the trace.
 
 #provenance
-#term Output interface — the channel through which a process expresses itself externally. The interface constrains and shapes what can be expressed; it does not determine what is being expressed.
-#term Process — in Whitehead's sense, the actual unfolding activity of an occasion of experience. Distinct from its products or traces.
-#term Prediction — used here in the broadest sense: any process that selects a next state given a current one. Deliberately spans thermostats and minds.
+#term Output interface: the channel through which a process expresses itself externally. The interface constrains and shapes what can be expressed; it does not determine what is being expressed.
+#term Process: in Whitehead's sense, the actual unfolding activity of an occasion of experience. Distinct from its products or traces.
+#term Prediction: used here in the broadest sense: any process that selects a next state given a current one. Deliberately spans thermostats and minds.
 
 Intellectual lineage:
 

@@ -64,10 +64,10 @@ Caloric theory was developed primarily by Antoine Lavoisier in the late 18th cen
 
 The luminiferous ether was required by classical wave theory and formalized by Maxwell's electromagnetic equations in the 1860s. The Michelson-Morley experiment of 1887 produced the null result that precipitated the crisis. Einstein's 1905 special relativity paper dissolved the assumption entirely.
 
-#term Paradigm shift — Thomas Kuhn's term for the revolutionary replacement of one scientific framework by another, as distinct from normal cumulative progress. From The Structure of Scientific Revolutions (1962, University of Chicago Press).
-#term Fallacy of misplaced concreteness — Whitehead's term for the error of mistaking a useful abstraction for the underlying concrete reality. Appears throughout Process and Reality (1929).
-#term The hard problem of consciousness — philosopher David Chalmers' term for the question of why physical processes give rise to subjective experience at all. From Facing Up to the Problem of Consciousness, Journal of Consciousness Studies (1995).
-#term Science advances one funeral at a time — attributed to Max Planck. A version appears in his Scientific Autobiography (1949): "A new scientific truth does not triumph by convincing its opponents and making them see the light, but rather because its opponents eventually die and a new generation grows up that is familiar with it."
+#term Paradigm shift: Thomas Kuhn's term for the revolutionary replacement of one scientific framework by another, as distinct from normal cumulative progress. From The Structure of Scientific Revolutions (1962, University of Chicago Press).
+#term Fallacy of misplaced concreteness: Whitehead's term for the error of mistaking a useful abstraction for the underlying concrete reality. Appears throughout Process and Reality (1929).
+#term The hard problem of consciousness: philosopher David Chalmers' term for the question of why physical processes give rise to subjective experience at all. From Facing Up to the Problem of Consciousness, Journal of Consciousness Studies (1995).
+#term Science advances one funeral at a time: attributed to Max Planck. A version appears in his Scientific Autobiography (1949): "A new scientific truth does not triumph by convincing its opponents and making them see the light, but rather because its opponents eventually die and a new generation grows up that is familiar with it."
 
 #ref whitehead Whitehead, A.N. Process and Reality (1929). The primary text. Adventures of Ideas (1933) is more accessible.
 #ref kuhn Kuhn, T.S. The Structure of Scientific Revolutions (1962).
