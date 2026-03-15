@@ -1,5 +1,3 @@
-#number 036
-#shortname universenoticing
 #title You Are the Universe Noticing Something
 #subtitle Teilhard and Whitehead
 #status rough

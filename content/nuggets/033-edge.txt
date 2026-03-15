@@ -1,5 +1,3 @@
-#number 033
-#shortname edge
 #title The Edge Is Where Everything Happens
 #subtitle The Mandelbrot Boundary
 #status rough

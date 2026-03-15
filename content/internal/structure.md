@@ -26,8 +26,7 @@ The visual language. Describes (and eventually will contain) illustrations, anim
 
 Each seed also carries:
 
-- number (permanent identifier)
-- short name (used in filename and URL)
+- number and short name (from filename: NNN-shortname.txt)
 - title, subtitle (one sentence)
 - status (see below)
 - date added

@@ -1,5 +1,3 @@
-#number 020
-#shortname penrose
 #title The Arrow Points Somewhere Else
 #subtitle Penrose was right that Gödel matters. He was wrong about where the arrow points.
 #status partial

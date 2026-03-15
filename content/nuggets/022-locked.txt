@@ -1,5 +1,3 @@
-#number 022
-#shortname locked
 #title The Channel Is Not the Capacity
 #subtitle We mistook the difficulty of output for the absence of inner life.
 #status draft1

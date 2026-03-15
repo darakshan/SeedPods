@@ -5,7 +5,7 @@ The build script parses nugget files strictly. Follow this grammar so new or rev
 ###File
 
 - Location: `nuggets/` directory.
-- Name: `NNN-shortname.txt` where NNN is the 3-digit zero-padded number (e.g. 001, 020) and shortname matches the `#shortname` value. Lowercase, no spaces.
+- Name: `NNN-shortname.txt` where NNN is the 3-digit zero-padded number (e.g. 001, 020) and shortname is a one-word or hyphenated slug. Lowercase, no spaces. The number and shortname are derived from the filename only; do not put them in the file.
 - Encoding: UTF-8.
 
 ###Structure (order is fixed)
@@ -18,14 +18,12 @@ The build script parses nugget files strictly. Follow this grammar so new or rev
 - Each line: `#fieldname value` (one space after the hash, field name, space, rest of line is value).
 - Field names are case-insensitive; the parser lowercases them.
 - Required fields and format:
-  - `#number` — exactly the nugget id. Use 3-digit zero-padding (001, 002, … 020, 021). Must match the NNN in the filename.
-  - `#shortname` — one word or hyphenated phrase, lowercase, no spaces (e.g. caloric, inside, past-present). Must match the shortname in the filename.
   - `#title` — full title; may contain spaces and punctuation.
   - `#subtitle` — one sentence; may contain spaces and punctuation.
   - `#status` — exactly one of: empty | partial | prelim | rough | draft1 | final
   - `#date` — date string (e.g. 2026-03-11).
   - `#tags` — comma-separated list. Each tag: lowercase, multi-word tags hyphenated (e.g. history-of-science, AI). No spaces after commas required but allowed.
-  - `#related` — comma-separated list of other nugget numbers. Use the same string as each target nugget’s `#number` (e.g. 002, 011, 018). Max 5. Links resolve by string equality, so "1" will not match a nugget whose `#number` is "001".
+  - `#related` — comma-separated list of other nugget numbers. The NNN from each target's filename (e.g. 002, 011, 018). Max 5. Links resolve by string equality, so "1" will not match a nugget whose filename starts with "001".
 
 ###References (#ref)
 
@@ -50,17 +48,15 @@ The build script parses nugget files strictly. Follow this grammar so new or rev
 
 ###Parsing rules (what the build does)
 
-- Lines starting with `#`: after the `#`, the first token is the key; the rest of the line (after the first run of whitespace) is the value. Keys in the metadata set (number, shortname, title, subtitle, status, date, tags, related) are stored as meta; value is trimmed. Any other key starts a layer and subsequent non-`#` lines are appended to that layer’s body.
+- Lines starting with `#`: after the `#`, the first token is the key; the rest of the line (after the first run of whitespace) is the value. Keys in the metadata set (title, subtitle, status, date, tags, related) are stored as meta; value is trimmed. Number and shortname are derived from the filename (NNN-shortname) and are not read from the file. Any other key starts a layer and subsequent non-`#` lines are appended to that layer's body.
 - Tags: meta["tags"] is split on commas, each item stripped.
-- Related: meta["related"] is split on commas, each item stripped. Matching to other nuggets is by exact string equality of `#number`.
+- Related: meta["related"] is split on commas, each item stripped. Matching to other nuggets is by exact string equality of the nugget number (the NNN from the filename).
 
 ###Minimal valid nugget (template)
 
 The following lines need "#" before each one. It is not included here because it has a different meaning for MarkDown, even inside triple quotes.
 
 ```
-number: 999
-shortname: example
 title: Example Title
 subtitle: One sentence subtitle.
 status: empty
@@ -74,4 +70,4 @@ script: TBD
 images: TBD
 ```
 
-Save as `nuggets/999-example.txt` (number and shortname must match filename).
+Save as `nuggets/999-example.txt`. The number (999) and shortname (example) come from the filename only.

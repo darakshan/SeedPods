@@ -1,5 +1,3 @@
-#number 037
-#shortname assembly
 #title Every Sentence Becomes a Word
 #subtitle TBD
 #status prelim

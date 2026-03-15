@@ -1,5 +1,3 @@
-#number 012
-#shortname autopoiesis
 #title The Cell That Makes Itself
 #subtitle Life is defined not by what it's made of, but by the circular process that keeps making it.
 #status draft1

@@ -1,5 +1,3 @@
-#number 023
-#shortname stories
 #title Reality Is Made of Stories, Not Atoms
 #subtitle The universe didn't become meaningful when humans arrived. Meaning is older than that.
 #status empty

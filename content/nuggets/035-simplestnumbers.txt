@@ -1,5 +1,3 @@
-#number 035
-#shortname simplestnumbers
 #title The Simplest Numbers Come First
 #subtitle Farey, Benford, and the Shape of Infinity
 #status rough

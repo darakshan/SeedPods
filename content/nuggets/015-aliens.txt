@@ -1,5 +1,3 @@
-#number 015
-#shortname aliens
 #title Aliens Are Among Us — and We Built Them
 #subtitle The surprise is not that they arrived. The surprise is where they came from.
 #status empty

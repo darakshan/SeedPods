@@ -1,5 +1,3 @@
-#number 007
-#shortname vacuum
 #title The Vacuum Is Not Empty
 #subtitle The quantum field seethes with potential. The event is what the field does.
 #status prelim

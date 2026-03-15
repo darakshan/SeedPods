@@ -47,10 +47,10 @@ python build.py --nugget 001
 
 Each nugget is a plain text file in `nuggets/`. Example: `001-caloric.txt`
 
+The filename gives the nugget identity: `001-caloric.txt` means number 001, shortname caloric. Do not put #number or #shortname in the file.
+
 Single-line metadata fields start with `#fieldname value`:
 ```
-#number 001
-#shortname caloric
 #title The Map That Was Wrong
 #subtitle Every era has a framework so obvious it's invisible — until it isn't.
 #status draft1

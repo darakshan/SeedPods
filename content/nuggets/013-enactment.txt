@@ -1,5 +1,3 @@
-#number 013
-#shortname enactment
 #title The Organism Enacts Its World
 #subtitle Cognition is not passive reception. The organism and its environment co-arise.
 #status prelim

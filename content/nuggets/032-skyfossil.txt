@@ -1,5 +1,3 @@
-#number 032
-#shortname skyfossil
 #title The Sky Is a Fossil Record
 #subtitle Fossils of Primal Evolution
 #status rough

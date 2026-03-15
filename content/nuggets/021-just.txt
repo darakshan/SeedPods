@@ -1,5 +1,3 @@
-#number 021
-#shortname just
 #title The Word "Just" Is a Confession
 #subtitle When someone says a process is "just" doing something, they've described the output and mistaken it for an explanation.
 #status draft1

@@ -1,5 +1,3 @@
-#number 005
-#shortname freewill
 #title Freedom Is What Nature Does Everywhere
 #subtitle Free will is not the exception to physics. It is physics, at its most complex and self-aware.
 #status prelim

@@ -1,5 +1,3 @@
-#number 006
-#shortname output
 #title You Can't Judge a Process by Its Output
 #subtitle A thermostat predicts. Mozart predicted. The simplicity of the output tells you nothing.
 #status draft1

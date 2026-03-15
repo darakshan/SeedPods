@@ -1,5 +1,3 @@
-#number 028
-#shortname network
 #title The Network That Experiences Itself
 #subtitle Stars and galaxies are not isolated objects. From inside a light beam, there is no distance between them at all.
 #status partial

@@ -1,5 +1,3 @@
-#number 011
-#shortname moreidifferent
 #title More Is Different
 #subtitle Nothing was added. The numbers just got large enough.
 #status rough

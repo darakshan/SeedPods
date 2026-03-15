@@ -1,5 +1,3 @@
-#number 002
-#shortname events
 #title Reality Is Events, Not Things
 #subtitle The particle is the abstraction. The event is what's actually there.
 #status draft1

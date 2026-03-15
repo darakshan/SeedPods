@@ -1,5 +1,3 @@
-#number 003
-#shortname inside
 #title Everything Has an Inside
 #subtitle Not just brains. Not just animals. Experience may go all the way down.
 #status draft1

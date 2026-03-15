@@ -1,5 +1,3 @@
-#number 027
-#shortname usedtothink
 #title We Used to Think. Now We Know.
 #subtitle The phrase that flatters the present and buries the past — and will be used against us.
 #status draft1

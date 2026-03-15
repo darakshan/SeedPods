@@ -1,5 +1,3 @@
-#number 019
-#shortname funerals
 #title Science Advances One Funeral at a Time
 #subtitle The map doesn't get replaced. The people holding the old map get replaced.
 #status prelim

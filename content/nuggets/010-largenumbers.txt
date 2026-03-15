@@ -1,5 +1,3 @@
-#number 010
-#shortname largenumbers
 #title Our Intuitions About Large Numbers Are Completely Unreliable
 #subtitle The number Gödel constructed was just a number — arrived at by routine steps. And it broke the system.
 #status partial

@@ -1,5 +1,3 @@
-#number 004
-#shortname self
 #title The Self Is a Pattern, Not a Thing
 #subtitle The mystic's insight and the philosopher's proof arrive at the same place.
 #status prelim

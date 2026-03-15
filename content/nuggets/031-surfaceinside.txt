@@ -1,5 +1,3 @@
-#number 031
-#shortname surfaceinside
 #title The Surface Is the Inside 
 #subtitle The Bubble
 #status rough

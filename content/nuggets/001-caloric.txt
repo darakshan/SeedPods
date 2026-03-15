@@ -1,5 +1,3 @@
-#number 001
-#shortname caloric
 #title The Map That Was Wrong
 #subtitle Every era has a framework so obvious it's invisible — until it isn't.
 #status draft1

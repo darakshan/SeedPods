@@ -101,8 +101,7 @@ def parse_nugget(filepath, warn=None):
     current_layer = None
     buffer = []
 
-    SINGLE_LINE = {"number", "shortname", "title", "subtitle", "status",
-                   "date", "tags", "related"}
+    SINGLE_LINE = {"title", "subtitle", "status", "date", "tags", "related"}
 
     def flush():
         if current_layer and current_layer not in SINGLE_LINE:
@@ -194,9 +193,12 @@ def parse_nugget(filepath, warn=None):
     }
 
     stem = filepath.stem
-    prefix = stem.split("-")[0] if "-" in stem else ""
-    if prefix.isdigit() and meta.get("number") and meta["number"] != prefix:
-        w(f"Warning: {filepath}: filename prefix {prefix} does not match #number {meta['number']}.")
+    if "-" in stem:
+        meta["number"] = stem.split("-", 1)[0]
+        meta["shortname"] = stem.split("-", 1)[1]
+    else:
+        meta["number"] = ""
+        meta["shortname"] = ""
 
     return meta
 

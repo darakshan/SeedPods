@@ -1,5 +1,3 @@
-#number 018
-#shortname magnetization
 #title Ideas Magnetize Through a Group Like Iron
 #subtitle Only a seed group of influencers is necessary. Then the field does the rest.
 #status empty

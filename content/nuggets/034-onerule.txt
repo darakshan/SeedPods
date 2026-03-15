@@ -1,5 +1,3 @@
-#number 034
-#shortname onerule
 #title One Rule Is Enough
 #subtitle The Single Iterating Point
 #status rough

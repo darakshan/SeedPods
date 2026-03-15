@@ -1,5 +1,3 @@
-#number 024
-#shortname ghostmachine
 #title Ghost in the Machine
 #subtitle TBD
 #status prelim

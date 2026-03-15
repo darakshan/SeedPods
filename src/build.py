@@ -1138,7 +1138,7 @@ def main():
             else:
                 seen_num[num] = n.get("filename")
     if duplicate_nums:
-        lines = [f"Duplicate #number {num}: {a}.txt and {b}.txt" for num, a, b in duplicate_nums]
+        lines = [f"Duplicate nugget number {num}: {a}.txt and {b}.txt" for num, a, b in duplicate_nums]
         raise SystemExit("Build failed:\n  " + "\n  ".join(lines))
 
     for md_path in _get_md_page_paths():

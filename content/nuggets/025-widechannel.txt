@@ -1,5 +1,3 @@
-#number 025
-#shortname widechannel
 #title The Wide Channel and the Unanswered Question
 #subtitle A fluent output is evidence of something — but not evidence of what.
 #status empty
