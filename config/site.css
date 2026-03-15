@@ -19,6 +19,13 @@ body.nav-scrolled .nav-logo-icon{height:1.4em;margin-top:0;margin-bottom:0}
 .nav-item-dropdown summary{font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);cursor:pointer;list-style:none}
 .nav-item-dropdown summary::-webkit-details-marker{display:none}
 .nav-item-dropdown summary:hover{color:var(--ink)}
+.nav-lists-dropdown{display:flex;align-items:center;gap:.15rem}
+.nav-lists-dropdown > a{font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);text-decoration:none;transition:color .2s}
+.nav-lists-dropdown > a:hover{color:var(--ink)}
+.nav-dropdown-trigger{background:none;border:none;font-size:.6rem;color:var(--dim);cursor:pointer;padding:0 .2rem;line-height:1;font-family:inherit}
+.nav-dropdown-trigger:hover{color:var(--ink)}
+.nav-lists-dropdown .nav-dropdown{display:none;position:absolute;top:100%;left:0;margin-top:0;padding:.5rem 0;min-width:10rem;background:var(--paper);border:1px solid var(--line);box-shadow:0 .25rem 1rem rgba(0,0,0,.08);list-style:none}
+.nav-lists-dropdown:hover .nav-dropdown,.nav-lists-dropdown.nav-dropdown-open .nav-dropdown{display:block}
 .nav-dropdown{position:absolute;top:100%;left:0;margin:0;padding:.5rem 0;min-width:10rem;background:var(--paper);border:1px solid var(--line);box-shadow:0 .25rem 1rem rgba(0,0,0,.08);list-style:none}
 .nav-dropdown a{display:block;padding:.4rem 1rem;white-space:nowrap}
 .wrap{max-width:860px;margin:0 auto;padding:0 3rem}

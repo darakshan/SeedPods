@@ -2,6 +2,8 @@ nav: about, list, more
 site_base: https://darakshan.github.io/SeedNuggets/
 site_dir: docs  # must match .github/workflows/pages.yml upload path
 
+more_pages: bibliography, glossary, tags, map-graph
+
 section_head: All seeds
 repo_link: Full repository →
 view_all: View all {n} seeds →

@@ -9,6 +9,7 @@ import re
 from pathlib import Path
 
 from nugget_parser import display_number, nugget_tag
+from site_paths import content_path_to_output_name
 
 try:
     import markdown
@@ -18,27 +19,17 @@ except ImportError:
 _ROOT = Path(__file__).resolve().parent.parent
 
 
-def _md_link_output_name(md_path, content_root=None):
-    """Return the d/ filename for a referenced .md file: path relative to content_root (or repo root) with / → -, .md → .html."""
-    root = (content_root or _ROOT).resolve()
-    try:
-        rel = md_path.resolve().relative_to(root)
-    except ValueError:
-        return None
-    parts = list(rel.parts)
-    if not parts or not str(rel).endswith(".md"):
-        return None
-    parts[-1] = Path(parts[-1]).stem + ".html"
-    return "-".join(parts)
-
-
 def expand_links(text, context, base_dir, collected_md_refs=None):
     """Replace @link(locator, text) with <a href="...">text</a>. Runs before markdown.
-    locator: nugget number (e.g. 002) or path like internal/inside.md (relative to repo root).
+    locator: nugget number (e.g. 002), path like internal/inside.md (relative to current file's directory), or d/ filename.
     collected_md_refs: optional set to add referenced .md paths to (for build to emit)."""
     if collected_md_refs is None:
         collected_md_refs = set()
     from nugget_parser import nugget_by_number_flex
+
+    content_root = context.get("content_dir") or _ROOT
+    content_root = Path(content_root).resolve()
+    base_dir = Path(base_dir).resolve()
 
     def repl(m):
         locator = m.group(1).strip()
@@ -54,13 +45,17 @@ def expand_links(text, context, base_dir, collected_md_refs=None):
             href = nugget_tag(n) + ".html"
             return f'<a href="{href}">{_html.escape(link_text)}</a>'
         if locator.endswith(".md"):
-            content_root = context.get("content_dir") or _ROOT
-            md_path = (content_root / locator).resolve()
+            md_path = (base_dir / locator).resolve()
             if not md_path.exists():
                 context.get("warn", lambda msg: None)(f"@link: file not found {locator!r}")
                 return m.group(0)
+            try:
+                md_path.relative_to(content_root)
+            except ValueError:
+                context.get("warn", lambda msg: None)(f"@link: path {locator!r} resolves outside content dir")
+                return m.group(0)
             collected_md_refs.add(md_path)
-            out_name = _md_link_output_name(md_path, content_root)
+            out_name = content_path_to_output_name(md_path, content_root)
             if not out_name:
                 context.get("warn", lambda msg: None)(f"@link: invalid path {locator!r}")
                 return m.group(0)

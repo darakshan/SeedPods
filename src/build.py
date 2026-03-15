@@ -3,7 +3,7 @@
 build.py — Seed Nuggets site generator
 Reads from content/ and config/; writes to d/ (and index.html at root).
 Website root = project root: / serves index.html, /d/ has built HTML, /content/ has source.
-Generates: nugget pages, list.html, tags.html (Index),
+Generates: nugget pages, list.html, more-* (bibliography, glossary, tags, map-graph),
 index.html, about pages, resources (with map), site.css.
 
 Usage:
@@ -37,7 +37,8 @@ from nugget_parser import (
     nugget_tag,
     section_is_tbd,
 )
-from md_pages import process_md_to_html, expand_includes, _md_link_output_name
+from md_pages import process_md_to_html, expand_includes
+from site_paths import content_path_to_output_name, more_page_output_name, get_more_pages
 
 ABOUT_DIR = CONTENT_DIR / "about"
 INTERNAL_DIR = CONTENT_DIR / "internal"
@@ -75,7 +76,7 @@ def _input_files_for_page(main_path):
 
 
 def _referenced_md_from_md_pages():
-    """Set of .md paths referenced via @link(locator, text) from main MD pages (transitive)."""
+    """Set of .md paths referenced via @link(locator, text) from main MD pages (transitive). Paths resolved relative to the file containing the link."""
     refs = set()
     to_scan = list(_get_md_page_paths())
     while to_scan:
@@ -83,10 +84,15 @@ def _referenced_md_from_md_pages():
         if not path.exists():
             continue
         text = expand_includes(path.read_text(encoding="utf-8"), path.parent) if path.suffix == ".md" else ""
+        base_dir = path.parent.resolve()
         for m in re.finditer(r"@link\s*\(\s*([^,)]+)\s*,", text):
             loc = m.group(1).strip()
             if not re.match(r"^\d+$", loc) and ".md" in loc:
-                p = (CONTENT_DIR / loc).resolve()
+                p = (base_dir / loc).resolve()
+                try:
+                    p.relative_to(CONTENT_DIR.resolve())
+                except ValueError:
+                    continue
                 if p not in refs and p.exists():
                     refs.add(p)
                     to_scan.append(p)
@@ -181,13 +187,31 @@ def _head_links(css_href="site.css", icon_href="d/logo.svg"):
 <link rel="icon" type="image/svg+xml" href="{icon_href}">
 """
 
+def _more_page_label(key):
+    return "Index" if key == "tags" else key.replace("-", " ").title()
+
+
 def nav(from_d=False, from_nuggets=False, layer_tabs_html=None):
     """Top nav: logo left; menu items from config index (nav key). All output is under SITE_DIR, which is the web root (same-dir links)."""
     prefix, index_href, logo_src = "", "index.html", "logo.svg"
-    links = "".join(
-        f'<li><a href="{prefix}{href}">{_html.escape(label)}</a></li>'
-        for href, label, _, _ in _nav_items()
-    )
+    link_parts = []
+    more_pages = get_more_pages(load_index_copy())
+    for href, label, _, _ in _nav_items():
+        if href == "list.html":
+            dropdown_items = [f'<li><a href="{prefix}list.html">Nuggets</a></li>']
+            for key in more_pages:
+                dropdown_items.append(f'<li><a href="{prefix}{more_page_output_name(key)}">{_html.escape(_more_page_label(key))}</a></li>')
+            link_parts.append(
+                '<li class="nav-item-dropdown nav-lists-dropdown">'
+                f'<a href="{prefix}list.html">Lists</a>'
+                '<button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-label="Lists menu">▾</button>'
+                '<ul class="nav-dropdown">'
+                + "".join(dropdown_items) +
+                '</ul></li>'
+            )
+        else:
+            link_parts.append(f'<li><a href="{prefix}{href}">{_html.escape(label)}</a></li>')
+    links = "".join(link_parts)
     row = f"""  <div class="nav-row">
   <a href="{index_href}" class="nav-logo"><img src="{logo_src}" alt="" class="nav-logo-icon">Seed Nuggets</a>
   <ul class="nav-links">
@@ -217,6 +241,32 @@ NAV_SCROLL_SCRIPT = """
 </script>
 """
 
+NAV_LISTS_DROPDOWN_SCRIPT = """
+<script>
+(function(){
+  function init(){
+    var wrap = document.querySelector(".nav-lists-dropdown");
+    if (!wrap) return;
+    var trigger = wrap.querySelector(".nav-dropdown-trigger");
+    var link = wrap.querySelector('a[href="list.html"]');
+    var dropdown = wrap.querySelector(".nav-dropdown");
+    function open(){ wrap.classList.add("nav-dropdown-open"); if (trigger) trigger.setAttribute("aria-expanded", "true"); }
+    function close(){ wrap.classList.remove("nav-dropdown-open"); if (trigger) trigger.setAttribute("aria-expanded", "false"); }
+    function toggle(){ wrap.classList.contains("nav-dropdown-open") ? close() : open(); }
+    if (trigger) trigger.addEventListener("click", function(e){ e.preventDefault(); e.stopPropagation(); toggle(); });
+    document.addEventListener("click", function(e){ if (wrap && !wrap.contains(e.target)) close(); });
+    var longPressTimer;
+    if (link) {
+      link.addEventListener("touchstart", function(){ longPressTimer = setTimeout(function(){ open(); longPressTimer = null; }, 500); }, { passive: true });
+      link.addEventListener("touchend", function(){ if (longPressTimer) clearTimeout(longPressTimer); longPressTimer = null; }, { passive: true });
+      link.addEventListener("touchcancel", function(){ if (longPressTimer) clearTimeout(longPressTimer); longPressTimer = null; }, { passive: true });
+    }
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init); else init();
+})();
+</script>
+"""
+
 def foot(logo_href="logo.svg"):
     home_href = "index.html"
     logo_block = f'''
@@ -226,7 +276,7 @@ def foot(logo_href="logo.svg"):
   </a>
 </div>
 '''
-    return logo_block + "\n" + NAV_SCROLL_SCRIPT
+    return logo_block + "\n" + NAV_SCROLL_SCRIPT + "\n" + NAV_LISTS_DROPDOWN_SCRIPT
 
 def head(title, extra="", at_root=False, css_href=None, icon_href=None):
     if css_href is None:
@@ -412,7 +462,8 @@ def build_nugget(n, all_nuggets):
     related_nums = n.get("related", [])
     layers = n.get("layers", {})
 
-    tag_html = " ".join(f'<a href="tags.html#{tag_slug(t)}" class="tag">{t}</a>' for t in tags)
+    tags_href = more_page_output_name("tags")
+    tag_html = " ".join(f'<a href="{tags_href}#{tag_slug(t)}" class="tag">{t}</a>' for t in tags)
 
     rel_nuggets = [nugget_by_number(all_nuggets, r) for r in related_nums]
     for r in related_nums:
@@ -766,24 +817,6 @@ def build_tags_page(nuggets, status_order, explainer_terms=None):
     for status in sorted_statuses:
         status_blocks += block_for_tag(status, f"status-{status}", [n for n in nuggets if n.get("status", "empty") == status])
 
-    terms_block = ""
-    if explainer_terms:
-        sorted_explainer = sorted(explainer_terms, key=lambda t: _explainer_sort_key(t["term"]))
-        term_parts = []
-        for entry in sorted_explainer:
-            term_esc = _html.escape(entry["term"])
-            slug = entry["slug"]
-            term_parts.append(f'<div class="index-entry"><a href="glossary.html#{_html.escape(slug)}">{term_esc}</a> 📺</div>')
-        terms_block = "\n    ".join(term_parts)
-
-    terms_section = ""
-    if terms_block:
-        terms_section = f"""
-    <h2 class="index-section-head">Terms</h2>
-    <div class="index-by-tag">
-    {terms_block}
-    </div>"""
-
     html = head("Index")
     html += nav(from_d=True)
     html += f"""
@@ -796,7 +829,7 @@ def build_tags_page(nuggets, status_order, explainer_terms=None):
     <h2 class="index-section-head">Statuses</h2>
     <div class="index-by-tag">
     {status_blocks}
-    </div>{terms_section}
+    </div>
   </div>
 </div>"""
     html += foot()
@@ -963,13 +996,11 @@ def build_glossary_page(nuggets, explainer_terms=None):
             if definition:
                 def_blocks.append(f'<div class="gloss-def-block"><span class="gloss-def">{def_esc}</span></div>')
         if slug in explainer_by_slug:
-            def_blocks.append(
-                '<div class="gloss-def-block">' + _explainer_block_html(explainer_by_slug[slug]) + '</div>'
-            )
-        else:
-            def_blocks.append(
-                '<div class="gloss-def-block"><p class="dim explainer-notes">(No explainers found yet.)</p></div>'
-            )
+            entry = explainer_by_slug[slug]
+            if entry["links"] or [n for n in entry.get("notes", []) if n != "(No explainers found yet.)"]:
+                def_blocks.append(
+                    '<div class="gloss-def-block">' + _explainer_block_html(entry) + '</div>'
+                )
         entry_id = f' id="{_html.escape(slug)}"'
         parts.append(
             f'<div class="gloss-entry"{entry_id}>'
@@ -1075,8 +1106,20 @@ def main():
 
         explainer_terms = load_explainers_csv(EXPLAINERS_CSV) if EXPLAINERS_CSV.exists() else []
 
-        (SITE_DIR / "tags.html").write_text(build_tags_page(nuggets, status_order, explainer_terms), encoding="utf-8")
-        print("  Built tags.html")
+        for key in get_more_pages(index_copy):
+            out_name = more_page_output_name(key)
+            if key == "bibliography":
+                (SITE_DIR / out_name).write_text(build_bibliography_page(nuggets), encoding="utf-8")
+            elif key == "glossary":
+                (SITE_DIR / out_name).write_text(build_glossary_page(nuggets, explainer_terms), encoding="utf-8")
+            elif key == "tags":
+                (SITE_DIR / out_name).write_text(build_tags_page(nuggets, status_order, explainer_terms), encoding="utf-8")
+            elif key == "map-graph":
+                (SITE_DIR / out_name).write_text(build_map_graph_page(nuggets), encoding="utf-8")
+            else:
+                _warn(f"more_pages key {key!r} has no builder")
+                continue
+            print(f"  Built {out_name}")
 
         collected_md_refs = set()
         nav_items = get_nav_items(index_copy)
@@ -1103,19 +1146,13 @@ def main():
             built_md_refs.add(md_path)
             body_html = process_md_to_html(md_path, _md_context(nuggets=nuggets), collected_md_refs)
             title = md_path.stem.replace("-", " ").title()
-            out_name = _md_link_output_name(md_path, CONTENT_DIR)
+            out_name = content_path_to_output_name(md_path, CONTENT_DIR)
             if out_name:
                 (SITE_DIR / out_name).write_text(build_static_page(title, body_html), encoding="utf-8")
                 print(f"  Built {out_name}")
             for p in collected_md_refs - built_md_refs:
                 if p not in to_build:
                     to_build.append(p)
-
-        (SITE_DIR / "bibliography.html").write_text(build_bibliography_page(nuggets), encoding="utf-8")
-        print("  Built bibliography.html")
-
-        (SITE_DIR / "glossary.html").write_text(build_glossary_page(nuggets, explainer_terms), encoding="utf-8")
-        print("  Built glossary.html")
 
         for stale in ["index.html", "favicon.svg"]:
             p = _ROOT / stale
@@ -1130,8 +1167,6 @@ def main():
 
         (SITE_DIR / "map.svg").write_text(build_graph_svg(nuggets, show_title=False, link_nuggets=True), encoding="utf-8")
         print("  Built map.svg")
-        (SITE_DIR / "map-graph.html").write_text(build_map_graph_page(nuggets), encoding="utf-8")
-        print("  Built map-graph.html")
 
         build_4u_ai_txt()
         print("  Built 4u-ai.txt")
