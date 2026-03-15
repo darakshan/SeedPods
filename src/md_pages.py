@@ -138,9 +138,6 @@ def _render_samples_html(
     </a>"""
     if not full_section:
         return rows_html.strip()
-    head_right = ""
-    if include_repo_link:
-        head_right = f'<a href="{base_href}list.html" class="link-mono-small">{copy.get("repo_link", "Full repository →")}</a>'
     more_wrap = ""
     if include_view_all:
         total = len(nuggets)
@@ -155,7 +152,7 @@ def _render_samples_html(
         sort_ui = """
     <p class="repo-sort-wrap"><label for="repo-sort">Sort: </label><select id="repo-sort" class="repo-sort" aria-label="Sort list">
       <option value="status">By status</option>
-      <option value="number">By number</option>
+      <option value="number" selected>By number</option>
       <option value="alpha">By name</option>
       <option value="recent">By most recent</option>
     </select></p>
@@ -164,6 +161,7 @@ def _render_samples_html(
     </div>
     <script>
     (function(){
+      var STORAGE_KEY = "seednuggets-sort";
       var container = document.getElementById("seed-list-rows");
       var sel = document.getElementById("repo-sort");
       if (!container || !sel) return;
@@ -178,16 +176,14 @@ def _render_samples_html(
         });
         rows.forEach(function(r){ container.appendChild(r); });
       }
-      sel.addEventListener("change", function(){ sortRows(this.value); });
+      var saved = localStorage.getItem(STORAGE_KEY);
+      if (saved && ["status","number","alpha","recent"].indexOf(saved) >= 0) sel.value = saved;
+      sel.addEventListener("change", function(){ var v = this.value; localStorage.setItem(STORAGE_KEY, v); sortRows(v); });
       sortRows(sel.value);
     })();
     </script>"""
     return f"""
   <div class="seed-list-section">
-    <div class="section-head">
-      <span class="mono small">{copy.get("section_head", "All seeds")}</span>
-      {head_right}
-    </div>
     {sort_ui}
     {rows_html}
     {more_wrap}

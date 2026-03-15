@@ -969,13 +969,17 @@ def main():
     nuggets = load_all_nuggets(warn=_warn)
     print(f"Loaded {len(nuggets)} nuggets")
     seen_num = {}
+    duplicate_nums = []
     for n in nuggets:
         num = n.get("number")
         if num:
             if num in seen_num:
-                _warn(f"Warning: duplicate #number {num} (in {seen_num[num]}.txt and {n.get('filename')}.txt).")
+                duplicate_nums.append((num, seen_num[num], n.get("filename")))
             else:
                 seen_num[num] = n.get("filename")
+    if duplicate_nums:
+        lines = [f"Duplicate #number {num}: {a}.txt and {b}.txt" for num, a, b in duplicate_nums]
+        raise SystemExit("Build failed:\n  " + "\n  ".join(lines))
 
     for md_path in _get_md_page_paths():
         if not md_path.exists():
