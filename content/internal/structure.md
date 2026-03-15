@@ -34,9 +34,9 @@ Each seed also carries:
 - tags, and 
 - related seeds (up to five, by number), and
 - references (#ref): optional lines inside **#provenance** only; each line is full citation text. The build generates a “Further reading” subsection on the nugget page and a shared Bibliography page (sorted by ref text).
-- key terms (#term): optional lines inside **#provenance** only; each line is `#term Term — Definition`. The build generates the shared Glossary page (terms grouped, definitions indented; lists which nuggets define each).
+- key terms (#term): optional lines anywhere in a nugget; each line is `#term Term — Definition`. The build generates the shared Glossary page (terms grouped, definitions indented; lists which nuggets define each).
 
-These are stored in the source .txt file and used to build the repository, navigation, and bibliography automatically. See the grammar file for details on how all of these are represented.
+These are stored in the source .txt file and used to build the repository, navigation, and bibliography automatically. See the grammar file for details on how all of these are represented. 
 
 ### Status
 

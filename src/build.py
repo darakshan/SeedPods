@@ -924,7 +924,7 @@ def build_bibliography_page(nuggets):
 
 
 def build_glossary_page(nuggets, explainer_terms=None):
-    """Build Glossary from #term (Term — Definition) in #provenance of all nuggets. Grouped by term; term in bold, definitions indented. Explainers merged below each term's definition."""
+    """Build Glossary from #term (Term — Definition) in all nuggets. Grouped by term; term in bold, definitions indented. Explainers merged below each term's definition."""
     explainer_by_slug = {e["slug"]: e for e in (explainer_terms or [])}
     by_entry = {}
     for n in nuggets:
@@ -966,14 +966,18 @@ def build_glossary_page(nuggets, explainer_terms=None):
             def_blocks.append(
                 '<div class="gloss-def-block">' + _explainer_block_html(explainer_by_slug[slug]) + '</div>'
             )
-        entry_id = f' id="{_html.escape(slug)}"' if slug in explainer_by_slug else ""
+        else:
+            def_blocks.append(
+                '<div class="gloss-def-block"><p class="dim explainer-notes">(No explainers found yet.)</p></div>'
+            )
+        entry_id = f' id="{_html.escape(slug)}"'
         parts.append(
             f'<div class="gloss-entry"{entry_id}>'
             f'{term_line}'
             f'<div class="gloss-defs">' + "\n".join(def_blocks) + '</div>'
             f'</div>'
         )
-    body = "\n".join(parts) if parts else "<p class=\"dim\">No terms yet. Add <code>#term Term — Definition</code> lines inside <code>#provenance</code> in any nugget.</p>"
+    body = "\n".join(parts) if parts else "<p class=\"dim\">No terms yet. Add <code>#term Term — Definition</code> lines in any nugget.</p>"
     html = head("Glossary")
     html += nav(from_d=True)
     html += f'<div class="wrap"><div class="page-body fade"><h1>Glossary</h1><p class="dim repo-intro">Key terms from all nuggets.</p>{body}</div></div>'
@@ -1069,11 +1073,7 @@ def main():
             shutil.copy(CONFIG_DIR / "logo.svg", SITE_DIR / "logo.svg")
             print("  Built logo.svg")
 
-        if EXPLAINERS_CSV.exists():
-            added = ensure_explainers_has_glossary_terms(EXPLAINERS_CSV, get_glossary_terms(nuggets))
-            for t in added:
-                print("  Added explainer term:", t)
-        explainer_terms = load_explainers_csv(EXPLAINERS_CSV)
+        explainer_terms = load_explainers_csv(EXPLAINERS_CSV) if EXPLAINERS_CSV.exists() else []
 
         (SITE_DIR / "tags.html").write_text(build_tags_page(nuggets, status_order, explainer_terms), encoding="utf-8")
         print("  Built tags.html")

@@ -134,15 +134,12 @@ def parse_nugget(filepath, warn=None):
                     w(f"Warning: {filepath}: #ref only allowed in #provenance (found in or before {current_layer or 'metadata'})")
                 continue
             if key == "term":
-                if current_layer == "provenance":
-                    raw = value.strip()
-                    if " — " in raw:
-                        term_part, def_part = raw.split(" — ", 1)
-                        terms.append((term_part.strip(), def_part.strip()))
-                    else:
-                        terms.append((raw, ""))
+                raw = value.strip()
+                if " — " in raw:
+                    term_part, def_part = raw.split(" — ", 1)
+                    terms.append((term_part.strip(), def_part.strip()))
                 else:
-                    w(f"Warning: {filepath}: #term only allowed in #provenance (found in or before {current_layer or 'metadata'})")
+                    terms.append((raw, ""))
                 continue
             if key == "note":
                 flush()
