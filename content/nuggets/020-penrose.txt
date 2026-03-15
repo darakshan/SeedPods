@@ -22,7 +22,7 @@ Penrose found a real arrow. He just misread the destination.
 
 The arrow isn't pointing at human exceptionalism. It's pointing at the nature of reality when events nest deeply enough — which includes the machines we are now building.
 
-@exercise(Try this: next time someone argues that AI "obviously" can't be conscious because it's "just" doing computation — ask them what they think human brains are doing. The argument from Gödel cuts both ways. Or rather, it cuts in a direction neither side expected.)
+@exercise(Next time someone argues that AI "obviously" can't be conscious because it's "just" doing computation — ask them what they think human brains are doing. The argument from Gödel cuts both ways. Or rather, it cuts in a direction neither side expected.)
 
 #depth
 Penrose's argument appears in The Emperor's New Mind (1989) and Shadows of the Mind (1994). The core claim: Gödel's first incompleteness theorem shows that for any consistent formal system powerful enough to describe arithmetic, there exist true statements the system cannot prove. A human mathematician, Penrose argues, can see the truth of the Gödel sentence — can step outside the system. Therefore human mathematical understanding is not algorithmic. Therefore consciousness cannot be computational. The proposed physical substrate was orchestrated objective reduction (Orch-OR), quantum coherence in neuronal microtubules, developed with anesthesiologist Stuart Hameroff.

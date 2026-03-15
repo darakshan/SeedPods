@@ -8,7 +8,7 @@
 #surface
 There is a chair in your room. You know what a chair is.
 
-But try this: what actually is it?
+But what actually is it?
 
 Wood, you might say. Or plastic, or metal — whatever it's made of. But those materials are made of molecules. The molecules are made of atoms. The atoms are made of a nucleus and electrons. The nucleus is made of protons and neutrons. Those are made of quarks. And quarks, as far as we can tell, aren't made of anything — they are excitations of a quantum field.
 
@@ -34,7 +34,7 @@ That opening — between the happening and the just-sitting-there — is where t
 
 A note on language: from here on, we'll sometimes say "things" because that's how they feel — but we mean events stable enough to look permanent.
 
-@exercise(Try this: sit in a chair and look at it. Not through it, at it. Try to catch it in the act of being an event rather than a thing. It will keep looking like a thing. That's the point — the event is so slow and stable that "thing" is a perfectly good shortcut. The question is whether the shortcut is the whole truth, or whether something is happening that the word "thing" quietly erases.)
+@exercise(Sit in a chair and look at it. Not through it, at it. Try to catch it in the act of being an event rather than a thing. It will keep looking like a thing. That's the point — the event is so slow and stable that "thing" is a perfectly good shortcut. The question is whether the shortcut is the whole truth, or whether something is happening that the word "thing" quietly erases.)
 
 #depth
 Alfred North Whitehead (1861–1947) — mathematician, co-author with Bertrand Russell of the Principia Mathematica, and late in his career a philosopher of nature — argued that Western thought had made a specific and consequential error at the foundation of modern science. He called it the fallacy of misplaced concreteness: taking an abstraction and treating it as if it were the concrete reality.

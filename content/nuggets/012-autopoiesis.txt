@@ -28,7 +28,7 @@ Here's why this matters. The universe is not on the cell's side. Heat disperses.
 
 And notice what it means to be defined by your own self-production. The cell doesn't just happen to be organized this way. That circular organization is what the cell is. It acts — selectively, differentially — in ways that sustain the circle. That selectivity is the first faint trace of what @link(003) is about: the idea that having an inside is not a luxury of brains. The cell has an inside in a precise, non-metaphorical sense. It has a boundary it maintains. It has a process it sustains. Things that help that process are, for the cell, different from things that don't.
 
-@exercise(Try this: look at your own hand. The cells there are doing this right now — maintaining themselves, replacing their own components, holding the boundary that makes them cells. You are not a thing that contains life. You are a process that, at every level, keeps making itself.)
+@exercise(Look at your own hand. The cells there are doing this right now — maintaining themselves, replacing their own components, holding the boundary that makes them cells. You are not a thing that contains life. You are a process that, at every level, keeps making itself.)
 
 #depth
 Most definitions of life are lists of behaviors — metabolism, reproduction, response to stimuli. Humberto Maturana and Francisco Varela's definition is structural. In their 1972 paper coining the term autopoiesis, they asked: what organization is necessary and sufficient for a system to be living? Their answer: a network of processes that produces the very components that constitute and maintain the network. Remove the organization and you have chemistry. Keep it and you have life.

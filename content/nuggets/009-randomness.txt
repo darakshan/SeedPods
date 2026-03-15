@@ -40,7 +40,7 @@ This is the thing worth sitting with: the structure didn't come despite the rand
 
 ---
 
-@exercise(Try this: find something intricate near you — a frost pattern on glass, a crack in old plaster, the branching of a tree against the sky. Don't look for the designer. Look for the original asymmetry, the tiny difference that a force found and refused to leave alone. It's always there. Structure is what randomness does when you give it enough time and something to push against.)
+@exercise(Find something intricate near you — a frost pattern on glass, a crack in old plaster, the branching of a tree against the sky. Don't look for the designer. Look for the original asymmetry, the tiny difference that a force found and refused to leave alone. It's always there. Structure is what randomness does when you give it enough time and something to push against.)
 
 #depth
 The technical term for what the Surface was describing is "spontaneous symmetry breaking." A system sits in a state that is perfectly symmetric but unstable — like a ball balanced on the peak of a hill. Any random perturbation causes it to fall into a lower-energy asymmetric state and stay there. The universe does this at every scale, from the Higgs field in the first moments after the Big Bang to the formation of every crystal, every dune, every weather system. The symmetry breaks not because something designed it to, but because perfect symmetry, at sufficient energy, is inherently unstable. Randomness finds the crack. Structure follows.

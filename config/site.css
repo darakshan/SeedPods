@@ -41,6 +41,7 @@ h2{font-size:1.6rem;font-weight:300;margin-bottom:1rem}
 .prose{font-size:1.1rem;line-height:1.85;color:#000}
 .prose p+p{margin-top:1.3rem}
 .prose hr{border:none;border-top:1px solid var(--line);margin:2rem 0}
+.prose hr+*{margin-top:0}
 .prose em{font-style:italic}
 .tag{font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);border:1px solid var(--line);padding:.18rem .45rem;border-radius:2px;text-decoration:none;display:inline-block}
 .tag:hover{color:var(--accent);border-color:var(--accent)}

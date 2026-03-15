@@ -34,7 +34,7 @@ The outside of a falling raindrop is velocity, mass, surface tension. What would
 
 That shift — from "obviously nothing" to "something we don't have words for yet" — is what this seed is about.
 
-@exercise(Try this: watch rain on a window. Pick one drop. For thirty seconds, hold the question open — not "does it feel something?" but "what would it mean if it did?" You don't have to believe it. Just try not closing the door.)
+@exercise(Watch rain on a window. Pick one drop. For thirty seconds, hold the question open — not "does it feel something?" but "what would it mean if it did?" You don't have to believe it. Just try not closing the door.)
 
 #depth
 Alfred North Whitehead (1861–1947) — mathematician, co-author with Bertrand Russell of the Principia Mathematica, and late in his career a philosopher of nature — made a claim that his contemporaries found strange and that serious philosophers are now returning to: experience is not a biological anomaly. It is constitutive of what it means for anything to happen at all.

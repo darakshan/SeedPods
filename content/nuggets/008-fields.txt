@@ -26,7 +26,7 @@ What if the field was never inert?
 
 What if "medium of feeling" isn't a metaphor at all — just an accurate description of what a field is, observed from the inside?
 
-@exercise(Try this: next time you're in a room and you turn on a light, remember that the light reaching your eye and the signal traveling down your optic nerve are both disturbances in the same kind of field. The light didn't stop being physics when it became vision. Something continuous happened. What you call "seeing" is the field completing a circuit — from the source, through space, into the structure that notices.)
+@exercise(Next time you're in a room and you turn on a light, remember that the light reaching your eye and the signal traveling down your optic nerve are both disturbances in the same kind of field. The light didn't stop being physics when it became vision. Something continuous happened. What you call "seeing" is the field completing a circuit — from the source, through space, into the structure that notices.)
 
 #depth
 James Clerk Maxwell's unification of electricity and magnetism in 1865 revealed that light, electricity, and magnetism are all aspects of a single field — but the deeper surprise is what connects that field to radiation. A stationary charge is quiet. A charge moving at constant velocity adds a magnetic component but still doesn't radiate. Only a charge that accelerates — that changes its velocity — shakes the field, and that shake propagates outward as light. A star emits light because its atoms are in violent thermal motion, constantly accelerating and decelerating in collision. The light is not separate from the field; it is the field in motion, triggered by the event of acceleration.
