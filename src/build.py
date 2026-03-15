@@ -489,7 +489,11 @@ def build_nugget(n, all_nuggets):
             continue
         body = layer_body(layer_id)
         if layer_id == "references":
-            section_content = f'<h2 class="layer-heading">{label}</h2>\n    {body}'
+            has_provenance_prose = not section_is_tbd(layers.get("provenance", "TBD"))
+            if has_provenance_prose:
+                section_content = f'<h2 class="layer-heading">{label}</h2>\n    {body}'
+            else:
+                section_content = body
         else:
             section_content = f'<h2 class="layer-heading">{label}</h2>\n    <div class="prose">{body}</div>'
         if layer_id == "surface" and rel_nuggets and not refs_section_shown:
