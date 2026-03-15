@@ -11,7 +11,7 @@ import networkx as nx
 
 
 def _node_edge_lists(nuggets):
-    """From nuggets list, return (nodes, edges). nodes = [(id, label, tag)], edges = [(from_id, to_id)]."""
+    """From nuggets list, return (nodes, edges). nodes = [(id, label, slug, tags_list, status)], edges = [(from_id, to_id)]."""
     from nugget_parser import nugget_tag
     sorted_nuggets = sorted(nuggets, key=lambda n: (n.get("number", "").zfill(3), n.get("number", "")))
     nodes = []
@@ -20,8 +20,10 @@ def _node_edge_lists(nuggets):
         if not num:
             continue
         label = n.get("title", "Untitled") or "Untitled"
-        tag = nugget_tag(n)
-        nodes.append((num, label, tag))
+        slug = nugget_tag(n)
+        tags_list = n.get("tags", [])
+        status = n.get("status", "empty")
+        nodes.append((num, label, slug, tags_list, status))
     edges = []
     for n in sorted_nuggets:
         from_id = n.get("number", "")
@@ -39,15 +41,15 @@ def _force_directed_layout(nodes, edges, width, height, padding):
     Uses networkx spring_layout with higher k to spread nodes; scales to fit viewBox.
     """
     G = nx.DiGraph()
-    for nid, _, _ in nodes:
+    for nid, *_ in nodes:
         G.add_node(nid)
     for a, b in edges:
         G.add_edge(a, b)
     n = G.number_of_nodes()
     k = 2.5 if n > 10 else 1.5
     raw = nx.spring_layout(G, k=k, iterations=80, seed=42)
-    xs = [raw[nid][0] for nid, _, _ in nodes]
-    ys = [raw[nid][1] for nid, _, _ in nodes]
+    xs = [raw[nid][0] for nid, *_ in nodes]
+    ys = [raw[nid][1] for nid, *_ in nodes]
     min_x, max_x = min(xs), max(xs)
     min_y, max_y = min(ys), max(ys)
     range_x = max_x - min_x or 1
@@ -55,7 +57,7 @@ def _force_directed_layout(nodes, edges, width, height, padding):
     inner_w = width - 2 * padding
     inner_h = height - 2 * padding
     result = {}
-    for nid, _, _ in nodes:
+    for nid, *_ in nodes:
         x, y = raw[nid]
         sx = padding + (x - min_x) / range_x * inner_w
         sy = padding + (y - min_y) / range_y * inner_h
@@ -76,6 +78,20 @@ EDGE_COLORS = (
     "#6600cc",
 )
 NUM_EDGE_COLORS = len(EDGE_COLORS)
+
+
+def _rect_exit_t(dx, dy, hw, hh):
+    """Return smallest positive t such that (t*dx, t*dy) lies on the rect [-hw,hw] x [-hh,hh] boundary."""
+    candidates = []
+    if dx > 0:
+        candidates.append(hw / dx)
+    elif dx < 0:
+        candidates.append(-hw / dx)
+    if dy > 0:
+        candidates.append(hh / dy)
+    elif dy < 0:
+        candidates.append(-hh / dy)
+    return min(candidates) if candidates else 1.0
 
 
 def build_graph_svg(
@@ -103,6 +119,18 @@ def build_graph_svg(
     padding = 80
     pos = _force_directed_layout(nodes, edges, width, height, padding)
 
+    box_w = 50
+    box_h = 22
+    for nid, label, slug, tags_list, status in nodes:
+        label_text = label if show_title else (slug or nid)
+        lbl_len = len(str(label_text))
+        box_w = max(box_w, max(50, lbl_len * 9))
+        box_h = max(box_h, 22)
+    pad_extra = 12
+    box_w += pad_extra * 2
+    box_h += pad_extra * 2
+    hw, hh = box_w / 2, box_h / 2
+
     lines = []
     lines.append(
         '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {} {}" class="map-graph-svg" width="100%" height="auto">'.format(
@@ -110,12 +138,7 @@ def build_graph_svg(
         )
     )
     lines.append('  <defs>')
-    lines.append('    <style>.map-graph-edge{stroke-width:2;fill:none}.map-graph-node{fill:#fff;stroke:#c8a96e;stroke-width:1.5}.map-graph-label{font-family:system-ui,sans-serif;font-size:18px;fill:#000}.map-graph-node-link:hover .map-graph-node{stroke:#000;stroke-width:2}</style>')
-    lines.append(
-        '    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">'
-    )
-    lines.append('      <path d="M0,0 L0,6 L9,3 z" fill="currentColor"/>')
-    lines.append("    </marker>")
+    lines.append('    <style>.map-graph-edge{stroke-width:3;fill:none}.map-graph-edge.unselected{opacity:0.12}.map-graph-node{fill:#fff;stroke:#c8a96e;stroke-width:1.5}.map-graph-label{font-family:system-ui,sans-serif;font-size:19px;fill:#000}.map-graph-node-link:hover .map-graph-node{stroke:#000;stroke-width:2}.map-graph-node-wrap.unselected{opacity:0.4}</style>')
     lines.append("  </defs>")
 
     for i, (from_id, to_id) in enumerate(edges):
@@ -123,38 +146,49 @@ def build_graph_svg(
         x2, y2 = pos.get(to_id, (0, 0))
         dx, dy = x2 - x1, y2 - y1
         dist = math.hypot(dx, dy) or 1
-        shrink = (node_radius + 6) / dist
-        x1 += dx * shrink
-        y1 += dy * shrink
-        x2 -= dx * shrink
-        y2 -= dy * shrink
+        t_from = min(_rect_exit_t(dx, dy, hw, hh), 1.0)
+        t_to = min(_rect_exit_t(-dx, -dy, hw, hh), 1.0)
+        x1 = x1 + t_from * dx
+        y1 = y1 + t_from * dy
+        x2 = x2 - t_to * dx
+        y2 = y2 - t_to * dy
         stroke = EDGE_COLORS[i % NUM_EDGE_COLORS]
         lines.append(
-            '  <line x1="{}" y1="{}" x2="{}" y2="{}" class="map-graph-edge" style="stroke:{};color:{}" marker-end="url(#arrow)"/>'.format(
-                x1, y1, x2, y2, stroke, stroke
+            '  <line x1="{}" y1="{}" x2="{}" y2="{}" class="map-graph-edge" data-from="{}" data-to="{}" style="stroke:{};color:{}"/>'.format(
+                x1, y1, x2, y2, _html.escape(from_id), _html.escape(to_id), stroke, stroke
             )
         )
 
-    for nid, label, tag in nodes:
+    for nid, label, slug, tags_list, status in nodes:
         x, y = pos[nid]
-        label_text = label if show_title else (tag or nid)
+        label_text = label if show_title else (slug or nid)
         label_esc = _html.escape(str(label_text))
         node_content = (
-            '    <circle r="{}" class="map-graph-node"/>'.format(node_radius)
+            '    <rect x="{}" y="{}" width="{}" height="{}" class="map-graph-node"/>'.format(
+                -box_w / 2, -box_h / 2, box_w, box_h
+            )
             + '\n    <text class="map-graph-label" text-anchor="middle" dominant-baseline="central">{}</text>'.format(
                 label_esc
             )
         )
-        if link_nuggets and tag:
-            href = _html.escape(tag + ".html")
-            lines.append('  <a href="{}" class="map-graph-node-link">'.format(href))
+        data_attrs = ' data-nugget="{}" data-tags="{}" data-status="{}"'.format(
+            _html.escape(nid),
+            _html.escape(",".join(tags_list)),
+            _html.escape(status),
+        )
+        wrap_class = "map-graph-node-wrap map-graph-node-link"
+        if link_nuggets and slug:
+            href = _html.escape(slug + ".html")
+            lines.append('  <a href="{}" class="{}"{}>'.format(href, wrap_class, data_attrs))
             lines.append('    <g transform="translate({},{})">'.format(x, y))
             lines.append(node_content.replace("    ", "      "))
             lines.append("    </g>")
             lines.append("  </a>")
         else:
-            lines.append('  <g transform="translate({},{})">'.format(x, y))
+            lines.append('  <g class="map-graph-node-wrap"{}>'.format(data_attrs))
+            lines.append('    <g transform="translate({},{})">'.format(x, y))
             lines.append(node_content.replace("    ", "    "))
+            lines.append("    </g>")
             lines.append("  </g>")
 
     lines.append("</svg>")

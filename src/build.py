@@ -3,7 +3,7 @@
 build.py — Seed Nuggets site generator
 Reads from content/ and config/; writes to d/ (and index.html at root).
 Website root = project root: / serves index.html, /d/ has built HTML, /content/ has source.
-Generates: nugget pages, list.html, more-* (bibliography, glossary, tags, map-graph),
+Generates: nugget pages, list.html, more-* (bibliography, glossary, tags, map),
 index.html, about pages, resources (with map), site.css.
 
 Usage:
@@ -865,11 +865,73 @@ def build_static_page(title, body_html, wrap_class=""):
     return html
 
 
-def build_map_graph_page(nuggets):
-    """Full page with standard nav and background that embeds the map graph SVG."""
-    svg = build_graph_svg(nuggets, show_title=False, link_nuggets=True)
-    body_html = '<h1>Map</h1>\n<p class="dim">How the Seed Nuggets are related.</p>\n<div class="map-graph-wrap">' + svg + '</div>'
-    return build_static_page("Map graph", body_html, wrap_class="wrap--full")
+MIN_TAG_COUNT_FOR_MAP = 3
+
+
+def build_map_graph_page(nuggets, status_order):
+    """Full page with standard nav and background that embeds the map graph SVG and filter menus."""
+    tag_counts = {}
+    for n in nuggets:
+        for t in n.get("tags", []):
+            tag_counts[t] = tag_counts.get(t, 0) + 1
+    tags_with_min = sorted([t for t, c in tag_counts.items() if c >= MIN_TAG_COUNT_FOR_MAP])
+    category_opts = '<option value="">All</option>' + "".join(
+        '<option value="{}">{}</option>'.format(_html.escape(t), _html.escape(t)) for t in tags_with_min
+    )
+    status_opts = '<option value="">All</option>' + "".join(
+        '<option value="{}">{}</option>'.format(_html.escape(s), _html.escape(s)) for s in (status_order or [])
+    )
+    filters_html = (
+        '<div class="map-graph-filters">'
+        '<label for="map-filter-tag">Category</label>'
+        '<select id="map-filter-tag" aria-label="Filter by tag">' + category_opts + '</select>'
+        ' <label for="map-filter-status">Status</label>'
+        '<select id="map-filter-status" aria-label="Filter by status">' + status_opts + '</select>'
+        "</div>"
+    )
+    script = """
+<script>
+(function(){
+  var tagSel = document.getElementById('map-filter-tag');
+  var statusSel = document.getElementById('map-filter-status');
+  function apply(){
+    var tagVal = tagSel && tagSel.value;
+    var statusVal = statusSel && statusSel.value;
+    document.querySelectorAll('.map-graph-node-wrap').forEach(function(el){
+      var tags = (el.getAttribute('data-tags') || '').split(',').map(function(s){ return s.trim(); });
+      var status = el.getAttribute('data-status') || '';
+      var tagMatch = !tagVal || tags.indexOf(tagVal) >= 0;
+      var statusMatch = !statusVal || status === statusVal;
+      el.classList.toggle('unselected', !(tagMatch && statusMatch));
+    });
+    var selected = new Set();
+    document.querySelectorAll('.map-graph-node-wrap:not(.unselected)').forEach(function(el){
+      selected.add(el.getAttribute('data-nugget'));
+    });
+    document.querySelectorAll('.map-graph-edge').forEach(function(el){
+      var fromId = el.getAttribute('data-from');
+      var toId = el.getAttribute('data-to');
+      var connected = selected.has(fromId) && selected.has(toId);
+      el.classList.toggle('unselected', !connected);
+    });
+  }
+  if (tagSel) tagSel.addEventListener('change', apply);
+  if (statusSel) statusSel.addEventListener('change', apply);
+  apply();
+  var wrap = document.querySelector('.map-graph-wrap');
+  if (wrap && wrap.scrollWidth > wrap.clientWidth) wrap.scrollLeft = (wrap.scrollWidth - wrap.clientWidth) / 2;
+  if (wrap && wrap.scrollHeight > wrap.clientHeight) wrap.scrollTop = (wrap.scrollHeight - wrap.clientHeight) / 2;
+})();
+</script>"""
+    svg = build_graph_svg(nuggets, show_title=False, link_nuggets=True, node_radius=40)
+    body_html = (
+        filters_html
+        + '\n<div class="map-graph-wrap">'
+        + svg
+        + '</div>'
+        + script
+    )
+    return build_static_page("Map", body_html, wrap_class="wrap--full")
 
 
 def build_md_file_page(md_path, nuggets=None, collected_md_refs=None, status_order=None, index_copy=None):
@@ -1114,8 +1176,8 @@ def main():
                 (SITE_DIR / out_name).write_text(build_glossary_page(nuggets, explainer_terms), encoding="utf-8")
             elif key == "tags":
                 (SITE_DIR / out_name).write_text(build_tags_page(nuggets, status_order, explainer_terms), encoding="utf-8")
-            elif key == "map-graph":
-                (SITE_DIR / out_name).write_text(build_map_graph_page(nuggets), encoding="utf-8")
+            elif key == "map":
+                (SITE_DIR / out_name).write_text(build_map_graph_page(nuggets, status_order), encoding="utf-8")
             else:
                 _warn(f"more_pages key {key!r} has no builder")
                 continue
@@ -1165,7 +1227,7 @@ def main():
             print("  Built favicon.svg")
         print("  Built index.html")
 
-        (SITE_DIR / "map.svg").write_text(build_graph_svg(nuggets, show_title=False, link_nuggets=True), encoding="utf-8")
+        (SITE_DIR / "map.svg").write_text(build_graph_svg(nuggets, show_title=False, link_nuggets=True, node_radius=40), encoding="utf-8")
         print("  Built map.svg")
 
         build_4u_ai_txt()

@@ -27,6 +27,6 @@ def more_page_output_name(key):
 
 
 def get_more_pages(index_copy):
-    """Parse more_pages from config index (comma-separated). Returns list of keys, e.g. ['bibliography', 'glossary', 'tags', 'map-graph']."""
-    raw = (index_copy or {}).get("more_pages", "bibliography, glossary, tags, map-graph")
+    """Parse more_pages from config index (comma-separated). Returns list of keys, e.g. ['bibliography', 'glossary', 'tags', 'map']."""
+    raw = (index_copy or {}).get("more_pages", "bibliography, glossary, tags, map")
     return [t.strip() for t in raw.split(",") if t.strip()]
