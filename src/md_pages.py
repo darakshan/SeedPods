@@ -33,9 +33,7 @@ def expand_links(text, context, base_dir, collected_md_refs=None):
 
     def repl(m):
         locator = m.group(1).strip()
-        link_text = m.group(2).strip()
-        if not link_text:
-            link_text = locator
+        link_text = (m.group(2) or "").strip() or locator
         if re.match(r"^\d+$", locator):
             nuggets = context.get("nuggets") or []
             n = nugget_by_number_flex(nuggets, locator)
@@ -43,6 +41,8 @@ def expand_links(text, context, base_dir, collected_md_refs=None):
                 context.get("warn", lambda msg: None)(f"@link: nugget {locator!r} not found")
                 return m.group(0)
             href = nugget_tag(n) + ".html"
+            if not (m.group(2) or "").strip():
+                link_text = n.get("title", "Untitled")
             return f'<a href="{href}">{_html.escape(link_text)}</a>'
         if locator.endswith(".md"):
             md_path = (base_dir / locator).resolve()
@@ -62,7 +62,7 @@ def expand_links(text, context, base_dir, collected_md_refs=None):
             return f'<a href="{out_name}">{_html.escape(link_text)}</a>'
         return f'<a href="{_html.escape(locator)}">{_html.escape(link_text)}</a>'
 
-    return re.sub(r"@link\s*\(\s*([^,)]+)\s*,\s*([^)]*)\s*\)", repl, text)
+    return re.sub(r"@link\s*\(\s*([^,)]+)\s*(?:,\s*([^)]*))?\s*\)", repl, text)
 
 
 def expand_includes(text, base_dir, warn=None):
@@ -125,12 +125,12 @@ def _render_samples_html(
         if sortable:
             data_attrs = f' data-num="{num_val}" data-date="{_html.escape(date_val)}" data-status-rank="{rank}" data-title="{_html.escape(title)}"'
         rows_html += f"""
-    <a href="{base_href}{fname}" class="seed-row{stub}"{data_attrs}>
+    <div class="seed-row{stub}"{data_attrs}>
       <div>
-        <div class="seed-title">{_html.escape(title_line)}</div>
+        <div class="seed-title"><a href="{base_href}{fname}">{_html.escape(title_line)}</a></div>
         <div class="seed-sub">{byline}</div>
       </div>
-    </a>"""
+    </div>"""
     if not full_section:
         return rows_html.strip()
     more_wrap = ""

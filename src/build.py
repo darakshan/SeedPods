@@ -37,7 +37,7 @@ from nugget_parser import (
     nugget_tag,
     section_is_tbd,
 )
-from md_pages import process_md_to_html, expand_includes
+from md_pages import process_md_to_html, expand_includes, expand_links
 from site_paths import content_path_to_output_name, parse_list_menu
 
 ABOUT_DIR = CONTENT_DIR / "about"
@@ -243,7 +243,7 @@ def nav(from_d=False, from_nuggets=False, layer_tabs_html=None):
             link_parts.append(f'<li><a href="{prefix}{href}">{_html.escape(label)}</a></li>')
     links = "".join(link_parts)
     row = f"""  <div class="nav-row">
-  <a href="{index_href}" class="nav-logo"><img src="{logo_src}" alt="" class="nav-logo-icon">Seed Nuggets</a>
+  <a href="{index_href}" class="nav-logo"><img src="{logo_src}" alt="" class="nav-logo-icon"><span class="nav-logo-text"><span class="nav-logo-word1">Seed</span><span class="nav-logo-word2">Nuggets</span></span></a>
   <ul class="nav-links">
     {links}
   </ul>
@@ -444,14 +444,20 @@ def _assemble_layer_html(segments, cta_htmls, segment_renderer):
     return "".join(parts)
 
 
-def _layer_prose_to_html(raw, all_nuggets):
+def _layer_prose_to_html(raw, all_nuggets, link_context=None, link_base_dir=None):
     """Prose layers: expand directives, then render each segment with text_to_html."""
     if section_is_tbd(raw):
         return '<p class="dim placeholder">This layer is not yet written.</p>'
     segments, cta_htmls = expand_layer_directives(raw, all_nuggets)
-    return _assemble_layer_html(
-        segments, cta_htmls, lambda seg: "" if section_is_tbd(seg) else text_to_html(seg)
-    )
+
+    def render_seg(seg):
+        if section_is_tbd(seg):
+            return ""
+        if link_context is not None and link_base_dir is not None:
+            seg = expand_links(seg, link_context, link_base_dir)
+        return text_to_html(seg)
+
+    return _assemble_layer_html(segments, cta_htmls, render_seg)
 
 
 def script_to_html(text):
@@ -493,6 +499,9 @@ def build_nugget(n, all_nuggets):
     related_nums = n.get("related", [])
     layers = n.get("layers", {})
 
+    link_context = {"nuggets": all_nuggets, "content_dir": CONTENT_DIR, "warn": _warn}
+    link_base_dir = NUGGETS_DIR
+
     tags_href = "tags.html"
     tag_html = " ".join(f'<a href="{tags_href}#{tag_slug(t)}" class="tag">{t}</a>' for t in tags)
 
@@ -517,7 +526,7 @@ def build_nugget(n, all_nuggets):
       </a>"""
         related_cards_html = f'<div class="related-grid">{cards}\n      </div>'
 
-    surface_html = _layer_prose_to_html(layers.get("surface", "TBD"), all_nuggets)
+    surface_html = _layer_prose_to_html(layers.get("surface", "TBD"), all_nuggets, link_context, link_base_dir)
     is_proto = status == "proto"
     layer_order = LAYER_ORDER_PROTO if is_proto else LAYER_ORDER
 
@@ -530,10 +539,10 @@ def build_nugget(n, all_nuggets):
 
     def layer_body(layer_id):
         if layer_id == "brief":
-            return _layer_prose_to_html(layers.get("brief", "TBD"), all_nuggets)
+            return _layer_prose_to_html(layers.get("brief", "TBD"), all_nuggets, link_context, link_base_dir)
         if layer_id == "references":
             prov_raw = layers.get("provenance", "TBD")
-            prov_html = "" if section_is_tbd(prov_raw) else _layer_prose_to_html(prov_raw, all_nuggets)
+            prov_html = "" if section_is_tbd(prov_raw) else _layer_prose_to_html(prov_raw, all_nuggets, link_context, link_base_dir)
             parts = []
             if prov_html:
                 parts.append(f'<div class="prose">{prov_html}</div>')
@@ -558,8 +567,11 @@ def build_nugget(n, all_nuggets):
         raw = layers.get(layer_id, "TBD")
         if layer_id == "script":
             segments, cta_htmls = expand_layer_directives(raw, all_nuggets)
-            return _assemble_layer_html(segments, cta_htmls, script_to_html)
-        return _layer_prose_to_html(raw, all_nuggets)
+            def script_render(seg):
+                expanded = expand_links(seg, link_context, link_base_dir) if (link_context and link_base_dir) else seg
+                return script_to_html(expanded)
+            return _assemble_layer_html(segments, cta_htmls, script_render)
+        return _layer_prose_to_html(raw, all_nuggets, link_context, link_base_dir)
 
     tabs_parts = []
     for layer_id, label in layer_order:
