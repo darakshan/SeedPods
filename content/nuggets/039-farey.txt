@@ -1,0 +1,5 @@
+#title The Gaps Are Real: Farey Repulsion
+#status proto
+#date 2026-03-15
+
+The empty space around the tallest bars in the consonance diagram is not a numerical artifact or a rendering gap. It is a provable property of the rational numbers called the Farey gap. The Farey sequence is the set of all reduced fractions with denominators up to n, arranged in order. Its defining property is that any two adjacent Farey fractions a/b and c/d satisfy bc − ad = 1 exactly. This means there is no reduced fraction with a small denominator hiding between them — the arithmetic itself forbids it. Simple ratios repel other simple ratios. The more consonant an interval, the wider the moat of complexity that surrounds it. This is not emptiness but exclusion, and it is the same phenomenon that prevents large Mandelbrot bulbs from crowding each other.

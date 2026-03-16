@@ -14,8 +14,8 @@ Bundled ideas from conversations, not yet converted to nuggets
 
 ## For AI helpers
 
-- All web content in a single .txt: @link(4u-ai.txt, 4u-ai)
-this is a test above
+- Nuggest and specs in a single file: @link(4u-ai.txt, 4u-ai)
+
 ---
-this is a test below
+
 Build time: @timestamp

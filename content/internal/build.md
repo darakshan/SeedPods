@@ -28,3 +28,21 @@ Do not run `python3 src/build.py` directly; use the justfile so the venv (with t
 Required files for a full build include: `content/home.md`, `content/internal/page.md`, and for each nav token either `content/<token>.md` or `content/<token>/page.md`. `config/status.txt` is also required.
 
 For config and nav: @link(settings.md, settings). For @ directives in Markdown and nugget files: @link(directives.md, directives).
+
+---
+
+## Importing prototype nuggets
+
+Prototype .md files (e.g. in `content/more/`) can be turned into nugget .txt files with:
+
+```bash
+just import content/more/primordia.md content/more/seed-speculations.md
+```
+
+By default the command runs in **preview** mode: it parses each file, assigns the next nugget number and a shortname (from the title), and prints `number-shortname  Title` for each protonugget. It does not write files. Use **`--apply`** to actually write each nugget to `content/nuggets/`:
+
+```bash
+just import --apply content/more/primordia.md content/more/seed-speculations.md
+```
+
+Imported nuggets have `#status proto` and a single body (no `#brief` directive). Each protonugget in the source file must include a `#shortname` line (e.g. `#shortname harmonic-barchart`); if one is missing, import reports it and skips that nugget without writing a file. The parser accepts optional numbering (e.g. `## 1. Title`) and category headings (e.g. `## Physics & Mathematics`); categories are skipped. File-level `#ref` and `#term` in the prototype are added to each generated nugget. After importing, run `just build` to regenerate the site.

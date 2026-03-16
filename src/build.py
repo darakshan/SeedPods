@@ -481,6 +481,7 @@ LAYER_ORDER = [
     ("images", "Images"),
     ("references", "References"),
 ]
+LAYER_ORDER_PROTO = [("brief", "Brief")]
 
 def build_nugget(n, all_nuggets):
     num = n.get("number", "?")
@@ -517,6 +518,8 @@ def build_nugget(n, all_nuggets):
         related_cards_html = f'<div class="related-grid">{cards}\n      </div>'
 
     surface_html = _layer_prose_to_html(layers.get("surface", "TBD"), all_nuggets)
+    is_proto = status == "proto"
+    layer_order = LAYER_ORDER_PROTO if is_proto else LAYER_ORDER
 
     def layer_has_content(layer_id):
         if layer_id == "references":
@@ -526,6 +529,8 @@ def build_nugget(n, all_nuggets):
         return not section_is_tbd(layers.get(layer_id))
 
     def layer_body(layer_id):
+        if layer_id == "brief":
+            return _layer_prose_to_html(layers.get("brief", "TBD"), all_nuggets)
         if layer_id == "references":
             prov_raw = layers.get("provenance", "TBD")
             prov_html = "" if section_is_tbd(prov_raw) else _layer_prose_to_html(prov_raw, all_nuggets)
@@ -557,15 +562,15 @@ def build_nugget(n, all_nuggets):
         return _layer_prose_to_html(raw, all_nuggets)
 
     tabs_parts = []
-    for layer_id, label in LAYER_ORDER:
+    for layer_id, label in layer_order:
         if layer_has_content(layer_id):
             tabs_parts.append(f'<a href="#{layer_id}" class="layer-tab">{label}</a>')
         else:
             tabs_parts.append(f'<span class="layer-tab layer-tab-disabled">{label}</span>')
 
     sections_parts = []
-    refs_section_shown = layer_has_content("references")
-    for layer_id, label in LAYER_ORDER:
+    refs_section_shown = layer_has_content("references") if not is_proto else False
+    for layer_id, label in layer_order:
         if not layer_has_content(layer_id):
             continue
         body = layer_body(layer_id)
@@ -592,7 +597,10 @@ def build_nugget(n, all_nuggets):
     prev_html = f'<a href="{nugget_tag(prev_n)}.html">&lt;&lt;</a>' if prev_n else ''
     next_html = f'<a href="{nugget_tag(next_n)}.html">&gt;&gt;</a>' if next_n else ''
 
-    layer_tabs_html = f"""  <div class="layer-tabs">
+    if is_proto:
+        layer_tabs_html = ""
+    else:
+        layer_tabs_html = f"""  <div class="layer-tabs">
     <div class="layer-tabs-inner">
       <span class="layer-tabs-prev">{prev_html}</span>
       <div class="layer-tabs-center">

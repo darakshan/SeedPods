@@ -1,0 +1,5 @@
+#title The Harmonic Bar Chart Is a Shadow of the Mandelbrot Set
+#status proto
+#date 2026-03-15
+
+When you plot musical consonance as a bar chart — scoring each ratio n:d by 1/(n+d) and arranging them along a line from 0 to 1200 cents — you are not merely making a visualization of music theory. You are drawing a one-dimensional projection of the boundary of the Mandelbrot set. The Mandelbrot boundary is parameterized by a rotation number between 0 and 1, and every rational value of that rotation number corresponds to a bulb. The size of each bulb is governed by the complexity of the fraction indexing it — exactly the same hierarchy as consonance. The tallest bars in the harmonic chart correspond to the largest bulbs on the Mandelbrot cardioid. The two structures are not analogous. They are, in a precise mathematical sense, the same object seen from different angles.

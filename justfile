@@ -33,3 +33,7 @@ find-explainers:
 # just check 3 4 19 99  — check 003, 004, 019; warn if 99 missing
 check *ARGS:
     {{python}} {{root}}/src/check.py {{ARGS}}
+
+# Import prototype .md files into content/nuggets. Prints table (shortname-number, #words, #tags, #related, title). Preview only; use --apply to write.
+import *ARGS:
+    {{python}} {{root}}/src/import_proto.py {{ARGS}}

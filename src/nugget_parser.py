@@ -117,7 +117,7 @@ def parse_nugget(filepath, warn=None):
             value = parts[1] if len(parts) > 1 else ""
 
             if key == "ref":
-                if current_layer == "provenance":
+                if current_layer in ("provenance", "brief"):
                     raw = value.strip()
                     if not raw:
                         continue
@@ -150,7 +150,7 @@ def parse_nugget(filepath, warn=None):
                 if key in meta:
                     w(f"Warning: {filepath}: duplicate #{key}, keeping first value.")
                 else:
-                    if not value.strip():
+                    if not value.strip() and key in ("title", "status", "date"):
                         w(f"Warning: {filepath}: #{key} has no value on same line.")
                     meta[key] = value.strip()
             else:
@@ -163,7 +163,10 @@ def parse_nugget(filepath, warn=None):
                     current_layer = key
                     buffer = []
         else:
-            if current_layer and current_layer not in SINGLE_LINE:
+            if current_layer is None and line.strip():
+                current_layer = "brief"
+                buffer = [line]
+            elif current_layer not in SINGLE_LINE:
                 buffer.append(line)
 
     flush()
@@ -190,6 +193,7 @@ def parse_nugget(filepath, warn=None):
         "provenance": layers.get("provenance", "TBD"),
         "script": layers.get("script", "TBD"),
         "images": layers.get("images", "TBD"),
+        "brief": layers.get("brief", "TBD"),
     }
 
     stem = filepath.stem

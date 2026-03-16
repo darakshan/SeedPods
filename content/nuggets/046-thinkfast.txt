@@ -1,0 +1,5 @@
+#title Thought as Evolution in Milliseconds
+#status proto
+#date 2026-03-15
+
+If the Baldwin effect describes how learning over a lifetime can be absorbed into genetic specification over generations, perhaps the same logic applies one level up: thought itself may be an evolutionary process compressed into milliseconds. Different candidate interpretations, concepts, and responses compete within the neural substrate, and the stronger ones — better fitting prior experience, more consistent with incoming evidence, more useful for action — win and achieve coherent representation. This is the core claim of Gerald Edelman's Neural Darwinism, William Calvin's cortical competition models, Daniel Dennett's multiple drafts theory, and Karl Friston's predictive processing framework. What they share is the insight that the brain is not an instruction-following computer producing a single authoritative output, but a selectionist system in which meaning emerges from competition. The same process that shaped species over geological time may be shaping thoughts over the duration of a heartbeat.

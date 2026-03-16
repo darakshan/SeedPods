@@ -1,0 +1,13 @@
+#title The Born Rule as Harmonic Measure
+#status proto
+#date 2026-03-15
+
+The Born rule is quantum mechanics' most mysterious postulate. It says the probability of a measurement outcome is proportional to the square of the wavefunction's amplitude. It works perfectly. Nobody knows why it is the square and not something else.
+
+Everett's Many Worlds interpretation makes this more acute: if all branches are real, why do we experience some branches more than others? The probability has to come from somewhere.
+
+The speculation: the Mandelbrot set's branching tree has a natural probability measure on its boundary called the harmonic measure. It assigns higher probability to simpler, more consonant branches — the large bulbs, the shallow Farey fractions. This measure is not imposed — it falls out of the geometry.
+
+If the universe's wavefunction branches according to a similar tree structure — with branching numbers determined by local algebraic structure rather than arbitrary choice — then the Born rule probabilities may fall out of the harmonic measure of that tree. Not a postulate. A consequence of the branching geometry.
+
+This is speculative. But it is the right kind of speculative — it connects two things that are separately mysterious (why the Born rule, why the Mandelbrot measure) and asks if they are the same mystery.

@@ -11,7 +11,7 @@ The build script parses nugget files strictly. Follow this grammar so new or rev
 ###Structure (order is fixed)
 
 1. Metadata block: single-line fields, one per line.
-2. Layer block: exactly five sections, in this order — surface, depth, provenance, script, images. Each section is a line `#layername` (no value) followed by the section body until the next line that starts with `#`.
+2. Layer block: either (a) exactly five sections, in this order — surface, depth, provenance, script, images; or (b) for status **proto**, a single body with no layer header — content follows the metadata block until `#term`, `#ref`, or end of file.
 
 ###Metadata (single-line fields)
 
@@ -20,7 +20,7 @@ The build script parses nugget files strictly. Follow this grammar so new or rev
 - Required fields and format:
   - `#title` — full title; may contain spaces and punctuation.
   - `#subtitle` — one sentence; may contain spaces and punctuation.
-  - `#status` — exactly one of: empty | partial | prelim | rough | draft1 | final
+  - `#status` — exactly one of: empty | partial | prelim | rough | draft1 | final | proto
   - `#date` — date string (e.g. 2026-03-11).
   - `#tags` — comma-separated list. Each tag: lowercase, multi-word tags hyphenated (e.g. history-of-science, AI). No spaces after commas required but allowed.
   - `#related` — comma-separated list of other nugget numbers. The NNN from each target's filename (e.g. 002, 011, 018). Max 5. Links resolve by string equality, so "1" will not match a nugget whose filename starts with "001".
@@ -43,7 +43,7 @@ The build script parses nugget files strictly. Follow this grammar so new or rev
 
 - Section start: a line that is exactly `#surface`, `#depth`, `#provenance`, `#script`, or `#images` (no text after the name). Parser treats these as layer names, not metadata.
 - Section body: all following lines that do not start with `#`. Blank lines are kept. Body ends at the next line starting with `#` or end of file.
-- All five layer headers must appear in this order: `#surface`, `#depth`, `#provenance`, `#script`, `#images`. If a layer has no content yet, write the header and put `TBD` (or a single line of placeholder text) as the body so the section exists.
+- All five layer headers must appear in this order: `#surface`, `#depth`, `#provenance`, `#script`, `#images`. If a layer has no content yet, write the header and put `TBD` (or a single line of placeholder text) as the body so the section exists. Exception: nuggets with `#status proto` have no layer header; the body is the content immediately after the metadata block.
 - Layer content is free-form text. No special syntax required. Use `TBD` for placeholder sections. In any prose layer you may use **@exercise(Try this: ...)** — the text inside the parentheses (typically starting with “Try this: ”) is rendered as a call-to-action block at that position. Use balanced parentheses if the text contains `)`.
 
 ###Parsing rules (what the build does)
