@@ -16,19 +16,14 @@ Style guidelines for writing scripts: @link(scriptcraft.md, scriptcraft)
 
 How the static site is generated: @link(build.md, build)
 
-An essay that inspired this website: @link(inside.md, The Inside of Everything)
+Builder settings: @link(settings.md, settings)
+
+Content directives: @link(directives.md, directives)
+
+How the site is built: @link(../internal/build.md, build.py)
+
 
 Older and probably obsolete documentation: @link(early-structure.md, Early Structure)
-
-## Protonuggets
-
-These are organized recordings from conversations with Claude (maybe others eventually) that I intend eventually to organize into Seed Nuggets.  They are not unlike Empty Seed Nuggets, but have not even been named and numbered yet. 
-
-@link(seed-speculations.md, Speculations)
-
-@link(primordia.md, Primorderia)
-
----
 
 @include structure.md
 
