@@ -17,6 +17,10 @@ The image of a mirror flags something further: the circuit implies a return. The
 
 #provenance
 TBD
+#term Proper time: In relativity, the time measured by a clock following a worldline; a photon has zero proper time between emission and absorption.
+#term Objective immortality: Whitehead's term for the past as fully present in later occasions; light's "no journey" is a limiting case.
+#ref einstein Einstein, A. On the Electrodynamics of Moving Bodies (1905). The founding paper of special relativity; time dilation and the light cone.
+#ref whitehead Whitehead, A.N. Process and Reality (1929). The past as ingredient in the present; connection without a persisting substrate.
 
 #script
 TBD

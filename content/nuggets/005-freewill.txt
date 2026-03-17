@@ -13,6 +13,9 @@ In a universe of inert matter governed by deterministic laws, free will is an em
 
 #provenance
 TBD
+#term Creative advance: Whitehead's term for the irreducible novelty introduced by each occasion as it resolves possibility into actuality.
+#term Self-determination: In process philosophy, each occasion's moment of decision that cannot be fully predicted from its past.
+#ref whitehead Whitehead, A.N. Process and Reality (1929). Source for the creative advance and the universality of self-determination.
 
 #script
 TBD

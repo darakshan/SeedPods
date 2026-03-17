@@ -13,6 +13,8 @@ Thomas Kuhn documented carefully that most holders of an old paradigm never come
 
 #provenance
 Planck, M. Scientific Autobiography (1949). Kuhn, T.S. The Structure of Scientific Revolutions (1962).
+#term Paradigm: Kuhn's term for the framework of assumptions and practices that defines normal science until crisis and revolution.
+#term Generational replacement: The mechanism by which new paradigms prevail — not by convincing holdouts but by outlasting them.
 
 #script
 TBD

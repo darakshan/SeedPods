@@ -13,6 +13,11 @@ The quantum vacuum — the ground state, what you have when you remove everythin
 
 #provenance
 TBD
+#term Eternal objects: Whitehead's pure possibilities that occasions select from and realize; the quantum vacuum's virtual states are a physical analogue.
+#term Prehension: The way one occasion takes in or "feels" another; the field is the medium through which occasions prehend each other.
+#term Virtual particle: In QFT, short-lived excitations of the vacuum that contribute to processes; not "things" but possibilities being sampled.
+#ref whitehead Whitehead, A.N. Process and Reality (1929). Eternal objects and prehension as the structure of possibility and connection.
+#ref peskin Peskin, M. and Schroeder, D. An Introduction to Quantum Field Theory (1995). Standard treatment of the quantum vacuum.
 
 #script
 TBD

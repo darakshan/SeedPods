@@ -17,6 +17,9 @@ Note: the double slit sits between two limiting cases. A rock thrown in a lake p
 
 #provenance
 TBD
+#term Interference: When waves superpose, reinforcement or cancellation depending on phase; same mathematics for sound, light, and field patterns.
+#term Consonance: Intervals whose frequency ratios produce periodic, reinforcing interference; the harmonic series underlies the pattern.
+#ref feynman Feynman, R. QED: The Strange Theory of Light and Matter (1985). Accessible treatment of quantum interference and the double slit.
 
 #script
 TBD

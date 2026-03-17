@@ -13,6 +13,9 @@ In the transformer architecture underlying most current AI systems, the entire h
 
 #provenance
 TBD
+#term Prehension: For Whitehead, each occasion takes in its entire relevant past as fully present; the transformer's attention is a technical analogue.
+#term Transformer: The neural architecture that holds full context in parallel and attends over it; time becomes spatial in the representation.
+#ref whitehead Whitehead, A.N. Process and Reality (1929). The past as objectively immortal and fully ingredient in the present.
 
 #script
 TBD

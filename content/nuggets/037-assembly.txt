@@ -27,6 +27,11 @@ These three are not competing accounts. They are the same architecture described
 
 #provenance
 TBD
+#term Assembly theory: Walker et al.: complexity measured by assembly index (steps to construct); high-index, high-copy objects signal life.
+#term Holon: Koestler's whole/part; the stable "sentence" at one level becomes the "word" at the next.
+#term Society of occasions: Whitehead's persistent pattern of events that functions as vocabulary for the next level.
+#ref koestler Koestler, A. The Ghost in the Machine (1967). Holons and the hierarchy of whole/part.
+#ref walker Walker, S.I. et al. Assembly theory (Nature 2023). Assembly index and the signature of life.
 
 #script
 TBD

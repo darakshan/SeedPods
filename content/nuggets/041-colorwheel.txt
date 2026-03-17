@@ -1,5 +1,10 @@
 #title The Color Wheel Is a Perceptual Invention
 #status proto
 #date 2026-03-15
+#tags perception, color, vision, cognition
+#related 042, 043, 044, 003
 
 The visible spectrum runs from roughly 380nm to 700nm in wavelength — a frequency ratio of about 1.84 to 1, tantalizingly close to but not quite an octave (which would be exactly 2 to 1). Physically, the spectrum is a line segment, not a circle. Red and violet are simply the two ends. But the human visual system closes the circle. Purple and magenta — the colors connecting red back to violet — do not correspond to any single wavelength anywhere in the spectrum. They are mixtures that the brain invented to complete the loop. The color wheel is a cognitive construction, a perceptual octave that physics almost but does not quite provide. The mind rounded up.
+
+#term Color wheel: The perceptual closure of the spectrum into a circle; magenta/purple are non-spectral inventions of the visual system.
+#ref helmholtz Helmholtz, H. Physiological Optics (1867). Classic treatment of color perception and the spectrum.

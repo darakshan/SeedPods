@@ -171,6 +171,43 @@ def _warn(msg):
     print(msg, file=sys.stderr)
     _warn_count += 1
 
+
+def _content_files_used_in_build(nuggets, index_copy, collected_md_refs):
+    """Set of content paths that contribute to the built site (nugget .txt, main MD pages, nav/list MD, linked MD, internal .md in 4u-ai)."""
+    used = set()
+    for main in _get_md_page_paths():
+        if main.exists():
+            used.add(main.resolve())
+    for n in nuggets:
+        used.add((NUGGETS_DIR / (n.get("filename", "") + ".txt")).resolve())
+    for _href, _label, kind, path in get_nav_items(index_copy):
+        if path:
+            if kind == "file":
+                used.add(path.resolve())
+            elif kind == "dir":
+                used.add((path / "page.md").resolve())
+    for _label, _list_href, list_path in get_list_menu_items(index_copy):
+        if list_path:
+            used.add(list_path.resolve())
+    for p in collected_md_refs:
+        used.add(Path(p).resolve())
+    for p in INTERNAL_DIR.glob("*.md"):
+        used.add(p.resolve())
+    return used
+
+
+def _warn_content_not_in_docs(nuggets, index_copy, collected_md_refs):
+    """If any file under content/ is not used in the build, print a warning to stderr. Does not affect exit code."""
+    all_content = {p.resolve() for p in CONTENT_DIR.rglob("*") if p.is_file() and p.name != ".DS_Store"}
+    used = _content_files_used_in_build(nuggets, index_copy, collected_md_refs)
+    missed = sorted(all_content - used, key=lambda p: str(p))
+    for p in missed:
+        try:
+            rel = p.relative_to(_ROOT)
+        except ValueError:
+            rel = p
+        print(f"Warning: content file not used in build: {rel}", file=sys.stderr)
+
 def _require_status_order():
     order = load_status_order()
     if not order:
@@ -426,6 +463,8 @@ def main():
             current_hash + "\n" + BUILD_TIME.isoformat(),
             encoding="utf-8",
         )
+
+        _warn_content_not_in_docs(nuggets, index_copy, collected_md_refs)
 
     if not verbose:
         print(f"Built {built_count} files")

@@ -13,6 +13,8 @@ A city is a society of occasions — millions of human events, each taking in a 
 
 #provenance
 TBD
+#term Society of occasions: Whitehead's term for a stable pattern of events with a common character; a city is a society of human occasions.
+#ref whitehead Whitehead, A.N. Process and Reality (1929). Societies and the scaling of experience to collective entities.
 
 #script
 TBD

@@ -1,5 +1,10 @@
 #title Why Those Two Color Axes? An Evolutionary Theory
 #status proto
 #date 2026-03-15
+#tags evolution, vision, color-constancy, ecology
+#related 041, 042, 044, 045
 
 The red/green opponent axis is widely understood in evolutionary biology as an adaptation for distinguishing ripe fruit and young red leaves from green foliage — the reason primates re-evolved trichromacy after most mammals lost it. Blood detection may also play a role. But the blue/yellow axis has a more subtle ecological logic. Blue corresponds to the color temperature of open sky and shadow; yellow-warm corresponds to direct sunlight. The blue/yellow channel may function primarily as an illuminant estimator — a mechanism for factoring the color of the light source out of the color of the surface, enabling the visual system to perceive object color as constant across different lighting conditions. This is called color constancy, and the blue/yellow channel is known to play a central role in it. The two axes may each solve a distinct and ancient ecological problem: one for identifying objects, one for discounting the sky.
+
+#term Color constancy: Perceiving object color as stable across lighting; the blue/yellow channel helps factor out illuminant.
+#ref mollon Mollon, J. and Regan, B. Cambridge Colour Handbook (1999). Evolution and ecology of primate color vision.

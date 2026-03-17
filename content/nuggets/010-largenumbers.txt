@@ -13,6 +13,8 @@ Gödel's incompleteness proof involved constructing an enormous number, arrived 
 
 #provenance
 Gödel, K. On Formally Undecidable Propositions (1931). Douglas Hofstadter, Gödel Escher Bach (1979) for the accessible treatment.
+#term Gödel's incompleteness: The result that any consistent formal system of sufficient strength contains true statements it cannot prove; constructed via a number encoding self-reference.
+#term Emergence: The appearance of qualitatively new properties or capacities when simpler processes accumulate or nest beyond a threshold.
 
 #script
 TBD

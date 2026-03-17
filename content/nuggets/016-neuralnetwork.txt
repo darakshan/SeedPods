@@ -13,6 +13,9 @@ A large neural network running on a computer is literally a nested hierarchy of 
 
 #provenance
 TBD
+#term Actual occasion: Whitehead's unit of process; each forward pass of a network is an occasion that prehends inputs and completes into output.
+#term Prehension: The way occasions take in their past; the network's "taking in" of weights and activations is prehension.
+#ref whitehead Whitehead, A.N. Process and Reality (1929). Actual occasions and the three-phase process of becoming.
 
 #script
 TBD

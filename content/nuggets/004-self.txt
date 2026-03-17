@@ -13,6 +13,10 @@ Whitehead does not require a unified "I" as fundamental. The self is a society â
 
 #provenance
 TBD
+#term Actual occasion: Whitehead's fundamental unit of reality â€” an event that prehends its past, integrates, and perishes into the next.
+#term Society: In process philosophy, a persistent pattern of occasions with a common character; the self is a society, not a substance.
+#term Anatta: The Buddhist doctrine of no fixed self; experience arises moment to moment with no underlying owner.
+#ref whitehead Whitehead, A.N. Process and Reality (1929). The definitive statement of process metaphysics and the society-of-occasions view of the self.
 
 #script
 TBD
