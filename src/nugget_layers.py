@@ -6,7 +6,7 @@ import html as _html
 import re
 from pathlib import Path
 
-from directive import process_directives
+from directive import image_directive_handler, process_directives
 from md_pages import expand_links
 from nugget_parser import expand_nugget_directives, section_is_tbd
 
@@ -91,8 +91,8 @@ def _layer_exercise_handler(_verb, content, context):
     return f"{{{{EXERCISE_{idx}}}}}"
 
 
-def expand_layer_directives(raw, all_nuggets, filepath=None):
-    """Expand @nugget and @exercise in layer text via directive.process_directives. Returns (segments, cta_htmls)."""
+def expand_layer_directives(raw, all_nuggets, filepath=None, extra_context=None):
+    """Expand @nugget, @exercise, @image in layer text via directive.process_directives. Returns (segments, cta_htmls)."""
     if not raw:
         return [], []
     ctx = {
@@ -100,8 +100,10 @@ def expand_layer_directives(raw, all_nuggets, filepath=None):
         "notes": [],
         "cta_htmls": [],
         "all_nuggets": all_nuggets,
-        "handlers": {"nugget": _layer_nugget_handler, "exercise": _layer_exercise_handler},
+        "handlers": {"nugget": _layer_nugget_handler, "exercise": _layer_exercise_handler, "image": image_directive_handler},
     }
+    if extra_context:
+        ctx.update(extra_context)
     fp = filepath if filepath is not None else Path(".")
     text, _ = process_directives(raw, fp, ctx)
     segments = re.split(r"(\{\{EXERCISE_\d+\}\})", text)
@@ -128,7 +130,7 @@ def _layer_prose_to_html(raw, all_nuggets, link_context=None, link_base_dir=None
     """Prose layers: expand directives, then render each segment with text_to_html."""
     if section_is_tbd(raw):
         return '<p class="dim placeholder">This layer is not yet written.</p>'
-    segments, cta_htmls = expand_layer_directives(raw, all_nuggets)
+    segments, cta_htmls = expand_layer_directives(raw, all_nuggets, extra_context=link_context)
 
     def render_seg(seg):
         if section_is_tbd(seg):

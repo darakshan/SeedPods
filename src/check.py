@@ -18,7 +18,7 @@ Usage:
 
 import sys
 
-from reporter import error as reporter_error, has_errors, print_all, reset as reporter_reset, warning as reporter_warning
+from reporter import error as reporter_error, has_errors, note as reporter_note, print_all, reset as reporter_reset, warning as reporter_warning
 from nugget_parser import (
     load_all_nuggets,
     load_index_copy,
@@ -243,7 +243,7 @@ def main():
                 fn = n.get("filename", "?")
                 shortname = fn.split("-", 1)[-1] if "-" in fn else None
                 for note in n.get("notes", []):
-                    reporter_warning(note, nugget_num=num, shortname=shortname)
+                    reporter_note(note, nugget_num=num, shortname=shortname)
 
     if not quiet:
         print_all()

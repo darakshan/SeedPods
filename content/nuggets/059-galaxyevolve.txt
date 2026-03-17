@@ -1,7 +1,7 @@
 #title Each Galaxy as a Thread of Cosmic Evolution
 #status proto
 #date 2026-03-15
-#tags physics, cosmology, teilhard, omega-point, evolution
+#tags physics, cosmology, omega-point, evolution
 #related 058, 066, 032, 061
 
 The standard view treats galaxies as structures — gravitationally bound collections of stars, gas, and dark matter. Background scenery for the story of life.

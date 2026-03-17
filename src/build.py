@@ -43,7 +43,7 @@ from directive import process_directives
 from md_pages import process_md_to_html, expand_includes, expand_links
 from site_paths import content_path_to_output_name
 
-from reporter import error as reporter_error, has_errors, print_all, reset as reporter_reset, warning as reporter_warning
+from reporter import error as reporter_error, has_errors, note as reporter_note, print_all, reset as reporter_reset, warning as reporter_warning
 from builders import (
     build_bibliography_body,
     build_bibliography_page,
@@ -166,6 +166,19 @@ def get_build_input_hash():
         h.update(path.read_bytes())
     return h.hexdigest()
 
+_IMAGE_EXTS = (".jpg", ".jpeg", ".png", ".webp", ".gif")
+
+
+def _image_refs_in_text(text):
+    """Return set of @image(file, ...) file names (first comma-separated arg) found in text."""
+    out = set()
+    for m in re.finditer(r"@image\s*\(\s*([^)]+)\s*\)", text):
+        args = [s.strip() for s in m.group(1).split(",")]
+        if args:
+            out.add(args[0])
+    return out
+
+
 def _content_files_used_in_build(nuggets, index_copy, collected_md_refs):
     """Set of content paths that contribute to the built site (nugget .txt, main MD pages, nav/list MD, linked MD, internal .md in 4u-ai)."""
     used = set()
@@ -187,6 +200,22 @@ def _content_files_used_in_build(nuggets, index_copy, collected_md_refs):
         used.add(Path(p).resolve())
     for p in INTERNAL_DIR.glob("*.md"):
         used.add(p.resolve())
+    image_names = set()
+    for n in nuggets:
+        raw = (NUGGETS_DIR / (n.get("filename", "") + ".txt")).read_text(encoding="utf-8")
+        image_names |= _image_refs_in_text(raw)
+    for md_path in _get_md_page_paths():
+        if md_path.exists():
+            image_names |= _image_refs_in_text(md_path.read_text(encoding="utf-8"))
+    images_dir = CONTENT_DIR / "images"
+    for name in image_names:
+        if not name or ".." in name or "/" in name or "\\" in name:
+            continue
+        for ext in _IMAGE_EXTS:
+            p = images_dir / (name + ext)
+            if p.is_file():
+                used.add(p.resolve())
+                break
     return used
 
 
@@ -316,7 +345,7 @@ def main():
         fn = n.get("filename", "?")
         shortname = fn.split("-", 1)[-1] if "-" in fn else None
         for note in n.get("notes", []):
-            reporter_warning("@note " + note, nugget_num=n.get("number"), shortname=shortname)
+            reporter_note(note, nugget_num=n.get("number"), shortname=shortname)
     built_count = 0
     seen_num = {}
     duplicate_nums = []
@@ -348,7 +377,7 @@ def main():
             continue
         fname = nugget_tag(n) + ".html"
         out = SITE_DIR / fname
-        out.write_text(build_nugget(n, nuggets, link_errors), encoding="utf-8")
+        out.write_text(build_nugget(n, nuggets, link_errors, site_dir=SITE_DIR), encoding="utf-8")
         built_count += 1
         if verbose:
             print(f"  Built {fname}")
@@ -464,7 +493,7 @@ def main():
         _warn_content_not_in_docs(nuggets, index_copy, collected_md_refs)
 
     if not verbose:
-        print(f"Built {built_count} files")
+        print(f"Built {built_count} files\n")
     for msg in link_errors:
         reporter_error(msg)
     sys.stdout.flush()

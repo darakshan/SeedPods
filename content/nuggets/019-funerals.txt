@@ -2,12 +2,13 @@
 #subtitle The map doesn't get replaced. The people holding the old map get replaced.
 #status proto
 #date 2026-03-11
-#tags knowledge, paradigm-shift, history-of-science, change, kuhn, planck
+#tags knowledge, paradigm-shift, history-of-science, change, scientific-revolutions
 #related 001, 018, 010, 011
 
 Thomas Kuhn documented carefully that most holders of an old paradigm never come around. They don't eventually see the light. They retire and die. The next generation of students, who learned the new map before it had any enemies, who have no old identity to protect, just grow up thinking it's obvious. Max Planck: "A new scientific truth does not triumph by convincing its opponents and making them see the light, but rather because its opponents eventually die and a new generation grows up that is familiar with it." This is connected to the magnetization seed — the new map spreads not by argument but by generational replacement.
 
 #provenance
-Planck, M. Scientific Autobiography (1949). Kuhn, T.S. The Structure of Scientific Revolutions (1962).
+#ref planck Planck, M. Scientific Autobiography (1949).
+#ref kuhn Kuhn, T.S. The Structure of Scientific Revolutions (1962).
 #term Paradigm: Kuhn's term for the framework of assumptions and practices that defines normal science until crisis and revolution.
 #term Generational replacement: The mechanism by which new paradigms prevail — not by convincing holdouts but by outlasting them.

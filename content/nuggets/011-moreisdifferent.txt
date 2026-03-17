@@ -2,7 +2,7 @@
 #subtitle Nothing was added. The numbers just got large enough.
 #status rough
 #date 2026-03-14
-#tags consciousness, emergence, complexity, holons, whitehead, koestler, hofstadter, AI
+#tags consciousness, emergence, complexity, holons, AI
 #related 003, 010, 014, 024, 037
 
 #surface

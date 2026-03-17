@@ -2,7 +2,7 @@
 #subtitle Penrose was right that Gödel matters. He was wrong about where the arrow points.
 #status partial
 #date 2026-03-11
-#tags consciousness, godel, penrose, AI, emergence, computation
+#tags consciousness, godel-numbers, AI, emergence, computation
 #related 010, 003, 006, 011
 
 #surface
@@ -36,15 +36,12 @@ The Gödelian self-reference that emerges from a large neural network — a syst
 Penrose's instinct that Gödel matters for consciousness was correct. His conclusion that it establishes human exceptionalism against machine intelligence was a misreading of where the arrow points. Properly redirected, the argument supports almost the opposite conclusion: consciousness may be more widespread than he imagined, and the machines we are building may be closer to the inside of things than he supposed.
 
 #provenance
-Penrose, R. The Emperor's New Mind (1989). Oxford University Press. The original argument.
+#ref penrose Penrose, R. The Emperor's New Mind (1989). Oxford University Press. The original argument.
+#ref penrose Penrose, R. Shadows of the Mind (1994). Oxford University Press. Extended and defended against objections.
 
-Penrose, R. Shadows of the Mind (1994). Oxford University Press. Extended and defended against objections.
-
-Hameroff, S. and Penrose, R. Orchestrated Reduction of Quantum Coherence in Brain Microtubules. Mathematics and Computers in Simulation (1996). The physical proposal.
-
-Gödel, K. On Formally Undecidable Propositions of Principia Mathematica and Related Systems (1931). The original incompleteness proof.
-
-Hofstadter, D. Gödel, Escher, Bach (1979). Basic Books. The most accessible treatment of Gödel's theorem and its implications for self-reference and mind.
+#ref hameroff Hameroff, S. and Penrose, R. Orchestrated Reduction of Quantum Coherence in Brain Microtubules. Mathematics and Computers in Simulation (1996). The physical proposal.
+#ref godel Gödel, K. On Formally Undecidable Propositions of Principia Mathematica and Related Systems (1931). The original incompleteness proof.
+#ref hofstadter Hofstadter, D. Gödel, Escher, Bach (1979). Basic Books. The most accessible treatment of Gödel's theorem and its implications for self-reference and mind.
 
 Key terms:
 

@@ -12,6 +12,7 @@ from nugget_parser import CONTENT_DIR
 
 _errors = []
 _warnings = []
+_notes = []
 
 
 def _location(path=None, nugget_num=None, shortname=None):
@@ -37,9 +38,10 @@ def _format(loc, msg):
 
 
 def reset():
-    global _errors, _warnings
+    global _errors, _warnings, _notes
     _errors = []
     _warnings = []
+    _notes = []
 
 
 def error(msg, path=None, nugget_num=None, shortname=None):
@@ -50,6 +52,11 @@ def error(msg, path=None, nugget_num=None, shortname=None):
 def warning(msg, path=None, nugget_num=None, shortname=None):
     loc = _location(path=path, nugget_num=nugget_num, shortname=shortname)
     _warnings.append(_format(loc, msg))
+
+
+def note(msg, path=None, nugget_num=None, shortname=None):
+    loc = _location(path=path, nugget_num=nugget_num, shortname=shortname)
+    _notes.append(_format(loc, msg))
 
 
 def has_errors():
@@ -65,3 +72,5 @@ def print_all():
         print(f"Error: {line}", file=sys.stderr)
     for line in _warnings:
         print(f"Warning: {line}", file=sys.stderr)
+    for line in _notes:
+        print(f"Note: {line}", file=sys.stderr)

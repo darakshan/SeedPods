@@ -36,6 +36,8 @@ References have a keyword to make them unique and should always be of the form
 
 identifying the last name of the first author.  If there is only one name (e.g. Pythagor) that should be used.  Don't use #ref for ideas without an other, in that case use #tag (which can be anywhere).
 
+Don't #tag a person's name if you #ref their work; use #ref for the citation and tag the principle or concept instead (e.g. tag "mandelbrot-set" or "scientific-revolutions", not "Mandelbrot" or "Kuhn").
+
 
 ---
 

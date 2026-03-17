@@ -1,7 +1,7 @@
 #title The Virtual Dimensions Formula as a Publishable Conjecture
 #status proto
 #date 2026-03-15
-#tags mathematics, farey, neural-networks, many-worlds
+#tags mathematics, farey-sequence, neural-networks, many-worlds
 #related 057, 060, 038
 
 If you have a space with d actual dimensions, how many nearly-orthogonal directions can you fit in it? The answer matters because nearly-orthogonal directions can carry independent information without crosstalk — like independent channels.

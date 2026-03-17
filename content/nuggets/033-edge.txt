@@ -2,7 +2,7 @@
 #subtitle The Mandelbrot Boundary
 #status rough
 #date 2026-03-14
-#tags sensation, mandelbrot, fractal, farey, consonance, everett, boundary
+#tags sensation, mandelbrot-set, fractal, farey-sequence, consonance, boundary
 #related 002, 007, 009, 030, 005
 
 #surface

@@ -9,7 +9,7 @@ import re
 import sys
 from pathlib import Path
 
-from directive import process_directives
+from directive import image_directive_handler, process_directives
 
 from nugget_parser import display_number, nugget_tag
 from site_paths import content_path_to_output_name
@@ -462,14 +462,16 @@ def process_md_to_html(md_path, context=None, collected_md_refs=None):
             "index": _md_placeholder_handler("{{INDEX}}", "index_html"),
             "map": _md_placeholder_handler("{{MAP}}", "map_html"),
             "timestamp": _md_timestamp_handler,
+            "image": image_directive_handler,
         },
     }
     for k, v in context.items():
         if k not in ctx:
             ctx[k] = v
     expanded, note_list = process_directives(raw, md_path, ctx)
+    note_cb = context.get("note") or (lambda msg, filepath=None: warn("@note " + msg, filepath=filepath))
     for note in note_list:
-        warn("@note " + note, filepath=md_path)
+        note_cb(note, filepath=md_path)
     for placeholder, block in ctx["replacements"].items():
         expanded = expanded.replace(placeholder, block)
     if not expanded.strip():

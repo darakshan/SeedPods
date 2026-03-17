@@ -2,7 +2,7 @@
 #subtitle Draw the intervals. Recognize the shape.
 #status proto
 #date 2026-03-16
-#tags sensation, mathematics, consonance, mandelbrot, farey, music, iteration
+#tags sensation, mathematics, consonance, mandelbrot-set, farey-sequence, music, iteration
 #related 033, 035, 034, 056, 030
 
 Play a C and a G on a piano. They sound stable together — resolved,
@@ -26,7 +26,7 @@ became easy enough to draw — score every ratio by how simple it is,
 arrange the results around a circle representing one octave — this is
 what appeared. @image(harmonic-clock)
 
-That's a Mandelbrot set. @image(mandelbrot-boundary)
+That's a Mandelbrot set. @image(mandelbrot-boundary, Mandelbrot Set, Wikipedia)
 
 Not a visual resemblance. The same object, seen from two different
 angles.

@@ -90,6 +90,11 @@ h2{font-size:1.6rem;font-weight:300;margin-bottom:1rem}
 .prose hr,.page-body hr{border:none;border-top:1px solid var(--line);margin:1.25rem 0 .25rem 0;padding:1rem 0 .25rem 0;display:block;overflow:hidden}
 .prose hr+*,.page-body hr+*{margin-top:0!important}
 .prose em{font-style:italic}
+.directive-image{width:50%;margin:0 1.25rem 1rem 0}
+.directive-image--left{float:left;clear:left}
+.directive-image img{width:100%;height:auto;display:block;vertical-align:top}
+.directive-image figcaption{font-size:.9rem;line-height:1.4;margin-top:.5rem;color:var(--dim)}
+.directive-image figcaption cite{font-style:normal;font-family:'DM Mono',monospace;font-size:.8em}
 .tag{font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--line);padding:.18rem .45rem;border-radius:2px;display:inline-block}
 .tag:hover{color:var(--accent);border-color:var(--accent)}
 @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}

@@ -2,7 +2,7 @@
 #subtitle Teilhard and Whitehead
 #status rough
 #date 2026-03-14
-#tags consciousness, teilhard, whitehead, omega-point, process
+#tags consciousness, omega-point, process
 #related 002, 003, 008, 032, 009
 
 #surface

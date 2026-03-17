@@ -24,7 +24,7 @@ from nugget_parser import (
     nugget_tag,
     section_is_tbd,
 )
-from reporter import error as reporter_error
+from reporter import error as reporter_error, note as reporter_note
 from site_chrome import build_time, close, foot, get_list_menu_items, get_nav_items, head, nav, nav_seed_script_content, set_build_context, _first_h1, _warn
 
 INTERNAL_DIR = CONTENT_DIR / "internal"
@@ -46,7 +46,7 @@ PROTO_NOTICE_HTML = '''<div class="proto-notice"><p class="dim">This nugget is a
 ROUGH_NOTICE_HTML = '''<div class="rough-notice"><p class="dim">This nugget is a rough draft, far from polished. Caveat lector.</p></div>'''
 
 
-def build_nugget(n, all_nuggets, link_errors=None):
+def build_nugget(n, all_nuggets, link_errors=None, site_dir=None):
     num = n.get("number", "?")
     title = n.get("title", "Untitled")
     subtitle = n.get("subtitle", "")
@@ -57,6 +57,8 @@ def build_nugget(n, all_nuggets, link_errors=None):
     layers = n.get("layers", {})
 
     link_context = {"nuggets": all_nuggets, "content_dir": CONTENT_DIR, "warn": _warn, "link_errors": link_errors}
+    if site_dir is not None:
+        link_context["site_dir"] = site_dir
     link_base_dir = NUGGETS_DIR
 
     tags_href = "tags.html"
@@ -269,9 +271,11 @@ def build_tags_page(nuggets, status_order, explainer_terms=None):
 
 
 def _md_context(**overrides):
-    """Default context for process_md_to_html: warn, build_time, content_dir, site_dir. Merge with overrides."""
+    """Default context for process_md_to_html: warn, build_time, content_dir, site_dir, note. Merge with overrides."""
     copy = overrides.get("copy", load_index_copy())
-    return {"warn": _warn, "build_time": build_time, "content_dir": CONTENT_DIR, "site_dir": (copy.get("site_dir") or "").strip(), **overrides}
+    def _note(msg, filepath=None):
+        reporter_note(msg, path=filepath)
+    return {"warn": _warn, "build_time": build_time, "content_dir": CONTENT_DIR, "site_dir": (copy.get("site_dir") or "").strip(), "note": _note, **overrides}
 
 
 def _md_context_with_special(nuggets, status_order, explainer_terms=None, **overrides):
