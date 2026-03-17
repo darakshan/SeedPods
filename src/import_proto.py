@@ -116,7 +116,7 @@ def build_nugget_txt(number, shortname, name, body, refs, terms, date, subtitle=
 
 
 def run(files, apply=False):
-    existing = load_all_nuggets(warn=lambda _: None)
+    existing = load_all_nuggets(warn=lambda msg, filepath=None: None)
     existing_nums = {n.get("number") for n in existing if n.get("number")}
     existing_shortnames = {n.get("shortname", "") for n in existing if n.get("shortname")}
     used_shortnames_in_run = set()

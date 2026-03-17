@@ -67,7 +67,7 @@ def resolve_link(locator, explicit_text, context, base_dir, collected_md_refs=No
 
     content_root = Path(context.get("content_dir") or _ROOT).resolve()
     base_dir = Path(base_dir).resolve()
-    warn = context.get("warn", lambda msg: None)
+    warn = context.get("warn", lambda msg, filepath=None: None)
     link_errors = context.get("link_errors")
 
     def record_error(msg):
@@ -189,7 +189,7 @@ def _md_link_handler(_verb, content, context):
 def expand_includes(text, base_dir, warn=None, filepath=None):
     """Expand @include directives in text. Paths resolved under base_dir. filepath used in warnings."""
     if warn is None:
-        warn = lambda msg: None
+        warn = lambda msg, filepath=None: None
     fp = filepath if filepath is not None else Path(base_dir).resolve()
     ctx = {"base_dir": Path(base_dir).resolve(), "warn": warn, "notes": [], "handlers": {}}
     return process_directives(text, fp, ctx)[0]
@@ -364,7 +364,7 @@ def process_md_to_html(md_path, context=None, collected_md_refs=None):
         )
     raw = md_path.read_text(encoding="utf-8")
     base_dir = md_path.parent.resolve()
-    warn = context.get("warn", lambda msg: None)
+    warn = context.get("warn", lambda msg, filepath=None: None)
     ctx = {
         "base_dir": base_dir,
         "warn": warn,
@@ -386,12 +386,8 @@ def process_md_to_html(md_path, context=None, collected_md_refs=None):
         if k not in ctx:
             ctx[k] = v
     expanded, note_list = process_directives(raw, md_path, ctx)
-    try:
-        rel_path = md_path.resolve().relative_to(_ROOT)
-    except ValueError:
-        rel_path = md_path
     for note in note_list:
-        print(f"\n{rel_path}: @note {note}")
+        warn("@note " + note, filepath=md_path)
     for placeholder, block in ctx["replacements"].items():
         expanded = expanded.replace(placeholder, block)
     if not expanded.strip():

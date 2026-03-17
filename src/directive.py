@@ -37,7 +37,7 @@ def _parse_directive(text, start, filepath, warn):
                 depth -= 1
             j += 1
         if depth != 0:
-            warn(f"Warning: {filepath}: unclosed parentheses in @{verb}(...)")
+            warn("unclosed parentheses in @{}(...)".format(verb), filepath=filepath)
             return None, None, j if j <= len(text) else len(text)
         content = text[pos + 1 : j - 1]
         return verb, content, j
@@ -53,7 +53,7 @@ def process_directives(text, filepath, context):
     if notes is None:
         notes = []
         context["notes"] = notes
-    warn = context.get("warn", lambda _: None)
+    warn = context.get("warn", lambda msg, filepath=None: None)
     handlers = context.get("handlers", {})
     base_dir = context.get("base_dir")
 
@@ -78,16 +78,16 @@ def process_directives(text, filepath, context):
         elif verb == "include":
             path_arg = content.strip()
             if not path_arg:
-                warn(f"Warning: {filepath}: @include() requires a path: @include(filename)")
+                warn("@include() requires a path: @include(filename)", filepath=filepath)
                 replacement = text[span_start:end]
             elif base_dir is not None:
                 inc_path = (Path(base_dir).resolve() / path_arg).resolve()
                 base = Path(base_dir).resolve()
                 if not str(inc_path).startswith(str(base)):
-                    warn(f"Warning: @include {path_arg!r} resolves outside {base_dir}")
+                    warn("@include {!r} resolves outside base dir".format(path_arg), filepath=filepath)
                     replacement = text[span_start:end]
                 elif not inc_path.exists():
-                    warn(f"Warning: @include {path_arg!r} not found")
+                    warn("@include {!r} not found".format(path_arg), filepath=filepath)
                     replacement = text[span_start:end]
                 else:
                     replacement = inc_path.read_text(encoding="utf-8")
@@ -101,7 +101,7 @@ def process_directives(text, filepath, context):
                 replacement = text[span_start:end]
         else:
             if verb not in KNOWN_VERBS:
-                warn(f"Warning: {filepath}: unknown @ directive @{verb} (possible misspelling?)")
+                warn("unknown @ directive @{} (possible misspelling?)".format(verb), filepath=filepath)
             replacement = text[span_start:end]
         out.append(replacement)
         pos = end

@@ -10,7 +10,7 @@ import sys
 from nugget_parser import CONTENT_DIR, load_index_copy
 from site_paths import parse_list_menu
 
-_warn_callback = lambda msg: print(msg, file=sys.stderr)
+_warn_callback = lambda msg, filepath=None: print(msg, file=sys.stderr)
 build_time = None
 
 
@@ -22,8 +22,8 @@ def set_build_context(*, warn=None, build_time_=None):
         build_time = build_time_
 
 
-def _warn(msg):
-    _warn_callback(msg)
+def _warn(msg, filepath=None):
+    _warn_callback(msg, filepath=filepath)
 
 
 def _first_h1(path):

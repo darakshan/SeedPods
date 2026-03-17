@@ -24,6 +24,7 @@ from nugget_parser import (
     nugget_tag,
     section_is_tbd,
 )
+from reporter import error as reporter_error
 from site_chrome import build_time, close, foot, get_list_menu_items, get_nav_items, head, nav, nav_seed_script_content, set_build_context, _first_h1, _warn
 
 INTERNAL_DIR = CONTENT_DIR / "internal"
@@ -62,9 +63,11 @@ def build_nugget(n, all_nuggets, link_errors=None):
     tag_html = " ".join(f'<a href="{tags_href}#{tag_slug(t)}" class="tag">{t}</a>' for t in tags)
 
     rel_nuggets = [nugget_by_number(all_nuggets, r) for r in related_nums]
+    fn = n.get("filename") or ""
+    shortname = fn.split("-", 1)[-1] if "-" in fn else None
     for r in related_nums:
         if not nugget_by_number(all_nuggets, r):
-            _warn(f"Warning: nugget {n.get('number')} ({n.get('filename')}): related {r} does not match any nugget.")
+            reporter_error("related {} does not match any nugget".format(r), nugget_num=num, shortname=shortname)
     rel_nuggets = [r for r in rel_nuggets if r]
     related_cards_html = ""
     if rel_nuggets:

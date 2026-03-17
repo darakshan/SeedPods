@@ -18,6 +18,7 @@ Usage:
 
 import sys
 
+from reporter import error as reporter_error, has_errors, print_all, reset as reporter_reset, warning as reporter_warning
 from nugget_parser import (
     load_all_nuggets,
     load_index_copy,
@@ -85,15 +86,16 @@ def main():
         nugget_filter = set(a.zfill(3) for a in args)
         verbose = True
 
+    reporter_reset()
     params = load_index_params()
-    nuggets = load_all_nuggets(warn=lambda _: None)
+    nuggets = load_all_nuggets(warn=lambda msg, filepath=None: None)
     status_order = load_status_order()
     all_numbers = set(n.get("number", "") for n in nuggets if n.get("number"))
     if nugget_filter:
         for a in args:
             n = a.zfill(3)
             if n not in all_numbers:
-                print(f"{a}: no such nugget", file=sys.stderr)
+                reporter_error("no such nugget", nugget_num=n)
         nuggets_to_check = [n for n in nuggets if n.get("number") in nugget_filter]
     else:
         nuggets_to_check = nuggets
@@ -119,32 +121,47 @@ def main():
         d_words = _word_count(depth)
         run_word_count = status in _run_word_count_statuses(status_order)
         run_limits = _run_other_limits(status, status_order)
+        shortname = fn.split("-", 1)[-1] if "-" in fn else None
 
         if run_word_count and not section_is_tbd(surface):
             lo, hi = params["surface_min_words"], params["surface_max_words"]
             if s_words < lo:
-                errors.append(("length", f"{fn}: surface has {s_words} words (min {lo})"))
+                msg = "surface has {} words (min {})".format(s_words, lo)
+                errors.append(("length", msg))
+                reporter_error(msg, nugget_num=num, shortname=shortname)
             elif s_words > hi:
-                errors.append(("length", f"{fn}: surface has {s_words} words (max {hi})"))
+                msg = "surface has {} words (max {})".format(s_words, hi)
+                errors.append(("length", msg))
+                reporter_error(msg, nugget_num=num, shortname=shortname)
 
         if run_word_count and not section_is_tbd(depth):
             lo, hi = params["depth_min_words"], params["depth_max_words"]
             if d_words < lo:
-                errors.append(("length", f"{fn}: depth has {d_words} words (min {lo})"))
+                msg = "depth has {} words (min {})".format(d_words, lo)
+                errors.append(("length", msg))
+                reporter_error(msg, nugget_num=num, shortname=shortname)
             elif d_words > hi:
-                errors.append(("length", f"{fn}: depth has {d_words} words (max {hi})"))
+                msg = "depth has {} words (max {})".format(d_words, hi)
+                errors.append(("length", msg))
+                reporter_error(msg, nugget_num=num, shortname=shortname)
 
         if run_limits:
             degree = in_degree.get(num, 0)
             min_deg = params["min_related_in_degree"]
             if degree < min_deg:
-                errors.append(("in_degree", f"{fn}: in-degree {degree} (min {min_deg} via #related)"))
+                msg = "in-degree {} (min {} via #related)".format(degree, min_deg)
+                errors.append(("in_degree", msg))
+                reporter_error(msg, nugget_num=num, shortname=shortname)
 
         related = n.get("related", [])
         if run_limits and len(related) == 0:
-            errors.append(("underlinked", f"{fn}: 0 #related"))
+            msg = "0 #related"
+            errors.append(("underlinked", msg))
+            reporter_error(msg, nugget_num=num, shortname=shortname)
         elif run_limits and len(related) > 5:
-            errors.append(("over_related", f"{fn}: #related has {len(related)} entries (max 5)"))
+            msg = "#related has {} entries (max 5)".format(len(related))
+            errors.append(("over_related", msg))
+            reporter_error(msg, nugget_num=num, shortname=shortname)
 
         section_names = ("surface", "depth", "script", "images")
         n_sections = sum(1 for name in section_names if not section_is_tbd(layers.get(name)))
@@ -162,9 +179,13 @@ def main():
         if expected_status == "complete":
             if status not in complete_statuses:
                 expected_str = ", ".join(sorted(complete_statuses))
-                errors.append(("status", f"{fn}: has all 4 sections but status is {status!r} (expected one of: {expected_str})"))
+                msg = "has all 4 sections but status is {!r} (expected one of: {})".format(status, expected_str)
+                errors.append(("status", msg))
+                reporter_error(msg, nugget_num=num, shortname=shortname)
         elif status != expected_status:
-            errors.append(("status", f"{fn}: has {n_sections} section(s) but status is {status!r} (expected {expected_status})"))
+            msg = "has {} section(s) but status is {!r} (expected {})".format(n_sections, status, expected_status)
+            errors.append(("status", msg))
+            reporter_error(msg, nugget_num=num, shortname=shortname)
 
     counts = {}
     for kind, _ in errors:
@@ -197,23 +218,19 @@ def main():
     status_line = ", ".join(f"{s}: {by_status[s]}" for s in ordered)
     print(status_line, file=sys.stderr)
 
-    unified = []
-    for _, msg in errors:
-        fn = msg.split(": ", 1)[0] if ": " in msg else "?"
-        unified.append((fn, msg))
     if verbose:
         for n in nuggets_to_check:
             if n.get("notes"):
+                num = n.get("number", "?")
                 fn = n.get("filename", "?")
+                shortname = fn.split("-", 1)[-1] if "-" in fn else None
                 for note in n.get("notes", []):
-                    unified.append((fn, f"{fn} {note}"))
-    unified.sort(key=lambda x: x[0])
+                    reporter_warning(note, nugget_num=num, shortname=shortname)
 
     if not quiet:
-        for _, line in unified:
-            print(line, file=sys.stderr)
+        print_all()
 
-    if errors:
+    if has_errors():
         sys.exit(1)
     sys.exit(0)
 

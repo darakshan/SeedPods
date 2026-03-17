@@ -85,12 +85,12 @@ def nugget_by_number_flex(nuggets, num_str):
     return n
 
 
-def _noop_warn(msg):
+def _noop_warn(msg, filepath=None):
     pass
 
 
 def parse_nugget(filepath, warn=None):
-    """Parse a nugget .txt file into a dict. warn(msg) is called for non-fatal issues."""
+    """Parse a nugget .txt file into a dict. warn(msg, filepath=...) is called for non-fatal issues."""
     w = warn if warn is not None else _noop_warn
     text = filepath.read_text(encoding="utf-8")
     ctx = {"warn": w, "notes": [], "handlers": {}}
@@ -136,7 +136,7 @@ def parse_nugget(filepath, warn=None):
                         ref_text = raw
                     refs.append((keyword, ref_text))
                 else:
-                    w(f"Warning: {filepath}: #ref only allowed in #provenance (found in or before {current_layer or 'metadata'})")
+                    w("#ref only allowed in #provenance (found in or before {})".format(current_layer or "metadata"), filepath=filepath)
                 continue
             if key == "term":
                 raw = value.strip()
@@ -150,15 +150,15 @@ def parse_nugget(filepath, warn=None):
                 flush()
                 current_layer = None
                 if key in meta:
-                    w(f"Warning: {filepath}: duplicate #{key}, keeping first value.")
+                    w("duplicate #{}, keeping first value.".format(key), filepath=filepath)
                 else:
                     if not value.strip() and key in ("title", "status", "date"):
-                        w(f"Warning: {filepath}: #{key} has no value on same line.")
+                        w("#{} has no value on same line.".format(key), filepath=filepath)
                     meta[key] = value.strip()
             else:
                 flush()
                 if key in layers:
-                    w(f"Warning: {filepath}: duplicate #{key}, keeping first.")
+                    w("duplicate #{}, keeping first.".format(key), filepath=filepath)
                     current_layer = None
                     buffer = []
                 else:
@@ -180,7 +180,7 @@ def parse_nugget(filepath, warn=None):
         if re.match(r"^\d+$", r):
             related_parsed.append(r)
         else:
-            w(f"Warning: {filepath}: related entry {r!r} is not a valid nugget number (digits only).")
+            w("related entry {!r} is not a valid nugget number (digits only).".format(r), filepath=filepath)
             m = re.match(r"^(\d+)", r)
             if m:
                 related_parsed.append(m.group(1))
@@ -210,8 +210,10 @@ def parse_nugget(filepath, warn=None):
 
 
 def load_all_nuggets(warn=None):
-    """Load and parse all nugget .txt files from NUGGETS_DIR. warn(msg) for parse issues."""
-    w = warn if warn is not None else (lambda msg: print(msg, file=sys.stderr))
+    """Load and parse all nugget .txt files from NUGGETS_DIR. warn(msg, filepath=...) for parse issues."""
+    def default_warn(msg, filepath=None):
+        print(msg, file=sys.stderr)
+    w = warn if warn is not None else default_warn
     nuggets = []
     for f in sorted(NUGGETS_DIR.glob("*.txt")):
         try:
@@ -219,7 +221,7 @@ def load_all_nuggets(warn=None):
             n["filename"] = f.stem
             nuggets.append(n)
         except Exception as e:
-            w(f"Warning: could not parse {f}: {e}")
+            w("could not parse: {}".format(e), filepath=f)
     return nuggets
 
 

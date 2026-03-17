@@ -96,7 +96,7 @@ def expand_layer_directives(raw, all_nuggets, filepath=None):
     if not raw:
         return [], []
     ctx = {
-        "warn": lambda _: None,
+        "warn": lambda msg, filepath=None: None,
         "notes": [],
         "cta_htmls": [],
         "all_nuggets": all_nuggets,

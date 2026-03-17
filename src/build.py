@@ -43,6 +43,7 @@ from directive import process_directives
 from md_pages import process_md_to_html, expand_includes, expand_links
 from site_paths import content_path_to_output_name
 
+from reporter import error as reporter_error, has_errors, print_all, reset as reporter_reset, warning as reporter_warning
 from builders import (
     build_bibliography_body,
     build_bibliography_page,
@@ -83,7 +84,6 @@ def _get_md_page_paths():
     return paths
 
 BUILD_TIME = None
-_warn_count = 0
 BUILD_STATE_FILE = _ROOT / ".buildstate"
 
 def _input_files_for_page(main_path):
@@ -166,12 +166,6 @@ def get_build_input_hash():
         h.update(path.read_bytes())
     return h.hexdigest()
 
-def _warn(msg):
-    global _warn_count
-    print(msg, file=sys.stderr)
-    _warn_count += 1
-
-
 def _content_files_used_in_build(nuggets, index_copy, collected_md_refs):
     """Set of content paths that contribute to the built site (nugget .txt, main MD pages, nav/list MD, linked MD, internal .md in 4u-ai)."""
     used = set()
@@ -197,21 +191,21 @@ def _content_files_used_in_build(nuggets, index_copy, collected_md_refs):
 
 
 def _warn_content_not_in_docs(nuggets, index_copy, collected_md_refs):
-    """If any file under content/ is not used in the build, print a warning to stderr. Does not affect exit code."""
+    """If any file under content/ is not used in the build, record a warning. Does not affect exit code."""
     all_content = {p.resolve() for p in CONTENT_DIR.rglob("*") if p.is_file() and p.name != ".DS_Store"}
     used = _content_files_used_in_build(nuggets, index_copy, collected_md_refs)
     missed = sorted(all_content - used, key=lambda p: str(p))
     for p in missed:
         try:
-            rel = p.relative_to(_ROOT)
+            rel = p.relative_to(CONTENT_DIR)
         except ValueError:
             rel = p
-        print(f"Warning: content file not used in build: {rel}", file=sys.stderr)
+        reporter_warning("content file not used in build", path=p)
 
 def _require_status_order():
     order = load_status_order()
     if not order:
-        raise SystemExit("Required file missing: config/status.txt")
+        reporter_error("Required file missing: config/status.txt")
     return order
 
 
@@ -276,10 +270,13 @@ def build_4u_ai_txt(internal_str, nuggets, nugget_raw_by_slug):
 
 def main():
     global BUILD_TIME, SITE_DIR
+    reporter_reset()
     index_copy = load_index_copy()
     site_dir = (index_copy.get("site_dir") or "").strip()
     if not site_dir:
-        raise SystemExit("config/settings.txt must set site_dir")
+        reporter_error("config/settings.txt must set site_dir")
+        print_all()
+        sys.exit(1)
     SITE_DIR = _ROOT / site_dir
     filter_num = None
     verbose = "-v" in sys.argv or "--verbose" in sys.argv
@@ -310,17 +307,16 @@ def main():
             shutil.rmtree(SITE_DIR)
         SITE_DIR.mkdir(parents=True)
 
-    nuggets = load_all_nuggets(warn=_warn)
-    set_build_context(warn=_warn, build_time_=BUILD_TIME)
+    def _warn_cb(msg, filepath=None):
+        reporter_warning(msg, path=filepath)
+    nuggets = load_all_nuggets(warn=_warn_cb)
+    set_build_context(warn=_warn_cb, build_time_=BUILD_TIME)
     print(f"Loaded {len(nuggets)} nuggets")
     for n in nuggets:
+        fn = n.get("filename", "?")
+        shortname = fn.split("-", 1)[-1] if "-" in fn else None
         for note in n.get("notes", []):
-            rel = NUGGETS_DIR / (n.get("filename", "?") + ".txt")
-            try:
-                rel = rel.resolve().relative_to(_ROOT)
-            except ValueError:
-                pass
-            print(f"\n{rel}: @note {note}")
+            reporter_warning("@note " + note, nugget_num=n.get("number"), shortname=shortname)
     built_count = 0
     seen_num = {}
     duplicate_nums = []
@@ -331,19 +327,20 @@ def main():
                 duplicate_nums.append((num, seen_num[num], n.get("filename")))
             else:
                 seen_num[num] = n.get("filename")
-    if duplicate_nums:
-        lines = [f"Duplicate nugget number {num}: {a}.txt and {b}.txt" for num, a, b in duplicate_nums]
-        raise SystemExit("Build failed:\n  " + "\n  ".join(lines))
+    for num, a, b in duplicate_nums:
+        reporter_error("Duplicate nugget number {}: {}.txt and {}.txt".format(num, a, b))
 
     for md_path in _get_md_page_paths():
         if not md_path.exists():
-            raise SystemExit(f"Required file missing: {md_path}")
+            reporter_error("Required file missing", path=md_path)
     status_order = _require_status_order()
 
     for n in nuggets:
         s = n.get("status", "empty")
         if s not in status_order:
-            _warn(f"Error: nugget {n.get('filename', '?')}: status {s!r} not in config/status.txt")
+            fn = n.get("filename") or ""
+            shortname = fn.split("-", 1)[-1] if "-" in fn else None
+            reporter_error("status {!r} not in config/status.txt".format(s), nugget_num=n.get("number"), shortname=shortname)
 
     link_errors = []
     for n in nuggets:
@@ -468,14 +465,14 @@ def main():
 
     if not verbose:
         print(f"Built {built_count} files")
+    for msg in link_errors:
+        reporter_error(msg)
+    sys.stdout.flush()
+    print_all()
     print(f"\nDone. Site written to {SITE_DIR.relative_to(_ROOT)}/ (web root)")
     if nothing_changed:
         print("Nothing changed; timestamp unchanged.")
-    if link_errors:
-        for msg in link_errors:
-            print(msg, file=sys.stderr)
-        sys.exit(1)
-    if _warn_count:
+    if has_errors():
         sys.exit(1)
 
 if __name__ == "__main__":
