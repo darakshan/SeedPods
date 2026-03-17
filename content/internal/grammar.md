@@ -35,9 +35,9 @@ The build script parses nugget files strictly. Follow this grammar so new or rev
 - **Anywhere in a nugget.** Each line: `#term` followed by a space and the term, then a colon (`:`), then the definition (e.g. `#term Paradigm: Thomas Kuhn's term for the framework...`). One term per line.
 - The build collects terms from **all** nuggets and generates the Glossary page: terms sorted alphabetically, grouped so the same term from multiple nuggets appears once with each definition indented; each entry lists which nuggets define it (In: …).
 
-###Editorial notes (@note)
+###Editorial notes (&#64;note)
 
-- `&#64;note(...)` — inline or on its own; the text in parentheses is an editorial comment. It is removed from the content and omitted from page generation. The build prints each @note to stderr when building; the check tool reports all notes; use `just check -v` or `just check -v 001 002` to list them. Use balanced parentheses if the text contains `)`.
+- `&#64;note(...)` — inline or on its own; the text in parentheses is an editorial comment. It is removed from the content and omitted from page generation. The build prints each &#64;note to stderr when building; the check tool reports all notes; use `just check -v` or `just check -v 001 002` to list them. Use balanced parentheses if the text contains `)`.
 
 ###Layers (multi-line sections)
 

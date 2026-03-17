@@ -9,7 +9,7 @@ import re
 import sys
 from pathlib import Path
 
-from at_directives import strip_at_notes, warn_unknown_at_directives
+from directive import process_directives
 
 from nugget_parser import display_number, nugget_tag
 from site_paths import content_path_to_output_name
@@ -157,9 +157,7 @@ def resolve_link(locator, explicit_text, context, base_dir, collected_md_refs=No
 
 
 def expand_links(text, context, base_dir, collected_md_refs=None):
-    """Replace @link(locator, text) with <a href="...">text</a>. Runs before markdown.
-    locator: nugget number (e.g. 002), .md path (relative to base_dir), path-only (e.g. about, about/authors), or raw href.
-    collected_md_refs: optional set to add referenced .md paths to (for build to emit)."""
+    """Replace @link(locator, text) with <a href="...">text</a>. Runs before markdown. Used when directive.process_directives is not used (e.g. nugget layer prose)."""
     if collected_md_refs is None:
         collected_md_refs = set()
 
@@ -174,27 +172,27 @@ def expand_links(text, context, base_dir, collected_md_refs=None):
     return re.sub(r"@link\s*\(\s*([^,)]+)\s*(?:,\s*([^)]*))?\s*\)", repl, text)
 
 
-def expand_includes(text, base_dir, warn=None):
-    """Replace lines @include filename with file contents from base_dir. Paths resolved under base_dir."""
+def _md_link_handler(_verb, content, context):
+    parts = content.split(",", 1)
+    locator = parts[0].strip()
+    explicit_text = parts[1].strip() if len(parts) > 1 else ""
+    href, link_text = resolve_link(
+        locator, explicit_text, context,
+        context["base_dir"],
+        context.get("collected_md_refs"),
+    )
+    if href is None:
+        return None
+    return f'<a href="{_html.escape(href)}">{_html.escape(link_text)}</a>'
+
+
+def expand_includes(text, base_dir, warn=None, filepath=None):
+    """Expand @include directives in text. Paths resolved under base_dir. filepath used in warnings."""
     if warn is None:
         warn = lambda msg: None
-    base_dir = Path(base_dir).resolve()
-    out = []
-    for line in text.splitlines():
-        stripped = line.strip()
-        if stripped.startswith("@include "):
-            name = stripped[8:].strip()
-            inc_path = (base_dir / name).resolve()
-            if not str(inc_path).startswith(str(base_dir)):
-                warn(f"Warning: @include {name!r} resolves outside {base_dir}")
-                continue
-            if not inc_path.exists():
-                warn(f"Warning: @include {name!r} not found")
-                continue
-            out.append(inc_path.read_text(encoding="utf-8"))
-        else:
-            out.append(line)
-    return "\n".join(out)
+    fp = filepath if filepath is not None else Path(base_dir).resolve()
+    ctx = {"base_dir": Path(base_dir).resolve(), "warn": warn, "notes": [], "handlers": {}}
+    return process_directives(text, fp, ctx)[0]
 
 
 def _render_samples_html(
@@ -295,90 +293,63 @@ def _render_samples_html(
   </div>"""
 
 
-def expand_page_directives(text, context):
-    """Replace @directives in page content. Returns (text_with_placeholders, {placeholder: html}).
-    context: nuggets, status_order, copy (from settings.txt), build_time, page.
-    @timestamp is replaced everywhere it appears (whole line or inline)."""
-    if not text:
-        return text, {}
+def _md_samples_handler(_verb, content, context):
     nuggets = context.get("nuggets") or []
     status_order = context.get("status_order") or []
+    if not nuggets or not status_order:
+        return ""
     copy = context.get("copy") or {}
-    build_time = context.get("build_time")
     page = context.get("page")
-    timestamp_str = build_time.strftime("%Y-%m-%d %H:%M Pacific") if build_time else None
-    out = []
-    replacements = {}
-    for line in text.splitlines():
-        stripped = line.strip()
-        if stripped.startswith("@samples"):
-            rest = stripped[7:].strip()
-            count = 5
-            if rest.isdigit():
-                count = min(int(rest), 50)
-            if nuggets and status_order:
-                full = page == "home"
-                base_href = "" if page == "list" or context.get("site_dir") else (context["site_dir"].rstrip("/") + "/")
-                block = _render_samples_html(
-                    nuggets,
-                    status_order,
-                    copy,
-                    count=count,
-                    full_section=full,
-                    include_view_all=full,
-                    include_repo_link=False,
-                    base_href=base_href,
-                )
-                placeholder = "{{SAMPLES}}"
-                replacements[placeholder] = block
-                out.append(placeholder)
-            continue
-        if stripped.startswith("@nuggets"):
-            if nuggets and status_order:
-                base_href = "" if page == "list" or context.get("site_dir") else (context["site_dir"].rstrip("/") + "/")
-                block = _render_samples_html(
-                    nuggets,
-                    status_order,
-                    copy,
-                    count=None,
-                    full_section=True,
-                    include_view_all=False,
-                    include_repo_link=False,
-                    base_href=base_href,
-                )
-                placeholder = "{{NUGGETS}}"
-                replacements[placeholder] = block
-                out.append(placeholder)
-            continue
-        if stripped == "@glossary" and context.get("glossary_html") is not None:
-            replacements["{{GLOSSARY}}"] = context["glossary_html"]
-            out.append("{{GLOSSARY}}")
-            continue
-        if stripped == "@bibliography" and context.get("bibliography_html") is not None:
-            replacements["{{BIBLIOGRAPHY}}"] = context["bibliography_html"]
-            out.append("{{BIBLIOGRAPHY}}")
-            continue
-        if stripped == "@index" and context.get("index_html") is not None:
-            replacements["{{INDEX}}"] = context["index_html"]
-            out.append("{{INDEX}}")
-            continue
-        if stripped == "@map" and context.get("map_html") is not None:
-            replacements["{{MAP}}"] = context["map_html"]
-            out.append("{{MAP}}")
-            continue
-        if stripped == "@timestamp" and timestamp_str:
-            out.append(timestamp_str)
-            continue
-        if timestamp_str and "@timestamp" in line:
-            line = line.replace("@timestamp", timestamp_str)
-        out.append(line)
-    return "\n".join(out), replacements
+    count = 5
+    if content.strip().isdigit():
+        count = min(int(content.strip()), 50)
+    full = page == "home"
+    base_href = "" if page == "list" or context.get("site_dir") else (context["site_dir"].rstrip("/") + "/")
+    block = _render_samples_html(
+        nuggets, status_order, copy,
+        count=count, full_section=full, include_view_all=full, include_repo_link=False, base_href=base_href,
+    )
+    placeholder = "{{SAMPLES}}"
+    context.setdefault("replacements", {})[placeholder] = block
+    return placeholder
+
+
+def _md_nuggets_handler(_verb, content, context):
+    nuggets = context.get("nuggets") or []
+    status_order = context.get("status_order") or []
+    if not nuggets or not status_order:
+        return ""
+    copy = context.get("copy") or {}
+    page = context.get("page")
+    base_href = "" if page == "list" or context.get("site_dir") else (context["site_dir"].rstrip("/") + "/")
+    block = _render_samples_html(
+        nuggets, status_order, copy,
+        count=None, full_section=True, include_view_all=False, include_repo_link=False, base_href=base_href,
+    )
+    placeholder = "{{NUGGETS}}"
+    context.setdefault("replacements", {})[placeholder] = block
+    return placeholder
+
+
+def _md_placeholder_handler(placeholder, key):
+    def handler(_verb, _content, context):
+        val = context.get(key)
+        if val is not None:
+            context.setdefault("replacements", {})[placeholder] = val
+            return placeholder
+        return ""
+    return handler
+
+
+def _md_timestamp_handler(_verb, _content, context):
+    build_time = context.get("build_time")
+    if build_time is not None:
+        return build_time.strftime("%Y-%m-%d %H:%M Pacific")
+    return ""
 
 
 def process_md_to_html(md_path, context=None, collected_md_refs=None):
-    """Single pipeline for .md → HTML: load file, @include, @directives, @link, markdown. Returns body HTML.
-    context: copy (settings.txt), nuggets, status_order, page, build_time, warn (callable).
-    collected_md_refs: optional set; referenced .md paths (for @link) are added for build to emit."""
+    """Single pipeline for .md → HTML: load file, process_directives (@include, @note, @link, @samples, …), markdown. Returns body HTML."""
     if context is None:
         context = {}
     if collected_md_refs is None:
@@ -394,19 +365,35 @@ def process_md_to_html(md_path, context=None, collected_md_refs=None):
     raw = md_path.read_text(encoding="utf-8")
     base_dir = md_path.parent.resolve()
     warn = context.get("warn", lambda msg: None)
-    raw = expand_includes(raw, base_dir, warn=warn)
-    warn_unknown_at_directives(raw, md_path, warn)
-    raw, note_list = strip_at_notes(raw)
+    ctx = {
+        "base_dir": base_dir,
+        "warn": warn,
+        "notes": [],
+        "replacements": {},
+        "collected_md_refs": collected_md_refs,
+        "handlers": {
+            "link": _md_link_handler,
+            "samples": _md_samples_handler,
+            "nuggets": _md_nuggets_handler,
+            "glossary": _md_placeholder_handler("{{GLOSSARY}}", "glossary_html"),
+            "bibliography": _md_placeholder_handler("{{BIBLIOGRAPHY}}", "bibliography_html"),
+            "index": _md_placeholder_handler("{{INDEX}}", "index_html"),
+            "map": _md_placeholder_handler("{{MAP}}", "map_html"),
+            "timestamp": _md_timestamp_handler,
+        },
+    }
+    for k, v in context.items():
+        if k not in ctx:
+            ctx[k] = v
+    expanded, note_list = process_directives(raw, md_path, ctx)
     try:
         rel_path = md_path.resolve().relative_to(_ROOT)
     except ValueError:
         rel_path = md_path
     for note in note_list:
-        print(f"{rel_path}: @note {note}")
-    expanded, replacements = expand_page_directives(raw, context)
-    for placeholder, block in replacements.items():
+        print(f"\n{rel_path}: @note {note}")
+    for placeholder, block in ctx["replacements"].items():
         expanded = expanded.replace(placeholder, block)
-    expanded = expand_links(expanded, context, base_dir, collected_md_refs)
     if not expanded.strip():
         return ""
     extensions = ["fenced_code", "tables"]

@@ -204,3 +204,229 @@ def build_graph_svg(
 
     lines.append("</svg>")
     return "\n".join(lines)
+
+
+MIN_TAG_COUNT_FOR_MAP = 3
+
+MAP_FILTER_SCRIPT = """
+<script>
+(function(){
+  var tagSel = document.getElementById('map-filter-tag');
+  var statusSel = document.getElementById('map-filter-status');
+  function apply(){
+    var tagVal = tagSel && tagSel.value;
+    var statusVal = statusSel && statusSel.value;
+    document.querySelectorAll('.map-graph-node-wrap').forEach(function(el){
+      var tags = (el.getAttribute('data-tags') || '').split(',').map(function(s){ return s.trim(); });
+      var status = el.getAttribute('data-status') || '';
+      var tagMatch = !tagVal || tags.indexOf(tagVal) >= 0;
+      var statusMatch = !statusVal || status === statusVal;
+      el.classList.toggle('unselected', !(tagMatch && statusMatch));
+    });
+    var selected = new Set();
+    document.querySelectorAll('.map-graph-node-wrap:not(.unselected)').forEach(function(el){
+      selected.add(el.getAttribute('data-nugget'));
+    });
+    document.querySelectorAll('.map-graph-edge-wrap').forEach(function(el){
+      var fromId = el.getAttribute('data-from');
+      var toId = el.getAttribute('data-to');
+      var connected = selected.has(fromId) && selected.has(toId);
+      el.classList.toggle('unselected', !connected);
+    });
+  }
+  if (tagSel) tagSel.addEventListener('change', apply);
+  if (statusSel) statusSel.addEventListener('change', apply);
+  apply();
+  var wrap = document.querySelector('.map-graph-wrap');
+  if (wrap && wrap.scrollWidth > wrap.clientWidth) wrap.scrollLeft = (wrap.scrollWidth - wrap.clientWidth) / 2;
+  if (wrap && wrap.scrollHeight > wrap.clientHeight) wrap.scrollTop = (wrap.scrollHeight - wrap.clientHeight) / 2;
+
+  var svgEl = document.querySelector('.map-graph-svg');
+  if (svgEl && typeof svgEl.createSVGPoint === 'function') {
+    var pt = svgEl.createSVGPoint();
+    var dragState = { active: false, wrap: null, g: null, startX: 0, startY: 0, startDx: 0, startDy: 0, didMove: false };
+    function clientToSvg(clientX, clientY) {
+      pt.x = clientX;
+      pt.y = clientY;
+      return pt.matrixTransform(svgEl.getScreenCTM().inverse());
+    }
+    function rectExitT(dx, dy, hw, hh) {
+      var candidates = [];
+      if (dx > 0) candidates.push(hw / dx);
+      else if (dx < 0) candidates.push(-hw / dx);
+      if (dy > 0) candidates.push(hh / dy);
+      else if (dy < 0) candidates.push(-hh / dy);
+      return candidates.length ? Math.min.apply(null, candidates) : 1;
+    }
+    function getNodePosition(nid) {
+      var wraps = document.querySelectorAll('.map-graph-node-wrap');
+      var w = null;
+      for (var i = 0; i < wraps.length; i++) {
+        if (wraps[i].getAttribute('data-nugget') === nid) { w = wraps[i]; break; }
+      }
+      if (!w) return { x: 0, y: 0 };
+      var g = w.querySelector('.map-graph-node-transform');
+      if (!g) return { x: 0, y: 0 };
+      var x = parseFloat(g.getAttribute('data-x')) || 0;
+      var y = parseFloat(g.getAttribute('data-y')) || 0;
+      var dx = parseFloat(g.getAttribute('data-dx')) || 0;
+      var dy = parseFloat(g.getAttribute('data-dy')) || 0;
+      return { x: x + dx, y: y + dy };
+    }
+    function updateEdgesForNode(nodeId) {
+      var rect = document.querySelector('.map-graph-node');
+      if (!rect) return;
+      var hw = parseFloat(rect.getAttribute('width')) / 2;
+      var hh = parseFloat(rect.getAttribute('height')) / 2;
+      var edgeWraps = document.querySelectorAll('.map-graph-edge-wrap');
+      var seen = {};
+      edgeWraps.forEach(function(w) {
+        var fromId = w.getAttribute('data-from');
+        var toId = w.getAttribute('data-to');
+        if (fromId !== nodeId && toId !== nodeId) return;
+        var key = fromId + ',' + toId;
+        if (seen[key]) return;
+        seen[key] = true;
+        var fromPos = getNodePosition(fromId);
+        var toPos = getNodePosition(toId);
+        var dx = toPos.x - fromPos.x;
+        var dy = toPos.y - fromPos.y;
+        var dist = Math.sqrt(dx * dx + dy * dy) || 1;
+        var tFrom = Math.min(rectExitT(dx, dy, hw, hh), 1);
+        var tTo = Math.min(rectExitT(-dx, -dy, hw, hh), 1);
+        var x1 = fromPos.x + tFrom * dx;
+        var y1 = fromPos.y + tFrom * dy;
+        var x2 = toPos.x - tTo * dx;
+        var y2 = toPos.y - tTo * dy;
+        document.querySelectorAll('.map-graph-edge-wrap[data-from="' + fromId + '"][data-to="' + toId + '"]').forEach(function(grp) {
+          var line = grp.querySelector('.map-graph-edge');
+          if (line) {
+            line.setAttribute('x1', x1);
+            line.setAttribute('y1', y1);
+            line.setAttribute('x2', x2);
+            line.setAttribute('y2', y2);
+          }
+          var exitC = grp.querySelector('.map-graph-bullet-exit');
+          if (exitC) { exitC.setAttribute('cx', x1); exitC.setAttribute('cy', y1); }
+          var enterC = grp.querySelector('.map-graph-bullet-enter');
+          if (enterC) { enterC.setAttribute('cx', x2); enterC.setAttribute('cy', y2); }
+        });
+      });
+    }
+    function startDrag(wrap, clientX, clientY) {
+      var g = wrap.querySelector('.map-graph-node-transform');
+      if (!g) return;
+      var origX = parseFloat(g.getAttribute('data-x')) || 0;
+      var origY = parseFloat(g.getAttribute('data-y')) || 0;
+      var dx = parseFloat(g.getAttribute('data-dx')) || 0;
+      var dy = parseFloat(g.getAttribute('data-dy')) || 0;
+      var p = clientToSvg(clientX, clientY);
+      dragState.didMove = false;
+      dragState.active = true;
+      dragState.wrap = wrap;
+      dragState.g = g;
+      dragState.origX = origX;
+      dragState.origY = origY;
+      dragState.startX = p.x;
+      dragState.startY = p.y;
+      dragState.startDx = dx;
+      dragState.startDy = dy;
+    }
+    function moveDrag(clientX, clientY) {
+      if (!dragState.active || !dragState.g) return;
+      var p = clientToSvg(clientX, clientY);
+      var dx = dragState.startDx + (p.x - dragState.startX);
+      var dy = dragState.startDy + (p.y - dragState.startY);
+      dragState.g.setAttribute('transform', 'translate(' + (dragState.origX + dx) + ',' + (dragState.origY + dy) + ')');
+      dragState.g.setAttribute('data-dx', dx);
+      dragState.g.setAttribute('data-dy', dy);
+      dragState.didMove = true;
+      var nid = dragState.wrap && dragState.wrap.getAttribute('data-nugget');
+      if (nid) updateEdgesForNode(nid);
+    }
+    function endDrag() {
+      dragState.active = false;
+      dragState.wrap = null;
+      dragState.g = null;
+    }
+    document.querySelectorAll('.map-graph-node-wrap').forEach(function(wrap) {
+      wrap.addEventListener('mousedown', function(e) {
+        if (e.button !== 0) return;
+        startDrag(wrap, e.clientX, e.clientY);
+      });
+      wrap.addEventListener('click', function(e) {
+        if (dragState.didMove) {
+          e.preventDefault();
+          e.stopPropagation();
+          dragState.didMove = false;
+        }
+      });
+    });
+    document.addEventListener('mousemove', function(e) {
+      if (dragState.active) {
+        e.preventDefault();
+        moveDrag(e.clientX, e.clientY);
+      }
+    });
+    document.addEventListener('mouseup', function() { endDrag(); });
+    document.addEventListener('mouseleave', function() { endDrag(); });
+
+    var wrapEl = document.querySelector('.map-graph-wrap');
+    if (wrapEl) {
+      wrapEl.addEventListener('touchstart', function(e) {
+        if (e.target.closest('.map-graph-node-wrap')) {
+          var wrap = e.target.closest('.map-graph-node-wrap');
+          startDrag(wrap, e.touches[0].clientX, e.touches[0].clientY);
+        }
+      }, { passive: true });
+      wrapEl.addEventListener('touchmove', function(e) {
+        if (dragState.active && e.touches.length) {
+          e.preventDefault();
+          moveDrag(e.touches[0].clientX, e.touches[0].clientY);
+        }
+      }, { passive: false });
+      wrapEl.addEventListener('touchend', endDrag);
+      wrapEl.addEventListener('touchcancel', endDrag);
+    }
+  }
+})();
+</script>"""
+
+
+def map_directive_html(nuggets, status_order):
+    """HTML for the @map directive: filters, key, interactive graph SVG, and filter/drag script."""
+    tag_counts = {}
+    for n in nuggets:
+        for t in n.get("tags", []):
+            tag_counts[t] = tag_counts.get(t, 0) + 1
+    tags_with_min = sorted([t for t, c in tag_counts.items() if c >= MIN_TAG_COUNT_FOR_MAP])
+    category_opts = '<option value="">All</option>' + "".join(
+        '<option value="{}">{}</option>'.format(_html.escape(t), _html.escape(t)) for t in tags_with_min
+    )
+    status_opts = '<option value="">All</option>' + "".join(
+        '<option value="{}">{}</option>'.format(_html.escape(s), _html.escape(s)) for s in (status_order or [])
+    )
+    filters_html = (
+        '<div class="map-graph-filters">'
+        '<label for="map-filter-tag">Category</label>'
+        '<select id="map-filter-tag" aria-label="Filter by tag">' + category_opts + '</select>'
+        ' <label for="map-filter-status">Status</label>'
+        '<select id="map-filter-status" aria-label="Filter by status">' + status_opts + '</select>'
+        "</div>"
+    )
+    key_html = (
+        '<div class="map-graph-key" aria-hidden="true">'
+        '<span class="map-graph-key-item"><span class="map-graph-key-dot map-graph-key-from"></span> from</span>'
+        ' <span class="map-graph-key-item"><span class="map-graph-key-dot map-graph-key-to"></span> to</span>'
+        '</div>'
+    )
+    svg = build_graph_svg(nuggets, show_title=False, link_nuggets=True, node_radius=40)
+    return (
+        filters_html
+        + "\n"
+        + key_html
+        + '\n<div class="map-graph-wrap"><div class="map-graph-inner">'
+        + svg
+        + "</div></div>"
+        + MAP_FILTER_SCRIPT
+    )

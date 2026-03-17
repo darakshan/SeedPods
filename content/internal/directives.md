@@ -1,61 +1,61 @@
 # @ directives (Markdown pages)
 
-In `.md` files under `content/` (home, nav file/dir pages, internal, and any referenced docs), the pipeline is: **@include**, then **@samples** / **@nuggets** / **@timestamp**, then **@link**, then Markdown → HTML. The order is fixed and affects both what is valid and how output is produced: @include must run first so included content is processed by the rest of the pipeline; the line-based directives must run before @link so that link text (e.g. `@link(002, @samples)`) is not interpreted as a directive; then Markdown runs on the result.
+In `.md` files under `content/` (home, nav file/dir pages, internal, and any referenced docs), the pipeline is: **&#64;include**, then **&#64;samples** / **&#64;nuggets** / **&#64;timestamp**, then **&#64;link**, then Markdown → HTML. The order is fixed: &#64;include runs first so included content is processed; then other directives; then Markdown runs on the result.
 
 The @ directives are:
 
-1. **@include**  
-2. **@samples**  
-3. **@nuggets**  
-4. **@glossary**  
-5. **@bibliography**  
-6. **@index**  
-7. **@map**  
-8. **@timestamp**  
-9. **@link(locator, text)**
+1. **&#64;include(path)**  
+2. **&#64;samples** or **&#64;samples(n)**  
+3. **&#64;nuggets**  
+4. **&#64;glossary**  
+5. **&#64;bibliography**  
+6. **&#64;index**  
+7. **&#64;map**  
+8. **&#64;timestamp**  
+9. **&#64;link(locator, text)**
 
-## @include
+## &#64;include(path)
 
-- **Syntax**: a line that is exactly `@include ` followed by a filename (relative to the current file's directory).
-- **Effect**: The line is replaced by the full contents of that file. Paths are resolved under the directory of the current `.md` file; if the resolved path leaves that directory or the file is missing, a warning is emitted and the line is dropped.
-- **Example**: From `content/internal/page.md`, `@include structure.md` pulls in `content/internal/structure.md`.
+- **Syntax**: `&#64;include(filename)` — path relative to the current file's directory. Parentheses required.
+- **Effect**: The directive is replaced by the full contents of that file. If the resolved path leaves that directory or the file is missing, a warning is emitted and the directive is left unchanged.
+- **Example**: From `content/internal/page.md`, `&#64;include(structure.md)` pulls in `content/internal/structure.md`.
 
-## @samples [N]
+## &#64;samples and &#64;samples(n)
 
-- **Syntax**: A line starting with `@samples`; optionally followed by a number (e.g. `@samples` or `@samples 10`).
+- **Syntax**: `@samples` or `@samples(n)` — optional number (default 5, capped at 50).
 - **Effect**: The line is replaced by a block of seed rows (links to nugget pages). The number is how many to show (default 5, capped at 50). Order and styling use `config/status.txt` and index copy (e.g. view-all link on home). On the home page this is rendered as the full "seed list" section; on other pages it is just the requested number of rows.
 
-## @nuggets
+## &#64;nuggets
 
-- **Syntax**: A line that is exactly `@nuggets` (or starting with `@nuggets`).
-- **Effect**: The line is replaced by the full list of all nugget rows (same block as the list page), with sort UI. No "view all" link is added (the page is the full list).
+- **Syntax**: `@nuggets` (no arguments).
+- **Effect**: Replaced by the full list of all nugget rows (same block as the list page), with sort UI. No "view all" link is added (the page is the full list).
 
-## @glossary
+## &#64;glossary
 
-- **Syntax**: A line that is exactly `@glossary`.
-- **Effect**: The line is replaced by the glossary table (terms and definitions from all nuggets, grouped by term). Use in any `.md` file (e.g. `content/glossary.md`) to build a glossary page.
+- **Syntax**: `@glossary` (no arguments).
+- **Effect**: Replaced by the glossary table (terms and definitions from all nuggets, grouped by term). Use in any `.md` file (e.g. `content/glossary.md`) to build a glossary page.
 
-## @bibliography
+## &#64;bibliography
 
-- **Syntax**: A line that is exactly `@bibliography`.
-- **Effect**: The line is replaced by the bibliography (references from `#ref` in `#provenance`, grouped by keyword). Use in any `.md` file (e.g. `content/bibliography.md`) to build a bibliography page.
+- **Syntax**: `@bibliography` (no arguments).
+- **Effect**: Replaced by the bibliography (references from `#ref` in `#provenance`, grouped by keyword). Use in any `.md` file (e.g. `content/bibliography.md`) to build a bibliography page.
 
-## @index
+## &#64;index
 
-- **Syntax**: A line that is exactly `@index`.
-- **Effect**: The line is replaced by the index (nuggets by tag and by status). Use in any `.md` file (e.g. `content/tags.md`) to build an index page.
+- **Syntax**: `@index` (no arguments).
+- **Effect**: Replaced by the index (nuggets by tag and by status). Use in any `.md` file (e.g. `content/tags.md`) to build an index page.
 
-## @map
+## &#64;map
 
-- **Syntax**: A line that is exactly `@map`.
-- **Effect**: The line is replaced by the map (graph of nuggets with category/status filters). Use in any `.md` file (e.g. `content/map.md`) to build a map page.
+- **Syntax**: `@map` (no arguments).
+- **Effect**: Replaced by the map (graph of nuggets with category/status filters). Use in any `.md` file (e.g. `content/map.md`) to build a map page.
 
-## @timestamp
+## &#64;timestamp
 
-- **Syntax**: `@timestamp` as a whole line, or anywhere inline in a line.
+- **Syntax**: `@timestamp` (no arguments). May appear anywhere inline.
 - **Effect**: Replaced by the build timestamp (e.g. `YYYY-MM-DD HH:MM Pacific`). If build time is not available, the token may be left unchanged.
 
-## @link(locator, text)
+## &#64;link(locator, text)
 
 - **Syntax**: `@link(locator, text)` — locator and text can be separated by commas; parentheses must match.
 - **Effect**: Replaced by an HTML link `<a href="...">text</a>`.
@@ -63,7 +63,7 @@ The @ directives are:
   - A **nugget number** (e.g. `002`): link to that nugget's page (e.g. `002-somename.html`).
   - A **path to a .md file** under `content/` (e.g. `internal/inside.md`): the build registers that file to be built, and the href becomes the corresponding output name (path with `/` replaced by `-`, `.md` by `.html`, e.g. `internal-inside.html`).
   - Anything else (e.g. `about.html`): used as the href as-is; no automatic output path.
-- If `text` is empty, the locator is used as the link text. Referenced `.md` paths are collected and built so that @link targets exist.
+- If `text` is empty, the locator is used as the link text. Referenced `.md` paths are collected and built so that &#64;link targets exist.
 
 ---
 

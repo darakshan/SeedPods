@@ -21,7 +21,7 @@ Do not run `python3 src/build.py` directly; use the justfile so the venv (with t
 3. **Assets**: `config/site.css` and `config/logo.svg` are copied into `site_dir`.
 4. **Nav-derived pages**: For each nav item, either `content/<token>.md` or `content/<token>/page.md` is built to `site_dir/<token>.html`.
 5. **Internal**: `content/internal/page.md` is always built as `site_dir/internal.html`.
-6. **Referenced .md**: Any `.md` file reached by @link from the main MD pages (transitively) is built to `site_dir` with the path-based name (e.g. `internal-inside.html`).
+6. **Referenced .md**: Any `.md` file reached by &#64;link from the main MD pages (transitively) is built to `site_dir` with the path-based name (e.g. `internal-inside.html`).
 7. **List-menu pages**: For each target in `list_menu` (e.g. glossary, bibliography, tags, map) that is not already built from nav, the corresponding `content/<token>.md` (or `content/<token>/page.md`) is built to `site_dir/<token>.html`. Those `.md` files use @glossary, @bibliography, @index, or @map to inject the built table or graph.
 8. **Index and assets**: `site_dir/index.html` (from `content/home.md`), `map.svg`, and `4u-ai.txt` are generated.
 
@@ -46,3 +46,5 @@ just import --apply content/more/primordia.md content/more/seed-speculations.md
 ```
 
 Imported nuggets have `#status proto` and a single body (no `#brief` directive). Each protonugget in the source file must include a `#shortname` line (e.g. `#shortname harmonic-barchart`); if one is missing, import reports it and skips that nugget without writing a file. The parser accepts optional numbering (e.g. `## 1. Title`) and category headings (e.g. `## Physics & Mathematics`); categories are skipped. File-level `#ref` and `#term` in the prototype are added to each generated nugget. After importing, run `just build` to regenerate the site.
+
+**Full format for import files:** @link(import-format.md, import-format) — use it when creating or editing .md files meant for `just import` (e.g. new files like primordia or seed_speculations).

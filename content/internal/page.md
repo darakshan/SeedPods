@@ -14,6 +14,8 @@ Structure of a seed nugget: @link(structure.md, structure)
 
 Grammar of a seed nugget: @link(grammar.md, grammar)
 
+Format of importable .md files (for primordia-style multi-nugget sources): @link(import-format.md, import-format)
+
 Content directives: @link(directives.md, directives)
 
 Style guidleines for writing prose: @link(style-guidelines.md, style)
