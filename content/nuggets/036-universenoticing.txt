@@ -19,7 +19,7 @@ Whitehead saw that every event in the universe — not just brains, not just liv
 #ref thompson Thompson, Evan — Mind in Life, experience as continuous with life as continuous with matter
 #ref nagel Nagel, Thomas — Mind and Cosmos, the insufficiency of purely mechanical evolution
 #ref chaisson Chaisson, Eric — measurable directionality in cosmic evolution toward complexity
-#note Teilhard and Whitehead were near-contemporaries. No documented direct exchange. Teilhard's major works suppressed by the Church, circulating only in manuscript. The synthesis had to wait.
+@note(Teilhard and Whitehead were near-contemporaries. No documented direct exchange. Teilhard's major works suppressed by the Church, circulating only in manuscript. The synthesis had to wait.)
 
 #script
 Open on the cosmic microwave background — the earliest light, nearly uniform, nearly featureless. Pull forward through time. Galaxies forming. Stars. A planet. A cell. An eye opening. Hold on the eye. This is not the end of a story about matter. This is matter reaching a threshold it was always approaching. Cut to: the same eye, looking up at the cosmic microwave background on a screen. The universe looking at its own baby picture.

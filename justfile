@@ -12,12 +12,10 @@ setup:
 
 # Rebuild the full site (reads content/ and config/, writes d/ and index.html)
 # For another deployment, set base URL: SITE_BASE_URL=https://yoursite.com/path just build
-build:
-    {{python}} {{root}}/src/build.py
-
-# Rebuild a single nugget (e.g. just build-nugget 001)
-build-nugget nugget:
-    {{python}} {{root}}/src/build.py --nugget {{nugget}}
+# Default: nugget count, @notes, file count. 
+# just build -v to print every built file
+build *args:
+    {{python}} {{root}}/src/build.py {{args}}
 
 # Serve the built site locally (default port 8000). Site dir must match config/settings.txt site_dir.
 serve port="8000":

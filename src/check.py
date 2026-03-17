@@ -5,7 +5,7 @@ check.py — Review nuggets for structure guidelines.
 - Every nugget pointed to by at least min_related_in_degree others (#related)
 - Underlinked: nuggets with 0 #related
 - #related max 5
-- Report #note directives (editorial comments; ignored in page generation)
+- Report @note directives (editorial comments; removed from content, printed at build time)
 - Status vs sections (surface, depth, script, images; provenance ignored): section counts and valid statuses from config/status.txt; word count for statuses from top of config up through last draft*
 
 Usage:

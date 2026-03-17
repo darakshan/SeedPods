@@ -60,6 +60,7 @@ nav{display:flex;flex-direction:column;align-items:stretch;border-bottom:1px sol
 .search-dialog-overlay{position:fixed;inset:0;background:rgba(0,0,0,.3);cursor:pointer;z-index:1}
 .search-dialog-inner{position:relative;z-index:2;background:var(--paper);border:1px solid var(--dim);box-shadow:0 1rem 3rem rgba(0,0,0,.18),0 0 0 1px rgba(0,0,0,.06);max-width:32rem;width:100%;max-height:calc(100vh - 6rem);display:flex;flex-direction:column}
 .search-dialog-header{display:flex;align-items:center;gap:.5rem;padding:.75rem 1rem;border-bottom:1px solid var(--line)}
+.search-dialog-count{font-family:'DM Mono',monospace;font-size:.7rem;color:var(--dim);padding:.25rem 1rem .5rem}
 .search-dialog-input{flex:1;font-family:'DM Mono',monospace;font-size:.85rem;padding:.4rem .5rem;border:1px solid var(--line);background:var(--paper)}
 .search-dialog-input:focus{outline:1px solid var(--warm);outline-offset:1px}
 .search-dialog-close{font-size:1.5rem;line-height:1;background:none;border:none;color:var(--dim);cursor:pointer;padding:0 .25rem}
@@ -76,7 +77,7 @@ nav{display:flex;flex-direction:column;align-items:stretch;border-bottom:1px sol
 .search-no-results{padding:1rem;color:var(--dim);font-size:.9rem}
 .wrap{max-width:860px;margin:0 auto;padding:0 3rem}
 .wrap--list{max-width:none;margin-left:2rem;margin-right:2rem}
-.wrap--full{max-width:none}
+.wrap--full{max-width:none;margin-left:auto;margin-right:auto}
 h1{font-size:clamp(2rem,5vw,3.5rem);font-weight:300;line-height:1.1;margin-bottom:1.25rem}
 h1 em,h2 em{font-style:italic;color:var(--accent)}
 h2{font-size:1.6rem;font-weight:300;margin-bottom:1rem}
@@ -144,7 +145,7 @@ td a:hover{color:var(--accent)}
 /* Nugget page */
 .nugget-header{padding:1.5rem 0 2.5rem}
 .meta-row{display:flex;gap:1.2rem;align-items:center;margin-bottom:1.5rem;flex-wrap:wrap}
-.premise{font-size:1.15rem;font-style:italic;border-left:2px solid var(--warm);padding-left:1.2rem;margin-top:1.2rem;line-height:1.5}
+.premise{font-size:1.15rem;font-style:italic;margin-top:1.2rem;line-height:1.5}
 .nugget-tags{margin-top:1.5rem}
 .layer-tabs{background:var(--paper);display:block;width:100%;border-top:1px solid var(--line)}
 .layer-tabs-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:.25rem 3rem;gap:.25rem;row-gap:.25rem;min-height:2rem}
@@ -158,7 +159,7 @@ td a:hover{color:var(--accent)}
 .layer-tab:hover{color:var(--warm)}
 .layer-tab-disabled{color:color-mix(in srgb, var(--dim) 58%, var(--line));cursor:default;pointer-events:none}
 .layer-tab-disabled:hover{color:color-mix(in srgb, var(--dim) 58%, var(--line))}
-@media(max-width:600px){.layer-tabs-inner{padding:.25rem 3rem}.layer-tab{font-size:.55rem;letter-spacing:.05em;padding:.25rem .25rem}.layer-tabs-prev,.layer-tabs-next{font-size:.85rem;padding:.25rem .1rem}}
+@media(max-width:600px){.layer-tabs-inner{padding:.25rem 1.5rem .25rem .75rem}.layer-tab{font-size:.55rem;letter-spacing:.05em;padding:.25rem .25rem}.layer-tabs-prev,.layer-tabs-next{font-size:.85rem;padding:.25rem .1rem}}
 .layer-section{scroll-margin-top:5rem;padding:3rem 0;border-top:1px solid var(--line)}
 .layer-section:first-of-type{border-top:none}
 .layer-heading{font-size:1.1rem;font-weight:400;font-family:'DM Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--warm);margin-bottom:1.5rem}
@@ -171,9 +172,21 @@ td a:hover{color:var(--accent)}
 .map-graph-filters{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1.5rem;margin-bottom:1rem}
 .map-graph-filters label{font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase}
 .map-graph-filters select{font-family:'DM Mono',monospace;font-size:.7rem;padding:.25rem .5rem;border:1px solid var(--line);background:var(--paper)}
-.map-graph-wrap{margin:2rem 0;max-width:100%;overflow:auto;min-width:1000px;min-height:700px}
-.map-graph-svg{display:block;min-width:1000px;min-height:700px}
+.map-graph-wrap{display:flex;justify-content:flex-start;margin:2rem 0;overflow:auto;contain:layout}
+.map-graph-inner{min-width:1000px;min-height:700px;width:100%;flex-shrink:0;aspect-ratio:1800/1900;box-sizing:border-box}
+.map-graph-svg{display:block;width:100%;height:100%}
 .map-graph-edge{stroke:var(--line);stroke-width:2.25;fill:none}
+.map-graph-bullet{stroke-width:1.5}
+.map-graph-bullet-exit{fill:var(--line)}
+.map-graph-bullet-enter{fill:var(--link)}
+.map-graph-key{display:flex;align-items:center;gap:1.5rem;margin-bottom:0;font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+.map-graph-wrap{margin-top:0}
+.map-graph-key-item{display:inline-flex;align-items:center;gap:.35rem}
+.map-graph-key-dot{width:.6rem;height:.6rem;border-radius:50%;flex-shrink:0}
+.map-graph-key-from{background:var(--line)}
+.map-graph-key-to{background:var(--link)}
+.map-graph-node-wrap{cursor:grab}
+.map-graph-node-wrap:active{cursor:grabbing}
 .map-graph-node{fill:var(--paper);stroke:var(--accent);stroke-width:1.5}
 .map-graph-label{font-family:'DM Mono',monospace;font-size:.5rem;fill:var(--ink)}
 .map-graph-node-link{color:inherit}
@@ -181,13 +194,12 @@ td a:hover{color:var(--accent)}
 .cta{background:var(--accent);color:var(--paper);padding:1.4rem 1.8rem;margin-top:2rem;font-size:1rem;line-height:1.7;font-style:italic}
 .related-section{margin-top:3rem;padding-top:2rem;border-top:1px solid var(--line)}
 .related-label{margin-bottom:.5rem}
-.related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;margin-top:1rem}
-.related-card{border:1px solid var(--line);padding:1rem;color:inherit;transition:border-color .2s}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:1rem;margin-top:1rem}
+.related-card{border:1px solid var(--line);padding:.6rem .75rem;color:inherit;transition:border-color .2s}
 .related-card:hover{border-color:var(--accent)}
 .related-card-prelim{border-color:var(--line)}
 .related-card-prelim:hover{border-color:var(--warm)}
-.related-num{font-family:'DM Mono',monospace;font-size:.58rem;color:var(--warm);margin-bottom:.3rem}
-.related-title{font-size:1rem;font-weight:300}
+.related-title{font-size:.95rem;font-weight:300}
 .placeholder{font-style:italic}
 .proto-notice{margin-bottom:1.5rem;padding-left:1rem;border-left:3px solid var(--line);font-size:.95rem}
 .proto-notice .dim{font-style:italic}

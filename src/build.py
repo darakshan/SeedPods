@@ -7,8 +7,9 @@ Generates: nugget pages, list.html, glossary/bibliography/tags/map from content 
 index.html, about pages, resources (with map), site.css.
 
 Usage:
-    python src/build.py   (from repo root)
-    python build.py --nugget 001   # rebuild single nugget
+    python src/build.py   (from repo root; quiet: nugget count, @notes, file count)
+    python src/build.py -v   # verbose: also print every built file
+    python src/build.py --nugget 001   # rebuild single nugget
 """
 
 import csv
@@ -269,7 +270,7 @@ def nav(from_d=False, from_nuggets=False, layer_tabs_html=None):
                 nav_item_parts.append(
                     '<li class="nav-link-item nav-item-dropdown nav-lists-dropdown">'
                     f'<a href="{prefix}list.html">Lists</a>'
-                    '<button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-label="Lists menu">▾</button>'
+                    '<button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-label="Lists menu"></button>'
                     '<ul class="nav-dropdown">'
                     + "".join(dropdown_items) +
                     '</ul></li>'
@@ -375,6 +376,7 @@ SEARCH_DIALOG_HTML = """
       <input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)">
       <button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button>
     </div>
+    <div id="search-dialog-count" class="search-dialog-count"></div>
     <div id="search-dialog-results" class="search-dialog-results"></div>
   </div>
 </div>
@@ -413,11 +415,16 @@ window._seedNavSnippet=function(content,q){if(!content||!q)return"";var c=conten
 window.seedNavRunSearch=function(q){
   q=(q||"").toLowerCase().trim();
   var el=document.getElementById("search-dialog-results");
+  var countEl=document.getElementById("search-dialog-count");
   if(!el)return;
   if(!window._seedNavSearchIndex){fetch("search-index.json").then(function(r){return r.json();}).then(function(data){window._seedNavSearchIndex=data;window.seedNavRunSearch(q);});return;}
-  if(!q){el.innerHTML="";return;}
+  if(!q){el.innerHTML="";if(countEl)countEl.textContent="";return;}
   var nm=[],cm=[];
   for(var j=0;j<window._seedNavSearchIndex.length;j++){var it=window._seedNavSearchIndex[j];if((it.title||"").toLowerCase().indexOf(q)>=0)nm.push(it);else if((it.content||"").toLowerCase().indexOf(q)>=0)cm.push(it);}
+  var slugs={};
+  nm.forEach(function(it){slugs[it.slug]=1;});cm.forEach(function(it){slugs[it.slug]=1;});
+  var n=Object.keys(slugs).length;
+  if(countEl)countEl.textContent=n===1?"1 found":n+" found";
   var h="";
   if(nm.length){h+='<div class="search-section"><div class="search-section-title">Name</div><ul class="search-result-list">';nm.forEach(function(it){var d=document.createElement("div");d.textContent=it.num+". "+it.title;h+='<li><a href="'+it.slug+'.html">'+d.innerHTML+'</a></li>';});h+="</ul></div>";}
   if(cm.length){h+='<div class="search-section"><div class="search-section-title">Content</div><ul class="search-result-list">';cm.forEach(function(it){var titleDiv=document.createElement("div");titleDiv.textContent=it.num+". "+it.title;var snip=window._seedNavSnippet(it.content,q);var snipDiv=document.createElement("div");snipDiv.textContent=snip;h+='<li><a href="'+it.slug+'.html">'+titleDiv.innerHTML+'<br><span class="search-result-snippet">'+snipDiv.innerHTML+'</span></a></li>';});h+="</ul></div>";}
@@ -649,8 +656,7 @@ def build_nugget(n, all_nuggets, link_errors=None):
             card_class = "related-card related-card-prelim" if rstatus in ("empty", "prelim", "proto", "rough") else "related-card"
             cards += f"""
       <a href="{rfile}" class="{card_class}">
-        <div class="related-num">{display_number(rnum)}</div>
-        <div class="related-title">{rtitle}</div>
+        <div class="related-title">{display_number(rnum)}. {rtitle}</div>
       </a>"""
         related_cards_html = f'<div class="related-grid">{cards}\n      </div>'
 
@@ -1091,6 +1097,12 @@ def build_map_body(nuggets, status_order):
         '<select id="map-filter-status" aria-label="Filter by status">' + status_opts + '</select>'
         "</div>"
     )
+    key_html = (
+        '<div class="map-graph-key" aria-hidden="true">'
+        '<span class="map-graph-key-item"><span class="map-graph-key-dot map-graph-key-from"></span> from</span>'
+        ' <span class="map-graph-key-item"><span class="map-graph-key-dot map-graph-key-to"></span> to</span>'
+        '</div>'
+    )
     script = """
 <script>
 (function(){
@@ -1110,7 +1122,7 @@ def build_map_body(nuggets, status_order):
     document.querySelectorAll('.map-graph-node-wrap:not(.unselected)').forEach(function(el){
       selected.add(el.getAttribute('data-nugget'));
     });
-    document.querySelectorAll('.map-graph-edge').forEach(function(el){
+    document.querySelectorAll('.map-graph-edge-wrap').forEach(function(el){
       var fromId = el.getAttribute('data-from');
       var toId = el.getAttribute('data-to');
       var connected = selected.has(fromId) && selected.has(toId);
@@ -1123,17 +1135,166 @@ def build_map_body(nuggets, status_order):
   var wrap = document.querySelector('.map-graph-wrap');
   if (wrap && wrap.scrollWidth > wrap.clientWidth) wrap.scrollLeft = (wrap.scrollWidth - wrap.clientWidth) / 2;
   if (wrap && wrap.scrollHeight > wrap.clientHeight) wrap.scrollTop = (wrap.scrollHeight - wrap.clientHeight) / 2;
+
+  var svgEl = document.querySelector('.map-graph-svg');
+  if (svgEl && typeof svgEl.createSVGPoint === 'function') {
+    var pt = svgEl.createSVGPoint();
+    var dragState = { active: false, wrap: null, g: null, startX: 0, startY: 0, startDx: 0, startDy: 0, didMove: false };
+    function clientToSvg(clientX, clientY) {
+      pt.x = clientX;
+      pt.y = clientY;
+      return pt.matrixTransform(svgEl.getScreenCTM().inverse());
+    }
+    function rectExitT(dx, dy, hw, hh) {
+      var candidates = [];
+      if (dx > 0) candidates.push(hw / dx);
+      else if (dx < 0) candidates.push(-hw / dx);
+      if (dy > 0) candidates.push(hh / dy);
+      else if (dy < 0) candidates.push(-hh / dy);
+      return candidates.length ? Math.min.apply(null, candidates) : 1;
+    }
+    function getNodePosition(nid) {
+      var wraps = document.querySelectorAll('.map-graph-node-wrap');
+      var w = null;
+      for (var i = 0; i < wraps.length; i++) {
+        if (wraps[i].getAttribute('data-nugget') === nid) { w = wraps[i]; break; }
+      }
+      if (!w) return { x: 0, y: 0 };
+      var g = w.querySelector('.map-graph-node-transform');
+      if (!g) return { x: 0, y: 0 };
+      var x = parseFloat(g.getAttribute('data-x')) || 0;
+      var y = parseFloat(g.getAttribute('data-y')) || 0;
+      var dx = parseFloat(g.getAttribute('data-dx')) || 0;
+      var dy = parseFloat(g.getAttribute('data-dy')) || 0;
+      return { x: x + dx, y: y + dy };
+    }
+    function updateEdgesForNode(nodeId) {
+      var rect = document.querySelector('.map-graph-node');
+      if (!rect) return;
+      var hw = parseFloat(rect.getAttribute('width')) / 2;
+      var hh = parseFloat(rect.getAttribute('height')) / 2;
+      var edgeWraps = document.querySelectorAll('.map-graph-edge-wrap');
+      var seen = {};
+      edgeWraps.forEach(function(w) {
+        var fromId = w.getAttribute('data-from');
+        var toId = w.getAttribute('data-to');
+        if (fromId !== nodeId && toId !== nodeId) return;
+        var key = fromId + ',' + toId;
+        if (seen[key]) return;
+        seen[key] = true;
+        var fromPos = getNodePosition(fromId);
+        var toPos = getNodePosition(toId);
+        var dx = toPos.x - fromPos.x;
+        var dy = toPos.y - fromPos.y;
+        var dist = Math.sqrt(dx * dx + dy * dy) || 1;
+        var tFrom = Math.min(rectExitT(dx, dy, hw, hh), 1);
+        var tTo = Math.min(rectExitT(-dx, -dy, hw, hh), 1);
+        var x1 = fromPos.x + tFrom * dx;
+        var y1 = fromPos.y + tFrom * dy;
+        var x2 = toPos.x - tTo * dx;
+        var y2 = toPos.y - tTo * dy;
+        document.querySelectorAll('.map-graph-edge-wrap[data-from="' + fromId + '"][data-to="' + toId + '"]').forEach(function(grp) {
+          var line = grp.querySelector('.map-graph-edge');
+          if (line) {
+            line.setAttribute('x1', x1);
+            line.setAttribute('y1', y1);
+            line.setAttribute('x2', x2);
+            line.setAttribute('y2', y2);
+          }
+          var exitC = grp.querySelector('.map-graph-bullet-exit');
+          if (exitC) { exitC.setAttribute('cx', x1); exitC.setAttribute('cy', y1); }
+          var enterC = grp.querySelector('.map-graph-bullet-enter');
+          if (enterC) { enterC.setAttribute('cx', x2); enterC.setAttribute('cy', y2); }
+        });
+      });
+    }
+    function startDrag(wrap, clientX, clientY) {
+      var g = wrap.querySelector('.map-graph-node-transform');
+      if (!g) return;
+      var origX = parseFloat(g.getAttribute('data-x')) || 0;
+      var origY = parseFloat(g.getAttribute('data-y')) || 0;
+      var dx = parseFloat(g.getAttribute('data-dx')) || 0;
+      var dy = parseFloat(g.getAttribute('data-dy')) || 0;
+      var p = clientToSvg(clientX, clientY);
+      dragState.didMove = false;
+      dragState.active = true;
+      dragState.wrap = wrap;
+      dragState.g = g;
+      dragState.origX = origX;
+      dragState.origY = origY;
+      dragState.startX = p.x;
+      dragState.startY = p.y;
+      dragState.startDx = dx;
+      dragState.startDy = dy;
+    }
+    function moveDrag(clientX, clientY) {
+      if (!dragState.active || !dragState.g) return;
+      var p = clientToSvg(clientX, clientY);
+      var dx = dragState.startDx + (p.x - dragState.startX);
+      var dy = dragState.startDy + (p.y - dragState.startY);
+      dragState.g.setAttribute('transform', 'translate(' + (dragState.origX + dx) + ',' + (dragState.origY + dy) + ')');
+      dragState.g.setAttribute('data-dx', dx);
+      dragState.g.setAttribute('data-dy', dy);
+      dragState.didMove = true;
+      var nid = dragState.wrap && dragState.wrap.getAttribute('data-nugget');
+      if (nid) updateEdgesForNode(nid);
+    }
+    function endDrag() {
+      dragState.active = false;
+      dragState.wrap = null;
+      dragState.g = null;
+    }
+    document.querySelectorAll('.map-graph-node-wrap').forEach(function(wrap) {
+      wrap.addEventListener('mousedown', function(e) {
+        if (e.button !== 0) return;
+        startDrag(wrap, e.clientX, e.clientY);
+      });
+      wrap.addEventListener('click', function(e) {
+        if (dragState.didMove) {
+          e.preventDefault();
+          e.stopPropagation();
+          dragState.didMove = false;
+        }
+      });
+    });
+    document.addEventListener('mousemove', function(e) {
+      if (dragState.active) {
+        e.preventDefault();
+        moveDrag(e.clientX, e.clientY);
+      }
+    });
+    document.addEventListener('mouseup', function() { endDrag(); });
+    document.addEventListener('mouseleave', function() { endDrag(); });
+
+    var wrapEl = document.querySelector('.map-graph-wrap');
+    if (wrapEl) {
+      wrapEl.addEventListener('touchstart', function(e) {
+        if (e.target.closest('.map-graph-node-wrap')) {
+          var wrap = e.target.closest('.map-graph-node-wrap');
+          startDrag(wrap, e.touches[0].clientX, e.touches[0].clientY);
+        }
+      }, { passive: true });
+      wrapEl.addEventListener('touchmove', function(e) {
+        if (dragState.active && e.touches.length) {
+          e.preventDefault();
+          moveDrag(e.touches[0].clientX, e.touches[0].clientY);
+        }
+      }, { passive: false });
+      wrapEl.addEventListener('touchend', endDrag);
+      wrapEl.addEventListener('touchcancel', endDrag);
+    }
+  }
 })();
 </script>"""
     svg = build_graph_svg(nuggets, show_title=False, link_nuggets=True, node_radius=40)
-    return filters_html + '\n<div class="map-graph-wrap">' + svg + '</div>' + script
+    return filters_html + '\n' + key_html + '\n<div class="map-graph-wrap"><div class="map-graph-inner">' + svg + '</div></div>' + script
 
 
 def build_map_graph_page(nuggets, status_order):
     return build_static_page("Map", build_map_body(nuggets, status_order), wrap_class="wrap--full")
 
 
-def build_md_file_page(md_path, nuggets=None, collected_md_refs=None, status_order=None, index_copy=None, explainer_terms=None, link_errors=None):
+def build_md_file_page(md_path, nuggets=None, collected_md_refs=None, status_order=None, index_copy=None, explainer_terms=None, link_errors=None, wrap_class=""):
     nuggets = nuggets or []
     status_order = status_order or []
     context = _md_context_with_special(nuggets, status_order, explainer_terms, copy=index_copy, page=md_path.stem, link_errors=link_errors)
@@ -1141,7 +1302,8 @@ def build_md_file_page(md_path, nuggets=None, collected_md_refs=None, status_ord
     title = _first_h1(md_path) or md_path.stem.replace("-", " ").title()
     html = head(title)
     html += nav(from_d=True)
-    html += f'<div class="wrap"><div class="page-body fade">{body_html}</div></div>'
+    wrap_attr = f' class="wrap {wrap_class}"' if wrap_class else ' class="wrap"'
+    html += f'<div{wrap_attr}><div class="page-body fade">{body_html}</div></div>'
     html += foot()
     html += close()
     return html
@@ -1318,6 +1480,7 @@ def main():
         raise SystemExit("config/settings.txt must set site_dir")
     SITE_DIR = _ROOT / site_dir
     filter_num = None
+    verbose = "-v" in sys.argv or "--verbose" in sys.argv
     if "--nugget" in sys.argv:
         idx = sys.argv.index("--nugget")
         filter_num = sys.argv[idx + 1]
@@ -1347,6 +1510,15 @@ def main():
 
     nuggets = load_all_nuggets(warn=_warn)
     print(f"Loaded {len(nuggets)} nuggets")
+    for n in nuggets:
+        for note in n.get("notes", []):
+            rel = NUGGETS_DIR / (n.get("filename", "?") + ".txt")
+            try:
+                rel = rel.resolve().relative_to(_ROOT)
+            except ValueError:
+                pass
+            print(f"{rel}: @note {note}")
+    built_count = 0
     seen_num = {}
     duplicate_nums = []
     for n in nuggets:
@@ -1377,21 +1549,29 @@ def main():
         fname = nugget_tag(n) + ".html"
         out = SITE_DIR / fname
         out.write_text(build_nugget(n, nuggets, link_errors), encoding="utf-8")
-        print(f"  Built {fname}")
+        built_count += 1
+        if verbose:
+            print(f"  Built {fname}")
 
     internal_str, nugget_raw_by_slug = _collect_4u_ai_content(nuggets)
     (SITE_DIR / "nugget-index.json").write_text(build_nugget_index_json(nuggets), encoding="utf-8")
     (SITE_DIR / "search-index.json").write_text(build_search_index_json(nuggets, nugget_raw_by_slug), encoding="utf-8")
     (SITE_DIR / "seed-nav.js").write_text(_nav_seed_script_content(), encoding="utf-8")
     if not filter_num:
-        print("  Built nugget-index.json, search-index.json, seed-nav.js")
+        built_count += 3
+        if verbose:
+            print("  Built nugget-index.json, search-index.json, seed-nav.js")
 
     if not filter_num:
         shutil.copy(CONFIG_DIR / "site.css", SITE_DIR / "site.css")
-        print("  Built site.css")
+        built_count += 1
+        if verbose:
+            print("  Built site.css")
         if (CONFIG_DIR / "logo.svg").exists():
             shutil.copy(CONFIG_DIR / "logo.svg", SITE_DIR / "logo.svg")
-            print("  Built logo.svg")
+            built_count += 1
+            if verbose:
+                print("  Built logo.svg")
 
         explainer_terms = load_explainers_csv(EXPLAINERS_CSV) if EXPLAINERS_CSV.exists() else []
 
@@ -1401,26 +1581,36 @@ def main():
         for href, label, kind, path in nav_items:
             if kind == "file":
                 nav_built_paths.add(path)
+                wrap_class = "wrap--full" if href == "map.html" else ""
                 (SITE_DIR / href).write_text(
-                    build_md_file_page(path, nuggets, collected_md_refs, status_order, index_copy, explainer_terms, link_errors),
+                    build_md_file_page(path, nuggets, collected_md_refs, status_order, index_copy, explainer_terms, link_errors, wrap_class=wrap_class),
                     encoding="utf-8",
                 )
-                print(f"  Built {href}")
+                built_count += 1
+                if verbose:
+                    print(f"  Built {href}")
             elif kind == "dir":
                 nav_built_paths.add(path / "page.md")
                 (SITE_DIR / href).write_text(build_md_dir_page(path, nuggets, collected_md_refs, status_order, explainer_terms, link_errors), encoding="utf-8")
-                print(f"  Built {href}")
+                built_count += 1
+                if verbose:
+                    print(f"  Built {href}")
 
         for _label, list_href, list_path in get_list_menu_items(index_copy):
             if list_path and list_path not in nav_built_paths:
+                wrap_class = "wrap--full" if list_href == "map.html" else ""
                 (SITE_DIR / list_href).write_text(
-                    build_md_file_page(list_path, nuggets, collected_md_refs, status_order, index_copy, explainer_terms, link_errors),
+                    build_md_file_page(list_path, nuggets, collected_md_refs, status_order, index_copy, explainer_terms, link_errors, wrap_class=wrap_class),
                     encoding="utf-8",
                 )
-                print(f"  Built {list_href}")
+                built_count += 1
+                if verbose:
+                    print(f"  Built {list_href}")
 
         (SITE_DIR / "internal.html").write_text(build_internal_page(nuggets, collected_md_refs, link_errors), encoding="utf-8")
-        print("  Built internal.html")
+        built_count += 1
+        if verbose:
+            print("  Built internal.html")
 
         built_md_refs = set()
         to_build = list(collected_md_refs)
@@ -1434,7 +1624,9 @@ def main():
             out_name = content_path_to_output_name(md_path, CONTENT_DIR)
             if out_name:
                 (SITE_DIR / out_name).write_text(build_static_page(title, body_html), encoding="utf-8")
-                print(f"  Built {out_name}")
+                built_count += 1
+                if verbose:
+                    print(f"  Built {out_name}")
             for p in collected_md_refs - built_md_refs:
                 if p not in to_build:
                     to_build.append(p)
@@ -1445,22 +1637,32 @@ def main():
                 p.unlink()
         index_html = build_index(nuggets, index_copy, status_order, collected_md_refs, link_errors)
         (SITE_DIR / "index.html").write_text(index_html, encoding="utf-8")
+        built_count += 1
+        if verbose:
+            print("  Built index.html")
         if (CONFIG_DIR / "logo.svg").exists():
             shutil.copy(CONFIG_DIR / "logo.svg", SITE_DIR / "favicon.svg")
-            print("  Built favicon.svg")
-        print("  Built index.html")
+            built_count += 1
+            if verbose:
+                print("  Built favicon.svg")
 
         (SITE_DIR / "map.svg").write_text(build_graph_svg(nuggets, show_title=False, link_nuggets=True, node_radius=40), encoding="utf-8")
-        print("  Built map.svg")
+        built_count += 1
+        if verbose:
+            print("  Built map.svg")
 
         build_4u_ai_txt(internal_str, nuggets, nugget_raw_by_slug)
-        print("  Built 4u-ai.txt")
+        built_count += 1
+        if verbose:
+            print("  Built 4u-ai.txt")
 
         BUILD_STATE_FILE.write_text(
             current_hash + "\n" + BUILD_TIME.isoformat(),
             encoding="utf-8",
         )
 
+    if not verbose:
+        print(f"Built {built_count} files")
     print(f"\nDone. Site written to {SITE_DIR.relative_to(_ROOT)}/ (web root)")
     if nothing_changed:
         print("Nothing changed; timestamp unchanged.")

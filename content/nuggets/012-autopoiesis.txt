@@ -58,7 +58,7 @@ Evan Thompson's Mind in Life (2007) extends Maturana and Varela's framework into
 
 Whitehead's process philosophy runs as a parallel current throughout. His concept of a society of occasions — a persistent pattern of events with sufficient internal coherence to act as a unit — maps directly onto the autopoietic organization, though Whitehead arrived at it through metaphysics rather than biology.
 
-#note dissipative structure deserves a full #term entry — best home is @link(007) where quantum field and thermodynamic order meet.
+@note(dissipative structure deserves a full #term entry — best home is @link(007) where quantum field and thermodynamic order meet.)
 
 #term Autopoiesis: Maturana and Varela's term for a system that continuously produces the very components that constitute and maintain it. The defining organizational property of living systems.
 #term Society of occasions: Whitehead's term for a persistent pattern of actual occasions organized with sufficient coherence and closure to act as a unit through time. The metaphysical counterpart to the autopoietic organization.

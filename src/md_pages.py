@@ -6,7 +6,10 @@ Used by build.py for home, about, resources, internal pages.
 
 import html as _html
 import re
+import sys
 from pathlib import Path
+
+from at_directives import strip_at_notes, warn_unknown_at_directives
 
 from nugget_parser import display_number, nugget_tag
 from site_paths import content_path_to_output_name
@@ -392,6 +395,14 @@ def process_md_to_html(md_path, context=None, collected_md_refs=None):
     base_dir = md_path.parent.resolve()
     warn = context.get("warn", lambda msg: None)
     raw = expand_includes(raw, base_dir, warn=warn)
+    warn_unknown_at_directives(raw, md_path, warn)
+    raw, note_list = strip_at_notes(raw)
+    try:
+        rel_path = md_path.resolve().relative_to(_ROOT)
+    except ValueError:
+        rel_path = md_path
+    for note in note_list:
+        print(f"{rel_path}: @note {note}")
     expanded, replacements = expand_page_directives(raw, context)
     for placeholder, block in replacements.items():
         expanded = expanded.replace(placeholder, block)

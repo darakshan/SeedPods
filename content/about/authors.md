@@ -2,7 +2,7 @@ Authors
 
 TBD
 
-## Primary author
+## About the author and architect
 
 Darakshan Farber has been a software architect, inventor, community organizer, and student of spiritual traditions whose work bridges technology, creativity, and cultural experimentation. Earlier in his career—when he was known professionally as David A. Farber—he contributed to major software systems including Kodak’s Color Management System and the IBM AIX operating system, and later founded Sandpiper Networks, an early pioneer in content-delivery networks that became part of Digital Island.
 
@@ -12,8 +12,10 @@ He's the creator of Seed Nuggets, a new collection of compact, perception-shifti
 
 ## Collaborators
 
-TBD
+This website is intended to evolve into a collaborative project, so that other qualified contributors can add, revise, and illustrate seed nuggets and their links.
+
+At this time, their are no other human collaborators.
 
 ## A note on AI collaboration
 
-These seeds were developed in conversation with Claude (Anthropic). The ideas, judgments, and editorial voice are human. The AI contributed drafting, reflection, and the occasional useful phrase. This collaboration is itself an instance of the themes explored in several seeds.  @link(about/Caveat Lector)
+These seeds were developed in conversation with Claude (Anthropic). The ideas, judgments, and editorial voice are human. The AI contributed research, drafting, reflection, and the occasional useful phrase. This collaboration is itself an instance of the themes explored in several seeds. @note(add links here) @link(about/Caveat Lector)

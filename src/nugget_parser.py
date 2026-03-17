@@ -7,6 +7,8 @@ import re
 import sys
 from pathlib import Path
 
+from at_directives import strip_at_notes, warn_unknown_at_directives
+
 _ROOT = Path(__file__).resolve().parent.parent
 CONTENT_DIR = _ROOT / "content"
 CONFIG_DIR = _ROOT / "config"
@@ -91,6 +93,7 @@ def parse_nugget(filepath, warn=None):
     """Parse a nugget .txt file into a dict. warn(msg) is called for non-fatal issues."""
     w = warn if warn is not None else _noop_warn
     text = filepath.read_text(encoding="utf-8")
+    warn_unknown_at_directives(text, filepath, w)
     lines = text.splitlines()
 
     meta = {}
@@ -105,7 +108,10 @@ def parse_nugget(filepath, warn=None):
 
     def flush():
         if current_layer and current_layer not in SINGLE_LINE:
-            layers[current_layer] = "\n".join(buffer).strip()
+            full = "\n".join(buffer).strip()
+            stripped, layer_notes = strip_at_notes(full)
+            notes.extend(layer_notes)
+            layers[current_layer] = stripped
         buffer.clear()
 
     for line in lines:
@@ -139,10 +145,6 @@ def parse_nugget(filepath, warn=None):
                     terms.append((term_part.strip(), def_part.strip()))
                 else:
                     terms.append((raw, ""))
-                continue
-            if key == "note":
-                flush()
-                notes.append(value.strip())
                 continue
             elif key in SINGLE_LINE:
                 flush()

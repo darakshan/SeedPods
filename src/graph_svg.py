@@ -66,8 +66,10 @@ def _force_directed_layout(nodes, edges, width, height, padding):
 
 
 # Canvas sized for ~40 nodes with titles; force-directed spread reduces arrow overlap.
+# Extra vertical space (VERT_PAD) so nodes can be dragged above/below the graph.
 DEFAULT_GRAPH_WIDTH = 1800
 DEFAULT_GRAPH_HEIGHT = 1400
+VERT_PAD = 250
 
 EDGE_COLORS = (
     "#cc0000",
@@ -131,21 +133,23 @@ def build_graph_svg(
     box_h += pad_extra * 2
     hw, hh = box_w / 2, box_h / 2
 
+    view_height = height + 2 * VERT_PAD
     lines = []
     lines.append(
-        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {} {}" class="map-graph-svg" width="100%" height="auto">'.format(
-            width, height
+        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 {} {} {}" class="map-graph-svg" width="100%" height="auto">'.format(
+            -VERT_PAD, width, view_height
         )
     )
+    bullet_r = 8
     lines.append('  <defs>')
-    lines.append('    <style>.map-graph-edge{stroke-width:3;fill:none}.map-graph-edge.unselected{opacity:0.12}.map-graph-node{fill:#fff;stroke:#c8a96e;stroke-width:1.5}.map-graph-label{font-family:system-ui,sans-serif;font-size:19px;fill:#000}.map-graph-node-link:hover .map-graph-node{stroke:#000;stroke-width:2}.map-graph-node-wrap.unselected{opacity:0.4}</style>')
+    lines.append('    <style>.map-graph-edge{stroke-width:3;fill:none}.map-graph-edge-wrap.unselected .map-graph-edge,.map-graph-edge-wrap.unselected .map-graph-bullet{opacity:0.12}.map-graph-node{fill:#fff;stroke:#c8a96e;stroke-width:1.5}.map-graph-label{font-family:system-ui,sans-serif;font-size:19px;fill:#000}.map-graph-node-link:hover .map-graph-node{stroke:#000;stroke-width:2}.map-graph-node-wrap.unselected{opacity:0.4}</style>')
     lines.append("  </defs>")
 
+    edge_data = []
     for i, (from_id, to_id) in enumerate(edges):
         x1, y1 = pos.get(from_id, (0, 0))
         x2, y2 = pos.get(to_id, (0, 0))
         dx, dy = x2 - x1, y2 - y1
-        dist = math.hypot(dx, dy) or 1
         t_from = min(_rect_exit_t(dx, dy, hw, hh), 1.0)
         t_to = min(_rect_exit_t(-dx, -dy, hw, hh), 1.0)
         x1 = x1 + t_from * dx
@@ -153,11 +157,12 @@ def build_graph_svg(
         x2 = x2 - t_to * dx
         y2 = y2 - t_to * dy
         stroke = EDGE_COLORS[i % NUM_EDGE_COLORS]
-        lines.append(
-            '  <line x1="{}" y1="{}" x2="{}" y2="{}" class="map-graph-edge" data-from="{}" data-to="{}" style="stroke:{};color:{}"/>'.format(
-                x1, y1, x2, y2, _html.escape(from_id), _html.escape(to_id), stroke, stroke
-            )
-        )
+        edge_data.append((from_id, to_id, x1, y1, x2, y2, stroke))
+
+    for from_id, to_id, x1, y1, x2, y2, stroke in edge_data:
+        lines.append('  <g class="map-graph-edge-wrap" data-from="{}" data-to="{}">'.format(_html.escape(from_id), _html.escape(to_id)))
+        lines.append('    <line x1="{}" y1="{}" x2="{}" y2="{}" class="map-graph-edge" style="stroke:{}"/>'.format(x1, y1, x2, y2, stroke))
+        lines.append('  </g>')
 
     for nid, label, slug, tags_list, status in nodes:
         x, y = pos[nid]
@@ -180,16 +185,22 @@ def build_graph_svg(
         if link_nuggets and slug:
             href = _html.escape(slug + ".html")
             lines.append('  <a href="{}" class="{}"{}>'.format(href, wrap_class, data_attrs))
-            lines.append('    <g transform="translate({},{})">'.format(x, y))
+            lines.append('    <g class="map-graph-node-transform" transform="translate({},{})" data-x="{}" data-y="{}">'.format(x, y, x, y))
             lines.append(node_content.replace("    ", "      "))
             lines.append("    </g>")
             lines.append("  </a>")
         else:
             lines.append('  <g class="map-graph-node-wrap"{}>'.format(data_attrs))
-            lines.append('    <g transform="translate({},{})">'.format(x, y))
+            lines.append('    <g class="map-graph-node-transform" transform="translate({},{})" data-x="{}" data-y="{}">'.format(x, y, x, y))
             lines.append(node_content.replace("    ", "    "))
             lines.append("    </g>")
             lines.append("  </g>")
+
+    for from_id, to_id, x1, y1, x2, y2, stroke in edge_data:
+        lines.append('  <g class="map-graph-edge-wrap" data-from="{}" data-to="{}">'.format(_html.escape(from_id), _html.escape(to_id)))
+        lines.append('    <circle class="map-graph-bullet map-graph-bullet-exit" cx="{}" cy="{}" r="{}" stroke="{}"/>'.format(x1, y1, bullet_r, stroke))
+        lines.append('    <circle class="map-graph-bullet map-graph-bullet-enter" cx="{}" cy="{}" r="{}" stroke="{}"/>'.format(x2, y2, bullet_r, stroke))
+        lines.append('  </g>')
 
     lines.append("</svg>")
     return "\n".join(lines)
