@@ -1,7 +1,7 @@
 #title Spacetime as Emergent from Information Structure
 #status proto
 #date 2026-03-15
-#tags holographic-principle, entanglement, emergence, physics
+#tags physics, holographic-principle, entanglement, emergence
 #related 050, 067, 002, 008
 
 Physicists have been circling this for thirty years without quite landing. The holographic principle — that the information content of a region is proportional to its boundary area, not its volume — suggests that three-dimensional space is not fundamental. It is a projection of a two-dimensional information structure.

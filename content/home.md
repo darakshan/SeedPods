@@ -7,7 +7,7 @@ Seed Nuggets is a collection of ideas ("nuggets") that many of us will find surp
 
 The collection is alive, every changing, incomplete, and growing, as we complete and refine the sections and add new nuggets.
 
-@samples
+@categories
 
 ---
 

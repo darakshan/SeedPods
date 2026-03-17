@@ -2,7 +2,7 @@
 #subtitle The phrase that flatters the present and buries the past — and will be used against us.
 #status draft1
 #date 2026-03-12
-#tags history-of-science, epistemology, paradigm-shift, rhetoric, humility, language
+#tags knowledge, history-of-science, epistemology, paradigm-shift, rhetoric, humility, language
 #related 001, 019, 021, 024, 003
 
 #surface

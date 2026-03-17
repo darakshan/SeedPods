@@ -2,7 +2,7 @@
 #subtitle Contradiction is often the sign of a framework too small for the reality it's trying to hold.
 #status empty
 #date 2026-03-12
-#tags logic, paradox, complexity, cognition, epistemology, language, reductionism
+#tags knowledge, logic, paradox, complexity, cognition, epistemology, language, reductionism
 #related 001, 010, 020, 021
 
 #surface

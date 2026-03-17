@@ -2,7 +2,7 @@
 #subtitle The Bubble
 #status rough
 #date 2026-03-14
-#tags holographic, boundary, physics, interiority, bekenstein, hawking
+#tags physics, holographic, boundary, interiority, bekenstein, hawking
 #related 003, 008, 004, 014, 026
 
 #surface

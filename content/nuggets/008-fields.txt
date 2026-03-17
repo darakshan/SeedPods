@@ -2,7 +2,7 @@
 #subtitle Physics and Whitehead converged on the same discovery from opposite directions.
 #status draft1
 #date 2026-03-12
-#tags physics, whitehead, fields, quantum-mechanics, prehension, consciousness, electromagnetism
+#tags sensation, physics, whitehead, fields, quantum-mechanics, prehension, consciousness, electromagnetism
 #related 002, 003, 007, 017, 029
 
 #surface

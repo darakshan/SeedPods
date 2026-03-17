@@ -1,7 +1,7 @@
 #title Many Worlds as Parallel Evolutionary Experiments
 #status proto
 #date 2026-03-15
-#tags many-worlds, everett, quantum, teilhard
+#tags physics, many-worlds, everett, quantum, teilhard
 #related 054, 059, 062, 064, 009
 
 Everett's Many Worlds interpretation says every quantum branch is real. The universe does not choose between possibilities — it explores all of them simultaneously, in nearly-orthogonal subspaces of Hilbert space.

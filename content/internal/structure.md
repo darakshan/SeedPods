@@ -34,7 +34,7 @@ Each seed also carries:
 - title, subtitle (one sentence)
 - status (see below)
 - date added
-- tags, and 
+- tags (first tag = primary category: one of consciousness, sensation, physics, mathematics, biology, mind-AI, knowledge; see grammar for full list and usage),
 - related seeds (up to five, by number), and
 - references (#ref): optional lines inside **#provenance** only; each line is full citation text. The build generates a “Further reading” subsection on the nugget page and a shared Bibliography page (sorted by ref text).
 - key terms (#term): optional lines anywhere in a nugget; each line is `#term Term: Definition`. The build generates the shared Glossary page (terms grouped, definitions indented; lists which nuggets define each).

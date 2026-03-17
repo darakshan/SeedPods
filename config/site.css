@@ -271,6 +271,11 @@ td a:hover{color:var(--accent)}
 .index-tag-name{font-weight:700;font-size:1rem;font-family:'DM Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--warm);scroll-margin-top:5rem;padding:.5rem 0}
 .index-entry{padding:.5rem 0}
 .index-entry a:hover{color:var(--accent)}
+.seed-categories{padding-top:.5rem;margin-top:0}
+details.category-group{margin-top:1.25rem}
+details.category-group:first-of-type{margin-top:0}
+details.category-group summary.index-tag-name{cursor:pointer;list-style:none;margin-bottom:.35rem}
+details.category-group summary.index-tag-name::-webkit-details-marker{display:none}
 /* Page end logo */
 .page-end{margin-top:4rem;margin-bottom:2rem;text-align:center}
 .page-end-logo{display:inline-block;opacity:.5;transition:opacity .2s}

@@ -26,6 +26,10 @@ from nugget_parser import (
     section_is_tbd,
 )
 
+PRIMARY_CATEGORIES = frozenset({
+    "consciousness", "sensation", "physics", "mathematics", "biology", "mind-AI", "knowledge",
+})
+
 
 def _word_count(text):
     if not text or section_is_tbd(text):
@@ -187,6 +191,18 @@ def main():
             errors.append(("status", msg))
             reporter_error(msg, nugget_num=num, shortname=shortname)
 
+        tags = n.get("tags", [])
+        if not tags:
+            msg = "no #tags (first tag must be a primary category)"
+            errors.append(("primary_category", msg))
+            reporter_error(msg, nugget_num=num, shortname=shortname)
+        elif tags[0] not in PRIMARY_CATEGORIES:
+            msg = "first tag {!r} is not a primary category (expected one of: {})".format(
+                tags[0], ", ".join(sorted(PRIMARY_CATEGORIES))
+            )
+            errors.append(("primary_category", msg))
+            reporter_error(msg, nugget_num=num, shortname=shortname)
+
     counts = {}
     for kind, _ in errors:
         counts[kind] = counts.get(kind, 0) + 1
@@ -205,6 +221,8 @@ def main():
         parts.append(f"{counts['over_related']} over-related")
     if counts.get("status"):
         parts.append(f"{counts['status']} status")
+    if counts.get("primary_category"):
+        parts.append(f"{counts['primary_category']} primary_category")
     suffix = f" — {n_issues} issues" if n_issues else " — ok"
     summary = ", ".join(parts) + suffix + "."
     print(summary, file=sys.stderr)

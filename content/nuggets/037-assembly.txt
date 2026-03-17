@@ -2,7 +2,7 @@
 #subtitle TBD
 #status proto
 #date 2026-03-14
-#tags assembly-theory, emergence, hierarchy, holons, whitehead, sara-walker
+#tags mathematics, assembly-theory, emergence, hierarchy, holons, whitehead, sara-walker
 #related 011, 002, 012, 014
 
 NOTE: This depth sketch was developed in session 2026-03-14. The nugget needs a full Surface, Script, and Images before it can advance beyond prelim.

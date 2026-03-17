@@ -9,7 +9,7 @@ import re
 from pathlib import Path
 
 KNOWN_VERBS = {
-    "include", "samples", "nuggets", "glossary", "bibliography", "index", "map",
+    "include", "samples", "nuggets", "categories", "glossary", "bibliography", "index", "map",
     "timestamp", "link", "note", "exercise", "nugget",
 }
 

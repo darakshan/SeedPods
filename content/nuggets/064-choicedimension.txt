@@ -1,7 +1,7 @@
 #title The Choice Dimension as Tree Algebra
 #status proto
 #date 2026-03-15
-#tags many-worlds, tree-algebra, choice, mandelbrot
+#tags mathematics, many-worlds, tree-algebra, choice, mandelbrot
 #related 060, 062, 054, 005, 038
 
 The proposal to add "choice" as a fifth dimension — alongside space, time — runs into a mathematical obstacle. The Mandelbrot set depends on the algebraic structure of complex multiplication. To generalize to five dimensions you need a five-dimensional number system with coherent multiplication. Such systems are severely constrained — quaternions work, octonions work, but five dimensions has no clean analog.

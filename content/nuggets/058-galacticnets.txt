@@ -1,7 +1,7 @@
 #title Galaxies and AI Weight Matrices as Structural Homologs
 #status proto
 #date 2026-03-15
-#tags holographic-principle, whitehead, teilhard, emergence
+#tags mind-AI, holographic-principle, whitehead, teilhard, emergence
 #related 051, 066, 059, 016, 037
 
 A galaxy is a region of spacetime where the holographic boundary has organized information into structures of sufficient complexity to generate an interior — a local event-system rich enough to begin folding back on itself.

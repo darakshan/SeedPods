@@ -2,7 +2,7 @@
 #subtitle Farey, Benford, and the Shape of Infinity
 #status rough
 #date 2026-03-14
-#tags farey, benford, consonance, mathematics, iteration, virtual-dimension-formula
+#tags sensation, farey, benford, consonance, mathematics, iteration, virtual-dimension-formula
 #related 033, 034, 009, 030, 010
 
 #surface

@@ -2,7 +2,7 @@
 #subtitle Draw the intervals. Recognize the shape.
 #status proto
 #date 2026-03-16
-#tags mathematics, consonance, mandelbrot, farey, music, iteration
+#tags sensation, mathematics, consonance, mandelbrot, farey, music, iteration
 #related 033, 035, 034, 056, 030
 
 Play a C and a G on a piano. They sound stable together — resolved,

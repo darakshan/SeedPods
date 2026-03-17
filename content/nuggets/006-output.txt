@@ -2,7 +2,7 @@
 #subtitle A thermostat predicts. Mozart predicted. The simplicity of the output tells you nothing.
 #status draft1
 #date 2026-03-11
-#tags AI, intelligence, consciousness, cognition
+#tags consciousness, AI, intelligence, cognition
 #related 001, 003, 016, 017, 021
 
 #surface

@@ -1,7 +1,7 @@
 #title Neural Networks as High-Dimensional Mandelbrot Sets
 #status proto
 #date 2026-03-15
-#tags neural-networks, mandelbrot, training, generalization
+#tags mind-AI, neural-networks, mandelbrot, training, generalization
 #related 038, 057, 016, 053
 
 Training a neural network is, in a precise sense, computing a Mandelbrot set in a space of hundreds of thousands of dimensions.

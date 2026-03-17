@@ -1,7 +1,7 @@
 #title Whitehead's God as Initial Condition and Attractor
 #status proto
 #date 2026-03-15
-#tags whitehead, god, teilhard, attractor
+#tags consciousness, whitehead, god, teilhard, attractor
 #related 050, 059, 060, 005, 058
 
 Whitehead's God is not the God of theism — not a person who intervenes in history or answers prayers. God in Whitehead's system plays two roles in the metaphysics of process.

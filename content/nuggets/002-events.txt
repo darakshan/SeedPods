@@ -2,7 +2,7 @@
 #subtitle The particle is the abstraction. The event is what's actually there.
 #status draft1
 #date 2026-03-13
-#tags whitehead, physics, ontology, process-philosophy
+#tags physics, whitehead, ontology, process-philosophy
 #related 001, 003, 004, 008
 
 #surface

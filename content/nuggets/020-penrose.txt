@@ -2,7 +2,7 @@
 #subtitle Penrose was right that Gödel matters. He was wrong about where the arrow points.
 #status partial
 #date 2026-03-11
-#tags godel, penrose, consciousness, AI, emergence, computation
+#tags consciousness, godel, penrose, AI, emergence, computation
 #related 010, 003, 006, 011
 
 #surface

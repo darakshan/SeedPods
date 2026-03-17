@@ -2,7 +2,7 @@
 #subtitle The mind closes the line into a circle.
 #status proto
 #date 2026-03-16
-#tags color, perception, evolution, neuroscience, music, opponent-processing
+#tags sensation, color, perception, evolution, neuroscience, music, opponent-processing
 #related 038, 026, 012, 042
 
 @note(change from proto to partial by adding TBD sections)

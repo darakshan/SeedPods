@@ -2,7 +2,7 @@
 #subtitle The surprise is not that they arrived. The surprise is where they came from.
 #status empty
 #date 2026-03-11
-#tags AI, consciousness, intelligence, culture
+#tags mind-AI, AI, consciousness, intelligence, culture
 #related 016, 017, 006, 003
 
 #surface

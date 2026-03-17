@@ -2,7 +2,7 @@
 #subtitle Not just brains. Not just animals. Experience may go all the way down.
 #status draft1
 #date 2026-03-13
-#tags whitehead, panpsychism, consciousness, experience
+#tags consciousness, whitehead, panpsychism, experience
 #related 001, 002, 005, 008
 
 #surface
