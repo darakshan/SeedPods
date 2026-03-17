@@ -13,54 +13,160 @@ from site_paths import content_path_to_output_name
 
 try:
     import markdown
+    from markdown.extensions.toc import TocExtension, slugify as _heading_slug
 except ImportError:
     markdown = None
+    _heading_slug = None
 
 _ROOT = Path(__file__).resolve().parent.parent
 
 
-def expand_links(text, context, base_dir, collected_md_refs=None):
-    """Replace @link(locator, text) with <a href="...">text</a>. Runs before markdown.
-    locator: nugget number (e.g. 002), path like internal/inside.md (relative to current file's directory), or d/ filename.
-    collected_md_refs: optional set to add referenced .md paths to (for build to emit)."""
+def _resolve_content_md_path(content_root, locator):
+    """Resolve path-only locator (e.g. 'about', 'about/authors') to a .md path under content_root.
+    Tries locator + '.md' first, then locator + '/page.md'. Returns None if not found."""
+    content_root = Path(content_root).resolve()
+    locator = locator.strip().strip("/")
+    if not locator or ".." in locator:
+        return None
+    path = Path(locator)
+    as_file = (content_root / path).with_suffix(".md")
+    if as_file.is_file():
+        return as_file
+    as_page = content_root / path / "page.md"
+    if as_page.is_file():
+        return as_page
+    return None
+
+
+def _title_from_md(md_path):
+    """Return title from .md file: first # heading, or first non-empty line."""
+    try:
+        raw = md_path.read_text(encoding="utf-8")
+    except OSError:
+        return None
+    for line in raw.splitlines():
+        line = line.strip()
+        if not line:
+            continue
+        if line.startswith("#"):
+            return line.lstrip("#").strip()
+        return line
+    return None
+
+
+def resolve_link(locator, explicit_text, context, base_dir, collected_md_refs=None):
+    """Resolve @link(locator, text) to (href, link_text). Single abstraction for .md and nuggets.
+    locator: nugget number (e.g. 002), .md path (relative to base_dir), path-only (e.g. about, about/authors), or raw href.
+    Returns (href, link_text) or (None, None) on error (caller may keep original text)."""
     if collected_md_refs is None:
         collected_md_refs = set()
     from nugget_parser import nugget_by_number_flex
 
-    content_root = context.get("content_dir") or _ROOT
-    content_root = Path(content_root).resolve()
+    content_root = Path(context.get("content_dir") or _ROOT).resolve()
     base_dir = Path(base_dir).resolve()
+    warn = context.get("warn", lambda msg: None)
+    link_errors = context.get("link_errors")
+
+    def record_error(msg):
+        if link_errors is not None:
+            link_errors.append(msg)
+        else:
+            warn(msg)
+
+    link_text = (explicit_text or "").strip() or locator
+
+    if re.match(r"^\d+$", locator):
+        nuggets = context.get("nuggets") or []
+        n = nugget_by_number_flex(nuggets, locator)
+        if not n:
+            record_error(f"@link: nugget {locator!r} not found")
+            return None, None
+        href = nugget_tag(n) + ".html"
+        if not (explicit_text or "").strip():
+            link_text = n.get("title", "Untitled")
+        return href, link_text
+
+    if locator.endswith(".md"):
+        md_path = (base_dir / locator).resolve()
+        if not md_path.exists():
+            record_error(f"@link: file not found {locator!r}")
+            return None, None
+        try:
+            md_path.relative_to(content_root)
+        except ValueError:
+            record_error(f"@link: path {locator!r} resolves outside content dir")
+            return None, None
+        collected_md_refs.add(md_path)
+        out_name = content_path_to_output_name(md_path, content_root)
+        if not out_name:
+            record_error(f"@link: invalid path {locator!r}")
+            return None, None
+        return out_name, link_text
+
+    content_md = _resolve_content_md_path(content_root, locator)
+    if content_md is not None:
+        collected_md_refs.add(content_md)
+        try:
+            rel = content_md.relative_to(content_root)
+        except ValueError:
+            out_name = None
+        else:
+            parts = rel.parts
+            if len(parts) >= 2 and parts[-1] == "page.md":
+                out_name = parts[-2] + ".html"
+            else:
+                out_name = content_path_to_output_name(content_md, content_root)
+        if not out_name:
+            record_error(f"@link: invalid path {locator!r}")
+            return None, None
+        if not (explicit_text or "").strip():
+            link_text = _title_from_md(content_md) or content_md.stem
+        return out_name, link_text
+
+    if "/" in locator and _heading_slug is not None:
+        last_slash = locator.rfind("/")
+        path_part = locator[:last_slash].strip()
+        section_part = locator[last_slash + 1 :].strip()
+        if path_part and section_part:
+            content_md = _resolve_content_md_path(content_root, path_part)
+            if content_md is not None:
+                collected_md_refs.add(content_md)
+                try:
+                    rel = content_md.relative_to(content_root)
+                except ValueError:
+                    out_name = None
+                else:
+                    parts = rel.parts
+                    if len(parts) >= 2 and parts[-1] == "page.md":
+                        out_name = parts[-2] + ".html"
+                    else:
+                        out_name = content_path_to_output_name(content_md, content_root)
+                if not out_name:
+                    record_error(f"@link: invalid path {locator!r}")
+                    return None, None
+                fragment = _heading_slug(section_part, "-")
+                href = out_name + "#" + fragment
+                if not (explicit_text or "").strip():
+                    link_text = section_part
+                return href, link_text
+
+    return locator, link_text
+
+
+def expand_links(text, context, base_dir, collected_md_refs=None):
+    """Replace @link(locator, text) with <a href="...">text</a>. Runs before markdown.
+    locator: nugget number (e.g. 002), .md path (relative to base_dir), path-only (e.g. about, about/authors), or raw href.
+    collected_md_refs: optional set to add referenced .md paths to (for build to emit)."""
+    if collected_md_refs is None:
+        collected_md_refs = set()
 
     def repl(m):
         locator = m.group(1).strip()
-        link_text = (m.group(2) or "").strip() or locator
-        if re.match(r"^\d+$", locator):
-            nuggets = context.get("nuggets") or []
-            n = nugget_by_number_flex(nuggets, locator)
-            if not n:
-                context.get("warn", lambda msg: None)(f"@link: nugget {locator!r} not found")
-                return m.group(0)
-            href = nugget_tag(n) + ".html"
-            if not (m.group(2) or "").strip():
-                link_text = n.get("title", "Untitled")
-            return f'<a href="{href}">{_html.escape(link_text)}</a>'
-        if locator.endswith(".md"):
-            md_path = (base_dir / locator).resolve()
-            if not md_path.exists():
-                context.get("warn", lambda msg: None)(f"@link: file not found {locator!r}")
-                return m.group(0)
-            try:
-                md_path.relative_to(content_root)
-            except ValueError:
-                context.get("warn", lambda msg: None)(f"@link: path {locator!r} resolves outside content dir")
-                return m.group(0)
-            collected_md_refs.add(md_path)
-            out_name = content_path_to_output_name(md_path, content_root)
-            if not out_name:
-                context.get("warn", lambda msg: None)(f"@link: invalid path {locator!r}")
-                return m.group(0)
-            return f'<a href="{out_name}">{_html.escape(link_text)}</a>'
-        return f'<a href="{_html.escape(locator)}">{_html.escape(link_text)}</a>'
+        explicit_text = (m.group(2) or "").strip()
+        href, link_text = resolve_link(locator, explicit_text, context, base_dir, collected_md_refs)
+        if href is None:
+            return m.group(0)
+        return f'<a href="{_html.escape(href)}">{_html.escape(link_text)}</a>'
 
     return re.sub(r"@link\s*\(\s*([^,)]+)\s*(?:,\s*([^)]*))?\s*\)", repl, text)
 
@@ -292,10 +398,14 @@ def process_md_to_html(md_path, context=None, collected_md_refs=None):
     expanded = expand_links(expanded, context, base_dir, collected_md_refs)
     if not expanded.strip():
         return ""
+    extensions = ["fenced_code", "tables"]
+    extension_configs = {"fenced_code": {}}
+    if markdown is not None:
+        extensions.append(TocExtension(marker=""))
     html = markdown.markdown(
         expanded,
-        extensions=["fenced_code", "tables"],
-        extension_configs={"fenced_code": {}},
+        extensions=extensions,
+        extension_configs=extension_configs,
     )
     html = re.sub(
         r'<p>(TBD|No reviews completed yet\.)</p>',

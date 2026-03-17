@@ -19,6 +19,11 @@ build:
 build-nugget nugget:
     {{python}} {{root}}/src/build.py --nugget {{nugget}}
 
+# Serve the built site locally (default port 8000). Site dir must match config/settings.txt site_dir.
+serve port="8000":
+    @echo "Serving at http://localhost:{{port}}/"
+    nohup python3 -m http.server {{port}} --directory {{root}}/docs > /dev/null 2>&1 &
+
 # Find new explainer videos: show the agent prompt (copy into Cursor). When the agent completes, run: just build
 find-explainers:
     @cat {{root}}/notes/recipe-find-explainers.md

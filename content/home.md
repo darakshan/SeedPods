@@ -14,4 +14,4 @@ The collection is alive, every changing, incomplete, and growing, as we complete
 
 ### About this project
 
-@link(d/about.html, About)
+@link(about)

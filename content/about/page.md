@@ -6,8 +6,18 @@ It's is a living archive of thoughts I've been gathering all my life.  Nuggets a
 
 A deep purpose of this project is intuition repair — our own as much as anyone's. Most of these seed nuggets are not introducing new information. They are revisiting assumptions so familiar they've become invisible. Each seed nugget earns its place by containing a genuine surprise: a moment where the world turns out to be slightly different from what we'd been assuming. The surprise is the point.
 
+A few of these ideas are original, speculative, likely wrong.
+
+This website is under construction.  It contains TBDs, Warnings, incompletene sections, and no doubt errors and hallucinations.  @link(about/Caveat lector).
+
 Some day, inshallah, some or all of these nuggets will turned into a book, or a movie, or a series of articles, or who knows what, in a linear progression. Time will tell.
 
+### More about Seed Nuggets
+
+- @link(goals.md)
+- @link(authors.md)
+- @link(audiences.md)
+- @link(reviews.md)
 
 ### Acknowledgements
 
@@ -19,18 +29,13 @@ The format of Seed Nuggets is inspired by Christopher Alexander's classic "A Pat
 
 Indeed, all of the above works are relatively old and could benefit from all the advancements in technology that have been made since they were written.  Some of these nuggets try to do that.
 
+-- Darakshan Farber, March 2026
+
+
+### Caveat Lector
+
+(what I wrote)
 Claude AI has helped me build this software and flesh out its content. Others may contribute in the future. Of course there will be inaccuracies and misunderstandings -- mine as well as Claude's.  But since this is a *livng* archive, it can evolve and in the process ratchet up its quality over time.
 
--- Darakshan Farber, March 2026
- 
-### See also these very incomplete pages:
-- @link(authors.md, Authors)
-- @link(reviews.md, Reviews)
-
----
-
-@include goals.md
-
----
-
-@include audiences.md
+(what Claude wrote with me)
+Many of the ideas gathered here sit at the edge of what is settled. Some connections are speculative; some, if we are honest, may turn out to be pure fantasy — and a few may bear the fingerprints of an AI that occasionally confuses confidence with correctness. We have tried to distinguish intuition from established fact, but the line is not always clean, and we have not always drawn it perfectly. This is, in part, deliberate. The fragment and the conjecture have their own honorable tradition — from Heraclitean shards to the notebooks of Novalis — and some truths seem to require the poetic gesture before the formal proof arrives. We offer these nuggets not as conclusions but as invitations: seeds, not harvests. Where we have overreached, we hope the reach itself points somewhere worth going.

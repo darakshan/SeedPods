@@ -148,14 +148,14 @@ def main():
 
         section_names = ("surface", "depth", "script", "images")
         n_sections = sum(1 for name in section_names if not section_is_tbd(layers.get(name)))
-        if not status_order:
+        if status == "proto":
+            expected_status = "proto"
+        elif not status_order:
             expected_status = "empty"
         elif n_sections == 0:
             expected_status = status_order[-1]
-        elif n_sections == 1:
+        elif n_sections >= 1 and n_sections <= 3:
             expected_status = status_order[-3] if len(status_order) >= 3 else status_order[-1]
-        elif n_sections <= 3:
-            expected_status = status_order[-2] if len(status_order) >= 2 else status_order[-1]
         else:
             expected_status = "complete"
         complete_statuses = _complete_statuses(status_order)

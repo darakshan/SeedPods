@@ -1,6 +1,6 @@
 #title Every Sentence Becomes a Word
 #subtitle TBD
-#status prelim
+#status proto
 #date 2026-03-14
 #tags assembly-theory, emergence, hierarchy, holons, whitehead, sara-walker
 #related 011, 002, 012, 014
@@ -8,7 +8,7 @@
 #surface
 TBD
 
-#depth
+#brief
 NOTE: This depth sketch was developed in session 2026-03-14. The nugget needs a full Surface, Script, and Images before it can advance beyond prelim.
 
 The core insight: at any given level of reality, there are entities and relationships that function as a vocabulary. Their stable combinations become sentences. And those sentences, when they stabilize, become the new vocabulary for the next level of abstraction. Atoms are the vocabulary from which molecules are built. Molecules stabilize into the vocabulary from which cells are built. Cells into the vocabulary from which organisms are built. Each level's sentences are the next level's words.

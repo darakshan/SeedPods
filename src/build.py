@@ -14,6 +14,7 @@ Usage:
 import csv
 import hashlib
 import html as _html
+import json
 import os
 import re
 import shutil
@@ -116,6 +117,8 @@ def get_build_input_files():
         if main.exists():
             files.update(_input_files_for_page(main))
     files.update(_referenced_md_from_md_pages())
+    for p in (_ROOT / "src").glob("*.py"):
+        files.add(p)
     return sorted(files, key=lambda p: str(p))
 
 def get_build_input_hash():
@@ -206,6 +209,40 @@ def _require_status_order():
     return order
 
 
+def build_nugget_index_json(nuggets):
+    """Return JSON object: number -> slug for goto. Includes both display num and zero-padded."""
+    index = {}
+    for n in nuggets:
+        num = n.get("number")
+        if not num:
+            continue
+        slug = nugget_tag(n)
+        index[num] = slug
+        if num.isdigit():
+            index[display_number(num)] = slug
+    return json.dumps(index)
+
+
+def build_search_index_json(nuggets, nugget_raw_by_slug=None):
+    """Return JSON array of {num, title, slug, content}. If nugget_raw_by_slug given, content = raw file text (same as 4u-ai); else title + subtitle + layers."""
+    out = []
+    for n in sorted(nuggets, key=lambda x: (x.get("number", "").zfill(3), x.get("number", ""))):
+        num = n.get("number", "")
+        title = n.get("title", "") or ""
+        slug = nugget_tag(n)
+        if nugget_raw_by_slug is not None:
+            content = (nugget_raw_by_slug.get(slug) or "").replace("\n", " ")
+        else:
+            parts = [title, n.get("subtitle", "")]
+            layers = n.get("layers") or {}
+            for key in ("surface", "depth", "brief", "provenance", "script", "images"):
+                if key in layers and layers[key]:
+                    parts.append(layers[key])
+            content = " ".join(parts).replace("\n", " ")
+        out.append({"num": display_number(num), "title": title, "slug": slug, "content": content})
+    return json.dumps(out)
+
+
 # ── HTML helpers ──────────────────────────────────────────────────────────────
 
 def _head_links(css_href="site.css", icon_href="d/logo.svg"):
@@ -221,16 +258,16 @@ def _more_page_label(key):
 
 
 def nav(from_d=False, from_nuggets=False, layer_tabs_html=None):
-    """Top nav: logo left; menu items from config index (nav key). All output is under SITE_DIR, which is the web root (same-dir links)."""
+    """Top nav: logo left; then Search, Go+input; then menu items from config (About, Lists, More)."""
     prefix, index_href, logo_src = "", "index.html", "logo.svg"
-    link_parts = []
     list_menu_items = get_list_menu_items(load_index_copy())
+    nav_item_parts = []
     for href, label, _, _ in _nav_items():
         if href == "list.html":
             if list_menu_items:
                 dropdown_items = [f'<li><a href="{prefix}{item_href}">{_html.escape(item_label)}</a></li>' for item_label, item_href, _ in list_menu_items]
-                link_parts.append(
-                    '<li class="nav-item-dropdown nav-lists-dropdown">'
+                nav_item_parts.append(
+                    '<li class="nav-link-item nav-item-dropdown nav-lists-dropdown">'
                     f'<a href="{prefix}list.html">Lists</a>'
                     '<button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-label="Lists menu">▾</button>'
                     '<ul class="nav-dropdown">'
@@ -238,16 +275,49 @@ def nav(from_d=False, from_nuggets=False, layer_tabs_html=None):
                     '</ul></li>'
                 )
             else:
-                link_parts.append(f'<li><a href="{prefix}list.html">{_html.escape(label)}</a></li>')
+                nav_item_parts.append(f'<li class="nav-link-item"><a href="{prefix}list.html">{_html.escape(label)}</a></li>')
         else:
-            link_parts.append(f'<li><a href="{prefix}{href}">{_html.escape(label)}</a></li>')
-    links = "".join(link_parts)
+            nav_item_parts.append(f'<li class="nav-link-item"><a href="{prefix}{href}">{_html.escape(label)}</a></li>')
+    search_li = '<li><button type="button" class="nav-search-btn" aria-label="Search nuggets" onclick="seedNavOpenSearch();return false">Search</button></li>'
+    goto_li = (
+        '<li class="nav-goto-wrap">'
+        '<label for="nav-goto-num" class="sr-only">Goto nugget</label>'
+        '<button type="button" class="nav-goto-btn" aria-label="Go to nugget" onclick="seedNavGo(this);return false">Go</button>'
+        '<input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" onkeydown="if(event.key===\'Enter\'){event.preventDefault();seedNavGoFromInput(this);}">'
+        '</li>'
+    )
+    center_links = search_li + goto_li
+    end_links = "".join(nav_item_parts)
+
+    hamburger_nav_parts = []
+    for href, label, _, _ in _nav_items():
+        if href == "list.html":
+            if list_menu_items:
+                for item_label, item_href, _ in list_menu_items:
+                    hamburger_nav_parts.append(f'<li><a href="{prefix}{item_href}">{_html.escape(item_label)}</a></li>')
+            else:
+                hamburger_nav_parts.append(f'<li><a href="{prefix}list.html">{_html.escape(label)}</a></li>')
+        else:
+            hamburger_nav_parts.append(f'<li><a href="{prefix}{href}">{_html.escape(label)}</a></li>')
+    hamburger_list = "".join(hamburger_nav_parts)
+
     row = f"""  <div class="nav-row">
-  <a href="{index_href}" class="nav-logo"><img src="{logo_src}" alt="" class="nav-logo-icon"><span class="nav-logo-text"><span class="nav-logo-word1">Seed</span><span class="nav-logo-word2">Nuggets</span></span></a>
-  <ul class="nav-links">
-    {links}
-  </ul>
-</div>"""
+  <div class="nav-brand"><a href="{index_href}" class="nav-logo"><img src="{logo_src}" alt="" class="nav-logo-icon"><span class="nav-logo-text"><span class="nav-logo-word1">Seed</span><span class="nav-logo-word2">Nuggets</span></span></a></div>
+  <div class="nav-center"><ul class="nav-links nav-links-center">
+    {center_links}
+  </ul></div>
+  <div class="nav-end"><ul class="nav-links nav-links-end">
+    {end_links}
+  </ul><button type="button" class="nav-hamburger-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav-hamburger-panel" onclick="seedNavToggleMenu();return false">&#9776;</button></div>
+</div>
+  <div class="nav-hamburger-panel" id="nav-hamburger-panel" role="menu" aria-hidden="true">
+    <div class="nav-hamburger-overlay" onclick="seedNavToggleMenu()"></div>
+    <div class="nav-hamburger-inner">
+      <ul class="nav-hamburger-list">
+{hamburger_list}
+      </ul>
+    </div>
+  </div>"""
     extra = f"\n{layer_tabs_html}" if layer_tabs_html else ""
     return f"""
 <nav>
@@ -297,6 +367,19 @@ NAV_LISTS_DROPDOWN_SCRIPT = """
 </script>
 """
 
+SEARCH_DIALOG_HTML = """
+<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search nuggets" hidden>
+  <div class="search-dialog-overlay" onclick="seedNavCloseSearch()"></div>
+  <div class="search-dialog-inner">
+    <div class="search-dialog-header">
+      <input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)">
+      <button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button>
+    </div>
+    <div id="search-dialog-results" class="search-dialog-results"></div>
+  </div>
+</div>
+"""
+
 def foot(logo_href="logo.svg"):
     home_href = "index.html"
     logo_block = f'''
@@ -306,7 +389,44 @@ def foot(logo_href="logo.svg"):
   </a>
 </div>
 '''
-    return logo_block + "\n" + NAV_SCROLL_SCRIPT + "\n" + NAV_LISTS_DROPDOWN_SCRIPT
+    return logo_block + "\n" + NAV_SCROLL_SCRIPT + "\n" + NAV_LISTS_DROPDOWN_SCRIPT + "\n" + SEARCH_DIALOG_HTML
+
+def _nav_seed_script_content():
+    """Return the inner JS of the nav/search/goto script (no script tags)."""
+    return r"""
+window.seedNavToggleMenu=function(){
+  var n=document.querySelector("nav");
+  var b=document.querySelector(".nav-hamburger-btn");
+  var p=document.getElementById("nav-hamburger-panel");
+  if(!n||!b)return;
+  var open=n.classList.contains("nav-hamburger-open");
+  n.classList.toggle("nav-hamburger-open",!open);
+  b.setAttribute("aria-expanded",!open?"true":"false");
+  if(p)p.style.display=open?"none":"flex";
+};
+window.seedNavGo=function(btn){var w=btn&&btn.closest?btn.closest(".nav-goto-wrap"):null;var i=w?w.querySelector(".nav-goto-input"):null;window.seedNavGoFromInput(i);};
+window.seedNavGoFromInput=function(input){if(!input)return;var v=(input.value||"").trim();if(!v)return;var p=window._seedNavIndexPromise||(window._seedNavIndexPromise=fetch("nugget-index.json").then(function(r){return r.json();}));p.then(function(idx){var s=idx[v]||idx[v.replace(/^0+/,"")]||(v.length<=3?idx[v.padStart(3,"0")]:null);if(s)window.location.href=s+".html";});};
+window.seedNavOpenSearch=function(){var n=document.querySelector("nav");if(n&&n.classList.contains("nav-hamburger-open"))window.seedNavToggleMenu();var d=document.getElementById("search-dialog");var i=document.getElementById("search-dialog-input");if(d)d.removeAttribute("hidden");if(i){i.value="";i.focus();}window.seedNavRunSearch("");};
+window.seedNavCloseSearch=function(){var d=document.getElementById("search-dialog");if(d)d.setAttribute("hidden","");};
+window._seedNavSearchIndex=null;
+window._seedNavSnippet=function(content,q){if(!content||!q)return"";var c=content.toLowerCase();var i=c.indexOf(q);if(i<0)return"";var len=100;var start=Math.max(0,i-len);var end=Math.min(content.length,i+q.length+len);var s=content.substring(start,end).replace(/\s+/g," ").trim();if(start>0)s="\u2026 "+s;if(end<content.length)s=s+" \u2026";return s;};
+window.seedNavRunSearch=function(q){
+  q=(q||"").toLowerCase().trim();
+  var el=document.getElementById("search-dialog-results");
+  if(!el)return;
+  if(!window._seedNavSearchIndex){fetch("search-index.json").then(function(r){return r.json();}).then(function(data){window._seedNavSearchIndex=data;window.seedNavRunSearch(q);});return;}
+  if(!q){el.innerHTML="";return;}
+  var nm=[],cm=[];
+  for(var j=0;j<window._seedNavSearchIndex.length;j++){var it=window._seedNavSearchIndex[j];if((it.title||"").toLowerCase().indexOf(q)>=0)nm.push(it);else if((it.content||"").toLowerCase().indexOf(q)>=0)cm.push(it);}
+  var h="";
+  if(nm.length){h+='<div class="search-section"><div class="search-section-title">Name</div><ul class="search-result-list">';nm.forEach(function(it){var d=document.createElement("div");d.textContent=it.num+". "+it.title;h+='<li><a href="'+it.slug+'.html">'+d.innerHTML+'</a></li>';});h+="</ul></div>";}
+  if(cm.length){h+='<div class="search-section"><div class="search-section-title">Content</div><ul class="search-result-list">';cm.forEach(function(it){var titleDiv=document.createElement("div");titleDiv.textContent=it.num+". "+it.title;var snip=window._seedNavSnippet(it.content,q);var snipDiv=document.createElement("div");snipDiv.textContent=snip;h+='<li><a href="'+it.slug+'.html">'+titleDiv.innerHTML+'<br><span class="search-result-snippet">'+snipDiv.innerHTML+'</span></a></li>';});h+="</ul></div>";}
+  if(!h&&q)h='<p class="search-no-results">No nuggets match.</p>';
+  el.innerHTML=h;
+};
+document.addEventListener("keydown",function(e){if(e.key==="Escape"){var n=document.querySelector("nav");if(n&&n.classList.contains("nav-hamburger-open"))window.seedNavToggleMenu();else window.seedNavCloseSearch();}});
+document.addEventListener("DOMContentLoaded",function(){var p=document.getElementById("nav-hamburger-panel");if(p){p.style.display="none";var list=p.querySelector(".nav-hamburger-list");if(list)list.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){if(document.querySelector("nav").classList.contains("nav-hamburger-open"))window.seedNavToggleMenu();});});}});
+"""
 
 def head(title, extra="", at_root=False, css_href=None, icon_href=None):
     if css_href is None:
@@ -322,6 +442,7 @@ def head(title, extra="", at_root=False, css_href=None, icon_href=None):
 <title>{title} — Seed Nuggets</title>
 {links}
 {extra}
+<script src="seed-nav.js"></script>
 </head>
 <body>"""
 
@@ -487,9 +608,16 @@ LAYER_ORDER = [
     ("images", "Images"),
     ("references", "References"),
 ]
-LAYER_ORDER_PROTO = [("brief", "Brief")]
+LAYER_ORDER_PROTO = [
+    ("brief", "Brief"),
+    ("references", "References"),
+]
 
-def build_nugget(n, all_nuggets):
+PROTO_NOTICE_HTML = '''<div class="proto-notice"><p class="dim">This nugget is a crazy idea so far. It might be fleshed out, merged with another nugget, or even removed. Caveat lector.</p></div>'''
+
+ROUGH_NOTICE_HTML = '''<div class="rough-notice"><p class="dim">This nugget is a rough draft, far from polished. Caveat lector.</p></div>'''
+
+def build_nugget(n, all_nuggets, link_errors=None):
     num = n.get("number", "?")
     title = n.get("title", "Untitled")
     subtitle = n.get("subtitle", "")
@@ -499,7 +627,7 @@ def build_nugget(n, all_nuggets):
     related_nums = n.get("related", [])
     layers = n.get("layers", {})
 
-    link_context = {"nuggets": all_nuggets, "content_dir": CONTENT_DIR, "warn": _warn}
+    link_context = {"nuggets": all_nuggets, "content_dir": CONTENT_DIR, "warn": _warn, "link_errors": link_errors}
     link_base_dir = NUGGETS_DIR
 
     tags_href = "tags.html"
@@ -518,7 +646,7 @@ def build_nugget(n, all_nuggets):
             rnum = r.get("number", "")
             rtitle = r.get("title", "")
             rstatus = r.get("status", "empty")
-            card_class = "related-card related-card-prelim" if rstatus in ("empty", "prelim") else "related-card"
+            card_class = "related-card related-card-prelim" if rstatus in ("empty", "prelim", "proto", "rough") else "related-card"
             cards += f"""
       <a href="{rfile}" class="{card_class}">
         <div class="related-num">{display_number(rnum)}</div>
@@ -528,6 +656,7 @@ def build_nugget(n, all_nuggets):
 
     surface_html = _layer_prose_to_html(layers.get("surface", "TBD"), all_nuggets, link_context, link_base_dir)
     is_proto = status == "proto"
+    is_rough = status == "rough"
     layer_order = LAYER_ORDER_PROTO if is_proto else LAYER_ORDER
 
     def layer_has_content(layer_id):
@@ -539,7 +668,10 @@ def build_nugget(n, all_nuggets):
 
     def layer_body(layer_id):
         if layer_id == "brief":
-            return _layer_prose_to_html(layers.get("brief", "TBD"), all_nuggets, link_context, link_base_dir)
+            brief_html = _layer_prose_to_html(layers.get("brief", "TBD"), all_nuggets, link_context, link_base_dir)
+            if is_proto:
+                return PROTO_NOTICE_HTML + "\n    " + brief_html
+            return brief_html
         if layer_id == "references":
             prov_raw = layers.get("provenance", "TBD")
             prov_html = "" if section_is_tbd(prov_raw) else _layer_prose_to_html(prov_raw, all_nuggets, link_context, link_base_dir)
@@ -563,6 +695,8 @@ def build_nugget(n, all_nuggets):
                 parts.append("</div>")
             return "\n    ".join(parts)
         if layer_id == "surface":
+            if is_rough:
+                return ROUGH_NOTICE_HTML + "\n    " + surface_html
             return surface_html
         raw = layers.get(layer_id, "TBD")
         if layer_id == "script":
@@ -581,7 +715,7 @@ def build_nugget(n, all_nuggets):
             tabs_parts.append(f'<span class="layer-tab layer-tab-disabled">{label}</span>')
 
     sections_parts = []
-    refs_section_shown = layer_has_content("references") if not is_proto else False
+    refs_section_shown = layer_has_content("references")
     for layer_id, label in layer_order:
         if not layer_has_content(layer_id):
             continue
@@ -592,9 +726,13 @@ def build_nugget(n, all_nuggets):
                 section_content = f'<h2 class="layer-heading">{label}</h2>\n    {body}'
             else:
                 section_content = body
+        elif layer_id == "brief" and is_proto:
+            section_content = f'<div class="prose">{body}</div>'
         else:
             section_content = f'<h2 class="layer-heading">{label}</h2>\n    <div class="prose">{body}</div>'
         if layer_id == "surface" and rel_nuggets and not refs_section_shown:
+            section_content += f'\n    <div class="related-section"><h3 class="layer-heading related-label">Related seeds</h3>\n      {related_cards_html}\n    </div>'
+        if layer_id == "brief" and is_proto and rel_nuggets and not refs_section_shown:
             section_content += f'\n    <div class="related-section"><h3 class="layer-heading related-label">Related seeds</h3>\n      {related_cards_html}\n    </div>'
         sections_parts.append(f'  <section id="{layer_id}" class="layer-section">\n    {section_content}\n  </section>')
 
@@ -610,7 +748,13 @@ def build_nugget(n, all_nuggets):
     next_html = f'<a href="{nugget_tag(next_n)}.html">&gt;&gt;</a>' if next_n else ''
 
     if is_proto:
-        layer_tabs_html = ""
+        layer_tabs_html = f"""  <div class="layer-tabs">
+    <div class="layer-tabs-inner">
+      <span class="layer-tabs-prev">{prev_html}</span>
+      <div class="layer-tabs-center"></div>
+      <span class="layer-tabs-next">{next_html}</span>
+    </div>
+  </div>"""
     else:
         layer_tabs_html = f"""  <div class="layer-tabs">
     <div class="layer-tabs-inner">
@@ -901,8 +1045,8 @@ def _md_context_with_special(nuggets, status_order, explainer_terms=None, **over
     return ctx
 
 
-def build_index(nuggets, index_copy, status_order, collected_md_refs=None):
-    context = _md_context(nuggets=nuggets, status_order=status_order, copy=index_copy, page="home")
+def build_index(nuggets, index_copy, status_order, collected_md_refs=None, link_errors=None):
+    context = _md_context(nuggets=nuggets, status_order=status_order, copy=index_copy, page="home", link_errors=link_errors)
     body_html = process_md_to_html(CONTENT_DIR / "home.md", context, collected_md_refs=collected_md_refs)
 
     html = head("Seed Nuggets")
@@ -989,10 +1133,10 @@ def build_map_graph_page(nuggets, status_order):
     return build_static_page("Map", build_map_body(nuggets, status_order), wrap_class="wrap--full")
 
 
-def build_md_file_page(md_path, nuggets=None, collected_md_refs=None, status_order=None, index_copy=None, explainer_terms=None):
+def build_md_file_page(md_path, nuggets=None, collected_md_refs=None, status_order=None, index_copy=None, explainer_terms=None, link_errors=None):
     nuggets = nuggets or []
     status_order = status_order or []
-    context = _md_context_with_special(nuggets, status_order, explainer_terms, copy=index_copy, page=md_path.stem)
+    context = _md_context_with_special(nuggets, status_order, explainer_terms, copy=index_copy, page=md_path.stem, link_errors=link_errors)
     body_html = process_md_to_html(md_path, context, collected_md_refs=collected_md_refs)
     title = _first_h1(md_path) or md_path.stem.replace("-", " ").title()
     html = head(title)
@@ -1003,11 +1147,11 @@ def build_md_file_page(md_path, nuggets=None, collected_md_refs=None, status_ord
     return html
 
 
-def build_md_dir_page(dir_path, nuggets=None, collected_md_refs=None, status_order=None, explainer_terms=None):
+def build_md_dir_page(dir_path, nuggets=None, collected_md_refs=None, status_order=None, explainer_terms=None, link_errors=None):
     page_md = dir_path / "page.md"
     nuggets = nuggets or []
     status_order = status_order or []
-    context = _md_context_with_special(nuggets, status_order, explainer_terms, page=dir_path.name)
+    context = _md_context_with_special(nuggets, status_order, explainer_terms, page=dir_path.name, link_errors=link_errors)
     body_html = process_md_to_html(page_md, context, collected_md_refs=collected_md_refs)
     title = _first_h1(page_md) or dir_path.name.replace("-", " ").title()
     html = head(title)
@@ -1018,8 +1162,8 @@ def build_md_dir_page(dir_path, nuggets=None, collected_md_refs=None, status_ord
     return html
 
 
-def build_internal_page(nuggets=None, collected_md_refs=None):
-    context = _md_context(nuggets=nuggets or [])
+def build_internal_page(nuggets=None, collected_md_refs=None, link_errors=None):
+    context = _md_context(nuggets=nuggets or [], link_errors=link_errors)
     body_html = process_md_to_html(INTERNAL_DIR / "page.md", context, collected_md_refs=collected_md_refs)
     html = head("Internal")
     html += nav(from_d=True)
@@ -1141,13 +1285,26 @@ def build_glossary_page(nuggets, explainer_terms=None):
     return html
 
 
-def build_4u_ai_txt():
-    """Write d/4u-ai.txt: concatenation of raw content/internal/*.md and content/nuggets/*.txt."""
-    parts = []
+def _collect_4u_ai_content(nuggets):
+    """Return (internal_docs_str, nugget_raw_by_slug). Internal docs in one string; nugget raw file text keyed by slug."""
+    internal_parts = []
     for p in sorted(INTERNAL_DIR.glob("*.md")):
-        parts.append(f"=== content/internal/{p.name} ===\n\n{p.read_text(encoding='utf-8')}")
-    for p in sorted(NUGGETS_DIR.glob("*.txt")):
-        parts.append(f"=== content/nuggets/{p.name} ===\n\n{p.read_text(encoding='utf-8')}")
+        internal_parts.append(f"=== content/internal/{p.name} ===\n\n{p.read_text(encoding='utf-8')}")
+    internal_str = "\n\n".join(internal_parts)
+    nugget_raw_by_slug = {}
+    for n in sorted(nuggets, key=lambda x: (x.get("number", "").zfill(3), x.get("number", ""))):
+        raw = (NUGGETS_DIR / f"{n['filename']}.txt").read_text(encoding="utf-8")
+        nugget_raw_by_slug[nugget_tag(n)] = raw
+    return internal_str, nugget_raw_by_slug
+
+
+def build_4u_ai_txt(internal_str, nuggets, nugget_raw_by_slug):
+    """Write d/4u-ai.txt from shared internal string and per-nugget raw content."""
+    parts = [internal_str]
+    for n in sorted(nuggets, key=lambda x: (x.get("number", "").zfill(3), x.get("number", ""))):
+        slug = nugget_tag(n)
+        raw = nugget_raw_by_slug.get(slug, "")
+        parts.append(f"=== content/nuggets/{n['filename']}.txt ===\n\n{raw}")
     (SITE_DIR / "4u-ai.txt").write_text("\n\n".join(parts), encoding="utf-8")
 
 
@@ -1213,13 +1370,21 @@ def main():
         if s not in status_order:
             _warn(f"Error: nugget {n.get('filename', '?')}: status {s!r} not in config/status.txt")
 
+    link_errors = []
     for n in nuggets:
         if filter_num and n.get("number") != filter_num:
             continue
         fname = nugget_tag(n) + ".html"
         out = SITE_DIR / fname
-        out.write_text(build_nugget(n, nuggets), encoding="utf-8")
+        out.write_text(build_nugget(n, nuggets, link_errors), encoding="utf-8")
         print(f"  Built {fname}")
+
+    internal_str, nugget_raw_by_slug = _collect_4u_ai_content(nuggets)
+    (SITE_DIR / "nugget-index.json").write_text(build_nugget_index_json(nuggets), encoding="utf-8")
+    (SITE_DIR / "search-index.json").write_text(build_search_index_json(nuggets, nugget_raw_by_slug), encoding="utf-8")
+    (SITE_DIR / "seed-nav.js").write_text(_nav_seed_script_content(), encoding="utf-8")
+    if not filter_num:
+        print("  Built nugget-index.json, search-index.json, seed-nav.js")
 
     if not filter_num:
         shutil.copy(CONFIG_DIR / "site.css", SITE_DIR / "site.css")
@@ -1237,24 +1402,24 @@ def main():
             if kind == "file":
                 nav_built_paths.add(path)
                 (SITE_DIR / href).write_text(
-                    build_md_file_page(path, nuggets, collected_md_refs, status_order, index_copy, explainer_terms),
+                    build_md_file_page(path, nuggets, collected_md_refs, status_order, index_copy, explainer_terms, link_errors),
                     encoding="utf-8",
                 )
                 print(f"  Built {href}")
             elif kind == "dir":
                 nav_built_paths.add(path / "page.md")
-                (SITE_DIR / href).write_text(build_md_dir_page(path, nuggets, collected_md_refs, status_order, explainer_terms), encoding="utf-8")
+                (SITE_DIR / href).write_text(build_md_dir_page(path, nuggets, collected_md_refs, status_order, explainer_terms, link_errors), encoding="utf-8")
                 print(f"  Built {href}")
 
         for _label, list_href, list_path in get_list_menu_items(index_copy):
             if list_path and list_path not in nav_built_paths:
                 (SITE_DIR / list_href).write_text(
-                    build_md_file_page(list_path, nuggets, collected_md_refs, status_order, index_copy, explainer_terms),
+                    build_md_file_page(list_path, nuggets, collected_md_refs, status_order, index_copy, explainer_terms, link_errors),
                     encoding="utf-8",
                 )
                 print(f"  Built {list_href}")
 
-        (SITE_DIR / "internal.html").write_text(build_internal_page(nuggets, collected_md_refs), encoding="utf-8")
+        (SITE_DIR / "internal.html").write_text(build_internal_page(nuggets, collected_md_refs, link_errors), encoding="utf-8")
         print("  Built internal.html")
 
         built_md_refs = set()
@@ -1264,7 +1429,7 @@ def main():
             if md_path in built_md_refs:
                 continue
             built_md_refs.add(md_path)
-            body_html = process_md_to_html(md_path, _md_context_with_special(nuggets, status_order, explainer_terms), collected_md_refs)
+            body_html = process_md_to_html(md_path, _md_context_with_special(nuggets, status_order, explainer_terms, link_errors=link_errors), collected_md_refs)
             title = md_path.stem.replace("-", " ").title()
             out_name = content_path_to_output_name(md_path, CONTENT_DIR)
             if out_name:
@@ -1278,7 +1443,7 @@ def main():
             p = _ROOT / stale
             if p.exists():
                 p.unlink()
-        index_html = build_index(nuggets, index_copy, status_order, collected_md_refs)
+        index_html = build_index(nuggets, index_copy, status_order, collected_md_refs, link_errors)
         (SITE_DIR / "index.html").write_text(index_html, encoding="utf-8")
         if (CONFIG_DIR / "logo.svg").exists():
             shutil.copy(CONFIG_DIR / "logo.svg", SITE_DIR / "favicon.svg")
@@ -1288,7 +1453,7 @@ def main():
         (SITE_DIR / "map.svg").write_text(build_graph_svg(nuggets, show_title=False, link_nuggets=True, node_radius=40), encoding="utf-8")
         print("  Built map.svg")
 
-        build_4u_ai_txt()
+        build_4u_ai_txt(internal_str, nuggets, nugget_raw_by_slug)
         print("  Built 4u-ai.txt")
 
         BUILD_STATE_FILE.write_text(
@@ -1299,6 +1464,10 @@ def main():
     print(f"\nDone. Site written to {SITE_DIR.relative_to(_ROOT)}/ (web root)")
     if nothing_changed:
         print("Nothing changed; timestamp unchanged.")
+    if link_errors:
+        for msg in link_errors:
+            print(msg, file=sys.stderr)
+        sys.exit(1)
     if _warn_count:
         sys.exit(1)
 

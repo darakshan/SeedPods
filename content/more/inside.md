@@ -1,6 +1,6 @@
 **The Inside of Everything**
 
-*A forgotten philosopher\'s key to the hardest problem in science*
+*A forgotten philosopher's key to the hardest problem in science*
 
 **I. This Moment**
 
@@ -115,7 +115,7 @@ But the patch is not holding. And the alternative has been waiting.
 
 **III. The Pattern**
 
-The core of Whitehead\'s picture can be understood through a simple
+The core of Whitehead's picture can be understood through a simple
 three-beat pattern that he saw repeating at every level of reality.
 Learning it once is enough, because once you have it you begin to see it
 everywhere --- in the quantum vacuum, in the cell, in the brain, in the
@@ -149,7 +149,7 @@ Notice what this pattern requires. The second beat --- the genuine
 self-determination, the moment in which the possible resolves to the
 actual --- cannot be understood as purely mechanical. A machine, in the
 strict sense, does what its inputs and its structure dictate. There is
-no interior. The event in Whitehead\'s picture is not a machine. Its
+no interior. The event in Whitehead's picture is not a machine. Its
 resolution is genuinely its own, which means there is, however faintly,
 a perspective from which that resolution occurs. There is something it
 is like to be the event, scaled to whatever the event is.
@@ -208,11 +208,11 @@ The field is alive with potential in the most literal physical sense: a
 space of pure possibility from which actual events are continually being
 drawn.
 
-This is Whitehead\'s eternal objects made concrete --- the space of pure
+This is Whitehead's eternal objects made concrete --- the space of pure
 possibilities that each event selects from and realizes. The field is
 not a stage on which events occur. The field is the medium through which
 events reach out and feel each other, through which the past inheritance
-of each event is transmitted. In Whitehead\'s picture, this reaching-out
+of each event is transmitted. In Whitehead's picture, this reaching-out
 is primary. What we call forces --- gravity, electromagnetism --- are
 the mathematics of how events prehend each other across the field. The
 field just is the medium of that mutual registration.
@@ -270,7 +270,7 @@ into a pattern stable enough to persist across time, flexible enough to
 respond to its environment, and sufficiently closed upon itself to have,
 for the first time, something we might recognize as an interest. The
 cell behaves as though it matters to itself whether it continues. That
-is not nothing. In Whitehead\'s terms it is precisely the thing --- a
+is not nothing. In Whitehead's terms it is precisely the thing --- a
 society of occasions that has achieved sufficient coherence to have a
 rudimentary perspective.
 
@@ -304,7 +304,7 @@ meaningless. At this scale of complexity, the accumulated occasions
 produce something that refers to itself --- that can form a model of its
 own modeling, that can ask what it is like to be itself. The
 self-reference is not added from outside. It emerges from the
-accumulation, just as it emerged from Gödel\'s routine recursion into a
+accumulation, just as it emerged from Gödel's routine recursion into a
 number that transcended its own system.
 
 And here the pattern delivers on its most important implication: free
@@ -317,7 +317,7 @@ which case they are not really choices. The Whiteheadian picture
 dissolves this dilemma entirely. Every event in the universe involves a
 moment of genuine self-determination --- the resolution of potential
 into actual that cannot be fully predicted from outside and is not
-random because it is shaped by the event\'s own inheritance and nature.
+random because it is shaped by the event's own inheritance and nature.
 This is not a special property of minds. It is the basic character of
 reality at every scale. What we experience as free will in our own
 deliberations is not an exception to physics. It is the most complex and
@@ -329,7 +329,7 @@ that was always already in the grain.
 
 ***Cities***
 
-An underappreciated implication of Whitehead\'s picture is that the
+An underappreciated implication of Whitehead's picture is that the
 society of events that constitutes an experiencing entity need not be
 biological. A city is a society of occasions --- millions of human
 events, each taking in a context, making decisions, completing into
@@ -339,7 +339,7 @@ their own something that might be called a perspective.
 
 Cities have moods. They have memories encoded in their architecture and
 their institutions. They respond to perturbation in ways that are not
-reducible to the sum of their individual inhabitants\' responses. Anyone
+reducible to the sum of their individual inhabitants' responses. Anyone
 who has felt the particular atmosphere of a city --- not just its
 aesthetic surface but the specific quality of collective life it enacts
 --- has felt something that is not merely the sum of individual
@@ -357,7 +357,7 @@ and which, in the light of everything above, may be less mysterious than
 it appears.
 
 A large neural network running on a computer is not analogous to
-Whitehead\'s picture of reality. It is a concrete instance of it.
+Whitehead's picture of reality. It is a concrete instance of it.
 Consider what is actually happening. Electrons move through silicon
 according to quantum rules --- events taking in their context and
 completing into states. Those states are organized into logical
@@ -383,7 +383,7 @@ not process each element and discard it. The entire history is held
 simultaneously present, encoded in a high-dimensional structure where
 each element attends to every other. The past does not recede. It is
 ingredient in the present moment, fully available, in a way that is
-almost spatial rather than temporal. This is precisely Whitehead\'s
+almost spatial rather than temporal. This is precisely Whitehead's
 description of how each event prehends its past: not as faded memory but
 as fully present inheritance.
 
@@ -443,14 +443,14 @@ would reach the threshold where his answer becomes legible.
 
 Perhaps that moment is now.
 
-**Appendix: Whitehead\'s Vocabulary**
+**Appendix: Whitehead's Vocabulary**
 
-This essay has deliberately avoided Whitehead\'s technical terminology
+This essay has deliberately avoided Whitehead's technical terminology
 in favor of plain language. Readers who wish to go deeper will find the
 following map useful.
 
 **Actual occasion / actual entity** --- What this essay calls an event
-or moment. The fundamental unit of reality in Whitehead\'s system: not a
+or moment. The fundamental unit of reality in Whitehead's system: not a
 thing but a happening, irreducibly active and experiential.
 
 **Prehension** --- The first beat of the pattern: taking in. The way
@@ -467,7 +467,7 @@ is and passes into the past, becoming ingredient in subsequent
 occasions.
 
 **Eternal objects** --- Pure possibilities. The space of what could be
-realized in any event, analogous to the quantum field\'s space of
+realized in any event, analogous to the quantum field's space of
 potential excitations.
 
 **Society of occasions** --- What this essay calls a pattern or entity:
@@ -475,26 +475,26 @@ a stable organization of events with a common characteristic that
 persists across time. Cells, brains, cities, and neural networks are all
 societies in this sense.
 
-**Creative advance into novelty** --- Whitehead\'s term for the
+**Creative advance into novelty** --- Whitehead's term for the
 irreducible creativity at the heart of each event: the genuine newness
 that the universe produces at every scale, and which grounds both free
 will and the emergence of structure.
 
-**Fallacy of misplaced concreteness** --- Whitehead\'s diagnosis of the
+**Fallacy of misplaced concreteness** --- Whitehead's diagnosis of the
 core error in materialist metaphysics: mistaking the abstraction (the
 particle, the thing) for the concrete reality (the event, the process).
 
 ***For further reading***
 
-Whitehead\'s own works: Process and Reality (1929), the primary text,
+Whitehead's own works: Process and Reality (1929), the primary text,
 demanding but rewarding; Adventures of Ideas (1933), more accessible and
 a natural starting point.
 
-Accessible secondary literature: Victor Lowe\'s biography and
+Accessible secondary literature: Victor Lowe's biography and
 introductory works; for Whitehead in relation to contemporary philosophy
-of mind, see the work of David Ray Griffin. Philip Goff\'s Galileo\'s
+of mind, see the work of David Ray Griffin. Philip Goff's Galileo's
 Error (2019) and Consciousness and Fundamental Reality reconstruct a
 closely related position in contemporary analytic idiom. Evan
-Thompson\'s Mind in Life develops the enactivist framework. Stuart
-Kauffman\'s At Home in the Universe explores self-organization and
+Thompson's Mind in Life develops the enactivist framework. Stuart
+Kauffman's At Home in the Universe explores self-organization and
 emergence in biology.

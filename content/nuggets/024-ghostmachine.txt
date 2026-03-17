@@ -1,6 +1,6 @@
 #title Ghost in the Machine
 #subtitle TBD
-#status prelim
+#status proto
 #date 2026-03-14
 #tags consciousness, ryle, koestler, whitehead, materialism, mind-body
 #related 003, 006, 011, 021
@@ -8,7 +8,7 @@
 #surface
 TBD
 
-#depth
+#brief
 NOTE: This depth sketch was developed in session 2026-03-14. The nugget needs a full Surface, Script, and Images before it can advance beyond prelim.
 
 Three thinkers triangulate the same territory from different directions:

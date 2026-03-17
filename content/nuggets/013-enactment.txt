@@ -1,6 +1,6 @@
 #title The Organism Enacts Its World
 #subtitle Cognition is not passive reception. The organism and its environment co-arise.
-#status prelim
+#status proto
 #date 2026-03-11
 #tags enactivism, cognition, thompson, biology, perception
 #related 012, 003, 002, 004
@@ -8,7 +8,7 @@
 #surface
 TBD
 
-#depth
+#brief
 Evan Thompson's enactivism, building on Maturana and Varela: cognition is not the processing of representations of an external world inside a passive receiver. It is the enactment of a world — the organism and its environment co-arising through active engagement. A bacterium swimming toward a chemical gradient is not merely following a rule. It is enacting a world in which that gradient is meaningful. This is prehension at the scale of the organism — the Whiteheadian pattern in biological language.
 
 #provenance

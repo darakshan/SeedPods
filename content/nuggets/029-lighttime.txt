@@ -1,6 +1,6 @@
 #title From Light's Point of View, There Is No Journey
 #subtitle A photon leaves a star and arrives at your eye. From the photon's perspective, these are the same moment.
-#status prelim
+#status proto
 #date 2026-03-12
 #tags physics, time, relativity, consciousness, fields
 #related 008, 002, 017
@@ -8,7 +8,7 @@
 #surface
 TBD
 
-#depth
+#brief
 In special relativity, time dilation reaches its limit at the speed of light: a photon has no proper time. From the photon's reference frame — to the extent that frame is meaningful — emission and absorption are the same event. No duration elapses. The mirror a light-year away reflects the beam back; two years pass for the observer; zero time passes for the light. The journey, from light's perspective, does not exist. And yet the circuit completes.
 
 This is not a paradox to be dissolved but a genuine feature of how time and connection work at the boundary of the physical. It wants integration with Whitehead's view that the past is fully present in each new occasion — and with the question of what "connection" means when the connecting medium experiences no interval.
