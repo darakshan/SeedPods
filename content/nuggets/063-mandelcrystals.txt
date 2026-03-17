@@ -2,7 +2,7 @@
 #status proto
 #date 2026-03-15
 #tags physics, fractals, quasicrystals, mandelbrot
-#related 055, 038, 039, 033
+#related 038, 033
 
 Mandelbrot-like fractal structure has been found in physical systems — not as visual coincidence but as a consequence of the same iterative mathematics running in physical substrates.
 

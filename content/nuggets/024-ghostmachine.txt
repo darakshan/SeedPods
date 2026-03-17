@@ -5,10 +5,6 @@
 #tags consciousness, ryle, koestler, whitehead, materialism, mind-body
 #related 003, 006, 011, 021
 
-#surface
-TBD
-
-#brief
 NOTE: This depth sketch was developed in session 2026-03-14. The nugget needs a full Surface, Script, and Images before it can advance beyond prelim.
 
 Three thinkers triangulate the same territory from different directions:
@@ -24,15 +20,8 @@ Ryle diagnoses the error. Koestler names what was lost. Whitehead removes the as
 See also @link(003) for the inside going all the way down, and @link(011) for Koestler's holon concept developed more fully.
 
 #provenance
-TBD
 #term Category mistake: Ryle's term for treating a process or capacity as if it were a thing (e.g. the mind as a ghost in the machine).
 #term Holon: Koestler's term for a whole that is also a part of a larger whole; each level has genuine interiority.
 #ref ryle Ryle, G. The Concept of Mind (1949). The ghost-in-the-machine diagnosis and category mistakes.
 #ref koestler Koestler, A. The Ghost in the Machine (1967). What was lost when the ghost was expelled; holons and hierarchy.
 #ref whitehead Whitehead, A.N. Process and Reality (1929). Experience as the interior dimension of process, not a separate substance.
-
-#script
-TBD
-
-#images
-TBD

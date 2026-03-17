@@ -2,9 +2,9 @@
 
 Every seed nugget has the same five layers. This consistency makes the archive navigable and the template maintainable. A reader who knows the structure can find what they need at whatever depth they want.
 
-### Proto body (no layer header)
+### Proto body (no primary sections)
 
-Nuggets with status **proto** have a single body: the content that follows the metadata block. There is no `#brief` directive; `#status proto` is sufficient. These are created by the import command from prototype .md files (e.g. in `content/more/`). Each protonugget in the source must include a `#shortname` line; import skips any that lack it. Proto nuggets may later be promoted to full nuggets by adding the other layers and changing status.
+Nuggets with status **proto** have an unheaded body (the proto text) and no primary section headers. Do **not** use `#brief`, `#surface`, `#depth`, `#script`, or `#images` in proto nuggets; the build derives the “brief” content from the first block of text after the metadata. Proto nuggets may optionally include **#provenance** (with prose, `#term`, and `#ref`). These are created by the import command from prototype .md files (e.g. in `content/more/`). Each protonugget in the **import source** (.md) must include a `#shortname` line so the importer can assign the output filename; import skips any block that lacks it. The resulting nugget .txt file does not contain `#number` or `#shortname` — those are derived from the filename only. Proto nuggets may later be promoted to full nuggets by adding the five layers and changing status.
 
 ### Layer 1: Surface
 
@@ -30,7 +30,7 @@ The visual language. Describes (and eventually will contain) illustrations, anim
 
 Each seed also carries:
 
-- number and short name (from filename: NNN-shortname.txt)
+- number and short name (from filename: NNN-shortname.txt; do not put `#number` or `#shortname` in the nugget file)
 - title, subtitle (one sentence)
 - status (see below)
 - date added
@@ -52,8 +52,8 @@ Status reflects how many of the four main layers (Surface, Depth, Script, Images
 | **partial** | Two or three layers done | 2 or 3 |
 | **rough** | All four layers present but need a lot of work | 4 |
 | **draft1** or **final** | Complete; all four layers have content | 4 |
-| **proto** | Imported from a prototype file; has only the **brief** layer | 1 (brief only) |
+| **proto** | Imported or drafted as a single unheaded body; no primary sections | 1 (unheaded body only) |
 
 Use **rough** when the nugget has all sections but they need substantial revision. Use **draft1** when the nugget is complete but still open to revision, **final** when it is locked. The check tool reports a mismatch if status does not match the section count.
 
-Nuggets with status **proto** have a single layer, **brief**, and do not use the standard five layers. The site does not show the layer-tabs nav for proto nuggets.
+Nuggets with status **proto** have an unheaded body (rendered as “Brief”) and optionally **#provenance**; they do not use the standard five primary layers. The site does not show the full layer-tabs nav for proto nuggets.

@@ -5,10 +5,6 @@
 #tags physics, time, relativity, consciousness, fields
 #related 008, 002, 017
 
-#surface
-TBD
-
-#brief
 In special relativity, time dilation reaches its limit at the speed of light: a photon has no proper time. From the photon's reference frame — to the extent that frame is meaningful — emission and absorption are the same event. No duration elapses. The mirror a light-year away reflects the beam back; two years pass for the observer; zero time passes for the light. The journey, from light's perspective, does not exist. And yet the circuit completes.
 
 This is not a paradox to be dissolved but a genuine feature of how time and connection work at the boundary of the physical. It wants integration with Whitehead's view that the past is fully present in each new occasion — and with the question of what "connection" means when the connecting medium experiences no interval.
@@ -16,14 +12,7 @@ This is not a paradox to be dissolved but a genuine feature of how time and conn
 The image of a mirror flags something further: the circuit implies a return. The light goes out, meets a surface, comes back. Something completes. What is the relationship between a circuit, a mirror, and the kind of connection that requires a response? That question is left open here as a seed for further thinking.
 
 #provenance
-TBD
 #term Proper time: In relativity, the time measured by a clock following a worldline; a photon has zero proper time between emission and absorption.
 #term Objective immortality: Whitehead's term for the past as fully present in later occasions; light's "no journey" is a limiting case.
 #ref einstein Einstein, A. On the Electrodynamics of Moving Bodies (1905). The founding paper of special relativity; time dilation and the light cone.
 #ref whitehead Whitehead, A.N. Process and Reality (1929). The past as ingredient in the present; connection without a persisting substrate.
-
-#script
-TBD
-
-#images
-TBD

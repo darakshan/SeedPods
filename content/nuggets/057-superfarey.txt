@@ -2,7 +2,7 @@
 #status proto
 #date 2026-03-15
 #tags neural-networks, superposition, farey, interpretability
-#related 053, 056, 039, 016, 038
+#related 053, 056, 016, 038
 
 A neural network with d dimensions in its residual stream can represent far more than d independent concepts. This is called superposition and it has been studied carefully in the mechanistic interpretability literature.
 

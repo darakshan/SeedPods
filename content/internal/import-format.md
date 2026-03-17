@@ -11,7 +11,7 @@ Use this when creating or editing **import source files** — Markdown files tha
 3. **Apply**: `just import --apply content/more/yourfile.md` — writes `NNN-shortname.txt` into `content/nuggets/`.
 4. **Build**: `just build` — regenerates the site from the new nuggets.
 
-Imported nuggets get `#status proto`, today’s date, and a single body (no layer headers). Number and shortname are assigned at import time.
+Imported nuggets get `#status proto`, today’s date, and a single body (no layer headers). Number and shortname are derived from the output filename only; the written .txt files do not contain `#number` or `#shortname`.
 
 ---
 
@@ -62,13 +62,13 @@ All other lines (including normal `##`/`###` in the middle of prose) go into the
 
 For each block that has a `#shortname`:
 
-- **Filename**: `NNN-shortname.txt` in `content/nuggets/`, where `NNN` is the next free 3-digit number and `shortname` is the slug (uniquified if needed).
+- **Filename**: `NNN-shortname.txt` in `content/nuggets/`, where `NNN` is the next free 3-digit number and `shortname` is the slug (uniquified if needed). The nugget’s number and shortname are taken from this filename only; the .txt file does not contain `#number` or `#shortname` lines.
 - **Content**: A single nugget .txt with:
   - `#title` — from the block’s first line (after `## N. ` or `### `).
   - `#status proto`
   - `#date` — import date (e.g. 2026-03-16).
   - Optional `#subtitle`, `#tags`, `#related` — **not** parsed from the import file today; you can add them by editing the .txt after import.
-  - One blank line, then the **body** (all non-special lines from the block, joined).
+  - One blank line, then the **body** (all non-special lines from the block, joined). Proto nuggets have no primary section headers (`#brief`, `#surface`, `#depth`, `#script`, `#images`); the body is unheaded. You may add `#provenance` and `#term` / `#ref` by editing the .txt after import.
   - Then all **file-level** `#term` lines (from any block in the file).
   - Then all **file-level** `#ref` lines.
 

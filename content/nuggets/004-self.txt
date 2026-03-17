@@ -5,21 +5,10 @@
 #tags whitehead, buddhism, mysticism, identity, self
 #related 003, 005, 002, 006
 
-#surface
-TBD
-
-#brief
 Whitehead does not require a unified "I" as fundamental. The self is a society — a relatively stable pattern of occasions with a common characteristic, persisting through time. It is derived and emergent, not a metaphysical primitive. Buddhist anatta (no fixed self) combined with moment-to-moment arising of experience maps almost exactly onto Whitehead's actual occasions. Mystics and process philosophers arrived at the same place by different routes.
 
 #provenance
-TBD
 #term Actual occasion: Whitehead's fundamental unit of reality — an event that prehends its past, integrates, and perishes into the next.
 #term Society: In process philosophy, a persistent pattern of occasions with a common character; the self is a society, not a substance.
 #term Anatta: The Buddhist doctrine of no fixed self; experience arises moment to moment with no underlying owner.
 #ref whitehead Whitehead, A.N. Process and Reality (1929). The definitive statement of process metaphysics and the society-of-occasions view of the self.
-
-#script
-TBD
-
-#images
-TBD
