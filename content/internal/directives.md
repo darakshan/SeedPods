@@ -1,24 +1,25 @@
-# @ directives (Markdown pages)
+# &#64; directives (Markdown pages)
 
-In `.md` files under `content/` (home, nav file/dir pages, internal, and any referenced docs), the pipeline is: **&#64;include**, then **&#64;samples** / **&#64;nuggets** / **&#64;timestamp**, then **&#64;link**, then Markdown → HTML. The order is fixed: &#64;include runs first so included content is processed; then other directives; then Markdown runs on the result.
+In `.md` files under `content/` (home, nav file/dir pages, internal, and any referenced docs), the pipeline is: **&#64;include**, then **&#64;samples** / **&#64;nuggets** / **&#64;timestamp** / **&#64;link** / **&#64;image**, then Markdown → HTML. The order is fixed: &#64;include runs first so included content is processed; then other directives; then Markdown runs on the result.
 
-The @ directives are:
+The &#64; directives are:
 
-1. **&#64;include(path)**  
-2. **&#64;samples** or **&#64;samples(n)**  
-3. **&#64;nuggets**  
-4. **&#64;glossary**  
-5. **&#64;bibliography**  
-6. **&#64;index**  
+1. **&#64;bibliography**  
+2. **&#64;glossary**  
+3. **&#64;image(file, caption, credit)**  
+4. **&#64;include(path)**  
+5. **&#64;index**  
+6. **&#64;link(locator, text)**  
 7. **&#64;map**  
-8. **&#64;timestamp**  
-9. **&#64;link(locator, text)**
+8. **&#64;nuggets**  
+9. **&#64;samples** or **&#64;samples(n)**  
+10. **&#64;timestamp**
 
 ## &#64;include(path)
 
-- **Syntax**: `&#64;include(filename)` — path relative to the current file's directory. Parentheses required.
+- **Syntax**: `@include(filename)` — path relative to the current file's directory. Parentheses required.
 - **Effect**: The directive is replaced by the full contents of that file. If the resolved path leaves that directory or the file is missing, a warning is emitted and the directive is left unchanged.
-- **Example**: From `content/internal/page.md`, `&#64;include(structure.md)` pulls in `content/internal/structure.md`.
+- **Example**: From `content/internal/page.md`, `@include(structure.md)` pulls in `content/internal/structure.md`.
 
 ## &#64;samples and &#64;samples(n)
 
@@ -65,13 +66,22 @@ The @ directives are:
   - Anything else (e.g. `about.html`): used as the href as-is; no automatic output path.
 - If `text` is empty, the locator is used as the link text. Referenced `.md` paths are collected and built so that &#64;link targets exist.
 
+## &#64;image(file, caption, credit)
+
+- **Syntax**: `@image(file, caption, credit)` — arguments are comma-separated. Only the first (file) is required; caption and credit are optional.
+- **Effect**: The directive is replaced by a figure: the image is copied from `content/images/` to the site output (e.g. `docs/images/`). The image is shown at 50% column width, floated left, with text wrapping. If caption or credit are given, a `<figcaption>` is added (credit in `<cite>`).
+- **File**: Basename only (no path). The build looks for `content/images/file` with extension `.jpg`, `.jpeg`, `.png`, `.webp`, or `.gif` and copies it to the site’s `images/` directory. If no file is found, a warning is emitted and the directive is left unchanged.
+- **Example**: `@image(harmonic-clock)` or `@image(mandelbrot-boundary, Mandelbrot Set, Wikipedia)`.
+- **Where**: Available in both `.md` pages and nugget layer text (Surface, Depth, Brief, etc.).
+
 ---
 
-# @ directive in nugget .txt files
+# &#64; directive in nugget .txt files
 
 Inside nugget source files (`content/nuggets/*.txt`), these directives are used (they are expanded when building nugget HTML, not in the Markdown pipeline):
 
-- **@nugget(NNN)** — In layer text (e.g. Surface, Depth, Provenance), replaced by an italicized link to that nugget: `<em><a href="NNN-name.html">Title</a></em>`. If no nugget matches the number, the directive is left as-is.
-- **@exercise(Try this: ...)** — In any prose layer (surface, depth, provenance, images), the text inside the parentheses is rendered as a call-to-action block (`<div class="cta">...</div>`) at that position. Parentheses must balance if the text contains `)`. The inner text may contain @nugget(NNN).
+- **&#64;nugget(NNN)** — In layer text (e.g. Surface, Depth, Provenance), replaced by an italicized link to that nugget: `<em><a href="NNN-name.html">Title</a></em>`. If no nugget matches the number, the directive is left as-is.
+- **&#64;image(file, caption, credit)** — In any prose layer, replaced by a figure (image from `content/images/` copied to the site, 50% width, left-aligned, optional figcaption). Only the file argument is required; see the &#64;image section above.
+- **&#64;exercise(Try this: ...)** — In any prose layer (surface, depth, provenance, images), the text inside the parentheses is rendered as a call-to-action block (`<div class="cta">...</div>`) at that position. Parentheses must balance if the text contains `)`. The inner text may contain &#64;nugget(NNN).
 
 (This is an inconsistency that might be rectified.)

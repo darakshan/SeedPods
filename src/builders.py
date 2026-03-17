@@ -25,7 +25,8 @@ from nugget_parser import (
     section_is_tbd,
 )
 from reporter import error as reporter_error, note as reporter_note
-from site_chrome import build_time, close, foot, get_list_menu_items, get_nav_items, head, nav, nav_seed_script_content, set_build_context, _first_h1, _warn
+import site_chrome
+from site_chrome import close, foot, get_list_menu_items, get_nav_items, head, nav, nav_seed_script_content, set_build_context, _first_h1, _warn
 
 INTERNAL_DIR = CONTENT_DIR / "internal"
 
@@ -275,7 +276,7 @@ def _md_context(**overrides):
     copy = overrides.get("copy", load_index_copy())
     def _note(msg, filepath=None):
         reporter_note(msg, path=filepath)
-    return {"warn": _warn, "build_time": build_time, "content_dir": CONTENT_DIR, "site_dir": (copy.get("site_dir") or "").strip(), "note": _note, **overrides}
+    return {"warn": _warn, "build_time": site_chrome.build_time, "content_dir": CONTENT_DIR, "site_dir": (copy.get("site_dir") or "").strip(), "note": _note, **overrides}
 
 
 def _md_context_with_special(nuggets, status_order, explainer_terms=None, **overrides):

@@ -26,10 +26,10 @@ became easy enough to draw — score every ratio by how simple it is,
 arrange the results around a circle representing one octave — this is
 what appeared. @image(harmonic-clock)
 
-That's a Mandelbrot set. @image(mandelbrot-boundary, Mandelbrot Set, Wikipedia)
-
-Not a visual resemblance. The same object, seen from two different
+That's a Mandelbrot set. Not a visual resemblance. The same object, seen from two different
 angles.
+
+@image(mandelbrot-boundary, Mandelbrot Set, Wikipedia)
 
 To understand why, you need one idea: the attractor. Some mathematical
 processes, when you repeat them, converge — they settle toward a

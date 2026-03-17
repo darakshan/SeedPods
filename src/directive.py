@@ -73,6 +73,29 @@ def image_directive_handler(verb, content, context):
     return '<figure class="directive-image directive-image--left"><img src="{}" alt="">{}</figure>'.format(href, figcaption)
 
 
+_IMAGE_FIRST_ARG = re.compile(r"@image\s*\(\s*([^),]+)")
+
+
+def first_image_href_from_nugget(nugget, content_dir):
+    """Return href for first @image in any layer (e.g. 'images/foo.jpg'), or None."""
+    content_dir = Path(content_dir).resolve()
+    images_src = content_dir / "images"
+    layers = nugget.get("layers") or {}
+    for key in ("surface", "depth", "provenance", "script", "images", "brief"):
+        text = layers.get(key) or ""
+        m = _IMAGE_FIRST_ARG.search(text)
+        if not m:
+            continue
+        name = m.group(1).strip()
+        if not name or ".." in name or "/" in name or "\\" in name:
+            continue
+        for ext in _IMAGE_EXTS:
+            candidate = images_src / (name + ext)
+            if candidate.is_file():
+                return "images/" + name + ext
+    return None
+
+
 def _parse_directive(text, start, filepath, warn):
     """Find @ at or after start; return (verb, content, end_pos). On bad parens warn and return (None, None, end)."""
     at = text.find("@", start)
@@ -123,6 +146,10 @@ def process_directives(text, filepath, context):
         if next_at < 0:
             out.append(text[pos:])
             break
+        if next_at > 0 and text[next_at - 1] == "`":
+            out.append(text[pos : next_at + 1])
+            pos = next_at + 1
+            continue
         verb, content, end = _parse_directive(text, next_at, filepath, warn)
         if verb is None:
             out.append(text[pos:next_at + 1])

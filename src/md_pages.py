@@ -9,7 +9,7 @@ import re
 import sys
 from pathlib import Path
 
-from directive import image_directive_handler, process_directives
+from directive import first_image_href_from_nugget, image_directive_handler, process_directives
 
 from nugget_parser import display_number, nugget_tag
 from site_paths import content_path_to_output_name
@@ -200,7 +200,7 @@ CATEGORY_ORDER = (
 )
 
 
-def _seed_row_html(n, base_href, status_order, stub_only=False):
+def _seed_row_html(n, base_href, status_order, stub_only=False, first_image_href=None):
     """One seed-row div for a nugget. stub_only=True omits data attrs for sortable lists."""
     fname = nugget_tag(n) + ".html"
     num = n.get("number", "")
@@ -219,28 +219,35 @@ def _seed_row_html(n, base_href, status_order, stub_only=False):
         date_val = (n.get("date") or "").strip() or "0000-00-00"
         rank = status_rank.get(status, len(status_rank))
         data_attrs = f' data-num="{num_val}" data-date="{_html.escape(date_val)}" data-status-rank="{rank}" data-title="{_html.escape(title)}"'
+    thumb = ""
+    if first_image_href:
+        thumb = f'<div class="seed-row-thumb"><img src="{_html.escape(first_image_href)}" alt="" class="seed-thumb"></div>'
     return f"""
     <div class="seed-row{stub}"{data_attrs}>
-      <div>
+      {thumb}<div class="seed-row-body">
         <div class="seed-title"><a href="{base_href}{fname}">{_html.escape(title_line)}</a></div>
         <div class="seed-sub">{byline}</div>
       </div>
     </div>"""
 
 
-def _index_entry_html(n, base_href):
-    """One index-entry div for a nugget (same format as tags.html)."""
+def _index_entry_html(n, base_href, first_image_href=None):
+    """One index-entry div for a nugget (same format as tags.html). Optionally show thumb to the left."""
     fname = nugget_tag(n) + ".html"
     num = n.get("number", "")
     title = n.get("title", "")
     subtitle = n.get("subtitle", "")
     num_display = display_number(num)
     title_display = f"{num_display}. {title}" if num_display else title
-    return f'<div class="index-entry"><a href="{base_href}{fname}">{_html.escape(title_display)}</a><br><span class="repo-subtitle">{_html.escape(subtitle)}</span></div>'
+    thumb = ""
+    if first_image_href:
+        thumb = f'<div class="seed-row-thumb"><img src="{_html.escape(first_image_href)}" alt="" class="seed-thumb"></div>'
+    body = f'<a href="{base_href}{fname}">{_html.escape(title_display)}</a><br><span class="repo-subtitle">{_html.escape(subtitle)}</span>'
+    return f'<div class="index-entry">{thumb}<div class="index-entry-body">{body}</div></div>'
 
 
-def _render_categories_html(nuggets, status_order, copy, base_href="d/"):
-    """Render categories as a two-level tree: category name (open/close) and nuggets per category. Same style as tags.html (index-by-tag, index-tag-name, index-entry)."""
+def _render_categories_html(nuggets, status_order, copy, base_href="d/", content_dir=None):
+    """Render categories as a two-level tree: category name (open/close) and nuggets per category. Same style as tags.html. If content_dir is set, each entry shows its first @image thumb to the left."""
     status_rank = {s: i for i, s in enumerate(status_order)}
     key_status = lambda n: status_rank.get(n.get("status", "empty"), len(status_order))
     key_num = lambda n: int(n.get("number", "0")) if (n.get("number") or "").isdigit() else 0
@@ -254,23 +261,20 @@ def _render_categories_html(nuggets, status_order, copy, base_href="d/"):
     for cat in by_category:
         by_category[cat] = sorted(by_category[cat], key=lambda n: (key_status(n), key_num(n)))
 
-    def details_block(cat, label):
-        entries = by_category[cat]
-        inner = "\n    ".join(_index_entry_html(n, base_href) for n in entries)
+    def details_block(entries, label):
+        inner = "\n    ".join(
+            _index_entry_html(n, base_href, first_image_href=first_image_href_from_nugget(n, content_dir) if content_dir else None)
+            for n in entries
+        )
         return f"""  <details class="category-group">
     <summary class="index-tag-name">{_html.escape(label)}</summary>
     {inner}
   </details>"""
 
     parts = []
-    for cat in CATEGORY_ORDER:
-        if cat not in by_category:
-            continue
-        parts.append(details_block(cat, cat.replace("-", " ")))
     for cat in sorted(by_category):
-        if cat in CATEGORY_ORDER:
-            continue
-        parts.append(details_block(cat, cat))
+        label = cat.replace("-", " ")
+        parts.append(details_block(by_category[cat], label))
     total = len(nuggets)
     view_all_text = (copy.get("view_all") or "View all {n} seeds →").replace("{n}", str(total))
     more_wrap = f"""
@@ -292,6 +296,7 @@ def _render_samples_html(
     include_view_all=True,
     include_repo_link=True,
     base_href="d/",
+    content_dir=None,
 ):
     """Render sample seed rows (or full seed-list-section when full_section=True). copy = settings.txt dict.
     count=None means all nuggets. base_href is prefix for links (e.g. '' for list page, 'd/' for index)."""
@@ -302,7 +307,13 @@ def _render_samples_html(
     recent = by_ready if count is None else by_ready[:count]
     sortable = full_section and count is None
     rows_html = "".join(
-        _seed_row_html(n, base_href, status_order if sortable else None, stub_only=not sortable)
+        _seed_row_html(
+            n,
+            base_href,
+            status_order if sortable else None,
+            stub_only=not sortable,
+            first_image_href=first_image_href_from_nugget(n, content_dir) if content_dir else None,
+        )
         for n in recent
     )
     if not full_section:
@@ -375,6 +386,7 @@ def _md_samples_handler(_verb, content, context):
     block = _render_samples_html(
         nuggets, status_order, copy,
         count=count, full_section=full, include_view_all=full, include_repo_link=False, base_href=base_href,
+        content_dir=context.get("content_dir"),
     )
     placeholder = "{{SAMPLES}}"
     context.setdefault("replacements", {})[placeholder] = block
@@ -389,7 +401,7 @@ def _md_categories_handler(_verb, content, context):
     copy = context.get("copy") or {}
     page = context.get("page")
     base_href = "" if page == "list" or context.get("site_dir") else (context["site_dir"].rstrip("/") + "/")
-    block = _render_categories_html(nuggets, status_order, copy, base_href=base_href)
+    block = _render_categories_html(nuggets, status_order, copy, base_href=base_href, content_dir=context.get("content_dir"))
     placeholder = "{{CATEGORIES}}"
     context.setdefault("replacements", {})[placeholder] = block
     return placeholder
@@ -406,6 +418,7 @@ def _md_nuggets_handler(_verb, content, context):
     block = _render_samples_html(
         nuggets, status_order, copy,
         count=None, full_section=True, include_view_all=False, include_repo_link=False, base_href=base_href,
+        content_dir=context.get("content_dir"),
     )
     placeholder = "{{NUGGETS}}"
     context.setdefault("replacements", {})[placeholder] = block

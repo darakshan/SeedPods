@@ -90,6 +90,8 @@ h2{font-size:1.6rem;font-weight:300;margin-bottom:1rem}
 .prose hr,.page-body hr{border:none;border-top:1px solid var(--line);margin:1.25rem 0 .25rem 0;padding:1rem 0 .25rem 0;display:block;overflow:hidden}
 .prose hr+*,.page-body hr+*{margin-top:0!important}
 .prose em{font-style:italic}
+.page-body code,.prose code{font-family:'DM Mono',monospace;font-size:.88em}
+.page-body pre,.prose pre{font-family:'DM Mono',monospace;font-size:.85rem;line-height:1.5}
 .directive-image{width:50%;margin:0 1.25rem 1rem 0}
 .directive-image--left{float:left;clear:left}
 .directive-image img{width:100%;height:auto;display:block;vertical-align:top}
@@ -216,8 +218,11 @@ td a:hover{color:var(--accent)}
 /* Group page */
 .group-block{margin-bottom:3rem}
 .group-label{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--warm);padding:2rem 0 .8rem;border-top:1px solid var(--line)}
-.seed-row{display:block;padding:1.2rem 0;border-bottom:1px solid var(--line);color:inherit}
+.seed-row{display:flex;gap:1rem;align-items:flex-start;padding:1.2rem 0;border-bottom:1px solid var(--line);color:inherit}
 .seed-row.stub{opacity:.4}
+.seed-row-thumb{flex-shrink:0}
+.seed-thumb{width:4rem;height:4rem;object-fit:cover;display:block;border-radius:2px}
+.seed-row-body{min-width:0}
 .seed-title{font-size:1.2rem;font-weight:300;margin-bottom:.2rem}
 .seed-title a{color:inherit;text-decoration:none}
 .seed-title a:hover{color:var(--link)}
@@ -274,7 +279,8 @@ td a:hover{color:var(--accent)}
 .index-tag-rule{border:none;border-top:1px solid var(--dim);margin:0;padding:0}
 .index-entry-rule{border:none;border-top:1px solid var(--line);margin:0;padding:0}
 .index-tag-name{font-weight:700;font-size:1rem;font-family:'DM Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--warm);scroll-margin-top:5rem;padding:.5rem 0}
-.index-entry{padding:.5rem 0}
+.index-entry{display:flex;gap:1rem;align-items:flex-start;padding:.5rem 0}
+.index-entry-body{min-width:0}
 .index-entry a:hover{color:var(--accent)}
 .seed-categories{padding-top:.5rem;margin-top:0}
 details.category-group{margin-top:1.25rem}
