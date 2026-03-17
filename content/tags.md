@@ -1,4 +1,4 @@
-# Index
+# Categories
 
 Nuggets by category and status.
 

@@ -277,15 +277,18 @@ td a:hover{color:var(--accent)}
 .index-section-head{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--warm);padding:2rem 0 .8rem;border-top:1px solid var(--line);margin-top:2rem}
 .index-by-tag{margin-top:1rem}
 .index-tag-rule{border:none;border-top:1px solid var(--dim);margin:0;padding:0}
-.index-entry-rule{border:none;border-top:1px solid var(--line);margin:0;padding:0}
+.index-entry-rule{display:none}
 .index-tag-name{font-weight:700;font-size:1rem;font-family:'DM Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--warm);scroll-margin-top:5rem;padding:.5rem 0}
-.index-entry{display:flex;gap:1rem;align-items:flex-start;padding:.5rem 0}
-.index-entry-body{min-width:0}
+.index-entry{padding:.15rem 0;padding-left:1.25rem}
+.index-entry:has(.index-entry-body){display:flex;gap:1rem;align-items:flex-start}
+.index-entry-body{min-width:0;line-height:1.35}
+.index-entry-body .repo-subtitle{display:block;margin-top:0}
 .index-entry a:hover{color:var(--accent)}
+.seed-categories .index-entry{padding-left:1.25rem}
 .seed-categories{padding-top:.5rem;margin-top:0}
-details.category-group{margin-top:1.25rem}
+details.category-group{margin-top:1rem}
 details.category-group:first-of-type{margin-top:0}
-details.category-group summary.index-tag-name{cursor:pointer;list-style:none;margin-bottom:.35rem}
+details.category-group summary.index-tag-name{cursor:pointer;list-style:none;margin-bottom:.2rem}
 details.category-group summary.index-tag-name::-webkit-details-marker{display:none}
 /* Page end logo */
 .page-end{margin-top:4rem;margin-bottom:2rem;text-align:center}

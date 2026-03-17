@@ -485,8 +485,6 @@ def process_md_to_html(md_path, context=None, collected_md_refs=None):
     note_cb = context.get("note") or (lambda msg, filepath=None: warn("@note " + msg, filepath=filepath))
     for note in note_list:
         note_cb(note, filepath=md_path)
-    for placeholder, block in ctx["replacements"].items():
-        expanded = expanded.replace(placeholder, block)
     if not expanded.strip():
         return ""
     extensions = ["fenced_code", "tables"]
@@ -498,6 +496,10 @@ def process_md_to_html(md_path, context=None, collected_md_refs=None):
         extensions=extensions,
         extension_configs=extension_configs,
     )
+    for placeholder, block in ctx["replacements"].items():
+        escaped = re.escape(placeholder)
+        html = re.sub(r"<p>\s*" + escaped + r"\s*</p>", block, html)
+        html = html.replace(placeholder, block)
     html = re.sub(
         r'<p>(TBD|No reviews completed yet\.)</p>',
         r'<p class="dim placeholder">\1</p>',

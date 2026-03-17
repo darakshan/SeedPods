@@ -232,14 +232,12 @@ def build_tags_body(nuggets, status_order):
 
     def block_for_tag(label, slug, matching):
         parts = [f'<hr class="index-tag-rule"><div id="{slug}" class="index-tag-name">{_html.escape(label)}</div>']
-        for i, n in enumerate(matching):
+        for n in matching:
             num = n.get("number", "")
             title = n.get("title", "")
             subtitle = n.get("subtitle", "")
             fname = nugget_tag(n) + ".html"
             title_display = f"{display_number(num)}. {title}" if num else title
-            if i > 0:
-                parts.append('<hr class="index-entry-rule">')
             parts.append(
                 f'<div class="index-entry"><a href="{fname}">{_html.escape(title_display)}</a>'
                 f'<br><span class="repo-subtitle">{_html.escape(subtitle)}</span></div>'
