@@ -11,3 +11,5 @@ The structure is inspired by the modular organization of Christopher Alexander's
 Nuggets are presented in different layers: surface, depth, scripts, and images. 
 
 Nugget sources are plain-text files in `nuggets/`; the site is generated into `docs/` by a Python build script. 
+
+To build the html files, use "just build".

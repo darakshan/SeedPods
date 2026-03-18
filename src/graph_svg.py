@@ -169,8 +169,8 @@ def build_graph_svg(
         label_text = label if show_title else (slug or nid)
         label_esc = _html.escape(str(label_text))
         node_content = (
-            '    <rect x="{}" y="{}" width="{}" height="{}" class="map-graph-node"/>'.format(
-                -box_w / 2, -box_h / 2, box_w, box_h
+            '    <rect x="{}" y="{}" width="{}" height="{}" rx="{}" ry="{}" class="map-graph-node"/>'.format(
+                -box_w / 2, -box_h / 2, box_w, box_h, box_h / 2, box_h / 2
             )
             + '\n    <text class="map-graph-label" text-anchor="middle" dominant-baseline="central">{}</text>'.format(
                 label_esc
@@ -245,6 +245,9 @@ MAP_FILTER_SCRIPT = """
   if (svgEl && typeof svgEl.createSVGPoint === 'function') {
     var pt = svgEl.createSVGPoint();
     var dragState = { active: false, wrap: null, g: null, startX: 0, startY: 0, startDx: 0, startDy: 0, didMove: false };
+    var nodeHw = 0, nodeHh = 0;
+    var _firstRect = document.querySelector('.map-graph-node');
+    if (_firstRect) { nodeHw = parseFloat(_firstRect.getAttribute('width')) / 2; nodeHh = parseFloat(_firstRect.getAttribute('height')) / 2; }
     function clientToSvg(clientX, clientY) {
       pt.x = clientX;
       pt.y = clientY;
@@ -337,9 +340,12 @@ MAP_FILTER_SCRIPT = """
       var p = clientToSvg(clientX, clientY);
       var dx = dragState.startDx + (p.x - dragState.startX);
       var dy = dragState.startDy + (p.y - dragState.startY);
-      dragState.g.setAttribute('transform', 'translate(' + (dragState.origX + dx) + ',' + (dragState.origY + dy) + ')');
-      dragState.g.setAttribute('data-dx', dx);
-      dragState.g.setAttribute('data-dy', dy);
+      var vb = svgEl.viewBox.baseVal;
+      var newX = Math.max(vb.x + nodeHw, Math.min(vb.x + vb.width - nodeHw, dragState.origX + dx));
+      var newY = Math.max(vb.y + nodeHh, Math.min(vb.y + vb.height - nodeHh, dragState.origY + dy));
+      dragState.g.setAttribute('transform', 'translate(' + newX + ',' + newY + ')');
+      dragState.g.setAttribute('data-dx', newX - dragState.origX);
+      dragState.g.setAttribute('data-dy', newY - dragState.origY);
       dragState.didMove = true;
       var nid = dragState.wrap && dragState.wrap.getAttribute('data-nugget');
       if (nid) updateEdgesForNode(nid);

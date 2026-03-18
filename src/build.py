@@ -127,7 +127,7 @@ def _referenced_md_from_md_pages():
             continue
         text = expand_includes(path.read_text(encoding="utf-8"), path.parent, filepath=path) if path.suffix == ".md" else ""
         base_dir = path.parent.resolve()
-        for m in re.finditer(r"@link\s*\(\s*([^,)]+)\s*,", text):
+        for m in re.finditer(r"@link\s*\(\s*([^,)]+)\s*[,)]", text):
             loc = m.group(1).strip()
             if not re.match(r"^\d+$", loc) and ".md" in loc:
                 p = (base_dir / loc).resolve()
@@ -222,7 +222,7 @@ def _get_inputs_for_page(page_id, nuggets, index_copy, status_order, explainer_t
         out.update(_input_files_for_page(internal_md))
         base_dir = internal_md.parent.resolve()
         text = expand_includes(internal_md.read_text(encoding="utf-8"), base_dir, filepath=internal_md)
-        for m in re.finditer(r"@link\s*\(\s*([^,)]+)\s*,", text):
+        for m in re.finditer(r"@link\s*\(\s*([^,)]+)\s*[,)]", text):
             loc = m.group(1).strip()
             if not re.match(r"^\d+$", loc) and ".md" in loc:
                 p = (base_dir / loc).resolve()
@@ -259,7 +259,7 @@ def _get_inputs_for_page(page_id, nuggets, index_copy, status_order, explainer_t
                 continue
             text = expand_includes(p.read_text(encoding="utf-8"), p.parent, filepath=p) if p.suffix == ".md" else ""
             base_dir = p.parent.resolve()
-            for m in re.finditer(r"@link\s*\(\s*([^,)]+)\s*,", text):
+            for m in re.finditer(r"@link\s*\(\s*([^,)]+)\s*[,)]", text):
                 loc = m.group(1).strip()
                 if not re.match(r"^\d+$", loc) and ".md" in loc:
                     link_path = (base_dir / loc).resolve()
@@ -288,7 +288,7 @@ def _get_inputs_for_page(page_id, nuggets, index_copy, status_order, explainer_t
                     continue
                 text = expand_includes(p.read_text(encoding="utf-8"), p.parent, filepath=p) if p.suffix == ".md" else ""
                 base_dir = p.parent.resolve()
-                for m in re.finditer(r"@link\s*\(\s*([^,)]+)\s*,", text):
+                for m in re.finditer(r"@link\s*\(\s*([^,)]+)\s*[,)]", text):
                     loc = m.group(1).strip()
                     if not re.match(r"^\d+$", loc) and ".md" in loc:
                         link_path = (base_dir / loc).resolve()
