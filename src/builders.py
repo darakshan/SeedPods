@@ -5,6 +5,7 @@ Composes site_chrome, nugget_layers, explainers_glossary, graph_svg.
 
 import html as _html
 
+from category_colors import category_css_slug, load_category_colors
 from explainers_glossary import build_explainers_page, build_glossary_body, build_glossary_page, load_explainers_csv, tag_slug
 from graph_svg import map_directive_html
 from md_pages import process_md_to_html, expand_links
@@ -29,6 +30,8 @@ import site_chrome
 from site_chrome import close, foot, get_list_menu_items, get_nav_items, head, nav, nav_seed_script_content, set_build_context, _first_h1, _warn
 
 INTERNAL_DIR = CONTENT_DIR / "internal"
+
+_category_colors = load_category_colors()
 
 LAYER_ORDER = [
     ("surface", "Surface"),
@@ -62,8 +65,7 @@ def build_nugget(n, all_nuggets, link_errors=None, site_dir=None):
         link_context["site_dir"] = site_dir
     link_base_dir = NUGGETS_DIR
 
-    tags_href = "tags.html"
-    tag_html = f'<a href="{tags_href}#{tag_slug(category)}" class="tag">{category}</a>' if category else ""
+    tag_html = f'<a href="index.html#{tag_slug(category)}" class="tag">{category}</a>' if category else ""
 
     rel_nuggets = [nugget_by_number(all_nuggets, r) for r in related_nums]
     fn = n.get("filename") or ""
@@ -199,24 +201,24 @@ def build_nugget(n, all_nuggets, link_errors=None, site_dir=None):
     </div>
   </div>"""
 
+    cat_class = f" cat-colored {category_css_slug(category)}" if category in _category_colors else ""
+    cat_meta = f'{tag_html}<span class="mono small dim"> · </span>' if tag_html else ''
     html = head(f"{display_number(num)} — {title}")
     html += nav(from_d=True, layer_tabs_html=layer_tabs_html)
     html += f"""
 <div class="wrap">
-  <div class="nugget-header fade">
-    <div class="meta-row">
-      <span class="mono small warm">Seed {display_number(num)}</span>
-      <span class="mono small dim"> · {status} · {date}</span>
-    </div>
+  <div class="meta-row">
+    {cat_meta}<span class="mono small warm">Seed {display_number(num)}</span><span class="mono small dim"> · {status}</span>
+  </div>
+  <div class="nugget-header fade{cat_class}">
     <h1>{title}</h1>
     <p class="premise">{subtitle}</p>
-    <div class="nugget-tags">{tag_html}</div>
   </div>
 
 {sections_html}
 </div>
 """
-    html += foot()
+    html += foot(page_timestamp=date)
     html += close()
     return html
 
@@ -276,7 +278,7 @@ def _md_context(**overrides):
     copy = overrides.get("copy", load_index_copy())
     def _note(msg, filepath=None):
         reporter_note(msg, path=filepath)
-    return {"warn": _warn, "build_time": site_chrome.build_time, "content_dir": CONTENT_DIR, "site_dir": (copy.get("site_dir") or "").strip(), "note": _note, "nugget_revisions": getattr(site_chrome, "nugget_revisions", {}) or {}, **overrides}
+    return {"warn": _warn, "build_time": site_chrome.build_time, "content_dir": CONTENT_DIR, "site_dir": (copy.get("site_dir") or "").strip(), "note": _note, "nugget_revisions": getattr(site_chrome, "nugget_revisions", {}) or {}, "category_colors": _category_colors, **overrides}
 
 
 def _md_context_with_special(nuggets, status_order, explainer_terms=None, **overrides):

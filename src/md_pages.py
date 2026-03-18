@@ -9,7 +9,9 @@ import re
 import sys
 from pathlib import Path
 
+from category_colors import category_css_slug
 from directive import first_image_href_from_nugget, image_directive_handler, process_directives
+from explainers_glossary import tag_slug as _cat_slug
 
 from nugget_parser import display_number, load_index_copy, nugget_tag
 from site_paths import content_path_to_output_name
@@ -209,11 +211,6 @@ def expand_includes(text, base_dir, warn=None, filepath=None):
     return process_directives(text, fp, ctx)[0]
 
 
-CATEGORY_ORDER = (
-    "consciousness", "sensation", "physics", "mathematics", "biology", "AI-minds", "knowledge",
-)
-
-
 def _seed_row_html(n, base_href, status_order, stub_only=False, first_image_href=None, rev=None):
     """One seed-row div for a nugget. stub_only=True omits data attrs for sortable lists. rev=page version for this nugget (shown after status)."""
     fname = nugget_tag(n) + ".html"
@@ -265,7 +262,7 @@ def _index_entry_html(n, base_href, first_image_href=None):
     return f'<div class="index-entry">{thumb}<div class="index-entry-body">{body}</div></div>'
 
 
-def _render_categories_html(nuggets, status_order, copy, base_href="", content_dir=None):
+def _render_categories_html(nuggets, status_order, copy, base_href="", content_dir=None, category_colors=None):
     """Render categories as a two-level tree: category name (open/close) and nuggets per category. Same style as tags.html. If content_dir is set, each entry shows its first 
 @image thumb to the left."""
     status_rank = {s: i for i, s in enumerate(status_order)}
@@ -280,20 +277,22 @@ def _render_categories_html(nuggets, status_order, copy, base_href="", content_d
     for cat in by_category:
         by_category[cat] = sorted(by_category[cat], key=lambda n: (key_status(n), key_num(n)))
 
-    def details_block(entries, label):
+    def details_block(entries, label, cat):
         inner = "\n    ".join(
             _index_entry_html(n, base_href, first_image_href=first_image_href_from_nugget(n, content_dir) if content_dir else None)
             for n in entries
         )
-        return f"""  <details class="category-group">
-    <summary class="index-tag-name">{_html.escape(label)}</summary>
+        slug = _cat_slug(cat)
+        extra_class = f" cat-colored {category_css_slug(cat)}" if category_colors and cat in category_colors else ""
+        return f"""  <details id="{slug}" class="category-group">
+    <summary class="index-tag-name{extra_class}">{_html.escape(label)}</summary>
     {inner}
   </details>"""
 
     parts = []
     for cat in sorted(by_category):
         label = cat.replace("-", " ")
-        parts.append(details_block(by_category[cat], label))
+        parts.append(details_block(by_category[cat], label, cat))
     total = len(nuggets)
     view_all_text = (copy.get("view_all") or "View all {n} seeds →").replace("{n}", str(total))
     more_wrap = f"""
@@ -424,7 +423,7 @@ def _md_categories_handler(_verb, content, context):
     copy = context.get("copy") or {}
     page = context.get("page")
     base_href = "" if page == "list" or context.get("site_dir") else (context["site_dir"].rstrip("/") + "/")
-    block = _render_categories_html(nuggets, status_order, copy, base_href=base_href, content_dir=context.get("content_dir"))
+    block = _render_categories_html(nuggets, status_order, copy, base_href=base_href, content_dir=context.get("content_dir"), category_colors=context.get("category_colors"))
     placeholder = "{{CATEGORIES}}"
     context.setdefault("replacements", {})[placeholder] = block
     return placeholder

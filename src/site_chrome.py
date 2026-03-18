@@ -244,16 +244,17 @@ SEARCH_DIALOG_HTML = """
 """
 
 
-def foot(logo_href="logo.svg"):
+def foot(logo_href="logo.svg", page_timestamp=None):
     home_href = "index.html"
-    ts = build_time.strftime("%Y-%m-%d %H:%M Pacific") if build_time else ""
-    version_attr = f' data-build-version="{build_version}" data-page-version="{page_version}" data-build-timestamp="{_html.escape(ts)}"'
+    build_ts = build_time.strftime("%Y-%m-%d %H:%M Pacific") if build_time else ""
+    display_ts = page_timestamp if page_timestamp else build_ts
+    version_attr = f' data-build-version="{build_version}" data-page-version="{page_version}" data-build-timestamp="{_html.escape(build_ts)}"'
     logo_block = f'''
 <div class="page-end" id="page-end-version"{version_attr}>
   <button class="page-end-logo" aria-label="Show build info" onmouseenter="typeof seedNavShowVersion==='function'&&seedNavShowVersion(true)" onmouseleave="typeof seedNavShowVersion==='function'&&seedNavShowVersion(false)" ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="{logo_href}" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">Build {build_version} · Rev {page_version} · {ts}</span>
+  <span class="page-end-version" aria-hidden="true">Build {build_version} · Rev {page_version} · {display_ts}</span>
 </div>
 '''
     return logo_block + "\n" + NAV_SCROLL_SCRIPT + "\n" + NAV_LISTS_DROPDOWN_SCRIPT + "\n" + SEARCH_DIALOG_HTML
@@ -300,6 +301,7 @@ window.seedNavRunSearch=function(q){
 window.seedNavShowVersion=function(show){var el=document.querySelector(".page-end-version");if(el)el.classList.toggle("page-end-version-visible",!!show);};
 window.seedNavToggleVersion=function(){var el=document.querySelector(".page-end-version");if(el)el.classList.toggle("page-end-version-visible");};
 document.addEventListener("keydown",function(e){if(e.key==="Escape"){var n=document.querySelector("nav");if(n&&n.classList.contains("nav-hamburger-open"))window.seedNavToggleMenu();else window.seedNavCloseSearch();}});
+document.addEventListener("DOMContentLoaded",function(){var h=window.location.hash;if(!h)return;var el=document.querySelector("details"+h);if(!el)return;el.open=true;setTimeout(function(){el.scrollIntoView({behavior:"auto",block:"start"});},80);});
 document.addEventListener("DOMContentLoaded",function(){var p=document.getElementById("nav-hamburger-panel");if(p){p.style.display="none";var list=p.querySelector(".nav-hamburger-list");if(list)list.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){if(document.querySelector("nav").classList.contains("nav-hamburger-open"))window.seedNavToggleMenu();});});}});
 """
 
@@ -314,6 +316,7 @@ def head(title, extra="", at_root=False, css_href=None, icon_href=None):
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<script>if(new URLSearchParams(location.search).has('mobile'))document.documentElement.classList.add('mobile-sim');</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{title} — Seed Nuggets</title>
 {links}

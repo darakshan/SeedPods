@@ -43,6 +43,7 @@ from md_pages import process_md_to_html, expand_includes, expand_links
 from site_paths import content_path_to_output_name
 
 from reporter import error as reporter_error, has_errors, note as reporter_note, print_all, reset as reporter_reset, warning as reporter_warning
+from category_colors import build_category_css, load_category_colors
 from builders import (
     build_bibliography_body,
     build_bibliography_page,
@@ -159,6 +160,9 @@ def _shared_md_inputs(index_copy, status_order, explainer_terms):
         out.add(CONFIG_DIR / "status.txt")
     if EXPLAINERS_CSV.exists():
         out.add(EXPLAINERS_CSV)
+    cats_json = CONFIG_DIR / "categories.json"
+    if cats_json.exists():
+        out.add(cats_json)
     return out
 
 
@@ -216,6 +220,9 @@ def _get_inputs_for_page(page_id, nuggets, index_copy, status_order, explainer_t
                         if p.is_file():
                             out.add(p)
                             break
+        cats_json = CONFIG_DIR / "categories.json"
+        if cats_json.exists():
+            out.add(cats_json)
         return out
     if page_id == "internal.html":
         internal_md = INTERNAL_DIR / "page.md"
@@ -605,7 +612,11 @@ def main():
     if verbose:
         print("  Built nugget-index.json, search-index.json, seed-nav.js")
 
-    shutil.copy(CONFIG_DIR / "site.css", SITE_DIR / "site.css")
+    css_text = (CONFIG_DIR / "site.css").read_text(encoding="utf-8")
+    extra_css = build_category_css(load_category_colors())
+    if extra_css:
+        css_text += "\n" + extra_css
+    (SITE_DIR / "site.css").write_text(css_text, encoding="utf-8")
     built_count += 1
     if verbose:
         print("  Built site.css")

@@ -18,6 +18,7 @@ Usage:
 
 import sys
 
+from category_colors import load_category_colors
 from reporter import error as reporter_error, has_errors, note as reporter_note, print_all, reset as reporter_reset, warning as reporter_warning
 from nugget_parser import (
     load_all_nuggets,
@@ -26,9 +27,7 @@ from nugget_parser import (
     section_is_tbd,
 )
 
-PRIMARY_CATEGORIES = frozenset({
-    "consciousness", "sensation", "physics", "mathematics", "biology", "AI-minds", "knowledge",
-})
+PRIMARY_CATEGORIES = frozenset(load_category_colors().keys())
 
 REQUIRED_STATUS_NAMES = frozenset({"empty", "prelim", "proto", "partial", "draft1", "rough"})
 COMPLETE_STATUS_NAMES = frozenset({"draft1", "rough"})
