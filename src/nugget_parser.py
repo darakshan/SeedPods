@@ -12,7 +12,7 @@ from directive import process_directives
 _ROOT = Path(__file__).resolve().parent.parent
 CONTENT_DIR = _ROOT / "content"
 CONFIG_DIR = _ROOT / "config"
-NUGGETS_DIR = CONTENT_DIR / "nuggets"
+NUGGETS_DIR = CONTENT_DIR / "pods"
 
 
 def section_is_tbd(text):
@@ -243,4 +243,4 @@ def expand_nugget_directives(text, all_nuggets):
         title = n.get("title", "Untitled")
         filename = n.get("filename", "")
         return f'<em><a href="{filename}.html">{_html.escape(title)}</a></em>'
-    return re.sub(r"@(?:nugget|pod)\((\d+)\)", repl, text)
+    return re.sub(r"@(?:nugget|pod|link)\((\d+)\)", repl, text)

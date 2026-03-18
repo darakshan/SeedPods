@@ -37,6 +37,6 @@ find-explainers:
 check *ARGS:
     {{python}} {{root}}/src/check.py {{ARGS}}
 
-# Import prototype .md files into content/nuggets. Prints table (shortname-number, #words, #related, title). Preview only; use --apply to write.
+# Import prototype .md files into content/pods. Prints table (shortname-number, #words, #related, title). Preview only; use --apply to write.
 import *ARGS:
     {{python}} {{root}}/src/import_proto.py {{ARGS}}

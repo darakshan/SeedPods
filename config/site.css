@@ -205,6 +205,7 @@ td a:hover{color:var(--accent)}
 .related-label{margin-bottom:.5rem}
 .related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:1rem;margin-top:1rem}
 .related-card{border:1px solid var(--line);padding:.6rem .75rem;color:inherit;transition:border-color .2s}
+.related-card.cat-colored{background:var(--cat-bg);border-color:transparent}
 .related-card:hover{border-color:var(--accent)}
 .related-card-prelim{border-color:var(--line)}
 .related-card-prelim:hover{border-color:var(--warm)}
@@ -224,6 +225,7 @@ td a:hover{color:var(--accent)}
 .seed-row{display:flex;gap:1rem;align-items:flex-start;padding:1.2rem 0;border-bottom:1px solid var(--line);color:inherit}
 .seed-row.stub{opacity:.4}
 .seed-row-thumb{flex-shrink:0}
+.seed-row-thumb--empty{width:4rem;height:4rem}
 .seed-thumb{width:4rem;height:4rem;object-fit:cover;display:block;border-radius:2px}
 .seed-row-body{min-width:0}
 .seed-title{font-size:1.2rem;font-weight:300;margin-bottom:.2rem}

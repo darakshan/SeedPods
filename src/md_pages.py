@@ -255,9 +255,10 @@ def _index_entry_html(n, base_href, first_image_href=None):
     subtitle = n.get("subtitle", "")
     num_display = display_number(num)
     title_display = f"{num_display}. {title}" if num_display else title
-    thumb = ""
     if first_image_href:
         thumb = f'<div class="seed-row-thumb"><img src="{_html.escape(first_image_href)}" alt="" class="seed-thumb"></div>'
+    else:
+        thumb = '<div class="seed-row-thumb seed-row-thumb--empty"></div>'
     body = f'<a href="{base_href}{fname}">{_html.escape(title_display)}</a><br><span class="repo-subtitle">{_html.escape(subtitle)}</span>'
     return f'<div class="index-entry">{thumb}<div class="index-entry-body">{body}</div></div>'
 

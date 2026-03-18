@@ -82,7 +82,10 @@ def build_nugget(n, all_nuggets, link_errors=None, site_dir=None):
             rnum = r.get("number", "")
             rtitle = r.get("title", "")
             rstatus = r.get("status", "empty")
+            rcat = r.get("category", "")
             card_class = "related-card related-card-prelim" if rstatus in ("empty", "prelim", "proto", "rough") else "related-card"
+            if rcat and rcat in _category_colors:
+                card_class += f" cat-colored {category_css_slug(rcat)}"
             cards += f"""
       <a href="{rfile}" class="{card_class}">
         <div class="related-title">{display_number(rnum)}. {rtitle}</div>

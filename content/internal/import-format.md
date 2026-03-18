@@ -1,6 +1,6 @@
 # Format of Importable SeedPod Files
 
-Use this when creating or editing **import source files** — Markdown files that become multiple proto pods via `just import`. Examples: `content/more/primordia.md`, `content/more/seed-speculations.md`. The build does not read these files; the import script does. The output is `.txt` pods in `content/nuggets/`, which then follow the grammar in @link(grammar.md, grammar).
+Use this when creating or editing **import source files** — Markdown files that become multiple proto pods via `just import`. Examples: `content/more/primordia.md`, `content/more/seed-speculations.md`. The build does not read these files; the import script does. The output is `.txt` pods in `content/pods/`, which then follow the grammar in @link(grammar.md, grammar).
 
 ---
 
@@ -8,7 +8,7 @@ Use this when creating or editing **import source files** — Markdown files tha
 
 1. **Write** a single `.md` file with multiple “protopods” (blocks separated by `---`).
 2. **Preview**: `just import content/more/yourfile.md` — lists what would be created; does not write.
-3. **Apply**: `just import --apply content/more/yourfile.md` — writes `NNN-shortname.txt` into `content/nuggets/`.
+3. **Apply**: `just import --apply content/more/yourfile.md` — writes `NNN-shortname.txt` into `content/pods/`.
 4. **Build**: `just build` — regenerates the site from the new pods.
 
 Imported pods get `#status proto`, today’s date, and a single body (no layer headers). Number and shortname are derived from the output filename only; the written .txt files do not contain `#number` or `#shortname`.
@@ -62,7 +62,7 @@ All other lines (including normal `##`/`###` in the middle of prose) go into the
 
 For each block that has a `#shortname`:
 
-- **Filename**: `NNN-shortname.txt` in `content/nuggets/`, where `NNN` is the next free 3-digit number and `shortname` is the slug (uniquified if needed). The pod’s number and shortname are taken from this filename only; the .txt file does not contain `#number` or `#shortname` lines.
+- **Filename**: `NNN-shortname.txt` in `content/pods/`, where `NNN` is the next free 3-digit number and `shortname` is the slug (uniquified if needed). The pod’s number and shortname are taken from this filename only; the .txt file does not contain `#number` or `#shortname` lines.
 - **Content**: A single pod .txt with:
   - `#title` — from the block’s first line (after `## N. ` or `### `).
   - `#status proto`

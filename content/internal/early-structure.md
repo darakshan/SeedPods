@@ -24,9 +24,9 @@ Inspirations for format and tone: Jason Silva, Michael Garfield, Jacob Collier. 
 
 ```
 SeedPods (project root)/
-  nuggets/          ← source files, one per seed pod (.txt format)
+  pods/             ← source files, one per seed pod (.txt format)
   site/             ← generated HTML (do not edit directly)
-  build.py          ← generator script: reads nuggets/, writes site/
+  build.py          ← generator script: reads pods/, writes site/
   CONTEXT.md        ← this file
 ```
 
@@ -45,7 +45,7 @@ python build.py --pod 001
 
 ### The source file format
 
-Each pod is a plain text file in `nuggets/`. Example: `001-caloric.txt`
+Each pod is a plain text file in `pods/`. Example: `001-caloric.txt`
 
 The filename gives the pod identity: `001-caloric.txt` means number 001, shortname caloric. Do not put #number or #shortname in the file.
 
@@ -189,7 +189,7 @@ Hosted at: https://darakshan.github.io/SeedPods/
 
 The `site/` directory maps directly to the GitHub Pages root. To deploy: copy contents of `site/` to the repository root and push.
 
-Do not edit HTML in `site/` directly — it is generated. Edit source `.txt` files in `nuggets/` and run `build.py`.
+Do not edit HTML in `site/` directly — it is generated. Edit source `.txt` files in `pods/` and run `build.py`.
 
 ---
 

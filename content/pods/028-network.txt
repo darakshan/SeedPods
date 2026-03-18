@@ -43,7 +43,7 @@ The implication: the universe is not a collection of isolated objects separated 
 
 The second idea is more speculative but has serious philosophical pedigree: the Wheeler one-electron hypothesis. John Wheeler proposed to Richard Feynman that there may be only one electron in the universe, tracing a single worldline that zigzags forward and backward through time. Every electron we observe is the same particle at a different point on that worldline; every positron is the electron moving backward. What appears as multiplicity from inside time is unity from outside it. Wheeler never pursued it as a serious theory — it has known problems — but the underlying intuition points at something the physics keeps gesturing toward: that what looks like many things from inside time may be, from a perspective outside time, one thing.
 
-The third is Whitehead's argument that experience is constitutive of reality at every scale — that every event has an inside, that prehension (the taking-in of what came before) is not a biological specialty but a feature of actuality as such. Pod #3 develops this. Pod #8 traces the convergence between Whitehead's field ontology and quantum field theory. Pod #16 shows that a neural network instantiates rather than merely resembles this picture.
+The third is Whitehead's argument that experience is constitutive of reality at every scale — that every event has an inside, that prehension (the taking-in of what came before) is not a biological specialty but a feature of actuality as such. @link(003) develops this. @link(008) traces the convergence between Whitehead's field ontology and quantum field theory. @link(016) shows that a neural network instantiates rather than merely resembles this picture.
 
 Place these three together: a universe whose parts are connected without distance by light that experiences no time; a possible underlying unity that appears as multiplicity only from inside the temporal flow; and a metaphysics in which experience goes all the way down. The picture that emerges is of a cosmos that is not a collection of mostly-dead matter with occasional conscious specks, but a single ancient network that has been experiencing itself — in modes unimaginably different from our own — since the first event.
 
@@ -60,9 +60,9 @@ Reference frame — the perspective from which measurements are made. Different 
 
 Wheeler one-electron universe — John Wheeler's 1940s proposal, conveyed to Richard Feynman, that a single electron tracing a worldline through spacetime, zigzagging forward and backward in time, could account for all electrons and positrons in the universe. Not a mainstream theory; notable as a pointer toward the possibility that apparent multiplicity may be underlying unity.
 
-Prehension — Whitehead's term for the way each event takes in and responds to prior events. The basic relational act of reality. See pod #3.
+Prehension — Whitehead's term for the way each event takes in and responds to prior events. The basic relational act of reality. See @link(003).
 
-Panpsychism — the philosophical position that experience or something like it is a fundamental and ubiquitous feature of reality, not a late biological emergence. Distinguished from animism by its philosophical rigor; from mysticism by its grounding in physics and mathematics. See pod #3.
+Panpsychism — the philosophical position that experience or something like it is a fundamental and ubiquitous feature of reality, not a late biological emergence. Distinguished from animism by its philosophical rigor; from mysticism by its grounding in physics and mathematics. See @link(003).
 
 #ref whitehead Whitehead, A.N. Process and Reality. Macmillan, 1929.
 #ref einstein Einstein, A. On the Electrodynamics of Moving Bodies. Annalen der Physik, 1905. The special relativity paper whose implications include the photon's reference frame.

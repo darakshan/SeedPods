@@ -4,7 +4,7 @@ The build script parses pod files strictly. Follow this grammar so new or revise
 
 ###File
 
-- Location: `nuggets/` directory.
+- Location: `pods/` directory.
 - Name: `NNN-shortname.txt` where NNN is the 3-digit zero-padded number (e.g. 001, 020) and shortname is a one-word or hyphenated slug. Lowercase, no spaces. Number and shortname are derived from the filename only. Do not use `#number` or `#shortname` in the file.
 - Encoding: UTF-8.
 
@@ -71,7 +71,7 @@ script: TBD
 images: TBD
 ```
 
-Save as `nuggets/999-example.txt`. The number (999) and shortname (example) come from the filename only.
+Save as `pods/999-example.txt`. The number (999) and shortname (example) come from the filename only.
 
 ### Primary categories (#category)
 

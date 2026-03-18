@@ -17,7 +17,7 @@ Do not run `python3 src/build.py` directly; use the justfile so the venv (with t
 ## Build order and outputs
 
 1. **Config**: `config/settings.txt` is read; `site_dir` and `site_base` are used (e.g. output path and base URL). MD pages can inject any setting with `@setting(key)` (see @link(directives.md, directives)).
-2. **Pods**: All `content/nuggets/*.txt` are parsed; pod pages are written to `site_dir/<tag>.html`.
+2. **Pods**: All `content/pods/*.txt` are parsed; pod pages are written to `site_dir/<tag>.html`.
 3. **Assets**: `config/site.css` and `config/logo.svg` are copied into `site_dir`.
 4. **Nav-derived pages**: For each nav item, either `content/<token>.md` or `content/<token>/page.md` is built to `site_dir/<token>.html`.
 5. **Internal**: `content/internal/page.md` is always built as `site_dir/internal.html`.
@@ -39,7 +39,7 @@ Prototype .md files (e.g. in `content/more/`) can be turned into pod .txt files 
 just import content/more/primordia.md content/more/seed-speculations.md
 ```
 
-By default the command runs in **preview** mode: it parses each file, assigns the next pod number and a shortname (from the title), and prints `number-shortname  Title` for each protopod. It does not write files. Use **`--apply`** to actually write each pod to `content/nuggets/`:
+By default the command runs in **preview** mode: it parses each file, assigns the next pod number and a shortname (from the title), and prints `number-shortname  Title` for each protopod. It does not write files. Use **`--apply`** to actually write each pod to `content/pods/`:
 
 ```bash
 just import --apply content/more/primordia.md content/more/seed-speculations.md

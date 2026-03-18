@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Import prototype nugget files into content/nuggets.
+Import prototype nugget files into content/pods.
 Reads .md files (e.g. content/more/primordia.md), splits into protonuggets.
 Each protonugget must have #shortname in the source; if missing, report and skip (never write).
 Writes .txt with #status proto; no #brief (proto implies single body).
@@ -15,7 +15,7 @@ from zoneinfo import ZoneInfo
 
 _ROOT = Path(__file__).resolve().parent.parent
 CONTENT_DIR = _ROOT / "content"
-NUGGETS_DIR = CONTENT_DIR / "nuggets"
+NUGGETS_DIR = CONTENT_DIR / "pods"
 
 # Import after path is set
 from nugget_parser import load_all_nuggets
