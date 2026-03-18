@@ -1,11 +1,11 @@
 #title The Surprising Color Wheel
 #subtitle The mind closes the line into a circle.
-#status proto
+#status prelim
 #date 2026-03-16
-#tags sensation, color, perception, evolution, neuroscience, music, opponent-processing
-#related 038, 026, 012, 042
+#tags sensation, color, perception, evolution, neuroscience, opponent-processing
+#related 038, 026, 012, 042, 044
 
-@note(change from proto to partial by adding TBD sections)
+#depth
 The visible spectrum is a line segment. At one end, violet, around
 380 nanometers. At the other, red, around 700 nanometers. Physically
 these two ends have nothing to do with each other — they are simply
@@ -90,40 +90,15 @@ of that solution, felt from the inside. Why it feels like anything
 at all is a different question, and a deeper one. [042]
 
 #provenance
-#ref hering Hering, Ewald — opponent process theory of color vision,
-1892. The original proposal that color experience is organized around
-opposing pairs.
-#ref hurvich Hurvich, L. and Jameson, D. — An opponent-process theory
-of color vision. Psychological Review, 1957. The modern formulation.
-#ref mollon Mollon, J.D. — "Tho' she kneel'd in that place where they
-grew": the uses and origins of primate colour vision. Journal of
-Experimental Biology, 1989. The fruit and co-evolution hypothesis.
-#ref field Field, D.J. — Relations between the statistics of natural
-images and the response properties of cortical cells. Journal of the
-Optical Society of America, 1987. The efficient coding hypothesis.
-#ref simoncelli Simoncelli, E. and Olshausen, B. — Natural image
-statistics and neural representation. Annual Review of Neuroscience,
-2001. Neural networks and natural image statistics.
+#ref hering Hering, Ewald — opponent process theory of color vision, 1892. The original proposal that color experience is organized around opposing pairs.
+#ref hurvich Hurvich, L. and Jameson, D. — An opponent-process theory of color vision. Psychological Review, 1957. The modern formulation.
+#ref mollon Mollon, J.D. — the uses and origins of primate colour vision. Journal of Experimental Biology, 1989. The fruit and co-evolution hypothesis.
+#ref field Field, D.J. — Relations between the statistics of natural images and the response properties of cortical cells. Journal of the Optical Society of America, 1987. The efficient coding hypothesis.
+#ref simoncelli Simoncelli, E. and Olshausen, B. — Natural image statistics and neural representation. Annual Review of Neuroscience, 2001. Neural networks and natural image statistics.
 
-#term opponent processing: the transformation performed by the second
-layer of the retina, recombining the three raw cone signals into two
-opponent channels — red vs green and blue vs yellow — before any
-signal leaves the eye.
-#term color constancy: the perceptual ability to see a surface as
-having a stable color across different lighting conditions. Believed
-to be a primary function of the blue-yellow opponent channel.
-#term trichromacy: color vision based on three cone types. Most
-mammals are dichromats; primates re-evolved trichromacy, probably
-in connection with the red-green opponent axis.
-#term unique hues: the four perceptual primaries delivered by opponent
-processing — red, yellow, green, blue — which feel irreducible to
-any mixture. No color appears both reddish and greenish, or both
-bluish and yellowish.
-#term additive color mixing: mixing light of different wavelengths,
-where combining red and green produces yellow. The primary colors
-at this level are red, green, and blue.
-#term subtractive color mixing: mixing pigments, where each pigment
-absorbs certain wavelengths. The primary colors at this level are
-closer to cyan, magenta, and yellow. The painter's intuition of
-red, yellow, blue is an approximation of this layer combined with
-the opponent channel layer above it.
+#term opponent processing: the transformation performed by the second layer of the retina, recombining the three raw cone signals into two opponent channels — red vs green and blue vs yellow — before any signal leaves the eye.
+#term color constancy: the perceptual ability to see a surface as having a stable color across different lighting conditions. Believed to be a primary function of the blue-yellow opponent channel.
+#term trichromacy: color vision based on three cone types. Most mammals are dichromats; primates re-evolved trichromacy, probably in connection with the red-green opponent axis.
+#term unique hues: the four perceptual primaries delivered by opponent processing — red, yellow, green, blue — which feel irreducible to any mixture. No color appears both reddish and greenish, or both bluish and yellowish.
+#term additive color mixing: mixing light of different wavelengths, where combining red and green produces yellow. The primary colors at this level are red, green, and blue.
+#term subtractive color mixing: mixing pigments, where each pigment absorbs certain wavelengths. The primary colors at this level are closer to cyan, magenta, and yellow. The painter's intuition of red, yellow, blue is an approximation of this layer combined with the opponent channel layer above it.

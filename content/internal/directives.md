@@ -13,7 +13,8 @@ The &#64; directives are:
 7. **&#64;map**  
 8. **&#64;nuggets**  
 9. **&#64;samples** or **&#64;samples(n)**  
-10. **&#64;timestamp**
+10. **&#64;setting(key)**  
+11. **&#64;timestamp**
 
 ## &#64;include(path)
 
@@ -50,6 +51,12 @@ The &#64; directives are:
 
 - **Syntax**: `@map` (no arguments).
 - **Effect**: Replaced by the map (graph of nuggets with category/status filters). Use in any `.md` file (e.g. `content/map.md`) to build a map page.
+
+## &#64;setting(key)
+
+- **Syntax**: `@setting(key)` — key is a single word (e.g. `site_base`, `site_dir`).
+- **Effect**: Replaced by the value of that key from `config/settings.txt`. Used so the builder can insert settings into HTML. For `site_base`, the value is returned with no trailing slash so you can concatenate with `/{path}`.
+- **Example**: `@setting(site_base)` expands to the site base URL (e.g. `https://example.com/SeedNuggets`).
 
 ## &#64;timestamp
 

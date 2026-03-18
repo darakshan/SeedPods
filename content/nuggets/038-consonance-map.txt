@@ -1,10 +1,11 @@
 #title The Surprising Consonance Map
 #subtitle Draw the intervals. Recognize the shape.
-#status proto
+#status prelim
 #date 2026-03-16
-#tags sensation, mathematics, consonance, mandelbrot-set, farey-sequence, music, iteration
+#tags sensation, consonance, mandelbrot, farey, music, mathematics
 #related 033, 035, 034, 056, 030
 
+#depth
 Play a C and a G on a piano. They sound stable together — resolved,
 at rest. Now play a C and a G-flat. The interval wants to move
 somewhere else, to resolve into something more comfortable. Musicians
@@ -24,12 +25,12 @@ once?
 Darakshan had wanted to see that map for a long time. When it finally
 became easy enough to draw — score every ratio by how simple it is,
 arrange the results around a circle representing one octave — this is
-what appeared. @image(harmonic-clock)
+what appeared. @image(harmonic-clock,The Harmonic Clock,author)
 
-That's a Mandelbrot set. Not a visual resemblance. The same object, seen from two different
+That's a Mandelbrot set. @image(mandelbrot-boundary,The Mandelbrot Set,Wikipedia)
+
+Not a visual resemblance. The same object, seen from two different
 angles.
-
-@image(mandelbrot-boundary, Mandelbrot Set, Wikipedia)
 
 To understand why, you need one idea: the attractor. Some mathematical
 processes, when you repeat them, converge — they settle toward a
@@ -76,32 +77,13 @@ the weights that don't by a boundary of similar complexity — is an
 open question worth asking. [056]
 
 #provenance
-#ref pythagoras Pythagoras — consonance as simple integer ratios,
-discovered through string length experiments on the monochord.
-#ref mandelbrot Mandelbrot, Benoît — The Fractal Geometry of Nature.
-Freeman, 1982. The boundary between convergence and escape as
-infinitely complex attractor.
-#ref douady Douady & Hubbard — mathematical analysis of Mandelbrot
-bulb structure and periods; bulb positions governed by Farey
-arithmetic.
-#ref farey Farey, John (1816) — sequence of rationals ordered by
-denominator size; the Farey gap property.
-#ref stern-brocot Stern-Brocot tree — the complete ordered tree of
-rational numbers, same structure as the Farey sequence.
+#ref pythagoras Pythagoras — consonance as simple integer ratios, discovered through string length experiments on the monochord.
+#ref mandelbrot Mandelbrot, Benoît — The Fractal Geometry of Nature. Freeman, 1982. The boundary between convergence and escape as infinitely complex attractor.
+#ref douady Douady & Hubbard — mathematical analysis of Mandelbrot bulb structure and periods; bulb positions governed by Farey arithmetic.
+#ref farey Farey, John (1816) — sequence of rationals ordered by denominator size; the Farey gap property.
+#ref stern-brocot Stern-Brocot tree — the complete ordered tree of rational numbers, same structure as the Farey sequence.
 
-#term monochord: a single-stringed instrument used by Pythagoras to
-demonstrate the relationship between string length and musical pitch.
-Stopping the string at 1/2 its length gives the octave, 2/3 gives
-the fifth, 3/4 gives the fourth.
-#term attractor: a value or region toward which a repeated
-mathematical process converges. The Mandelbrot set is a map of which
-starting points are attracted to stability and which escape to
-infinity.
-#term Farey sequence: the set of all fractions between 0 and 1
-ordered by complexity — simplest denominators first. Governs both
-the positions of bulbs on the Mandelbrot cardioid and the hierarchy
-of consonant intervals in music.
-#term consonance score: a measure of how harmonious a musical
-interval sounds, based on the simplicity of its frequency ratio.
-Simpler ratios — smaller integers — score higher. The precise
-formula is to be confirmed.
+#term monochord: a single-stringed instrument used by Pythagoras to demonstrate the relationship between string length and musical pitch. Stopping the string at 1/2 its length gives the octave, 2/3 gives the fifth, 3/4 gives the fourth.
+#term attractor: a value or region toward which a repeated mathematical process converges. The Mandelbrot set is a map of which starting points are attracted to stability and which escape to infinity.
+#term Farey sequence: the set of all fractions between 0 and 1 ordered by complexity — simplest denominators first. Governs both the positions of bulbs on the Mandelbrot cardioid and the hierarchy of consonant intervals in music.
+#term consonance score: a measure of how harmonious a musical interval sounds, based on the simplicity of its frequency ratio. Simpler ratios — smaller integers — score higher. The precise formula is to be confirmed.

@@ -52,9 +52,3 @@ Orchestrated objective reduction (Orch-OR) — Penrose and Hameroff's proposal t
 Computationalism — the view that mental processes are computational processes, and that a sufficiently sophisticated computer could in principle be conscious or intelligent.
 
 For further reading: David Chalmers' response to Penrose in The Conscious Mind (1996) is careful and worth reading. For the Whiteheadian redirection, see Process and Reality (1929) and Philip Goff's Galileo's Error (2019).
-
-#script
-TBD
-
-#images
-TBD

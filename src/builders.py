@@ -42,7 +42,7 @@ LAYER_ORDER_PROTO = [
     ("references", "References"),
 ]
 
-PROTO_NOTICE_HTML = '''<div class="proto-notice"><p class="dim">This nugget is a crazy idea so far. It might be fleshed out, merged with another nugget, or even removed. Caveat lector.</p></div>'''
+PROTO_NOTICE_HTML = '''<div class="proto-notice"><p class="dim">Beware! This nugget might be a crazy idea. It will one day be fleshed out, merged with another nugget, or even removed. Caveat lector.</p></div>'''
 
 ROUGH_NOTICE_HTML = '''<div class="rough-notice"><p class="dim">This nugget is a rough draft, far from polished. Caveat lector.</p></div>'''
 

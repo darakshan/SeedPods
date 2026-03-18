@@ -16,7 +16,7 @@ Do not run `python3 src/build.py` directly; use the justfile so the venv (with t
 
 ## Build order and outputs
 
-1. **Config**: `config/settings.txt` is read; `site_dir` must be set.
+1. **Config**: `config/settings.txt` is read; `site_dir` and `site_base` are used (e.g. output path and base URL). MD pages can inject any setting with `@setting(key)` (see @link(directives.md, directives)).
 2. **Nuggets**: All `content/nuggets/*.txt` are parsed; nugget pages are written to `site_dir/<tag>.html`.
 3. **Assets**: `config/site.css` and `config/logo.svg` are copied into `site_dir`.
 4. **Nav-derived pages**: For each nav item, either `content/<token>.md` or `content/<token>/page.md` is built to `site_dir/<token>.html`.

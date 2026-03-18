@@ -30,6 +30,10 @@ PRIMARY_CATEGORIES = frozenset({
     "consciousness", "sensation", "physics", "mathematics", "biology", "mind-AI", "knowledge",
 })
 
+REQUIRED_STATUS_NAMES = frozenset({"empty", "prelim", "proto", "partial", "draft1", "rough"})
+COMPLETE_STATUS_NAMES = frozenset({"draft1", "rough"})
+ONE_SECTION_STATUS_NAMES = frozenset({"prelim", "proto"})
+
 
 def _word_count(text):
     if not text or section_is_tbd(text):
@@ -55,11 +59,23 @@ def load_index_params():
     return out
 
 
+def _validate_status_order(status_order):
+    """Ensure status_order contains required names. Returns True if valid. Errors once if not."""
+    status_set = set(status_order or [])
+    missing = REQUIRED_STATUS_NAMES - status_set
+    if missing:
+        reporter_error(
+            "config/status.txt must define these status names: {}".format(", ".join(sorted(missing)))
+        )
+        return False
+    return True
+
+
 def _complete_statuses(status_order):
-    """Statuses that mean 'has all 4 sections': first two in config."""
+    """Statuses that mean 'has all 4 sections': draft1, rough (by name)."""
     if not status_order:
         return set()
-    return set(status_order[:2])
+    return set(status_order) & COMPLETE_STATUS_NAMES
 
 
 def _run_word_count_statuses(status_order):
@@ -94,6 +110,7 @@ def main():
     params = load_index_params()
     nuggets = load_all_nuggets(warn=lambda msg, filepath=None: None)
     status_order = load_status_order()
+    status_order_valid = _validate_status_order(status_order)
     all_numbers = set(n.get("number", "") for n in nuggets if n.get("number"))
     if nugget_filter:
         for a in args:
@@ -103,6 +120,17 @@ def main():
         nuggets_to_check = [n for n in nuggets if n.get("number") in nugget_filter]
     else:
         nuggets_to_check = nuggets
+
+    if status_order_valid:
+        for n in nuggets_to_check:
+            status = n.get("status", "")
+            if status and status not in REQUIRED_STATUS_NAMES:
+                num = n.get("number", "?")
+                fn = n.get("filename", "?")
+                shortname = fn.split("-", 1)[-1] if "-" in fn else None
+                reporter_error("check does not recognize status {!r}".format(status), nugget_num=num, shortname=shortname)
+                print_all()
+                sys.exit(1)
 
     errors = []
     in_degree = {}
@@ -167,29 +195,38 @@ def main():
             errors.append(("over_related", msg))
             reporter_error(msg, nugget_num=num, shortname=shortname)
 
+        has_unheaded_text = not section_is_tbd(layers.get("brief"))
+        if has_unheaded_text and status != "proto":
+            msg = "text without a section header"
+            errors.append(("structure", msg))
+            reporter_error(msg, nugget_num=num, shortname=shortname)
+
         section_names = ("surface", "depth", "script", "images")
         n_sections = sum(1 for name in section_names if not section_is_tbd(layers.get(name)))
-        if status == "proto":
-            expected_status = "proto"
-        elif not status_order:
-            expected_status = "empty"
-        elif n_sections == 0:
-            expected_status = status_order[-1]
-        elif n_sections >= 1 and n_sections <= 3:
-            expected_status = status_order[-3] if len(status_order) >= 3 else status_order[-1]
-        else:
-            expected_status = "complete"
-        complete_statuses = _complete_statuses(status_order)
-        if expected_status == "complete":
-            if status not in complete_statuses:
-                expected_str = ", ".join(sorted(complete_statuses))
-                msg = "has all 4 sections but status is {!r} (expected one of: {})".format(status, expected_str)
-                errors.append(("status", msg))
-                reporter_error(msg, nugget_num=num, shortname=shortname)
-        elif status != expected_status:
-            msg = "has {} section(s) but status is {!r} (expected {})".format(n_sections, status, expected_status)
-            errors.append(("status", msg))
-            reporter_error(msg, nugget_num=num, shortname=shortname)
+        if status_order_valid:
+            complete_statuses = _complete_statuses(status_order)
+            if n_sections == 0:
+                if status not in ("empty", "proto"):
+                    msg = "has {} section(s) but status is {!r} (expected empty or proto)".format(n_sections, status)
+                    errors.append(("status", msg))
+                    reporter_error(msg, nugget_num=num, shortname=shortname)
+            elif n_sections == 1:
+                if status not in ONE_SECTION_STATUS_NAMES:
+                    msg = "has 1 section but status is {!r} (expected one of: {})".format(status, ", ".join(sorted(ONE_SECTION_STATUS_NAMES)))
+                    errors.append(("status", msg))
+                    reporter_error(msg, nugget_num=num, shortname=shortname)
+            elif n_sections >= 2 and n_sections <= 3:
+                expected_status = "partial"
+                if status != expected_status:
+                    msg = "has {} section(s) but status is {!r} (expected {})".format(n_sections, status, expected_status)
+                    errors.append(("status", msg))
+                    reporter_error(msg, nugget_num=num, shortname=shortname)
+            else:
+                if status not in complete_statuses:
+                    expected_str = ", ".join(sorted(complete_statuses))
+                    msg = "has all 4 sections but status is {!r} (expected one of: {})".format(status, expected_str)
+                    errors.append(("status", msg))
+                    reporter_error(msg, nugget_num=num, shortname=shortname)
 
         tags = n.get("tags", [])
         if not tags:

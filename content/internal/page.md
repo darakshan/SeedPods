@@ -10,6 +10,8 @@ Your conversation may lead to new, empty or preliminary nuggets.  So in the end 
 
 ### Nuggets
 
+How to find a nugget’s page URL from root, number, and shortname: @link(nugget-urls.md, finding nugget pages)
+
 Structure of a seed nugget: @link(structure.md, structure)
 
 Grammar of a seed nugget: @link(grammar.md, grammar)

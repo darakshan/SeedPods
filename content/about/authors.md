@@ -14,4 +14,4 @@ At this time, their are no other human collaborators.
 
 ## A note on AI collaboration
 
-These seeds were developed in conversation with Claude (Anthropic). The ideas, judgments, and editorial voice are human. The AI contributed research, drafting, reflection, and the occasional useful phrase. This collaboration is itself an instance of the themes explored in several seeds. @note(add links here) @link(about/Caveat Lector)
+These seeds were developed in conversations with Claude (Anthropic). The ideas, judgments, and editorial voice are human. Claude contributed research, drafting, reflection, and the occasional useful phrase. This collaboration is itself an instance of the themes explored in several seeds. @link(about/Caveat Lector)

@@ -92,10 +92,10 @@ h2{font-size:1.6rem;font-weight:300;margin-bottom:1rem}
 .prose em{font-style:italic}
 .page-body code,.prose code{font-family:'DM Mono',monospace;font-size:.88em}
 .page-body pre,.prose pre{font-family:'DM Mono',monospace;font-size:.85rem;line-height:1.5}
-.directive-image{width:50%;margin:0 1.25rem 1rem 0}
+.directive-image{width:50%;margin:1.25rem 1.25rem 1rem 0}
 .directive-image--left{float:left;clear:left}
 .directive-image img{width:100%;height:auto;display:block;vertical-align:top}
-.directive-image figcaption{font-size:.9rem;line-height:1.4;margin-top:.5rem;color:var(--dim)}
+.directive-image figcaption{font-size:.9rem;line-height:1.4;margin-top:.5rem;color:var(--dim);text-align:center}
 .directive-image figcaption cite{font-style:normal;font-family:'DM Mono',monospace;font-size:.8em}
 .tag{font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--line);padding:.18rem .45rem;border-radius:2px;display:inline-block}
 .tag:hover{color:var(--accent);border-color:var(--accent)}

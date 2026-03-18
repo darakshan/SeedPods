@@ -13,7 +13,7 @@ from pathlib import Path
 
 KNOWN_VERBS = {
     "include", "samples", "nuggets", "categories", "glossary", "bibliography", "index", "map",
-    "timestamp", "link", "note", "exercise", "nugget", "image",
+    "timestamp", "link", "note", "exercise", "nugget", "image", "setting",
 }
 
 _ROOT = Path(__file__).resolve().parent.parent
@@ -63,13 +63,8 @@ def image_directive_handler(verb, content, context):
     shutil.copy2(src_path, dest_path)
     href = "images/" + name + ext_used
     figcaption = ""
-    if caption or credit:
-        parts = []
-        if caption:
-            parts.append(_html.escape(caption))
-        if credit:
-            parts.append("<cite>{}</cite>".format(_html.escape(credit)))
-        figcaption = "<figcaption>{}</figcaption>".format(" ".join(parts))
+    if caption:
+        figcaption = "<figcaption>{}</figcaption>".format(_html.escape(caption))
     return '<figure class="directive-image directive-image--left"><img src="{}" alt="">{}</figure>'.format(href, figcaption)
 
 

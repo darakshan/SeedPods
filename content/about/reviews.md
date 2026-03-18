@@ -10,7 +10,10 @@ This page will track intended and completed reviews of the Seed Nuggets project.
 - Deva Temple
 - Wendy Tremayne
 - Ryan Lee
+- Ivan Ickovits
+- Kurt Albershardt
 - Jim Balter
+- Michael Garfield — writer, Humans on the Loop project
 
 ## Professional reviewers
 
@@ -18,7 +21,6 @@ This page will track intended and completed reviews of the Seed Nuggets project.
 - Annaka Harris — author, Conscious
 - David Chalmers — philosopher, hard problem of consciousness
 - Jason Silva — filmmaker, ideas and wonder
-- Michael Garfield — writer, Humans on the Loop project
 - Tam Hunt — UCSB, Mind World God (2017)
 - Kevin Roose & Casey Newton -- Hard Fork podcast
 

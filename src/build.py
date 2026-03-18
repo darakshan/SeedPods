@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 """
 build.py — Seed Nuggets site generator
-Reads from content/ and config/; writes to d/ (and index.html at root).
-Website root = project root: / serves index.html, /d/ has built HTML, /content/ has source.
+Reads from content/ and config/; writes to site_dir (e.g. docs/). That directory is the web root when served; URLs have no path prefix.
 Generates: nugget pages, list.html, glossary/bibliography/tags/map from content .md (via @ directives),
 index.html, about pages, resources (with map), site.css.
 
@@ -180,7 +179,7 @@ def _image_refs_in_text(text):
 
 
 def _content_files_used_in_build(nuggets, index_copy, collected_md_refs):
-    """Set of content paths that contribute to the built site (nugget .txt, main MD pages, nav/list MD, linked MD, internal .md in 4u-ai)."""
+    """Set of content paths that contribute to the built site (nugget .txt, main MD pages, nav/list MD, linked MD)."""
     used = set()
     for main in _get_md_page_paths():
         if main.exists():
@@ -198,8 +197,6 @@ def _content_files_used_in_build(nuggets, index_copy, collected_md_refs):
             used.add(list_path.resolve())
     for p in collected_md_refs:
         used.add(Path(p).resolve())
-    for p in INTERNAL_DIR.glob("*.md"):
-        used.add(p.resolve())
     image_names = set()
     for n in nuggets:
         raw = (NUGGETS_DIR / (n.get("filename", "") + ".txt")).read_text(encoding="utf-8")
@@ -272,6 +269,29 @@ def build_search_index_json(nuggets, nugget_raw_by_slug=None):
     return json.dumps(out)
 
 
+def _nugget_summary_text(n):
+    """Essential plain text for one nugget: title, subtitle, and main prose without HTML or #-directives."""
+    num = display_number(n.get("number", "?"))
+    title = n.get("title", "") or "Untitled"
+    subtitle = n.get("subtitle", "") or ""
+    layers = n.get("layers") or {}
+    prose = layers.get("surface") or layers.get("brief") or ""
+    if prose and not section_is_tbd(prose):
+        lines = []
+        for line in prose.splitlines():
+            s = line.strip()
+            if s.startswith("#"):
+                continue
+            lines.append(re.sub(r"@nugget\((\d+)\)", lambda m: "Seed " + display_number(m.group(1)), s))
+        prose = "\n".join(lines).strip()
+    else:
+        prose = ""
+    block = f"Seed {num}. {title}\n{subtitle}".strip()
+    if prose:
+        block += "\n\n" + prose
+    return block
+
+
 def _collect_4u_ai_content(nuggets):
     """Return (internal_docs_str, nugget_raw_by_slug). Internal docs in one string; nugget raw file text keyed by slug."""
     internal_parts = []
@@ -286,12 +306,11 @@ def _collect_4u_ai_content(nuggets):
 
 
 def build_4u_ai_txt(internal_str, nuggets, nugget_raw_by_slug):
-    """Write d/4u-ai.txt from shared internal string and per-nugget raw content."""
-    parts = [internal_str]
+    """Write 4u-ai.txt into site_dir from internal docs and a summary of all nuggets (essential text, no HTML)."""
+    parts = [internal_str, "=== Nugget summaries ===\n"]
     for n in sorted(nuggets, key=lambda x: (x.get("number", "").zfill(3), x.get("number", ""))):
         slug = nugget_tag(n)
-        raw = nugget_raw_by_slug.get(slug, "")
-        parts.append(f"=== content/nuggets/{n['filename']}.txt ===\n\n{raw}")
+        parts.append(f"--- {slug} ---\n\n{_nugget_summary_text(n)}")
     (SITE_DIR / "4u-ai.txt").write_text("\n\n".join(parts), encoding="utf-8")
 
 

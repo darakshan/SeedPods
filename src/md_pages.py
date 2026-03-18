@@ -11,7 +11,7 @@ from pathlib import Path
 
 from directive import first_image_href_from_nugget, image_directive_handler, process_directives
 
-from nugget_parser import display_number, nugget_tag
+from nugget_parser import display_number, load_index_copy, nugget_tag
 from site_paths import content_path_to_output_name
 
 try:
@@ -186,6 +186,20 @@ def _md_link_handler(_verb, content, context):
     return f'<a href="{_html.escape(href)}">{_html.escape(link_text)}</a>'
 
 
+def _md_setting_handler(_verb, content, context):
+    """Replace @setting(key) with the value from config/settings.txt (e.g. site_base, site_dir). site_base is returned with no trailing slash for URL concatenation."""
+    key = (content or "").strip()
+    if not key:
+        return ""
+    copy = context.get("copy")
+    if copy is None:
+        copy = load_index_copy()
+    value = (copy.get(key) or "").strip()
+    if key == "site_base" and value:
+        value = value.rstrip("/")
+    return value
+
+
 def expand_includes(text, base_dir, warn=None, filepath=None):
     """Expand @include directives in text. Paths resolved under base_dir. filepath used in warnings."""
     if warn is None:
@@ -246,7 +260,7 @@ def _index_entry_html(n, base_href, first_image_href=None):
     return f'<div class="index-entry">{thumb}<div class="index-entry-body">{body}</div></div>'
 
 
-def _render_categories_html(nuggets, status_order, copy, base_href="d/", content_dir=None):
+def _render_categories_html(nuggets, status_order, copy, base_href="", content_dir=None):
     """Render categories as a two-level tree: category name (open/close) and nuggets per category. Same style as tags.html. If content_dir is set, each entry shows its first @image thumb to the left."""
     status_rank = {s: i for i, s in enumerate(status_order)}
     key_status = lambda n: status_rank.get(n.get("status", "empty"), len(status_order))
@@ -295,11 +309,11 @@ def _render_samples_html(
     full_section=False,
     include_view_all=True,
     include_repo_link=True,
-    base_href="d/",
+    base_href="",
     content_dir=None,
 ):
     """Render sample seed rows (or full seed-list-section when full_section=True). copy = settings.txt dict.
-    count=None means all nuggets. base_href is prefix for links (e.g. '' for list page, 'd/' for index)."""
+    count=None means all nuggets. base_href is prefix for links (e.g. '' when site is served from output dir as root)."""
     status_rank = {s: i for i, s in enumerate(status_order)}
     key_status = lambda n: status_rank.get(n.get("status", "empty"), len(status_order))
     key_num = lambda n: int(n.get("number", "0")) if (n.get("number") or "").isdigit() else 0
@@ -475,6 +489,7 @@ def process_md_to_html(md_path, context=None, collected_md_refs=None):
             "index": _md_placeholder_handler("{{INDEX}}", "index_html"),
             "map": _md_placeholder_handler("{{MAP}}", "map_html"),
             "timestamp": _md_timestamp_handler,
+            "setting": _md_setting_handler,
             "image": image_directive_handler,
         },
     }

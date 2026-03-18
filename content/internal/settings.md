@@ -4,7 +4,7 @@ The build requires `config/settings.txt`. It is a **key–value config file**: o
 
 ## Required key
 
-- **site_dir** — Directory under the repo root where the site is written (e.g. `d` or `docs`). Must be set; the build exits if it is missing. This is the web root; all generated HTML and copied assets live here.
+- **site_dir** — Directory under the repo root where the site is written (e.g. `docs`). Must be set; the build exits if it is missing. The build reads this from `config/settings.txt`; that directory is the web root when served; all generated HTML and copied assets live there.
 
 ## Nav and page discovery
 
@@ -20,7 +20,7 @@ The build requires `config/settings.txt`. It is a **key–value config file**: o
 
 ## Other keys (used by the build or MD pipeline)
 
-- **site_base** — Base URL for the site (e.g. for canonical or absolute links).
+- **site_base** — Base URL for the site (e.g. for canonical or absolute links). The build and MD pipeline read `site_base` and `site_dir` from `config/settings.txt`. In .md you can inject any setting value with `@setting(key)` (e.g. `@setting(site_base)`, `@setting(site_dir)`); see @link(directives.md, directives).
 - **section_head**, **repo_link**, **view_all** — Copy for list/home sections; `view_all` can use `{n}` for the total nugget count.
 - **surface_min_words**, **surface_max_words**, **depth_min_words**, **depth_max_words** — Guidance for layer word counts.
 - **min_related_in_degree** — Used for map/graph logic.

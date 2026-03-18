@@ -18,6 +18,7 @@ Some day, inshallah, some or all of these nuggets will turned into a book, or a 
 - @link(authors.md)
 - @link(audiences.md)
 - @link(reviews.md)
+- @link(personal.md)
 
 ### Acknowledgements
 
@@ -28,6 +29,8 @@ It's also inspired by the rich and under-appreciated philosophy of Alfred North 
 The format of Seed Nuggets is inspired by Christopher Alexander's classic "A Pattern Language", which was written well before the the advent of global internet access and the appearance of hyperlinks, yet it clearly foresees that in its organization. The reader can choose their own path through the adventure.
 
 Indeed, all of the above works are relatively old and could benefit from all the advancements in technology that have been made since they were written.  Some of these nuggets try to do that.
+
+So the elevator speech for Seed Nuggets might be "A website about Process philosphy in the style of Godel, Escher, Bach and the form of A Pattern Language".
 
 -- Darakshan Farber, March 2026
 
