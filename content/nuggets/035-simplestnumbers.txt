@@ -2,7 +2,13 @@
 #subtitle Farey, Benford, and the Shape of Infinity
 #status rough
 #date 2026-03-14
-#tags sensation, farey-sequence, benfords-law, consonance, mathematics, iteration, virtual-dimension-formula
+#category sensation
+#term farey-sequence: TBD
+#term benfords-law: TBD
+#term consonance: TBD
+#term mathematics: TBD
+#term iteration: TBD
+#term virtual-dimension-formula: TBD
 #related 033, 034, 009, 030, 010
 
 #surface

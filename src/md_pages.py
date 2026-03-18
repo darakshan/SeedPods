@@ -272,8 +272,7 @@ def _render_categories_html(nuggets, status_order, copy, base_href="", content_d
     key_num = lambda n: int(n.get("number", "0")) if (n.get("number") or "").isdigit() else 0
     by_category = {}
     for n in nuggets:
-        tags = n.get("tags", [])
-        cat = tags[0] if tags else ""
+        cat = n.get("category", "")
         if cat not in by_category:
             by_category[cat] = []
         by_category[cat].append(n)

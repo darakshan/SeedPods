@@ -1,7 +1,11 @@
 #title Harmony
 #status proto
 #date 2026-03-17
-#tags sensation, music, mathematics, consonance, harmony
+#category sensation
+#term music: TBD
+#term mathematics: TBD
+#term consonance: TBD
+#term harmony: TBD
 #related 030, 038
 
 Pythagoras heard the ratios in the hammers. But the circle of fifths doesn't close — stack twelve perfect fifths and you don't return to where you started. The irrational intrudes. The curse of the irrational.

@@ -67,7 +67,7 @@ For each block that has a `#shortname`:
   - `#title` — from the block’s first line (after `## N. ` or `### `).
   - `#status proto`
   - `#date` — import date (e.g. 2026-03-16).
-  - Optional `#subtitle`, `#tags`, `#related` — **not** parsed from the import file today; you can add them by editing the .txt after import.
+  - Optional `#subtitle`, `#related` — **not** parsed from the import file today; you can add them by editing the .txt after import.
   - One blank line, then the **body** (all non-special lines from the block, joined). Proto nuggets have no primary section headers (`#brief`, `#surface`, `#depth`, `#script`, `#images`); the body is unheaded. You may add `#provenance` and `#term` / `#ref` by editing the .txt after import.
   - Then all **file-level** `#term` lines (from any block in the file).
   - Then all **file-level** `#ref` lines.

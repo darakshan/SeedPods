@@ -2,7 +2,14 @@
 #subtitle The universe didn't become meaningful when humans arrived. Meaning is older than that.
 #status empty
 #date 2026-03-12
-#tags knowledge, narrative, meaning, language, consciousness, reality, culture, cognition
+#category knowledge
+#term narrative: TBD
+#term meaning: TBD
+#term language: TBD
+#term consciousness: TBD
+#term reality: TBD
+#term culture: TBD
+#term cognition: TBD
 #related 001, 002, 003, 004
 
 #surface

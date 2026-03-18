@@ -2,7 +2,12 @@
 #subtitle Draw the intervals. Recognize the shape.
 #status prelim
 #date 2026-03-16
-#tags sensation, consonance, mandelbrot, farey, music, mathematics
+#category sensation
+#term consonance: TBD
+#term mandelbrot: TBD
+#term farey: TBD
+#term music: TBD
+#term mathematics: TBD
 #related 033, 035, 034, 056, 030
 
 #depth

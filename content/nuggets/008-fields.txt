@@ -2,7 +2,12 @@
 #subtitle Physics and Whitehead converged on the same discovery from opposite directions.
 #status draft1
 #date 2026-03-12
-#tags sensation, physics, fields, quantum-mechanics, prehension, consciousness, electromagnetism
+#category sensation
+#term physics: TBD
+#term fields: TBD
+#term quantum-mechanics: TBD
+#term consciousness: TBD
+#term electromagnetism: TBD
 #related 002, 003, 007, 017, 029
 
 #surface

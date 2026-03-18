@@ -2,7 +2,10 @@
 #subtitle Every era has a framework so obvious it's invisible — until it isn't.
 #status draft1
 #date 2026-03-11
-#tags knowledge, history-of-science, consciousness, AI, paradigm-shift
+#category knowledge
+#term history-of-science: TBD
+#term consciousness: TBD
+#term AI: TBD
 #related 002, 011, 018, 019
 
 #surface

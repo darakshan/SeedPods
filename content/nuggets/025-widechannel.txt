@@ -2,7 +2,13 @@
 #subtitle A fluent output is evidence of something — but not evidence of what.
 #status empty
 #date 2026-03-11
-#tags mind-AI, AI, consciousness, LLM, output, intelligence, cognition
+#category mind-AI
+#term AI: TBD
+#term consciousness: TBD
+#term LLM: TBD
+#term output: TBD
+#term intelligence: TBD
+#term cognition: TBD
 #related 001, 006, 016, 021, 022
 
 #surface

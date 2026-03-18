@@ -2,7 +2,11 @@
 #subtitle Fossils of Primal Evolution
 #status rough
 #date 2026-03-14
-#tags physics, cosmology, evolution, many-worlds, omega-point
+#category physics
+#term cosmology: TBD
+#term evolution: TBD
+#term many-worlds: TBD
+#term omega-point: TBD
 #related 009, 028, 029, 020, 005
 
 #surface

@@ -2,7 +2,13 @@
 #subtitle A photon leaves a star and arrives at your eye. From the photon's perspective, these are the same moment.
 #status proto
 #date 2026-03-16
-#tags physics, time, relativity, consciousness, fields, light, harmonics
+#category physics
+#term time: TBD
+#term relativity: TBD
+#term consciousness: TBD
+#term fields: TBD
+#term light: TBD
+#term harmonics: TBD
 #related 008, 002, 017, 038, 041
 
 #depth

@@ -14,5 +14,9 @@ But AIs also have an internal setting called "temperature".  The higher the temp
 
 Sunburn. Burnt out. Looking at the sun. Temperature is not just a measurement. It is a phenomenological condition.
 
-#tags sensation, temperature, physics, AI, perception
+#category sensation
+#term temperature: TBD
+#term physics: TBD
+#term AI: TBD
+#term perception: TBD
 #related 001, 008, 030

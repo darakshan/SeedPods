@@ -104,7 +104,7 @@ def parse_nugget(filepath, warn=None):
     current_layer = None
     buffer = []
 
-    SINGLE_LINE = {"title", "subtitle", "status", "date", "tags", "related"}
+    SINGLE_LINE = {"title", "subtitle", "status", "date", "tags", "category", "related"}
 
     def flush():
         if current_layer and current_layer not in SINGLE_LINE:
@@ -174,6 +174,7 @@ def parse_nugget(filepath, warn=None):
     flush()
 
     meta["tags"] = [t.strip() for t in meta.get("tags", "").split(",") if t.strip()]
+    meta["category"] = meta.get("category", "").strip() or (meta["tags"][0] if meta["tags"] else "")
     raw_related = [r.strip() for r in meta.get("related", "").split(",") if r.strip()]
     related_parsed = []
     for r in raw_related:

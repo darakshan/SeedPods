@@ -228,14 +228,14 @@ def main():
                     errors.append(("status", msg))
                     reporter_error(msg, nugget_num=num, shortname=shortname)
 
-        tags = n.get("tags", [])
-        if not tags:
-            msg = "no #tags (first tag must be a primary category)"
+        category = n.get("category", "")
+        if not category:
+            msg = "no #category (must be one of the primary categories)"
             errors.append(("primary_category", msg))
             reporter_error(msg, nugget_num=num, shortname=shortname)
-        elif tags[0] not in PRIMARY_CATEGORIES:
-            msg = "first tag {!r} is not a primary category (expected one of: {})".format(
-                tags[0], ", ".join(sorted(PRIMARY_CATEGORIES))
+        elif category not in PRIMARY_CATEGORIES:
+            msg = "#category {!r} is not a primary category (expected one of: {})".format(
+                category, ", ".join(sorted(PRIMARY_CATEGORIES))
             )
             errors.append(("primary_category", msg))
             reporter_error(msg, nugget_num=num, shortname=shortname)

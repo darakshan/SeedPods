@@ -1,7 +1,10 @@
 #title Discrete and Continuous as a False Dichotomy
 #status proto
 #date 2026-03-15
-#tags mathematics, consciousness, quantum, discrete-continuous
+#category mathematics
+#term consciousness: TBD
+#term quantum: TBD
+#term discrete-continuous: TBD
 #related 002, 008, 007, 004
 
 Physics already resolved this, and the resolution is worth stating cleanly because it keeps coming up in philosophy of mind.

@@ -1,7 +1,8 @@
 #title Consciousness as a Dimension Orthogonal to Spacetime
 #status proto
 #date 2026-03-15
-#tags consciousness, metaphysics
+#category consciousness
+#term metaphysics: TBD
 #related 003, 051, 066, 002, 008
 
 The standard picture puts consciousness at the end of a long causal chain: matter first, then complexity, then biology, then brains, then experience. Consciousness is the caboose.

@@ -1,7 +1,10 @@
 #title The Born Rule as Harmonic Measure
 #status proto
 #date 2026-03-15
-#tags physics, quantum-mechanics, born-rule, many-worlds, mandelbrot-set
+#category physics
+#term quantum-mechanics: TBD
+#term many-worlds: TBD
+#term mandelbrot-set: TBD
 #related 060, 038, 062
 
 The Born rule is quantum mechanics' most mysterious postulate. It says the probability of a measurement outcome is proportional to the square of the wavefunction's amplitude. It works perfectly. Nobody knows why it is the square and not something else.

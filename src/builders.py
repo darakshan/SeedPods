@@ -53,7 +53,7 @@ def build_nugget(n, all_nuggets, link_errors=None, site_dir=None):
     subtitle = n.get("subtitle", "")
     status = n.get("status", "empty")
     date = n.get("date", "")
-    tags = n.get("tags", [])
+    category = n.get("category", "")
     related_nums = n.get("related", [])
     layers = n.get("layers", {})
 
@@ -63,7 +63,7 @@ def build_nugget(n, all_nuggets, link_errors=None, site_dir=None):
     link_base_dir = NUGGETS_DIR
 
     tags_href = "tags.html"
-    tag_html = " ".join(f'<a href="{tags_href}#{tag_slug(t)}" class="tag">{t}</a>' for t in tags)
+    tag_html = f'<a href="{tags_href}#{tag_slug(category)}" class="tag">{category}</a>' if category else ""
 
     rel_nuggets = [nugget_by_number(all_nuggets, r) for r in related_nums]
     fn = n.get("filename") or ""
@@ -222,15 +222,17 @@ def build_nugget(n, all_nuggets, link_errors=None, site_dir=None):
 
 
 def build_tags_body(nuggets, status_order):
-    """Index-by-tag and by-status HTML. For @index directive."""
-    all_tags = set()
+    """Index-by-category and by-status HTML. For @index directive."""
+    all_categories = set()
     for n in nuggets:
-        all_tags.update(n.get("tags", []))
-    sorted_tags = sorted(all_tags)
+        cat = n.get("category", "")
+        if cat:
+            all_categories.add(cat)
+    sorted_categories = sorted(all_categories)
     all_statuses = set(n.get("status", "empty") for n in nuggets)
     sorted_statuses = [s for s in status_order if s in all_statuses]
 
-    def block_for_tag(label, slug, matching):
+    def block_for_category(label, slug, matching):
         parts = [f'<hr class="index-tag-rule"><div id="{slug}" class="index-tag-name">{_html.escape(label)}</div>']
         for n in matching:
             num = n.get("number", "")
@@ -244,14 +246,14 @@ def build_tags_body(nuggets, status_order):
             )
         return "\n    ".join(parts)
 
-    tag_blocks = ""
-    for tag in sorted_tags:
-        tag_blocks += block_for_tag(tag, tag_slug(tag), [n for n in nuggets if tag in n.get("tags", [])])
+    category_blocks = ""
+    for cat in sorted_categories:
+        category_blocks += block_for_category(cat, tag_slug(cat), [n for n in nuggets if n.get("category", "") == cat])
     status_blocks = ""
     for status in sorted_statuses:
-        status_blocks += block_for_tag(status, f"status-{status}", [n for n in nuggets if n.get("status", "empty") == status])
+        status_blocks += block_for_category(status, f"status-{status}", [n for n in nuggets if n.get("status", "empty") == status])
     return f"""<div class="index-by-tag">
-    {tag_blocks}
+    {category_blocks}
     </div>
     <h2 class="index-section-head">Statuses</h2>
     <div class="index-by-tag">

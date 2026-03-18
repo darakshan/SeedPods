@@ -22,7 +22,7 @@ The build script parses nugget files strictly. Follow this grammar so new or rev
   - `#subtitle` — one sentence; may contain spaces and punctuation.
   - `#status` — exactly one of: empty | partial | prelim | rough | draft1 | final | proto
   - `#date` — date string (e.g. 2026-03-11).
-  - `#tags` — comma-separated list. **The first tag must be a primary category** (see below). Remaining tags are free-form: lowercase, multi-word tags hyphenated (e.g. history-of-science, AI). No spaces after commas required but allowed.
+  - `#category` — exactly one value; must be one of the seven primary categories (see below).
   - `#related` — comma-separated list of other nugget numbers. The NNN from each target's filename (e.g. 002, 011, 018). Max 5. Links resolve by string equality, so "1" will not match a nugget whose filename starts with "001".
 
 ###References (#ref)
@@ -33,6 +33,7 @@ The build script parses nugget files strictly. Follow this grammar so new or rev
 ###Key terms (#term)
 
 - **Anywhere in a nugget.** Each line: `#term` followed by a space and the term, then a colon (`:`), then the definition (e.g. `#term Paradigm: Thomas Kuhn's term for the framework...`). One term per line.
+- Use `#term` for any concept or phrase the nugget introduces, references, or relies on — including what used to be additional tags. If no definition is ready yet, use `TBD` or write a specific open question (e.g. `#term autopoiesis: TBD — does this apply outside biological cells?`).
 - The build collects terms from **all** nuggets and generates the Glossary page: terms sorted alphabetically, grouped so the same term from multiple nuggets appears once with each definition indented; each entry lists which nuggets define it (In: …).
 
 ###Editorial notes (&#64;note)
@@ -48,8 +49,8 @@ The build script parses nugget files strictly. Follow this grammar so new or rev
 
 ###Parsing rules (what the build does)
 
-- Lines starting with `#`: after the `#`, the first token is the key; the rest of the line (after the first run of whitespace) is the value. Keys in the metadata set (title, subtitle, status, date, tags, related) are stored as meta; value is trimmed. Number and shortname are derived from the filename (NNN-shortname) and are not read from the file. Any other key starts a layer and subsequent non-`#` lines are appended to that layer's body.
-- Tags: meta["tags"] is split on commas, each item stripped. The **first** tag is the nugget's primary category and must be one of the seven defined below; the check tool reports an error otherwise.
+- Lines starting with `#`: after the `#`, the first token is the key; the rest of the line (after the first run of whitespace) is the value. Keys in the metadata set (title, subtitle, status, date, category, related) are stored as meta; value is trimmed. Number and shortname are derived from the filename (NNN-shortname) and are not read from the file. Any other key starts a layer and subsequent non-`#` lines are appended to that layer's body.
+- Category: meta["category"] must be one of the seven primary categories defined below; the check tool reports an error otherwise.
 - Related: meta["related"] is split on commas, each item stripped. Matching to other nuggets is by exact string equality of the nugget number (the NNN from the filename).
 
 ###Minimal valid nugget (template)
@@ -61,7 +62,7 @@ title: Example Title
 subtitle: One sentence subtitle.
 status: empty
 date: 2026-03-11
-tags: tag-one, tag-two
+category: consciousness
 related: 001, 002
 surface: TBD
 depth: TBD
@@ -72,9 +73,9 @@ images: TBD
 
 Save as `nuggets/999-example.txt`. The number (999) and shortname (example) come from the filename only.
 
-### Primary categories (#tags first tag)
+### Primary categories (#category)
 
-Every nugget must have **exactly one** primary category, given as the **first** tag in `#tags`. The seven primary categories are:
+Every nugget must have **exactly one** primary category in `#category`. The seven primary categories are:
 
 | Category   | Use when the nugget's main hook is… |
 |------------|-------------------------------------|
@@ -86,6 +87,6 @@ Every nugget must have **exactly one** primary category, given as the **first** 
 | **mind-AI**       | Neural networks, AI, thought, transformers, intelligence, artificial minds |
 | **knowledge**     | Epistemology, paradigm shift, stories, language, how we know, science |
 
-- **Rule**: The first tag in `#tags` must be one of these seven (exact spelling, including `mind-AI`). Additional tags may be anything (lowercase, hyphenated).
-- **Rule of thumb**: If the nugget's hook is sensation (e.g. color, consonance), use **sensation** as the first tag even when the explanation leans on mathematics or physics.
-- The home page and index group nuggets by this primary category. The check tool (`just check`) fails if a nugget has no `#tags` or if the first tag is not in this set.
+- **Rule**: `#category` must be exactly one of these seven (exact spelling, including `mind-AI`). All other concepts the nugget touches are represented as `#term` entries.
+- **Rule of thumb**: If the nugget's hook is sensation (e.g. color, consonance), use **sensation** even when the explanation leans on mathematics or physics.
+- The home page and categories page group nuggets by `#category`. The check tool (`just check`) fails if a nugget has no `#category` or if the value is not in this set.

@@ -2,7 +2,11 @@
 #subtitle The mind closes the line into a circle.
 #status prelim
 #date 2026-03-16
-#tags sensation, color, perception, evolution, neuroscience, opponent-processing
+#category sensation
+#term color: TBD
+#term perception: TBD
+#term evolution: TBD
+#term neuroscience: TBD
 #related 038, 026, 012, 042, 044
 
 #depth

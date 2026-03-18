@@ -96,12 +96,10 @@ def parse_proto_file(path):
     return refs, terms, nuggets
 
 
-def build_nugget_txt(number, shortname, name, body, refs, terms, date, subtitle="", tags="", related=""):
+def build_nugget_txt(number, shortname, name, body, refs, terms, date, subtitle="", related=""):
     parts = [f"#title {name}", "#status proto", f"#date {date}"]
     if subtitle:
         parts.append(f"#subtitle {subtitle}")
-    if tags:
-        parts.append(f"#tags {tags}")
     if related:
         parts.append(f"#related {related}")
     parts.extend(["", body.strip()])
@@ -142,13 +140,12 @@ def run(files, apply=False):
             num = _next_number(existing_nums, used_nums_in_run)
             used_nums_in_run.append(num)
             date = datetime.now(ZoneInfo("America/Los_Angeles")).strftime("%Y-%m-%d")
-            ntags = 0
             nrelated = 0
             nwords = len(n["body"].split()) if n["body"] else 0
             content = build_nugget_txt(num, shortname, n["name"], n["body"], refs, terms, date)
             filename = f"{num}-{shortname}.txt"
             out_path = NUGGETS_DIR / filename
-            rows.append((f"{num}-{shortname}", nwords, ntags, nrelated, n["name"]))
+            rows.append((f"{num}-{shortname}", nwords, nrelated, n["name"]))
             if apply:
                 NUGGETS_DIR.mkdir(parents=True, exist_ok=True)
                 out_path.write_text(content, encoding="utf-8")
@@ -159,16 +156,14 @@ def run(files, apply=False):
         col0 = max(len(r[0]) for r in rows)
         col1 = max(len(str(r[1])) for r in rows)
         col2 = max(len(str(r[2])) for r in rows)
-        col3 = max(len(str(r[3])) for r in rows)
         col0 = max(col0, len("shortname-number"))
         col1 = max(col1, len("#words"))
-        col2 = max(col2, len("#tags"))
-        col3 = max(col3, len("#related"))
-        fmt = f"{{:<{col0}}}  {{:>{col1}}}  {{:>{col2}}}  {{:>{col3}}}  {{}}"
-        print(fmt.format("shortname-number", "#words", "#tags", "#related", "title"))
-        print(fmt.format("-" * col0, "-" * col1, "-" * col2, "-" * col3, "-" * 40))
+        col2 = max(col2, len("#related"))
+        fmt = f"{{:<{col0}}}  {{:>{col1}}}  {{:>{col2}}}  {{}}"
+        print(fmt.format("shortname-number", "#words", "#related", "title"))
+        print(fmt.format("-" * col0, "-" * col1, "-" * col2, "-" * 40))
         for r in rows:
-            print(fmt.format(r[0], r[1], r[2], r[3], r[4]))
+            print(fmt.format(r[0], r[1], r[2], r[3]))
 
 
 def main():

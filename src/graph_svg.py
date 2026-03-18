@@ -21,9 +21,9 @@ def _node_edge_lists(nuggets):
             continue
         label = n.get("title", "Untitled") or "Untitled"
         slug = nugget_tag(n)
-        tags_list = n.get("tags", [])
+        category = n.get("category", "")
         status = n.get("status", "empty")
-        nodes.append((num, label, slug, tags_list, status))
+        nodes.append((num, label, slug, [category] if category else [], status))
     edges = []
     for n in sorted_nuggets:
         from_id = n.get("number", "")
@@ -395,11 +395,8 @@ MAP_FILTER_SCRIPT = """
 
 def map_directive_html(nuggets, status_order):
     """HTML for the @map directive: filters, key, interactive graph SVG, and filter/drag script."""
-    tag_counts = {}
-    for n in nuggets:
-        for t in n.get("tags", []):
-            tag_counts[t] = tag_counts.get(t, 0) + 1
-    tags_with_min = sorted([t for t, c in tag_counts.items() if c >= MIN_TAG_COUNT_FOR_MAP])
+    categories = sorted(set(n.get("category", "") for n in nuggets if n.get("category", "")))
+    tags_with_min = categories
     category_opts = '<option value="">All</option>' + "".join(
         '<option value="{}">{}</option>'.format(_html.escape(t), _html.escape(t)) for t in tags_with_min
     )

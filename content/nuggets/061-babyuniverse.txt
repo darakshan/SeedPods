@@ -1,7 +1,9 @@
 #title The Cosmic Microwave Background as the Universe's Baby Picture
 #status proto
 #date 2026-03-15
-#tags physics, cosmology, CMB, inflation, self-reference
+#category physics
+#term cosmology: TBD
+#term self-reference: TBD
 #related 059, 032, 007, 036
 
 The cosmic microwave background is the oldest light we can see — radiation from 380,000 years after the Big Bang, when the universe first became transparent. It is nearly uniform, nearly featureless, with tiny fluctuations of one part in 100,000.

@@ -2,7 +2,8 @@
 #subtitle Not just brains. Not just animals. Experience may go all the way down.
 #status draft1
 #date 2026-03-13
-#tags consciousness, panpsychism, experience
+#category consciousness
+#term experience: TBD
 #related 001, 002, 005, 008
 
 #surface

@@ -55,7 +55,6 @@ Single-line metadata fields start with `#fieldname value`:
 #subtitle Every era has a framework so obvious it's invisible — until it isn't.
 #status draft1
 #date 2026-03-11
-#tags history-of-science, consciousness, AI, paradigm-shift
 #related 002, 011, 018, 019
 ```
 

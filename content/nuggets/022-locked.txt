@@ -2,7 +2,13 @@
 #subtitle We mistook the difficulty of output for the absence of inner life.
 #status draft1
 #date 2026-03-11
-#tags consciousness, neurodiversity, expression, cognition, autism, language, AI, locked-in-syndrome
+#category consciousness
+#term neurodiversity: TBD
+#term expression: TBD
+#term cognition: TBD
+#term autism: TBD
+#term language: TBD
+#term AI: TBD
 #related 001, 006, 016, 021
 
 #surface

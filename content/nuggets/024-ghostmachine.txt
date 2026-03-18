@@ -2,7 +2,9 @@
 #subtitle TBD
 #status proto
 #date 2026-03-14
-#tags consciousness, materialism, mind-body
+#category consciousness
+#term materialism: TBD
+#term mind-body: TBD
 #related 003, 006, 011, 021
 
 NOTE: This depth sketch was developed in session 2026-03-14. The nugget needs a full Surface, Script, and Images before it can advance beyond prelim.

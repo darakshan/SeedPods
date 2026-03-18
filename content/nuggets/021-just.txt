@@ -2,7 +2,12 @@
 #subtitle When someone says a process is "just" doing something, they've described the output and mistaken it for an explanation.
 #status draft1
 #date 2026-03-11
-#tags knowledge, language, rhetoric, cognition, reductionism, dismissal
+#category knowledge
+#term language: TBD
+#term rhetoric: TBD
+#term cognition: TBD
+#term reductionism: TBD
+#term dismissal: TBD
 #related 001, 006, 022, 003, 011
 
 #surface

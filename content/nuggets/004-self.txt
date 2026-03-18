@@ -2,7 +2,11 @@
 #subtitle The mystic's insight and the philosopher's proof arrive at the same place.
 #status proto
 #date 2026-03-11
-#tags consciousness, buddhism, mysticism, identity, self
+#category consciousness
+#term buddhism: TBD
+#term mysticism: TBD
+#term identity: TBD
+#term self: TBD
 #related 003, 005, 002, 006
 
 Whitehead does not require a unified "I" as fundamental. The self is a society — a relatively stable pattern of occasions with a common characteristic, persisting through time. It is derived and emergent, not a metaphysical primitive. Buddhist anatta (no fixed self) combined with moment-to-moment arising of experience maps almost exactly onto Whitehead's actual occasions. Mystics and process philosophers arrived at the same place by different routes.

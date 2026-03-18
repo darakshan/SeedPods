@@ -2,7 +2,11 @@
 #subtitle Free will is not the exception to physics. It is physics, at its most complex and self-aware.
 #status proto
 #date 2026-03-11
-#tags consciousness, free-will, physics, determinism, creativity
+#category consciousness
+#term free-will: TBD
+#term physics: TBD
+#term determinism: TBD
+#term creativity: TBD
 #related 002, 003, 011, 004
 
 In a universe of inert matter governed by deterministic laws, free will is an embarrassment. In Whitehead's universe, every occasion involves a moment of genuine self-determination — the resolution of potential into actual that cannot be fully predicted from outside and is not random because it is shaped by the event's own nature. This is not a special property of minds. It is the basic character of reality at every scale. The creative advance into novelty is Whitehead's term for this irreducible creativity at the heart of each event.

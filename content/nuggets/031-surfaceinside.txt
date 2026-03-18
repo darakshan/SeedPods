@@ -2,7 +2,10 @@
 #subtitle The Bubble
 #status rough
 #date 2026-03-14
-#tags physics, holographic, boundary, interiority
+#category physics
+#term holographic: TBD
+#term boundary: TBD
+#term interiority: TBD
 #related 003, 008, 004, 014, 026
 
 #surface

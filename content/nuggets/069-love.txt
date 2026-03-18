@@ -1,7 +1,10 @@
 #title Love
 #status proto
 #date 2026-03-17
-#tags sensation, love, consciousness, light
+#category sensation
+#term love: TBD
+#term consciousness: TBD
+#term light: TBD
 #related 003, 008
 
 Love is also a phenomenon. A phenomenological condition with a physics-like structure.

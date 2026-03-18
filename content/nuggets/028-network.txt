@@ -2,7 +2,12 @@
 #subtitle Stars and galaxies are not isolated objects. From inside a light beam, there is no distance between them at all.
 #status partial
 #date 2026-03-12
-#tags consciousness, cosmology, physics, relativity, panpsychism, emergence
+#category consciousness
+#term cosmology: TBD
+#term physics: TBD
+#term relativity: TBD
+#term panpsychism: TBD
+#term emergence: TBD
 #related 003, 007, 008, 016, 011
 
 #surface

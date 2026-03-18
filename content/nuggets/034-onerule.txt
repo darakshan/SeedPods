@@ -2,7 +2,9 @@
 #subtitle The Single Iterating Point
 #status rough
 #date 2026-03-14
-#tags mathematics, iteration, mandelbrot-set
+#category mathematics
+#term iteration: TBD
+#term mandelbrot-set: TBD
 #related 002, 007, 009, 003, 011
 
 #surface
