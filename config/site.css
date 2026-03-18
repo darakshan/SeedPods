@@ -212,6 +212,7 @@ td a:hover{color:var(--accent)}
 .proto-notice .dim{font-style:italic}
 .rough-notice{margin-bottom:1.5rem;padding-left:1rem;border-left:3px solid var(--line);font-size:.95rem}
 .rough-notice .dim{font-style:italic}
+.warn-notice{margin-bottom:1.5rem;padding-left:1rem;border-left:3px solid var(--line);font-size:.95rem;font-style:italic}
 .script-direction{font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;margin-top:1.5rem}
 .script-punch{font-size:1.3rem;font-style:italic;color:var(--accent);margin-top:1.5rem}
 .script-line{margin-bottom:.6rem}

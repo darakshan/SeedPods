@@ -90,5 +90,6 @@ Inside nugget source files (`content/nuggets/*.txt`), these directives are used 
 - **&#64;nugget(NNN)** — In layer text (e.g. Surface, Depth, Provenance), replaced by an italicized link to that nugget: `<em><a href="NNN-name.html">Title</a></em>`. If no nugget matches the number, the directive is left as-is.
 - **&#64;image(file, caption, credit)** — In any prose layer, replaced by a figure (image from `content/images/` copied to the site, 50% width, left-aligned, optional figcaption). Only the file argument is required; see the &#64;image section above.
 - **&#64;exercise(Try this: ...)** — In any prose layer (surface, depth, provenance, images), the text inside the parentheses is rendered as a call-to-action block (`<div class="cta">...</div>`) at that position. Parentheses must balance if the text contains `)`. The inner text may contain &#64;nugget(NNN).
+- **&#64;warn(message)** — In any prose layer, the text inside the parentheses is rendered as a notice block with a vertical bar to the left (`<div class="warn-notice">...</div>`), same style as the proto and rough notices. Use for editorial caveats such as flagging speculative content.
 
 (This is an inconsistency that might be rectified.)

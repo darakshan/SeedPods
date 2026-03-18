@@ -91,6 +91,16 @@ def _layer_exercise_handler(_verb, content, context):
     return f"{{{{EXERCISE_{idx}}}}}"
 
 
+def _layer_warn_handler(_verb, content, context):
+    inner = content.strip()
+    expanded = expand_nugget_directives(inner, context["all_nuggets"]) if inner else ""
+    warn_html = text_to_html(expanded) if expanded else ""
+    cta_htmls = context["cta_htmls"]
+    idx = len(cta_htmls)
+    cta_htmls.append(f'<div class="warn-notice">{warn_html}</div>' if warn_html else "")
+    return f"{{{{EXERCISE_{idx}}}}}"
+
+
 def expand_layer_directives(raw, all_nuggets, filepath=None, extra_context=None):
     """Expand @nugget, @exercise, @image in layer text via directive.process_directives. Returns (segments, cta_htmls)."""
     if not raw:
@@ -100,7 +110,7 @@ def expand_layer_directives(raw, all_nuggets, filepath=None, extra_context=None)
         "notes": [],
         "cta_htmls": [],
         "all_nuggets": all_nuggets,
-        "handlers": {"nugget": _layer_nugget_handler, "exercise": _layer_exercise_handler, "image": image_directive_handler},
+        "handlers": {"nugget": _layer_nugget_handler, "exercise": _layer_exercise_handler, "warn": _layer_warn_handler, "image": image_directive_handler},
     }
     if extra_context:
         ctx.update(extra_context)
