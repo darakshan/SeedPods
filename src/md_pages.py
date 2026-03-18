@@ -214,8 +214,8 @@ CATEGORY_ORDER = (
 )
 
 
-def _seed_row_html(n, base_href, status_order, stub_only=False, first_image_href=None):
-    """One seed-row div for a nugget. stub_only=True omits data attrs for sortable lists."""
+def _seed_row_html(n, base_href, status_order, stub_only=False, first_image_href=None, rev=None):
+    """One seed-row div for a nugget. stub_only=True omits data attrs for sortable lists. rev=page version for this nugget (shown after status)."""
     fname = nugget_tag(n) + ".html"
     num = n.get("number", "")
     title = n.get("title", "")
@@ -225,7 +225,12 @@ def _seed_row_html(n, base_href, status_order, stub_only=False, first_image_href
     num_display = display_number(num)
     title_line = f"{num_display}. {title}" if num_display else title
     status_span = f'<span class="seed-status">{_html.escape(status)}</span>'
-    byline = f"{_html.escape(subtitle)} · {status_span}" if subtitle else status_span
+    rev_span = f'<span class="seed-status">rev {rev}</span>' if rev is not None else ""
+    byline_parts = [status_span]
+    if rev_span:
+        byline_parts.append(rev_span)
+    byline_inner = " · ".join(byline_parts)
+    byline = f"{_html.escape(subtitle)} · {byline_inner}" if subtitle else byline_inner
     data_attrs = ""
     if not stub_only:
         status_rank = {s: i for i, s in enumerate(status_order or [])}
@@ -311,6 +316,7 @@ def _render_samples_html(
     include_repo_link=True,
     base_href="",
     content_dir=None,
+    nugget_revisions=None,
 ):
     """Render sample seed rows (or full seed-list-section when full_section=True). copy = settings.txt dict.
     count=None means all nuggets. base_href is prefix for links (e.g. '' when site is served from output dir as root)."""
@@ -320,6 +326,7 @@ def _render_samples_html(
     by_ready = sorted(nuggets, key=lambda n: (key_status(n), key_num(n)))
     recent = by_ready if count is None else by_ready[:count]
     sortable = full_section and count is None
+    rev_map = nugget_revisions or {}
     rows_html = "".join(
         _seed_row_html(
             n,
@@ -327,6 +334,7 @@ def _render_samples_html(
             status_order if sortable else None,
             stub_only=not sortable,
             first_image_href=first_image_href_from_nugget(n, content_dir) if content_dir else None,
+            rev=rev_map.get(nugget_tag(n)),
         )
         for n in recent
     )
@@ -401,6 +409,7 @@ def _md_samples_handler(_verb, content, context):
         nuggets, status_order, copy,
         count=count, full_section=full, include_view_all=full, include_repo_link=False, base_href=base_href,
         content_dir=context.get("content_dir"),
+        nugget_revisions=context.get("nugget_revisions"),
     )
     placeholder = "{{SAMPLES}}"
     context.setdefault("replacements", {})[placeholder] = block
@@ -433,6 +442,7 @@ def _md_nuggets_handler(_verb, content, context):
         nuggets, status_order, copy,
         count=None, full_section=True, include_view_all=False, include_repo_link=False, base_href=base_href,
         content_dir=context.get("content_dir"),
+        nugget_revisions=context.get("nugget_revisions"),
     )
     placeholder = "{{NUGGETS}}"
     context.setdefault("replacements", {})[placeholder] = block

@@ -274,7 +274,7 @@ def _md_context(**overrides):
     copy = overrides.get("copy", load_index_copy())
     def _note(msg, filepath=None):
         reporter_note(msg, path=filepath)
-    return {"warn": _warn, "build_time": site_chrome.build_time, "content_dir": CONTENT_DIR, "site_dir": (copy.get("site_dir") or "").strip(), "note": _note, **overrides}
+    return {"warn": _warn, "build_time": site_chrome.build_time, "content_dir": CONTENT_DIR, "site_dir": (copy.get("site_dir") or "").strip(), "note": _note, "nugget_revisions": getattr(site_chrome, "nugget_revisions", {}) or {}, **overrides}
 
 
 def _md_context_with_special(nuggets, status_order, explainer_terms=None, **overrides):

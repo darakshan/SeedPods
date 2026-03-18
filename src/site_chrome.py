@@ -14,10 +14,11 @@ _warn_callback = lambda msg, filepath=None: print(msg, file=sys.stderr)
 build_time = None
 build_version = 0
 page_version = 0
+nugget_revisions = {}
 
 
-def set_build_context(*, warn=None, build_time_=None, build_version_=None, page_version_=None):
-    global _warn_callback, build_time, build_version, page_version
+def set_build_context(*, warn=None, build_time_=None, build_version_=None, page_version_=None, nugget_revisions_=None):
+    global _warn_callback, build_time, build_version, page_version, nugget_revisions
     if warn is not None:
         _warn_callback = warn
     if build_time_ is not None:
@@ -26,6 +27,8 @@ def set_build_context(*, warn=None, build_time_=None, build_version_=None, page_
         build_version = build_version_
     if page_version_ is not None:
         page_version = page_version_
+    if nugget_revisions_ is not None:
+        nugget_revisions = nugget_revisions_
 
 
 def _warn(msg, filepath=None):

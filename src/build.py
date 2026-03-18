@@ -554,7 +554,8 @@ def main():
     if BUILD_STATE_DIR.exists() and BUILD_STATE_DIR.is_file():
         BUILD_STATE_DIR.unlink()
     BUILD_STATE_DIR.mkdir(parents=True, exist_ok=True)
-    set_build_context(warn=_warn_cb, build_time_=BUILD_TIME, build_version_=build_version)
+    nugget_revisions = {nugget_tag(n): page_versions.get(nugget_tag(n) + ".html", 0) for n in nuggets}
+    set_build_context(warn=_warn_cb, build_time_=BUILD_TIME, build_version_=build_version, nugget_revisions_=nugget_revisions)
     print(f"Loaded {len(nuggets)} nuggets")
 
     for n in nuggets:
