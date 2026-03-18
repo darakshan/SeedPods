@@ -243,4 +243,4 @@ def expand_nugget_directives(text, all_nuggets):
         title = n.get("title", "Untitled")
         filename = n.get("filename", "")
         return f'<em><a href="{filename}.html">{_html.escape(title)}</a></em>'
-    return re.sub(r"@nugget\((\d+)\)", repl, text)
+    return re.sub(r"@(?:nugget|pod)\((\d+)\)", repl, text)

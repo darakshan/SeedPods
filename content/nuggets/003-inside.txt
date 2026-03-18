@@ -113,6 +113,6 @@ Everything has an inside.
 #images
 Primary illustration: A cross-section of a raindrop in mid-fall — rendered with scientific precision on the outside (surface tension, velocity vectors, aerodynamic distortion) and something else entirely on the inside: not organs, not a face, but a quality of light. Warm. Present. Not labeled. The contrast between the clinical outside and the luminous inside is the whole image. Caption: The outside is well described. The inside has no name yet.
 
-Shareable graphic: Black background. A simple gradient — very dark at the edges, very faint warm light at the center. Single line of text: "Something, rather than nothing." Tagline beneath: seedNuggets.com
+Shareable graphic: Black background. A simple gradient — very dark at the edges, very faint warm light at the center. Single line of text: "Something, rather than nothing." Tagline beneath: seedPods.com
 
 Video thumbnail: The extreme close-up of a human eye, iris in full detail — but reflected in the iris, instead of the camera, a raindrop falling. The eye is looking at the raindrop. The raindrop is in the eye. The recursion is the point.

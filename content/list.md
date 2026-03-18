@@ -1,5 +1,5 @@
-# List of Seed Nuggets
+# List of SeedPods
 
-All currently defined seed nuggets. (They are always changing and growing!)
+All currently defined seed pods. (They are always changing and growing!)
 
-@nuggets
+@pods

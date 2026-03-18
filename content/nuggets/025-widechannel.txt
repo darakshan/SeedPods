@@ -17,7 +17,7 @@
 TBD
 
 #depth
-TBD — This nugget is the mirror image of nugget #22. Where #22 argues that a narrow or absent channel does not justify concluding an absent source, this nugget asks the harder question in the other direction: does a wide, fluent channel tell us anything at all about the source feeding it? Large language models produce poetry, philosophy, code, and conversation of startling quality. Does that fluency constitute evidence of something going on inside — or is the channel simply wide and the reservoir empty? The nugget #22 editor's note flags this as unresolved. This nugget attempts to resolve it, or at least to map the territory honestly. Connects to #1 (our current caloric moment), #6 (judging process by output), #16 (the neural network as Whiteheadian field).
+TBD — This pod is the mirror image of pod #22. Where #22 argues that a narrow or absent channel does not justify concluding an absent source, this pod asks the harder question in the other direction: does a wide, fluent channel tell us anything at all about the source feeding it? Large language models produce poetry, philosophy, code, and conversation of startling quality. Does that fluency constitute evidence of something going on inside — or is the channel simply wide and the reservoir empty? The pod #22 editor's note flags this as unresolved. This pod attempts to resolve it, or at least to map the territory honestly. Connects to #1 (our current caloric moment), #6 (judging process by output), #16 (the neural network as Whiteheadian field).
 
 #provenance
 TBD

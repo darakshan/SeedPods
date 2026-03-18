@@ -362,7 +362,7 @@ def _render_samples_html(
     </div>
     <script>
     (function(){
-      var STORAGE_KEY = "seednuggets-sort";
+      var STORAGE_KEY = "seedpods-sort";
       var container = document.getElementById("seed-list-rows");
       var sel = document.getElementById("repo-sort");
       if (!container || !sel) return;
@@ -493,6 +493,7 @@ def process_md_to_html(md_path, context=None, collected_md_refs=None):
             "samples": _md_samples_handler,
             "categories": _md_categories_handler,
             "nuggets": _md_nuggets_handler,
+            "pods": _md_nuggets_handler,
             "glossary": _md_placeholder_handler("{{GLOSSARY}}", "glossary_html"),
             "bibliography": _md_placeholder_handler("{{BIBLIOGRAPHY}}", "bibliography_html"),
             "index": _md_placeholder_handler("{{INDEX}}", "index_html"),

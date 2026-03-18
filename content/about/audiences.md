@@ -1,6 +1,6 @@
 ## Audiences
 
-Seed Nuggets is designed to reach several distinct audiences. The same core ideas work for all of them, but the emphasis, tone, and most useful components differ.
+SeedPods is designed to reach several distinct audiences. The same core ideas work for all of them, but the emphasis, tone, and most useful components differ.
 
 ### Young people (high school and college)
 

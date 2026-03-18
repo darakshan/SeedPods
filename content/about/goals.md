@@ -1,6 +1,6 @@
 ## Goals
 
-Seed Nuggets is our attempt to shift how people see the world — not by argument, but by offering small, memorable ideas that reorient perception. Each seed is a lens. You pick it up, look through it, and something looks different.
+SeedPods is our attempt to shift how people see the world — not by argument, but by offering small, memorable ideas that reorient perception. Each seed is a lens. You pick it up, look through it, and something looks different.
 
 ### The core problem
 

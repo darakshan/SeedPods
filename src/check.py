@@ -246,7 +246,7 @@ def main():
     n_issues = len(errors)
     n_notes = sum(len(n.get("notes", [])) for n in nuggets_to_check)
 
-    parts = [f"{n_nuggets} nuggets", f"{n_notes} notes"]
+    parts = [f"{n_nuggets} pods", f"{n_notes} notes"]
     if counts.get("length"):
         parts.append(f"{counts['length']} length")
     if counts.get("in_degree"):

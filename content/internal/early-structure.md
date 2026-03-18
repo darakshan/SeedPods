@@ -10,7 +10,7 @@ This document gives a new AI assistant (in Cursor or elsewhere) the full context
 
 ### What this project is
 
-**Seed Nuggets** is a living archive of short philosophical ideas — each called a "seed nugget" — intended to slowly shift how people see the world. The goal is a bridge between science and spirituality, aimed especially at younger audiences and people confused or frightened by the arrival of AI.
+**SeedPods** is a living archive of short philosophical ideas — each called a "seed pod" — intended to slowly shift how people see the world. The goal is a bridge between science and spirituality, aimed especially at younger audiences and people confused or frightened by the arrival of AI.
 
 The project is explicitly **not ready for public consumption**. It is a development archive.
 
@@ -23,8 +23,8 @@ Inspirations for format and tone: Jason Silva, Michael Garfield, Jacob Collier. 
 ### Project structure
 
 ```
-seednuggets/
-  nuggets/          ← source files, one per seed nugget (.txt format)
+SeedPods (project root)/
+  nuggets/          ← source files, one per seed pod (.txt format)
   site/             ← generated HTML (do not edit directly)
   build.py          ← generator script: reads nuggets/, writes site/
   CONTEXT.md        ← this file
@@ -36,18 +36,18 @@ python build.py
 ```
 (About pages are rendered from Markdown; install with `pip install markdown` or `pip install -r requirements.txt` in a venv.)
 
-**To rebuild a single nugget:**
+**To rebuild a single pod:**
 ```bash
-python build.py --nugget 001
+python build.py --pod 001
 ```
 
 ---
 
 ### The source file format
 
-Each nugget is a plain text file in `nuggets/`. Example: `001-caloric.txt`
+Each pod is a plain text file in `nuggets/`. Example: `001-caloric.txt`
 
-The filename gives the nugget identity: `001-caloric.txt` means number 001, shortname caloric. Do not put #number or #shortname in the file.
+The filename gives the pod identity: `001-caloric.txt` means number 001, shortname caloric. Do not put #number or #shortname in the file.
 
 Single-line metadata fields start with `#fieldname value`:
 ```
@@ -69,13 +69,13 @@ Multi-line layer sections start with just `#layername` on its own line:
 
 **Status values:** `empty` | `partial` | `prelim` | `rough` | `draft1` | `final`
 
-**Related field:** comma-separated nugget numbers only (not names). Max 5. The build script resolves numbers to titles automatically.
+**Related field:** comma-separated pod numbers only (not names). Max 5. The build script resolves numbers to titles automatically.
 
 ---
 
-## The five layers of every seed nugget
+## The five layers of every seed pod
 
-Every seed nugget has exactly these five layers, in this order:
+Every SeedPod has exactly these five layers, in this order:
 
 1. **Surface** — accessible version for a curious high schooler. Concrete language, no jargon. Ends with a "try this" call to action. 400–700 words.
 2. **Depth** — intellectual version. Philosophy, science, history of ideas. Assumes a reader who wants to go further.
@@ -83,11 +83,11 @@ Every seed nugget has exactly these five layers, in this order:
 4. **Script** — three-minute video shooting script. Direction lines in ALL CAPS. Spoken text below. Ends with a sharp image or question.
 5. **Images** — descriptions of illustration concepts, shareable graphics, video thumbnail ideas.
 
-The build script renders each layer as a tab on the nugget page.
+The build script renders each layer as a tab on the pod page.
 
 ---
 
-## The 19 seed nuggets that were defined when this page was written (we have 30 now)
+## The 19 seed pods that were defined when this page was written (we have 30 now)
 
 | # | Shortname | Title | Status |
 |---|-----------|-------|--------|
@@ -164,7 +164,7 @@ Alpha reviewers (friends): Alia Whitman (potential collaborator — strong AI in
 ## Terminology decisions
 
 - The five layers are called **layers** (not facets, cuts, views, etc.)
-- The format unit is called a **seed nugget** (settled after considering: nugget, seed, lens, portal, window, frame, pattern)
+- The format unit is called a **seed pod** (settled after considering: pod, seed, lens, portal, window, frame, pattern)
 - Whitehead's technical vocabulary is **avoided in the public-facing layers** and mapped to plain English. An appendix/provenance layer provides the technical terms for those who want them. Key mappings:
   - actual occasion → event or moment
   - prehension → taking in / feeling / registering
@@ -179,13 +179,13 @@ Alpha reviewers (friends): Alia Whitman (potential collaborator — strong AI in
 
 ## The long-form essay
 
-A companion long-form essay ("The Inside of Everything") was drafted in this same conversation. It covers the same ground as the seed nuggets but in magazine essay form (~5000 words), aimed at Pollan/Harris readers. It exists as a Word document (.docx). The essay is considered a first draft — not final. Penrose is deliberately absent from the essay pending a decision about where he fits.
+A companion long-form essay ("The Inside of Everything") was drafted in this same conversation. It covers the same ground as the seed pods but in magazine essay form (~5000 words), aimed at Pollan/Harris readers. It exists as a Word document (.docx). The essay is considered a first draft — not final. Penrose is deliberately absent from the essay pending a decision about where he fits.
 
 ---
 
 ## Website
 
-Hosted at: https://darakshan.github.io/SeedNuggets/
+Hosted at: https://darakshan.github.io/SeedPods/
 
 The `site/` directory maps directly to the GitHub Pages root. To deploy: copy contents of `site/` to the repository root and push.
 

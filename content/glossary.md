@@ -1,5 +1,5 @@
 # Glossary
 
-Key terms from all nuggets.
+Key terms from all pods.
 
 @glossary

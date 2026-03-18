@@ -45,9 +45,9 @@ LAYER_ORDER_PROTO = [
     ("references", "References"),
 ]
 
-PROTO_NOTICE_HTML = '''<div class="proto-notice"><p class="dim">Beware! This nugget might be a crazy idea. It will one day be fleshed out, merged with another nugget, or even removed. Caveat lector.</p></div>'''
+PROTO_NOTICE_HTML = '''<div class="proto-notice"><p class="dim">Beware! This pod might be a crazy idea. It will one day be fleshed out, merged with another pod, or even removed. Caveat lector.</p></div>'''
 
-ROUGH_NOTICE_HTML = '''<div class="rough-notice"><p class="dim">This nugget is a rough draft, far from polished. Caveat lector.</p></div>'''
+ROUGH_NOTICE_HTML = '''<div class="rough-notice"><p class="dim">This pod is a rough draft, far from polished. Caveat lector.</p></div>'''
 
 
 def build_nugget(n, all_nuggets, link_errors=None, site_dir=None):
@@ -295,7 +295,7 @@ def build_index(nuggets, index_copy, status_order, collected_md_refs=None, link_
     context = _md_context(nuggets=nuggets, status_order=status_order, copy=index_copy, page="home", link_errors=link_errors)
     body_html = process_md_to_html(CONTENT_DIR / "home.md", context, collected_md_refs=collected_md_refs)
 
-    html = head("Seed Nuggets")
+    html = head("SeedPods")
     html += nav()
     html += f'<div class="wrap"><div class="page-body home-page fade">{body_html}</div></div>'
     html += foot()

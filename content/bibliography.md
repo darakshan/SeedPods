@@ -1,5 +1,5 @@
 # Bibliography
 
-References from all nuggets, grouped by keyword.
+References from all pods, grouped by keyword.
 
 @bibliography

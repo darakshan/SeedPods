@@ -129,21 +129,21 @@ def nav(from_d=False, from_nuggets=False, layer_tabs_html=None):
                 dropdown_items = [f'<li><a href="{prefix}{item_href}">{_html.escape(item_label)}</a></li>' for item_label, item_href, _ in list_menu_items]
                 nav_item_parts.append(
                     '<li class="nav-link-item nav-item-dropdown nav-lists-dropdown">'
-                    f'<a href="{prefix}list.html">Lists</a>'
+                    f'<a href="{prefix}list.html" class="nav-btn">Lists</a>'
                     '<button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-label="Lists menu"></button>'
                     '<ul class="nav-dropdown">'
                     + "".join(dropdown_items) +
                     '</ul></li>'
                 )
             else:
-                nav_item_parts.append(f'<li class="nav-link-item"><a href="{prefix}list.html">{_html.escape(label)}</a></li>')
+                nav_item_parts.append(f'<li class="nav-link-item"><a href="{prefix}list.html" class="nav-btn">{_html.escape(label)}</a></li>')
         else:
-            nav_item_parts.append(f'<li class="nav-link-item"><a href="{prefix}{href}">{_html.escape(label)}</a></li>')
-    search_li = '<li><button type="button" class="nav-search-btn" aria-label="Search nuggets" onclick="seedNavOpenSearch();return false">Search</button></li>'
+            nav_item_parts.append(f'<li class="nav-link-item"><a href="{prefix}{href}" class="nav-btn">{_html.escape(label)}</a></li>')
+    search_li = '<li><button type="button" class="nav-search-btn nav-btn" aria-label="Search pods" onclick="seedNavOpenSearch();return false">Search</button></li>'
     goto_li = (
         '<li class="nav-goto-wrap">'
-        '<label for="nav-goto-num" class="sr-only">Goto nugget</label>'
-        '<button type="button" class="nav-goto-btn" aria-label="Go to nugget" onclick="seedNavGo(this);return false">Go</button>'
+        '<label for="nav-goto-num" class="sr-only">Goto pod</label>'
+        '<button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo(this);return false">Go</button>'
         '<input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" onkeydown="if(event.key===\'Enter\'){event.preventDefault();seedNavGoFromInput(this);}">'
         '</li>'
     )
@@ -163,7 +163,7 @@ def nav(from_d=False, from_nuggets=False, layer_tabs_html=None):
     hamburger_list = "".join(hamburger_nav_parts)
 
     row = f"""  <div class="nav-row">
-  <div class="nav-brand"><a href="{index_href}" class="nav-logo"><img src="{logo_src}" alt="" class="nav-logo-icon"><span class="nav-logo-text"><span class="nav-logo-word1">Seed</span><span class="nav-logo-word2">Nuggets</span></span></a></div>
+  <div class="nav-brand"><a href="{index_href}" class="nav-logo"><img src="{logo_src}" alt="" class="nav-logo-icon"><span class="nav-logo-text"><span class="nav-logo-word1">Seed</span><span class="nav-logo-word2">Pods</span></span></a></div>
   <div class="nav-center"><ul class="nav-links nav-links-center">
     {center_links}
   </ul></div>
@@ -230,7 +230,7 @@ NAV_LISTS_DROPDOWN_SCRIPT = """
 """
 
 SEARCH_DIALOG_HTML = """
-<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search nuggets" hidden>
+<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search pods" hidden>
   <div class="search-dialog-overlay" onclick="seedNavCloseSearch()"></div>
   <div class="search-dialog-inner">
     <div class="search-dialog-header">
@@ -295,7 +295,7 @@ window.seedNavRunSearch=function(q){
   var h="";
   if(nm.length){h+='<div class="search-section"><div class="search-section-title">Name</div><ul class="search-result-list">';nm.forEach(function(it){var d=document.createElement("div");d.textContent=it.num+". "+it.title;h+='<li><a href="'+it.slug+'.html">'+d.innerHTML+'</a></li>';});h+="</ul></div>";}
   if(cm.length){h+='<div class="search-section"><div class="search-section-title">Content</div><ul class="search-result-list">';cm.forEach(function(it){var titleDiv=document.createElement("div");titleDiv.textContent=it.num+". "+it.title;var snip=window._seedNavSnippet(it.content,q);var snipDiv=document.createElement("div");snipDiv.textContent=snip;h+='<li><a href="'+it.slug+'.html">'+titleDiv.innerHTML+'<br><span class="search-result-snippet">'+snipDiv.innerHTML+'</span></a></li>';});h+="</ul></div>";}
-  if(!h&&q)h='<p class="search-no-results">No nuggets match.</p>';
+  if(!h&&q)h='<p class="search-no-results">No pods match.</p>';
   el.innerHTML=h;
 };
 window.seedNavShowVersion=function(show){var el=document.querySelector(".page-end-version");if(el)el.classList.toggle("page-end-version-visible",!!show);};
@@ -318,7 +318,7 @@ def head(title, extra="", at_root=False, css_href=None, icon_href=None):
 <meta charset="UTF-8">
 <script>if(new URLSearchParams(location.search).has('mobile'))document.documentElement.classList.add('mobile-sim');</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{title} — Seed Nuggets</title>
+<title>{title} — SeedPods</title>
 {links}
 {extra}
 <script src="seed-nav.js"></script>

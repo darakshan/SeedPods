@@ -459,7 +459,7 @@ def _nugget_summary_text(n):
             s = line.strip()
             if s.startswith("#"):
                 continue
-            lines.append(re.sub(r"@nugget\((\d+)\)", lambda m: "Seed " + display_number(m.group(1)), s))
+            lines.append(re.sub(r"@nugget\((\d+)\)", lambda m: "Pod " + display_number(m.group(1)), s))
         prose = "\n".join(lines).strip()
     else:
         prose = ""
@@ -484,7 +484,7 @@ def _collect_4u_ai_content(nuggets):
 
 def build_4u_ai_txt(internal_str, nuggets, nugget_raw_by_slug):
     """Write 4u-ai.txt into site_dir from internal docs and a summary of all nuggets (essential text, no HTML)."""
-    parts = [internal_str, "=== Nugget summaries ===\n"]
+    parts = [internal_str, "=== Pod summaries ===\n"]
     for n in sorted(nuggets, key=lambda x: (x.get("number", "").zfill(3), x.get("number", ""))):
         slug = nugget_tag(n)
         parts.append(f"--- {slug} ---\n\n{_nugget_summary_text(n)}")
@@ -563,7 +563,7 @@ def main():
     BUILD_STATE_DIR.mkdir(parents=True, exist_ok=True)
     nugget_revisions = {nugget_tag(n): page_versions.get(nugget_tag(n) + ".html", 0) for n in nuggets}
     set_build_context(warn=_warn_cb, build_time_=BUILD_TIME, build_version_=build_version, nugget_revisions_=nugget_revisions)
-    print(f"Loaded {len(nuggets)} nuggets")
+    print(f"Loaded {len(nuggets)} pods")
 
     for n in nuggets:
         fn = n.get("filename", "?")
@@ -580,7 +580,7 @@ def main():
             else:
                 seen_num[num] = n.get("filename")
     for num, a, b in duplicate_nums:
-        reporter_error("Duplicate nugget number {}: {}.txt and {}.txt".format(num, a, b))
+        reporter_error("Duplicate pod number {}: {}.txt and {}.txt".format(num, a, b))
 
     for md_path in _get_md_page_paths():
         if not md_path.exists():
@@ -682,7 +682,7 @@ def main():
         if out_name and out_name in changed_set:
             set_build_context(page_version_=page_versions[out_name])
             body_html = process_md_to_html(md_path, _md_context_with_special(nuggets, status_order, explainer_terms, link_errors=link_errors), collected_md_refs)
-            title = md_path.stem.replace("-", " ").title()
+            title = md_path.stem.replace("nugget", "pod").replace("-", " ").title()
             (SITE_DIR / out_name).write_text(build_static_page(title, body_html), encoding="utf-8")
             built_count += 1
             if verbose:

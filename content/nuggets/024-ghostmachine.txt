@@ -7,7 +7,7 @@
 #term mind-body: TBD
 #related 003, 006, 011, 021
 
-NOTE: This depth sketch was developed in session 2026-03-14. The nugget needs a full Surface, Script, and Images before it can advance beyond prelim.
+NOTE: This depth sketch was developed in session 2026-03-14. The pod needs a full Surface, Script, and Images before it can advance beyond prelim.
 
 
 @image(024-ghostmachine,The ghost in the machine: clockwork mechanism,Wikimedia Commons)

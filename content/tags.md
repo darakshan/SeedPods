@@ -1,5 +1,5 @@
 # Categories
 
-Nuggets by category and status.
+Pods by category and status.
 
 @index

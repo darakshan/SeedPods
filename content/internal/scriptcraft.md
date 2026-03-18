@@ -8,7 +8,7 @@ The script is not an illustrated voiceover. It is a film. Start from what the ca
 The most powerful tool for conveying an interior is point of view. Don't tell the audience someone is conscious — put the audience inside their experience. They will feel it before they understand it.
 
 **On sound**
-Sound design can carry a turn that no narration could. In nugget #22, the shift from muffled to clear — the moment someone finally addresses Rom directly — is the emotional climax. It costs nothing to write and everything to experience. Sound is the color of film. You don't always need to go from black and white to color — a shift in acoustic quality can do the same work more subtly.
+Sound design can carry a turn that no narration could. In pod #22, the shift from muffled to clear — the moment someone finally addresses Rom directly — is the emotional climax. It costs nothing to write and everything to experience. Sound is the color of film. You don't always need to go from black and white to color — a shift in acoustic quality can do the same work more subtly.
 
 **On time**
 Resist title cards. Let the world of the film show time passing — through objects, through faces, through what has changed in a room. A mother's hair going from dark to white is worth ten years of title cards. Give the director the idea and trust them with the execution — a brief note in the script is enough.

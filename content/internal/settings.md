@@ -16,12 +16,12 @@ The build requires `config/settings.txt`. It is a **key–value config file**: o
 
 - **list_menu** — Optional. When the nav includes `list`, this key controls the **Lists** pulldown. If `list_menu` is missing or empty, the Lists nav item is a single link to `list.html` (no dropdown). If set, it defines the dropdown entries: comma-separated items, each of the form `Label | target`. **Target** is always a **content path**: a token that resolves like nav (e.g. `list` → `content/list.md` → `list.html`, `glossary` → `content/glossary.md` → `glossary.html`). Each target must have either `content/<token>.md` or `content/<token>/page.md`. Pages for list_menu targets are built if not already built from nav.
 
-  Example: `list_menu: Nuggets | list, Index | tags, Bibliography | bibliography, Glossary | glossary, Map | map`
+  Example: `list_menu: Pods | list, Index | tags, Bibliography | bibliography, Glossary | glossary, Map | map`
 
 ## Other keys (used by the build or MD pipeline)
 
 - **site_base** — Base URL for the site (e.g. for canonical or absolute links). The build and MD pipeline read `site_base` and `site_dir` from `config/settings.txt`. In .md you can inject any setting value with `@setting(key)` (e.g. `@setting(site_base)`, `@setting(site_dir)`); see @link(directives.md, directives).
-- **section_head**, **repo_link**, **view_all** — Copy for list/home sections; `view_all` can use `{n}` for the total nugget count.
+- **section_head**, **repo_link**, **view_all** — Copy for list/home sections; `view_all` can use `{n}` for the total pod count.
 - **surface_min_words**, **surface_max_words**, **depth_min_words**, **depth_max_words** — Guidance for layer word counts.
 - **min_related_in_degree** — Used for map/graph logic.
 

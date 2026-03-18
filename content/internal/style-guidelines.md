@@ -1,6 +1,6 @@
-## Style Guidelines for Seed Nuggets
+## Style Guidelines for SeedPods
 
-These guidelines apply to all nuggets and to writers joining the project.
+These guidelines apply to all pods and to writers joining the project.
 They are not rules to follow mechanically but intuitions to internalize.
 
 ---
@@ -8,7 +8,7 @@ They are not rules to follow mechanically but intuitions to internalize.
 ### Terminology
 
 When simplifying a technical term, simplify it consistently throughout the
-nugget. If you introduce a plain-English substitute — for example, "feeling"
+pod. If you introduce a plain-English substitute — for example, "feeling"
 for Whitehead's "prehension" — use that substitute in the Surface and
 introduce the original term in the Depth, in quotes, with a brief gloss.
 Don't leave technical terms half-simplified, where a reader in one layer
@@ -18,11 +18,11 @@ gets the plain word and a reader in another gets the jargon without a bridge.
 
 ### Cross-references
 
-When a concept from one nugget appears in another, don't assume the reader
+When a concept from one pod appears in another, don't assume the reader
 has read the earlier one. Give enough words for the reference to land on its
 own, then offer a link for those who want more.
 
-Use @link(NNN) to reference another nugget. Never precede it with the word
+Use @link(NNN) to reference another pod. Never precede it with the word
 "seed" — links should feel like invitations, not citations.
 
 ---
@@ -43,9 +43,9 @@ Don't #term a person's name if you #ref their work; use #ref for the citation an
 
 ### Referring to structure
 
-When a later section of a nugget refers back to something established
+When a later section of a pod refers back to something established
 earlier, refer to the idea itself — not to "the surface layer" or
-"the depth section." The structure of the nugget should be invisible
+"the depth section." The structure of the pod should be invisible
 to the reader. Write "as the chair example suggests" not "as noted
 in the Surface layer."
 
@@ -53,23 +53,23 @@ in the Surface layer."
 
 ### Scope
 
-When referring to the project as a whole, say "all of these seed nuggets"
+When referring to the project as a whole, say "all of these seed pods"
 rather than "the rest of this archive." The archive is an internal concept;
-the nuggets are what readers encounter.
+the pods are what readers encounter.
 
 ---
 
 ### Humor and self-reference
 
-When a nugget contains a joke, an irony, or a self-referential moment —
+When a pod contains a joke, an irony, or a self-referential moment —
 plant it and trust the reader. Don't explain it. The explanation kills it.
 
 ---
 
 ### The things/events oscillation
 
-Nugget 002 establishes that what we call "things" are really events stable
-enough to look permanent. Subsequent nuggets may oscillate between the two
+Pod 002 establishes that what we call "things" are really events stable
+enough to look permanent. Subsequent pods may oscillate between the two
 words — this is intentional and natural. But the first time "things" appears
-in a nugget written after 002, flag it lightly: "(events, as in @link(002))."
+in a pod written after 002, flag it lightly: "(events, as in @link(002))."
 After that one acknowledgment, let it go. Don't repeat the flag.

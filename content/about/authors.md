@@ -4,11 +4,11 @@ Darakshan Farber has been a software architect, inventor, community organizer, a
 
 Since the early 2000s his work has focused increasingly on community, artistic, and spiritual initiatives. In 2004 he started publicly using the spiritual name Darakshan, a name given to him decades earlier within the Sufi tradition. He has organized Burning Man projects, served as chair of the Seven Pillars House of Wisdom, and led large volunteer efforts. He serves on the boards of Suluk Publishing and the Ojai Storytelling Festival and advises a startup working on AI alignment.
 
-He's the creator of Seed Nuggets, a new collection of compact, perception-shifting ideas. Each seed nugget stands alone but together they form a web of mutually reinforcing understanding.
+He's the creator of SeedPods, a new collection of compact, perception-shifting ideas. Each seed pod stands alone but together they form a web of mutually reinforcing understanding.
 
 ## Collaborators
 
-This website is intended to evolve into a collaborative project, so that other qualified contributors can add, revise, and illustrate seed nuggets and their links.
+This website is intended to evolve into a collaborative project, so that other qualified contributors can add, revise, and illustrate seed pods and their links.
 
 At this time, their are no other human collaborators.
 
