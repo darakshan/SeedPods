@@ -108,7 +108,7 @@ def _nav_items():
 def _head_links(css_href="site.css", icon_href="logo.svg"):
     return f"""
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{css_href}">
 <link rel="icon" type="image/svg+xml" href="{icon_href}">
 """
