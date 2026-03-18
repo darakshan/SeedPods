@@ -250,9 +250,9 @@ def foot(logo_href="logo.svg"):
     version_attr = f' data-build-version="{build_version}" data-page-version="{page_version}" data-build-timestamp="{_html.escape(ts)}"'
     logo_block = f'''
 <div class="page-end" id="page-end-version"{version_attr}>
-  <a href="{home_href}" class="page-end-logo" aria-label="Seed Nuggets home" onmouseenter="typeof seedNavShowVersion==='function'&&seedNavShowVersion(true)" onmouseleave="typeof seedNavShowVersion==='function'&&seedNavShowVersion(false)" ontouchstart="typeof seedNavShowVersion==='function'&&seedNavShowVersion(true)" ontouchend="typeof seedNavShowVersion==='function'&&seedNavShowVersion(false)">
+  <button class="page-end-logo" aria-label="Show build info" onmouseenter="typeof seedNavShowVersion==='function'&&seedNavShowVersion(true)" onmouseleave="typeof seedNavShowVersion==='function'&&seedNavShowVersion(false)" ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="{logo_href}" alt="" width="32" height="32">
-  </a>
+  </button>
   <span class="page-end-version" aria-hidden="true">Build {build_version} · Rev {page_version} · {ts}</span>
 </div>
 '''
@@ -298,6 +298,7 @@ window.seedNavRunSearch=function(q){
   el.innerHTML=h;
 };
 window.seedNavShowVersion=function(show){var el=document.querySelector(".page-end-version");if(el)el.classList.toggle("page-end-version-visible",!!show);};
+window.seedNavToggleVersion=function(){var el=document.querySelector(".page-end-version");if(el)el.classList.toggle("page-end-version-visible");};
 document.addEventListener("keydown",function(e){if(e.key==="Escape"){var n=document.querySelector("nav");if(n&&n.classList.contains("nav-hamburger-open"))window.seedNavToggleMenu();else window.seedNavCloseSearch();}});
 document.addEventListener("DOMContentLoaded",function(){var p=document.getElementById("nav-hamburger-panel");if(p){p.style.display="none";var list=p.querySelector(".nav-hamburger-list");if(list)list.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){if(document.querySelector("nav").classList.contains("nav-hamburger-open"))window.seedNavToggleMenu();});});}});
 """
