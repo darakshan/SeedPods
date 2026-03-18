@@ -247,7 +247,8 @@ SEARCH_DIALOG_HTML = """
 def foot(logo_href="logo.svg", page_timestamp=None):
     home_href = "index.html"
     build_ts = build_time.strftime("%Y-%m-%d %H:%M Pacific") if build_time else ""
-    display_ts = page_timestamp if page_timestamp else build_ts
+    build_hm = build_time.strftime("%H:%M Pacific") if build_time else ""
+    display_ts = f"{page_timestamp} {build_hm}".strip() if page_timestamp else build_ts
     version_attr = f' data-build-version="{build_version}" data-page-version="{page_version}" data-build-timestamp="{_html.escape(build_ts)}"'
     logo_block = f'''
 <div class="page-end" id="page-end-version"{version_attr}>
