@@ -2,7 +2,7 @@
 #subtitle A fluent output is evidence of something — but not evidence of what.
 #status empty
 #date 2026-03-11
-#category mind-AI
+#category AI-minds
 #term AI: TBD
 #term consciousness: TBD
 #term LLM: TBD

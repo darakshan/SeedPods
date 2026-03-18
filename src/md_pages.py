@@ -210,7 +210,7 @@ def expand_includes(text, base_dir, warn=None, filepath=None):
 
 
 CATEGORY_ORDER = (
-    "consciousness", "sensation", "physics", "mathematics", "biology", "mind-AI", "knowledge",
+    "consciousness", "sensation", "physics", "mathematics", "biology", "AI-minds", "knowledge",
 )
 
 

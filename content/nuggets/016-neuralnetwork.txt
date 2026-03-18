@@ -2,7 +2,7 @@
 #subtitle A neural network is not analogous to Whitehead's picture. It is a concrete instance of it.
 #status proto
 #date 2026-03-11
-#category mind-AI
+#category AI-minds
 #term AI: TBD
 #term neural-networks: TBD
 #term consciousness: TBD

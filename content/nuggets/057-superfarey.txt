@@ -1,7 +1,7 @@
 #title Superposition in Neural Network Representations
 #status proto
 #date 2026-03-15
-#category mind-AI
+#category AI-minds
 #term neural-networks: TBD
 #term farey-sequence: TBD
 #term interpretability: TBD

@@ -1,7 +1,7 @@
 #title Galaxies and AI Weight Matrices as Structural Homologs
 #status proto
 #date 2026-03-15
-#category mind-AI
+#category AI-minds
 #term holographic-principle: TBD
 #term emergence: TBD
 #related 051, 066, 059, 016, 037

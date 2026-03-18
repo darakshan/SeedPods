@@ -2,7 +2,7 @@
 #subtitle The surprise is not that they arrived. The surprise is where they came from.
 #status empty
 #date 2026-03-11
-#category mind-AI
+#category AI-minds
 #term AI: TBD
 #term consciousness: TBD
 #term intelligence: TBD

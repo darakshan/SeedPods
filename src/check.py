@@ -27,7 +27,7 @@ from nugget_parser import (
 )
 
 PRIMARY_CATEGORIES = frozenset({
-    "consciousness", "sensation", "physics", "mathematics", "biology", "mind-AI", "knowledge",
+    "consciousness", "sensation", "physics", "mathematics", "biology", "AI-minds", "knowledge",
 })
 
 REQUIRED_STATUS_NAMES = frozenset({"empty", "prelim", "proto", "partial", "draft1", "rough"})

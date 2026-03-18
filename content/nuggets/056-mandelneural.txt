@@ -1,7 +1,7 @@
 #title Neural Networks as High-Dimensional Mandelbrot Sets
 #status proto
 #date 2026-03-15
-#category mind-AI
+#category AI-minds
 #term neural-networks: TBD
 #term mandelbrot-set: TBD
 #term training: TBD

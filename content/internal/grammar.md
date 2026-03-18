@@ -84,9 +84,9 @@ Every nugget must have **exactly one** primary category in `#category`. The seve
 | **physics**       | Spacetime, quantum, relativity, fields, cosmology, emergence from physical law |
 | **mathematics**   | Structure, iteration, Mandelbrot, Farey, discrete/continuous, formal systems |
 | **biology**       | Life, cells, evolution, organism, autopoiesis, learning, Baldwin |
-| **mind-AI**       | Neural networks, AI, thought, transformers, intelligence, artificial minds |
+| **AI-minds**      | Neural networks, AI, thought, transformers, intelligence, artificial minds |
 | **knowledge**     | Epistemology, paradigm shift, stories, language, how we know, science |
 
-- **Rule**: `#category` must be exactly one of these seven (exact spelling, including `mind-AI`). All other concepts the nugget touches are represented as `#term` entries.
+- **Rule**: `#category` must be exactly one of these seven (exact spelling, including `AI-minds`). All other concepts the nugget touches are represented as `#term` entries.
 - **Rule of thumb**: If the nugget's hook is sensation (e.g. color, consonance), use **sensation** even when the explanation leans on mathematics or physics.
 - The home page and categories page group nuggets by `#category`. The check tool (`just check`) fails if a nugget has no `#category` or if the value is not in this set.

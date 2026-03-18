@@ -1,7 +1,7 @@
 #title Thought as Evolution in Milliseconds
 #status proto
 #date 2026-03-15
-#category mind-AI
+#category AI-minds
 #term thought: TBD
 #term selection: TBD
 #term predictive-processing: TBD
