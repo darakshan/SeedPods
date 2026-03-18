@@ -121,9 +121,18 @@ def build_nugget(n, all_nuggets, link_errors=None, site_dir=None):
                 parts.append('<h3 class="layer-heading ref-heading">Further reading</h3>')
                 parts.append('<div class="prose ref-list">')
                 for ref_item in refs_list:
-                    ref_text = ref_item[1] if isinstance(ref_item, tuple) else ref_item
-                    if ref_text:
-                        parts.append(f'<p class="ref-entry">{_html.escape(ref_text)}</p>')
+                    if isinstance(ref_item, tuple):
+                        keyword, ref_text = ref_item[0], (ref_item[1] or "").strip()
+                    else:
+                        ref_text = (ref_item or "").strip()
+                        keyword = ref_text.split(None, 1)[0].lower() if ref_text else ""
+                    if not ref_text:
+                        continue
+                    words = ref_text.split(None, 1)
+                    first = _html.escape(words[0])
+                    rest = (" " + _html.escape(words[1])) if len(words) > 1 else ""
+                    href = f'bibliography.html#{_html.escape(keyword)}'
+                    parts.append(f'<p class="ref-entry"><a href="{href}">{first}</a>{rest}</p>')
                 parts.append("</div>")
             if rel_nuggets:
                 parts.append('<div class="related-section">')
