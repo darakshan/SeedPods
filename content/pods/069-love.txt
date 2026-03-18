@@ -5,7 +5,7 @@
 #term love: TBD
 #term consciousness: TBD
 #term light: TBD
-#related 003, 008
+#related 003, 008, 029, 030, 036
 
 Love is also a phenomenon. A phenomenological condition with a physics-like structure.
 

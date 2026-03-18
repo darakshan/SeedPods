@@ -4,7 +4,7 @@
 #category physics
 #term entanglement: TBD
 #term emergence: TBD
-#related 050, 067, 002, 008
+#related 050, 067, 002, 008, 031
 
 Physicists have been circling this for thirty years without quite landing. The holographic principle — that the information content of a region is proportional to its boundary area, not its volume — suggests that three-dimensional space is not fundamental. It is a projection of a two-dimensional information structure.
 

@@ -6,7 +6,7 @@
 #term fractals: TBD
 #term quasicrystals: TBD
 #term mandelbrot-set: TBD
-#related 038, 033
+#related 038, 033, 034, 056, 035
 
 Mandelbrot-like fractal structure has been found in physical systems — not as visual coincidence but as a consequence of the same iterative mathematics running in physical substrates. 
 @image(063-mandelcrystals,A snowflake: Mandelbrot structure in physical crystals,Wikimedia Commons)

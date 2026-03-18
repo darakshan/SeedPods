@@ -5,7 +5,7 @@
 #term farey-sequence: TBD
 #term neural-networks: TBD
 #term many-worlds: TBD
-#related 057, 060, 038
+#related 057, 060, 038, 054, 056
 
 If you have a space with d actual dimensions, how many nearly-orthogonal directions can you fit in it? The answer matters because nearly-orthogonal directions can carry independent information without crosstalk — like independent channels. 
 @image(053-dimensions,High-dimensional geometry: virtual dimensions,Wikimedia Commons)

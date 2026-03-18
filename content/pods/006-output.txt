@@ -6,7 +6,7 @@
 #term AI: TBD
 #term intelligence: TBD
 #term cognition: TBD
-#related 001, 003, 016, 017, 021
+#related 025, 003, 016, 017, 021
 
 #surface
 A thermostat predicts the future. Not impressively — it just decides whether the room is about to get too cold. But it predicts: given the current temperature, what comes next?

@@ -6,7 +6,7 @@
 #term history-of-science: TBD
 #term consciousness: TBD
 #term AI: TBD
-#related 002, 011, 018, 019
+#related 002, 011, 018, 019, 027
 
 #surface
 Before we start, forget everything you know about molecules and atoms. Pretend you never learned that stuff. It's 1800 and you're a smart, educated person. 

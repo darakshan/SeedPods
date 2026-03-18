@@ -6,7 +6,7 @@
 #term emergence: TBD
 #term hierarchy: TBD
 #term holons: TBD
-#related 011, 002, 012, 014
+#related 011, 002, 012, 014, 067
 
 NOTE: This depth sketch was developed in session 2026-03-14. The pod needs a full Surface, Script, and Images before it can advance beyond prelim.
 

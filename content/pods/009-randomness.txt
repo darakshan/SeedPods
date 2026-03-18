@@ -8,7 +8,7 @@
 #term complexity: TBD
 #term evolution: TBD
 #term symmetry-breaking: TBD
-#related 011, 007, 012, 005, 002
+#related 011, 007, 012, 005, 034
 
 #surface
 Look up on a clear night, away from city lights. What you're seeing is not decoration. It is the consequence of a mistake. 

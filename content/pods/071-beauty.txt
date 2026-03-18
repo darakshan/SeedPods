@@ -6,7 +6,7 @@
 #term mathematics: TBD
 #term perception: TBD
 #term wabi-sabi: TBD
-#related 038, 030
+#related 038, 030, 033, 035, 034
 
 Beauty is in the eye of the beholder — and also in the mathematics of the thing beheld. 
 @image(071-beauty,The golden ratio in nature: beauty and mathematics,Wikimedia Commons)

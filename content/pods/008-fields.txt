@@ -8,7 +8,7 @@
 #term quantum-mechanics: TBD
 #term consciousness: TBD
 #term electromagnetism: TBD
-#related 002, 003, 007, 017, 029
+#related 030, 003, 007, 017, 029
 
 #surface
 You've been using light as a metaphor your whole life. 

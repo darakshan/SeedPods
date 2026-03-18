@@ -5,7 +5,7 @@
 #term consciousness: TBD
 #term quantum: TBD
 #term discrete-continuous: TBD
-#related 002, 008, 007, 004
+#related 002, 008, 007, 004, 034
 
 Physics already resolved this, and the resolution is worth stating cleanly because it keeps coming up in philosophy of mind.
 

@@ -6,7 +6,7 @@
 #term holographic: TBD
 #term boundary: TBD
 #term interiority: TBD
-#related 003, 008, 004, 014, 026
+#related 003, 008, 004, 014, 067
 
 #surface
 A child stops everything for a soap bubble. There's something revelatory about it — not just beautiful. As if it's showing us something we already knew. It is. 

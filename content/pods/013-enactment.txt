@@ -5,7 +5,7 @@
 #category biology
 #term cognition: TBD
 #term perception: TBD
-#related 012, 003, 002, 004
+#related 012, 003, 002, 004, 045
 
 Evan Thompson's enactivism, building on Maturana and Varela: cognition is not the processing of representations of an external world inside a passive receiver. It is the enactment of a world — the organism and its environment co-arising through active engagement. 
 @image(013-enactment,Organism enacting its world through active engagement,Wikimedia Commons) A bacterium swimming toward a chemical gradient is not merely following a rule. It is enacting a world in which that gradient is meaningful. This is prehension at the scale of the organism — the Whiteheadian pattern in biological language.

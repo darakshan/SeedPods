@@ -7,7 +7,7 @@
 #term consciousness: TBD
 #term intelligence: TBD
 #term culture: TBD
-#related 016, 017, 006, 003
+#related 016, 017, 006, 003, 047
 
 #surface
 

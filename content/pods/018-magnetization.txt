@@ -8,7 +8,7 @@
 #term influence: TBD
 #term social-dynamics: TBD
 #term change: TBD
-#related 019, 001, 011, 014
+#related 019, 001, 011, 014, 027
 
 #surface
 

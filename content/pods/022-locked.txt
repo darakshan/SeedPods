@@ -9,7 +9,7 @@
 #term autism: TBD
 #term language: TBD
 #term AI: TBD
-#related 001, 006, 016, 021
+#related 001, 006, 016, 021, 025
 
 #surface
 In 1983, a young Belgian man named Rom Houben was in a car crash. He was 20 years old — an engineering student, a martial arts enthusiast. The crash left him paralyzed, and doctors diagnosed him as being in a vegetative state. Unconscious. Absent. Gone inside.

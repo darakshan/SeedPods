@@ -7,7 +7,7 @@
 #term evolution: TBD
 #term many-worlds: TBD
 #term omega-point: TBD
-#related 009, 028, 029, 020, 005
+#related 009, 028, 029, 061, 059
 
 #surface
 When you look at the night sky you think you're seeing space. You're actually seeing time. But there's a third thing you're seeing that nobody told you — you're seeing evolution. Not biological evolution. Something older. 
