@@ -1,4 +1,4 @@
-# Seed Nuggets — build
+# SeedPods — build
 # Requires: python3, just  (brew install just)
 # Run `just setup` once to create .venv and install dependencies.
 

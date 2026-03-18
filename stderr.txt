@@ -1,1 +1,1 @@
-/Users/darakshan/Software/Python/SeedNuggets/.venv/bin/python /Users/darakshan/Software/Python/SeedNuggets/src/build.py
+/Users/darakshan/Software/Python/SeedPods/.venv/bin/python /Users/darakshan/Software/Python/SeedPods/src/build.py

@@ -5,7 +5,7 @@ alwaysApply: true
 
 # Building the site
 
-When you need to run the Seed Nuggets build, use:
+When you need to run the SeedPods build, use:
 
 ```bash
 just build

@@ -2,19 +2,21 @@
   "permissions": {
     "allow": [
       "Bash(just build:*)",
-      "Bash(git -C /Users/darakshan/Software/Python/SeedNuggets diff --stat)",
+      "Bash(git -C /Users/darakshan/Software/Python/SeedPods diff --stat)",
       "WebSearch",
       "WebFetch(domain:commons.wikimedia.org)",
-      "Bash(curl -s -A \"SeedNuggets/1.0 \\(educational project\\)\" \"https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=lightning+branching+photograph&srnamespace=6&format=json&srlimit=5\")",
+      "Bash(curl -s -A \"SeedPods/1.0 \\(educational project\\)\" \"https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=lightning+branching+photograph&srnamespace=6&format=json&srlimit=5\")",
       "Bash(python3 -m json.tool)",
-      "Bash(curl -s -A \"SeedNuggets/1.0 \\(educational project\\)\" \"https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=Jaquet-Droz+automaton&srnamespace=6&format=json&srlimit=5\")",
-      "Bash(curl -s -A \"SeedNuggets/1.0 \\(educational project\\)\" \"https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=Casimir+effect+plates&srnamespace=6&format=json&srlimit=5\")",
-      "Bash(curl -s -A \"SeedNuggets/1.0 \\(educational project\\)\" \"https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=iron+filings+magnetic+field&srnamespace=6&format=json&srlimit=5\")",
-      "Bash(curl -s -A \"SeedNuggets/1.0 \\(educational project\\)\" \"https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=Wilson+Bentley+snowflake&srnamespace=6&format=json&srlimit=5\")",
-      "Bash(curl -s -A \"SeedNuggets/1.0 \\(educational project\\)\" \"https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=Mandelbrot+set&srnamespace=6&format=json&srlimit=5\")",
-      "Bash(curl -s -A \"SeedNuggets/1.0 \\(educational project\\)\" \"https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=The+Turk+chess+automaton&srnamespace=6&format=json&srlimit=5\")",
-      "Bash(curl -s -A \"SeedNuggets/1.0 \\(educational project\\)\" \"https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=pair+production+bubble+chamber&srnamespace=6&format=json&srlimit=5\")",
-      "Bash(python3 /Users/darakshan/Software/Python/SeedNuggets/scripts/fetch_images.py)"
+      "Bash(curl -s -A \"SeedPods/1.0 \\(educational project\\)\" \"https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=Jaquet-Droz+automaton&srnamespace=6&format=json&srlimit=5\")",
+      "Bash(curl -s -A \"SeedPods/1.0 \\(educational project\\)\" \"https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=Casimir+effect+plates&srnamespace=6&format=json&srlimit=5\")",
+      "Bash(curl -s -A \"SeedPods/1.0 \\(educational project\\)\" \"https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=iron+filings+magnetic+field&srnamespace=6&format=json&srlimit=5\")",
+      "Bash(curl -s -A \"SeedPods/1.0 \\(educational project\\)\" \"https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=Wilson+Bentley+snowflake&srnamespace=6&format=json&srlimit=5\")",
+      "Bash(curl -s -A \"SeedPods/1.0 \\(educational project\\)\" \"https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=Mandelbrot+set&srnamespace=6&format=json&srlimit=5\")",
+      "Bash(curl -s -A \"SeedPods/1.0 \\(educational project\\)\" \"https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=The+Turk+chess+automaton&srnamespace=6&format=json&srlimit=5\")",
+      "Bash(curl -s -A \"SeedPods/1.0 \\(educational project\\)\" \"https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=pair+production+bubble+chamber&srnamespace=6&format=json&srlimit=5\")",
+      "Bash(python3 /Users/darakshan/Software/Python/SeedPods/scripts/fetch_images.py)",
+      "Bash(gh run:*)",
+      "Bash(git -C /Users/darakshan/Software/Python/SeedPods remote -v)"
     ]
   }
 }

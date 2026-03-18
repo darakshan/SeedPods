@@ -10,7 +10,7 @@ while true; do
   sleep 30
   m=$(stat -f %m "$FILE" 2>/dev/null || stat -c %Y "$FILE" 2>/dev/null)
   if [ -n "$m" ] && [ "$m" -eq "$last" ]; then
-    osascript -e 'display notification "Explainers file stable (agent may be done)." with title "SeedNuggets"'
+    osascript -e 'display notification "Explainers file stable (agent may be done)." with title "SeedPods"'
     echo "Notification sent."
     exit 0
   fi

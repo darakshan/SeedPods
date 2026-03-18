@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-build.py — Seed Nuggets site generator
+build.py — SeedPods site generator
 Reads from content/ and config/; writes to site_dir (e.g. docs/). That directory is the web root when served; URLs have no path prefix.
 Generates: nugget pages, list.html, glossary/bibliography/tags/map from content .md (via @ directives),
 index.html, about pages, resources (with map), site.css.
