@@ -7,7 +7,8 @@
 #related 001, 002, 005, 008
 
 #surface
-Here is what everyone knows: matter is dark inside.
+Here is what everyone knows: matter is dark inside. 
+@image(003-inside,A geode opened: the inside revealed,Wikimedia Commons)
 
 A rock (events, as in @link(002)) doesn't feel the sun on it. A raindrop doesn't experience falling. The carbon in your bones has no inner life — it's just carbon. Somewhere along the way, in a few special biological cases, matter arranged itself into nervous systems, and nervous systems somehow produce experience. How? Nobody fully knows. But the framework is clear: matter first, experience later, and only in the right biological containers.
 

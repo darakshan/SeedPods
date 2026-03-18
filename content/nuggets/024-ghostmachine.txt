@@ -9,6 +9,9 @@
 
 NOTE: This depth sketch was developed in session 2026-03-14. The nugget needs a full Surface, Script, and Images before it can advance beyond prelim.
 
+
+@image(024-ghostmachine,The ghost in the machine: clockwork mechanism,Wikimedia Commons)
+
 Three thinkers triangulate the same territory from different directions:
 
 Gilbert Ryle (The Concept of Mind, 1949) diagnosed the error: there is no ghost. The "mind" as a separate substance haunting the body is a category mistake — the confusion of a process with a thing. Ryle called it the ghost in the machine. He was right that the ghost, as traditionally conceived, doesn't exist.

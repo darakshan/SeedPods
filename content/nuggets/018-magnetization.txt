@@ -11,6 +11,8 @@
 #related 019, 001, 011, 014
 
 #surface
+
+@image(018-magnetization,Ideas spreading through a group like magnetic domains,Wikimedia Commons)
 TBD
 
 #depth

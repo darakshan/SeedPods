@@ -7,7 +7,8 @@
 #term many-worlds: TBD
 #related 057, 060, 038
 
-If you have a space with d actual dimensions, how many nearly-orthogonal directions can you fit in it? The answer matters because nearly-orthogonal directions can carry independent information without crosstalk — like independent channels.
+If you have a space with d actual dimensions, how many nearly-orthogonal directions can you fit in it? The answer matters because nearly-orthogonal directions can carry independent information without crosstalk — like independent channels. 
+@image(053-dimensions,High-dimensional geometry: virtual dimensions,Wikimedia Commons)
 
 Standard mathematics (Johnson-Lindenstrauss) already shows the answer is exponential in d. But the threshold for "nearly orthogonal" is arbitrary — you pick a tolerance ε and proceed.
 

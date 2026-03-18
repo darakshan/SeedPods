@@ -266,7 +266,8 @@ def _index_entry_html(n, base_href, first_image_href=None):
 
 
 def _render_categories_html(nuggets, status_order, copy, base_href="", content_dir=None):
-    """Render categories as a two-level tree: category name (open/close) and nuggets per category. Same style as tags.html. If content_dir is set, each entry shows its first @image thumb to the left."""
+    """Render categories as a two-level tree: category name (open/close) and nuggets per category. Same style as tags.html. If content_dir is set, each entry shows its first 
+@image thumb to the left."""
     status_rank = {s: i for i, s in enumerate(status_order)}
     key_status = lambda n: status_rank.get(n.get("status", "empty"), len(status_order))
     key_num = lambda n: int(n.get("number", "0")) if (n.get("number") or "").isdigit() else 0

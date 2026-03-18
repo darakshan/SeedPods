@@ -22,7 +22,8 @@
 
 **Defining inputs per page type (outline):**
 
-- **Nugget page** `NNN-slug.html`: That nugget’s `.txt` file; plus any image files referenced in it via `@image(...)` (from content/images/). Optionally omit shared config if we never want config-only changes to bump nugget versions.
+- **Nugget page** `NNN-slug.html`: That nugget’s `.txt` file; plus any image files referenced in it via `
+@image(...)` (from content/images/). Optionally omit shared config if we never want config-only changes to bump nugget versions.
 - **index.html**: `home.md` + its includes; all nugget `.txt` files (index lists them); config that affects index (e.g. index_copy, status_order for ordering). Or: home.md + includes + nuggets dir contents + relevant config paths.
 - **Nav/list MD page** (e.g. `about.html`, `list.html`): That MD file + `_input_files_for_page(md_path)` (includes + linked MDs); for pages that embed @glossary / @bibliography / @index / @map, the nugget set and config that feed those placeholders. So: main MD + includes + transitive @link refs + nuggets + status_order + explainers + index_copy for nav.
 - **Static MD-ref page** (e.g. `about-authors.html`): That MD path + its includes + transitive @link refs; if it has placeholders, add nuggets + config that feed them.

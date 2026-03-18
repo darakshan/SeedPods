@@ -11,7 +11,8 @@
 #related 002, 003, 009, 011, 013
 
 #surface
-Here's a question that sounds simple: what makes something alive?
+Here's a question that sounds simple: what makes something alive? 
+@image(012-autopoiesis,The cell that makes itself: autopoiesis under the microscope,Wikimedia Commons)
 
 You might say: it grows. It moves. It responds to things. It reproduces. All true. But those are behaviors. They describe what life does. They don't say what life is.
 

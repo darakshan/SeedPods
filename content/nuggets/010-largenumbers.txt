@@ -9,7 +9,8 @@
 #term complexity: TBD
 #related 009, 011, 006, 002
 
-Gödel's incompleteness proof involved constructing an enormous number, arrived at through entirely routine recursive operations, which encoded a statement about itself. The number was just a number. The operations were just operations. But their accumulation produced something that transcended what the system could say about itself. This is the pattern of emergence: when events accumulate and nest across enough iterations, something qualitatively new appears that was not visible in the parts. The threshold where arithmetic becomes self-referential is one example. The threshold where chemistry becomes life is another.
+Gödel's incompleteness proof involved constructing an enormous number, arrived at through entirely routine recursive operations, which encoded a statement about itself. The number was just a number. The operations were just operations. 
+@image(010-largenumbers,The Mandelbrot set: self-reference built from simple recursion,Wikimedia Commons) But their accumulation produced something that transcended what the system could say about itself. This is the pattern of emergence: when events accumulate and nest across enough iterations, something qualitatively new appears that was not visible in the parts. The threshold where arithmetic becomes self-referential is one example. The threshold where chemistry becomes life is another.
 
 #provenance
 #ref godel Gödel, K. On Formally Undecidable Propositions (1931). Douglas Hofstadter, Gödel Escher Bach (1979) for the accessible treatment.

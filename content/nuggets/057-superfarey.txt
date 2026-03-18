@@ -7,7 +7,8 @@
 #term interpretability: TBD
 #related 053, 056, 016, 038
 
-A neural network with d dimensions in its residual stream can represent far more than d independent concepts. This is called superposition and it has been studied carefully in the mechanistic interpretability literature.
+A neural network with d dimensions in its residual stream can represent far more than d independent concepts. This is called superposition and it has been studied carefully in the mechanistic interpretability literature. 
+@image(057-superfarey,Superposition in high-dimensional neural representations,Wikimedia Commons)
 
 The mechanism: concepts are stored as nearly-orthogonal directions in the representation space. True orthogonality would allow exactly d independent concepts. Near-orthogonality — with small but nonzero interference — allows exponentially more. The network tolerates a small amount of crosstalk in exchange for vastly expanded capacity.
 

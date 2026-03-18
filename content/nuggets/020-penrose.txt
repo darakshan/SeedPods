@@ -10,7 +10,8 @@
 #related 010, 003, 006, 011, 058
 
 #surface
-Roger Penrose is one of the great mathematical physicists of our time. And he made a beautiful mistake.
+Roger Penrose is one of the great mathematical physicists of our time. And he made a beautiful mistake. 
+@image(020-penrose,The Penrose arrow: pointing somewhere unexpected,Wikimedia Commons)
 
 He looked at Gödel's theorem — the proof that any sufficiently rich formal system contains truths it cannot prove from within itself — and he felt something important in it. He was right to feel that. Something important is there.
 

@@ -13,6 +13,8 @@
 #related 001, 002, 003, 004
 
 #surface
+
+@image(023-stories,Cave paintings: reality made of stories,Wikimedia Commons)
 TBD
 
 #depth

@@ -102,7 +102,8 @@ def _layer_warn_handler(_verb, content, context):
 
 
 def expand_layer_directives(raw, all_nuggets, filepath=None, extra_context=None):
-    """Expand @nugget, @exercise, @image in layer text via directive.process_directives. Returns (segments, cta_htmls)."""
+    """Expand @nugget, @exercise, 
+@image in layer text via directive.process_directives. Returns (segments, cta_htmls)."""
     if not raw:
         return [], []
     ctx = {

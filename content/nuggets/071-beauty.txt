@@ -8,7 +8,8 @@
 #term wabi-sabi: TBD
 #related 038, 030
 
-Beauty is in the eye of the beholder — and also in the mathematics of the thing beheld.
+Beauty is in the eye of the beholder — and also in the mathematics of the thing beheld. 
+@image(071-beauty,The golden ratio in nature: beauty and mathematics,Wikimedia Commons)
 
 The golden ratio. Phi. A number that emerges from a formula involving 5. Where does the 5 come from? Why does this particular irrational number keep appearing in living forms — in shells, in phyllotaxis, in the proportions that feel right?
 

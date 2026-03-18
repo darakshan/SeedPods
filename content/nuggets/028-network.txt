@@ -11,7 +11,8 @@
 #related 003, 007, 008, 016, 011
 
 #surface
-Here is something relativity tells us that almost nobody stops to think about.
+Here is something relativity tells us that almost nobody stops to think about. 
+@image(028-network,The cosmic web: the network that experiences itself,Wikimedia Commons)
 
 When a photon — a particle of light — leaves a star a billion light years away and travels across the universe to reach your eye, something strange is true about that journey. From your perspective, it takes a billion years. From the photon's perspective, it takes no time at all. Zero. Emission and absorption are, for the photon, the same moment.
 

@@ -13,6 +13,8 @@
 #related 001, 010, 020, 021
 
 #surface
+
+@image(026-twotruths,Two things true at once: the Necker cube,Wikimedia Commons)
 TBD
 
 #depth

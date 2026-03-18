@@ -75,10 +75,13 @@ The &#64; directives are:
 
 ## &#64;image(file, caption, credit)
 
-- **Syntax**: `@image(file, caption, credit)` — arguments are comma-separated. Only the first (file) is required; caption and credit are optional.
+- **Syntax**: `
+@image(file, caption, credit)` — arguments are comma-separated. Only the first (file) is required; caption and credit are optional.
 - **Effect**: The directive is replaced by a figure: the image is copied from `content/images/` to the site output (e.g. `docs/images/`). The image is shown at 50% column width, floated left, with text wrapping. If caption or credit are given, a `<figcaption>` is added (credit in `<cite>`).
 - **File**: Basename only (no path). The build looks for `content/images/file` with extension `.jpg`, `.jpeg`, `.png`, `.webp`, or `.gif` and copies it to the site’s `images/` directory. If no file is found, a warning is emitted and the directive is left unchanged.
-- **Example**: `@image(harmonic-clock)` or `@image(mandelbrot-boundary, Mandelbrot Set, Wikipedia)`.
+- **Example**: `
+@image(harmonic-clock)` or `
+@image(mandelbrot-boundary, Mandelbrot Set, Wikipedia)`.
 - **Where**: Available in both `.md` pages and nugget layer text (Surface, Depth, Brief, etc.).
 
 ---

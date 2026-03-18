@@ -9,7 +9,8 @@
 #term self: TBD
 #related 003, 005, 002, 006
 
-Whitehead does not require a unified "I" as fundamental. The self is a society — a relatively stable pattern of occasions with a common characteristic, persisting through time. It is derived and emergent, not a metaphysical primitive. Buddhist anatta (no fixed self) combined with moment-to-moment arising of experience maps almost exactly onto Whitehead's actual occasions. Mystics and process philosophers arrived at the same place by different routes.
+Whitehead does not require a unified "I" as fundamental. The self is a society — a relatively stable pattern of occasions with a common characteristic, persisting through time. 
+@image(004-self,The self as wave pattern — not a fixed point,Wikimedia Commons) It is derived and emergent, not a metaphysical primitive. Buddhist anatta (no fixed self) combined with moment-to-moment arising of experience maps almost exactly onto Whitehead's actual occasions. Mystics and process philosophers arrived at the same place by different routes.
 
 #provenance
 #term Actual occasion: Whitehead's fundamental unit of reality — an event that prehends its past, integrates, and perishes into the next.

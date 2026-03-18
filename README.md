@@ -1,5 +1,13 @@
 # Seed Nuggets
 
-A living archive of short philosophical ideas (“seed nuggets”) that bridge science and spirituality, aimed at shifting how people see the world. Each nugget is a small, memorable lens—inspired by Whitehead’s process philosophy, physics, complexity theory, and cognitive science—with five layers (Surface, Depth, Provenance, Script, Images). Source is plain-text files in `nuggets/`; the site is generated into `site/` by a Python build script. Not yet for public consumption.
+A living archive of short and often surprising ideas ("seed nuggets") that bridge science and spirituality, aimed at shifting how people see the world. Each nugget is a small, memorable lens. 
 
-**Build:** `just build` (or `python3 src/build.py`). To rebuild one nugget: `just build 001`.
+The content is inspired by Alfred North Whitehead's concept of "process philosophy", along with physics, math, complexity theory, cognitive science, and neural networks. 
+
+The style is inspired by the playful and wide ranging content in Douglas Hofstatter's Gôdel, Escher, Bach.
+
+The structure is inspired by the modular organization of Christopher Alexander's classic "A Pattern Language", a book published before hyperlinks were available, yet predicts them. 
+
+Nuggets are presented in different layers: surface, depth, scripts, and images. 
+
+Nugget sources are plain-text files in `nuggets/`; the site is generated into `docs/` by a Python build script. 

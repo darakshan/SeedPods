@@ -10,6 +10,8 @@
 #related 016, 017, 006, 003
 
 #surface
+
+@image(015-aliens,The alien we built: a server room,Wikimedia Commons)
 TBD
 
 #depth

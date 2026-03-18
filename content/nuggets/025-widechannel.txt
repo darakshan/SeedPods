@@ -12,6 +12,8 @@
 #related 001, 006, 016, 021, 022
 
 #surface
+
+@image(025-widechannel,The wide channel: fluent output, uncertain depth,Wikimedia Commons)
 TBD
 
 #depth

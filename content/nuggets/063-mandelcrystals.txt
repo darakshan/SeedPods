@@ -8,7 +8,8 @@
 #term mandelbrot-set: TBD
 #related 038, 033
 
-Mandelbrot-like fractal structure has been found in physical systems — not as visual coincidence but as a consequence of the same iterative mathematics running in physical substrates.
+Mandelbrot-like fractal structure has been found in physical systems — not as visual coincidence but as a consequence of the same iterative mathematics running in physical substrates. 
+@image(063-mandelcrystals,A snowflake: Mandelbrot structure in physical crystals,Wikimedia Commons)
 
 Quasicrystals and Penrose tilings show self-similar structure governed by the golden ratio — which sits at a specific location in the Farey sequence and Stern-Brocot tree, the same location that determines key features of the Mandelbrot boundary geometry.
 

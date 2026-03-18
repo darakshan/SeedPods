@@ -7,7 +7,8 @@
 #term mandelbrot-set: TBD
 #related 060, 038, 062
 
-The Born rule is quantum mechanics' most mysterious postulate. It says the probability of a measurement outcome is proportional to the square of the wavefunction's amplitude. It works perfectly. Nobody knows why it is the square and not something else.
+The Born rule is quantum mechanics' most mysterious postulate. It says the probability of a measurement outcome is proportional to the square of the wavefunction's amplitude. 
+@image(054-bornharmonic,Standing wave harmonics: the Born rule as harmonic measure,Wikimedia Commons) It works perfectly. Nobody knows why it is the square and not something else.
 
 Everett's Many Worlds interpretation makes this more acute: if all branches are real, why do we experience some branches more than others? The probability has to come from somewhere.
 

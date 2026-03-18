@@ -13,7 +13,8 @@
       "Bash(curl -s -A \"SeedNuggets/1.0 \\(educational project\\)\" \"https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=Wilson+Bentley+snowflake&srnamespace=6&format=json&srlimit=5\")",
       "Bash(curl -s -A \"SeedNuggets/1.0 \\(educational project\\)\" \"https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=Mandelbrot+set&srnamespace=6&format=json&srlimit=5\")",
       "Bash(curl -s -A \"SeedNuggets/1.0 \\(educational project\\)\" \"https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=The+Turk+chess+automaton&srnamespace=6&format=json&srlimit=5\")",
-      "Bash(curl -s -A \"SeedNuggets/1.0 \\(educational project\\)\" \"https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=pair+production+bubble+chamber&srnamespace=6&format=json&srlimit=5\")"
+      "Bash(curl -s -A \"SeedNuggets/1.0 \\(educational project\\)\" \"https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=pair+production+bubble+chamber&srnamespace=6&format=json&srlimit=5\")",
+      "Bash(python3 /Users/darakshan/Software/Python/SeedNuggets/scripts/fetch_images.py)"
     ]
   }
 }

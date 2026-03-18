@@ -30,9 +30,11 @@ once?
 Darakshan had wanted to see that map for a long time. When it finally
 became easy enough to draw — score every ratio by how simple it is,
 arrange the results around a circle representing one octave — this is
-what appeared. @image(harmonic-clock,The Harmonic Clock,author)
+what appeared. 
+@image(harmonic-clock,The Harmonic Clock,author)
 
-That's a Mandelbrot set. @image(mandelbrot-boundary,The Mandelbrot Set,Wikipedia)
+That's a Mandelbrot set. 
+@image(mandelbrot-boundary,The Mandelbrot Set,Wikipedia)
 
 Not a visual resemblance. The same object, seen from two different
 angles.

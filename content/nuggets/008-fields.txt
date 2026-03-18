@@ -11,7 +11,8 @@
 #related 002, 003, 007, 017, 029
 
 #surface
-You've been using light as a metaphor your whole life.
+You've been using light as a metaphor your whole life. 
+@image(008-fields,The electromagnetic field made visible in iron filings,Wikimedia Commons)
 
 Shine some light on it. I'm in the dark. Suddenly it all became clear. Consciousness is the light; ignorance is the darkness; attention is the beam of a flashlight.
 

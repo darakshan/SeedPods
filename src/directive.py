@@ -28,7 +28,8 @@ def split_directive_args(content):
 
 
 def image_directive_handler(verb, content, context):
-    """Handle @image(file, caption, credit): copy content/images/file to site images/, return figure HTML. Only file required."""
+    """Handle 
+@image(file, caption, credit): copy content/images/file to site images/, return figure HTML. Only file required."""
     args = split_directive_args(content or "")
     name = args[0] if args else ""
     caption = args[1] if len(args) > 1 else ""
@@ -72,7 +73,8 @@ _IMAGE_FIRST_ARG = re.compile(r"@image\s*\(\s*([^),]+)")
 
 
 def first_image_href_from_nugget(nugget, content_dir):
-    """Return href for first @image in any layer (e.g. 'images/foo.jpg'), or None."""
+    """Return href for first 
+@image in any layer (e.g. 'images/foo.jpg'), or None."""
     content_dir = Path(content_dir).resolve()
     images_src = content_dir / "images"
     layers = nugget.get("layers") or {}

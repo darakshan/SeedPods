@@ -11,7 +11,8 @@
 #related 011, 007, 012, 005, 002
 
 #surface
-Look up on a clear night, away from city lights. What you're seeing is not decoration. It is the consequence of a mistake.
+Look up on a clear night, away from city lights. What you're seeing is not decoration. It is the consequence of a mistake. 
+@image(009-randomness,Structure from randomness: a lightning branch,Wikimedia Commons)
 
 About 380,000 years after the Big Bang, the universe was a nearly uniform soup of hot plasma. Nearly uniform — but not quite. Here and there, at scales too small to see, random fluctuations had left the faintest wrinkles in the distribution of matter. One region had just slightly more than its neighbors. Not much. Unmeasurably little, by ordinary standards.
 

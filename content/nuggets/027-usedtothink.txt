@@ -11,7 +11,8 @@
 #related 001, 019, 021, 024, 003
 
 #surface
-There is a phrase you have heard a thousand times. In documentaries. In science podcasts. In textbooks. In the confident voice of someone explaining something to you.
+There is a phrase you have heard a thousand times. In documentaries. In science podcasts. In textbooks. In the confident voice of someone explaining something to you. 
+@image(027-usedtothink,The old map we used to think was right,Wikimedia Commons)
 
 "We used to think X. Now we know Y."
 
