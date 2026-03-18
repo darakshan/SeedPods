@@ -11,4 +11,4 @@ When you need to run the Seed Nuggets build, use:
 just build
 ```
 
-Do **not** run `python3 src/build.py` (or `python src/build.py`) directly. That uses the system Python and fails with "Markdown pages require the markdown package." The justfile runs the build with `.venv/bin/python`, which has dependencies installed. For a single-nugget rebuild use `just build-nugget 001`.
+Do **not** run `python3 src/build.py` (or `python src/build.py`) directly. That uses the system Python and fails with "Markdown pages require the markdown package." The justfile runs the build with `.venv/bin/python`, which has dependencies installed. 

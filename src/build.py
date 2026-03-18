@@ -8,7 +8,7 @@ index.html, about pages, resources (with map), site.css.
 Usage:
     python src/build.py   (from repo root; quiet: nugget count, @notes, file count)
     python src/build.py -v   # verbose: also print every built file
-    python src/build.py --nugget 001   # rebuild single nugget
+    python src/build.py --force   # rebuild all HTML pages even when unchanged
 """
 
 import csv
@@ -83,7 +83,10 @@ def _get_md_page_paths():
     return paths
 
 BUILD_TIME = None
-BUILD_STATE_FILE = _ROOT / ".buildstate"
+BUILD_STATE_DIR = _ROOT / ".buildstate"
+STATE_FILE = BUILD_STATE_DIR / "state.json"
+HISTORY_CSV = BUILD_STATE_DIR / "history.csv"
+RELEASE_VERSION = 0
 
 def _input_files_for_page(main_path):
     base_dir = main_path.parent.resolve()
@@ -136,6 +139,173 @@ def _referenced_md_from_md_pages():
                     refs.add(p)
                     to_scan.append(p)
     return refs
+
+
+def _hash_paths(paths):
+    """SHA-256 of sorted path strings and their file contents. Paths are Path objects; missing files are skipped."""
+    h = hashlib.sha256()
+    for p in sorted(paths, key=lambda x: str(x)):
+        if p.is_file():
+            h.update(str(p).encode("utf-8"))
+            h.update(p.read_bytes())
+    return h.hexdigest()
+
+
+def _shared_md_inputs(index_copy, status_order, explainer_terms):
+    """Inputs shared by index and all MD pages that use placeholders: settings, status, explainers, all nugget .txt."""
+    out = set()
+    out.add(CONFIG_DIR / "settings.txt")
+    if (CONFIG_DIR / "status.txt").exists():
+        out.add(CONFIG_DIR / "status.txt")
+    if EXPLAINERS_CSV.exists():
+        out.add(EXPLAINERS_CSV)
+    return out
+
+
+def _get_all_page_ids(nuggets, index_copy, collected_md_refs):
+    """All HTML page IDs (output filenames) that the build produces."""
+    ids = ["index.html"]
+    for n in nuggets:
+        ids.append(nugget_tag(n) + ".html")
+    nav_hrefs = {href for href, _, _, _ in get_nav_items(index_copy)}
+    nav_built_paths = set()
+    for _href, _label, kind, path in get_nav_items(index_copy):
+        if kind == "file" and path:
+            nav_built_paths.add(path.resolve())
+        elif kind == "dir" and path:
+            nav_built_paths.add((path / "page.md").resolve())
+    for _label, list_href, list_path in get_list_menu_items(index_copy):
+        if list_path and list_path.resolve() not in nav_built_paths:
+            nav_hrefs.add(list_href)
+        elif list_path:
+            nav_hrefs.add(list_href)
+    ids.extend(sorted(nav_hrefs))
+    ids.append("internal.html")
+    for md_path in sorted(collected_md_refs, key=lambda p: str(p)):
+        out_name = content_path_to_output_name(md_path, CONTENT_DIR)
+        if out_name and out_name not in ids:
+            ids.append(out_name)
+    return ids
+
+
+def _get_inputs_for_page(page_id, nuggets, index_copy, status_order, explainer_terms, collected_md_refs):
+    """Set of input Paths whose content affects this page. Used for input-based hashing."""
+    out = set()
+    if page_id == "index.html":
+        home = CONTENT_DIR / "home.md"
+        out.update(_input_files_for_page(home))
+        for n in nuggets:
+            out.add(NUGGETS_DIR / (n.get("filename", "") + ".txt"))
+        out.update(_shared_md_inputs(index_copy, status_order, explainer_terms))
+        return out
+    if page_id.endswith(".html") and page_id != "internal.html" and page_id != "index.html":
+        slug = page_id[:-5]
+        nugget_file = None
+        for n in nuggets:
+            if nugget_tag(n) == slug:
+                nugget_file = NUGGETS_DIR / (n.get("filename", "") + ".txt")
+                break
+        if nugget_file and nugget_file.exists():
+            out.add(nugget_file)
+            raw = nugget_file.read_text(encoding="utf-8")
+            for name in _image_refs_in_text(raw):
+                if name and ".." not in name and "/" not in name and "\\" not in name:
+                    images_dir = CONTENT_DIR / "images"
+                    for ext in _IMAGE_EXTS:
+                        p = images_dir / (name + ext)
+                        if p.is_file():
+                            out.add(p)
+                            break
+        return out
+    if page_id == "internal.html":
+        internal_md = INTERNAL_DIR / "page.md"
+        out.update(_input_files_for_page(internal_md))
+        base_dir = internal_md.parent.resolve()
+        text = expand_includes(internal_md.read_text(encoding="utf-8"), base_dir, filepath=internal_md)
+        for m in re.finditer(r"@link\s*\(\s*([^,)]+)\s*,", text):
+            loc = m.group(1).strip()
+            if not re.match(r"^\d+$", loc) and ".md" in loc:
+                p = (base_dir / loc).resolve()
+                try:
+                    p.relative_to(CONTENT_DIR.resolve())
+                except ValueError:
+                    pass
+                if p.exists():
+                    out.add(p)
+        for n in nuggets:
+            out.add(NUGGETS_DIR / (n.get("filename", "") + ".txt"))
+        out.update(_shared_md_inputs(index_copy, status_order, explainer_terms))
+        return out
+    md_path = None
+    for _href, _label, kind, path in get_nav_items(index_copy):
+        if (kind == "file" and path and _href == page_id) or (kind == "dir" and path and _href == page_id):
+            md_path = path if kind == "file" else path / "page.md"
+            break
+    if md_path is None:
+        for _label, list_href, list_path in get_list_menu_items(index_copy):
+            if list_href == page_id and list_path:
+                md_path = list_path
+                break
+    if md_path is not None:
+        md_path = Path(md_path).resolve()
+        if md_path.suffix != ".md":
+            md_path = md_path / "page.md"
+        out.update(_input_files_for_page(md_path))
+        refs = set()
+        to_scan = [md_path]
+        while to_scan:
+            p = to_scan.pop(0)
+            if not p.exists():
+                continue
+            text = expand_includes(p.read_text(encoding="utf-8"), p.parent, filepath=p) if p.suffix == ".md" else ""
+            base_dir = p.parent.resolve()
+            for m in re.finditer(r"@link\s*\(\s*([^,)]+)\s*,", text):
+                loc = m.group(1).strip()
+                if not re.match(r"^\d+$", loc) and ".md" in loc:
+                    link_path = (base_dir / loc).resolve()
+                    try:
+                        link_path.relative_to(CONTENT_DIR.resolve())
+                    except ValueError:
+                        continue
+                    if link_path.exists() and link_path not in refs:
+                        refs.add(link_path)
+                        to_scan.append(link_path)
+        out.update(refs)
+        for n in nuggets:
+            out.add(NUGGETS_DIR / (n.get("filename", "") + ".txt"))
+        out.update(_shared_md_inputs(index_copy, status_order, explainer_terms))
+        return out
+    for md_path in collected_md_refs:
+        md_path = Path(md_path).resolve()
+        out_name = content_path_to_output_name(md_path, CONTENT_DIR)
+        if out_name == page_id:
+            out.update(_input_files_for_page(md_path))
+            refs = set()
+            to_scan = [md_path]
+            while to_scan:
+                p = to_scan.pop(0)
+                if not p.exists():
+                    continue
+                text = expand_includes(p.read_text(encoding="utf-8"), p.parent, filepath=p) if p.suffix == ".md" else ""
+                base_dir = p.parent.resolve()
+                for m in re.finditer(r"@link\s*\(\s*([^,)]+)\s*,", text):
+                    loc = m.group(1).strip()
+                    if not re.match(r"^\d+$", loc) and ".md" in loc:
+                        link_path = (base_dir / loc).resolve()
+                        try:
+                            link_path.relative_to(CONTENT_DIR.resolve())
+                        except ValueError:
+                            continue
+                        if link_path.exists() and link_path not in refs:
+                            refs.add(link_path)
+                            to_scan.append(link_path)
+            out.update(refs)
+            for n in nuggets:
+                out.add(NUGGETS_DIR / (n.get("filename", "") + ".txt"))
+            out.update(_shared_md_inputs(index_copy, status_order, explainer_terms))
+            break
+    return out
+
 
 def get_build_input_files():
     files = set()
@@ -316,6 +486,16 @@ def build_4u_ai_txt(internal_str, nuggets, nugget_raw_by_slug):
 
 # ── Main ──────────────────────────────────────────────────────────────────────
 
+def _append_history(page_name, build_version, page_version, release_version=0):
+    BUILD_STATE_DIR.mkdir(parents=True, exist_ok=True)
+    need_header = not HISTORY_CSV.exists()
+    with open(HISTORY_CSV, "a", newline="", encoding="utf-8") as f:
+        w = csv.writer(f)
+        if need_header:
+            w.writerow(["date", "build_version", "page_version", "page_name", "release_version"])
+        w.writerow([datetime.now(ZoneInfo("America/Los_Angeles")).isoformat(), build_version, page_version, page_name, release_version])
+
+
 def main():
     global BUILD_TIME, SITE_DIR
     reporter_reset()
@@ -326,46 +506,62 @@ def main():
         print_all()
         sys.exit(1)
     SITE_DIR = _ROOT / site_dir
-    filter_num = None
     verbose = "-v" in sys.argv or "--verbose" in sys.argv
-    if "--nugget" in sys.argv:
-        idx = sys.argv.index("--nugget")
-        filter_num = sys.argv[idx + 1]
+    force = "--force" in sys.argv
 
-    nothing_changed = False
-    state_lines = BUILD_STATE_FILE.read_text(encoding="utf-8").splitlines() if BUILD_STATE_FILE.exists() else []
-    if len(state_lines) >= 2:
+    state = {"build_version": 0, "pages": {}, "last_build_time": None}
+    if STATE_FILE.exists():
         try:
-            BUILD_TIME = datetime.fromisoformat(state_lines[1].strip())
-        except ValueError:
-            BUILD_TIME = datetime.now(ZoneInfo("America/Los_Angeles"))
-    else:
-        BUILD_TIME = datetime.now(ZoneInfo("America/Los_Angeles"))
-    if not filter_num:
-        current_hash = get_build_input_hash()
-        if len(state_lines) >= 2 and state_lines[0].strip() == current_hash:
-            nothing_changed = True
-        else:
-            BUILD_TIME = datetime.now(ZoneInfo("America/Los_Angeles"))
-
-    if filter_num:
-        SITE_DIR.mkdir(exist_ok=True)
-    else:
-        if SITE_DIR.exists():
-            shutil.rmtree(SITE_DIR)
-        SITE_DIR.mkdir(parents=True)
+            state = json.loads(STATE_FILE.read_text(encoding="utf-8"))
+        except (json.JSONDecodeError, TypeError):
+            pass
 
     def _warn_cb(msg, filepath=None):
         reporter_warning(msg, path=filepath)
     nuggets = load_all_nuggets(warn=_warn_cb)
-    set_build_context(warn=_warn_cb, build_time_=BUILD_TIME)
+    status_order = _require_status_order()
+    explainer_terms = load_explainers_csv(EXPLAINERS_CSV) if EXPLAINERS_CSV.exists() else []
+    collected_md_refs = _referenced_md_from_md_pages()
+    all_page_ids = _get_all_page_ids(nuggets, index_copy, collected_md_refs)
+
+    page_hashes = {}
+    page_versions = {}
+    for page_id in all_page_ids:
+        inputs = _get_inputs_for_page(page_id, nuggets, index_copy, status_order, explainer_terms, collected_md_refs)
+        new_hash = _hash_paths(inputs)
+        page_hashes[page_id] = new_hash
+        old = state.get("pages", {}).get(page_id, {})
+        old_ver = old.get("page_version", 0)
+        changed = new_hash != old.get("hash") or page_id not in state.get("pages", {})
+        page_versions[page_id] = old_ver + 1 if changed else old_ver
+
+    changed_set = {pid for pid in all_page_ids if page_hashes[pid] != state.get("pages", {}).get(pid, {}).get("hash") or pid not in state.get("pages", {})}
+    if force:
+        changed_set = set(all_page_ids)
+    if changed_set:
+        build_version = state.get("build_version", 0) + 1
+        last_build_time = datetime.now(ZoneInfo("America/Los_Angeles"))
+    else:
+        build_version = state.get("build_version", 0)
+        try:
+            last_build_time = datetime.fromisoformat(state["last_build_time"]) if state.get("last_build_time") else None
+        except (ValueError, TypeError):
+            last_build_time = None
+        last_build_time = last_build_time or datetime.now(ZoneInfo("America/Los_Angeles"))
+    BUILD_TIME = last_build_time
+
+    SITE_DIR.mkdir(parents=True, exist_ok=True)
+    if BUILD_STATE_DIR.exists() and BUILD_STATE_DIR.is_file():
+        BUILD_STATE_DIR.unlink()
+    BUILD_STATE_DIR.mkdir(parents=True, exist_ok=True)
+    set_build_context(warn=_warn_cb, build_time_=BUILD_TIME, build_version_=build_version)
     print(f"Loaded {len(nuggets)} nuggets")
+
     for n in nuggets:
         fn = n.get("filename", "?")
         shortname = fn.split("-", 1)[-1] if "-" in fn else None
         for note in n.get("notes", []):
             reporter_note(note, nugget_num=n.get("number"), shortname=shortname)
-    built_count = 0
     seen_num = {}
     duplicate_nums = []
     for n in nuggets:
@@ -381,8 +577,6 @@ def main():
     for md_path in _get_md_page_paths():
         if not md_path.exists():
             reporter_error("Required file missing", path=md_path)
-    status_order = _require_status_order()
-
     for n in nuggets:
         s = n.get("status", "empty")
         if s not in status_order:
@@ -391,125 +585,134 @@ def main():
             reporter_error("status {!r} not in config/status.txt".format(s), nugget_num=n.get("number"), shortname=shortname)
 
     link_errors = []
+    built_count = 0
     for n in nuggets:
-        if filter_num and n.get("number") != filter_num:
-            continue
         fname = nugget_tag(n) + ".html"
-        out = SITE_DIR / fname
-        out.write_text(build_nugget(n, nuggets, link_errors, site_dir=SITE_DIR), encoding="utf-8")
-        built_count += 1
-        if verbose:
-            print(f"  Built {fname}")
+        if fname in changed_set:
+            set_build_context(page_version_=page_versions[fname])
+            (SITE_DIR / fname).write_text(build_nugget(n, nuggets, link_errors, site_dir=SITE_DIR), encoding="utf-8")
+            built_count += 1
+            if verbose:
+                print(f"  Built {fname}")
+            _append_history(fname, build_version, page_versions[fname], RELEASE_VERSION)
 
     internal_str, nugget_raw_by_slug = _collect_4u_ai_content(nuggets)
     (SITE_DIR / "nugget-index.json").write_text(build_nugget_index_json(nuggets), encoding="utf-8")
     (SITE_DIR / "search-index.json").write_text(build_search_index_json(nuggets, nugget_raw_by_slug), encoding="utf-8")
     (SITE_DIR / "seed-nav.js").write_text(nav_seed_script_content(), encoding="utf-8")
-    if not filter_num:
-        built_count += 3
-        if verbose:
-            print("  Built nugget-index.json, search-index.json, seed-nav.js")
+    built_count += 3
+    if verbose:
+        print("  Built nugget-index.json, search-index.json, seed-nav.js")
 
-    if not filter_num:
-        shutil.copy(CONFIG_DIR / "site.css", SITE_DIR / "site.css")
+    shutil.copy(CONFIG_DIR / "site.css", SITE_DIR / "site.css")
+    built_count += 1
+    if verbose:
+        print("  Built site.css")
+    if (CONFIG_DIR / "logo.svg").exists():
+        shutil.copy(CONFIG_DIR / "logo.svg", SITE_DIR / "logo.svg")
         built_count += 1
         if verbose:
-            print("  Built site.css")
-        if (CONFIG_DIR / "logo.svg").exists():
-            shutil.copy(CONFIG_DIR / "logo.svg", SITE_DIR / "logo.svg")
-            built_count += 1
-            if verbose:
-                print("  Built logo.svg")
+            print("  Built logo.svg")
 
-        explainer_terms = load_explainers_csv(EXPLAINERS_CSV) if EXPLAINERS_CSV.exists() else []
-
-        collected_md_refs = set()
-        nav_items = get_nav_items(index_copy)
-        nav_built_paths = set()
-        for href, label, kind, path in nav_items:
-            if kind == "file":
-                nav_built_paths.add(path)
-                wrap_class = "wrap--full" if href == "map.html" else ""
+    nav_items = get_nav_items(index_copy)
+    nav_built_paths = set()
+    for href, label, kind, path in nav_items:
+        if kind == "file":
+            nav_built_paths.add(path.resolve())
+            if href in changed_set:
+                set_build_context(page_version_=page_versions[href])
                 (SITE_DIR / href).write_text(
-                    build_md_file_page(path, nuggets, collected_md_refs, status_order, index_copy, explainer_terms, link_errors, wrap_class=wrap_class),
+                    build_md_file_page(path, nuggets, collected_md_refs, status_order, index_copy, explainer_terms, link_errors, wrap_class="wrap--full" if href == "map.html" else ""),
                     encoding="utf-8",
                 )
                 built_count += 1
                 if verbose:
                     print(f"  Built {href}")
-            elif kind == "dir":
-                nav_built_paths.add(path / "page.md")
+                _append_history(href, build_version, page_versions[href], RELEASE_VERSION)
+        elif kind == "dir":
+            nav_built_paths.add((path / "page.md").resolve())
+            if href in changed_set:
+                set_build_context(page_version_=page_versions[href])
                 (SITE_DIR / href).write_text(build_md_dir_page(path, nuggets, collected_md_refs, status_order, explainer_terms, link_errors), encoding="utf-8")
                 built_count += 1
                 if verbose:
                     print(f"  Built {href}")
+                _append_history(href, build_version, page_versions[href], RELEASE_VERSION)
 
-        for _label, list_href, list_path in get_list_menu_items(index_copy):
-            if list_path and list_path not in nav_built_paths:
-                wrap_class = "wrap--full" if list_href == "map.html" else ""
-                (SITE_DIR / list_href).write_text(
-                    build_md_file_page(list_path, nuggets, collected_md_refs, status_order, index_copy, explainer_terms, link_errors, wrap_class=wrap_class),
-                    encoding="utf-8",
-                )
-                built_count += 1
-                if verbose:
-                    print(f"  Built {list_href}")
+    for _label, list_href, list_path in get_list_menu_items(index_copy):
+        if list_path and list_path.resolve() not in nav_built_paths and list_href in changed_set:
+            set_build_context(page_version_=page_versions[list_href])
+            (SITE_DIR / list_href).write_text(
+                build_md_file_page(list_path, nuggets, collected_md_refs, status_order, index_copy, explainer_terms, link_errors, wrap_class="wrap--full" if list_href == "map.html" else ""),
+                encoding="utf-8",
+            )
+            built_count += 1
+            if verbose:
+                print(f"  Built {list_href}")
+            _append_history(list_href, build_version, page_versions[list_href], RELEASE_VERSION)
 
+    if "internal.html" in changed_set:
+        set_build_context(page_version_=page_versions["internal.html"])
         (SITE_DIR / "internal.html").write_text(build_internal_page(nuggets, collected_md_refs, link_errors), encoding="utf-8")
         built_count += 1
         if verbose:
             print("  Built internal.html")
+        _append_history("internal.html", build_version, page_versions["internal.html"], RELEASE_VERSION)
 
-        built_md_refs = set()
-        to_build = list(collected_md_refs)
-        while to_build:
-            md_path = to_build.pop(0)
-            if md_path in built_md_refs:
-                continue
-            built_md_refs.add(md_path)
+    built_md_refs = set()
+    to_build = list(collected_md_refs)
+    while to_build:
+        md_path = to_build.pop(0)
+        if md_path in built_md_refs:
+            continue
+        built_md_refs.add(md_path)
+        out_name = content_path_to_output_name(md_path, CONTENT_DIR)
+        if out_name and out_name in changed_set:
+            set_build_context(page_version_=page_versions[out_name])
             body_html = process_md_to_html(md_path, _md_context_with_special(nuggets, status_order, explainer_terms, link_errors=link_errors), collected_md_refs)
             title = md_path.stem.replace("-", " ").title()
-            out_name = content_path_to_output_name(md_path, CONTENT_DIR)
-            if out_name:
-                (SITE_DIR / out_name).write_text(build_static_page(title, body_html), encoding="utf-8")
-                built_count += 1
-                if verbose:
-                    print(f"  Built {out_name}")
-            for p in collected_md_refs - built_md_refs:
-                if p not in to_build:
-                    to_build.append(p)
+            (SITE_DIR / out_name).write_text(build_static_page(title, body_html), encoding="utf-8")
+            built_count += 1
+            if verbose:
+                print(f"  Built {out_name}")
+            _append_history(out_name, build_version, page_versions[out_name], RELEASE_VERSION)
+        for p in collected_md_refs - built_md_refs:
+            if p not in to_build:
+                to_build.append(p)
 
-        for stale in ["index.html", "favicon.svg"]:
-            p = _ROOT / stale
-            if p.exists():
-                p.unlink()
-        index_html = build_index(nuggets, index_copy, status_order, collected_md_refs, link_errors)
-        (SITE_DIR / "index.html").write_text(index_html, encoding="utf-8")
+    for stale in ["index.html", "favicon.svg"]:
+        p = _ROOT / stale
+        if p.exists():
+            p.unlink()
+    if "index.html" in changed_set:
+        set_build_context(page_version_=page_versions["index.html"])
+        (SITE_DIR / "index.html").write_text(build_index(nuggets, index_copy, status_order, collected_md_refs, link_errors), encoding="utf-8")
         built_count += 1
         if verbose:
             print("  Built index.html")
-        if (CONFIG_DIR / "logo.svg").exists():
-            shutil.copy(CONFIG_DIR / "logo.svg", SITE_DIR / "favicon.svg")
-            built_count += 1
-            if verbose:
-                print("  Built favicon.svg")
-
-        (SITE_DIR / "map.svg").write_text(build_graph_svg(nuggets, show_title=False, link_nuggets=True, node_radius=40), encoding="utf-8")
+        _append_history("index.html", build_version, page_versions["index.html"], RELEASE_VERSION)
+    if (CONFIG_DIR / "logo.svg").exists():
+        shutil.copy(CONFIG_DIR / "logo.svg", SITE_DIR / "favicon.svg")
         built_count += 1
         if verbose:
-            print("  Built map.svg")
+            print("  Built favicon.svg")
 
-        build_4u_ai_txt(internal_str, nuggets, nugget_raw_by_slug)
-        built_count += 1
-        if verbose:
-            print("  Built 4u-ai.txt")
+    (SITE_DIR / "map.svg").write_text(build_graph_svg(nuggets, show_title=False, link_nuggets=True, node_radius=40), encoding="utf-8")
+    built_count += 1
+    if verbose:
+        print("  Built map.svg")
 
-        BUILD_STATE_FILE.write_text(
-            current_hash + "\n" + BUILD_TIME.isoformat(),
-            encoding="utf-8",
-        )
+    build_4u_ai_txt(internal_str, nuggets, nugget_raw_by_slug)
+    built_count += 1
+    if verbose:
+        print("  Built 4u-ai.txt")
 
-        _warn_content_not_in_docs(nuggets, index_copy, collected_md_refs)
+    state["build_version"] = build_version
+    state["last_build_time"] = BUILD_TIME.isoformat()
+    state["pages"] = {pid: {"hash": page_hashes[pid], "page_version": page_versions[pid]} for pid in all_page_ids}
+    STATE_FILE.write_text(json.dumps(state, indent=2), encoding="utf-8")
+
+    _warn_content_not_in_docs(nuggets, index_copy, collected_md_refs)
 
     if not verbose:
         print(f"Built {built_count} files\n")
@@ -518,8 +721,8 @@ def main():
     sys.stdout.flush()
     print_all()
     print(f"\nDone. Site written to {SITE_DIR.relative_to(_ROOT)}/ (web root)")
-    if nothing_changed:
-        print("Nothing changed; timestamp unchanged.")
+    if not changed_set:
+        print("Nothing changed; no pages rewritten.")
     if has_errors():
         sys.exit(1)
 

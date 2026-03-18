@@ -57,6 +57,22 @@ Together they suggest that light is not just fast and wavy. It is
 structurally different from the classical world in ways we are still
 mapping.
 
+@note(below from a separate conversation to be integrated)
+
+Starlight is hitting you right now, even at noon on a bright sunny day. The photons from distant stars don’t stop arriving just because the sun is up. What changes is the signal-to-noise ratio, not the signal. The sun floods your retinas and the atmosphere with so much visible light that the comparatively faint stellar photons are simply drowned out — your eyes can’t detect the contrast. But the photons are physically impinging on you all the same.
+
+A few layers to this:
+
+The atmosphere scatters sunlight in all directions. This is why the daytime sky is bright blue rather than black — Rayleigh scattering fills the whole sky dome with scattered solar photons. That diffuse brightness is what makes stars invisible in the daytime, not any absence of starlight.
+
+From space or at high altitude, stars are visible in daytime. Astronauts on the ISS, if they shade their eyes from direct sunlight, can see stars at any hour. On very high mountains the sky is a deeper blue for the same reason — less atmosphere to scatter.
+
+Radio telescopes observe stars 24/7. At wavelengths where the sun isn’t overwhelming, astronomers don’t distinguish day from night at all. The electromagnetic radiation from distant stars arrives continuously.
+
+Your skin is also receiving it. Not just your eyes — every square centimeter of your body is being struck by photons from thousands of stars simultaneously, all the time, day or night, clouds or clear. The flux is just extraordinarily low compared to solar radiation.
+
+So the starlight is never not shining on you. The sun’s presence is an observational obstacle, not a physical one.​​​​​​​​​​​​​​​​
+
 #term proper time: in special relativity, the time elapsed as measured by a clock traveling with an object. For a photon traveling at the speed of light, proper time is zero — emission and absorption are the same event from the photon's perspective.
 #term overtone series: the set of frequencies naturally produced by a vibrating physical object — string, air column, membrane. Integer multiples of the fundamental frequency: 2x (octave), 3x (fifth plus octave), 4x (two octaves), and so on. The physical basis of musical consonance.
 #term quantized emission: the process by which atoms emit light as discrete photons, each with a specific frequency determined by the energy difference between electron states. Unlike classical vibration, there is no natural harmonic series.

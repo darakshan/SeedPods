@@ -12,14 +12,20 @@ from site_paths import parse_list_menu
 
 _warn_callback = lambda msg, filepath=None: print(msg, file=sys.stderr)
 build_time = None
+build_version = 0
+page_version = 0
 
 
-def set_build_context(*, warn=None, build_time_=None):
-    global _warn_callback, build_time
+def set_build_context(*, warn=None, build_time_=None, build_version_=None, page_version_=None):
+    global _warn_callback, build_time, build_version, page_version
     if warn is not None:
         _warn_callback = warn
     if build_time_ is not None:
         build_time = build_time_
+    if build_version_ is not None:
+        build_version = build_version_
+    if page_version_ is not None:
+        page_version = page_version_
 
 
 def _warn(msg, filepath=None):
@@ -237,11 +243,14 @@ SEARCH_DIALOG_HTML = """
 
 def foot(logo_href="logo.svg"):
     home_href = "index.html"
+    ts = build_time.strftime("%Y-%m-%d %H:%M Pacific") if build_time else ""
+    version_attr = f' data-build-version="{build_version}" data-page-version="{page_version}" data-build-timestamp="{_html.escape(ts)}"'
     logo_block = f'''
-<div class="page-end">
-  <a href="{home_href}" class="page-end-logo" aria-label="Seed Nuggets home">
+<div class="page-end" id="page-end-version"{version_attr}>
+  <a href="{home_href}" class="page-end-logo" aria-label="Seed Nuggets home" onmouseenter="typeof seedNavShowVersion==='function'&&seedNavShowVersion(true)" onmouseleave="typeof seedNavShowVersion==='function'&&seedNavShowVersion(false)" ontouchstart="typeof seedNavShowVersion==='function'&&seedNavShowVersion(true)" ontouchend="typeof seedNavShowVersion==='function'&&seedNavShowVersion(false)">
     <img src="{logo_href}" alt="" width="32" height="32">
   </a>
+  <span class="page-end-version" aria-hidden="true">Build {build_version} · Rev {page_version} · {ts}</span>
 </div>
 '''
     return logo_block + "\n" + NAV_SCROLL_SCRIPT + "\n" + NAV_LISTS_DROPDOWN_SCRIPT + "\n" + SEARCH_DIALOG_HTML
@@ -285,6 +294,7 @@ window.seedNavRunSearch=function(q){
   if(!h&&q)h='<p class="search-no-results">No nuggets match.</p>';
   el.innerHTML=h;
 };
+window.seedNavShowVersion=function(show){var el=document.querySelector(".page-end-version");if(el)el.classList.toggle("page-end-version-visible",!!show);};
 document.addEventListener("keydown",function(e){if(e.key==="Escape"){var n=document.querySelector("nav");if(n&&n.classList.contains("nav-hamburger-open"))window.seedNavToggleMenu();else window.seedNavCloseSearch();}});
 document.addEventListener("DOMContentLoaded",function(){var p=document.getElementById("nav-hamburger-panel");if(p){p.style.display="none";var list=p.querySelector(".nav-hamburger-list");if(list)list.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){if(document.querySelector("nav").classList.contains("nav-hamburger-open"))window.seedNavToggleMenu();});});}});
 """
