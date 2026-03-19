@@ -96,7 +96,7 @@ def _input_files_for_page(main_path):
         if i < 0:
             break
         depth = 1
-        j = i + 8
+        j = i + 9
         while j < len(text) and depth:
             if text[j] == "(":
                 depth += 1
