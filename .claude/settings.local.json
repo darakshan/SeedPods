@@ -16,7 +16,9 @@
       "Bash(curl -s -A \"SeedPods/1.0 \\(educational project\\)\" \"https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=pair+production+bubble+chamber&srnamespace=6&format=json&srlimit=5\")",
       "Bash(python3 /Users/darakshan/Software/Python/SeedPods/scripts/fetch_images.py)",
       "Bash(gh run:*)",
-      "Bash(git -C /Users/darakshan/Software/Python/SeedPods remote -v)"
+      "Bash(git -C /Users/darakshan/Software/Python/SeedPods remote -v)",
+      "Bash(git push:*)",
+      "Bash(grep -E '^0[5-7][0-9]\\\\.md$')"
     ]
   }
 }

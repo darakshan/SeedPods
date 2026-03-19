@@ -1,0 +1,378 @@
+{
+  "build_version": 14,
+  "pages": {
+    "index.html": {
+      "hash": "35df598ea811317f69d68bb372e867e9ac96dcb00b682159e1b6765fca2fe8a8",
+      "page_version": 9
+    },
+    "001-caloric.html": {
+      "hash": "cde4dbeadee408c398266fff1548f031fc156aa4bdd7a1d881228c1b234815db",
+      "page_version": 4
+    },
+    "002-events.html": {
+      "hash": "8e6e2413717808ccfc974fb283442bb485b3918af4992ba01ed49b2c22ed868d",
+      "page_version": 4
+    },
+    "003-inside.html": {
+      "hash": "254407047bc7ad50c7957dec8454f4a720c9db6155a16272fdf4bdee3171e4ba",
+      "page_version": 4
+    },
+    "004-self.html": {
+      "hash": "ae83d8063c2ab03769c7eb98107219ea8794c97bee58c996a44680bb248dfcf8",
+      "page_version": 4
+    },
+    "005-freewill.html": {
+      "hash": "055b4cce3a528e6c5b0aa4f83d56c0735a9403777f360877a51df5612c1af526",
+      "page_version": 4
+    },
+    "006-output.html": {
+      "hash": "b935a6844d9be5242ac71f51fa172e75ed4a0d102eedb56d9e359ef27b8b829e",
+      "page_version": 5
+    },
+    "007-vacuum.html": {
+      "hash": "0e1ea5e1c5507ba6686a1cbe0aac67878dfe61bdbd663293471435e5659ba42e",
+      "page_version": 4
+    },
+    "008-fields.html": {
+      "hash": "aaaa35d8d5a239cc39a3c4a7a1cc01b8e72be4c987539476ef8294569d00cd0b",
+      "page_version": 4
+    },
+    "009-randomness.html": {
+      "hash": "2a9493592a24c4f00281c11def5a7ab2efb7c6d8f11d55a9c1a8616dd3c452c2",
+      "page_version": 4
+    },
+    "010-largenumbers.html": {
+      "hash": "4c8529efe2d401e358eed61b1767ca692086befcc0e9cb9371abaeeec7206a83",
+      "page_version": 4
+    },
+    "011-moreisdifferent.html": {
+      "hash": "d2a607ce3845430ec1449f4a63198e71cc188c78e707cd98ae74a5ffe3a4a28d",
+      "page_version": 3
+    },
+    "012-autopoiesis.html": {
+      "hash": "e1309141c3d87c78fe8210ffac680d47b887310590e313f36b41db9c0caed7ff",
+      "page_version": 3
+    },
+    "013-enactment.html": {
+      "hash": "8b403683dfc689f4b26b848bb500fa31eb9c07d0ae97b97194a5dfe6c9025c8f",
+      "page_version": 4
+    },
+    "014-cities.html": {
+      "hash": "ba17ffc3c603e21a5ea68bb2ea134c21dcd48a29736a3e412433483850e1af49",
+      "page_version": 4
+    },
+    "015-aliens.html": {
+      "hash": "c00b605df728330dde3746dcb62d9c2134d58c7f8314b54b253c3a5f545590c7",
+      "page_version": 4
+    },
+    "016-neuralnetwork.html": {
+      "hash": "21a2a4f4ba431150cdf81eeb5765a02f6454a6b1d9b1d17f636d5e2ea3c989f6",
+      "page_version": 4
+    },
+    "017-pastpresent.html": {
+      "hash": "dee91f34fcad13cc7f7978957998d1a1b426592a8a5858d7fa64e6e54c383b50",
+      "page_version": 3
+    },
+    "018-magnetization.html": {
+      "hash": "81fb9dfc75e4a1bbf599626d11db55f6025bd5da6c22d3f5841543d3685d850c",
+      "page_version": 4
+    },
+    "019-funerals.html": {
+      "hash": "063835993ea58816dea73e81c78dd4852bc29c5122353f8daab611c5fcc63df6",
+      "page_version": 4
+    },
+    "020-penrose.html": {
+      "hash": "119b714d2aca62562e709899b78e84fb4a00c8e0fb91860bb67af63f4bc18507",
+      "page_version": 3
+    },
+    "021-just.html": {
+      "hash": "fc560d477ca25b4315be87ad1c59485837028d67a8811ddfa50e29c8c5a51347",
+      "page_version": 4
+    },
+    "022-locked.html": {
+      "hash": "53e7508863218d4a4d57530da0e3b0338b3d8c18c59b7e1ad9e62d40309af77b",
+      "page_version": 5
+    },
+    "023-stories.html": {
+      "hash": "1343c57c36a9b39d7c3bf79e9645f4355ce1683d537cbbc5e27e43852db5bd6c",
+      "page_version": 4
+    },
+    "024-ghostmachine.html": {
+      "hash": "24e2a06351bd49bff880b9679af3c1d641c0617e99b04ec0d1bac57cef3e3e01",
+      "page_version": 4
+    },
+    "025-widechannel.html": {
+      "hash": "6df15c1e9237646947463c8f3cd3d1ef794bddbed53387c523758aff14df09f4",
+      "page_version": 4
+    },
+    "026-twotruths.html": {
+      "hash": "45aa0c63dbd8adda44228dc9650dff7646d9795ca4684762d1a34aad4324da61",
+      "page_version": 4
+    },
+    "027-usedtothink.html": {
+      "hash": "cfff6853b47eddebf6330eb14f6fa5e12cfd83c816bce1359f33ba7754212f24",
+      "page_version": 4
+    },
+    "028-network.html": {
+      "hash": "9e8b98917498b47a37e2106dcc6efa107f2ad84023162cef628bafd8a4490f4a",
+      "page_version": 4
+    },
+    "029-lighttime.html": {
+      "hash": "4e7fc2cee4dbb0e0e65bdf64290ddfcd4d3f51588cdbfe558f1dc31f82836528",
+      "page_version": 3
+    },
+    "030-interference.html": {
+      "hash": "ee99b71d395ba5ace329158eb12dfc14408d88b32919d67fc1835cce85443e9d",
+      "page_version": 4
+    },
+    "031-surfaceinside.html": {
+      "hash": "20645663fd86c94c784f9be9339504a2175154ca6ea3e4a78851d5319124a558",
+      "page_version": 4
+    },
+    "032-skyfossil.html": {
+      "hash": "8954ab7298fb818cf452cb4ae55801beee6d31f8fd86e6e626e68c4374ab42ab",
+      "page_version": 4
+    },
+    "033-edge.html": {
+      "hash": "a01b54eb9f1ce0ab73bc0fc8f6ed610185ca55721487530f13fab068514833d3",
+      "page_version": 3
+    },
+    "034-onerule.html": {
+      "hash": "c8e752c7a21280a45ed48458cd21f38d4d90405c3aec32d5fcde60cf87fb129b",
+      "page_version": 3
+    },
+    "035-simplestnumbers.html": {
+      "hash": "fd38e88ffbe0913a6697df256ad6264c91a989034219f39edc6f5f9c2c67d2b0",
+      "page_version": 3
+    },
+    "036-universenoticing.html": {
+      "hash": "85fd85deb5f908bd110392cb9c61c4b30beb64b24b7321663f397e0f9a446bba",
+      "page_version": 4
+    },
+    "037-assembly.html": {
+      "hash": "8b4ed134d5cde44d25b3bb1ef72069605831b986920a5d578bfba1a369f385e6",
+      "page_version": 4
+    },
+    "038-consonance-map.html": {
+      "hash": "a6a13b39d7bb3b8272be4bddfd805562bb958d734c8af966ef3d55bc04438974",
+      "page_version": 3
+    },
+    "040-stability.html": {
+      "hash": "c2927b6dca5971b4a6dbbfd341950fba9ffe5c1252de1bc43874a611b42b211d",
+      "page_version": 4
+    },
+    "041-colorwheel.html": {
+      "hash": "e00d2426f86f6e86e2ec8a55b15f48b7f0e1374b7126e074ebc970f42aa63cec",
+      "page_version": 3
+    },
+    "042-eyethinks.html": {
+      "hash": "2c10049d42526c8d9bd5b9e20c4e85cac08adb24b1f3880dd5d199868f698223",
+      "page_version": 4
+    },
+    "044-ai-retina.html": {
+      "hash": "2d387254f6a447c0580364c063a434c3c2d2b128e95883a7421256ce44809a58",
+      "page_version": 4
+    },
+    "045-baldwin.html": {
+      "hash": "8efd108f1b0073a7556afb35afa762d6cc2fde3fc488687ee84b581780ddaf44",
+      "page_version": 4
+    },
+    "046-thinkfast.html": {
+      "hash": "0a4ffb8bb1a5f6249c9eb5961664710a48eb16d563a0c807528585886bd6b5eb",
+      "page_version": 4
+    },
+    "047-ai-feeling.html": {
+      "hash": "bf9af997d4649c35b2d9e38350729782ddf23a4b1c2af7ea578cf0c1af9830cd",
+      "page_version": 3
+    },
+    "048-flashes.html": {
+      "hash": "e1f0032b72ef559c2eb842455598b4de0dd4133cc261ba17e4079eb8416ef5b3",
+      "page_version": 4
+    },
+    "049-strangeloop.html": {
+      "hash": "cdf953ca862468af7efa45f1bf007572f7554746922c60c875df66b856c34246",
+      "page_version": 4
+    },
+    "050-orthogonal.html": {
+      "hash": "1fe12df5587908b355d898d4e41028fb285844898f092e578f7627f33b382dcf",
+      "page_version": 3
+    },
+    "051-spacetime.html": {
+      "hash": "778290a3e1f261c0f4b2a28709838a21eb15ca62cbd1572764cc36df890a46f3",
+      "page_version": 4
+    },
+    "052-dichotomy.html": {
+      "hash": "75102de9337c8fc9f7bf692b1f9493d82a73dc23d8bb8944c67342d1c5c46759",
+      "page_version": 4
+    },
+    "053-dimensions.html": {
+      "hash": "8a01f77f06dea90666507fa250a8115fe04b6f51a22ac49a051fd34a82195915",
+      "page_version": 4
+    },
+    "054-bornharmonic.html": {
+      "hash": "cddabdd09937dd5587459946121aa31d5d9ee4a47570f92eb7b7fe87a83fa525",
+      "page_version": 4
+    },
+    "056-mandelneural.html": {
+      "hash": "32220900ee87519a416248053bb4086c8e5cdb7a5542506568f5484ab66f1c6a",
+      "page_version": 4
+    },
+    "057-superfarey.html": {
+      "hash": "ff3f33b544859e99faa8aad4e74730ee2d9e4e394cd4ae1602bce5a76dc60cbb",
+      "page_version": 4
+    },
+    "058-galacticnets.html": {
+      "hash": "fefebbf6cb9b7620f610d9c7155473439ffb3c959344335587018e972f546ba0",
+      "page_version": 3
+    },
+    "059-galaxyevolve.html": {
+      "hash": "5d5e577f7c7e904b2e4f97f58d9eb84f35ef6db54d5bd6b29dc751da82c9bc7d",
+      "page_version": 4
+    },
+    "060-worldtests.html": {
+      "hash": "0077ec9b3a03e9c945ecbd5708072091798dde7a566d71bfc1b63415857af654",
+      "page_version": 3
+    },
+    "061-babyuniverse.html": {
+      "hash": "994881cb785a2f81cc502828f8373f6318cc72420a2f4bd1e83ffa23ed8c5780",
+      "page_version": 4
+    },
+    "062-branchingdice.html": {
+      "hash": "fd727e4f7db1e5abefdcec3bbd47f876dcf9dfde88df6e84f34f2a21740e0d18",
+      "page_version": 4
+    },
+    "063-mandelcrystals.html": {
+      "hash": "f8bfaef910d3c7320fcc40d7c55717cbcae99e9f8fe90a8dd8e53f17f354c3f4",
+      "page_version": 4
+    },
+    "064-choicedimension.html": {
+      "hash": "8c4c1f75f8ba909d95b4e9ba7a6523dd267c76c45e771ee3b5c8a0d89e6541a5",
+      "page_version": 3
+    },
+    "065-feel-do.html": {
+      "hash": "68dbbc1fb6e687b13bc6764250b5a86c427935e10cce38a706994f251c8ba777",
+      "page_version": 4
+    },
+    "066-cosmicattractor.html": {
+      "hash": "a67af3e3be6ac3b83142446017c5ae63c68ec0d4bc15eb1d4a3261321a98600a",
+      "page_version": 3
+    },
+    "067-monads-holons.html": {
+      "hash": "df4093f7a8fce73acedb729a2fb0a15eed6c30e4a1340b55472bec31e3d8a848",
+      "page_version": 4
+    },
+    "068-bubbles.html": {
+      "hash": "5c4f95f0f7eb6f1f699142f98feb5e69372fdb9d533893f58cff1306df64905a",
+      "page_version": 4
+    },
+    "069-love.html": {
+      "hash": "5dffbe196b13d9194b600a49388d67af60708007577d6ae61a99b65dd7f57a36",
+      "page_version": 4
+    },
+    "070-harmony.html": {
+      "hash": "dcbf70967a22fb76b13db9e07e2ddd4c6721a07c9767a92d5792cfcdba47f3e8",
+      "page_version": 4
+    },
+    "071-beauty.html": {
+      "hash": "c25e802638c7110742944ca5abcf7f4d807d1de076e439f508a07f61ce8e7bb0",
+      "page_version": 4
+    },
+    "072-temperature.html": {
+      "hash": "ffebb9e3b75837703398f14c48bdd539d927d12a61ec04c43b29718bbb2e3a45",
+      "page_version": 6
+    },
+    "about.html": {
+      "hash": "f2db2f104abeb2e83742f9e7054d351a9d1f2b48320c8639734b80fffba0142b",
+      "page_version": 6
+    },
+    "bibliography.html": {
+      "hash": "f2db2f104abeb2e83742f9e7054d351a9d1f2b48320c8639734b80fffba0142b",
+      "page_version": 6
+    },
+    "glossary.html": {
+      "hash": "f2db2f104abeb2e83742f9e7054d351a9d1f2b48320c8639734b80fffba0142b",
+      "page_version": 6
+    },
+    "list.html": {
+      "hash": "f2db2f104abeb2e83742f9e7054d351a9d1f2b48320c8639734b80fffba0142b",
+      "page_version": 6
+    },
+    "map.html": {
+      "hash": "f2db2f104abeb2e83742f9e7054d351a9d1f2b48320c8639734b80fffba0142b",
+      "page_version": 6
+    },
+    "more.html": {
+      "hash": "f2db2f104abeb2e83742f9e7054d351a9d1f2b48320c8639734b80fffba0142b",
+      "page_version": 6
+    },
+    "internal.html": {
+      "hash": "27307a189f247e413ee2be6a3c5e4772eab27ea605eb2ecb79dde48088a2c091",
+      "page_version": 10
+    },
+    "about-audiences.html": {
+      "hash": "f2db2f104abeb2e83742f9e7054d351a9d1f2b48320c8639734b80fffba0142b",
+      "page_version": 6
+    },
+    "about-authors.html": {
+      "hash": "f2db2f104abeb2e83742f9e7054d351a9d1f2b48320c8639734b80fffba0142b",
+      "page_version": 6
+    },
+    "about-goals.html": {
+      "hash": "f2db2f104abeb2e83742f9e7054d351a9d1f2b48320c8639734b80fffba0142b",
+      "page_version": 6
+    },
+    "about-personal.html": {
+      "hash": "f2db2f104abeb2e83742f9e7054d351a9d1f2b48320c8639734b80fffba0142b",
+      "page_version": 6
+    },
+    "about-reviews.html": {
+      "hash": "f2db2f104abeb2e83742f9e7054d351a9d1f2b48320c8639734b80fffba0142b",
+      "page_version": 6
+    },
+    "internal-build.html": {
+      "hash": "f2db2f104abeb2e83742f9e7054d351a9d1f2b48320c8639734b80fffba0142b",
+      "page_version": 6
+    },
+    "internal-directives.html": {
+      "hash": "f2db2f104abeb2e83742f9e7054d351a9d1f2b48320c8639734b80fffba0142b",
+      "page_version": 6
+    },
+    "internal-early-structure.html": {
+      "hash": "f2db2f104abeb2e83742f9e7054d351a9d1f2b48320c8639734b80fffba0142b",
+      "page_version": 6
+    },
+    "internal-grammar.html": {
+      "hash": "f2db2f104abeb2e83742f9e7054d351a9d1f2b48320c8639734b80fffba0142b",
+      "page_version": 6
+    },
+    "internal-import-format.html": {
+      "hash": "f2db2f104abeb2e83742f9e7054d351a9d1f2b48320c8639734b80fffba0142b",
+      "page_version": 6
+    },
+    "internal-nugget-urls.html": {
+      "hash": "f2db2f104abeb2e83742f9e7054d351a9d1f2b48320c8639734b80fffba0142b",
+      "page_version": 6
+    },
+    "internal-scriptcraft.html": {
+      "hash": "f2db2f104abeb2e83742f9e7054d351a9d1f2b48320c8639734b80fffba0142b",
+      "page_version": 6
+    },
+    "internal-settings.html": {
+      "hash": "f2db2f104abeb2e83742f9e7054d351a9d1f2b48320c8639734b80fffba0142b",
+      "page_version": 6
+    },
+    "internal-structure.html": {
+      "hash": "f2db2f104abeb2e83742f9e7054d351a9d1f2b48320c8639734b80fffba0142b",
+      "page_version": 6
+    },
+    "internal-style-guidelines.html": {
+      "hash": "f2db2f104abeb2e83742f9e7054d351a9d1f2b48320c8639734b80fffba0142b",
+      "page_version": 6
+    },
+    "more-inside.html": {
+      "hash": "f2db2f104abeb2e83742f9e7054d351a9d1f2b48320c8639734b80fffba0142b",
+      "page_version": 6
+    }
+  },
+  "last_build_time": "2026-03-18T17:48:42.242781-07:00"
+}

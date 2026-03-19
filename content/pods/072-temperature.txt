@@ -4,7 +4,7 @@
 
 Temperature is another phenomenon that bridges physics, biology, and lived experience — and now AI. It manifests across all three: in the physical world, in human perception, in the computational.
 
-The idea of heat as flow goes back to caloric (@pod 001) — and yet we still live inside the metaphor. Brains overheat. Economies run hot or freeze. We speak of burning out, of frying, of being on fire.
+The idea of heat as flow goes back to caloric (see @link(1)) — and yet we still live inside the metaphor. Brains overheat. Economies run hot or freeze. We speak of burning out, of frying, of being on fire.
 
 At the other extreme: absolute zero, zero resistance, electrons flowing without friction. Superconductivity as the physics of pure, unimpeded relation. And at the human scale: being in the flow, frictionless, effortless.
 

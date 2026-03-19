@@ -1,7 +1,7 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{--ink:#000;--paper:#faf8f5;--warm:#c8a96e;--gold:#7a5210;--link:#b86d38;--dim:#8a7f6e;--accent:#2d4a3e;--line:#e0d8c8}
-html{font-size:19px}
-body{background:var(--paper);color:var(--ink);font-family:'Inter',system-ui,sans-serif;font-weight:400;min-height:100vh;line-height:1.7}
+html{font-size:17px}
+body{background:var(--paper);color:var(--ink);font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;min-height:100vh;line-height:1.36}
 a{color:inherit;text-decoration:none}
 .page-body a,.prose a{color:var(--link);text-decoration:none}
 .page-body a:hover,.prose a:hover{color:var(--warm)}
@@ -104,6 +104,10 @@ h2{font-size:1.6rem;font-weight:300;margin-bottom:1rem}
 @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
 .fade{animation:fadeUp .5s ease both}
 @media(max-width:640px){
+  html{font-size:15px}
+  body{font-family:'Inter',system-ui,sans-serif;line-height:1.6}
+  h1{font-size:clamp(1.6rem,8vw,2.4rem)}
+  h2{font-size:1.35rem}
   .nav-row,.wrap{padding-left:.75rem;padding-right:1.5rem}
   .wrap--list{margin-left:1.5rem;margin-right:1.5rem}
   .layer-tabs-inner{padding:.25rem 1.5rem}
@@ -303,6 +307,10 @@ details.category-group summary.index-tag-name::-webkit-details-marker{display:no
 .page-end-version{display:block;margin-top:.35rem;font-size:.75rem;opacity:0;visibility:hidden;transition:opacity .15s,visibility .15s}
 .page-end.page-end-version-visible .page-end-version,.page-end-version.page-end-version-visible{opacity:.7;visibility:visible}
 /* Mobile simulation (?mobile query param) */
+.mobile-sim{font-size:15px}
+.mobile-sim body{font-family:'Inter',system-ui,sans-serif;line-height:1.6}
+.mobile-sim h1{font-size:clamp(1.6rem,8vw,2.4rem)}
+.mobile-sim h2{font-size:1.35rem}
 .mobile-sim .nav-row,.mobile-sim .wrap{padding-left:.75rem;padding-right:1.5rem}
 .mobile-sim .wrap--list{margin-left:1.5rem;margin-right:1.5rem}
 .mobile-sim .layer-tabs-inner{padding:.25rem 1.5rem .25rem .75rem}
