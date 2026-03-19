@@ -74,7 +74,7 @@ VERT_PAD = 250
 EDGE_COLORS = (
     "#cc0000",
     "#e57300",
-    "#d4af37",
+    "#888888",
     "#00cc00",
     "#0000cc",
     "#6600cc",
@@ -214,6 +214,7 @@ MAP_FILTER_SCRIPT = """
   var catCbs        = document.querySelectorAll('.map-filter-cat');
   var statusItemCbs = document.querySelectorAll('.map-filter-status-item');
 
+  var selInfoEl = document.getElementById('map-selection-info');
   function apply(){
     var cats = [];
     catCbs.forEach(function(cb){ if(cb.checked) cats.push(cb.value); });
@@ -237,6 +238,14 @@ MAP_FILTER_SCRIPT = """
       var f=el.getAttribute('data-from'), t=el.getAttribute('data-to');
       el.classList.toggle('unselected',!(selected.has(f)&&selected.has(t)));
     });
+    if(selInfoEl){
+      var nc = document.querySelectorAll('.map-graph-node-wrap:not(.unselected)').length;
+      var edgeSet = new Set();
+      document.querySelectorAll('.map-graph-edge-wrap:not(.unselected)').forEach(function(el){
+        edgeSet.add(el.getAttribute('data-from')+','+el.getAttribute('data-to'));
+      });
+      selInfoEl.textContent = nc+' node'+(nc!==1?'s':'')+', '+edgeSet.size+' edge'+(edgeSet.size!==1?'s':'');
+    }
   }
   catCbs.forEach(function(cb){ cb.addEventListener('change',apply); });
   statusItemCbs.forEach(function(cb){ cb.addEventListener('change',apply); });
@@ -257,7 +266,7 @@ MAP_FILTER_SCRIPT = """
   var baseW    = svgEl ? parseFloat(svgEl.getAttribute('data-base-w'))    : 1800;
   var baseH    = svgEl ? parseFloat(svgEl.getAttribute('data-base-h'))    : 1900;
   var contentH = svgEl ? parseFloat(svgEl.getAttribute('data-content-h')) : 1400;
-  var zoomLevel = 1;
+  var zoomLevel = 1, normZoom = 1;
   var MIN_ZOOM = 0.25, MAX_ZOOM = 2, SQRT2 = Math.sqrt(2);
   var padX = 0, padY = 0;
 
@@ -272,7 +281,7 @@ MAP_FILTER_SCRIPT = """
       svgEl.setAttribute('width',  Math.round(baseW*zoomLevel));
       svgEl.setAttribute('height', Math.round(baseH*zoomLevel));
     }
-    if(zoomLabelEl) zoomLabelEl.textContent = formatZoom(zoomLevel);
+    if(zoomLabelEl) zoomLabelEl.textContent = formatZoom(zoomLevel/normZoom);
     if(cxBase!=null && wrapEl){
       wrapEl.scrollLeft = padX + cxBase*zoomLevel - wrapEl.clientWidth/2;
       wrapEl.scrollTop  = padY + cyBase*zoomLevel - wrapEl.clientHeight/2;
@@ -292,30 +301,40 @@ MAP_FILTER_SCRIPT = """
 
   if(wrapEl) wrapEl.addEventListener('touchstart',function(e){ if(e.touches.length>1) e.preventDefault(); },{passive:false});
 
-  function setupLayout(){
+  function setupLayout(resetScroll){
     var navEl     = document.querySelector('nav');
     var filtersEl = document.querySelector('.map-graph-filters');
     var navH      = navEl     ? navEl.offsetHeight     : 0;
-    if(filtersEl) filtersEl.style.top = navH+'px';
     var filtersH  = filtersEl ? filtersEl.offsetHeight : 0;
-    var remainH   = window.innerHeight - navH - filtersH;
-    if(wrapEl && remainH > 200) wrapEl.style.height = remainH+'px';
+    if(wrapEl) wrapEl.style.top = (navH + filtersH) + 'px';
     if(wrapEl && innerEl){
-      padX = Math.round(wrapEl.clientWidth  * 0.75);
-      padY = Math.round(wrapEl.clientHeight * 0.75);
+      padX = Math.round(wrapEl.clientWidth  * 0.2);
+      padY = Math.round(wrapEl.clientHeight * 0.2);
       innerEl.style.padding = padY+'px '+padX+'px';
     }
     if(wrapEl){
       var fitRaw = Math.min(wrapEl.clientWidth/baseW, wrapEl.clientHeight/contentH);
       var n = Math.round(Math.log(fitRaw)/Math.log(SQRT2));
       zoomLevel = Math.max(MIN_ZOOM, Math.min(MAX_ZOOM, Math.pow(SQRT2,n)));
+      normZoom = zoomLevel;
       applyZoom(null,null);
-      wrapEl.scrollLeft = (wrapEl.scrollWidth  - wrapEl.clientWidth)  / 2;
-      wrapEl.scrollTop  = (wrapEl.scrollHeight - wrapEl.clientHeight) / 2;
+      if(resetScroll){
+        var svgW = Math.round(baseW*zoomLevel);
+        var svgH = Math.round(baseH*zoomLevel);
+        wrapEl.scrollLeft = padX + Math.max(0, (svgW - wrapEl.clientWidth)  / 2);
+        wrapEl.scrollTop  = padY + Math.max(0, (svgH - wrapEl.clientHeight) / 2);
+      }
     }
   }
-  if(document.readyState==='complete'){ setupLayout(); }
-  else { window.addEventListener('load', setupLayout); }
+  setupLayout(true);
+  if(document.fonts) document.fonts.ready.then(function(){
+    var navEl = document.querySelector('nav');
+    var filtersEl = document.querySelector('.map-graph-filters');
+    var navH = navEl ? navEl.offsetHeight : 0;
+    var filtersH = filtersEl ? filtersEl.offsetHeight : 0;
+    if(wrapEl) wrapEl.style.top = (navH + filtersH) + 'px';
+  });
+  window.addEventListener('resize', function(){ setupLayout(true); });
 
   if (svgEl && typeof svgEl.createSVGPoint === 'function') {
     var pt = svgEl.createSVGPoint();
@@ -495,6 +514,8 @@ def map_directive_html(nuggets, status_order):
         '<span class="map-graph-key-item"><span class="map-graph-key-dot map-graph-key-from"></span> from</span>'
         '<span class="map-graph-key-item"><span class="map-graph-key-dot map-graph-key-to"></span> to</span>'
         '<span class="map-controls-divider" aria-hidden="true"></span>'
+        '<span id="map-selection-info" class="map-selection-info"></span>'
+        '<span class="map-controls-divider" aria-hidden="true"></span>'
         '<button class="map-zoom-btn" id="map-zoom-out" type="button">\u2212</button>'
         '<button class="map-zoom-btn" id="map-zoom-in" type="button">+</button>'
         '<span class="map-zoom-label">zoom</span>'
@@ -509,8 +530,10 @@ def map_directive_html(nuggets, status_order):
         + '</div>'
     )
     svg = build_graph_svg(nuggets, show_title=False, link_nuggets=True, node_radius=40)
+    page_style = '<style>html,body{overflow:hidden!important}.page-body{padding:0!important;animation:none!important;transform:none!important}.map-graph-wrap{position:fixed!important;left:0!important;right:0!important;bottom:0!important}.page-end{position:fixed!important;bottom:.5rem;left:50%!important;transform:translateX(-50%)!important;z-index:82!important;margin:0!important}</style>'
     return (
-        filters_html
+        page_style
+        + '\n' + filters_html
         + '\n<div class="map-graph-wrap"><div class="map-graph-inner">'
         + svg
         + "</div></div>"

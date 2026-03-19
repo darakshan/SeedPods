@@ -1,9 +1,9 @@
 {
-  "build_version": 33,
+  "build_version": 48,
   "pages": {
     "index.html": {
-      "hash": "2f52e2719217607f4e6bfcb270b500e8db39bc44e12311fd91e7fca91053a1ea",
-      "page_version": 20
+      "hash": "26de646ec6e2eaedf941f6f83a1eefd9528b61a5a00ac362e4c5b48c01ea4ba3",
+      "page_version": 25
     },
     "001-caloric.html": {
       "hash": "cde4dbeadee408c398266fff1548f031fc156aa4bdd7a1d881228c1b234815db",
@@ -282,101 +282,101 @@
       "page_version": 10
     },
     "about.html": {
-      "hash": "f2db2f104abeb2e83742f9e7054d351a9d1f2b48320c8639734b80fffba0142b",
-      "page_version": 6
+      "hash": "473cc17d4749757a63085221fb241d8034db4703ce6d6d093b377a31fc978e61",
+      "page_version": 7
     },
     "bibliography.html": {
-      "hash": "f2db2f104abeb2e83742f9e7054d351a9d1f2b48320c8639734b80fffba0142b",
-      "page_version": 6
+      "hash": "fc1913a9f446d18cd4e048cf2da0a76faf56c6e352b87f88e2e798eb0be5ff5c",
+      "page_version": 7
     },
     "glossary.html": {
-      "hash": "f2db2f104abeb2e83742f9e7054d351a9d1f2b48320c8639734b80fffba0142b",
-      "page_version": 6
+      "hash": "e980bcee3fc490c88f89af147b5030e330754c2ca8a279f0f28de7e5b953c5b2",
+      "page_version": 7
     },
     "list.html": {
-      "hash": "f2db2f104abeb2e83742f9e7054d351a9d1f2b48320c8639734b80fffba0142b",
-      "page_version": 6
+      "hash": "ed38886a5a75a32938de57de89d52e27c8dc086fd8d8f43490d3a6018de0b36a",
+      "page_version": 7
     },
     "map.html": {
-      "hash": "f2db2f104abeb2e83742f9e7054d351a9d1f2b48320c8639734b80fffba0142b",
-      "page_version": 6
+      "hash": "a4983b62e8d465ce3dbf95b8dc30cfb1b18d8ebd3fc9b7389ca5e727349d44d3",
+      "page_version": 2
     },
     "more.html": {
-      "hash": "f2db2f104abeb2e83742f9e7054d351a9d1f2b48320c8639734b80fffba0142b",
-      "page_version": 6
+      "hash": "9e5550a9ded8e15f493424369fcc5b2652a899b40313225d83113509ab99d320",
+      "page_version": 7
     },
     "internal.html": {
-      "hash": "0fa346f259e0ecb6e322583e9651be5426822b0d3f7afc288f44d6ff9e95d525",
-      "page_version": 17
+      "hash": "937b30c72695c7746c3c8d3e2b5375848b1ac8d2e42687c895b71a814d938395",
+      "page_version": 24
     },
     "about-audiences.html": {
-      "hash": "f2db2f104abeb2e83742f9e7054d351a9d1f2b48320c8639734b80fffba0142b",
-      "page_version": 6
+      "hash": "d2f94551a5c4c69efa6f899a8c53340a4367fdccc6eda2446fa9315c5a799fbb",
+      "page_version": 7
     },
     "about-authors.html": {
-      "hash": "f2db2f104abeb2e83742f9e7054d351a9d1f2b48320c8639734b80fffba0142b",
-      "page_version": 6
+      "hash": "e31cfb70bb4998dc964df81b3789b0b3e2cc22728ffb16169f4d2e4b5001495f",
+      "page_version": 7
     },
     "about-goals.html": {
-      "hash": "f2db2f104abeb2e83742f9e7054d351a9d1f2b48320c8639734b80fffba0142b",
-      "page_version": 6
+      "hash": "08eedb923dfb0c8d6a67421bd8145f2ce6051fd6f07356813e09bfb7b716e604",
+      "page_version": 7
     },
     "about-personal.html": {
-      "hash": "f2db2f104abeb2e83742f9e7054d351a9d1f2b48320c8639734b80fffba0142b",
-      "page_version": 6
+      "hash": "eed8e410e55547802b1710e1d5ef5d776966f1d889772d06ac9017a28f001672",
+      "page_version": 7
     },
     "about-reviews.html": {
-      "hash": "f2db2f104abeb2e83742f9e7054d351a9d1f2b48320c8639734b80fffba0142b",
-      "page_version": 6
+      "hash": "c67fa1fb17592fb7fbe11462a2ee5fc0a487874c541ff45a89bce286f19d6378",
+      "page_version": 7
     },
     "about-status.html": {
-      "hash": "f2db2f104abeb2e83742f9e7054d351a9d1f2b48320c8639734b80fffba0142b",
-      "page_version": 1
+      "hash": "50ddc550ffabaaecc26bd362e9ce2767e5b2618caa6e20ea196eba086edb1f9d",
+      "page_version": 2
     },
     "internal-build.html": {
-      "hash": "f2db2f104abeb2e83742f9e7054d351a9d1f2b48320c8639734b80fffba0142b",
-      "page_version": 6
+      "hash": "c0bfb0bedd55fd04f333b9f47de27094973c4b3a1b6d5aa0fc198b8f1bcd4599",
+      "page_version": 7
     },
     "internal-directives.html": {
-      "hash": "f2db2f104abeb2e83742f9e7054d351a9d1f2b48320c8639734b80fffba0142b",
-      "page_version": 6
+      "hash": "399d92f797db7c5b0895b4d470ce0640d25970c7b6b766093ed8ac3b162528d2",
+      "page_version": 7
     },
     "internal-early-structure.html": {
-      "hash": "f2db2f104abeb2e83742f9e7054d351a9d1f2b48320c8639734b80fffba0142b",
-      "page_version": 6
+      "hash": "8ebeb2d3d84221ddcf5ac6e99277984377233de5ddecc1dd3640280727f09dbf",
+      "page_version": 7
     },
     "internal-grammar.html": {
-      "hash": "f2db2f104abeb2e83742f9e7054d351a9d1f2b48320c8639734b80fffba0142b",
-      "page_version": 6
+      "hash": "3f603993d87ee32deb41e6709e1abbae09c3d1826b10830e7604f596bd4a99e4",
+      "page_version": 7
     },
     "internal-import-format.html": {
-      "hash": "f2db2f104abeb2e83742f9e7054d351a9d1f2b48320c8639734b80fffba0142b",
-      "page_version": 6
+      "hash": "c0bfb0bedd55fd04f333b9f47de27094973c4b3a1b6d5aa0fc198b8f1bcd4599",
+      "page_version": 7
     },
     "internal-nugget-urls.html": {
-      "hash": "f2db2f104abeb2e83742f9e7054d351a9d1f2b48320c8639734b80fffba0142b",
-      "page_version": 6
+      "hash": "9f947356ce11d76f45c0270463d9fc57f4b1f9590fbca63e879b34c5d7a09702",
+      "page_version": 7
     },
     "internal-scriptcraft.html": {
-      "hash": "f2db2f104abeb2e83742f9e7054d351a9d1f2b48320c8639734b80fffba0142b",
-      "page_version": 6
+      "hash": "3514196a6c0c850fc4df325a76b37ee37e078ba22471a992203044b3b8a3db2a",
+      "page_version": 7
     },
     "internal-settings.html": {
-      "hash": "f2db2f104abeb2e83742f9e7054d351a9d1f2b48320c8639734b80fffba0142b",
-      "page_version": 6
+      "hash": "d23c999010b337fad4e4f67397bdd8bbbb02a79c8e2ace36b7badc76bb3e7b48",
+      "page_version": 7
     },
     "internal-structure.html": {
-      "hash": "f2db2f104abeb2e83742f9e7054d351a9d1f2b48320c8639734b80fffba0142b",
-      "page_version": 6
+      "hash": "ffb41d09b7fbfcb07f44d24349646cbfaeab4d79e480fbcb0e4de904d365f370",
+      "page_version": 7
     },
     "internal-style-guidelines.html": {
-      "hash": "f2db2f104abeb2e83742f9e7054d351a9d1f2b48320c8639734b80fffba0142b",
-      "page_version": 6
+      "hash": "1f623fd4a75f3d9c980895e1c92c5d893c27429ed115d1cbc601caa5d137ba64",
+      "page_version": 7
     },
     "more-inside.html": {
-      "hash": "f2db2f104abeb2e83742f9e7054d351a9d1f2b48320c8639734b80fffba0142b",
-      "page_version": 6
+      "hash": "aca32e93efc0577978c9569f7b8d12d3f5470f4c153057ab461d9380c9edf3c3",
+      "page_version": 7
     }
   },
-  "last_build_time": "2026-03-19T10:53:12.797402-07:00"
+  "last_build_time": "2026-03-19T13:00:06.074170-07:00"
 }

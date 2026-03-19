@@ -90,7 +90,14 @@ The &#64; directives are:
 
 Inside pod source files (`content/pods/*.txt`), these directives are used (they are expanded when building pod HTML, not in the Markdown pipeline):
 
-- **&#64;link(NNN)** — In layer text (e.g. Surface, Depth, Provenance), replaced by an italicized link to that pod: `<em><a href="NNN-name.html">Title</a></em>`, using the pod's title as the link text. If no pod matches the number, the directive is left as-is.
+- **&#64;link(NNN)** — In layer text (e.g. Surface, Depth, Provenance), replaced by an italicized link to that pod: `<em><a href="NNN-name.html">Title</a></em>`, using the pod's title as the link text. 
+
+If no pod matches the number, the directive is left as-is. 
+
+DEVELOPER NOTES: missing pod should be a build error. These should work the same wherever they appear; anyhere in a pod or .md
+
+- **&#64;link(locator, text)** — Locator can be: a pod number (e.g. 002), a path to another .md file relative to the current file (e.g. inside.md from internal/), or a site filename (e.g. about.html). Referenced .md files are built with path-based names; a missing reference is an error.
+
 - **&#64;image(file, caption, credit)** — In any prose layer, replaced by a figure (image from `content/images/` copied to the site, 50% width, left-aligned, optional figcaption). Only the file argument is required; see the &#64;image section above.
 - **&#64;exercise(Try this: ...)** — In any prose layer (surface, depth, provenance, images), the text inside the parentheses is rendered as a call-to-action block (`<div class="cta">...</div>`) at that position. Parentheses must balance if the text contains `)`. The inner text may contain &#64;link(NNN).
 - **&#64;warn(message)** — In any prose layer, the text inside the parentheses is rendered as a notice block with a vertical bar to the left (`<div class="warn-notice">...</div>`), same style as the proto and rough notices. Use for editorial caveats such as flagging speculative content.

@@ -163,6 +163,7 @@ def _shared_md_inputs(index_copy, status_order, explainer_terms):
     cats_json = CONFIG_DIR / "categories.json"
     if cats_json.exists():
         out.add(cats_json)
+    out.update((_ROOT / "src").glob("*.py"))
     return out
 
 
@@ -220,10 +221,10 @@ def _get_inputs_for_page(page_id, nuggets, index_copy, status_order, explainer_t
                         if p.is_file():
                             out.add(p)
                             break
-        cats_json = CONFIG_DIR / "categories.json"
-        if cats_json.exists():
-            out.add(cats_json)
-        return out
+            cats_json = CONFIG_DIR / "categories.json"
+            if cats_json.exists():
+                out.add(cats_json)
+            return out
     if page_id == "internal.html":
         internal_md = INTERNAL_DIR / "page.md"
         out.update(_input_files_for_page(internal_md))
