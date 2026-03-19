@@ -1,9 +1,9 @@
 {
-  "build_version": 17,
+  "build_version": 33,
   "pages": {
     "index.html": {
-      "hash": "9c5791179d518f3545338c6acf7f87aaa26a40cbcaed69ef02502ed0df67fe43",
-      "page_version": 12
+      "hash": "2f52e2719217607f4e6bfcb270b500e8db39bc44e12311fd91e7fca91053a1ea",
+      "page_version": 20
     },
     "001-caloric.html": {
       "hash": "cde4dbeadee408c398266fff1548f031fc156aa4bdd7a1d881228c1b234815db",
@@ -34,8 +34,8 @@
       "page_version": 4
     },
     "008-fields.html": {
-      "hash": "aaaa35d8d5a239cc39a3c4a7a1cc01b8e72be4c987539476ef8294569d00cd0b",
-      "page_version": 4
+      "hash": "48c677696a55a5f82ab90f049b55871b8e225b4a0dd294cb1b46f09ad8b16055",
+      "page_version": 5
     },
     "009-randomness.html": {
       "hash": "2a9493592a24c4f00281c11def5a7ab2efb7c6d8f11d55a9c1a8616dd3c452c2",
@@ -82,8 +82,8 @@
       "page_version": 4
     },
     "020-penrose.html": {
-      "hash": "119b714d2aca62562e709899b78e84fb4a00c8e0fb91860bb67af63f4bc18507",
-      "page_version": 3
+      "hash": "0a65727ff34b211b9eb41953cad1d5dafe18ee433f8092330ad637b2ccf0f318",
+      "page_version": 4
     },
     "021-just.html": {
       "hash": "fc560d477ca25b4315be87ad1c59485837028d67a8811ddfa50e29c8c5a51347",
@@ -170,8 +170,8 @@
       "page_version": 5
     },
     "044-ai-retina.html": {
-      "hash": "6495f95f3690a1a2de577235b425f13ea99f31933e180a6d310ad03a0e604578",
-      "page_version": 5
+      "hash": "83c0e5617fa88367c5d7019a9906d45d129b8da81769e037d495f14c13e0e992",
+      "page_version": 6
     },
     "045-baldwin.html": {
       "hash": "f5d3378a7e1ef0596b786104a0e4c667ba7fc267c07e9d39da0c36e6c187f540",
@@ -279,7 +279,7 @@
     },
     "072-temperature.html": {
       "hash": "4743e4c0420562aa456070c4b71a4fb8a81b9db9555ed2af57ad6868bbeae3d8",
-      "page_version": 7
+      "page_version": 10
     },
     "about.html": {
       "hash": "f2db2f104abeb2e83742f9e7054d351a9d1f2b48320c8639734b80fffba0142b",
@@ -306,8 +306,8 @@
       "page_version": 6
     },
     "internal.html": {
-      "hash": "39c1841bd3449a7adf354261eb3a7234c5ac8812f83949aa67736a06808dedaf",
-      "page_version": 13
+      "hash": "0fa346f259e0ecb6e322583e9651be5426822b0d3f7afc288f44d6ff9e95d525",
+      "page_version": 17
     },
     "about-audiences.html": {
       "hash": "f2db2f104abeb2e83742f9e7054d351a9d1f2b48320c8639734b80fffba0142b",
@@ -328,6 +328,10 @@
     "about-reviews.html": {
       "hash": "f2db2f104abeb2e83742f9e7054d351a9d1f2b48320c8639734b80fffba0142b",
       "page_version": 6
+    },
+    "about-status.html": {
+      "hash": "f2db2f104abeb2e83742f9e7054d351a9d1f2b48320c8639734b80fffba0142b",
+      "page_version": 1
     },
     "internal-build.html": {
       "hash": "f2db2f104abeb2e83742f9e7054d351a9d1f2b48320c8639734b80fffba0142b",
@@ -374,5 +378,5 @@
       "page_version": 6
     }
   },
-  "last_build_time": "2026-03-18T19:40:45.651750-07:00"
+  "last_build_time": "2026-03-19T10:53:12.797402-07:00"
 }

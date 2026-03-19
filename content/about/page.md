@@ -2,7 +2,7 @@
 
 SeedPods is an evolving collection of related ideas around our deepest questions. The most complete ones are offered in multiple forms -- surface, depth, dramatic script, visuals.
 
-It's is a living archive of thoughts I've been gathering all my life.  Pods are being added and refined, links drawn, references clarified all the time. The newest ideas, disorganized thoughts I call protopods, are listed on More/Internal documentation.
+It's is a living archive of thoughts I've been gathering all his life.  Pods are being added and refined, links drawn, references clarified all the time. The newest ideas, disorganized thoughts I call protopods, are listed on More/Internal documentation.
 
 A deep purpose of this project is intuition repair — our own as much as anyone's. Most of these seed pods are not introducing new information. They are revisiting assumptions so familiar they've become invisible. Each seed pod earns its place by containing a genuine surprise: a moment where the world turns out to be slightly different from what we'd been assuming. The surprise is the point.
 
@@ -12,6 +12,8 @@ This website is under construction.  It contains TBDs, Warnings, incompletene se
 
 Some day, inshallah, some or all of these pods will turned into a book, or a movie, or a series of articles, or who knows what, in a linear progression. Time will tell.
 
+- Darakshan
+
 ### More about SeedPods
 
 - @link(goals.md)
@@ -19,6 +21,7 @@ Some day, inshallah, some or all of these pods will turned into a book, or a mov
 - @link(audiences.md)
 - @link(reviews.md)
 - @link(personal.md)
+- @link(status.md)
 
 ### Acknowledgements
 

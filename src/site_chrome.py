@@ -144,8 +144,8 @@ def nav(from_d=False, from_nuggets=False, layer_tabs_html=None):
     goto_li = (
         '<li class="nav-goto-wrap">'
         '<label for="nav-goto-num" class="sr-only">Goto pod</label>'
-        '<button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo(this);return false">Go</button>'
         '<input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" onkeydown="if(event.key===\'Enter\'){event.preventDefault();seedNavGoFromInput(this);}">'
+        '<button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo(this);return false">Go</button>'
         '</li>'
     )
     center_links = search_li + goto_li

@@ -13,7 +13,7 @@ from pathlib import Path
 
 KNOWN_VERBS = {
     "include", "samples", "nuggets", "pods", "categories", "glossary", "bibliography", "index", "map",
-    "timestamp", "link", "note", "exercise", "nugget", "pod", "image", "setting", "warn",
+    "timestamp", "link", "note", "exercise", "nugget", "image", "setting", "warn",
 }
 
 _ROOT = Path(__file__).resolve().parent.parent

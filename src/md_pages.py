@@ -276,7 +276,7 @@ def _render_categories_html(nuggets, status_order, copy, base_href="", content_d
             by_category[cat] = []
         by_category[cat].append(n)
     for cat in by_category:
-        by_category[cat] = sorted(by_category[cat], key=lambda n: (key_status(n), key_num(n)))
+        by_category[cat] = sorted(by_category[cat], key=key_num)
 
     def details_block(entries, label, cat):
         inner = "\n    ".join(

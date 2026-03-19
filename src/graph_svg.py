@@ -136,13 +136,13 @@ def build_graph_svg(
     view_height = height + 2 * VERT_PAD
     lines = []
     lines.append(
-        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 {} {} {}" class="map-graph-svg" width="100%" height="auto">'.format(
-            -VERT_PAD, width, view_height
+        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 {} {} {}" class="map-graph-svg" width="{}" height="{}" data-base-w="{}" data-base-h="{}" data-content-h="{}">'.format(
+            -VERT_PAD, width, view_height, width, view_height, width, view_height, height
         )
     )
     bullet_r = 8
     lines.append('  <defs>')
-    lines.append('    <style>.map-graph-edge{stroke-width:3;fill:none}.map-graph-edge-wrap.unselected .map-graph-edge,.map-graph-edge-wrap.unselected .map-graph-bullet{opacity:0.12}.map-graph-node{fill:#fff;stroke:#c8a96e;stroke-width:1.5}.map-graph-label{font-family:system-ui,sans-serif;font-size:19px;fill:#000}.map-graph-node-link:hover .map-graph-node{stroke:#000;stroke-width:2}.map-graph-node-wrap.unselected{opacity:0.4}</style>')
+    lines.append('    <style>.map-graph-edge{stroke-width:3;fill:none}.map-graph-edge-wrap.unselected .map-graph-edge,.map-graph-edge-wrap.unselected .map-graph-bullet{opacity:0.05}.map-graph-edge-wrap:not(.unselected) .map-graph-edge,.map-graph-edge-wrap:not(.unselected) .map-graph-bullet{opacity:0.5}.map-graph-node{fill:#fff;stroke:#c8a96e;stroke-width:1.5}.map-graph-label{font-family:system-ui,sans-serif;font-size:19px;fill:#000}.map-graph-node-link:hover .map-graph-node{stroke:#000;stroke-width:2}.map-graph-node-wrap.unselected{opacity:0.4}</style>')
     lines.append("  </defs>")
 
     edge_data = []
@@ -211,37 +211,112 @@ MIN_TAG_COUNT_FOR_MAP = 3
 MAP_FILTER_SCRIPT = """
 <script>
 (function(){
-  var tagSel = document.getElementById('map-filter-tag');
-  var statusSel = document.getElementById('map-filter-status');
+  var catCbs        = document.querySelectorAll('.map-filter-cat');
+  var statusItemCbs = document.querySelectorAll('.map-filter-status-item');
+
   function apply(){
-    var tagVal = tagSel && tagSel.value;
-    var statusVal = statusSel && statusSel.value;
+    var cats = [];
+    catCbs.forEach(function(cb){ if(cb.checked) cats.push(cb.value); });
+    var statuses = [];
+    statusItemCbs.forEach(function(cb){ if(cb.checked) statuses.push(cb.value); });
+    var anyFilter = cats.length > 0 || statuses.length > 0;
     document.querySelectorAll('.map-graph-node-wrap').forEach(function(el){
-      var tags = (el.getAttribute('data-tags') || '').split(',').map(function(s){ return s.trim(); });
-      var status = el.getAttribute('data-status') || '';
-      var tagMatch = !tagVal || tags.indexOf(tagVal) >= 0;
-      var statusMatch = !statusVal || status === statusVal;
-      el.classList.toggle('unselected', !(tagMatch && statusMatch));
+      var tags=(el.getAttribute('data-tags')||'').split(',').map(function(s){ return s.trim(); });
+      var status=el.getAttribute('data-status')||'';
+      var catMatch=cats.length===0||cats.some(function(c){ return tags.indexOf(c)>=0; });
+      var statusMatch=statuses.length===0||statuses.indexOf(status)>=0;
+      el.classList.toggle('unselected',!(catMatch&&statusMatch));
     });
-    var selected = new Set();
-    document.querySelectorAll('.map-graph-node-wrap:not(.unselected)').forEach(function(el){
-      selected.add(el.getAttribute('data-nugget'));
-    });
+    var selected=new Set();
+    if(anyFilter){
+      document.querySelectorAll('.map-graph-node-wrap:not(.unselected)').forEach(function(n){
+        selected.add(n.getAttribute('data-nugget'));
+      });
+    }
     document.querySelectorAll('.map-graph-edge-wrap').forEach(function(el){
-      var fromId = el.getAttribute('data-from');
-      var toId = el.getAttribute('data-to');
-      var connected = selected.has(fromId) && selected.has(toId);
-      el.classList.toggle('unselected', !connected);
+      var f=el.getAttribute('data-from'), t=el.getAttribute('data-to');
+      el.classList.toggle('unselected',!(selected.has(f)&&selected.has(t)));
     });
   }
-  if (tagSel) tagSel.addEventListener('change', apply);
-  if (statusSel) statusSel.addEventListener('change', apply);
+  catCbs.forEach(function(cb){ cb.addEventListener('change',apply); });
+  statusItemCbs.forEach(function(cb){ cb.addEventListener('change',apply); });
+  document.querySelectorAll('.map-row-btn').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var action=btn.getAttribute('data-action');
+      var cbs=(btn.getAttribute('data-target')==='cat')?catCbs:statusItemCbs;
+      cbs.forEach(function(cb){ cb.checked=(action==='all'); });
+      apply();
+    });
+  });
   apply();
-  var wrap = document.querySelector('.map-graph-wrap');
-  if (wrap && wrap.scrollWidth > wrap.clientWidth) wrap.scrollLeft = (wrap.scrollWidth - wrap.clientWidth) / 2;
-  if (wrap && wrap.scrollHeight > wrap.clientHeight) wrap.scrollTop = (wrap.scrollHeight - wrap.clientHeight) / 2;
 
-  var svgEl = document.querySelector('.map-graph-svg');
+  var svgEl       = document.querySelector('.map-graph-svg');
+  var wrapEl      = document.querySelector('.map-graph-wrap');
+  var innerEl     = wrapEl ? wrapEl.querySelector('.map-graph-inner') : null;
+  var zoomLabelEl = document.getElementById('map-zoom-level');
+  var baseW    = svgEl ? parseFloat(svgEl.getAttribute('data-base-w'))    : 1800;
+  var baseH    = svgEl ? parseFloat(svgEl.getAttribute('data-base-h'))    : 1900;
+  var contentH = svgEl ? parseFloat(svgEl.getAttribute('data-content-h')) : 1400;
+  var zoomLevel = 1;
+  var MIN_ZOOM = 0.25, MAX_ZOOM = 2, SQRT2 = Math.sqrt(2);
+  var padX = 0, padY = 0;
+
+  function formatZoom(z){
+    if(z>=10) return z.toFixed(0)+'\u00d7';
+    if(z>=1)  return z.toFixed(1)+'\u00d7';
+    return z.toFixed(2)+'\u00d7';
+  }
+  function applyZoom(cxBase, cyBase){
+    zoomLevel = Math.max(MIN_ZOOM, Math.min(MAX_ZOOM, zoomLevel));
+    if(svgEl){
+      svgEl.setAttribute('width',  Math.round(baseW*zoomLevel));
+      svgEl.setAttribute('height', Math.round(baseH*zoomLevel));
+    }
+    if(zoomLabelEl) zoomLabelEl.textContent = formatZoom(zoomLevel);
+    if(cxBase!=null && wrapEl){
+      wrapEl.scrollLeft = padX + cxBase*zoomLevel - wrapEl.clientWidth/2;
+      wrapEl.scrollTop  = padY + cyBase*zoomLevel - wrapEl.clientHeight/2;
+    }
+  }
+  function zoomBy(factor){
+    var oldZoom=zoomLevel;
+    zoomLevel=zoomLevel*factor;
+    var cx=wrapEl ? (wrapEl.scrollLeft+wrapEl.clientWidth/2 -padX)/oldZoom : null;
+    var cy=wrapEl ? (wrapEl.scrollTop +wrapEl.clientHeight/2-padY)/oldZoom : null;
+    applyZoom(cx,cy);
+  }
+  var zoomInBtn  = document.getElementById('map-zoom-in');
+  var zoomOutBtn = document.getElementById('map-zoom-out');
+  if(zoomInBtn)  zoomInBtn.addEventListener('click', function(){ zoomBy(SQRT2);     });
+  if(zoomOutBtn) zoomOutBtn.addEventListener('click', function(){ zoomBy(1/SQRT2); });
+
+  if(wrapEl) wrapEl.addEventListener('touchstart',function(e){ if(e.touches.length>1) e.preventDefault(); },{passive:false});
+
+  function setupLayout(){
+    var navEl     = document.querySelector('nav');
+    var filtersEl = document.querySelector('.map-graph-filters');
+    var navH      = navEl     ? navEl.offsetHeight     : 0;
+    if(filtersEl) filtersEl.style.top = navH+'px';
+    var filtersH  = filtersEl ? filtersEl.offsetHeight : 0;
+    var remainH   = window.innerHeight - navH - filtersH;
+    if(wrapEl && remainH > 200) wrapEl.style.height = remainH+'px';
+    if(wrapEl && innerEl){
+      padX = Math.round(wrapEl.clientWidth  * 0.75);
+      padY = Math.round(wrapEl.clientHeight * 0.75);
+      innerEl.style.padding = padY+'px '+padX+'px';
+    }
+    if(wrapEl){
+      var fitRaw = Math.min(wrapEl.clientWidth/baseW, wrapEl.clientHeight/contentH);
+      var n = Math.round(Math.log(fitRaw)/Math.log(SQRT2));
+      zoomLevel = Math.max(MIN_ZOOM, Math.min(MAX_ZOOM, Math.pow(SQRT2,n)));
+      applyZoom(null,null);
+      wrapEl.scrollLeft = (wrapEl.scrollWidth  - wrapEl.clientWidth)  / 2;
+      wrapEl.scrollTop  = (wrapEl.scrollHeight - wrapEl.clientHeight) / 2;
+    }
+  }
+  if(document.readyState==='complete'){ setupLayout(); }
+  else { window.addEventListener('load', setupLayout); }
+
   if (svgEl && typeof svgEl.createSVGPoint === 'function') {
     var pt = svgEl.createSVGPoint();
     var dragState = { active: false, wrap: null, g: null, startX: 0, startY: 0, startDx: 0, startDy: 0, didMove: false };
@@ -377,10 +452,9 @@ MAP_FILTER_SCRIPT = """
     document.addEventListener('mouseup', function() { endDrag(); });
     document.addEventListener('mouseleave', function() { endDrag(); });
 
-    var wrapEl = document.querySelector('.map-graph-wrap');
     if (wrapEl) {
       wrapEl.addEventListener('touchstart', function(e) {
-        if (e.target.closest('.map-graph-node-wrap')) {
+        if (e.touches.length === 1 && e.target.closest('.map-graph-node-wrap')) {
           var wrap = e.target.closest('.map-graph-node-wrap');
           startDrag(wrap, e.touches[0].clientX, e.touches[0].clientY);
         }
@@ -402,32 +476,41 @@ MAP_FILTER_SCRIPT = """
 def map_directive_html(nuggets, status_order):
     """HTML for the @map directive: filters, key, interactive graph SVG, and filter/drag script."""
     categories = sorted(set(n.get("category", "") for n in nuggets if n.get("category", "")))
-    tags_with_min = categories
-    category_opts = '<option value="">All</option>' + "".join(
-        '<option value="{}">{}</option>'.format(_html.escape(t), _html.escape(t)) for t in tags_with_min
+    cat_cbs = "".join(
+        '<label class="map-cb-label"><input type="checkbox" class="map-filter-cat" value="{}"{}> {}</label>'.format(
+            _html.escape(t), ' checked' if t.lower() == "consciousness" else "", _html.escape(t)
+        )
+        for t in categories
     )
-    status_opts = '<option value="">All</option>' + "".join(
-        '<option value="{}">{}</option>'.format(_html.escape(s), _html.escape(s)) for s in (status_order or [])
+    status_cbs = "".join(
+        '<label class="map-cb-label"><input type="checkbox" class="map-filter-status-item" value="{}"> {}</label>'.format(
+            _html.escape(s), _html.escape(s)
+        )
+        for s in (status_order or [])
+    )
+    row_btns_cat    = '<span class="map-row-btns"><button type="button" class="map-row-btn" data-action="all" data-target="cat">all</button><button type="button" class="map-row-btn" data-action="none" data-target="cat">none</button></span>'
+    row_btns_status = '<span class="map-row-btns"><button type="button" class="map-row-btn" data-action="all" data-target="status">all</button><button type="button" class="map-row-btn" data-action="none" data-target="status">none</button></span>'
+    controls_html = (
+        '<div class="map-controls-top">'
+        '<span class="map-graph-key-item"><span class="map-graph-key-dot map-graph-key-from"></span> from</span>'
+        '<span class="map-graph-key-item"><span class="map-graph-key-dot map-graph-key-to"></span> to</span>'
+        '<span class="map-controls-divider" aria-hidden="true"></span>'
+        '<button class="map-zoom-btn" id="map-zoom-out" type="button">\u2212</button>'
+        '<button class="map-zoom-btn" id="map-zoom-in" type="button">+</button>'
+        '<span class="map-zoom-label">zoom</span>'
+        '<span id="map-zoom-level" class="map-zoom-level">1.0\u00d7</span>'
+        '</div>'
     )
     filters_html = (
         '<div class="map-graph-filters">'
-        '<label for="map-filter-tag">Category</label>'
-        '<select id="map-filter-tag" aria-label="Filter by tag">' + category_opts + '</select>'
-        ' <label for="map-filter-status">Status</label>'
-        '<select id="map-filter-status" aria-label="Filter by status">' + status_opts + '</select>'
-        "</div>"
-    )
-    key_html = (
-        '<div class="map-graph-key" aria-hidden="true">'
-        '<span class="map-graph-key-item"><span class="map-graph-key-dot map-graph-key-from"></span> from</span>'
-        ' <span class="map-graph-key-item"><span class="map-graph-key-dot map-graph-key-to"></span> to</span>'
-        '</div>'
+        + controls_html
+        + '<div class="map-filter-row">' + cat_cbs + row_btns_cat + '</div>'
+        + '<div class="map-filter-row map-filter-row--status">' + status_cbs + row_btns_status + '</div>'
+        + '</div>'
     )
     svg = build_graph_svg(nuggets, show_title=False, link_nuggets=True, node_radius=40)
     return (
         filters_html
-        + "\n"
-        + key_html
         + '\n<div class="map-graph-wrap"><div class="map-graph-inner">'
         + svg
         + "</div></div>"
