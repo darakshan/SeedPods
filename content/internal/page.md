@@ -18,6 +18,8 @@ Format of importable .md files (for primordia-style multi-pod sources): @link(im
 
 Content directives: @link(directives.md, directives)
 
+Pod images (specs, naming, workflow): @link(images.md, images)
+
 Style guidleines for writing prose: @link(style-guidelines.md, style)
 
 Style guidelines for writing scripts: @link(scriptcraft.md, scriptcraft)

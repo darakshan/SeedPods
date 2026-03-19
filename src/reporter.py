@@ -67,10 +67,15 @@ def has_warnings():
     return len(_warnings) > 0
 
 
-def print_all():
+def note_count():
+    return len(_notes)
+
+
+def print_all(show_notes=True):
     for line in _errors:
         print(f"Error: {line}", file=sys.stderr)
     for line in _warnings:
         print(f"Warning: {line}", file=sys.stderr)
-    for line in _notes:
-        print(f"Note: {line}", file=sys.stderr)
+    if show_notes:
+        for line in _notes:
+            print(f"Note: {line}", file=sys.stderr)

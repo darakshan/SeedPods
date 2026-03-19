@@ -8,7 +8,7 @@ import html as _html
 from category_colors import category_css_slug, load_category_colors
 from explainers_glossary import build_explainers_page, build_glossary_body, build_glossary_page, load_explainers_csv, tag_slug
 from graph_svg import map_directive_html
-from md_pages import process_md_to_html, expand_links
+from md_pages import process_md_to_html
 from nugget_layers import (
     _assemble_layer_html,
     _layer_prose_to_html,
@@ -60,10 +60,9 @@ def build_nugget(n, all_nuggets, link_errors=None, site_dir=None):
     related_nums = n.get("related", [])
     layers = n.get("layers", {})
 
-    link_context = {"nuggets": all_nuggets, "content_dir": CONTENT_DIR, "warn": _warn, "link_errors": link_errors}
+    link_context = {"nuggets": all_nuggets, "content_dir": CONTENT_DIR, "base_dir": NUGGETS_DIR, "warn": _warn, "link_errors": link_errors}
     if site_dir is not None:
         link_context["site_dir"] = site_dir
-    link_base_dir = NUGGETS_DIR
 
     tag_html = f'<a href="index.html#{tag_slug(category)}" class="tag">{category}</a>' if category else ""
 
@@ -92,7 +91,7 @@ def build_nugget(n, all_nuggets, link_errors=None, site_dir=None):
       </a>"""
         related_cards_html = f'<div class="related-grid">{cards}\n      </div>'
 
-    surface_html = _layer_prose_to_html(layers.get("surface", "TBD"), all_nuggets, link_context, link_base_dir)
+    surface_html = _layer_prose_to_html(layers.get("surface", "TBD"), all_nuggets, link_context)
     is_proto = status == "proto"
     is_rough = status == "rough"
     layer_order = LAYER_ORDER_PROTO if is_proto else LAYER_ORDER
@@ -106,13 +105,13 @@ def build_nugget(n, all_nuggets, link_errors=None, site_dir=None):
 
     def layer_body(layer_id):
         if layer_id == "brief":
-            brief_html = _layer_prose_to_html(layers.get("brief", "TBD"), all_nuggets, link_context, link_base_dir)
+            brief_html = _layer_prose_to_html(layers.get("brief", "TBD"), all_nuggets, link_context)
             if is_proto:
                 return PROTO_NOTICE_HTML + "\n    " + brief_html
             return brief_html
         if layer_id == "references":
             prov_raw = layers.get("provenance", "TBD")
-            prov_html = "" if section_is_tbd(prov_raw) else _layer_prose_to_html(prov_raw, all_nuggets, link_context, link_base_dir)
+            prov_html = "" if section_is_tbd(prov_raw) else _layer_prose_to_html(prov_raw, all_nuggets, link_context)
             parts = []
             if prov_html:
                 parts.append(f'<div class="prose">{prov_html}</div>')
@@ -147,12 +146,9 @@ def build_nugget(n, all_nuggets, link_errors=None, site_dir=None):
             return surface_html
         raw = layers.get(layer_id, "TBD")
         if layer_id == "script":
-            segments, cta_htmls = expand_layer_directives(raw, all_nuggets)
-            def script_render(seg):
-                expanded = expand_links(seg, link_context, link_base_dir) if (link_context and link_base_dir) else seg
-                return script_to_html(expanded)
-            return _assemble_layer_html(segments, cta_htmls, script_render)
-        return _layer_prose_to_html(raw, all_nuggets, link_context, link_base_dir)
+            segments, cta_htmls = expand_layer_directives(raw, all_nuggets, extra_context=link_context)
+            return _assemble_layer_html(segments, cta_htmls, script_to_html)
+        return _layer_prose_to_html(raw, all_nuggets, link_context)
 
     tabs_parts = []
     for layer_id, label in layer_order:

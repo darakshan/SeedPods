@@ -7,7 +7,7 @@ import re
 from pathlib import Path
 
 from directive import image_directive_handler, process_directives
-from md_pages import expand_links
+from md_pages import _md_link_handler, _md_setting_handler, _md_timestamp_handler
 from nugget_parser import expand_nugget_directives, section_is_tbd
 
 _LIST_MARKERS = ("- ", "* ")
@@ -75,6 +75,13 @@ def _layer_nugget_handler(_verb, content, context):
     from nugget_parser import nugget_by_number_flex, nugget_tag
     n = nugget_by_number_flex(context["all_nuggets"], content.strip())
     if n is None:
+        num = content.strip()
+        link_errors = context.get("link_errors")
+        if link_errors is not None:
+            link_errors.append(f"@link: nugget {num!r} not found")
+        else:
+            warn = context.get("warn", lambda msg, filepath=None: None)
+            warn(f"@link: nugget {num!r} not found")
         return None
     title = n.get("title", "Untitled")
     filename = n.get("filename", "")
@@ -102,23 +109,36 @@ def _layer_warn_handler(_verb, content, context):
 
 
 def expand_layer_directives(raw, all_nuggets, filepath=None, extra_context=None):
-    """Expand @nugget, @exercise, 
-@image in layer text via directive.process_directives. Returns (segments, cta_htmls)."""
+    """Expand directives in layer text via directive.process_directives. Returns (segments, cta_htmls)."""
     if not raw:
         return [], []
+    cta_htmls = []
+    handlers = {
+        "nugget": _layer_nugget_handler,
+        "exercise": _layer_exercise_handler,
+        "warn": _layer_warn_handler,
+        "image": image_directive_handler,
+        "link": _md_link_handler,
+        "timestamp": _md_timestamp_handler,
+        "setting": _md_setting_handler,
+    }
     ctx = {
         "warn": lambda msg, filepath=None: None,
         "notes": [],
-        "cta_htmls": [],
+        "cta_htmls": cta_htmls,
         "all_nuggets": all_nuggets,
-        "handlers": {"nugget": _layer_nugget_handler, "exercise": _layer_exercise_handler, "warn": _layer_warn_handler, "image": image_directive_handler},
+        "handlers": handlers,
     }
     if extra_context:
-        ctx.update(extra_context)
+        for k, v in extra_context.items():
+            if k == "handlers":
+                handlers.update(v)
+            else:
+                ctx[k] = v
     fp = filepath if filepath is not None else Path(".")
     text, _ = process_directives(raw, fp, ctx)
     segments = re.split(r"(\{\{EXERCISE_\d+\}\})", text)
-    return segments, ctx["cta_htmls"]
+    return segments, cta_htmls
 
 
 def _assemble_layer_html(segments, cta_htmls, segment_renderer):
@@ -137,7 +157,7 @@ def _assemble_layer_html(segments, cta_htmls, segment_renderer):
     return "".join(parts)
 
 
-def _layer_prose_to_html(raw, all_nuggets, link_context=None, link_base_dir=None):
+def _layer_prose_to_html(raw, all_nuggets, link_context=None):
     """Prose layers: expand directives, then render each segment with text_to_html."""
     if section_is_tbd(raw):
         return '<p class="dim placeholder">This layer is not yet written.</p>'
@@ -146,8 +166,6 @@ def _layer_prose_to_html(raw, all_nuggets, link_context=None, link_base_dir=None
     def render_seg(seg):
         if section_is_tbd(seg):
             return ""
-        if link_context is not None and link_base_dir is not None:
-            seg = expand_links(seg, link_context, link_base_dir)
         return text_to_html(seg)
 
     return _assemble_layer_html(segments, cta_htmls, render_seg)

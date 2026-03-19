@@ -14,11 +14,13 @@ _warn_callback = lambda msg, filepath=None: print(msg, file=sys.stderr)
 build_time = None
 build_version = 0
 page_version = 0
+changed_in_build = 0
+changed_time = None
 nugget_revisions = {}
 
 
-def set_build_context(*, warn=None, build_time_=None, build_version_=None, page_version_=None, nugget_revisions_=None):
-    global _warn_callback, build_time, build_version, page_version, nugget_revisions
+def set_build_context(*, warn=None, build_time_=None, build_version_=None, page_version_=None, changed_in_build_=None, changed_time_=None, nugget_revisions_=None):
+    global _warn_callback, build_time, build_version, page_version, changed_in_build, changed_time, nugget_revisions
     if warn is not None:
         _warn_callback = warn
     if build_time_ is not None:
@@ -27,6 +29,10 @@ def set_build_context(*, warn=None, build_time_=None, build_version_=None, page_
         build_version = build_version_
     if page_version_ is not None:
         page_version = page_version_
+    if changed_in_build_ is not None:
+        changed_in_build = changed_in_build_
+    if changed_time_ is not None:
+        changed_time = changed_time_
     if nugget_revisions_ is not None:
         nugget_revisions = nugget_revisions_
 
@@ -247,16 +253,18 @@ SEARCH_DIALOG_HTML = """
 
 def foot(logo_href="logo.svg", page_timestamp=None):
     home_href = "index.html"
-    build_ts = build_time.strftime("%Y-%m-%d %H:%M Pacific") if build_time else ""
-    build_hm = build_time.strftime("%H:%M Pacific") if build_time else ""
-    display_ts = f"{page_timestamp} {build_hm}".strip() if page_timestamp else build_ts
-    version_attr = f' data-build-version="{build_version}" data-page-version="{page_version}" data-build-timestamp="{_html.escape(build_ts)}"'
+    chg_time = changed_time or build_time
+    chg_ts = chg_time.strftime("%Y-%m-%d %H:%M Pacific") if chg_time else ""
+    chg_hm = chg_time.strftime("%H:%M Pacific") if chg_time else ""
+    cur_ts = build_time.strftime("%Y-%m-%d %H:%M Pacific") if build_time else ""
+    display_ts = f"{page_timestamp} {chg_hm}".strip() if page_timestamp else chg_ts
+    version_attr = f' data-build-version="{build_version}" data-changed-in-build="{changed_in_build}" data-page-version="{page_version}" data-build-timestamp="{_html.escape(cur_ts)}"'
     logo_block = f'''
 <div class="page-end" id="page-end-version"{version_attr}>
   <button class="page-end-logo" aria-label="Show build info" onmouseenter="typeof seedNavShowVersion==='function'&&seedNavShowVersion(true)" onmouseleave="typeof seedNavShowVersion==='function'&&seedNavShowVersion(false)" ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="{logo_href}" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">Build {build_version} · Rev {page_version} · {display_ts}</span>
+  <span class="page-end-version" aria-hidden="true">Build {changed_in_build} · Rev {page_version} · {display_ts}</span>
 </div>
 '''
     return logo_block + "\n" + NAV_SCROLL_SCRIPT + "\n" + NAV_LISTS_DROPDOWN_SCRIPT + "\n" + SEARCH_DIALOG_HTML
