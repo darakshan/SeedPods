@@ -9,4 +9,6 @@ Each seedpod is elaborated in several ways - a simple surface of the idea, a dee
 
 The seedpods are organized into seven color-coded categories below. Click on any one to see its pods. Their numbering is purely for convenient references (via the GO command above) and has no other meaning.  Also, the images are placeholders and not necessariy appropriate.
 
+Click any category below to see the seedpods it contains.
+
 @categories

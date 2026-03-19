@@ -1,11 +1,11 @@
 {
-  "build_version": 58,
+  "build_version": 62,
   "pages": {
     "index.html": {
-      "hash": "33155c2b23aab2d570c4f8550935f8d9fd0d7f6e61dca2a1abbb5bc007680383",
-      "page_version": 34,
-      "changed_in_build": 58,
-      "changed_time": "2026-03-19T15:07:27.278204-07:00"
+      "hash": "5d8d094cfaf7c07d6a4f9039aad0862cb50ccf1f334e8bac73a2a39539a236dc",
+      "page_version": 38,
+      "changed_in_build": 62,
+      "changed_time": "2026-03-19T15:23:28.347076-07:00"
     },
     "001-caloric.html": {
       "hash": "cde4dbeadee408c398266fff1548f031fc156aa4bdd7a1d881228c1b234815db",
@@ -428,155 +428,155 @@
       "changed_time": "2026-03-19T15:07:27.278204-07:00"
     },
     "about.html": {
-      "hash": "e6a6b99bc51341c286d93ec2ad16996ae66debb169038fb259c8f8db4b9240fa",
-      "page_version": 16,
-      "changed_in_build": 58,
-      "changed_time": "2026-03-19T15:07:27.278204-07:00"
+      "hash": "fd30c400d302de4dee8595fbf78f0cd585d33bd552da3bf45098ef6d0c992ae9",
+      "page_version": 18,
+      "changed_in_build": 60,
+      "changed_time": "2026-03-19T15:21:24.301268-07:00"
     },
     "bibliography.html": {
-      "hash": "548666697563c5779dba2f1bb209a4727fb82174f1c1c89871aa0fca6f1215e1",
-      "page_version": 16,
-      "changed_in_build": 58,
-      "changed_time": "2026-03-19T15:07:27.278204-07:00"
+      "hash": "571b273080174bd31f45553b9d3d50f86d5573a57239cc62e6fa8d91a4bd448d",
+      "page_version": 18,
+      "changed_in_build": 60,
+      "changed_time": "2026-03-19T15:21:24.301268-07:00"
     },
     "glossary.html": {
-      "hash": "1f72fed41ca84dfd1e1935b2842dc67a26367b309312f5b7176782161cae3d3c",
-      "page_version": 16,
-      "changed_in_build": 58,
-      "changed_time": "2026-03-19T15:07:27.278204-07:00"
+      "hash": "592f4eea6fa15e10fa410d9b715fb36c75482f242992ea76bf5f4b64aa348880",
+      "page_version": 18,
+      "changed_in_build": 60,
+      "changed_time": "2026-03-19T15:21:24.301268-07:00"
     },
     "list.html": {
-      "hash": "7e73f1cff5a5c707138c019057125ff818566ae837b3ae1e35a98ca8f550dd79",
-      "page_version": 16,
-      "changed_in_build": 58,
-      "changed_time": "2026-03-19T15:07:27.278204-07:00"
+      "hash": "d1ce2f607b37cd1f5ecb1d6b4091f4107d7aa6e94eaa354ad704c248fbc0f1e8",
+      "page_version": 18,
+      "changed_in_build": 60,
+      "changed_time": "2026-03-19T15:21:24.301268-07:00"
     },
     "map.html": {
-      "hash": "2518ae88c9c61a7a0bf1607ba41a18b2b27920ad42094774362cfe06c78e27cd",
-      "page_version": 11,
-      "changed_in_build": 58,
-      "changed_time": "2026-03-19T15:07:27.278204-07:00"
+      "hash": "90773bbd6bba0f414702745a36248f27f64fc70e924d24c3fe4e607b005fcda1",
+      "page_version": 13,
+      "changed_in_build": 60,
+      "changed_time": "2026-03-19T15:21:24.301268-07:00"
     },
     "more.html": {
-      "hash": "40808a9babe9b8b6e63fcb3d406cd8261d8fde000582b21cce825b4d673f5adb",
-      "page_version": 16,
-      "changed_in_build": 58,
-      "changed_time": "2026-03-19T15:07:27.278204-07:00"
+      "hash": "9fd5fb2798399f1e479f5c4f5bb729fd8f9b5f3fa7c721d5fa5b26af14587d29",
+      "page_version": 18,
+      "changed_in_build": 60,
+      "changed_time": "2026-03-19T15:21:24.301268-07:00"
     },
     "internal.html": {
-      "hash": "bba63652b6c46ce57757a4c6121933e586aba0702bfc75ebdd4c01cb473f3dd4",
-      "page_version": 34,
-      "changed_in_build": 58,
-      "changed_time": "2026-03-19T15:07:27.278204-07:00"
+      "hash": "561fab05f3e9c173116079338ca4c6622ef8291a854fc18fd56337b0ed79b227",
+      "page_version": 36,
+      "changed_in_build": 60,
+      "changed_time": "2026-03-19T15:21:24.301268-07:00"
     },
     "about-audiences.html": {
-      "hash": "302923f1d68710c99224c7d42b5f4a6445715c64010570ce2b47ca056ade89da",
-      "page_version": 16,
-      "changed_in_build": 58,
-      "changed_time": "2026-03-19T15:07:27.278204-07:00"
+      "hash": "f8261c415fb2703083f462509ef86f8b774ac47a1951adad0b0c52b5359f3422",
+      "page_version": 18,
+      "changed_in_build": 60,
+      "changed_time": "2026-03-19T15:21:24.301268-07:00"
     },
     "about-authors.html": {
-      "hash": "0a944c2eda264e92d88070d8178f2160a4f3b91c041b1b1cd622cc94a3f5ba2e",
-      "page_version": 16,
-      "changed_in_build": 58,
-      "changed_time": "2026-03-19T15:07:27.278204-07:00"
+      "hash": "5bb8f5d85a49cececd7f3c55f073724060990938d576d2dcad28a661a5cb30c1",
+      "page_version": 18,
+      "changed_in_build": 60,
+      "changed_time": "2026-03-19T15:21:24.301268-07:00"
     },
     "about-goals.html": {
-      "hash": "36fe33265057885333d9518a6625016abc6c6fc9fe31fd1f186f65a3a2b353b8",
-      "page_version": 16,
-      "changed_in_build": 58,
-      "changed_time": "2026-03-19T15:07:27.278204-07:00"
+      "hash": "8bbd6974d8eb461f7e19dc7a2a9dc5cca1662527d909e5d8656cc4ba9a54e404",
+      "page_version": 18,
+      "changed_in_build": 60,
+      "changed_time": "2026-03-19T15:21:24.301268-07:00"
     },
     "about-personal.html": {
-      "hash": "bd14ba2588af999f42dc286c43f910123a8ad9efa3205724bfcecebe2d85a8e7",
-      "page_version": 16,
-      "changed_in_build": 58,
-      "changed_time": "2026-03-19T15:07:27.278204-07:00"
+      "hash": "eb825e4528feaa76b50b0521c4d4339165e1e33f7b005669fac882a0fee3bf87",
+      "page_version": 18,
+      "changed_in_build": 60,
+      "changed_time": "2026-03-19T15:21:24.301268-07:00"
     },
     "about-reviews.html": {
-      "hash": "e5080f0ed3ebe4bd15ab745a4e5170cb056781e7519c0c6900dad3eda44f4166",
-      "page_version": 16,
-      "changed_in_build": 58,
-      "changed_time": "2026-03-19T15:07:27.278204-07:00"
+      "hash": "e4a0fcfe6e4032c8fc167f801749b970efedce6004f02bdc81600f119ebd524b",
+      "page_version": 18,
+      "changed_in_build": 60,
+      "changed_time": "2026-03-19T15:21:24.301268-07:00"
     },
     "about-status.html": {
-      "hash": "124b6e81062e724d68d499cbd5e9cccc7b06558212d3ab22db29c45dd261ce53",
-      "page_version": 11,
-      "changed_in_build": 58,
-      "changed_time": "2026-03-19T15:07:27.278204-07:00"
+      "hash": "2e9f93e4d41be8d7f2120d058beb48366481ab0545415e8b9859415738f378bd",
+      "page_version": 13,
+      "changed_in_build": 60,
+      "changed_time": "2026-03-19T15:21:24.301268-07:00"
     },
     "internal-build.html": {
-      "hash": "5c30aec581e097e4ae2ec9fec546670234e4681c1b5478125a7a8064acb44c4b",
-      "page_version": 16,
-      "changed_in_build": 58,
-      "changed_time": "2026-03-19T15:07:27.278204-07:00"
+      "hash": "035398daa842baad6383741342dd2d3f8b2832d8572eb5b3f09352bdfb525dae",
+      "page_version": 18,
+      "changed_in_build": 60,
+      "changed_time": "2026-03-19T15:21:24.301268-07:00"
     },
     "internal-directives.html": {
-      "hash": "8cb90bb9203a3d9f6401bb82f83e2a414f43337f543f21d4fa711dfbc7c45f01",
-      "page_version": 16,
-      "changed_in_build": 58,
-      "changed_time": "2026-03-19T15:07:27.278204-07:00"
+      "hash": "be51bbda75400ab7d2979e67a4ddce146caf8173177287ab99efe41155074c5e",
+      "page_version": 18,
+      "changed_in_build": 60,
+      "changed_time": "2026-03-19T15:21:24.301268-07:00"
     },
     "internal-early-structure.html": {
-      "hash": "86f3d95f8b41da137e8db7ce2e0d5c41c3bb9c1f56919a1956cbb1a589987eb6",
-      "page_version": 16,
-      "changed_in_build": 58,
-      "changed_time": "2026-03-19T15:07:27.278204-07:00"
+      "hash": "395e7b85c15935aba4ec8061231b8b123db7c1d2c976d5d53abc51697f0e70cc",
+      "page_version": 18,
+      "changed_in_build": 60,
+      "changed_time": "2026-03-19T15:21:24.301268-07:00"
     },
     "internal-grammar.html": {
-      "hash": "919dd1a11dc15e1431260ba5d80a43a5ec735ba5d41550f186dff41919e4b8b2",
-      "page_version": 16,
-      "changed_in_build": 58,
-      "changed_time": "2026-03-19T15:07:27.278204-07:00"
+      "hash": "adf9147b8eff3f6565fa498546bd9729e28ddfc62162ecbb95cb1c4bd5082ee7",
+      "page_version": 18,
+      "changed_in_build": 60,
+      "changed_time": "2026-03-19T15:21:24.301268-07:00"
     },
     "internal-images.html": {
-      "hash": "ca4ffd11485e7fd7e9258665543f9982a7eb5644b95fb0e5423b2376e1a284a8",
-      "page_version": 4,
-      "changed_in_build": 58,
-      "changed_time": "2026-03-19T15:07:27.278204-07:00"
+      "hash": "c2fb0cdf8d6ae3df54d5947e20d51037ed4587b23aed80f1ffa3d50d2d2a28fe",
+      "page_version": 6,
+      "changed_in_build": 60,
+      "changed_time": "2026-03-19T15:21:24.301268-07:00"
     },
     "internal-import-format.html": {
-      "hash": "5c30aec581e097e4ae2ec9fec546670234e4681c1b5478125a7a8064acb44c4b",
-      "page_version": 16,
-      "changed_in_build": 58,
-      "changed_time": "2026-03-19T15:07:27.278204-07:00"
+      "hash": "035398daa842baad6383741342dd2d3f8b2832d8572eb5b3f09352bdfb525dae",
+      "page_version": 18,
+      "changed_in_build": 60,
+      "changed_time": "2026-03-19T15:21:24.301268-07:00"
     },
     "internal-nugget-urls.html": {
-      "hash": "c7fab4b61d137351b22c7d0a5372d9fa4ab9075877a4eb7606fd3da48ddd39fb",
-      "page_version": 16,
-      "changed_in_build": 58,
-      "changed_time": "2026-03-19T15:07:27.278204-07:00"
+      "hash": "d90eda95ec1af5818dd9ca3784ddfa4e754d83610315c29cc102bf408ba4d287",
+      "page_version": 18,
+      "changed_in_build": 60,
+      "changed_time": "2026-03-19T15:21:24.301268-07:00"
     },
     "internal-scriptcraft.html": {
-      "hash": "777727681a6956ad2515bffc5992768a656027dfec875795b97f575dccfcc0c6",
-      "page_version": 16,
-      "changed_in_build": 58,
-      "changed_time": "2026-03-19T15:07:27.278204-07:00"
+      "hash": "c70d67f07dd9779c43637f7fbcbf192cfb49a58e317b2a31b89ee82d9a88dea4",
+      "page_version": 18,
+      "changed_in_build": 60,
+      "changed_time": "2026-03-19T15:21:24.301268-07:00"
     },
     "internal-settings.html": {
-      "hash": "9078b331b9872c3debcdd6b17f9380547fbaa96365c3f2f101392f51a41c3244",
-      "page_version": 16,
-      "changed_in_build": 58,
-      "changed_time": "2026-03-19T15:07:27.278204-07:00"
+      "hash": "15f677c058caa688e50a2f556517182322d0dce452039c27187ed035b186af4e",
+      "page_version": 18,
+      "changed_in_build": 60,
+      "changed_time": "2026-03-19T15:21:24.301268-07:00"
     },
     "internal-structure.html": {
-      "hash": "dfd15813da32ef093de241a2761f9e986331fcc63e0795abc5984aa846014513",
-      "page_version": 16,
-      "changed_in_build": 58,
-      "changed_time": "2026-03-19T15:07:27.278204-07:00"
+      "hash": "2ad039c5c089d9a41d9595e4b9c2db8e83cb3b989e0d94864c2196e08aef26dd",
+      "page_version": 18,
+      "changed_in_build": 60,
+      "changed_time": "2026-03-19T15:21:24.301268-07:00"
     },
     "internal-style-guidelines.html": {
-      "hash": "c36385fdbd09a723729384e0dc9dab74a9110b8241ff154d6fff76069b163146",
-      "page_version": 16,
-      "changed_in_build": 58,
-      "changed_time": "2026-03-19T15:07:27.278204-07:00"
+      "hash": "71d33353609cdea78c96b2fc5224d8cd45c9c036402c3de691df4bf2fc4607b0",
+      "page_version": 18,
+      "changed_in_build": 60,
+      "changed_time": "2026-03-19T15:21:24.301268-07:00"
     },
     "more-inside.html": {
-      "hash": "b2ce69282180c342d2b08511a270a12b018ab9b8ad3fddf5ef52eab8e380dc55",
-      "page_version": 16,
-      "changed_in_build": 58,
-      "changed_time": "2026-03-19T15:07:27.278204-07:00"
+      "hash": "f1d6325ee3bca4f2c2127cdbe68364b0df846c1391a102aee5d9e2f0ec9f9538",
+      "page_version": 18,
+      "changed_in_build": 60,
+      "changed_time": "2026-03-19T15:21:24.301268-07:00"
     }
   },
-  "last_build_time": "2026-03-19T15:07:27.278204-07:00"
+  "last_build_time": "2026-03-19T15:23:28.347076-07:00"
 }

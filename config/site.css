@@ -306,6 +306,8 @@ td a:hover{color:var(--accent)}
 .index-entry a:hover{color:var(--accent)}
 .seed-categories .index-entry{padding-left:1.25rem}
 .seed-categories{padding-top:.5rem;margin-top:0}
+.categories-toggle-btns{margin-left:0;margin-bottom:.75rem}
+.categories-count{text-decoration:none;cursor:default;opacity:.4}
 details.category-group{margin-top:1rem}
 details.category-group:first-of-type{margin-top:0}
 details.category-group summary.index-tag-name{cursor:pointer;list-style:none;margin-bottom:.2rem}

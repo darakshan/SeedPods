@@ -295,14 +295,16 @@ def _render_categories_html(nuggets, status_order, copy, base_href="", content_d
         label = cat.replace("-", " ")
         parts.append(details_block(by_category[cat], label, cat))
     total = len(nuggets)
-    view_all_text = (copy.get("view_all") or "View all {n} seeds →").replace("{n}", str(total))
-    more_wrap = f"""
-  <div class="seed-list-more-wrap">
-    <a href="{base_href}list.html" class="link-mono-accent">{view_all_text}</a>
-  </div>"""
+    toggle_btns = (
+        f'<div class="map-row-btns categories-toggle-btns">'
+        f'<span class="map-row-btn categories-count">{total} seeds</span>'
+        '<button type="button" class="map-row-btn" onclick="this.closest(\'.seed-categories\').querySelectorAll(\'details\').forEach(function(d){d.open=true})">open all</button>'
+        '<button type="button" class="map-row-btn" onclick="this.closest(\'.seed-categories\').querySelectorAll(\'details\').forEach(function(d){d.open=false})">close all</button>'
+        '</div>'
+    )
     return f"""<div class="index-by-tag seed-categories">
+{toggle_btns}
 {chr(10).join(parts)}
-{more_wrap}
 </div>"""
 
 
