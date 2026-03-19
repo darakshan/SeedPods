@@ -1,17 +1,17 @@
 {
-  "build_version": 14,
+  "build_version": 17,
   "pages": {
     "index.html": {
-      "hash": "35df598ea811317f69d68bb372e867e9ac96dcb00b682159e1b6765fca2fe8a8",
-      "page_version": 9
+      "hash": "9c5791179d518f3545338c6acf7f87aaa26a40cbcaed69ef02502ed0df67fe43",
+      "page_version": 12
     },
     "001-caloric.html": {
       "hash": "cde4dbeadee408c398266fff1548f031fc156aa4bdd7a1d881228c1b234815db",
       "page_version": 4
     },
     "002-events.html": {
-      "hash": "8e6e2413717808ccfc974fb283442bb485b3918af4992ba01ed49b2c22ed868d",
-      "page_version": 4
+      "hash": "86895ead51956432989e781d91c65bb440cc9b4339a1bfbda35b915255ecb9f3",
+      "page_version": 6
     },
     "003-inside.html": {
       "hash": "254407047bc7ad50c7957dec8454f4a720c9db6155a16272fdf4bdee3171e4ba",
@@ -22,12 +22,12 @@
       "page_version": 4
     },
     "005-freewill.html": {
-      "hash": "055b4cce3a528e6c5b0aa4f83d56c0735a9403777f360877a51df5612c1af526",
-      "page_version": 4
+      "hash": "bf2f96db2459a95e5bf89b4b10d8981e5ef343783a7e506ca9840fc30a098f80",
+      "page_version": 5
     },
     "006-output.html": {
-      "hash": "b935a6844d9be5242ac71f51fa172e75ed4a0d102eedb56d9e359ef27b8b829e",
-      "page_version": 5
+      "hash": "9488edf59563ac2a87332f666dcba66f23f69d251531a398b3115b52b3fc2005",
+      "page_version": 7
     },
     "007-vacuum.html": {
       "hash": "0e1ea5e1c5507ba6686a1cbe0aac67878dfe61bdbd663293471435e5659ba42e",
@@ -46,8 +46,8 @@
       "page_version": 4
     },
     "011-moreisdifferent.html": {
-      "hash": "d2a607ce3845430ec1449f4a63198e71cc188c78e707cd98ae74a5ffe3a4a28d",
-      "page_version": 3
+      "hash": "dfda4d7b9c97d532dc14bd3a59f748f5031f1bb3a0dacc2ca1bc0e4c5b52082b",
+      "page_version": 5
     },
     "012-autopoiesis.html": {
       "hash": "e1309141c3d87c78fe8210ffac680d47b887310590e313f36b41db9c0caed7ff",
@@ -90,8 +90,8 @@
       "page_version": 4
     },
     "022-locked.html": {
-      "hash": "53e7508863218d4a4d57530da0e3b0338b3d8c18c59b7e1ad9e62d40309af77b",
-      "page_version": 5
+      "hash": "ac233d1c0be3db64cc226cfb7d38484e76285a8280408f1bbaf5af22e296f8bf",
+      "page_version": 7
     },
     "023-stories.html": {
       "hash": "1343c57c36a9b39d7c3bf79e9645f4355ce1683d537cbbc5e27e43852db5bd6c",
@@ -142,8 +142,8 @@
       "page_version": 3
     },
     "035-simplestnumbers.html": {
-      "hash": "fd38e88ffbe0913a6697df256ad6264c91a989034219f39edc6f5f9c2c67d2b0",
-      "page_version": 3
+      "hash": "e7753dcaf8ff7ce818e6d9cf1f0beba3a54de0bc619378a03dd08fb4a48fa266",
+      "page_version": 4
     },
     "036-universenoticing.html": {
       "hash": "85fd85deb5f908bd110392cb9c61c4b30beb64b24b7321663f397e0f9a446bba",
@@ -154,56 +154,56 @@
       "page_version": 4
     },
     "038-consonance-map.html": {
-      "hash": "a6a13b39d7bb3b8272be4bddfd805562bb958d734c8af966ef3d55bc04438974",
-      "page_version": 3
+      "hash": "c4da2e2bc0fd8ae268f0cdd5a6329ff870dc77ae911797c347c5f2c609dd6200",
+      "page_version": 4
     },
     "040-stability.html": {
-      "hash": "c2927b6dca5971b4a6dbbfd341950fba9ffe5c1252de1bc43874a611b42b211d",
-      "page_version": 4
+      "hash": "d684fc8ffb3516246b734eac7ef19f9a7cda5b4506831ebda22860452f70b5a2",
+      "page_version": 5
     },
     "041-colorwheel.html": {
-      "hash": "e00d2426f86f6e86e2ec8a55b15f48b7f0e1374b7126e074ebc970f42aa63cec",
-      "page_version": 3
+      "hash": "0dae482284e53f4c1f4a579bbca079633877bcbd64deac49eb6631761ef442cb",
+      "page_version": 5
     },
     "042-eyethinks.html": {
-      "hash": "2c10049d42526c8d9bd5b9e20c4e85cac08adb24b1f3880dd5d199868f698223",
-      "page_version": 4
+      "hash": "bb676bc9a92f88da71e91e21799347029c3f4bf7fc2e4517186efd3911425bd5",
+      "page_version": 5
     },
     "044-ai-retina.html": {
-      "hash": "2d387254f6a447c0580364c063a434c3c2d2b128e95883a7421256ce44809a58",
-      "page_version": 4
+      "hash": "6495f95f3690a1a2de577235b425f13ea99f31933e180a6d310ad03a0e604578",
+      "page_version": 5
     },
     "045-baldwin.html": {
-      "hash": "8efd108f1b0073a7556afb35afa762d6cc2fde3fc488687ee84b581780ddaf44",
-      "page_version": 4
+      "hash": "f5d3378a7e1ef0596b786104a0e4c667ba7fc267c07e9d39da0c36e6c187f540",
+      "page_version": 5
     },
     "046-thinkfast.html": {
-      "hash": "0a4ffb8bb1a5f6249c9eb5961664710a48eb16d563a0c807528585886bd6b5eb",
-      "page_version": 4
+      "hash": "77421614c7908bbb58848365d05a1161de62627558697fb962316490d9b22e0e",
+      "page_version": 5
     },
     "047-ai-feeling.html": {
-      "hash": "bf9af997d4649c35b2d9e38350729782ddf23a4b1c2af7ea578cf0c1af9830cd",
-      "page_version": 3
+      "hash": "15acf7f1645557005bfc1e1bf058b028af6543da09ded9a87a442e0820475595",
+      "page_version": 4
     },
     "048-flashes.html": {
-      "hash": "e1f0032b72ef559c2eb842455598b4de0dd4133cc261ba17e4079eb8416ef5b3",
-      "page_version": 4
+      "hash": "75e2cf685f4470a77ad98d8630f49345ce32f60c3255957cc796786ac51f2d0a",
+      "page_version": 5
     },
     "049-strangeloop.html": {
-      "hash": "cdf953ca862468af7efa45f1bf007572f7554746922c60c875df66b856c34246",
-      "page_version": 4
+      "hash": "755a4225990b970d09240c206d534c70be72575b1315c22587908cfe4db5eb5b",
+      "page_version": 5
     },
     "050-orthogonal.html": {
-      "hash": "1fe12df5587908b355d898d4e41028fb285844898f092e578f7627f33b382dcf",
-      "page_version": 3
+      "hash": "c7b1d9ec81431123692f8a4356186b3ebaa83959b16a30cddfe49880106fe698",
+      "page_version": 4
     },
     "051-spacetime.html": {
-      "hash": "778290a3e1f261c0f4b2a28709838a21eb15ca62cbd1572764cc36df890a46f3",
-      "page_version": 4
+      "hash": "0c89f16216211c89600ef9111493797da39b33dba575ebc7ea9b7ad8348f3e3e",
+      "page_version": 5
     },
     "052-dichotomy.html": {
-      "hash": "75102de9337c8fc9f7bf692b1f9493d82a73dc23d8bb8944c67342d1c5c46759",
-      "page_version": 4
+      "hash": "03e85cd19ce22986cd1e3d7ee844956bad4745ca72b485f7117510a90167f2a5",
+      "page_version": 5
     },
     "053-dimensions.html": {
       "hash": "8a01f77f06dea90666507fa250a8115fe04b6f51a22ac49a051fd34a82195915",
@@ -214,28 +214,28 @@
       "page_version": 4
     },
     "056-mandelneural.html": {
-      "hash": "32220900ee87519a416248053bb4086c8e5cdb7a5542506568f5484ab66f1c6a",
-      "page_version": 4
+      "hash": "bebbbc2b742afd9b1af59749eef8a2c8f5e41654a4dc5ba197d6382bac995b8d",
+      "page_version": 5
     },
     "057-superfarey.html": {
       "hash": "ff3f33b544859e99faa8aad4e74730ee2d9e4e394cd4ae1602bce5a76dc60cbb",
       "page_version": 4
     },
     "058-galacticnets.html": {
-      "hash": "fefebbf6cb9b7620f610d9c7155473439ffb3c959344335587018e972f546ba0",
-      "page_version": 3
+      "hash": "2be89ba46c6bc916f15cbf48650536d7327570ed1edfb8b7ce45c4c505bbfa20",
+      "page_version": 4
     },
     "059-galaxyevolve.html": {
-      "hash": "5d5e577f7c7e904b2e4f97f58d9eb84f35ef6db54d5bd6b29dc751da82c9bc7d",
-      "page_version": 4
+      "hash": "dd74bad56490771d0ff87185f7c51f4a5b86da1e7a501d19e2045e11d25d3f11",
+      "page_version": 5
     },
     "060-worldtests.html": {
-      "hash": "0077ec9b3a03e9c945ecbd5708072091798dde7a566d71bfc1b63415857af654",
-      "page_version": 3
+      "hash": "ecdfee5357db6ebada95a3277dc8d9530d6ddc080918aa596f12ab774519b2db",
+      "page_version": 4
     },
     "061-babyuniverse.html": {
-      "hash": "994881cb785a2f81cc502828f8373f6318cc72420a2f4bd1e83ffa23ed8c5780",
-      "page_version": 4
+      "hash": "5bfeb892034499d7ea1ae9b1100c44ed008671c904a455010eb72585a3df3a3a",
+      "page_version": 5
     },
     "062-branchingdice.html": {
       "hash": "fd727e4f7db1e5abefdcec3bbd47f876dcf9dfde88df6e84f34f2a21740e0d18",
@@ -246,40 +246,40 @@
       "page_version": 4
     },
     "064-choicedimension.html": {
-      "hash": "8c4c1f75f8ba909d95b4e9ba7a6523dd267c76c45e771ee3b5c8a0d89e6541a5",
-      "page_version": 3
+      "hash": "9ac3cdca006b1262e622776cd992f94bd3aa87cd7db8f39f91410471ab031835",
+      "page_version": 4
     },
     "065-feel-do.html": {
-      "hash": "68dbbc1fb6e687b13bc6764250b5a86c427935e10cce38a706994f251c8ba777",
-      "page_version": 4
+      "hash": "406b264257145677e01181a449b2e6a55a9dd5b5b3a015b9376c6419cb2f63dc",
+      "page_version": 5
     },
     "066-cosmicattractor.html": {
-      "hash": "a67af3e3be6ac3b83142446017c5ae63c68ec0d4bc15eb1d4a3261321a98600a",
-      "page_version": 3
+      "hash": "b0be8a64ccaa243dbefa881c13ddd85a4ddf068968ad8ed89062f532b6e41a48",
+      "page_version": 4
     },
     "067-monads-holons.html": {
-      "hash": "df4093f7a8fce73acedb729a2fb0a15eed6c30e4a1340b55472bec31e3d8a848",
-      "page_version": 4
+      "hash": "094cd0393cbd1c96fb4f146d3729783d6b43b73ebecb49051d750fab60c5ae82",
+      "page_version": 5
     },
     "068-bubbles.html": {
       "hash": "5c4f95f0f7eb6f1f699142f98feb5e69372fdb9d533893f58cff1306df64905a",
       "page_version": 4
     },
     "069-love.html": {
-      "hash": "5dffbe196b13d9194b600a49388d67af60708007577d6ae61a99b65dd7f57a36",
-      "page_version": 4
+      "hash": "d8b2b5323053ff7b1b637d7d507faa773fdf22ab4d26ed29bb18d149d34be48b",
+      "page_version": 5
     },
     "070-harmony.html": {
-      "hash": "dcbf70967a22fb76b13db9e07e2ddd4c6721a07c9767a92d5792cfcdba47f3e8",
-      "page_version": 4
+      "hash": "0e730c81e275adb9b8ef1bae92fc31b166e1a4f7dc3fe8f050e7ba0d0c8dcd01",
+      "page_version": 5
     },
     "071-beauty.html": {
       "hash": "c25e802638c7110742944ca5abcf7f4d807d1de076e439f508a07f61ce8e7bb0",
       "page_version": 4
     },
     "072-temperature.html": {
-      "hash": "ffebb9e3b75837703398f14c48bdd539d927d12a61ec04c43b29718bbb2e3a45",
-      "page_version": 6
+      "hash": "4743e4c0420562aa456070c4b71a4fb8a81b9db9555ed2af57ad6868bbeae3d8",
+      "page_version": 7
     },
     "about.html": {
       "hash": "f2db2f104abeb2e83742f9e7054d351a9d1f2b48320c8639734b80fffba0142b",
@@ -306,8 +306,8 @@
       "page_version": 6
     },
     "internal.html": {
-      "hash": "27307a189f247e413ee2be6a3c5e4772eab27ea605eb2ecb79dde48088a2c091",
-      "page_version": 10
+      "hash": "39c1841bd3449a7adf354261eb3a7234c5ac8812f83949aa67736a06808dedaf",
+      "page_version": 13
     },
     "about-audiences.html": {
       "hash": "f2db2f104abeb2e83742f9e7054d351a9d1f2b48320c8639734b80fffba0142b",
@@ -374,5 +374,5 @@
       "page_version": 6
     }
   },
-  "last_build_time": "2026-03-18T17:48:42.242781-07:00"
+  "last_build_time": "2026-03-18T19:40:45.651750-07:00"
 }

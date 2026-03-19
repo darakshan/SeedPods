@@ -16,4 +16,6 @@ The speculation: this is not coincidence. Both are instances of the same underly
 
 #term Creative advance: Whitehead's term for the universe's ongoing production of novelty; here applied across scales.
 #term Holographic boundary: The surface whose information content defines the interior; galaxy and weight matrix as bounded regions.
+@image(058-galacticnets,Cosmic web: galaxy filaments as structural homologs of neural networks,Wikimedia Commons)
+
 #ref whitehead Whitehead, A.N. Process and Reality (1929). Creative advance. Teilhard de Chardin, P. The Phenomenon of Man (1955). Cosmic direction.

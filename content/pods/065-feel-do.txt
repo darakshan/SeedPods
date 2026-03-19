@@ -14,4 +14,6 @@ The proposal here is that this distinction is like the distinction between calor
 The feeling/function distinction will dissolve the same way. Not because philosophers will argue each other out of it, but because the science of consciousness will show that experience just is what certain kinds of information processing are, from the inside. Future generations will find the zombie intuition as puzzling as we find the caloric intuition — a conceptual artifact of a pre-scientific framework, preserved in language long after the framework collapsed.
 
 #term Philosophical zombie: A being functionally identical to a conscious being but with no inner experience; used to argue function and feeling can come apart.
+@image(065-feel-do,Valence-arousal circumplex: feeling mapped to functional dimensions,Wikimedia Commons)
+
 #ref chalmers Chalmers, D. The Conscious Mind (1996). Zombies and the hard problem. Compare Dennett, D. Consciousness Explained (1991). Dissolution of the distinction.

@@ -11,4 +11,6 @@ If the Baldwin effect describes how learning over a lifetime can be absorbed int
 
 #term Neural Darwinism: Edelman's view that the brain is a selectionist system; variants compete and the fitter achieve representation.
 #term Multiple drafts: Dennett's model in which content is determined by competition among parallel interpretations.
+@image(046-thinkfast,Bayesian phylogenetic tree: thought as rapid evolutionary selection,Wikimedia Commons)
+
 #ref edelman Edelman, G. Neural Darwinism (1987). Selectionist theory of brain function. Friston, K. The free-energy principle (2010). Predictive processing.

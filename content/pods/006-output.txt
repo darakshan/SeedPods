@@ -11,6 +11,8 @@
 #surface
 A thermostat predicts the future. Not impressively — it just decides whether the room is about to get too cold. But it predicts: given the current temperature, what comes next?
 
+@image(006-output,Feedback control system: the output tells you nothing about the process,Wikimedia Commons)
+
 A weather forecaster also predicts. So does a chess engine. So did Mozart, deciding which note resolves the tension in a phrase. So does a language model, choosing the next word in a sentence.
 
 The word "predicts" covers all of them. Which means the word is nearly useless.

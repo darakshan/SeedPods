@@ -10,6 +10,8 @@
 #surface
 There is a chair in your room. You know what a chair is.
 
+@image(002-events,Feynman diagram: reality as discrete particle interaction events,Wikimedia Commons)
+
 But what actually is it?
 
 Wood, you might say. Or plastic, or metal — whatever it's made of. But those materials are made of molecules. The molecules are made of atoms. The atoms are made of a nucleus and electrons. The nucleus is made of protons and neutrons. Those are made of quarks. And quarks, as far as we can tell, aren't made of anything — they are excitations of a quantum field.

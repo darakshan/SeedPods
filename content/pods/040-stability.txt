@@ -12,4 +12,6 @@ The word "stable" means opposite things in two different contexts, and the tensi
 
 #term Dynamic stability: Resistance to being captured into resonant lock; irrational ratios (e.g. golden ratio) are most stable in this sense.
 #term Acoustic stability: A ratio that produces a short, repeating composite waveform; simple integer ratios are most stable here.
+@image(040-stability,Potential energy surface: two opposite meanings of stability,Wikimedia Commons)
+
 #ref arnold Arnold, V.I. Small Denominators (1961). KAM theory and the stability of quasiperiodic motion.

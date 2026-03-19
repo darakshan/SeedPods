@@ -18,4 +18,6 @@ Teilhard's Omega Point is this attractor made cosmic — the state toward which 
 
 #term Initial aim: Whitehead's lure — the pull each occasion feels toward the best possibility available; not compulsion but attraction.
 #term Eternal objects: The realm of possibility that God holds available; occasions select from it in their self-determination.
+@image(066-cosmicattractor,Lorenz attractor: God as initial condition and cosmic attractor,Wikimedia Commons)
+
 #ref whitehead Whitehead, A.N. Process and Reality (1929). God as ground of possibility and lure. Teilhard de Chardin, P. The Phenomenon of Man (1955). Omega Point.

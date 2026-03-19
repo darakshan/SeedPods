@@ -20,3 +20,5 @@ Sunburn. Burnt out. Looking at the sun. Temperature is not just a measurement. I
 #term AI: TBD
 #term perception: TBD
 #related 001, 008, 030, 007, 047
+
+@image(072-temperature,Maxwell-Boltzmann speed distribution: temperature as molecular kinetic energy,Wikimedia Commons)

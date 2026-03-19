@@ -15,4 +15,6 @@ What follows is that the universe has always had an interior. Not just since bra
 
 #term Prehension: Whitehead's term for how occasions take in their world; the interior dimension of process.
 #term Within: Teilhard de Chardin's term for the interior aspect of matter, present from the beginning.
+@image(050-orthogonal,Minkowski spacetime diagram: consciousness as an orthogonal dimension,Wikimedia Commons)
+
 #ref whitehead Whitehead, A.N. Process and Reality (1929). Prehension and the interiority of occasions. Teilhard de Chardin, P. The Phenomenon of Man (1955). The within of things.

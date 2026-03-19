@@ -15,4 +15,6 @@ The telos of this evolution is not survival. It is self-awareness — the univer
 The night sky is not a backdrop. It is a fossil record — the accumulated evidence of fourteen billion years of directed process, written in light.
 
 #term Omega Point: Teilhard's convergence of cosmic evolution toward maximum complexity and self-awareness.
+@image(059-galaxyevolve,Hubble morphological sequence: each galaxy as a thread of cosmic evolution,Wikimedia Commons)
+
 #ref teilhard Teilhard de Chardin, P. The Phenomenon of Man (1955). Cosmic evolution and the Omega Point.

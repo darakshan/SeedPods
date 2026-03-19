@@ -20,4 +20,6 @@ This is not a metaphor. It is a structural homology between two iterative dynami
 
 #term Weight space: The high-dimensional space of all possible network parameters; training is iteration in this space.
 #term Basin of attraction: Region of initial conditions that converge to the same attractor; analog of Mandelbrot bulbs.
+@image(056-mandelneural,Julia set: neural network state space as fractal geometry,Wikimedia Commons)
+
 #ref elman Elman, J. Finding structure in time (1990). Recurrent networks and dynamics. See also mechanistic interpretability literature on loss landscapes.

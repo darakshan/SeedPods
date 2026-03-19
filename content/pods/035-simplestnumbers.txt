@@ -11,6 +11,8 @@
 #term virtual-dimension-formula: TBD
 #related 033, 034, 009, 030, 010
 
+@image(035-simplestnumbers,Benford's law: simpler numbers appear first in natural data,Wikimedia Commons)
+
 #surface
 There are infinitely many numbers between 0 and 1. But they're not all equally there. Some are more fundamental than others. The fraction 1/2 is more there than 47/93. Music knew this before mathematics did. And so did accounting.
 

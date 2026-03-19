@@ -16,4 +16,6 @@ The holographic boundary is the more fundamental thing. The three-dimensional in
 
 #term Holographic principle: The information in a region scales with its boundary area, not volume; suggests space is emergent.
 #term ER = EPR: The conjecture that entanglement and spacetime geometry are two faces of the same structure.
+@image(051-spacetime,CNOT quantum gate: spacetime as emergent information structure,Wikimedia Commons)
+
 #ref susskind Susskind, L. The World as a Hologram (1995). Van Raamsdonk, M. Building up spacetime with quantum entanglement (2010).

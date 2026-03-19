@@ -12,6 +12,8 @@
 #surface
 There is a colony of ants living somewhere near you. Hundreds of thousands of them, maybe millions. Each one knows almost nothing. It can follow a scent trail. It can respond to its immediate neighbors. That is more or less the complete list of what any individual ant can do.
 
+@image(011-moreisdifferent,Superconductivity: emergent behaviour from sheer quantity,Wikimedia Commons)
+
 And yet the colony — as a whole — does things no ant decided. It maintains a steady internal temperature. It farms fungus. It wages war with tactical sophistication. It has a character: some colonies are aggressive, some cautious, some remarkably adaptable. The philosopher Douglas Hofstadter gave the name Aunt Hillary to one particular colony's personality. Aunt Hillary has opinions. Aunt Hillary has moods. No ant has ever met Aunt Hillary. No ant is Aunt Hillary. And yet there she is.
 
 Where did she come from?

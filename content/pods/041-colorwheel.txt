@@ -10,6 +10,7 @@
 #related 038, 026, 012, 042, 044
 
 #depth
+@image(041-colorwheel,Munsell hue wheel: the mind closes the spectrum into a circle,Wikimedia Commons)
 The visible spectrum is a line segment. At one end, violet, around
 380 nanometers. At the other, red, around 700 nanometers. Physically
 these two ends have nothing to do with each other — they are simply
