@@ -219,6 +219,14 @@ def _get_inputs_for_page(page_id, nuggets, index_copy, status_order, explainer_t
             cats_json = CONFIG_DIR / "categories.json"
             if cats_json.exists():
                 out.add(cats_json)
+            sorted_nuggets = sorted(nuggets, key=lambda x: x.get("number", ""))
+            idx = next((i for i, x in enumerate(sorted_nuggets) if nugget_tag(x) == slug), -1)
+            if idx > 0:
+                prev_f = NUGGETS_DIR / (sorted_nuggets[idx - 1].get("filename", "") + ".txt")
+                out.add(prev_f)
+            if 0 <= idx < len(sorted_nuggets) - 1:
+                next_f = NUGGETS_DIR / (sorted_nuggets[idx + 1].get("filename", "") + ".txt")
+                out.add(next_f)
             return out
     if page_id == "internal.html":
         internal_md = INTERNAL_DIR / "page.md"
