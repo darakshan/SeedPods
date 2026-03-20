@@ -148,7 +148,12 @@ def _hash_paths(paths):
 
 
 def _shared_md_inputs(index_copy, status_order, explainer_terms):
-    """Inputs shared by index and all MD pages that use placeholders: settings, status, explainers, all nugget .txt."""
+    """Inputs shared by index and all MD pages that use placeholders: settings, status, explainers, all nugget .txt.
+
+    Python source files (.py) are intentionally excluded. Page versions track content changes, not
+    code changes — a styling or logic fix should not bump page_version or changed_in_build for pages
+    whose content is unchanged. Code changes still cause pages to be regenerated on the next build
+    (because the build always runs), but they leave page versions alone."""
     out = set()
     out.add(CONFIG_DIR / "settings.txt")
     if (CONFIG_DIR / "status.txt").exists():
@@ -158,7 +163,6 @@ def _shared_md_inputs(index_copy, status_order, explainer_terms):
     cats_json = CONFIG_DIR / "categories.json"
     if cats_json.exists():
         out.add(cats_json)
-    out.update((_ROOT / "src").glob("*.py"))
     return out
 
 

@@ -235,9 +235,10 @@ def _seed_row_html(n, base_href, status_order, stub_only=False, first_image_href
         date_val = (n.get("date") or "").strip() or "0000-00-00"
         rank = status_rank.get(status, len(status_rank))
         data_attrs = f' data-num="{num_val}" data-date="{_html.escape(date_val)}" data-status-rank="{rank}" data-title="{_html.escape(title)}"'
-    thumb = ""
     if first_image_href:
         thumb = f'<div class="seed-row-thumb"><img src="{_html.escape(first_image_href)}" alt="" class="seed-thumb"></div>'
+    else:
+        thumb = '<div class="seed-row-thumb seed-row-thumb--empty"></div>'
     return f"""
     <div class="seed-row{stub}"{data_attrs}>
       {thumb}<div class="seed-row-body">
