@@ -89,8 +89,13 @@ def _noop_warn(msg, filepath=None):
     pass
 
 
+def nugget_filepath(n):
+    """Return the Path to a nugget's source file."""
+    return NUGGETS_DIR / (n.get("filename", "") + n.get("ext", ".txt"))
+
+
 def parse_nugget(filepath, warn=None):
-    """Parse a nugget .txt file into a dict. warn(msg, filepath=...) is called for non-fatal issues."""
+    """Parse a nugget .txt or .md file into a dict. warn(msg, filepath=...) is called for non-fatal issues."""
     w = warn if warn is not None else _noop_warn
     text = filepath.read_text(encoding="utf-8")
     ctx = {"warn": w, "notes": [], "handlers": {}}
@@ -128,7 +133,7 @@ def parse_nugget(filepath, warn=None):
         buffer.clear()
 
     for line in lines:
-        if line.startswith("#"):
+        if line.startswith("#") and len(line) > 1 and line[1].isalpha():
             parts = line[1:].split(None, 1)
             if not parts:
                 continue
@@ -224,15 +229,21 @@ def parse_nugget(filepath, warn=None):
 
 
 def load_all_nuggets(warn=None):
-    """Load and parse all nugget .txt files from NUGGETS_DIR. warn(msg, filepath=...) for parse issues."""
+    """Load and parse all nugget .txt and .md files from NUGGETS_DIR. warn(msg, filepath=...) for parse issues."""
     def default_warn(msg, filepath=None):
         print(msg, file=sys.stderr)
     w = warn if warn is not None else default_warn
     nuggets = []
-    for f in sorted(NUGGETS_DIR.glob("*.txt")):
+    seen_stems = set()
+    all_files = sorted(f for pattern in ("*.txt", "*.md") for f in NUGGETS_DIR.glob(pattern))
+    for f in all_files:
+        if f.stem in seen_stems:
+            continue
+        seen_stems.add(f.stem)
         try:
             n = parse_nugget(f, warn=w)
             n["filename"] = f.stem
+            n["ext"] = f.suffix
             nuggets.append(n)
         except Exception as e:
             w("could not parse: {}".format(e), filepath=f)

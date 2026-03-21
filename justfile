@@ -37,6 +37,14 @@ find-explainers:
 check *ARGS:
     {{python}} {{root}}/src/check.py {{ARGS}}
 
+# Sync content/pods/ with iCloud Drive SeedPods folder. Prints imported, exported, and conflicting files.
+sync:
+    {{python}} {{root}}/src/sync.py
+
+# Like sync, but local files win all conflicts. Use on first run when local is authoritative.
+sync-init:
+    {{python}} {{root}}/src/sync.py --local-wins
+
 # Import prototype .md files into content/pods. Prints table (shortname-number, #words, #related, title). Preview only; use --apply to write.
 import *ARGS:
     {{python}} {{root}}/src/import_proto.py {{ARGS}}

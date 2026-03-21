@@ -6,6 +6,11 @@ import html as _html
 import re
 from pathlib import Path
 
+try:
+    import markdown as _markdown
+except ImportError:
+    _markdown = None
+
 from directive import image_directive_handler, process_directives
 from md_pages import _md_link_handler, _md_setting_handler, _md_timestamp_handler
 from nugget_parser import expand_nugget_directives, section_is_tbd
@@ -32,9 +37,11 @@ def _block_to_html(block):
 
 
 def text_to_html(text):
-    """Convert plain text with --- dividers, paragraphs, and - / * lists to HTML."""
+    """Convert text to HTML. Uses Markdown when available; falls back to simple paragraph/list/divider renderer."""
     if section_is_tbd(text):
         return '<p class="dim placeholder">This layer is not yet written.</p>'
+    if _markdown is not None:
+        return _markdown.markdown(text, extensions=["fenced_code", "tables"])
     parts = text.split("\n---\n")
     html_parts = []
     for part in parts:

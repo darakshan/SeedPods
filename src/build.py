@@ -30,6 +30,7 @@ from nugget_parser import (
     load_index_copy,
     load_status_order,
     nugget_by_number,
+    nugget_filepath,
     nugget_tag,
     section_is_tbd,
 )
@@ -199,7 +200,7 @@ def _get_inputs_for_page(page_id, nuggets, index_copy, status_order, explainer_t
         home = CONTENT_DIR / "home.md"
         out.update(_input_files_for_page(home))
         for n in nuggets:
-            out.add(NUGGETS_DIR / (n.get("filename", "") + ".txt"))
+            out.add(nugget_filepath(n))
         out.update(_shared_md_inputs(index_copy, status_order, explainer_terms))
         return out
     if page_id.endswith(".html") and page_id != "internal.html" and page_id != "index.html":
@@ -207,7 +208,7 @@ def _get_inputs_for_page(page_id, nuggets, index_copy, status_order, explainer_t
         nugget_file = None
         for n in nuggets:
             if nugget_tag(n) == slug:
-                nugget_file = NUGGETS_DIR / (n.get("filename", "") + ".txt")
+                nugget_file = nugget_filepath(n)
                 break
         if nugget_file and nugget_file.exists():
             out.add(nugget_file)
@@ -226,11 +227,9 @@ def _get_inputs_for_page(page_id, nuggets, index_copy, status_order, explainer_t
             sorted_nuggets = sorted(nuggets, key=lambda x: x.get("number", ""))
             idx = next((i for i, x in enumerate(sorted_nuggets) if nugget_tag(x) == slug), -1)
             if idx > 0:
-                prev_f = NUGGETS_DIR / (sorted_nuggets[idx - 1].get("filename", "") + ".txt")
-                out.add(prev_f)
+                out.add(nugget_filepath(sorted_nuggets[idx - 1]))
             if 0 <= idx < len(sorted_nuggets) - 1:
-                next_f = NUGGETS_DIR / (sorted_nuggets[idx + 1].get("filename", "") + ".txt")
-                out.add(next_f)
+                out.add(nugget_filepath(sorted_nuggets[idx + 1]))
             return out
     if page_id == "internal.html":
         internal_md = INTERNAL_DIR / "page.md"
@@ -248,7 +247,7 @@ def _get_inputs_for_page(page_id, nuggets, index_copy, status_order, explainer_t
                 if p.exists():
                     out.add(p)
         for n in nuggets:
-            out.add(NUGGETS_DIR / (n.get("filename", "") + ".txt"))
+            out.add(nugget_filepath(n))
         out.update(_shared_md_inputs(index_copy, status_order, explainer_terms))
         return out
     md_path = None
@@ -287,7 +286,7 @@ def _get_inputs_for_page(page_id, nuggets, index_copy, status_order, explainer_t
                         to_scan.append(link_path)
         out.update(refs)
         for n in nuggets:
-            out.add(NUGGETS_DIR / (n.get("filename", "") + ".txt"))
+            out.add(nugget_filepath(n))
         out.update(_shared_md_inputs(index_copy, status_order, explainer_terms))
         return out
     for md_path in collected_md_refs:
@@ -316,7 +315,7 @@ def _get_inputs_for_page(page_id, nuggets, index_copy, status_order, explainer_t
                             to_scan.append(link_path)
             out.update(refs)
             for n in nuggets:
-                out.add(NUGGETS_DIR / (n.get("filename", "") + ".txt"))
+                out.add(nugget_filepath(n))
             out.update(_shared_md_inputs(index_copy, status_order, explainer_terms))
             break
     return out
@@ -324,8 +323,9 @@ def _get_inputs_for_page(page_id, nuggets, index_copy, status_order, explainer_t
 
 def get_build_input_files():
     files = set()
-    for p in NUGGETS_DIR.glob("*.txt"):
-        files.add(p)
+    for pattern in ("*.txt", "*.md"):
+        for p in NUGGETS_DIR.glob(pattern):
+            files.add(p)
     for name in ["settings.txt", "status.txt", "site.css", "logo.svg"]:
         p = CONFIG_DIR / name
         if p.exists():
@@ -370,7 +370,7 @@ def _content_files_used_in_build(nuggets, index_copy, collected_md_refs):
         if main.exists():
             used.add(main.resolve())
     for n in nuggets:
-        used.add((NUGGETS_DIR / (n.get("filename", "") + ".txt")).resolve())
+        used.add(nugget_filepath(n).resolve())
     for _href, _label, kind, path in get_nav_items(index_copy):
         if path:
             if kind == "file":
@@ -384,7 +384,7 @@ def _content_files_used_in_build(nuggets, index_copy, collected_md_refs):
         used.add(Path(p).resolve())
     image_names = set()
     for n in nuggets:
-        raw = (NUGGETS_DIR / (n.get("filename", "") + ".txt")).read_text(encoding="utf-8")
+        raw = nugget_filepath(n).read_text(encoding="utf-8")
         image_names |= _image_refs_in_text(raw)
     for md_path in _get_md_page_paths():
         if md_path.exists():
@@ -519,7 +519,7 @@ def _collect_4u_ai_content(nuggets):
     internal_str = "\n\n".join(internal_parts)
     nugget_raw_by_slug = {}
     for n in sorted(nuggets, key=lambda x: (x.get("number", "").zfill(3), x.get("number", ""))):
-        raw = (NUGGETS_DIR / f"{n['filename']}.txt").read_text(encoding="utf-8")
+        raw = nugget_filepath(n).read_text(encoding="utf-8")
         nugget_raw_by_slug[nugget_tag(n)] = raw
     return internal_str, nugget_raw_by_slug
 
@@ -643,7 +643,7 @@ def main():
             else:
                 seen_num[num] = n.get("filename")
     for num, a, b in duplicate_nums:
-        reporter_error("Duplicate pod number {}: {}.txt and {}.txt".format(num, a, b))
+        reporter_error("Duplicate pod number {}: {} and {}".format(num, a, b))
 
     for md_path in _get_md_page_paths():
         if not md_path.exists():
