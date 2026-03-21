@@ -191,6 +191,7 @@ td a:hover{color:var(--accent)}
 .map-filter-row{display:flex;flex-wrap:wrap;align-items:center;gap:.25rem 1rem;font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase}
 .map-filter-row--status{margin-top:.6rem}
 .map-cb-label{display:inline-flex;align-items:center;gap:.3rem;cursor:pointer;color:var(--dim)}
+.map-cb-label--cat{background:var(--cb-cat-bg,transparent);padding:.15rem .45rem;border-radius:3px}
 .map-cb-label input{margin:0;cursor:pointer}
 .map-row-btns{display:inline-flex;align-items:center;gap:.5rem;margin-left:1.5rem;flex-shrink:0}
 .map-row-btn{font-family:'DM Mono',monospace;font-size:.55rem;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);background:none;border:none;cursor:pointer;padding:0;text-decoration:underline;text-underline-offset:2px;opacity:.55}

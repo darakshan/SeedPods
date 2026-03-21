@@ -35,19 +35,56 @@ def _node_edge_lists(nuggets):
     return nodes, edges
 
 
-def _force_directed_layout(nodes, edges, width, height, padding):
+def _force_directed_layout(nodes, edges, width, height, padding, category_map=None):
     """
     Return dict node_id -> (x, y) in SVG space.
     Uses networkx spring_layout with higher k to spread nodes; scales to fit viewBox.
+    When category_map is provided, adds weak same-category phantom edges and
+    category-clustered initial positions so nodes in the same category tend to
+    appear near each other.
     """
     G = nx.DiGraph()
     for nid, *_ in nodes:
         G.add_node(nid)
     for a, b in edges:
-        G.add_edge(a, b)
+        if G.has_node(a) and G.has_node(b):
+            G.add_edge(a, b, weight=3.0)
+
+    initial_pos = None
+    if category_map:
+        cats = sorted(set(v for v in category_map.values() if v))
+        n_cats = len(cats)
+        nids = [nid for nid, *_ in nodes]
+
+        # Weak phantom edges between same-category nodes to attract them
+        if n_cats > 1:
+            cat_index = {cat: i for i, cat in enumerate(cats)}
+            for i in range(len(nids)):
+                for j in range(i + 1, len(nids)):
+                    ni, nj = nids[i], nids[j]
+                    ci, cj = category_map.get(ni, ""), category_map.get(nj, "")
+                    if ci and ci == cj and not G.has_edge(ni, nj) and not G.has_edge(nj, ni):
+                        G.add_edge(ni, nj, weight=0.15)
+
+        # Initial positions: each category gets a point on a circle
+        if n_cats > 1:
+            import random
+            rng = random.Random(42)
+            cat_radius = 0.55
+            initial_pos = {}
+            for nid, *_ in nodes:
+                cat = category_map.get(nid, "")
+                if cat in cat_index:
+                    angle = 2 * math.pi * cat_index[cat] / n_cats
+                    cx = math.cos(angle) * cat_radius
+                    cy = math.sin(angle) * cat_radius
+                    initial_pos[nid] = (cx + rng.uniform(-0.1, 0.1), cy + rng.uniform(-0.1, 0.1))
+                else:
+                    initial_pos[nid] = (rng.uniform(-0.2, 0.2), rng.uniform(-0.2, 0.2))
+
     n = G.number_of_nodes()
-    k = 2.5 if n > 10 else 1.5
-    raw = nx.spring_layout(G, k=k, iterations=80, seed=42)
+    k = 5.0 if n > 10 else 2.0
+    raw = nx.spring_layout(G, k=k, iterations=120, seed=42, pos=initial_pos, weight="weight")
     xs = [raw[nid][0] for nid, *_ in nodes]
     ys = [raw[nid][1] for nid, *_ in nodes]
     min_x, max_x = min(xs), max(xs)
@@ -67,8 +104,8 @@ def _force_directed_layout(nodes, edges, width, height, padding):
 
 # Canvas sized for ~40 nodes with titles; force-directed spread reduces arrow overlap.
 # Extra vertical space (VERT_PAD) so nodes can be dragged above/below the graph.
-DEFAULT_GRAPH_WIDTH = 1800
-DEFAULT_GRAPH_HEIGHT = 1400
+DEFAULT_GRAPH_WIDTH = 2400
+DEFAULT_GRAPH_HEIGHT = 2000
 VERT_PAD = 250
 
 EDGE_COLORS = (
@@ -114,12 +151,16 @@ def build_graph_svg(
     show_title: if True, use title as label; else use nugget tag (e.g. 003-inside).
     link_nuggets: if True, wrap each node in <a> to its nugget page.
     """
+    from category_colors import load_category_colors
+    cat_colors = load_category_colors()
+
     nodes, edges = _node_edge_lists(nuggets)
     if not nodes:
         return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {} {}"></svg>'.format(width, height)
 
+    category_map = {nid: (tags_list[0] if tags_list else "") for nid, _label, _slug, tags_list, _status in nodes}
     padding = 80
-    pos = _force_directed_layout(nodes, edges, width, height, padding)
+    pos = _force_directed_layout(nodes, edges, width, height, padding, category_map=category_map)
 
     box_w = 50
     box_h = 22
@@ -168,9 +209,11 @@ def build_graph_svg(
         x, y = pos[nid]
         label_text = label if show_title else (slug or nid)
         label_esc = _html.escape(str(label_text))
+        cat = tags_list[0] if tags_list else ""
+        fill_color = cat_colors.get(cat, "#fff")
         node_content = (
-            '    <rect x="{}" y="{}" width="{}" height="{}" rx="{}" ry="{}" class="map-graph-node"/>'.format(
-                -box_w / 2, -box_h / 2, box_w, box_h, box_h / 2, box_h / 2
+            '    <rect x="{}" y="{}" width="{}" height="{}" rx="{}" ry="{}" class="map-graph-node" style="fill:{}"/>'.format(
+                -box_w / 2, -box_h / 2, box_w, box_h, box_h / 2, box_h / 2, fill_color
             )
             + '\n    <text class="map-graph-label" text-anchor="middle" dominant-baseline="central">{}</text>'.format(
                 label_esc
@@ -315,7 +358,7 @@ MAP_FILTER_SCRIPT = """
     if(wrapEl){
       var fitRaw = Math.min(wrapEl.clientWidth/baseW, wrapEl.clientHeight/contentH);
       var n = Math.round(Math.log(fitRaw)/Math.log(SQRT2));
-      zoomLevel = Math.max(MIN_ZOOM, Math.min(MAX_ZOOM, Math.pow(SQRT2,n)));
+      zoomLevel = Math.max(MIN_ZOOM, Math.min(MAX_ZOOM, Math.pow(SQRT2, n + 2)));
       normZoom = zoomLevel;
       applyZoom(null,null);
       if(resetScroll){
@@ -334,7 +377,21 @@ MAP_FILTER_SCRIPT = """
     var filtersH = filtersEl ? filtersEl.offsetHeight : 0;
     if(wrapEl) wrapEl.style.top = (navH + filtersH) + 'px';
   });
-  window.addEventListener('resize', function(){ setupLayout(true); });
+  window.addEventListener('resize', function(){
+    var cxBase = wrapEl ? (wrapEl.scrollLeft + wrapEl.clientWidth  / 2 - padX) / zoomLevel : null;
+    var cyBase = wrapEl ? (wrapEl.scrollTop  + wrapEl.clientHeight / 2 - padY) / zoomLevel : null;
+    var navEl     = document.querySelector('nav');
+    var filtersEl = document.querySelector('.map-graph-filters');
+    var navH      = navEl     ? navEl.offsetHeight     : 0;
+    var filtersH  = filtersEl ? filtersEl.offsetHeight : 0;
+    if(wrapEl) wrapEl.style.top = (navH + filtersH) + 'px';
+    if(wrapEl && innerEl){
+      padX = Math.round(wrapEl.clientWidth  * 0.2);
+      padY = Math.round(wrapEl.clientHeight * 0.2);
+      innerEl.style.padding = padY+'px '+padX+'px';
+    }
+    if(wrapEl){ applyZoom(cxBase, cyBase); }
+  });
 
   if (svgEl && typeof svgEl.createSVGPoint === 'function') {
     var pt = svgEl.createSVGPoint();
@@ -494,9 +551,13 @@ MAP_FILTER_SCRIPT = """
 
 def map_directive_html(nuggets, status_order):
     """HTML for the @map directive: filters, key, interactive graph SVG, and filter/drag script."""
+    from category_colors import load_category_colors
+    cat_colors = load_category_colors()
     categories = sorted(set(n.get("category", "") for n in nuggets if n.get("category", "")))
     cat_cbs = "".join(
-        '<label class="map-cb-label"><input type="checkbox" class="map-filter-cat" value="{}"{}> {}</label>'.format(
+        '<label class="map-cb-label map-cb-label--cat" style="--cb-cat-bg:{}">'
+        '<input type="checkbox" class="map-filter-cat" value="{}"{}>  {}</label>'.format(
+            cat_colors.get(t, "transparent"),
             _html.escape(t), ' checked' if t.lower() == "consciousness" else "", _html.escape(t)
         )
         for t in categories
