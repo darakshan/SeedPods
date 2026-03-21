@@ -6,9 +6,7 @@
 #related 001, 026, 027
 
 #surface
-You probably learned the fable the same way Katherine May did — the same way most of us did. The ant works all summer storing food. The grasshopper sings and plays. Winter comes. The grasshopper suffers. The moral is clear: stop playing, start working. Play is what you do when you should be doing something else.
-
-@note(Find the specific passage where May revisits the Aesop fable — she questions the moral directly. Check Wintering, likely the autumn or early winter chapter. Get the quote or close paraphrase before building.)
+You probably learned the fable the same way most of us did. The ant works all summer storing food. The grasshopper sings and plays. Winter comes. The grasshopper suffers. The moral is clear: stop playing, start working. Play is what you do when you should be doing something else.
 
 A word about what we mean by play. Not competitive sport, not organized games, not exercise with a target. Those are perfectly good things, but the will is very much in charge of them — there is a score, a goal, a criterion for success. The play we mean is something else: the kind where none of that applies. What a child does when no one has organized anything. What happens when you follow something simply because it's interesting right now, with no plan for where it leads.
 
@@ -36,8 +34,6 @@ The fable's error runs deeper than "play is also valuable." Its deeper error is 
 The ant's will is always in charge. Even the scout ant exploring unfamiliar territory is serving a goal the colony already has. Exploration, in this sense, is still ant-mode — goal-directed search within a frame. The grasshopper is doing something categorically different: operating outside any frame, with no criterion for success except the intrinsic pull of the moment. This is not a different strategy for finding food. It is a different relationship to the question of what you're doing at all.
 
 The brain, it turns out, has something to say about this distinction. There is a long tradition of observation — from mathematicians, artists, scientists — that certain kinds of insight arrive not during directed effort but in its aftermath: in the bath, on the walk, in the middle of the night. This is sometimes described as the unconscious "working on" a problem, which smuggles the ant back in. A more precise description may be that the will's suspension changes what the brain has access to — opens registers that goal-directed search keeps closed. Feynman's drumming worked not because it fed his physics but because it genuinely wasn't physics. The separation was the point.
-
-Katherine May's Wintering makes a parallel argument at the scale of a human life. The fallow season — the period of withdrawal, quiet, apparent unproductivity — is not a failure of the active season. It is what the active season depends on. The error is to treat winter as a problem to be solved rather than a mode to be entered. The same error, at a smaller scale, is what eliminates play from adult life: we have rest (recovery in service of more work) but not the thing May is pointing at, which is genuine suspension of the productive frame.
 
 @warn(The claim about brain states and will-suspension is observational and phenomenological, not established neuroscience. Treat with appropriate tentativeness.)
 
@@ -112,13 +108,11 @@ The same word — play — may be pointing at the same deep structure in three
 different domains.
 
 #term play: As used in this pod: the frame-free, will-suspended mode of activity in which no external criterion of success applies. Distinguished from competitive games and organized sport (where the will is fully engaged), from exploration (goal-directed search within a frame), and from rest (recovery in service of further work).
-#term wintering: Katherine May's term for fallow periods in human life — seasons of withdrawal and apparent unproductivity that are not failures of the active mode but conditions of possibility for it.
 #term explore-exploit tradeoff: The tension in any adaptive system between using known strategies (exploiting) and searching for better ones (exploring). Both are still goal-directed; neither is equivalent to play in the sense this pod develops.
 #term temperature (AI): A parameter in generative AI systems controlling how broadly the model samples from its probability distribution. Higher temperature produces more varied, less predictable output — a mechanical approximation of wandering whose relationship to genuine play remains an open question.
 #term will-suspension: The state in which goal-directed effort is genuinely set aside, not redirected. Proposed here as the distinguishing feature of play, and as the mode that directed exploration cannot substitute for.
 
 #provenance
-#ref may2020 May, Katherine. Wintering: The Power of Rest and Retreat in Difficult Times. Riverhead Books, 2020. Revisits the Aesop fable directly and questions its moral; the primary human-scale instance of the pod's argument.
 #ref feynman1985 Feynman, Richard P. Surely You're Joking, Mr. Feynman! W. W. Norton, 1985. The drumming as genuinely other domain — not creative cross-pollination but will-suspension in a separate space.
 #ref aesop Aesop. The Ant and the Grasshopper. Traditional fable, ca. 6th century BCE. The cultural compression the pod argues encodes a framework too small for what it's trying to describe.
 #ref sutton2018 Sutton, Richard S., and Andrew G. Barto. Reinforcement Learning: An Introduction. 2nd ed. MIT Press, 2018. The explore/exploit framing — useful precisely as the contrast case, since both poles remain goal-directed.
@@ -154,10 +148,6 @@ HOLD ON: Two strangers looking at something together. Whatever it is, it has no 
 
 NARRATOR (V.O.): The grasshopper mode isn't lost. It requires, for most adults, a journey to find.
 
-CUT TO: A winter landscape. Spare, quiet. A woman by a window, not working, not resting dramatically. Just present.
-
-NARRATOR (V.O.): Katherine May calls it wintering. Not a failure of summer. What summer depends on.
-
 CUT TO: A terminal. A language model at zero temperature, looping — the same phrase, the same safe answer. An engineer reaches in, raises a dial. The output opens.
 
 NARRATOR (V.O.): The engineers called it temperature. They had to build the grasshopper in deliberately. Whether what they built is genuinely the grasshopper — or only its shadow — we don't know.
@@ -178,5 +168,3 @@ Primary illustration: Two panels. Left: an ant in close-up, carrying something, 
 Social graphic: White text on dark field — "The fable had no slot for the will stepping back." Grasshopper silhouette, very spare.
 
 Video thumbnail: A temperature dial — a slider between two poles. One end labeled "exploit." The other end deliberately left unlabeled. The unlabeled end is the question.
-
-Secondary image concept: A winter tree, bare, against a pale sky. Roots visible below ground, still active in the dark. Caption: "Wintering is not the absence of growth."

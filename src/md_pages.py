@@ -218,14 +218,18 @@ def _seed_row_html(n, base_href, status_order, stub_only=False, first_image_href
     title = n.get("title", "")
     subtitle = n.get("subtitle", "")
     status = n.get("status", "empty")
+    category = n.get("category", "")
     stub = " stub" if status == "empty" else ""
     num_display = display_number(num)
     title_line = f"{num_display}. {title}" if num_display else title
     status_span = f'<span class="seed-status">{_html.escape(status)}</span>'
     rev_span = f'<span class="seed-status">rev {rev}</span>' if rev is not None else ""
+    cat_span = f'<span class="seed-status">{_html.escape(category)}</span>' if category else ""
     byline_parts = [status_span]
     if rev_span:
         byline_parts.append(rev_span)
+    if cat_span:
+        byline_parts.append(cat_span)
     byline_inner = " · ".join(byline_parts)
     byline = f"{_html.escape(subtitle)} · {byline_inner}" if subtitle else byline_inner
     data_attrs = ""
@@ -234,7 +238,7 @@ def _seed_row_html(n, base_href, status_order, stub_only=False, first_image_href
         num_val = int(num) if (num or "").isdigit() else 0
         date_val = (n.get("date") or "").strip() or "0000-00-00"
         rank = status_rank.get(status, len(status_rank))
-        data_attrs = f' data-num="{num_val}" data-date="{_html.escape(date_val)}" data-status-rank="{rank}" data-title="{_html.escape(title)}"'
+        data_attrs = f' data-num="{num_val}" data-date="{_html.escape(date_val)}" data-status-rank="{rank}" data-title="{_html.escape(title)}" data-category="{_html.escape(category)}"'
     if first_image_href:
         thumb = f'<div class="seed-row-thumb"><img src="{_html.escape(first_image_href)}" alt="" class="seed-thumb"></div>'
     else:
@@ -354,14 +358,14 @@ def _render_samples_html(
     sort_ui = ""
     sort_script = ""
     if sortable:
-        sort_ui = """
-    <p class="repo-sort-wrap"><label for="repo-sort">Sort: </label><select id="repo-sort" class="repo-sort" aria-label="Sort list">
+        sort_ui = """<p class="repo-sort-wrap"><label for="repo-sort">Sort: </label><select id="repo-sort" class="repo-sort" aria-label="Sort list">
       <option value="status">By status</option>
       <option value="number" selected>By number</option>
       <option value="alpha">By name</option>
+      <option value="category">By category</option>
       <option value="recent">By most recent</option>
     </select></p>
-    <div id="seed-list-rows">"""
+    <div id="seed-list-rows" style="border-top:1px solid var(--line)">"""
         sort_script = """
     </div>
     <script>
@@ -377,12 +381,13 @@ def _render_samples_html(
           if (by === "alpha") return sortKey(a.dataset.title).localeCompare(sortKey(b.dataset.title));
           if (by === "recent") return (b.dataset.date || "").localeCompare(a.dataset.date || "");
           if (by === "number") return (+a.dataset.num) - (+b.dataset.num);
+          if (by === "category") return sortKey(a.dataset.category).localeCompare(sortKey(b.dataset.category)) || (+a.dataset.num) - (+b.dataset.num);
           return (+a.dataset.statusRank) - (+b.dataset.statusRank) || (+a.dataset.num) - (+b.dataset.num);
         });
         rows.forEach(function(r){ container.appendChild(r); });
       }
       var saved = localStorage.getItem(STORAGE_KEY);
-      if (saved && ["status","number","alpha","recent"].indexOf(saved) >= 0) sel.value = saved;
+      if (saved && ["status","number","alpha","category","recent"].indexOf(saved) >= 0) sel.value = saved;
       sel.addEventListener("change", function(){ var v = this.value; localStorage.setItem(STORAGE_KEY, v); sortRows(v); });
       sortRows(sel.value);
     })();

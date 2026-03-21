@@ -557,10 +557,9 @@ def main():
         changed = new_hash != old.get("hash") or page_id not in state.get("pages", {})
         page_versions[page_id] = old_ver + 1 if changed else old_ver
 
-    changed_set = {pid for pid in all_page_ids if page_hashes[pid] != state.get("pages", {}).get(pid, {}).get("hash") or pid not in state.get("pages", {})}
-    if force:
-        changed_set = set(all_page_ids)
-    if changed_set:
+    content_changed_set = {pid for pid in all_page_ids if page_hashes[pid] != state.get("pages", {}).get(pid, {}).get("hash") or pid not in state.get("pages", {})}
+    changed_set = set(all_page_ids) if force else content_changed_set
+    if content_changed_set:
         build_version = state.get("build_version", 0) + 1
         last_build_time = datetime.now(ZoneInfo("America/Los_Angeles"))
     else:
@@ -576,7 +575,7 @@ def main():
     page_changed_times = {}
     for page_id in all_page_ids:
         old = state.get("pages", {}).get(page_id, {})
-        if page_id in changed_set:
+        if page_id in content_changed_set:
             page_changed_in_builds[page_id] = build_version
             page_changed_times[page_id] = BUILD_TIME
         else:
@@ -643,12 +642,14 @@ def main():
         if verbose:
             print("  Built nugget-index.json, search-index.json, seed-nav.js")
 
-    if changed_set or not (SITE_DIR / "site.css").exists():
-        css_text = (CONFIG_DIR / "site.css").read_text(encoding="utf-8")
-        extra_css = build_category_css(load_category_colors())
-        if extra_css:
-            css_text += "\n" + extra_css
-        (SITE_DIR / "site.css").write_text(css_text, encoding="utf-8")
+    css_src = CONFIG_DIR / "site.css"
+    css_dst = SITE_DIR / "site.css"
+    css_text = css_src.read_text(encoding="utf-8")
+    extra_css = build_category_css(load_category_colors())
+    if extra_css:
+        css_text += "\n" + extra_css
+    if changed_set or not css_dst.exists() or css_dst.read_text(encoding="utf-8") != css_text:
+        css_dst.write_text(css_text, encoding="utf-8")
         built_count += 1
         if verbose:
             print("  Built site.css")
@@ -760,7 +761,7 @@ def main():
 
     _warn_content_not_in_docs(nuggets, index_copy, collected_md_refs)
 
-    if not changed_set:
+    if not content_changed_set:
         print("Nothing changed.")
     else:
         if not verbose:
