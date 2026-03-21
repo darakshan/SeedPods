@@ -1,23 +1,23 @@
 {
-  "build_version": 74,
+  "build_version": 78,
   "pages": {
     "index.html": {
-      "hash": "1b5227775d5b0b24f6fc0c7e68edd6f301212d78e9cb695dff7aa9a8ae852012",
-      "page_version": 45,
-      "changed_in_build": 74,
-      "changed_time": "2026-03-20T18:07:06.291414-07:00"
+      "hash": "5a27b351c2433a632c7775e5aebb6fa0fa32ea8da873f12bd77b84389885e01e",
+      "page_version": 49,
+      "changed_in_build": 78,
+      "changed_time": "2026-03-21T07:25:22.363816-07:00"
     },
     "000-map.html": {
-      "hash": "ecb3e49af2324fd488f987cf49144a59c037f60ef29888ba054f9dba16b25c5d",
-      "page_version": 2,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "57115ba6a1d3e2267fa90b5edfb88f0a4d781f6ab4f3d7411ecb356af9b353fc",
+      "page_version": 6,
+      "changed_in_build": 78,
+      "changed_time": "2026-03-21T07:25:22.363816-07:00"
     },
     "001-caloric.html": {
-      "hash": "c7fc4f9cca7cfb6636b8cda784c134543602cf833cf0c17e9d223de019803c8c",
-      "page_version": 5,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "b139afcfa88d1dda375061829c3450487caaae943d2a1ac51e1f9cb311d4be7f",
+      "page_version": 9,
+      "changed_in_build": 78,
+      "changed_time": "2026-03-21T07:25:22.363816-07:00"
     },
     "002-events.html": {
       "hash": "b5a678a0af518949540d634dcf6e43c4e9fcd7d8bdba3c105d01facd70cf8804",
@@ -440,155 +440,155 @@
       "changed_time": "2026-03-20T18:07:06.291414-07:00"
     },
     "about.html": {
-      "hash": "a75f84c74ce13766231da97c78f066ab1196436fec6f66ae72f7609f78384a0e",
-      "page_version": 23,
-      "changed_in_build": 74,
-      "changed_time": "2026-03-20T18:07:06.291414-07:00"
+      "hash": "4e3cb6a1a5b827e9c9bfcd63e27b1a18673a7bff74e1d576bf414d0a4bb24369",
+      "page_version": 27,
+      "changed_in_build": 78,
+      "changed_time": "2026-03-21T07:25:22.363816-07:00"
     },
     "bibliography.html": {
-      "hash": "8727c51a30b984d95f534d37691299dc44875cd81e6fe653e92abae3497d4efe",
-      "page_version": 23,
-      "changed_in_build": 74,
-      "changed_time": "2026-03-20T18:07:06.291414-07:00"
+      "hash": "051d21d21dc59aebbc30432ce5bf30b6b3c5da4aba8952cc90fe32636f60a402",
+      "page_version": 27,
+      "changed_in_build": 78,
+      "changed_time": "2026-03-21T07:25:22.363816-07:00"
     },
     "glossary.html": {
-      "hash": "920b1e1e6bfd4b1b935ef0b84436611d31555a3723574a1203432f693cc1dd5e",
-      "page_version": 23,
-      "changed_in_build": 74,
-      "changed_time": "2026-03-20T18:07:06.291414-07:00"
+      "hash": "74bf40d39ebf5e8da524b2aa6cca855bf99d6d7ed8d946ed5667487fc02d94b7",
+      "page_version": 27,
+      "changed_in_build": 78,
+      "changed_time": "2026-03-21T07:25:22.363816-07:00"
     },
     "list.html": {
-      "hash": "f8a3cb126fa10dc02abcca1467a950c37e12cc1acac9bd834fc902d7d45612fa",
-      "page_version": 23,
-      "changed_in_build": 74,
-      "changed_time": "2026-03-20T18:07:06.291414-07:00"
+      "hash": "7702b9eaf783ebdbb6a39cfd2652e09d22d9195c46687958041c5784f035a51d",
+      "page_version": 27,
+      "changed_in_build": 78,
+      "changed_time": "2026-03-21T07:25:22.363816-07:00"
     },
     "map.html": {
-      "hash": "04e242e01244b44fb77bfd3e3c32f341baaf0fd8779f9af0e1a6502f0f399581",
-      "page_version": 18,
-      "changed_in_build": 74,
-      "changed_time": "2026-03-20T18:07:06.291414-07:00"
+      "hash": "d29d91f363d4f78426746a1685206e269d42ce529543698bbd6c51d8bd0cbf1a",
+      "page_version": 22,
+      "changed_in_build": 78,
+      "changed_time": "2026-03-21T07:25:22.363816-07:00"
     },
     "more.html": {
-      "hash": "ace4cdbe3ffa4b639d74f59f77394b8ec9f7095afaa41ff2f02fb1da07985392",
-      "page_version": 23,
-      "changed_in_build": 74,
-      "changed_time": "2026-03-20T18:07:06.291414-07:00"
+      "hash": "ea0474c9df69edc1b518062ad32ff07f1b7d27f5bf1b3ff06bf1f976bb4ca54f",
+      "page_version": 27,
+      "changed_in_build": 78,
+      "changed_time": "2026-03-21T07:25:22.363816-07:00"
     },
     "internal.html": {
-      "hash": "db1e67b07594c4c884c6d4af095ae4e0d948a0abefe07d72219f029e9a92019b",
-      "page_version": 41,
-      "changed_in_build": 74,
-      "changed_time": "2026-03-20T18:07:06.291414-07:00"
+      "hash": "07f497ab086177e4b390caf8456cd482475649da24fff5e3d0209fbf18e71e8b",
+      "page_version": 45,
+      "changed_in_build": 78,
+      "changed_time": "2026-03-21T07:25:22.363816-07:00"
     },
     "about-audiences.html": {
-      "hash": "ddbabb8e84174886c65880e19d0f5df13bb14ee0e62d977c3afbd20f932338f7",
-      "page_version": 23,
-      "changed_in_build": 74,
-      "changed_time": "2026-03-20T18:07:06.291414-07:00"
+      "hash": "5b0cbba36826cdedfaf69ee109097d0993c9946683f6869a45ddb9b749aa5e1a",
+      "page_version": 27,
+      "changed_in_build": 78,
+      "changed_time": "2026-03-21T07:25:22.363816-07:00"
     },
     "about-authors.html": {
-      "hash": "860921eb8afde33953d055542ce9d01b0f77a75cddb4b797976ba9aa9d8da931",
-      "page_version": 23,
-      "changed_in_build": 74,
-      "changed_time": "2026-03-20T18:07:06.291414-07:00"
+      "hash": "e9eb5f8b5cb7d8472250ed532ebb28d09f90384c16108f50bfbdae3d764fad45",
+      "page_version": 27,
+      "changed_in_build": 78,
+      "changed_time": "2026-03-21T07:25:22.363816-07:00"
     },
     "about-goals.html": {
-      "hash": "21c5d092decab8548403e2a1db74d1df3c5befe869a9af682690ecb94dc63344",
-      "page_version": 23,
-      "changed_in_build": 74,
-      "changed_time": "2026-03-20T18:07:06.291414-07:00"
+      "hash": "518e4cc34ff69bf5572b76c5356bd6cd332911a719860085c8c603561da73907",
+      "page_version": 27,
+      "changed_in_build": 78,
+      "changed_time": "2026-03-21T07:25:22.363816-07:00"
     },
     "about-personal.html": {
-      "hash": "ae06b95c1eef5c46c5de54e32cddf9d11f7169bc6631574657235717e28a9fe2",
-      "page_version": 23,
-      "changed_in_build": 74,
-      "changed_time": "2026-03-20T18:07:06.291414-07:00"
+      "hash": "cf4fc542584db25932a9dcf7c210afc40e9fd54dd847f297504ef154e0fc4931",
+      "page_version": 27,
+      "changed_in_build": 78,
+      "changed_time": "2026-03-21T07:25:22.363816-07:00"
     },
     "about-reviews.html": {
-      "hash": "3e764a86eaebefc8d4c4a27c398fbaca2799b386f49672ad271a603f675d1b55",
-      "page_version": 23,
-      "changed_in_build": 74,
-      "changed_time": "2026-03-20T18:07:06.291414-07:00"
+      "hash": "5721c6c8fe9c995144b258728ae9d3dc04f2f57473d0bb380d1bd8238d20ffc6",
+      "page_version": 27,
+      "changed_in_build": 78,
+      "changed_time": "2026-03-21T07:25:22.363816-07:00"
     },
     "about-status.html": {
-      "hash": "4d2020349ef894d7487728e796d6f372fec1efaab80483f60da816a80776cd15",
-      "page_version": 18,
-      "changed_in_build": 74,
-      "changed_time": "2026-03-20T18:07:06.291414-07:00"
+      "hash": "f88d1398a0415f43858573036d79694eb7ae8c569d46f82116f04aa20e664ae7",
+      "page_version": 22,
+      "changed_in_build": 78,
+      "changed_time": "2026-03-21T07:25:22.363816-07:00"
     },
     "internal-build.html": {
-      "hash": "ff995b243e87e305c2edb09f5a383e58e84c274751ea113f61664ba66be091ac",
-      "page_version": 23,
-      "changed_in_build": 74,
-      "changed_time": "2026-03-20T18:07:06.291414-07:00"
+      "hash": "3fe3e479edcf72683a3466065cfa2a4ddb3c4c8540fa76bdad661c112ff35a83",
+      "page_version": 27,
+      "changed_in_build": 78,
+      "changed_time": "2026-03-21T07:25:22.363816-07:00"
     },
     "internal-directives.html": {
-      "hash": "f62dd51b507fef7ee5a2b8cefeffc4dafde3a9adcaa67983970f61a88dc18a35",
-      "page_version": 23,
-      "changed_in_build": 74,
-      "changed_time": "2026-03-20T18:07:06.291414-07:00"
+      "hash": "4e62cb075210c39a6a9b7efaf337e18da2d547e91d94f98ae0e3e5442373f8b0",
+      "page_version": 27,
+      "changed_in_build": 78,
+      "changed_time": "2026-03-21T07:25:22.363816-07:00"
     },
     "internal-early-structure.html": {
-      "hash": "2e75159a53d27db52809febe8fb100586a66d2dc6203b947191a5df6bfaf080b",
-      "page_version": 23,
-      "changed_in_build": 74,
-      "changed_time": "2026-03-20T18:07:06.291414-07:00"
+      "hash": "569aec001b32d4df62a340484496f2ed4f3a8ba2853409cd3706ee8ba42fdb17",
+      "page_version": 27,
+      "changed_in_build": 78,
+      "changed_time": "2026-03-21T07:25:22.363816-07:00"
     },
     "internal-grammar.html": {
-      "hash": "475f45c9e946375fc99ec6a71ec12a0435851ada3e7a55100059e22f2e0e72a1",
-      "page_version": 23,
-      "changed_in_build": 74,
-      "changed_time": "2026-03-20T18:07:06.291414-07:00"
+      "hash": "6793d99dda9dfe6408f8a53c4226fcf75bbb5b68f5abf3e95163e23049a460af",
+      "page_version": 27,
+      "changed_in_build": 78,
+      "changed_time": "2026-03-21T07:25:22.363816-07:00"
     },
     "internal-images.html": {
-      "hash": "ebc2321b80c4b89dab2d9b217c58cb003c881c4e132b39f7e9278d6b5534926c",
-      "page_version": 11,
-      "changed_in_build": 74,
-      "changed_time": "2026-03-20T18:07:06.291414-07:00"
+      "hash": "fc8a7026db7c1446c4be698d59fb44e4e41d6c6b5236996024aae7f8a3ee1695",
+      "page_version": 15,
+      "changed_in_build": 78,
+      "changed_time": "2026-03-21T07:25:22.363816-07:00"
     },
     "internal-import-format.html": {
-      "hash": "ff995b243e87e305c2edb09f5a383e58e84c274751ea113f61664ba66be091ac",
-      "page_version": 23,
-      "changed_in_build": 74,
-      "changed_time": "2026-03-20T18:07:06.291414-07:00"
+      "hash": "3fe3e479edcf72683a3466065cfa2a4ddb3c4c8540fa76bdad661c112ff35a83",
+      "page_version": 27,
+      "changed_in_build": 78,
+      "changed_time": "2026-03-21T07:25:22.363816-07:00"
     },
     "internal-nugget-urls.html": {
-      "hash": "235189c5ec28d3e31b4a6551bc5691ae784b726c85346095b8e03c9709ae9133",
-      "page_version": 23,
-      "changed_in_build": 74,
-      "changed_time": "2026-03-20T18:07:06.291414-07:00"
+      "hash": "545a37a5f4f3a40eabf5972456bb777e15c25e171bef5effff7cadf2dd6b1281",
+      "page_version": 27,
+      "changed_in_build": 78,
+      "changed_time": "2026-03-21T07:25:22.363816-07:00"
     },
     "internal-scriptcraft.html": {
-      "hash": "58b096f5ed049ccabc5090d514f644a9db0a191c3f942e39f219edbbcf598ecd",
-      "page_version": 23,
-      "changed_in_build": 74,
-      "changed_time": "2026-03-20T18:07:06.291414-07:00"
+      "hash": "1012b355f982e3d76800c58e7006b41f80543ecfc36957a09ea0b7453fb47dcc",
+      "page_version": 27,
+      "changed_in_build": 78,
+      "changed_time": "2026-03-21T07:25:22.363816-07:00"
     },
     "internal-settings.html": {
-      "hash": "635ca5912b20d8a5e5620b718a9d91aace16f920f412c2aee7264a89e839c0d3",
-      "page_version": 23,
-      "changed_in_build": 74,
-      "changed_time": "2026-03-20T18:07:06.291414-07:00"
+      "hash": "894c52034d8a8d87e92e3cec3792b373229fc81341bebf54838d78e75670e210",
+      "page_version": 27,
+      "changed_in_build": 78,
+      "changed_time": "2026-03-21T07:25:22.363816-07:00"
     },
     "internal-structure.html": {
-      "hash": "5175331e2b666b67ff99c26b8540680c62ff1ea64552bb44a93e6d31f57da489",
-      "page_version": 23,
-      "changed_in_build": 74,
-      "changed_time": "2026-03-20T18:07:06.291414-07:00"
+      "hash": "21effb8e60c9995b8fcdc5b287d764379f6b8b5c1a40d055c0a651dc10dd2ce6",
+      "page_version": 27,
+      "changed_in_build": 78,
+      "changed_time": "2026-03-21T07:25:22.363816-07:00"
     },
     "internal-style-guidelines.html": {
-      "hash": "4d168cc8d2907fb8e552a5ffb8a3052b8df4d0a61036a86b0178fba6716d4485",
-      "page_version": 23,
-      "changed_in_build": 74,
-      "changed_time": "2026-03-20T18:07:06.291414-07:00"
+      "hash": "8eb2a5cdc1d6913244af89723f1ed82fb2b8aee8daf8c6eb887954c7eba42a72",
+      "page_version": 27,
+      "changed_in_build": 78,
+      "changed_time": "2026-03-21T07:25:22.363816-07:00"
     },
     "more-inside.html": {
-      "hash": "4a4ca602b0bf657d8c0057c5b3a005826efdb462923f4c82929002ba4ca9aaf1",
-      "page_version": 23,
-      "changed_in_build": 74,
-      "changed_time": "2026-03-20T18:07:06.291414-07:00"
+      "hash": "b88fc43caf63cc0e70a5a1f614ef769e08c56441e41bb10d01e7c69340fb10b0",
+      "page_version": 27,
+      "changed_in_build": 78,
+      "changed_time": "2026-03-21T07:25:22.363816-07:00"
     }
   },
-  "last_build_time": "2026-03-20T18:07:06.291414-07:00"
+  "last_build_time": "2026-03-21T07:25:22.363816-07:00"
 }

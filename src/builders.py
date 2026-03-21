@@ -36,10 +36,17 @@ _category_colors = load_category_colors()
 LAYER_ORDER = [
     ("surface", "Surface"),
     ("depth", "Depth"),
-    ("script", "Script"),
     ("images", "Images"),
+    ("script", "Script"),
     ("references", "References"),
 ]
+
+LAYER_TAB_LABELS = {
+    "surface": "Surface",
+    "depth": "Depth",
+    "images": "Media",
+    "references": "References",
+}
 LAYER_ORDER_PROTO = [
     ("brief", "Brief"),
     ("references", "References"),
@@ -152,10 +159,13 @@ def build_nugget(n, all_nuggets, link_errors=None, site_dir=None):
 
     tabs_parts = []
     for layer_id, label in layer_order:
+        tab_label = LAYER_TAB_LABELS.get(layer_id)
+        if tab_label is None:
+            continue
         if layer_has_content(layer_id):
-            tabs_parts.append(f'<a href="#{layer_id}" class="layer-tab">{label}</a>')
+            tabs_parts.append(f'<a href="#{layer_id}" class="layer-tab">{tab_label}</a>')
         else:
-            tabs_parts.append(f'<span class="layer-tab layer-tab-disabled">{label}</span>')
+            tabs_parts.append(f'<span class="layer-tab layer-tab-disabled">{tab_label}</span>')
 
     sections_parts = []
     refs_section_shown = layer_has_content("references")

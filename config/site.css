@@ -39,8 +39,8 @@ nav{display:flex;flex-direction:column;align-items:stretch;border-bottom:1px sol
 .nav-lists-dropdown:hover .nav-dropdown,.nav-lists-dropdown.nav-dropdown-open .nav-dropdown{display:block}
 .nav-dropdown{position:absolute;top:100%;left:0;margin:0;padding:.5rem 0;min-width:10rem;background:var(--paper);border:1px solid var(--line);box-shadow:0 .25rem 1rem rgba(0,0,0,.08);list-style:none}
 .nav-dropdown a{display:block;padding:.4rem 1rem;white-space:nowrap;border:none;border-radius:0;background:none}
-.nav-hamburger-btn{display:none;background:none;border:1px solid var(--line);color:var(--dim);cursor:pointer;font-size:1.25rem;line-height:1;padding:.35rem .5rem;font-family:inherit}
-.nav-hamburger-btn:hover{color:var(--warm);border-color:var(--warm)}
+.nav-hamburger-btn{display:none;background:none;border:none;color:var(--dim);cursor:pointer;font-size:1.7rem;line-height:1;padding:0;font-family:inherit}
+.nav-hamburger-btn:hover{color:var(--warm)}
 .nav-hamburger-panel{display:none;position:fixed;inset:0;z-index:1500;align-items:flex-start;justify-content:center;padding:3rem 1.5rem;pointer-events:none}
 .nav-hamburger-panel[style*="flex"]{pointer-events:auto}
 .nav-hamburger-overlay{position:fixed;inset:0;background:rgba(0,0,0,.3);cursor:pointer}
@@ -117,7 +117,7 @@ h2{font-size:1.6rem;font-weight:300;margin-bottom:1rem}
   .nav-hamburger-btn{display:block}
   .nav-row{position:relative}
   nav{position:relative}
-  .search-dialog-input{font-size:1rem}
+  .search-dialog-input{font-size:16px}
 }
 /* Repo table */
 .repo-sort-wrap{margin-top:0;margin-bottom:.5rem}
@@ -335,3 +335,4 @@ details.category-group summary.index-tag-name::-webkit-details-marker{display:no
 .mobile-sim nav{position:relative}
 .mobile-sim .layer-tab{font-size:.70rem;letter-spacing:.05em;padding:.25rem .25rem}
 .mobile-sim .layer-tabs-prev,.mobile-sim .layer-tabs-next{font-size:.85rem;padding:.25rem .1rem}
+.mobile-sim .search-dialog-input{font-size:16px}

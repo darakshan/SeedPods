@@ -12,6 +12,8 @@ The seeds gathered here have been sorted into seven categories. We want to be ho
 
 With that caveat cheerfully lodged, here is the map.
 
+@image(000-map, A map of all the SeedPods as defined in this build)
+
 ---
 
 **Consciousness** is the big one. The question underneath everything else: what is it like to be something? Not just humans — possibly cells, possibly fields, possibly the universe itself. These seeds take seriously the possibility that experience is not a late biological accident but something woven into the fabric of things from the beginning. Start here if you want to be immediately disoriented in a productive way.
