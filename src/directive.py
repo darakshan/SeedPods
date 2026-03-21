@@ -1,5 +1,5 @@
 """
-Single place for @-directive handling when reading .md or nugget/*.txt.
+Single place for @-directive handling when reading .md or seedpod/*.txt.
 One form: @verb or @verb(content). Parentheses are optional; without them content is empty.
 Multi-argument directives use comma-separated content; split with split_directive_args().
 Complain on unknown verb or unclosed parentheses; dispatch to handlers; return updated text.
@@ -12,8 +12,8 @@ import shutil
 from pathlib import Path
 
 KNOWN_VERBS = {
-    "include", "samples", "nuggets", "pods", "categories", "glossary", "bibliography", "index", "map",
-    "timestamp", "link", "note", "exercise", "nugget", "image", "setting", "warn", "ref",
+    "include", "samples", "seedpods", "pods", "categories", "glossary", "bibliography", "index", "map",
+    "timestamp", "link", "note", "exercise", "seedpod", "image", "setting", "warn", "ref",
 }
 
 _ROOT = Path(__file__).resolve().parent.parent
@@ -85,12 +85,12 @@ def image_directive_handler(verb, content, context):
 _IMAGE_FIRST_ARG = re.compile(r"@image\s*\(\s*([^),]+)")
 
 
-def first_image_href_from_nugget(nugget, content_dir):
+def first_image_href_from_seedpod(seedpod, content_dir):
     """Return href for first 
 @image in any layer (e.g. 'images/foo.jpg'), or None."""
     content_dir = Path(content_dir).resolve()
     images_src = content_dir / "images"
-    layers = nugget.get("layers") or {}
+    layers = seedpod.get("layers") or {}
     for key in ("surface", "depth", "provenance", "script", "images", "brief"):
         text = layers.get(key) or ""
         m = _IMAGE_FIRST_ARG.search(text)

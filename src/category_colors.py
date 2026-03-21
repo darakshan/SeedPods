@@ -25,17 +25,17 @@ def category_css_slug(category):
 def build_category_css(category_colors):
     """
     Generate CSS for full-bleed color bands behind category summaries and
-    nugget headers.  Uses a ::before pseudo-element so no element dimensions
+    seedpod headers.  Uses a ::before pseudo-element so no element dimensions
     change (avoids horizontal-scroll from width:100vw).
     """
     if not category_colors:
         return ""
 
     base = (
-        ".nugget-header.cat-colored,"
+        ".seedpod-header.cat-colored,"
         "details.category-group summary.index-tag-name.cat-colored{"
         "position:relative;isolation:isolate}"
-        ".nugget-header.cat-colored::before,"
+        ".seedpod-header.cat-colored::before,"
         "details.category-group summary.index-tag-name.cat-colored::before{"
         "content:'';position:absolute;top:0;bottom:0;"
         "left:calc(50% - 50vw);right:calc(50% - 50vw);"

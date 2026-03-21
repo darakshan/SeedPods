@@ -1,8 +1,8 @@
 # SeedPods Corpus Summary
 
-Generated 2026-03-18 from all 69 pods.
+Generated 2026-03-18 from all 69 seedpods.
 
-## Pod Index
+## SeedPod Index
 
 | # | Slug | Title | Category | Related |
 |---|------|-------|----------|---------|

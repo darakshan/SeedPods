@@ -1,5 +1,5 @@
 """
-Build an SVG visualization of the nugget directed graph (related links).
+Build an SVG visualization of the seedpod directed graph (related links).
 Uses (number, title) and (from, to) edges from the same data as the map matrix.
 Force-directed layout via networkx.
 """
@@ -10,22 +10,22 @@ import math
 import networkx as nx
 
 
-def _node_edge_lists(nuggets):
-    """From nuggets list, return (nodes, edges). nodes = [(id, label, slug, tags_list, status)], edges = [(from_id, to_id)]."""
-    from nugget_parser import nugget_tag
-    sorted_nuggets = sorted(nuggets, key=lambda n: (n.get("number", "").zfill(3), n.get("number", "")))
+def _node_edge_lists(seedpods):
+    """From seedpods list, return (nodes, edges). nodes = [(id, label, slug, tags_list, status)], edges = [(from_id, to_id)]."""
+    from seedpod_parser import seedpod_tag
+    sorted_seedpods = sorted(seedpods, key=lambda n: (n.get("number", "").zfill(3), n.get("number", "")))
     nodes = []
-    for n in sorted_nuggets:
+    for n in sorted_seedpods:
         num = n.get("number", "")
         if not num:
             continue
         label = n.get("title", "Untitled") or "Untitled"
-        slug = nugget_tag(n)
+        slug = seedpod_tag(n)
         category = n.get("category", "")
         status = n.get("status", "empty")
         nodes.append((num, label, slug, [category] if category else [], status))
     edges = []
-    for n in sorted_nuggets:
+    for n in sorted_seedpods:
         from_id = n.get("number", "")
         if not from_id:
             continue
@@ -134,27 +134,27 @@ def _rect_exit_t(dx, dy, hw, hh):
 
 
 def build_graph_svg(
-    nuggets,
+    seedpods,
     width=DEFAULT_GRAPH_WIDTH,
     height=DEFAULT_GRAPH_HEIGHT,
     node_radius=20,
     show_title=True,
-    link_nuggets=True,
+    link_seedpods=True,
 ):
     """
-    Build an SVG string for the directed graph of nugget related links.
+    Build an SVG string for the directed graph of seedpod related links.
     Uses force-directed layout so nodes spread out and arrowheads overlap less.
 
-    nuggets: list of nugget dicts (number, title, filename, related).
+    seedpods: list of seedpod dicts (number, title, filename, related).
     width, height: SVG viewBox (defaults give room for titles).
     node_radius: circle radius for each node.
-    show_title: if True, use title as label; else use nugget tag (e.g. 003-inside).
-    link_nuggets: if True, wrap each node in <a> to its nugget page.
+    show_title: if True, use title as label; else use seedpod tag (e.g. 003-inside).
+    link_seedpods: if True, wrap each node in <a> to its seedpod page.
     """
     from category_colors import load_category_colors
     cat_colors = load_category_colors()
 
-    nodes, edges = _node_edge_lists(nuggets)
+    nodes, edges = _node_edge_lists(seedpods)
     if not nodes:
         return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {} {}"></svg>'.format(width, height)
 
@@ -219,13 +219,13 @@ def build_graph_svg(
                 label_esc
             )
         )
-        data_attrs = ' data-nugget="{}" data-tags="{}" data-status="{}"'.format(
+        data_attrs = ' data-seedpod="{}" data-tags="{}" data-status="{}"'.format(
             _html.escape(nid),
             _html.escape(",".join(tags_list)),
             _html.escape(status),
         )
         wrap_class = "map-graph-node-wrap map-graph-node-link"
-        if link_nuggets and slug:
+        if link_seedpods and slug:
             href = _html.escape(slug + ".html")
             lines.append('  <a href="{}" class="{}"{}>'.format(href, wrap_class, data_attrs))
             lines.append('    <g class="map-graph-node-transform" transform="translate({},{})" data-x="{}" data-y="{}">'.format(x, y, x, y))
@@ -274,7 +274,7 @@ MAP_FILTER_SCRIPT = """
     var selected=new Set();
     if(anyFilter){
       document.querySelectorAll('.map-graph-node-wrap:not(.unselected)').forEach(function(n){
-        selected.add(n.getAttribute('data-nugget'));
+        selected.add(n.getAttribute('data-seedpod'));
       });
     }
     document.querySelectorAll('.map-graph-edge-wrap').forEach(function(el){
@@ -416,7 +416,7 @@ MAP_FILTER_SCRIPT = """
       var wraps = document.querySelectorAll('.map-graph-node-wrap');
       var w = null;
       for (var i = 0; i < wraps.length; i++) {
-        if (wraps[i].getAttribute('data-nugget') === nid) { w = wraps[i]; break; }
+        if (wraps[i].getAttribute('data-seedpod') === nid) { w = wraps[i]; break; }
       }
       if (!w) return { x: 0, y: 0 };
       var g = w.querySelector('.map-graph-node-transform');
@@ -498,7 +498,7 @@ MAP_FILTER_SCRIPT = """
       dragState.g.setAttribute('data-dx', newX - dragState.origX);
       dragState.g.setAttribute('data-dy', newY - dragState.origY);
       dragState.didMove = true;
-      var nid = dragState.wrap && dragState.wrap.getAttribute('data-nugget');
+      var nid = dragState.wrap && dragState.wrap.getAttribute('data-seedpod');
       if (nid) updateEdgesForNode(nid);
     }
     function endDrag() {
@@ -549,11 +549,11 @@ MAP_FILTER_SCRIPT = """
 </script>"""
 
 
-def map_directive_html(nuggets, status_order):
+def map_directive_html(seedpods, status_order):
     """HTML for the @map directive: filters, key, interactive graph SVG, and filter/drag script."""
     from category_colors import load_category_colors
     cat_colors = load_category_colors()
-    categories = sorted(set(n.get("category", "") for n in nuggets if n.get("category", "")))
+    categories = sorted(set(n.get("category", "") for n in seedpods if n.get("category", "")))
     cat_cbs = "".join(
         '<label class="map-cb-label map-cb-label--cat" style="--cb-cat-bg:{}">'
         '<input type="checkbox" class="map-filter-cat" value="{}"{}>  {}</label>'.format(
@@ -590,7 +590,7 @@ def map_directive_html(nuggets, status_order):
         + '<div class="map-filter-row map-filter-row--status">' + status_cbs + row_btns_status + '</div>'
         + '</div>'
     )
-    svg = build_graph_svg(nuggets, show_title=False, link_nuggets=True, node_radius=40)
+    svg = build_graph_svg(seedpods, show_title=False, link_seedpods=True, node_radius=40)
     page_style = '<style>html,body{overflow:hidden!important}.page-body{padding:0!important;animation:none!important;transform:none!important}.map-graph-wrap{position:fixed!important;left:0!important;right:0!important;bottom:0!important}.page-end{position:fixed!important;bottom:.5rem;left:50%!important;transform:translateX(-50%)!important;z-index:82!important;margin:0!important}</style>'
     return (
         page_style

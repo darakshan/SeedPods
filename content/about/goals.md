@@ -1,6 +1,6 @@
 ## Goals
 
-SeedPods is our attempt to shift how people see the world — not by argument, but by offering small, memorable ideas that reorient perception. Each seed is a lens. You pick it up, look through it, and something looks different.
+SeedPods is our attempt to shift how people see the world — not by argument, but by offering small, memorable ideas that reorient perception. Each seedpod is a lens. You pick it up, look through it, and something looks different.
 
 ### The core problem
 
@@ -10,7 +10,7 @@ The dominant framework — that matter is fundamentally inert and experience is 
 
 ### The approach
 
-This is not a course with a fixed sequence. It is a garden — enter anywhere, follow what intrigues you. Each seed stands alone. The connections form over time, building a network of mutually reinforcing ideas.
+This is not a course with a fixed sequence. It is a garden — enter anywhere, follow what intrigues you. Each seedpod stands alone. The connections form over time, building a network of mutually reinforcing ideas.
 
 The bridge this project aims at is between science and spirituality — not by compromising either, but by showing that careful philosophy already connects them. Alfred North Whitehead did this work almost a century ago. This project is one attempt to make it legible.
 

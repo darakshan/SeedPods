@@ -1,6 +1,6 @@
-# Pod Status Values
+# SeedPod Status Values
 
-Each pod carries a status that reflects how complete and polished it is. From most to least complete:
+Each seedpod carries a status that reflects how complete and polished it is. From most to least complete:
 
 | Status | Meaning |
 |--------|---------|

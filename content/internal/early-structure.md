@@ -10,7 +10,7 @@ This document gives a new AI assistant (in Cursor or elsewhere) the full context
 
 ### What this project is
 
-**SeedPods** is a living archive of short philosophical ideas — each called a "seed pod" — intended to slowly shift how people see the world. The goal is a bridge between science and spirituality, aimed especially at younger audiences and people confused or frightened by the arrival of AI.
+**SeedPods** is a living archive of short philosophical ideas — each called a "seedpod" — intended to slowly shift how people see the world. The goal is a bridge between science and spirituality, aimed especially at younger audiences and people confused or frightened by the arrival of AI.
 
 The project is explicitly **not ready for public consumption**. It is a development archive.
 
@@ -24,7 +24,7 @@ Inspirations for format and tone: Jason Silva, Michael Garfield, Jacob Collier. 
 
 ```
 SeedPods (project root)/
-  pods/             ← source files, one per seed pod (.txt format)
+  pods/             ← source files, one per seedpod (.txt format)
   site/             ← generated HTML (do not edit directly)
   build.py          ← generator script: reads pods/, writes site/
   CONTEXT.md        ← this file
@@ -36,7 +36,7 @@ python build.py
 ```
 (About pages are rendered from Markdown; install with `pip install markdown` or `pip install -r requirements.txt` in a venv.)
 
-**To rebuild a single pod:**
+**To rebuild a single seedpod:**
 ```bash
 python build.py --pod 001
 ```
@@ -45,9 +45,9 @@ python build.py --pod 001
 
 ### The source file format
 
-Each pod is a plain text file in `pods/`. Example: `001-caloric.txt`
+Each seedpod is a plain text file in `pods/`. Example: `001-caloric.txt`
 
-The filename gives the pod identity: `001-caloric.txt` means number 001, shortname caloric. Do not put #number or #shortname in the file.
+The filename gives the seedpod identity: `001-caloric.txt` means number 001, shortname caloric. Do not put #number or #shortname in the file.
 
 Single-line metadata fields start with `#fieldname value`:
 ```
@@ -69,11 +69,11 @@ Multi-line layer sections start with just `#layername` on its own line:
 
 **Status values:** `empty` | `partial` | `prelim` | `rough` | `draft1` | `final`
 
-**Related field:** comma-separated pod numbers only (not names). Max 5. The build script resolves numbers to titles automatically.
+**Related field:** comma-separated seedpod numbers only (not names). Max 5. The build script resolves numbers to titles automatically.
 
 ---
 
-## The five layers of every seed pod
+## The five layers of every seedpod
 
 Every SeedPod has exactly these five layers, in this order:
 
@@ -83,11 +83,11 @@ Every SeedPod has exactly these five layers, in this order:
 4. **Script** — three-minute video shooting script. Direction lines in ALL CAPS. Spoken text below. Ends with a sharp image or question.
 5. **Images** — descriptions of illustration concepts, shareable graphics, video thumbnail ideas.
 
-The build script renders each layer as a tab on the pod page.
+The build script renders each layer as a tab on the seedpod page.
 
 ---
 
-## The 19 seed pods that were defined when this page was written (we have 30 now)
+## The 19 seedpods that were defined when this page was written (we have 30 now)
 
 | # | Shortname | Title | Status |
 |---|-----------|-------|--------|
@@ -111,7 +111,7 @@ The build script renders each layer as a tab on the pod page.
 | 018 | magnetization | Ideas Magnetize Through a Group Like Iron | empty |
 | 019 | funerals | Science Advances One Funeral at a Time | partial |
 
-Note: seeds marked "partial" have content in the Depth layer drawn from the founding conversation, but Surface, Script, and Images are TBD.
+Note: seedpods marked "partial" have content in the Depth layer drawn from the founding conversation, but Surface, Script, and Images are TBD.
 
 ---
 
@@ -164,7 +164,7 @@ Alpha reviewers (friends): Alia Whitman (potential collaborator — strong AI in
 ## Terminology decisions
 
 - The five layers are called **layers** (not facets, cuts, views, etc.)
-- The format unit is called a **seed pod** (settled after considering: pod, seed, lens, portal, window, frame, pattern)
+- The format unit is called a **seedpod** (settled after considering: pod, seed, lens, portal, window, frame, pattern)
 - Whitehead's technical vocabulary is **avoided in the public-facing layers** and mapped to plain English. An appendix/provenance layer provides the technical terms for those who want them. Key mappings:
   - actual occasion → event or moment
   - prehension → taking in / feeling / registering
@@ -179,7 +179,7 @@ Alpha reviewers (friends): Alia Whitman (potential collaborator — strong AI in
 
 ## The long-form essay
 
-A companion long-form essay ("The Inside of Everything") was drafted in this same conversation. It covers the same ground as the seed pods but in magazine essay form (~5000 words), aimed at Pollan/Harris readers. It exists as a Word document (.docx). The essay is considered a first draft — not final. Penrose is deliberately absent from the essay pending a decision about where he fits.
+A companion long-form essay ("The Inside of Everything") was drafted in this same conversation. It covers the same ground as the seedpods but in magazine essay form (~5000 words), aimed at Pollan/Harris readers. It exists as a Word document (.docx). The essay is considered a first draft — not final. Penrose is deliberately absent from the essay pending a decision about where he fits.
 
 ---
 
@@ -195,10 +195,10 @@ Do not edit HTML in `site/` directly — it is generated. Edit source `.txt` fil
 
 ## Open questions and things in progress
 
-- The caloric seed (001) Surface layer is in good shape. Script needs refinement. Depth, Provenance, Images are drafted.
-- All other seeds need Surface layers written. The Depth content in the .txt files is a starting point drawn from the founding conversation.
+- The caloric seedpod (001) Surface layer is in good shape. Script needs refinement. Depth, Provenance, Images are drafted.
+- All other seedpods need Surface layers written. The Depth content in the .txt files is a starting point drawn from the founding conversation.
 - The visual style of the site is provisional — aesthetics are not the current priority.
-- The Penrose thread (he used Gödel to argue against AI consciousness; this project argues he misread the arrow) needs to find its place — possibly a paragraph in the essay, possibly its own seed, possibly a footnote.
+- The Penrose thread (he used Gödel to argue against AI consciousness; this project argues he misread the arrow) needs to find its place — possibly a paragraph in the essay, possibly its own seedpod, possibly a footnote.
 - The question of time as emergent (Rovelli etc.) is held as a background awareness — the language of "events accumulate" is used without committing to linear time as fundamental.
 - Alia Whitman (friend) has independently suggested collaboration — she has organizational skills and AI interest that could complement the intellectual work here.
 - The project could grow into a foundation or movement but the primary author does not have energy to hold that — the goal is to develop the intellectual DNA clearly enough that others can carry it.

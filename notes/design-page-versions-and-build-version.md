@@ -22,13 +22,13 @@
 
 **Defining inputs per page type (outline):**
 
-- **Pod page** `NNN-slug.html`: That pod’s `.txt` file; plus any image files referenced in it via `
-@image(...)` (from content/images/). Optionally omit shared config if we never want config-only changes to bump pod versions.
-- **index.html**: `home.md` + its includes; all pod `.txt` files (index lists them); config that affects index (e.g. index_copy, status_order for ordering). Or: home.md + includes + pods dir contents + relevant config paths.
-- **Nav/list MD page** (e.g. `about.html`, `list.html`): That MD file + `_input_files_for_page(md_path)` (includes + linked MDs); for pages that embed @glossary / @bibliography / @index / @map, the pod set and config that feed those placeholders. So: main MD + includes + transitive @link refs + pods + status_order + explainers + index_copy for nav.
-- **Static MD-ref page** (e.g. `about-authors.html`): That MD path + its includes + transitive @link refs; if it has placeholders, add pods + config that feed them.
+- **SeedPod page** `NNN-slug.html`: That seedpod’s `.txt` file; plus any image files referenced in it via `
+@image(...)` (from content/images/). Optionally omit shared config if we never want config-only changes to bump seedpod versions.
+- **index.html**: `home.md` + its includes; all seedpod `.txt` files (index lists them); config that affects index (e.g. index_copy, status_order for ordering). Or: home.md + includes + seedpods dir contents + relevant config paths.
+- **Nav/list MD page** (e.g. `about.html`, `list.html`): That MD file + `_input_files_for_page(md_path)` (includes + linked MDs); for pages that embed @glossary / @bibliography / @index / @map, the seedpod set and config that feed those placeholders. So: main MD + includes + transitive @link refs + seedpods + status_order + explainers + index_copy for nav.
+- **Static MD-ref page** (e.g. `about-authors.html`): That MD path + its includes + transitive @link refs; if it has placeholders, add seedpods + config that feed them.
 - **internal.html**: `content/internal/page.md` + includes + refs; same placeholder inputs if any.
-- **tags.html, glossary.html, bibliography.html, map.html**: Their MD (if any) or the builder’s logical “main” file; plus all pods + status_order + explainers (for glossary). So for tags: list path MD + pods + status_order; glossary: glossary builder inputs (pods, explainers); etc.
+- **tags.html, glossary.html, bibliography.html, map.html**: Their MD (if any) or the builder’s logical “main” file; plus all seedpods + status_order + explainers (for glossary). So for tags: list path MD + seedpods + status_order; glossary: glossary builder inputs (seedpods, explainers); etc.
 
 Implement by having a small registry: for each output path, a function or recipe that returns the set of input Paths. Hash those files in sorted path order.
 
@@ -61,10 +61,10 @@ Implement by having a small registry: for each output path, a function or recipe
 
 ## 4. Build flow (full build only)
 
-**No single-pod build.** Remove the `--pod N` option; build is always full and fast enough.
+**No single-seedpod build.** Remove the `--pod N` option; build is always full and fast enough.
 
 1. Load `.buildstate/state.json` (or create with build_version=0, pages={}).
-2. Load pods, config, etc. (as now).
+2. Load seedpods, config, etc. (as now).
 3. **Compute which pages changed:** For each HTML page id, call `get_inputs_for_page(page_id)`, hash those file contents, compare to `state["pages"].get(page_id, {}).get("hash")`. If missing or different, mark page as changed and set new page_version = old + 1 (or 1).
 4. If any page changed: set `build_version = state["build_version"] + 1` and set build timestamp (e.g. now). Else: keep build_version and timestamp; skip all page writes; write state only if needed (e.g. no-op); exit or continue to asset writes.
 5. **Write phase:** For each page that changed: generate HTML (with build_version, page_version, and build timestamp in footer); write file; append one row to `history.csv` (with release_version=0); update `state["pages"][page_id]` with new hash and page_version. For unchanged pages: **do not write**.

@@ -1,5 +1,5 @@
 # Glossary
 
-Key terms from all pods.
+Key terms from all seedpods.
 
 @glossary

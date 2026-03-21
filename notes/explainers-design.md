@@ -1,8 +1,8 @@
 # Explainers for glossary terms
 
-**Goal:** Point readers from glossary terms to external explainer videos (e.g. YouTube) where helpful. Pods are observations and don’t get explainers; scripts serve that role. Terms are different — they’re definitions that collect in the index (Glossary / tags), and many have good third‑party explainers.
+**Goal:** Point readers from glossary terms to external explainer videos (e.g. YouTube) where helpful. SeedPods are observations and don’t get explainers; scripts serve that role. Terms are different — they’re definitions that collect in the index (Glossary / tags), and many have good third‑party explainers.
 
-**Where links live:** In the pod where the term is introduced. Same place as the `#term` line (terms may appear anywhere in a pod). So the canonical store is the pod file.
+**Where links live:** In the seedpod where the term is introduced. Same place as the `#term` line (terms may appear anywhere in a seedpod). So the canonical store is the seedpod file.
 
 **How (when we implement):** Add an optional explainer URL per term (and duration for display). For example a directive immediately after `#term`, e.g. `#explainer https://... (13 min)`, applying to the preceding term. Parser would expose terms as (term, definition, url_or_empty, duration_or_empty). Glossary page (and any other place we present terms) shows the link when present, with the duration next to it — e.g. "Explain (13 min)" or "Explain (45 min)". No need to label long ones "deep dive"; the length is enough.
 

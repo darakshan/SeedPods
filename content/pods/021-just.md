@@ -43,7 +43,7 @@ Daniel Dennett@ref(dennett, "Dennett, D. Intuition Pumps and Other Tools for Thi
 
 This matters beyond love and chemistry. The same move appears wherever hard questions get deflated: it's just pattern matching, it's just neurons firing, it's just what evolution programmed us to do. Each time, "just" is promising completeness it hasn't earned. Each time, a category mistake is being made and waved past. (See @link(001) for how this works at the level of entire scientific frameworks. See @link(006) for the specific case of AI and prediction. See @link(022) for what happens when we apply it to people.)
 
-Note for revision: find a better Ryle example — the ghost in the machine may be closer than the Oxford/University example. Also consider: ghost in the machine as its own pod.
+Note for revision: find a better Ryle example — the ghost in the machine may be closer than the Oxford/University example. Also consider: ghost in the machine as its own seedpod.
 
 
 #script

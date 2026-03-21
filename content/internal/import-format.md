@@ -1,17 +1,17 @@
 # Format of Importable SeedPod Files
 
-Use this when creating or editing **import source files** — Markdown files that become multiple proto pods via `just import`. Examples: `content/more/primordia.md`, `content/more/seed-speculations.md`. The build does not read these files; the import script does. The output is `.txt` pods in `content/pods/`, which then follow the grammar in @link(grammar.md, grammar).
+Use this when creating or editing **import source files** — Markdown files that become multiple proto seedpods via `just import`. Examples: `content/more/primordia.md`, `content/more/seed-speculations.md`. The build does not read these files; the import script does. The output is `.md` seedpods in `content/pods/`, which then follow the grammar in @link(grammar.md, grammar).
 
 ---
 
 ## Purpose and workflow
 
-1. **Write** a single `.md` file with multiple “protopods” (blocks separated by `---`).
+1. **Write** a single `.md` file with multiple “proto-seedpods” (blocks separated by `---`).
 2. **Preview**: `just import content/more/yourfile.md` — lists what would be created; does not write.
-3. **Apply**: `just import --apply content/more/yourfile.md` — writes `NNN-shortname.txt` into `content/pods/`.
-4. **Build**: `just build` — regenerates the site from the new pods.
+3. **Apply**: `just import --apply content/more/yourfile.md` — writes `NNN-shortname.md` into `content/pods/`.
+4. **Build**: `just build` — regenerates the site from the new seedpods.
 
-Imported pods get `#status proto`, today’s date, and a single body (no layer headers). Number and shortname are derived from the output filename only; the written .txt files do not contain `#number` or `#shortname`.
+Imported seedpods get `#status proto`, today’s date, and a single body (no layer headers). Number and shortname are derived from the output filename only; the written .md files do not contain `#number` or `#shortname`.
 
 ---
 
@@ -19,40 +19,40 @@ Imported pods get `#status proto`, today’s date, and a single body (no layer h
 
 - **Location**: Typically `content/more/<name>.md`. Any path is valid; the script only needs the file to exist.
 - **Encoding**: UTF-8.
-- **Blocks**: Split the file with a horizontal rule: a line that is only `---` (or more dashes), with blank lines before/after optional. Everything before the first `---` is **preamble** (title, subtitle, notes); the parser ignores it for pod extraction.
+- **Blocks**: Split the file with a horizontal rule: a line that is only `---` (or more dashes), with blank lines before/after optional. Everything before the first `---` is **preamble** (title, subtitle, notes); the parser ignores it for seedpod extraction.
 - **Block first line** (required). Exactly one of:
-  - `## N. Title` — numbered section (e.g. `## 1. The Harmonic Bar Chart`). The `N.` and space are stripped; the rest is the pod title.
+  - `## N. Title` — numbered section (e.g. `## 1. The Harmonic Bar Chart`). The `N.` and space are stripped; the rest is the seedpod title.
   - `### Title` — unnumbered (e.g. `### Consciousness as a Dimension Orthogonal to Spacetime`). The whole line after `### ` is the title.
-  - `## Category Name` — category heading with no number. **Skipped**: no pod is created; use these to group blocks in the source.
-- **Block body**: All following lines until the next `---` or end of file. Blank lines are kept. Certain lines are special (see below); the rest become the pod body.
+  - `## Category Name` — category heading with no number. **Skipped**: no seedpod is created; use these to group blocks in the source.
+- **Block body**: All following lines until the next `---` or end of file. Blank lines are kept. Certain lines are special (see below); the rest become the seedpod body.
 
 ---
 
-## Required in every block that becomes a pod: #shortname
+## Required in every block that becomes a seedpod: #shortname
 
-Each block that should produce a pod **must** contain a line:
+Each block that should produce a seedpod **must** contain a line:
 
 - `#shortname <slug>`
 
 Example: `#shortname harmonic-chart` or `#shortname orthogonal`.
 
 - **If missing**: the import script reports “shortname missing for: &lt;title&gt;” and **skips** that block; no file is written.
-- **Slug**: One word or hyphenated (e.g. `farey`, `born-harmonic`). Lowercase is conventional. No spaces. If the slug is already used by an existing pod or by another block in the same import run, the script appends `-2`, `-3`, etc. to make it unique.
+- **Slug**: One word or hyphenated (e.g. `farey`, `born-harmonic`). Lowercase is conventional. No spaces. If the slug is already used by an existing seedpod or by another block in the same import run, the script appends `-2`, `-3`, etc. to make it unique.
 - **Placement**: Anywhere in the block body; typically right after the title or at the start of the body.
 
 ---
 
 ## Special lines in the body
 
-These are recognized and removed from the body (or collected) before the rest is written as the pod’s single body.
+These are recognized and removed from the body (or collected) before the rest is written as the seedpod’s single body.
 
 | Line | Effect |
 |------|--------|
 | `#shortname slug` | Sets the output filename slug for this block. Required for the block to be emitted. |
-| `#ref Full citation text` | **File-level.** The ref is collected and appended to **every** pod generated from this file. Use for shared bibliography. |
-| `#term Term: Definition` | **File-level.** The term is collected and appended to **every** pod. Same format as in @link(grammar.md, grammar): term, colon, space, definition. |
+| `#ref Full citation text` | **File-level.** The ref is collected and appended to **every** seedpod generated from this file. Use for shared bibliography. |
+| `#term Term: Definition` | **File-level.** The term is collected and appended to **every** seedpod. Same format as in @link(grammar.md, grammar): term, colon, space, definition. |
 | `#term Term` | Allowed; definition is empty. |
-| `#links` or `#links ...` | **Stripped.** Not written to the pod. Use if you want to reserve a line for future links. |
+| `#links` or `#links ...` | **Stripped.** Not written to the seedpod. Use if you want to reserve a line for future links. |
 
 All other lines (including normal `##`/`###` in the middle of prose) go into the body. The parser only treats the **first line** of the block as the title/category; after that, `#` starts special lines only when they match the patterns above.
 
@@ -62,17 +62,17 @@ All other lines (including normal `##`/`###` in the middle of prose) go into the
 
 For each block that has a `#shortname`:
 
-- **Filename**: `NNN-shortname.txt` in `content/pods/`, where `NNN` is the next free 3-digit number and `shortname` is the slug (uniquified if needed). The pod’s number and shortname are taken from this filename only; the .txt file does not contain `#number` or `#shortname` lines.
-- **Content**: A single pod .txt with:
+- **Filename**: `NNN-shortname.md` in `content/pods/`, where `NNN` is the next free 3-digit number and `shortname` is the slug (uniquified if needed). The seedpod’s number and shortname are taken from this filename only; the .md file does not contain `#number` or `#shortname` lines.
+- **Content**: A single seedpod .txt with:
   - `#title` — from the block’s first line (after `## N. ` or `### `).
   - `#status proto`
   - `#date` — import date (e.g. 2026-03-16).
   - Optional `#subtitle`, `#related` — **not** parsed from the import file today; you can add them by editing the .txt after import.
-  - One blank line, then the **body** (all non-special lines from the block, joined). Proto pods have no primary section headers (`#brief`, `#surface`, `#depth`, `#script`, `#images`); the body is unheaded. You may add `#provenance` and `#term` / `#ref` by editing the .txt after import.
+  - One blank line, then the **body** (all non-special lines from the block, joined). Proto seedpods have no primary section headers (`#brief`, `#surface`, `#depth`, `#script`, `#images`); the body is unheaded. You may add `#provenance` and `#term` / `#ref` by editing the .txt after import.
   - Then all **file-level** `#term` lines (from any block in the file).
   - Then all **file-level** `#ref` lines.
 
-So: `#ref` and `#term` in the import file are **global to the file** and get added to every generated pod. To have refs/terms only on one pod, add them by hand to that pod’s .txt after import, or split into separate import files.
+So: `#ref` and `#term` in the import file are **global to the file** and get added to every generated seedpod. To have refs/terms only on one seedpod, add them by hand to that seedpod’s .txt after import, or split into separate import files.
 
 ---
 
@@ -98,7 +98,7 @@ Another block. #ref Author, Book, Year.
 #term Idea: A notion worth defining.
 ```
 
-Two blocks with shortnames → two pods. The `#ref` and `#term` will appear on both. Category-only blocks (`## Some Category`) can sit between `---` and the next `###`/`## N.` block and are skipped.
+Two blocks with shortnames → two seedpods. The `#ref` and `#term` will appear on both. Category-only blocks (`## Some Category`) can sit between `---` and the next `###`/`## N.` block and are skipped.
 
 ---
 
@@ -106,9 +106,9 @@ Two blocks with shortnames → two pods. The `#ref` and `#term` will appear on b
 
 1. **One file** in e.g. `content/more/<name>.md`, UTF-8.
 2. **Blocks** separated by `---`.
-3. **Each block** that should become a pod: first line `## N. Title` or `### Title`; somewhere in the block, `#shortname slug`.
+3. **Each block** that should become a seedpod: first line `## N. Title` or `### Title`; somewhere in the block, `#shortname slug`.
 4. **Slugs**: lowercase, hyphenated, no spaces; unique per run (script will uniquify).
-5. **Body**: normal prose; `#ref` / `#term` are file-level and go on every pod; `#links` is stripped.
+5. **Body**: normal prose; `#ref` / `#term` are file-level and go on every seedpod; `#links` is stripped.
 6. **After writing**: run `just import content/more/<name>.md` to preview, then `just import --apply content/more/<name>.md` to write; then `just build`.
 
-For the exact grammar of the **output** .txt files (metadata, layers, #ref/#term in pods), see @link(grammar.md, grammar). For the import command and build order, see @link(build.md, build).
+For the exact grammar of the **output** .md files (metadata, layers, #ref/#term in seedpods), see @link(grammar.md, grammar). For the import command and build order, see @link(build.md, build).

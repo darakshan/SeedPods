@@ -10,10 +10,10 @@ import sys
 from pathlib import Path
 
 from category_colors import category_css_slug
-from directive import first_image_href_from_nugget, image_directive_handler, process_directives
+from directive import first_image_href_from_seedpod, image_directive_handler, process_directives
 from explainers_glossary import tag_slug as _cat_slug
 
-from nugget_parser import display_number, load_index_copy, nugget_tag
+from seedpod_parser import display_number, load_index_copy, seedpod_tag
 from site_paths import content_path_to_output_name
 
 try:
@@ -60,12 +60,12 @@ def _title_from_md(md_path):
 
 
 def resolve_link(locator, explicit_text, context, base_dir, collected_md_refs=None):
-    """Resolve @link(locator, text) to (href, link_text). Single abstraction for .md and nuggets.
-    locator: nugget number (e.g. 002), .md path (relative to base_dir), path-only (e.g. about, about/authors), or raw href.
+    """Resolve @link(locator, text) to (href, link_text). Single abstraction for .md and seedpods.
+    locator: seedpod number (e.g. 002), .md path (relative to base_dir), path-only (e.g. about, about/authors), or raw href.
     Returns (href, link_text) or (None, None) on error (caller may keep original text)."""
     if collected_md_refs is None:
         collected_md_refs = set()
-    from nugget_parser import nugget_by_number_flex
+    from seedpod_parser import seedpod_by_number_flex
 
     content_root = Path(context.get("content_dir") or _ROOT).resolve()
     base_dir = Path(base_dir).resolve()
@@ -81,12 +81,12 @@ def resolve_link(locator, explicit_text, context, base_dir, collected_md_refs=No
     link_text = (explicit_text or "").strip() or locator
 
     if re.match(r"^\d+$", locator):
-        nuggets = context.get("nuggets") or []
-        n = nugget_by_number_flex(nuggets, locator)
+        seedpods = context.get("seedpods") or []
+        n = seedpod_by_number_flex(seedpods, locator)
         if not n:
-            record_error(f"@link: nugget {locator!r} not found")
+            record_error(f"@link: seedpod {locator!r} not found")
             return None, None
-        href = nugget_tag(n) + ".html"
+        href = seedpod_tag(n) + ".html"
         if not (explicit_text or "").strip():
             link_text = n.get("title", "Untitled")
         return href, link_text
@@ -159,7 +159,7 @@ def resolve_link(locator, explicit_text, context, base_dir, collected_md_refs=No
 
 
 def expand_links(text, context, base_dir, collected_md_refs=None):
-    """Replace @link(locator, text) with <a href="...">text</a>. Runs before markdown. Used when directive.process_directives is not used (e.g. nugget layer prose)."""
+    """Replace @link(locator, text) with <a href="...">text</a>. Runs before markdown. Used when directive.process_directives is not used (e.g. seedpod layer prose)."""
     if collected_md_refs is None:
         collected_md_refs = set()
 
@@ -212,8 +212,8 @@ def expand_includes(text, base_dir, warn=None, filepath=None):
 
 
 def _seed_row_html(n, base_href, status_order, stub_only=False, first_image_href=None, rev=None):
-    """One seed-row div for a nugget. stub_only=True omits data attrs for sortable lists. rev=page version for this nugget (shown after status)."""
-    fname = nugget_tag(n) + ".html"
+    """One seed-row div for a seedpod. stub_only=True omits data attrs for sortable lists. rev=page version for this seedpod (shown after status)."""
+    fname = seedpod_tag(n) + ".html"
     num = n.get("number", "")
     title = n.get("title", "")
     subtitle = n.get("subtitle", "")
@@ -253,8 +253,8 @@ def _seed_row_html(n, base_href, status_order, stub_only=False, first_image_href
 
 
 def _index_entry_html(n, base_href, first_image_href=None):
-    """One index-entry div for a nugget (same format as tags.html). Optionally show thumb to the left."""
-    fname = nugget_tag(n) + ".html"
+    """One index-entry div for a seedpod (same format as tags.html). Optionally show thumb to the left."""
+    fname = seedpod_tag(n) + ".html"
     num = n.get("number", "")
     title = n.get("title", "")
     subtitle = n.get("subtitle", "")
@@ -268,14 +268,14 @@ def _index_entry_html(n, base_href, first_image_href=None):
     return f'<div class="index-entry">{thumb}<div class="index-entry-body">{body}</div></div>'
 
 
-def _render_categories_html(nuggets, status_order, copy, base_href="", content_dir=None, category_colors=None):
-    """Render categories as a two-level tree: category name (open/close) and nuggets per category. Same style as tags.html. If content_dir is set, each entry shows its first 
+def _render_categories_html(seedpods, status_order, copy, base_href="", content_dir=None, category_colors=None):
+    """Render categories as a two-level tree: category name (open/close) and seedpods per category. Same style as tags.html. If content_dir is set, each entry shows its first 
 @image thumb to the left."""
     status_rank = {s: i for i, s in enumerate(status_order)}
     key_status = lambda n: status_rank.get(n.get("status", "empty"), len(status_order))
     key_num = lambda n: int(n.get("number", "0")) if (n.get("number") or "").isdigit() else 0
     by_category = {}
-    for n in nuggets:
+    for n in seedpods:
         cat = n.get("category", "")
         if cat not in by_category:
             by_category[cat] = []
@@ -285,7 +285,7 @@ def _render_categories_html(nuggets, status_order, copy, base_href="", content_d
 
     def details_block(entries, label, cat):
         inner = "\n    ".join(
-            _index_entry_html(n, base_href, first_image_href=first_image_href_from_nugget(n, content_dir) if content_dir else None)
+            _index_entry_html(n, base_href, first_image_href=first_image_href_from_seedpod(n, content_dir) if content_dir else None)
             for n in entries
         )
         slug = _cat_slug(cat)
@@ -299,10 +299,10 @@ def _render_categories_html(nuggets, status_order, copy, base_href="", content_d
     for cat in sorted(by_category):
         label = cat.replace("-", " ")
         parts.append(details_block(by_category[cat], label, cat))
-    total = len(nuggets)
+    total = len(seedpods)
     toggle_btns = (
         f'<div class="map-row-btns categories-toggle-btns">'
-        f'<span class="map-row-btn categories-count">{total} seeds</span>'
+        f'<span class="map-row-btn categories-count">{total} seedpods</span>'
         '<button type="button" class="map-row-btn" onclick="this.closest(\'.seed-categories\').querySelectorAll(\'details\').forEach(function(d){d.open=true})">open all</button>'
         '<button type="button" class="map-row-btn" onclick="this.closest(\'.seed-categories\').querySelectorAll(\'details\').forEach(function(d){d.open=false})">close all</button>'
         '</div>'
@@ -314,7 +314,7 @@ def _render_categories_html(nuggets, status_order, copy, base_href="", content_d
 
 
 def _render_samples_html(
-    nuggets,
+    seedpods,
     status_order,
     copy,
     count=5,
@@ -323,25 +323,25 @@ def _render_samples_html(
     include_repo_link=True,
     base_href="",
     content_dir=None,
-    nugget_revisions=None,
+    seedpod_revisions=None,
 ):
     """Render sample seed rows (or full seed-list-section when full_section=True). copy = settings.txt dict.
-    count=None means all nuggets. base_href is prefix for links (e.g. '' when site is served from output dir as root)."""
+    count=None means all seedpods. base_href is prefix for links (e.g. '' when site is served from output dir as root)."""
     status_rank = {s: i for i, s in enumerate(status_order)}
     key_status = lambda n: status_rank.get(n.get("status", "empty"), len(status_order))
     key_num = lambda n: int(n.get("number", "0")) if (n.get("number") or "").isdigit() else 0
-    by_ready = sorted(nuggets, key=lambda n: (key_status(n), key_num(n)))
+    by_ready = sorted(seedpods, key=lambda n: (key_status(n), key_num(n)))
     recent = by_ready if count is None else by_ready[:count]
     sortable = full_section and count is None
-    rev_map = nugget_revisions or {}
+    rev_map = seedpod_revisions or {}
     rows_html = "".join(
         _seed_row_html(
             n,
             base_href,
             status_order if sortable else None,
             stub_only=not sortable,
-            first_image_href=first_image_href_from_nugget(n, content_dir) if content_dir else None,
-            rev=rev_map.get(nugget_tag(n)),
+            first_image_href=first_image_href_from_seedpod(n, content_dir) if content_dir else None,
+            rev=rev_map.get(seedpod_tag(n)),
         )
         for n in recent
     )
@@ -349,8 +349,8 @@ def _render_samples_html(
         return rows_html.strip()
     more_wrap = ""
     if include_view_all:
-        total = len(nuggets)
-        view_all_text = (copy.get("view_all") or "View all {n} seeds →").replace("{n}", str(total))
+        total = len(seedpods)
+        view_all_text = (copy.get("view_all") or "View all {n} seedpods →").replace("{n}", str(total))
         more_wrap = f"""
     <div class="seed-list-more-wrap">
       <a href="{base_href}list.html" class="link-mono-accent">{view_all_text}</a>
@@ -402,9 +402,9 @@ def _render_samples_html(
 
 
 def _md_samples_handler(_verb, content, context):
-    nuggets = context.get("nuggets") or []
+    seedpods = context.get("seedpods") or []
     status_order = context.get("status_order") or []
-    if not nuggets or not status_order:
+    if not seedpods or not status_order:
         return ""
     copy = context.get("copy") or {}
     page = context.get("page")
@@ -414,10 +414,10 @@ def _md_samples_handler(_verb, content, context):
     full = page == "home"
     base_href = "" if page == "list" or context.get("site_dir") else (context["site_dir"].rstrip("/") + "/")
     block = _render_samples_html(
-        nuggets, status_order, copy,
+        seedpods, status_order, copy,
         count=count, full_section=full, include_view_all=full, include_repo_link=False, base_href=base_href,
         content_dir=context.get("content_dir"),
-        nugget_revisions=context.get("nugget_revisions"),
+        seedpod_revisions=context.get("seedpod_revisions"),
     )
     placeholder = "{{SAMPLES}}"
     context.setdefault("replacements", {})[placeholder] = block
@@ -425,34 +425,34 @@ def _md_samples_handler(_verb, content, context):
 
 
 def _md_categories_handler(_verb, content, context):
-    nuggets = context.get("nuggets") or []
+    seedpods = context.get("seedpods") or []
     status_order = context.get("status_order") or []
-    if not nuggets or not status_order:
+    if not seedpods or not status_order:
         return ""
     copy = context.get("copy") or {}
     page = context.get("page")
     base_href = "" if page == "list" or context.get("site_dir") else (context["site_dir"].rstrip("/") + "/")
-    block = _render_categories_html(nuggets, status_order, copy, base_href=base_href, content_dir=context.get("content_dir"), category_colors=context.get("category_colors"))
+    block = _render_categories_html(seedpods, status_order, copy, base_href=base_href, content_dir=context.get("content_dir"), category_colors=context.get("category_colors"))
     placeholder = "{{CATEGORIES}}"
     context.setdefault("replacements", {})[placeholder] = block
     return placeholder
 
 
-def _md_nuggets_handler(_verb, content, context):
-    nuggets = context.get("nuggets") or []
+def _md_seedpods_handler(_verb, content, context):
+    seedpods = context.get("seedpods") or []
     status_order = context.get("status_order") or []
-    if not nuggets or not status_order:
+    if not seedpods or not status_order:
         return ""
     copy = context.get("copy") or {}
     page = context.get("page")
     base_href = "" if page == "list" or context.get("site_dir") else (context["site_dir"].rstrip("/") + "/")
     block = _render_samples_html(
-        nuggets, status_order, copy,
+        seedpods, status_order, copy,
         count=None, full_section=True, include_view_all=False, include_repo_link=False, base_href=base_href,
         content_dir=context.get("content_dir"),
-        nugget_revisions=context.get("nugget_revisions"),
+        seedpod_revisions=context.get("seedpod_revisions"),
     )
-    placeholder = "{{NUGGETS}}"
+    placeholder = "{{SEEDPODS}}"
     context.setdefault("replacements", {})[placeholder] = block
     return placeholder
 
@@ -501,8 +501,8 @@ def process_md_to_html(md_path, context=None, collected_md_refs=None):
             "link": _md_link_handler,
             "samples": _md_samples_handler,
             "categories": _md_categories_handler,
-            "nuggets": _md_nuggets_handler,
-            "pods": _md_nuggets_handler,
+            "seedpods": _md_seedpods_handler,
+            "pods": _md_seedpods_handler,
             "glossary": _md_placeholder_handler("{{GLOSSARY}}", "glossary_html"),
             "bibliography": _md_placeholder_handler("{{BIBLIOGRAPHY}}", "bibliography_html"),
             "index": _md_placeholder_handler("{{INDEX}}", "index_html"),

@@ -12,7 +12,7 @@ setup:
 
 # Rebuild the full site (reads content/ and config/, writes d/ and index.html)
 # For another deployment, set base URL: SITE_BASE_URL=https://yoursite.com/path just build
-# Default: nugget count, @notes, file count. 
+# Default: seedpod count, @notes, file count. 
 # just build -v to print every built file
 build *args:
     {{python}} {{root}}/src/build.py {{args}}
@@ -28,16 +28,17 @@ find-explainers:
     @echo ""
     @echo "When the agent completes, run: just build"
 
-# Review nuggets: surface/depth length, in-degree, underlinked, final+TBD, #related max 5, #note. Exit 1 if any fail.
-# just check         — summary + detailed findings (all nuggets)
+# Review seedpods: surface/depth length, in-degree, underlinked, final+TBD, #related max 5, #note. Exit 1 if any fail.
+# just check         — summary + detailed findings (all seedpods)
 # just check -q       — summary only
-# just check -v       — summary + details + notes (interleaved by nugget)
+# just check -v       — summary + details + notes (interleaved by seedpod)
 # just check 3        — check only 003, show notes (implies -v)
 # just check 3 4 19 99  — check 003, 004, 019; warn if 99 missing
 check *ARGS:
     {{python}} {{root}}/src/check.py {{ARGS}}
 
-# Sync content/pods/ with iCloud Drive SeedPods folder. Prints imported, exported, and conflicting files.
+# Sync entire content/ tree with iCloud Drive SeedPods folder. Prints imported, exported, and conflicting files.
+# First-time migration: delete old .txt files from iCloud, delete .syncstate, then run: just sync-init
 sync:
     {{python}} {{root}}/src/sync.py
 

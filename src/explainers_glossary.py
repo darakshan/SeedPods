@@ -6,7 +6,7 @@ import csv
 import html as _html
 import re
 
-from nugget_parser import display_number, nugget_tag
+from seedpod_parser import display_number, seedpod_tag
 from site_chrome import close, foot, head, nav
 
 
@@ -46,10 +46,10 @@ def load_explainers_csv(path):
     ]
 
 
-def get_glossary_terms(nuggets):
-    """Set of term strings from #term in all nuggets."""
+def get_glossary_terms(seedpods):
+    """Set of term strings from #term in all seedpods."""
     out = set()
-    for n in nuggets:
+    for n in seedpods:
         for term, _ in n.get("terms", []):
             out.add(term)
     return out
@@ -155,7 +155,7 @@ def _explainer_block_html(entry):
     return notes_html + "".join(link_lines)
 
 
-def build_explainers_page(nuggets, explainer_terms):
+def build_explainers_page(seedpods, explainer_terms):
     """Build explainers.html from explainers data. Terms sorted alphabetically (strip 'The ' for sort); uses glossary styles."""
     if not explainer_terms:
         body = '<p class="dim">No explainers list. Add <code>content/explainers.csv</code>.</p>'
@@ -201,13 +201,13 @@ def build_explainers_page(nuggets, explainer_terms):
     return html
 
 
-def build_glossary_body(nuggets, explainer_terms=None):
-    """Glossary entries HTML from #term in nuggets. For @glossary directive."""
+def build_glossary_body(seedpods, explainer_terms=None):
+    """Glossary entries HTML from #term in seedpods. For @glossary directive."""
     explainer_by_slug = {e["slug"]: e for e in (explainer_terms or [])}
     by_entry = {}
-    for n in nuggets:
+    for n in seedpods:
         num = n.get("number", "")
-        fname = nugget_tag(n) + ".html"
+        fname = seedpod_tag(n) + ".html"
         title_display = display_number(num)
         for term, definition in n.get("terms", []):
             entry_key = (term, definition)
@@ -215,28 +215,28 @@ def build_glossary_body(nuggets, explainer_terms=None):
                 by_entry[entry_key] = []
             by_entry[entry_key].append((title_display, fname))
     by_term = {}
-    for (term, definition), nugget_list in by_entry.items():
+    for (term, definition), seedpod_list in by_entry.items():
         if term not in by_term:
             by_term[term] = []
-        sorted_nugs = sorted(nugget_list, key=lambda x: (int(x[0]) if x[0].isdigit() else 999, x[0]))
+        sorted_nugs = sorted(seedpod_list, key=lambda x: (int(x[0]) if x[0].isdigit() else 999, x[0]))
         by_term[term].append((definition, sorted_nugs))
     parts = []
     for term in sorted(by_term.keys(), key=lambda t: t.lower()):
         term_esc = _html.escape(term)
         slug = term_slug(term)
-        all_nuggets = []
+        all_seedpods = []
         seen = set()
-        for definition, nugget_list in by_term[term]:
-            for disp, fname in nugget_list:
+        for definition, seedpod_list in by_term[term]:
+            for disp, fname in seedpod_list:
                 if (disp, fname) not in seen:
                     seen.add((disp, fname))
-                    all_nuggets.append((disp, fname))
-        all_nuggets.sort(key=lambda x: (int(x[0]) if x[0].isdigit() else 999, x[0]))
-        nugget_links = ", ".join(f'<a href="{fname}">{disp}</a>' for disp, fname in all_nuggets)
-        in_part = f' ({nugget_links})' if nugget_links else ""
+                    all_seedpods.append((disp, fname))
+        all_seedpods.sort(key=lambda x: (int(x[0]) if x[0].isdigit() else 999, x[0]))
+        seedpod_links = ", ".join(f'<a href="{fname}">{disp}</a>' for disp, fname in all_seedpods)
+        in_part = f' ({seedpod_links})' if seedpod_links else ""
         term_line = f'<div class="gloss-term-line"><strong class="gloss-term">{term_esc}</strong>{in_part}</div>'
         def_blocks = []
-        for definition, nugget_list in by_term[term]:
+        for definition, seedpod_list in by_term[term]:
             def_esc = _html.escape(definition)
             if definition:
                 def_blocks.append(f'<div class="gloss-def-block"><span class="gloss-def">{def_esc}</span></div>')
@@ -253,14 +253,14 @@ def build_glossary_body(nuggets, explainer_terms=None):
             f'<div class="gloss-defs">' + "\n".join(def_blocks) + '</div>'
             f'</div>'
         )
-    return "\n".join(parts) if parts else "<p class=\"dim\">No terms yet. Add <code>#term Term : Definition</code> lines in any nugget.</p>"
+    return "\n".join(parts) if parts else "<p class=\"dim\">No terms yet. Add <code>#term Term : Definition</code> lines in any seedpod.</p>"
 
 
-def build_glossary_page(nuggets, explainer_terms=None):
-    body = build_glossary_body(nuggets, explainer_terms)
+def build_glossary_page(seedpods, explainer_terms=None):
+    body = build_glossary_body(seedpods, explainer_terms)
     html = head("Glossary")
     html += nav(from_d=True)
-    html += f'<div class="wrap"><div class="page-body fade"><h1>Glossary</h1><p class="dim repo-intro">Key terms from all nuggets.</p>{body}</div></div>'
+    html += f'<div class="wrap"><div class="page-body fade"><h1>Glossary</h1><p class="dim repo-intro">Key terms from all seedpods.</p>{body}</div></div>'
     html += foot()
     html += close()
     return html

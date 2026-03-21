@@ -16,7 +16,7 @@ Including Sufi communities, liberal religious groups, contemplative practitioner
 
 ### AI-concerned general public
 
-People anxious about AI who lack a framework for thinking about it. The alien/AI seeds are the entry point. Tone: reassuring through understanding, not dismissive of concern. Most useful components: Script/video, Surface, Images.
+People anxious about AI who lack a framework for thinking about it. The alien/AI seedpods are the entry point. Tone: reassuring through understanding, not dismissive of concern. Most useful components: Script/video, Surface, Images.
 
 ### Professionals and influencers
 

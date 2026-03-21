@@ -17,7 +17,7 @@
 TBD
 
 #depth
-TBD — This pod is the mirror image of @link(022). Where @link(022) argues that a narrow or absent channel does not justify concluding an absent source, this pod asks the harder question in the other direction: does a wide, fluent channel tell us anything at all about the source feeding it? Large language models produce poetry, philosophy, code, and conversation of startling quality. Does that fluency constitute evidence of something going on inside — or is the channel simply wide and the reservoir empty? The @link(022) editor's note flags this as unresolved. This pod attempts to resolve it, or at least to map the territory honestly. Connects to @link(001) (our current caloric moment), @link(006) (judging process by output), @link(016) (the neural network as Whiteheadian field).
+TBD — This seedpod is the mirror image of @link(022). Where @link(022) argues that a narrow or absent channel does not justify concluding an absent source, this seedpod asks the harder question in the other direction: does a wide, fluent channel tell us anything at all about the source feeding it? Large language models produce poetry, philosophy, code, and conversation of startling quality. Does that fluency constitute evidence of something going on inside — or is the channel simply wide and the reservoir empty? The @link(022) editor's note flags this as unresolved. This seedpod attempts to resolve it, or at least to map the territory honestly. Connects to @link(001) (our current caloric moment), @link(006) (judging process by output), @link(016) (the neural network as Whiteheadian field).
 
 #script
 TBD

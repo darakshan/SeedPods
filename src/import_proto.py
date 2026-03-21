@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
-Import prototype nugget files into content/pods.
-Reads .md files (e.g. content/more/primordia.md), splits into protonuggets.
-Each protonugget must have #shortname in the source; if missing, report and skip (never write).
-Writes .txt with #status proto; no #brief (proto implies single body).
+Import prototype seedpod files into content/pods.
+Reads .md files (e.g. content/more/primordia.md), splits into proto-seedpods.
+Each proto-seedpod must have #shortname in the source; if missing, report and skip (never write).
+Writes .md with #status proto; no #brief (proto implies single body).
 Preview by default; use --apply to write files.
 """
 
@@ -15,10 +15,10 @@ from zoneinfo import ZoneInfo
 
 _ROOT = Path(__file__).resolve().parent.parent
 CONTENT_DIR = _ROOT / "content"
-NUGGETS_DIR = CONTENT_DIR / "pods"
+SEEDPODS_DIR = CONTENT_DIR / "pods"
 
 # Import after path is set
-from nugget_parser import load_all_nuggets
+from seedpod_parser import load_all_seedpods
 
 
 def _next_number(existing_nums, used_in_run):
@@ -41,7 +41,7 @@ def _unique_shortname(shortname, existing_shortnames, used_in_run):
 
 def parse_proto_file(path):
     """
-    Split a proto .md file into protonuggets.
+    Split a proto .md file into proto-seedpods.
     Returns (file_level_refs, file_level_terms, list of {name, body, shortname}).
     shortname is from #shortname line in the block, or None if missing.
     - Ignores leading title/metadata before first ---
@@ -52,7 +52,7 @@ def parse_proto_file(path):
     refs = []
     terms = []
     blocks = re.split(r"\n---+\s*\n", text)
-    nuggets = []
+    seedpods = []
     for block in blocks:
         block = block.strip()
         if not block:
@@ -92,11 +92,11 @@ def parse_proto_file(path):
             elif not (stripped.startswith("#links ") or stripped == "#links"):
                 body_parts.append(line)
         body_clean = "\n".join(body_parts).strip()
-        nuggets.append({"name": name, "body": body_clean, "shortname": shortname})
-    return refs, terms, nuggets
+        seedpods.append({"name": name, "body": body_clean, "shortname": shortname})
+    return refs, terms, seedpods
 
 
-def build_nugget_txt(number, shortname, name, body, refs, terms, date, subtitle="", related=""):
+def build_seedpod_txt(number, shortname, name, body, refs, terms, date, subtitle="", related=""):
     parts = [f"#title {name}", "#status proto", f"#date {date}"]
     if subtitle:
         parts.append(f"#subtitle {subtitle}")
@@ -114,7 +114,7 @@ def build_nugget_txt(number, shortname, name, body, refs, terms, date, subtitle=
 
 
 def run(files, apply=False):
-    existing = load_all_nuggets(warn=lambda msg, filepath=None: None)
+    existing = load_all_seedpods(warn=lambda msg, filepath=None: None)
     existing_nums = {n.get("number") for n in existing if n.get("number")}
     existing_shortnames = {n.get("shortname", "") for n in existing if n.get("shortname")}
     used_shortnames_in_run = set()
@@ -126,11 +126,11 @@ def run(files, apply=False):
         if not path.exists():
             print(f"Skip (not found): {path}", file=sys.stderr)
             continue
-        refs, terms, nuggets = parse_proto_file(path)
-        if not nuggets:
-            print(f"Skip (no protonuggets): {path}", file=sys.stderr)
+        refs, terms, seedpods = parse_proto_file(path)
+        if not seedpods:
+            print(f"Skip (no proto-seedpods): {path}", file=sys.stderr)
             continue
-        for n in nuggets:
+        for n in seedpods:
             if n.get("shortname") is None or not n["shortname"].strip():
                 print(f"shortname missing for: {n['name']}", file=sys.stderr)
                 continue
@@ -142,12 +142,12 @@ def run(files, apply=False):
             date = datetime.now(ZoneInfo("America/Los_Angeles")).strftime("%Y-%m-%d")
             nrelated = 0
             nwords = len(n["body"].split()) if n["body"] else 0
-            content = build_nugget_txt(num, shortname, n["name"], n["body"], refs, terms, date)
-            filename = f"{num}-{shortname}.txt"
-            out_path = NUGGETS_DIR / filename
+            content = build_seedpod_txt(num, shortname, n["name"], n["body"], refs, terms, date)
+            filename = f"{num}-{shortname}.md"
+            out_path = SEEDPODS_DIR / filename
             rows.append((f"{num}-{shortname}", nwords, nrelated, n["name"]))
             if apply:
-                NUGGETS_DIR.mkdir(parents=True, exist_ok=True)
+                SEEDPODS_DIR.mkdir(parents=True, exist_ok=True)
                 out_path.write_text(content, encoding="utf-8")
             existing_nums.add(num)
             existing_shortnames.add(shortname)

@@ -1,6 +1,6 @@
 # SeedPods
 
-A living archive of short and often surprising ideas ("seed pods") that bridge science and spirituality, aimed at shifting how people see the world. Each pod is a small, memorable lens. 
+A living archive of short and often surprising ideas ("seedpods") that bridge science and spirituality, aimed at shifting how people see the world. Each seedpod is a small, memorable lens. 
 
 The content is inspired by Alfred North Whitehead's concept of "process philosophy", along with physics, math, complexity theory, cognitive science, and neural networks. 
 
@@ -10,6 +10,6 @@ The structure is inspired by the modular organization of Christopher Alexander's
 
 Pods are presented in different layers: surface, depth, scripts, and images. 
 
-Pod sources are plain-text files in `nuggets/`; the site is generated into `docs/` by a Python build script. 
+Pod sources are Markdown files in `content/pods/`; the site is generated into `docs/` by a Python build script. 
 
 To build the html files, use "just build".

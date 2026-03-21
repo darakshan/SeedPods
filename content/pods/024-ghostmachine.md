@@ -9,7 +9,7 @@
 #term holon: Koestler's term for a whole that is also a part of a larger whole; each level has genuine interiority.
 #related 003, 006, 011, 021, 065
 
-NOTE: This depth sketch was developed in session 2026-03-14. The pod needs a full Surface, Script, and Images before it can advance beyond prelim.
+NOTE: This depth sketch was developed in session 2026-03-14. The seedpod needs a full Surface, Script, and Images before it can advance beyond prelim.
 
 
 @image(024-ghostmachine,The ghost in the machine: clockwork mechanism,Wikimedia Commons)

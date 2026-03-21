@@ -21,7 +21,7 @@ The build requires `config/settings.txt`. It is a **key–value config file**: o
 ## Other keys (used by the build or MD pipeline)
 
 - **site_base** — Base URL for the site (e.g. for canonical or absolute links). The build and MD pipeline read `site_base` and `site_dir` from `config/settings.txt`. In .md you can inject any setting value with `@setting(key)` (e.g. `@setting(site_base)`, `@setting(site_dir)`); see @link(directives.md, directives).
-- **section_head**, **repo_link**, **view_all** — Copy for list/home sections; `view_all` can use `{n}` for the total pod count.
+- **section_head**, **repo_link**, **view_all** — Copy for list/home sections; `view_all` can use `{n}` for the total seedpod count.
 - **surface_min_words**, **surface_max_words**, **depth_min_words**, **depth_max_words** — Guidance for layer word counts.
 - **min_related_in_degree** — Used for map/graph logic.
 

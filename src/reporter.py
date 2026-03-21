@@ -1,6 +1,6 @@
 """
 Shared error and warning reporting for build and check.
-Messages are collected and printed at the end. Use nugget number + shortname
+Messages are collected and printed at the end. Use seedpod number + shortname
 when available; otherwise path relative to content/ (e.g. about/goals.md).
 Warnings do not fail the build; errors do.
 """
@@ -8,16 +8,16 @@ Warnings do not fail the build; errors do.
 import sys
 from pathlib import Path
 
-from nugget_parser import CONTENT_DIR
+from seedpod_parser import CONTENT_DIR
 
 _errors = []
 _warnings = []
 _notes = []
 
 
-def _location(path=None, nugget_num=None, shortname=None):
-    if nugget_num is not None and shortname:
-        return f"{nugget_num}-{shortname}"
+def _location(path=None, seedpod_num=None, shortname=None):
+    if seedpod_num is not None and shortname:
+        return f"{seedpod_num}-{shortname}"
     if path is not None:
         path = Path(path).resolve()
         try:
@@ -25,7 +25,7 @@ def _location(path=None, nugget_num=None, shortname=None):
         except ValueError:
             return str(path)
         parts = rel.parts
-        if len(parts) == 2 and parts[0] == "nuggets" and rel.suffix == ".txt" and "-" in rel.stem:
+        if len(parts) == 2 and parts[0] == "seedpods" and rel.suffix == ".txt" and "-" in rel.stem:
             return rel.stem
         return str(rel).replace("\\", "/")
     return None
@@ -44,18 +44,18 @@ def reset():
     _notes = []
 
 
-def error(msg, path=None, nugget_num=None, shortname=None):
-    loc = _location(path=path, nugget_num=nugget_num, shortname=shortname)
+def error(msg, path=None, seedpod_num=None, shortname=None):
+    loc = _location(path=path, seedpod_num=seedpod_num, shortname=shortname)
     _errors.append(_format(loc, msg))
 
 
-def warning(msg, path=None, nugget_num=None, shortname=None):
-    loc = _location(path=path, nugget_num=nugget_num, shortname=shortname)
+def warning(msg, path=None, seedpod_num=None, shortname=None):
+    loc = _location(path=path, seedpod_num=seedpod_num, shortname=shortname)
     _warnings.append(_format(loc, msg))
 
 
-def note(msg, path=None, nugget_num=None, shortname=None):
-    loc = _location(path=path, nugget_num=nugget_num, shortname=shortname)
+def note(msg, path=None, seedpod_num=None, shortname=None):
+    loc = _location(path=path, seedpod_num=seedpod_num, shortname=shortname)
     _notes.append(_format(loc, msg))
 
 

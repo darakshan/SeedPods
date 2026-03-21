@@ -97,7 +97,7 @@ NOTE ON MUSIC: Gershwin's Rhapsody in Blue (1924, public domain) is the tonal re
 
 6. The hill's surface slowly, almost imperceptibly, resolves into a face. Aunt Hillary. Not scary — curious, old, amused.
 
-7. The child leans in and asks something. [NOTE TO WRITER: find the line a real child would actually say to an ant hill it suddenly suspected was alive. Simple enough to be funny, deep enough to carry the whole pod. Do not force it now.]
+7. The child leans in and asks something. [NOTE TO WRITER: find the line a real child would actually say to an ant hill it suddenly suspected was alive. Simple enough to be funny, deep enough to carry the whole seedpod. Do not force it now.]
 
 8. Aunt Hillary laughs — not a human laugh, something that comes from everywhere at once, from all the tunnels simultaneously. The laugh is the final musical note. One note. Held.
 

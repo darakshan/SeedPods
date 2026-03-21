@@ -1,6 +1,6 @@
 """
-Page builders: build_nugget, build_*_page / build_*_body, and MD context.
-Composes site_chrome, nugget_layers, explainers_glossary, graph_svg.
+Page builders: build_seedpod, build_*_page / build_*_body, and MD context.
+Composes site_chrome, seedpod_layers, explainers_glossary, graph_svg.
 """
 
 import html as _html
@@ -9,20 +9,20 @@ from category_colors import category_css_slug, load_category_colors
 from explainers_glossary import build_explainers_page, build_glossary_body, build_glossary_page, load_explainers_csv, tag_slug
 from graph_svg import map_directive_html
 from md_pages import process_md_to_html
-from nugget_layers import (
+from seedpod_layers import (
     _assemble_layer_html,
     _layer_prose_to_html,
     expand_layer_directives,
     script_to_html,
 )
-from nugget_parser import (
+from seedpod_parser import (
     CONTENT_DIR,
-    NUGGETS_DIR,
+    SEEDPODS_DIR,
     display_number,
-    expand_nugget_directives,
+    expand_seedpod_directives,
     load_index_copy,
-    nugget_by_number,
-    nugget_tag,
+    seedpod_by_number,
+    seedpod_tag,
     section_is_tbd,
 )
 from reporter import error as reporter_error, note as reporter_note
@@ -52,12 +52,12 @@ LAYER_ORDER_PROTO = [
     ("references", "References"),
 ]
 
-PROTO_NOTICE_HTML = '''<div class="proto-notice"><p class="dim">Beware! This pod might be a crazy idea. It will one day be fleshed out, merged with another pod, or even removed. Caveat lector.</p></div>'''
+PROTO_NOTICE_HTML = '''<div class="proto-notice"><p class="dim">Beware! This seedpod might be a crazy idea. It will one day be fleshed out, merged with another seedpod, or even removed. Caveat lector.</p></div>'''
 
-ROUGH_NOTICE_HTML = '''<div class="rough-notice"><p class="dim">This pod is a rough draft, far from polished. Caveat lector.</p></div>'''
+ROUGH_NOTICE_HTML = '''<div class="rough-notice"><p class="dim">This seedpod is a rough draft, far from polished. Caveat lector.</p></div>'''
 
 
-def build_nugget(n, all_nuggets, link_errors=None, site_dir=None):
+def build_seedpod(n, all_seedpods, link_errors=None, site_dir=None):
     num = n.get("number", "?")
     title = n.get("title", "Untitled")
     subtitle = n.get("subtitle", "")
@@ -67,24 +67,24 @@ def build_nugget(n, all_nuggets, link_errors=None, site_dir=None):
     related_nums = n.get("related", [])
     layers = n.get("layers", {})
 
-    link_context = {"nuggets": all_nuggets, "content_dir": CONTENT_DIR, "base_dir": NUGGETS_DIR, "warn": _warn, "link_errors": link_errors}
+    link_context = {"seedpods": all_seedpods, "content_dir": CONTENT_DIR, "base_dir": SEEDPODS_DIR, "warn": _warn, "link_errors": link_errors}
     if site_dir is not None:
         link_context["site_dir"] = site_dir
 
     tag_html = f'<a href="index.html#{tag_slug(category)}" class="tag">{category}</a>' if category else ""
 
-    rel_nuggets = [nugget_by_number(all_nuggets, r) for r in related_nums]
+    rel_seedpods = [seedpod_by_number(all_seedpods, r) for r in related_nums]
     fn = n.get("filename") or ""
     shortname = fn.split("-", 1)[-1] if "-" in fn else None
     for r in related_nums:
-        if not nugget_by_number(all_nuggets, r):
-            reporter_error("related {} does not match any nugget".format(r), nugget_num=num, shortname=shortname)
-    rel_nuggets = [r for r in rel_nuggets if r]
+        if not seedpod_by_number(all_seedpods, r):
+            reporter_error("related {} does not match any seedpod".format(r), seedpod_num=num, shortname=shortname)
+    rel_seedpods = [r for r in rel_seedpods if r]
     related_cards_html = ""
-    if rel_nuggets:
+    if rel_seedpods:
         cards = ""
-        for r in rel_nuggets[:5]:
-            rfile = nugget_tag(r) + ".html"
+        for r in rel_seedpods[:5]:
+            rfile = seedpod_tag(r) + ".html"
             rnum = r.get("number", "")
             rtitle = r.get("title", "")
             rstatus = r.get("status", "empty")
@@ -98,14 +98,14 @@ def build_nugget(n, all_nuggets, link_errors=None, site_dir=None):
       </a>"""
         related_cards_html = f'<div class="related-grid">{cards}\n      </div>'
 
-    inbound_nuggets = sorted(
-        [m for m in all_nuggets if num in m.get("related", [])],
+    inbound_seedpods = sorted(
+        [m for m in all_seedpods if num in m.get("related", [])],
         key=lambda x: x.get("number", ""),
     )
     inbound_html = ""
-    if inbound_nuggets:
+    if inbound_seedpods:
         def _inbound_link(m):
-            mfile = nugget_tag(m) + ".html"
+            mfile = seedpod_tag(m) + ".html"
             mnum = display_number(m.get("number", ""))
             mtitle = _html.escape(m.get("title", ""))
             mcat = m.get("category", "")
@@ -114,14 +114,14 @@ def build_nugget(n, all_nuggets, link_errors=None, site_dir=None):
                 cls += f" cat-colored {category_css_slug(mcat)}"
             return f'<a href="{mfile}" class="{cls}" title="{mtitle}">{mnum}</a>'
 
-        links = "".join(_inbound_link(m) for m in inbound_nuggets)
-        count = len(inbound_nuggets)
+        links = "".join(_inbound_link(m) for m in inbound_seedpods)
+        count = len(inbound_seedpods)
         label = f'{count} inbound reference' + ('' if count == 1 else 's')
         inbound_html = f'<div class="inbound-refs"><span class="inbound-label">{label}</span><span class="inbound-links">{links}</span></div>'
 
-    show_related_section = bool(rel_nuggets or inbound_nuggets)
+    show_related_section = bool(rel_seedpods or inbound_seedpods)
 
-    surface_html = _layer_prose_to_html(layers.get("surface", "TBD"), all_nuggets, link_context)
+    surface_html = _layer_prose_to_html(layers.get("surface", "TBD"), all_seedpods, link_context)
     is_proto = status == "proto"
     is_rough = status == "rough"
     layer_order = LAYER_ORDER_PROTO if is_proto else LAYER_ORDER
@@ -129,19 +129,19 @@ def build_nugget(n, all_nuggets, link_errors=None, site_dir=None):
     def layer_has_content(layer_id):
         if layer_id == "references":
             prov_raw = layers.get("provenance", "TBD")
-            prov_expanded = expand_nugget_directives(prov_raw, all_nuggets) if prov_raw else prov_raw
+            prov_expanded = expand_seedpod_directives(prov_raw, all_seedpods) if prov_raw else prov_raw
             return not section_is_tbd(prov_expanded) or bool(n.get("refs"))
         return not section_is_tbd(layers.get(layer_id))
 
     def layer_body(layer_id):
         if layer_id == "brief":
-            brief_html = _layer_prose_to_html(layers.get("brief", "TBD"), all_nuggets, link_context)
+            brief_html = _layer_prose_to_html(layers.get("brief", "TBD"), all_seedpods, link_context)
             if is_proto:
                 return PROTO_NOTICE_HTML + "\n    " + brief_html
             return brief_html
         if layer_id == "references":
             prov_raw = layers.get("provenance", "TBD")
-            prov_html = "" if section_is_tbd(prov_raw) else _layer_prose_to_html(prov_raw, all_nuggets, link_context)
+            prov_html = "" if section_is_tbd(prov_raw) else _layer_prose_to_html(prov_raw, all_seedpods, link_context)
             parts = []
             if prov_html:
                 parts.append(f'<div class="prose">{prov_html}</div>')
@@ -166,7 +166,7 @@ def build_nugget(n, all_nuggets, link_errors=None, site_dir=None):
             if show_related_section:
                 parts.append('<div class="related-section">')
                 if prov_html or refs_list:
-                    parts.append('<h3 class="layer-heading related-label">Related seeds</h3>')
+                    parts.append('<h3 class="layer-heading related-label">Related seedpods</h3>')
                 if related_cards_html:
                     parts.append(related_cards_html)
                 if inbound_html:
@@ -179,9 +179,9 @@ def build_nugget(n, all_nuggets, link_errors=None, site_dir=None):
             return surface_html
         raw = layers.get(layer_id, "TBD")
         if layer_id == "script":
-            segments, cta_htmls = expand_layer_directives(raw, all_nuggets, extra_context=link_context)
+            segments, cta_htmls = expand_layer_directives(raw, all_seedpods, extra_context=link_context)
             return _assemble_layer_html(segments, cta_htmls, script_to_html)
-        return _layer_prose_to_html(raw, all_nuggets, link_context)
+        return _layer_prose_to_html(raw, all_seedpods, link_context)
 
     tabs_parts = []
     for layer_id, label in layer_order:
@@ -211,22 +211,22 @@ def build_nugget(n, all_nuggets, link_errors=None, site_dir=None):
             section_content = f'<h2 class="layer-heading">{label}</h2>\n    <div class="prose">{body}</div>'
         if layer_id == "surface" and show_related_section and not refs_section_shown:
             inner = (f'\n      {related_cards_html}' if related_cards_html else "") + (f'\n      {inbound_html}' if inbound_html else "")
-            section_content += f'\n    <div class="related-section"><h3 class="layer-heading related-label">Related seeds</h3>{inner}\n    </div>'
+            section_content += f'\n    <div class="related-section"><h3 class="layer-heading related-label">Related seedpods</h3>{inner}\n    </div>'
         if layer_id == "brief" and is_proto and show_related_section and not refs_section_shown:
             inner = (f'\n      {related_cards_html}' if related_cards_html else "") + (f'\n      {inbound_html}' if inbound_html else "")
-            section_content += f'\n    <div class="related-section"><h3 class="layer-heading related-label">Related seeds</h3>{inner}\n    </div>'
+            section_content += f'\n    <div class="related-section"><h3 class="layer-heading related-label">Related seedpods</h3>{inner}\n    </div>'
         sections_parts.append(f'  <section id="{layer_id}" class="layer-section">\n    {section_content}\n  </section>')
 
     tabs_html = "\n      ".join(tabs_parts)
     sections_html = "\n\n".join(sections_parts)
 
-    sorted_nuggets = sorted(all_nuggets, key=lambda x: x.get("number", ""))
-    idx = next((i for i, x in enumerate(sorted_nuggets) if nugget_tag(x) == nugget_tag(n)), -1)
-    prev_n = sorted_nuggets[idx - 1] if idx > 0 else None
-    next_n = sorted_nuggets[idx + 1] if 0 <= idx < len(sorted_nuggets) - 1 else None
+    sorted_seedpods = sorted(all_seedpods, key=lambda x: x.get("number", ""))
+    idx = next((i for i, x in enumerate(sorted_seedpods) if seedpod_tag(x) == seedpod_tag(n)), -1)
+    prev_n = sorted_seedpods[idx - 1] if idx > 0 else None
+    next_n = sorted_seedpods[idx + 1] if 0 <= idx < len(sorted_seedpods) - 1 else None
 
-    prev_html = f'<a href="{nugget_tag(prev_n)}.html">&lt;&lt;</a>' if prev_n else ''
-    next_html = f'<a href="{nugget_tag(next_n)}.html">&gt;&gt;</a>' if next_n else ''
+    prev_html = f'<a href="{seedpod_tag(prev_n)}.html">&lt;&lt;</a>' if prev_n else ''
+    next_html = f'<a href="{seedpod_tag(next_n)}.html">&gt;&gt;</a>' if next_n else ''
 
     if is_proto:
         layer_tabs_html = f"""  <div class="layer-tabs">
@@ -254,9 +254,9 @@ def build_nugget(n, all_nuggets, link_errors=None, site_dir=None):
     html += f"""
 <div class="wrap">
   <div class="meta-row">
-    {cat_meta}<span class="mono small warm">Seed {display_number(num)}</span><span class="mono small dim"> · {status}</span>
+    {cat_meta}<span class="mono small warm">SeedPod {display_number(num)}</span><span class="mono small dim"> · {status}</span>
   </div>
-  <div class="nugget-header fade{cat_class}">
+  <div class="seedpod-header fade{cat_class}">
     <h1>{title}</h1>
     <p class="premise">{subtitle}</p>
   </div>
@@ -269,15 +269,15 @@ def build_nugget(n, all_nuggets, link_errors=None, site_dir=None):
     return html
 
 
-def build_tags_body(nuggets, status_order):
+def build_tags_body(seedpods, status_order):
     """Index-by-category and by-status HTML. For @index directive."""
     all_categories = set()
-    for n in nuggets:
+    for n in seedpods:
         cat = n.get("category", "")
         if cat:
             all_categories.add(cat)
     sorted_categories = sorted(all_categories)
-    all_statuses = set(n.get("status", "empty") for n in nuggets)
+    all_statuses = set(n.get("status", "empty") for n in seedpods)
     sorted_statuses = [s for s in status_order if s in all_statuses]
 
     def block_for_category(label, slug, matching):
@@ -286,7 +286,7 @@ def build_tags_body(nuggets, status_order):
             num = n.get("number", "")
             title = n.get("title", "")
             subtitle = n.get("subtitle", "")
-            fname = nugget_tag(n) + ".html"
+            fname = seedpod_tag(n) + ".html"
             title_display = f"{display_number(num)}. {title}" if num else title
             parts.append(
                 f'<div class="index-entry"><a href="{fname}">{_html.escape(title_display)}</a>'
@@ -296,10 +296,10 @@ def build_tags_body(nuggets, status_order):
 
     category_blocks = ""
     for cat in sorted_categories:
-        category_blocks += block_for_category(cat, tag_slug(cat), [n for n in nuggets if n.get("category", "") == cat])
+        category_blocks += block_for_category(cat, tag_slug(cat), [n for n in seedpods if n.get("category", "") == cat])
     status_blocks = ""
     for status in sorted_statuses:
-        status_blocks += block_for_category(status, f"status-{status}", [n for n in nuggets if n.get("status", "empty") == status])
+        status_blocks += block_for_category(status, f"status-{status}", [n for n in seedpods if n.get("status", "empty") == status])
     return f"""<div class="index-by-tag">
     {category_blocks}
     </div>
@@ -309,8 +309,8 @@ def build_tags_body(nuggets, status_order):
     </div>"""
 
 
-def build_tags_page(nuggets, status_order, explainer_terms=None):
-    body = build_tags_body(nuggets, status_order)
+def build_tags_page(seedpods, status_order, explainer_terms=None):
+    body = build_tags_body(seedpods, status_order)
     html = head("Index")
     html += nav(from_d=True)
     html += f'<div class="wrap"><div class="page-body fade"><h1>Index</h1>{body}</div></div>'
@@ -324,21 +324,21 @@ def _md_context(**overrides):
     copy = overrides.get("copy", load_index_copy())
     def _note(msg, filepath=None):
         reporter_note(msg, path=filepath)
-    return {"warn": _warn, "build_time": site_chrome.build_time, "content_dir": CONTENT_DIR, "site_dir": (copy.get("site_dir") or "").strip(), "note": _note, "nugget_revisions": getattr(site_chrome, "nugget_revisions", {}) or {}, "category_colors": _category_colors, **overrides}
+    return {"warn": _warn, "build_time": site_chrome.build_time, "content_dir": CONTENT_DIR, "site_dir": (copy.get("site_dir") or "").strip(), "note": _note, "seedpod_revisions": getattr(site_chrome, "seedpod_revisions", {}) or {}, "category_colors": _category_colors, **overrides}
 
 
-def _md_context_with_special(nuggets, status_order, explainer_terms=None, **overrides):
+def _md_context_with_special(seedpods, status_order, explainer_terms=None, **overrides):
     """Context for process_md_to_html including @glossary, @bibliography, @index, @map placeholder HTML."""
-    ctx = _md_context(nuggets=nuggets, status_order=status_order, **overrides)
-    ctx["glossary_html"] = build_glossary_body(nuggets, explainer_terms)
-    ctx["bibliography_html"] = build_bibliography_body(nuggets)
-    ctx["index_html"] = build_tags_body(nuggets, status_order)
-    ctx["map_html"] = map_directive_html(nuggets, status_order)
+    ctx = _md_context(seedpods=seedpods, status_order=status_order, **overrides)
+    ctx["glossary_html"] = build_glossary_body(seedpods, explainer_terms)
+    ctx["bibliography_html"] = build_bibliography_body(seedpods)
+    ctx["index_html"] = build_tags_body(seedpods, status_order)
+    ctx["map_html"] = map_directive_html(seedpods, status_order)
     return ctx
 
 
-def build_index(nuggets, index_copy, status_order, collected_md_refs=None, link_errors=None):
-    context = _md_context(nuggets=nuggets, status_order=status_order, copy=index_copy, page="home", link_errors=link_errors)
+def build_index(seedpods, index_copy, status_order, collected_md_refs=None, link_errors=None):
+    context = _md_context(seedpods=seedpods, status_order=status_order, copy=index_copy, page="home", link_errors=link_errors)
     body_html = process_md_to_html(CONTENT_DIR / "home.md", context, collected_md_refs=collected_md_refs)
 
     html = head("SeedPods")
@@ -359,14 +359,14 @@ def build_static_page(title, body_html, wrap_class=""):
     return html
 
 
-def build_map_graph_page(nuggets, status_order):
-    return build_static_page("Map", map_directive_html(nuggets, status_order), wrap_class="wrap--full")
+def build_map_graph_page(seedpods, status_order):
+    return build_static_page("Map", map_directive_html(seedpods, status_order), wrap_class="wrap--full")
 
 
-def build_md_file_page(md_path, nuggets=None, collected_md_refs=None, status_order=None, index_copy=None, explainer_terms=None, link_errors=None, wrap_class=""):
-    nuggets = nuggets or []
+def build_md_file_page(md_path, seedpods=None, collected_md_refs=None, status_order=None, index_copy=None, explainer_terms=None, link_errors=None, wrap_class=""):
+    seedpods = seedpods or []
     status_order = status_order or []
-    context = _md_context_with_special(nuggets, status_order, explainer_terms, copy=index_copy, page=md_path.stem, link_errors=link_errors)
+    context = _md_context_with_special(seedpods, status_order, explainer_terms, copy=index_copy, page=md_path.stem, link_errors=link_errors)
     body_html = process_md_to_html(md_path, context, collected_md_refs=collected_md_refs)
     title = _first_h1(md_path) or md_path.stem.replace("-", " ").title()
     html = head(title)
@@ -378,11 +378,11 @@ def build_md_file_page(md_path, nuggets=None, collected_md_refs=None, status_ord
     return html
 
 
-def build_md_dir_page(dir_path, nuggets=None, collected_md_refs=None, status_order=None, explainer_terms=None, link_errors=None):
+def build_md_dir_page(dir_path, seedpods=None, collected_md_refs=None, status_order=None, explainer_terms=None, link_errors=None):
     page_md = dir_path / "page.md"
-    nuggets = nuggets or []
+    seedpods = seedpods or []
     status_order = status_order or []
-    context = _md_context_with_special(nuggets, status_order, explainer_terms, page=dir_path.name, link_errors=link_errors)
+    context = _md_context_with_special(seedpods, status_order, explainer_terms, page=dir_path.name, link_errors=link_errors)
     body_html = process_md_to_html(page_md, context, collected_md_refs=collected_md_refs)
     title = _first_h1(page_md) or dir_path.name.replace("-", " ").title()
     html = head(title)
@@ -393,8 +393,8 @@ def build_md_dir_page(dir_path, nuggets=None, collected_md_refs=None, status_ord
     return html
 
 
-def build_internal_page(nuggets=None, collected_md_refs=None, link_errors=None):
-    context = _md_context(nuggets=nuggets or [], link_errors=link_errors)
+def build_internal_page(seedpods=None, collected_md_refs=None, link_errors=None):
+    context = _md_context(seedpods=seedpods or [], link_errors=link_errors)
     body_html = process_md_to_html(INTERNAL_DIR / "page.md", context, collected_md_refs=collected_md_refs)
     html = head("Internal")
     html += nav(from_d=True)
@@ -404,11 +404,11 @@ def build_internal_page(nuggets=None, collected_md_refs=None, link_errors=None):
     return html
 
 
-def build_bibliography_body(nuggets):
-    """Bibliography table HTML from @ref(...) directives in nugget layers. For @bibliography directive."""
+def build_bibliography_body(seedpods):
+    """Bibliography table HTML from @ref(...) directives in seedpod layers. For @bibliography directive."""
     by_keyword = {}
-    for n in nuggets:
-        tag = nugget_tag(n)
+    for n in seedpods:
+        tag = seedpod_tag(n)
         fname = tag + ".html"
         for ref_item in n.get("refs", []):
             if isinstance(ref_item, tuple):
@@ -430,22 +430,22 @@ def build_bibliography_body(nuggets):
         heading = f"{keyword_esc} ({count})" if count > 1 else keyword_esc
         parts.append(f'<hr class="index-tag-rule"><div id="{keyword_esc}" class="index-tag-name">{heading}</div>')
         entries = sorted(by_keyword[keyword].items(), key=lambda x: x[0].lower())
-        for ref_text, nugget_list in entries:
+        for ref_text, seedpod_list in entries:
             sort_key = lambda x: (int(x[0].split("-")[0]) if x[0].split("-")[0].isdigit() else 999, x[0])
-            sorted_nugs = sorted(nugget_list, key=sort_key)
-            nugget_links = " ".join(f'<a href="{fname}" class="bib-tag">{_html.escape(disp)}</a>' for disp, fname in sorted_nugs)
+            sorted_nugs = sorted(seedpod_list, key=sort_key)
+            seedpod_links = " ".join(f'<a href="{fname}" class="bib-tag">{_html.escape(disp)}</a>' for disp, fname in sorted_nugs)
             ref_esc = _html.escape(ref_text)
             parts.append(
-                f'<div class="bib-entry"><span class="bib-text">{ref_esc}</span> {nugget_links}</div>'
+                f'<div class="bib-entry"><span class="bib-text">{ref_esc}</span> {seedpod_links}</div>'
             )
-    return "\n".join(parts) if parts else "<p class=\"dim\">No references yet. Add <code>#ref</code> lines (keyword + citation text) inside <code>#provenance</code> in any nugget.</p>"
+    return "\n".join(parts) if parts else "<p class=\"dim\">No references yet. Add <code>#ref</code> lines (keyword + citation text) inside <code>#provenance</code> in any seedpod.</p>"
 
 
-def build_bibliography_page(nuggets):
-    body = build_bibliography_body(nuggets)
+def build_bibliography_page(seedpods):
+    body = build_bibliography_body(seedpods)
     html = head("Bibliography")
     html += nav(from_d=True)
-    html += f'<div class="wrap"><div class="page-body fade"><h1>Bibliography</h1><p class="dim repo-intro">References from all nuggets, grouped by keyword.</p>{body}</div></div>'
+    html += f'<div class="wrap"><div class="page-body fade"><h1>Bibliography</h1><p class="dim repo-intro">References from all seedpods, grouped by keyword.</p>{body}</div></div>'
     html += foot()
     html += close()
     return html

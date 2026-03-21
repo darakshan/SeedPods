@@ -34,7 +34,7 @@ If the universe is made of things — objects with fixed properties sitting in s
 
 But if the universe is made of events — each one occurring, completing, passing its character forward through relationships — then the picture is different from the start. An event isn't just an outside. Something happens. And something happening is not the same as something just sitting there.
 
-That opening — between the happening and the just-sitting-there — is where the next seed lives.
+That opening — between the happening and the just-sitting-there — is where the next seedpod lives.
 
 A note on language: from here on, we'll sometimes say "things" because that's how they feel — but we mean events stable enough to look permanent.
 
@@ -57,7 +57,7 @@ Wittgenstein's analysis of "chair" approaches this from yet another direction �
 
 The convergence of Whitehead, Kant, Rovelli, and Wittgenstein on the same dissolution of the self-subsistent thing is not coincidence but pressure — the accumulated strain of pressing on the question from multiple directions at once. None of them, alone, is decisive. Together they suggest that the thing-based picture of reality is the map, not the territory. And a map that leaves out the relationships — that treats the thing as prior to its interactions — has left out what is actually there.
 
-The implications run through all of these seed pods. If events are primary and constituted by their relationships, then every event has two sides — an outside that physics describes, and an inside that it does not. That is the territory of @link(003). If the self is a stable pattern of events rather than an enduring substance, that is @link(004). If the field is the medium through which events reach each other, that is @link(008).
+The implications run through all of these seedpods. If events are primary and constituted by their relationships, then every event has two sides — an outside that physics describes, and an inside that it does not. That is the territory of @link(003). If the self is a stable pattern of events rather than an enduring substance, that is @link(004). If the field is the medium through which events reach each other, that is @link(008).
 
 #term Fallacy of misplaced concreteness: Alfred North Whitehead's term for the error of treating an abstraction as if it were the concrete reality. The paradigm case: treating the particle — a scientific abstraction useful for calculation — as the fundamental unit of nature, while forgetting that it was abstracted from the concrete flow of events.
 #term Actual occasion: Whitehead's term for the fundamental unit of reality: a discrete event of becoming. Enduring objects are families (Whitehead: "societies") of actual occasions whose pattern is stable enough to appear permanent. The occasion is primary; the object is derivative.

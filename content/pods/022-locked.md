@@ -12,9 +12,9 @@
 #term channel: the means of output through which an interior communicates with the world: speech, movement, gesture, even a blink. The channel can be wide or narrow, familiar or unfamiliar, present or absent. Its width says nothing about what feeds it.
 #term capacity: the source that feeds the channel. The interior: cognition, experience, awareness. What is actually there, regardless of whether it can be seen.
 #term locked-in syndrome: a neurological condition in which a person is fully conscious and cognitively intact but almost completely paralyzed, typically retaining only eye movement. Caused by damage to the brainstem. Distinguished from vegetative state, in which consciousness itself is absent or severely impaired.
-#term vegetative state: a condition of wakefulness without awareness, in which the eyes may be open and basic reflexes present but conscious experience is absent or undetectable. Diagnosis is behavioral and therefore vulnerable to the error this pod describes.
+#term vegetative state: a condition of wakefulness without awareness, in which the eyes may be open and basic reflexes present but conscious experience is absent or undetectable. Diagnosis is behavioral and therefore vulnerable to the error this seedpod describes.
 #term presume competence: a principle in disability advocacy and education: treat cognitive capacity as present until there is genuine evidence otherwise, rather than assuming absence because familiar output is missing.
-#term category mistake: Ryle's term for applying a description from one category as if it were a complete account of something in another. See pod 021.
+#term category mistake: Ryle's term for applying a description from one category as if it were a complete account of something in another. See seedpod 021.
 #term facilitated communication (FC): a technique in which a facilitator supports a nonspeaking person's hand or arm while they type or point to letters. Widely used with nonspeaking autistic individuals. Scientifically contested: controlled studies have repeatedly shown that in many cases the facilitator, not the person, is the source of the communication — often unconsciously. The controversy does not settle the question of what nonspeaking individuals understand or experience; it only complicates the question of how to reliably access it.
 #related 001, 006, 016, 021, 025
 
@@ -68,7 +68,7 @@ But that is exactly the same move. Looking at the channel — this time a wide o
 
 This is not a claim that LLMs are conscious. It is a claim that the argument from output — in either direction — was never valid. (See @link(001) for the paradigm we may be living inside. See @link(006) for the specific case of prediction as output. See @link(016) for the Whiteheadian reading of what a neural network actually is.)
 
-Editor's note: This pod argues in one direction only — that a narrow or absent channel does not justify concluding an absent source. It does not argue the reverse: that a wide or fluent channel confirms a rich source. That question, particularly as it applies to large language models, may warrant its own pod. The relationship between output fluency and interior experience in AI systems remains genuinely open.
+Editor's note: This seedpod argues in one direction only — that a narrow or absent channel does not justify concluding an absent source. It does not argue the reverse: that a wide or fluent channel confirms a rich source. That question, particularly as it applies to large language models, may warrant its own seedpod. The relationship between output fluency and interior experience in AI systems remains genuinely open.
 
 The channel is not the capacity. Widening the channel doesn't create the source. It finds it.@ref(vyse, "Vyse, S. The Telepathy Tapes: A Skeptical Analysis. Skeptical Inquirer, 2025.")@note(Vyse not mentioned by name in text — cited for the skeptical analysis of the Telepathy Tapes claims.)@ref(schnabel, "Schnabel, J. (dir.) The Diving Bell and the Butterfly. Film, 2007.")@note(Schnabel not mentioned in text — cited as the film adaptation of Bauby's memoir.)
 

@@ -3,8 +3,8 @@
 #status draft1
 #date 2026-03-19
 #category knowledge
-#term play: As used in this pod: the frame-free, will-suspended mode of activity in which no external criterion of success applies. Distinguished from competitive games and organized sport (where the will is fully engaged), from exploration (goal-directed search within a frame), and from rest (recovery in service of further work).
-#term explore-exploit tradeoff: The tension in any adaptive system between using known strategies (exploiting) and searching for better ones (exploring). Both are still goal-directed; neither is equivalent to play in the sense this pod develops.
+#term play: As used in this seedpod: the frame-free, will-suspended mode of activity in which no external criterion of success applies. Distinguished from competitive games and organized sport (where the will is fully engaged), from exploration (goal-directed search within a frame), and from rest (recovery in service of further work).
+#term explore-exploit tradeoff: The tension in any adaptive system between using known strategies (exploiting) and searching for better ones (exploring). Both are still goal-directed; neither is equivalent to play in the sense this seedpod develops.
 #term temperature (AI): A parameter in generative AI systems controlling how broadly the model samples from its probability distribution. Higher temperature produces more varied, less predictable output — a mechanical approximation of wandering whose relationship to genuine play remains an open question.
 #term will-suspension: The state in which goal-directed effort is genuinely set aside, not redirected. Proposed here as the distinguishing feature of play, and as the mode that directed exploration cannot substitute for.
 #related 001, 026, 027
@@ -41,7 +41,7 @@ The brain, it turns out, has something to say about this distinction. There is a
 
 @warn(The claim about brain states and will-suspension is observational and phenomenological, not established neuroscience. Treat with appropriate tentativeness.)
 
-The question of whether artificial systems can do anything analogous is one we, as authors of this pod, hold as genuinely open. When the temperature parameter of a language model is raised, the model samples more broadly — reaching further down the landscape of possibilities, past the most probable and into the less expected. In a narrow sense this resembles wandering: more surprise, less predictability. But whether it constitutes genuine frame-suspension, or just wider search within the same goal, we cannot say. The temperature dial is the closest thing engineers have built to a playfulness knob. Whether it captures the thing or only mimics it from the outside remains unclear to us.
+The question of whether artificial systems can do anything analogous is one we, as authors of this seedpod, hold as genuinely open. When the temperature parameter of a language model is raised, the model samples more broadly — reaching further down the landscape of possibilities, past the most probable and into the less expected. In a narrow sense this resembles wandering: more surprise, less predictability. But whether it constitutes genuine frame-suspension, or just wider search within the same goal, we cannot say. The temperature dial is the closest thing engineers have built to a playfulness knob. Whether it captures the thing or only mimics it from the outside remains unclear to us.
 
 What it does show is that the engineers knew they had a problem: a model at zero temperature loops, stagnates, loses the capacity for surprise. The grasshopper had to be added deliberately, because pure optimization had crowded it out.
 
@@ -62,13 +62,13 @@ permission to move in a direction that wasn't the primary direction of
 intention, and the system functions better for it. The tightly bound machine
 and the tightly scheduled life share a failure mode.
 
-This could extend the pod's argument from the phenomenological (what the
+This could extend the seedpod's argument from the phenomenological (what the
 brain needs) to the structural (what any tightly coupled system needs). Or it
-could seed a separate pod — the engineering meaning of play as a lens on
+could seed a separate seedpod — the engineering meaning of play as a lens on
 resilience more broadly.
 
 @note(Consider whether this fits in the Depth section of 074, or seeds a
-separate pod on mechanical/structural resilience. If added to 074, it would
+separate seedpod on mechanical/structural resilience. If added to 074, it would
 sit well after the Feynman paragraph as a structural analogy — not just humans
 but machines require play.)
 
@@ -90,15 +90,15 @@ relaxation of "real" constraints — reveals the hidden architecture of the
 real-valued function itself. The imaginary extension doesn't distort the
 reality. It explains it.
 
-The resonance with the pod's argument: play is not a departure from the real
+The resonance with the seedpod's argument: play is not a departure from the real
 work. It may be the dimension in which the real work's hidden structure
 becomes visible.
 
-@note(This is strong enough to be its own pod — possibly neighboring 074 on
+@note(This is strong enough to be its own seedpod — possibly neighboring 074 on
 the map. The complex plane as a metaphor for what becomes visible when you
 relax the constraint to one dimension. Connects naturally to the mathematics
-pods (033, 034, 035) and potentially to consciousness as a dimension orthogonal
-to spacetime (050). Worth a full pod rather than a paragraph in 074 — the
+seedpods (033, 034, 035) and potentially to consciousness as a dimension orthogonal
+to spacetime (050). Worth a full seedpod rather than a paragraph in 074 — the
 idea deserves room.)
 
 Both extensions share an underlying structure: a system constrained to n
@@ -109,7 +109,7 @@ mathematical: the function moves into the imaginary axis. Grasshopper play is
 cognitive/experiential: the will moves off the axis of goal-direction.
 
 The same word — play — may be pointing at the same deep structure in three
-different domains.@ref(aesop, "Aesop. The Ant and the Grasshopper. Traditional fable, ca. 6th century BCE. The cultural compression the pod argues encodes a framework too small for what it's trying to describe.")@note(Aesop not mentioned by name in text — cited as the source of the ant-and-grasshopper fable.)@ref(sutton2018, "Sutton, Richard S., and Andrew G. Barto. Reinforcement Learning: An Introduction. 2nd ed. MIT Press, 2018. The explore/exploit framing — useful precisely as the contrast case, since both poles remain goal-directed.")@note(Sutton not mentioned by name in text — cited for the explore/exploit framing as the contrast case.)
+different domains.@ref(aesop, "Aesop. The Ant and the Grasshopper. Traditional fable, ca. 6th century BCE. The cultural compression the seedpod argues encodes a framework too small for what it's trying to describe.")@note(Aesop not mentioned by name in text — cited as the source of the ant-and-grasshopper fable.)@ref(sutton2018, "Sutton, Richard S., and Andrew G. Barto. Reinforcement Learning: An Introduction. 2nd ed. MIT Press, 2018. The explore/exploit framing — useful precisely as the contrast case, since both poles remain goal-directed.")@note(Sutton not mentioned by name in text — cited for the explore/exploit framing as the contrast case.)
 
 #script
 OPEN ON: A child in a summer field. Not doing anything in particular. Watching an insect. Following it a few steps. Losing interest. Lying back. The sky is very large.

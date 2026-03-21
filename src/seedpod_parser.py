@@ -1,5 +1,5 @@
 """
-Parse nugget .txt files and provide load/lookup/expand helpers.
+Parse seedpod .txt files and provide load/lookup/expand helpers.
 """
 
 import html as _html
@@ -12,7 +12,7 @@ from directive import process_directives, split_directive_args
 _ROOT = Path(__file__).resolve().parent.parent
 CONTENT_DIR = _ROOT / "content"
 CONFIG_DIR = _ROOT / "config"
-NUGGETS_DIR = CONTENT_DIR / "pods"
+SEEDPODS_DIR = CONTENT_DIR / "pods"
 
 
 def section_is_tbd(text):
@@ -33,8 +33,8 @@ def display_number(num):
     return num or "?"
 
 
-def nugget_tag(n):
-    """Return the number + short name tag for a nugget (e.g. 001-caloric, 033-edge)."""
+def seedpod_tag(n):
+    """Return the number + short name tag for a seedpod (e.g. 001-caloric, 033-edge)."""
     return n.get("filename", "")
 
 
@@ -77,11 +77,11 @@ def load_status_order(path=None):
     return result
 
 
-def nugget_by_number_flex(nuggets, num_str):
-    """Look up nugget by number; tries num_str then num_str.zfill(3) if numeric."""
-    n = nugget_by_number(nuggets, num_str)
+def seedpod_by_number_flex(seedpods, num_str):
+    """Look up seedpod by number; tries num_str then num_str.zfill(3) if numeric."""
+    n = seedpod_by_number(seedpods, num_str)
     if n is None and num_str and num_str.isdigit():
-        n = nugget_by_number(nuggets, num_str.zfill(3))
+        n = seedpod_by_number(seedpods, num_str.zfill(3))
     return n
 
 
@@ -89,13 +89,13 @@ def _noop_warn(msg, filepath=None):
     pass
 
 
-def nugget_filepath(n):
-    """Return the Path to a nugget's source file."""
-    return NUGGETS_DIR / (n.get("filename", "") + n.get("ext", ".txt"))
+def seedpod_filepath(n):
+    """Return the Path to a seedpod's source file."""
+    return SEEDPODS_DIR / (n.get("filename", "") + n.get("ext", ".txt"))
 
 
-def parse_nugget(filepath, warn=None):
-    """Parse a nugget .txt or .md file into a dict. warn(msg, filepath=...) is called for non-fatal issues."""
+def parse_seedpod(filepath, warn=None):
+    """Parse a seedpod .txt or .md file into a dict. warn(msg, filepath=...) is called for non-fatal issues."""
     w = warn if warn is not None else _noop_warn
     text = filepath.read_text(encoding="utf-8")
     ctx = {"warn": w, "notes": [], "handlers": {}}
@@ -199,7 +199,7 @@ def parse_nugget(filepath, warn=None):
         if re.match(r"^\d+$", r):
             related_parsed.append(r)
         else:
-            w("related entry {!r} is not a valid nugget number (digits only).".format(r), filepath=filepath)
+            w("related entry {!r} is not a valid seedpod number (digits only).".format(r), filepath=filepath)
             m = re.match(r"^(\d+)", r)
             if m:
                 related_parsed.append(m.group(1))
@@ -228,43 +228,43 @@ def parse_nugget(filepath, warn=None):
     return meta
 
 
-def load_all_nuggets(warn=None):
-    """Load and parse all nugget .txt and .md files from NUGGETS_DIR. warn(msg, filepath=...) for parse issues."""
+def load_all_seedpods(warn=None):
+    """Load and parse all seedpod .txt and .md files from SEEDPODS_DIR. warn(msg, filepath=...) for parse issues."""
     def default_warn(msg, filepath=None):
         print(msg, file=sys.stderr)
     w = warn if warn is not None else default_warn
-    nuggets = []
+    seedpods = []
     seen_stems = set()
-    all_files = sorted(f for pattern in ("*.txt", "*.md") for f in NUGGETS_DIR.glob(pattern))
+    all_files = sorted(f for pattern in ("*.txt", "*.md") for f in SEEDPODS_DIR.glob(pattern))
     for f in all_files:
         if f.stem in seen_stems:
             continue
         seen_stems.add(f.stem)
         try:
-            n = parse_nugget(f, warn=w)
+            n = parse_seedpod(f, warn=w)
             n["filename"] = f.stem
             n["ext"] = f.suffix
-            nuggets.append(n)
+            seedpods.append(n)
         except Exception as e:
             w("could not parse: {}".format(e), filepath=f)
-    return nuggets
+    return seedpods
 
 
-def nugget_by_number(nuggets, num):
-    for n in nuggets:
+def seedpod_by_number(seedpods, num):
+    for n in seedpods:
         if n.get("number") == num:
             return n
     return None
 
 
-def expand_nugget_directives(text, all_nuggets):
-    """Replace @nugget(NNN) with italicized title link to that nugget. Unknown numbers left as-is."""
+def expand_seedpod_directives(text, all_seedpods):
+    """Replace @seedpod(NNN) with italicized title link to that seedpod. Unknown numbers left as-is."""
     def repl(m):
         num_str = m.group(1)
-        n = nugget_by_number_flex(all_nuggets, num_str)
+        n = seedpod_by_number_flex(all_seedpods, num_str)
         if n is None:
             return m.group(0)
         title = n.get("title", "Untitled")
         filename = n.get("filename", "")
         return f'<em><a href="{filename}.html">{_html.escape(title)}</a></em>'
-    return re.sub(r"@(?:nugget|pod|link)\((\d+)\)", repl, text)
+    return re.sub(r"@(?:seedpod|pod|link)\((\d+)\)", repl, text)

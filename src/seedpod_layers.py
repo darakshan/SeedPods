@@ -1,5 +1,5 @@
 """
-Render nugget layer content (prose, script, @nugget, @exercise) to HTML.
+Render seedpod layer content (prose, script, @seedpod, @exercise) to HTML.
 """
 
 import html as _html
@@ -13,7 +13,7 @@ except ImportError:
 
 from directive import image_directive_handler, process_directives
 from md_pages import _md_link_handler, _md_setting_handler, _md_timestamp_handler
-from nugget_parser import expand_nugget_directives, section_is_tbd
+from seedpod_parser import expand_seedpod_directives, section_is_tbd
 
 _LIST_MARKERS = ("- ", "* ")
 
@@ -78,17 +78,17 @@ def text_to_html(text):
     return "<hr>".join(html_parts)
 
 
-def _layer_nugget_handler(_verb, content, context):
-    from nugget_parser import nugget_by_number_flex, nugget_tag
-    n = nugget_by_number_flex(context["all_nuggets"], content.strip())
+def _layer_seedpod_handler(_verb, content, context):
+    from seedpod_parser import seedpod_by_number_flex, seedpod_tag
+    n = seedpod_by_number_flex(context["all_seedpods"], content.strip())
     if n is None:
         num = content.strip()
         link_errors = context.get("link_errors")
         if link_errors is not None:
-            link_errors.append(f"@link: nugget {num!r} not found")
+            link_errors.append(f"@link: seedpod {num!r} not found")
         else:
             warn = context.get("warn", lambda msg, filepath=None: None)
-            warn(f"@link: nugget {num!r} not found")
+            warn(f"@link: seedpod {num!r} not found")
         return None
     title = n.get("title", "Untitled")
     filename = n.get("filename", "")
@@ -97,7 +97,7 @@ def _layer_nugget_handler(_verb, content, context):
 
 def _layer_exercise_handler(_verb, content, context):
     inner = content.strip()
-    expanded = expand_nugget_directives(inner, context["all_nuggets"]) if inner else ""
+    expanded = expand_seedpod_directives(inner, context["all_seedpods"]) if inner else ""
     cta_html = text_to_html(expanded) if expanded else ""
     cta_htmls = context["cta_htmls"]
     idx = len(cta_htmls)
@@ -107,7 +107,7 @@ def _layer_exercise_handler(_verb, content, context):
 
 def _layer_warn_handler(_verb, content, context):
     inner = content.strip()
-    expanded = expand_nugget_directives(inner, context["all_nuggets"]) if inner else ""
+    expanded = expand_seedpod_directives(inner, context["all_seedpods"]) if inner else ""
     warn_html = text_to_html(expanded) if expanded else ""
     cta_htmls = context["cta_htmls"]
     idx = len(cta_htmls)
@@ -115,13 +115,13 @@ def _layer_warn_handler(_verb, content, context):
     return f"{{{{EXERCISE_{idx}}}}}"
 
 
-def expand_layer_directives(raw, all_nuggets, filepath=None, extra_context=None):
+def expand_layer_directives(raw, all_seedpods, filepath=None, extra_context=None):
     """Expand directives in layer text via directive.process_directives. Returns (segments, cta_htmls)."""
     if not raw:
         return [], []
     cta_htmls = []
     handlers = {
-        "nugget": _layer_nugget_handler,
+        "seedpod": _layer_seedpod_handler,
         "exercise": _layer_exercise_handler,
         "warn": _layer_warn_handler,
         "image": image_directive_handler,
@@ -134,7 +134,7 @@ def expand_layer_directives(raw, all_nuggets, filepath=None, extra_context=None)
         "warn": lambda msg, filepath=None: None,
         "notes": [],
         "cta_htmls": cta_htmls,
-        "all_nuggets": all_nuggets,
+        "all_seedpods": all_seedpods,
         "handlers": handlers,
     }
     if extra_context:
@@ -165,11 +165,11 @@ def _assemble_layer_html(segments, cta_htmls, segment_renderer):
     return "".join(parts)
 
 
-def _layer_prose_to_html(raw, all_nuggets, link_context=None):
+def _layer_prose_to_html(raw, all_seedpods, link_context=None):
     """Prose layers: expand directives, then render each segment with text_to_html."""
     if section_is_tbd(raw):
         return '<p class="dim placeholder">This layer is not yet written.</p>'
-    segments, cta_htmls = expand_layer_directives(raw, all_nuggets, extra_context=link_context)
+    segments, cta_htmls = expand_layer_directives(raw, all_seedpods, extra_context=link_context)
 
     def render_seg(seg):
         if section_is_tbd(seg):

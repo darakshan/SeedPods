@@ -1,6 +1,6 @@
 Reviews
 
-This page will track intended and completed reviews of the SeedPods project. Reviews are of two kinds: reviews of individual seeds, and reviews of the overall project and its goals.
+This page will track intended and completed reviews of the SeedPods project. Reviews are of two kinds: reviews of individual seedpods, and reviews of the overall project and its goals.
 
 ## Some invited early reviewers — my friends as alpha participants
 
@@ -26,7 +26,7 @@ This page will track intended and completed reviews of the SeedPods project. Rev
 
 ## AI reviewers 
 
-As a meta-experiment consistent with the project's themes, reviews by AI systems are also planned. Candidate systems: Claude (Anthropic), GPT-4 (OpenAI), Gemini (Google). The question of "what an AI review means" is itself a potential pod.
+As a meta-experiment consistent with the project's themes, reviews by AI systems are also planned. Candidate systems: Claude (Anthropic), GPT-4 (OpenAI), Gemini (Google). The question of "what an AI review means" is itself a potential seedpod.
 
 ## Review log
 

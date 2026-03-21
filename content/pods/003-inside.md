@@ -34,7 +34,7 @@ This is not a mystical claim. It doesn't require a soul or a spirit or anything 
 
 The outside of a falling raindrop is velocity, mass, surface tension. What would the inside be? Not human experience. Not anything we have words for yet. Something so faint and simple it barely deserves the name. But something, rather than nothing.
 
-That shift — from "obviously nothing" to "something we don't have words for yet" — is what this seed is about.
+That shift — from "obviously nothing" to "something we don't have words for yet" — is what this seedpod is about.
 
 @exercise(Watch rain on a window. Pick one drop. For thirty seconds, hold the question open — not "does it feel something?" but "what would it mean if it did?" You don't have to believe it. Just try not closing the door.)
 

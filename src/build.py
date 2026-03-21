@@ -20,18 +20,18 @@ from zoneinfo import ZoneInfo
 
 _ROOT = Path(__file__).resolve().parent.parent
 from graph_svg import build_graph_svg
-from nugget_parser import (
+from seedpod_parser import (
     CONFIG_DIR,
     CONTENT_DIR,
-    NUGGETS_DIR,
+    SEEDPODS_DIR,
     display_number,
-    expand_nugget_directives,
-    load_all_nuggets,
+    expand_seedpod_directives,
+    load_all_seedpods,
     load_index_copy,
     load_status_order,
-    nugget_by_number,
-    nugget_filepath,
-    nugget_tag,
+    seedpod_by_number,
+    seedpod_filepath,
+    seedpod_tag,
     section_is_tbd,
 )
 from directive import process_directives
@@ -51,7 +51,7 @@ from builders import (
     build_md_dir_page,
     build_md_file_page,
     build_map_graph_page,
-    build_nugget,
+    build_seedpod,
     build_static_page,
     build_tags_body,
     build_tags_page,
@@ -149,7 +149,7 @@ def _hash_paths(paths):
 
 
 def _shared_md_inputs(index_copy, status_order, explainer_terms):
-    """Inputs shared by index and all MD pages that use placeholders: settings, status, explainers, all nugget .txt.
+    """Inputs shared by index and all MD pages that use placeholders: settings, status, explainers, all seedpod .txt.
 
     Python source files (.py) are intentionally excluded. Page versions track content changes, not
     code changes — a styling or logic fix should not bump page_version or changed_in_build for pages
@@ -167,11 +167,11 @@ def _shared_md_inputs(index_copy, status_order, explainer_terms):
     return out
 
 
-def _get_all_page_ids(nuggets, index_copy, collected_md_refs):
+def _get_all_page_ids(seedpods, index_copy, collected_md_refs):
     """All HTML page IDs (output filenames) that the build produces."""
     ids = ["index.html"]
-    for n in nuggets:
-        ids.append(nugget_tag(n) + ".html")
+    for n in seedpods:
+        ids.append(seedpod_tag(n) + ".html")
     nav_hrefs = {href for href, _, _, _ in get_nav_items(index_copy)}
     nav_built_paths = set()
     for _href, _label, kind, path in get_nav_items(index_copy):
@@ -193,26 +193,26 @@ def _get_all_page_ids(nuggets, index_copy, collected_md_refs):
     return ids
 
 
-def _get_inputs_for_page(page_id, nuggets, index_copy, status_order, explainer_terms, collected_md_refs):
+def _get_inputs_for_page(page_id, seedpods, index_copy, status_order, explainer_terms, collected_md_refs):
     """Set of input Paths whose content affects this page. Used for input-based hashing."""
     out = set()
     if page_id == "index.html":
         home = CONTENT_DIR / "home.md"
         out.update(_input_files_for_page(home))
-        for n in nuggets:
-            out.add(nugget_filepath(n))
+        for n in seedpods:
+            out.add(seedpod_filepath(n))
         out.update(_shared_md_inputs(index_copy, status_order, explainer_terms))
         return out
     if page_id.endswith(".html") and page_id != "internal.html" and page_id != "index.html":
         slug = page_id[:-5]
-        nugget_file = None
-        for n in nuggets:
-            if nugget_tag(n) == slug:
-                nugget_file = nugget_filepath(n)
+        seedpod_file = None
+        for n in seedpods:
+            if seedpod_tag(n) == slug:
+                seedpod_file = seedpod_filepath(n)
                 break
-        if nugget_file and nugget_file.exists():
-            out.add(nugget_file)
-            raw = nugget_file.read_text(encoding="utf-8")
+        if seedpod_file and seedpod_file.exists():
+            out.add(seedpod_file)
+            raw = seedpod_file.read_text(encoding="utf-8")
             for name in _image_refs_in_text(raw):
                 if name and ".." not in name and "/" not in name and "\\" not in name:
                     images_dir = CONTENT_DIR / "images"
@@ -224,12 +224,12 @@ def _get_inputs_for_page(page_id, nuggets, index_copy, status_order, explainer_t
             cats_json = CONFIG_DIR / "categories.json"
             if cats_json.exists():
                 out.add(cats_json)
-            sorted_nuggets = sorted(nuggets, key=lambda x: x.get("number", ""))
-            idx = next((i for i, x in enumerate(sorted_nuggets) if nugget_tag(x) == slug), -1)
+            sorted_seedpods = sorted(seedpods, key=lambda x: x.get("number", ""))
+            idx = next((i for i, x in enumerate(sorted_seedpods) if seedpod_tag(x) == slug), -1)
             if idx > 0:
-                out.add(nugget_filepath(sorted_nuggets[idx - 1]))
-            if 0 <= idx < len(sorted_nuggets) - 1:
-                out.add(nugget_filepath(sorted_nuggets[idx + 1]))
+                out.add(seedpod_filepath(sorted_seedpods[idx - 1]))
+            if 0 <= idx < len(sorted_seedpods) - 1:
+                out.add(seedpod_filepath(sorted_seedpods[idx + 1]))
             return out
     if page_id == "internal.html":
         internal_md = INTERNAL_DIR / "page.md"
@@ -246,8 +246,8 @@ def _get_inputs_for_page(page_id, nuggets, index_copy, status_order, explainer_t
                     pass
                 if p.exists():
                     out.add(p)
-        for n in nuggets:
-            out.add(nugget_filepath(n))
+        for n in seedpods:
+            out.add(seedpod_filepath(n))
         out.update(_shared_md_inputs(index_copy, status_order, explainer_terms))
         return out
     md_path = None
@@ -285,8 +285,8 @@ def _get_inputs_for_page(page_id, nuggets, index_copy, status_order, explainer_t
                         refs.add(link_path)
                         to_scan.append(link_path)
         out.update(refs)
-        for n in nuggets:
-            out.add(nugget_filepath(n))
+        for n in seedpods:
+            out.add(seedpod_filepath(n))
         out.update(_shared_md_inputs(index_copy, status_order, explainer_terms))
         return out
     for md_path in collected_md_refs:
@@ -314,8 +314,8 @@ def _get_inputs_for_page(page_id, nuggets, index_copy, status_order, explainer_t
                             refs.add(link_path)
                             to_scan.append(link_path)
             out.update(refs)
-            for n in nuggets:
-                out.add(nugget_filepath(n))
+            for n in seedpods:
+                out.add(seedpod_filepath(n))
             out.update(_shared_md_inputs(index_copy, status_order, explainer_terms))
             break
     return out
@@ -324,7 +324,7 @@ def _get_inputs_for_page(page_id, nuggets, index_copy, status_order, explainer_t
 def get_build_input_files():
     files = set()
     for pattern in ("*.txt", "*.md"):
-        for p in NUGGETS_DIR.glob(pattern):
+        for p in SEEDPODS_DIR.glob(pattern):
             files.add(p)
     for name in ["settings.txt", "status.txt", "site.css", "logo.svg"]:
         p = CONFIG_DIR / name
@@ -363,14 +363,14 @@ def _image_refs_in_text(text):
     return out
 
 
-def _content_files_used_in_build(nuggets, index_copy, collected_md_refs):
-    """Set of content paths that contribute to the built site (nugget .txt, main MD pages, nav/list MD, linked MD)."""
+def _content_files_used_in_build(seedpods, index_copy, collected_md_refs):
+    """Set of content paths that contribute to the built site (seedpod .txt, main MD pages, nav/list MD, linked MD)."""
     used = set()
     for main in _get_md_page_paths():
         if main.exists():
             used.add(main.resolve())
-    for n in nuggets:
-        used.add(nugget_filepath(n).resolve())
+    for n in seedpods:
+        used.add(seedpod_filepath(n).resolve())
     for _href, _label, kind, path in get_nav_items(index_copy):
         if path:
             if kind == "file":
@@ -383,8 +383,8 @@ def _content_files_used_in_build(nuggets, index_copy, collected_md_refs):
     for p in collected_md_refs:
         used.add(Path(p).resolve())
     image_names = set()
-    for n in nuggets:
-        raw = nugget_filepath(n).read_text(encoding="utf-8")
+    for n in seedpods:
+        raw = seedpod_filepath(n).read_text(encoding="utf-8")
         image_names |= _image_refs_in_text(raw)
     for md_path in _get_md_page_paths():
         if md_path.exists():
@@ -401,10 +401,10 @@ def _content_files_used_in_build(nuggets, index_copy, collected_md_refs):
     return used
 
 
-def _warn_content_not_in_docs(nuggets, index_copy, collected_md_refs):
+def _warn_content_not_in_docs(seedpods, index_copy, collected_md_refs):
     """If any file under content/ is not used in the build, record a warning. Does not affect exit code."""
     all_content = {p.resolve() for p in CONTENT_DIR.rglob("*") if p.is_file() and p.name != ".DS_Store"}
-    used = _content_files_used_in_build(nuggets, index_copy, collected_md_refs)
+    used = _content_files_used_in_build(seedpods, index_copy, collected_md_refs)
     missed = sorted(all_content - used, key=lambda p: str(p))
     for p in missed:
         try:
@@ -420,14 +420,14 @@ def _require_status_order():
     return order
 
 
-def build_nugget_index_json(nuggets):
+def build_seedpod_index_json(seedpods):
     """Return JSON object: number -> slug for goto. Includes both display num and zero-padded."""
     index = {}
-    for n in nuggets:
+    for n in seedpods:
         num = n.get("number")
         if not num:
             continue
-        slug = nugget_tag(n)
+        slug = seedpod_tag(n)
         index[num] = slug
         if num.isdigit():
             index[display_number(num)] = slug
@@ -447,14 +447,14 @@ def _layer_text_for_search(text):
         if verb == "image":
             args = [s.strip() for s in content.split(",")]
             return args[1] if len(args) >= 2 else ""
-        if verb == "nugget":
+        if verb == "seedpod":
             m = re.match(r"\d+", content.strip())
-            return "Pod " + display_number(m.group(0)) if m else ""
+            return "SeedPod " + display_number(m.group(0)) if m else ""
         if verb == "link":
             return ""
         return ""
 
-    handlers = {v: _handler for v in ("note", "exercise", "warn", "image", "nugget", "link",
+    handlers = {v: _handler for v in ("note", "exercise", "warn", "image", "seedpod", "link",
                                        "setting", "timestamp")}
     ctx = {"warn": lambda *a, **kw: None, "notes": [], "handlers": handlers}
     stripped, _ = process_directives(text, Path("."), ctx)
@@ -468,15 +468,15 @@ def _layer_text_for_search(text):
     return " ".join(lines).strip()
 
 
-def build_search_index_json(nuggets, nugget_raw_by_slug=None):
-    """Return JSON array of {num, title, slug, content}. If nugget_raw_by_slug given, content = raw file text (same as 4u-ai); else title + subtitle + layers."""
+def build_search_index_json(seedpods, seedpod_raw_by_slug=None):
+    """Return JSON array of {num, title, slug, content}. If seedpod_raw_by_slug given, content = raw file text (same as 4u-ai); else title + subtitle + layers."""
     out = []
-    for n in sorted(nuggets, key=lambda x: (x.get("number", "").zfill(3), x.get("number", ""))):
+    for n in sorted(seedpods, key=lambda x: (x.get("number", "").zfill(3), x.get("number", ""))):
         num = n.get("number", "")
         title = n.get("title", "") or ""
-        slug = nugget_tag(n)
-        if nugget_raw_by_slug is not None:
-            content = (nugget_raw_by_slug.get(slug) or "").replace("\n", " ")
+        slug = seedpod_tag(n)
+        if seedpod_raw_by_slug is not None:
+            content = (seedpod_raw_by_slug.get(slug) or "").replace("\n", " ")
         else:
             parts = [title, n.get("subtitle", "")]
             layers = n.get("layers") or {}
@@ -488,8 +488,8 @@ def build_search_index_json(nuggets, nugget_raw_by_slug=None):
     return json.dumps(out)
 
 
-def _nugget_summary_text(n):
-    """Essential plain text for one nugget: title, subtitle, and main prose without HTML or #-directives."""
+def _seedpod_summary_text(n):
+    """Essential plain text for one seedpod: title, subtitle, and main prose without HTML or #-directives."""
     num = display_number(n.get("number", "?"))
     title = n.get("title", "") or "Untitled"
     subtitle = n.get("subtitle", "") or ""
@@ -501,35 +501,35 @@ def _nugget_summary_text(n):
             s = line.strip()
             if s.startswith("#"):
                 continue
-            lines.append(re.sub(r"@nugget\((\d+)\)", lambda m: "Pod " + display_number(m.group(1)), s))
+            lines.append(re.sub(r"@seedpod\((\d+)\)", lambda m: "SeedPod " + display_number(m.group(1)), s))
         prose = "\n".join(lines).strip()
     else:
         prose = ""
-    block = f"Seed {num}. {title}\n{subtitle}".strip()
+    block = f"SeedPod {num}. {title}\n{subtitle}".strip()
     if prose:
         block += "\n\n" + prose
     return block
 
 
-def _collect_4u_ai_content(nuggets):
-    """Return (internal_docs_str, nugget_raw_by_slug). Internal docs in one string; nugget raw file text keyed by slug."""
+def _collect_4u_ai_content(seedpods):
+    """Return (internal_docs_str, seedpod_raw_by_slug). Internal docs in one string; seedpod raw file text keyed by slug."""
     internal_parts = []
     for p in sorted(INTERNAL_DIR.glob("*.md")):
         internal_parts.append(f"=== content/internal/{p.name} ===\n\n{p.read_text(encoding='utf-8')}")
     internal_str = "\n\n".join(internal_parts)
-    nugget_raw_by_slug = {}
-    for n in sorted(nuggets, key=lambda x: (x.get("number", "").zfill(3), x.get("number", ""))):
-        raw = nugget_filepath(n).read_text(encoding="utf-8")
-        nugget_raw_by_slug[nugget_tag(n)] = raw
-    return internal_str, nugget_raw_by_slug
+    seedpod_raw_by_slug = {}
+    for n in sorted(seedpods, key=lambda x: (x.get("number", "").zfill(3), x.get("number", ""))):
+        raw = seedpod_filepath(n).read_text(encoding="utf-8")
+        seedpod_raw_by_slug[seedpod_tag(n)] = raw
+    return internal_str, seedpod_raw_by_slug
 
 
-def build_4u_ai_txt(internal_str, nuggets, nugget_raw_by_slug):
-    """Write 4u-ai.txt into site_dir from internal docs and a summary of all nuggets (essential text, no HTML)."""
-    parts = [internal_str, "=== Pod summaries ===\n"]
-    for n in sorted(nuggets, key=lambda x: (x.get("number", "").zfill(3), x.get("number", ""))):
-        slug = nugget_tag(n)
-        parts.append(f"--- {slug} ---\n\n{_nugget_summary_text(n)}")
+def build_4u_ai_txt(internal_str, seedpods, seedpod_raw_by_slug):
+    """Write 4u-ai.txt into site_dir from internal docs and a summary of all seedpods (essential text, no HTML)."""
+    parts = [internal_str, "=== SeedPod summaries ===\n"]
+    for n in sorted(seedpods, key=lambda x: (x.get("number", "").zfill(3), x.get("number", ""))):
+        slug = seedpod_tag(n)
+        parts.append(f"--- {slug} ---\n\n{_seedpod_summary_text(n)}")
     (SITE_DIR / "4u-ai.txt").write_text("\n\n".join(parts), encoding="utf-8")
 
 
@@ -574,16 +574,16 @@ def main():
 
     def _warn_cb(msg, filepath=None):
         reporter_warning(msg, path=filepath)
-    nuggets = load_all_nuggets(warn=_warn_cb)
+    seedpods = load_all_seedpods(warn=_warn_cb)
     status_order = _require_status_order()
     explainer_terms = load_explainers_csv(EXPLAINERS_CSV) if EXPLAINERS_CSV.exists() else []
     collected_md_refs = _referenced_md_from_md_pages()
-    all_page_ids = _get_all_page_ids(nuggets, index_copy, collected_md_refs)
+    all_page_ids = _get_all_page_ids(seedpods, index_copy, collected_md_refs)
 
     page_hashes = {}
     page_versions = {}
     for page_id in all_page_ids:
-        inputs = _get_inputs_for_page(page_id, nuggets, index_copy, status_order, explainer_terms, collected_md_refs)
+        inputs = _get_inputs_for_page(page_id, seedpods, index_copy, status_order, explainer_terms, collected_md_refs)
         new_hash = _hash_paths(inputs)
         page_hashes[page_id] = new_hash
         old = state.get("pages", {}).get(page_id, {})
@@ -624,18 +624,18 @@ def main():
     if BUILD_STATE_DIR.exists() and BUILD_STATE_DIR.is_file():
         BUILD_STATE_DIR.unlink()
     BUILD_STATE_DIR.mkdir(parents=True, exist_ok=True)
-    nugget_revisions = {nugget_tag(n): page_versions.get(nugget_tag(n) + ".html", 0) for n in nuggets}
-    set_build_context(warn=_warn_cb, build_time_=BUILD_TIME, build_version_=build_version, nugget_revisions_=nugget_revisions)
-    print(f"Loaded {len(nuggets)} pods")
+    seedpod_revisions = {seedpod_tag(n): page_versions.get(seedpod_tag(n) + ".html", 0) for n in seedpods}
+    set_build_context(warn=_warn_cb, build_time_=BUILD_TIME, build_version_=build_version, seedpod_revisions_=seedpod_revisions)
+    print(f"Loaded {len(seedpods)} seedpods")
 
-    for n in nuggets:
+    for n in seedpods:
         fn = n.get("filename", "?")
         shortname = fn.split("-", 1)[-1] if "-" in fn else None
         for note in n.get("notes", []):
-            reporter_note(note, nugget_num=n.get("number"), shortname=shortname)
+            reporter_note(note, seedpod_num=n.get("number"), shortname=shortname)
     seen_num = {}
     duplicate_nums = []
-    for n in nuggets:
+    for n in seedpods:
         num = n.get("number")
         if num:
             if num in seen_num:
@@ -643,38 +643,38 @@ def main():
             else:
                 seen_num[num] = n.get("filename")
     for num, a, b in duplicate_nums:
-        reporter_error("Duplicate pod number {}: {} and {}".format(num, a, b))
+        reporter_error("Duplicate seedpod number {}: {} and {}".format(num, a, b))
 
     for md_path in _get_md_page_paths():
         if not md_path.exists():
             reporter_error("Required file missing", path=md_path)
-    for n in nuggets:
+    for n in seedpods:
         s = n.get("status", "empty")
         if s not in status_order:
             fn = n.get("filename") or ""
             shortname = fn.split("-", 1)[-1] if "-" in fn else None
-            reporter_error("status {!r} not in config/status.txt".format(s), nugget_num=n.get("number"), shortname=shortname)
+            reporter_error("status {!r} not in config/status.txt".format(s), seedpod_num=n.get("number"), shortname=shortname)
 
     link_errors = []
     built_count = 0
-    for n in nuggets:
-        fname = nugget_tag(n) + ".html"
+    for n in seedpods:
+        fname = seedpod_tag(n) + ".html"
         if fname in changed_set:
             set_build_context(page_version_=page_versions[fname], changed_in_build_=page_changed_in_builds[fname], changed_time_=page_changed_times[fname])
-            (SITE_DIR / fname).write_text(build_nugget(n, nuggets, link_errors, site_dir=SITE_DIR), encoding="utf-8")
+            (SITE_DIR / fname).write_text(build_seedpod(n, seedpods, link_errors, site_dir=SITE_DIR), encoding="utf-8")
             built_count += 1
             if verbose:
                 print(f"  Built {fname}")
             _append_history(fname, build_version, page_versions[fname], RELEASE_VERSION, changed_in_build=page_changed_in_builds[fname])
 
-    internal_str, nugget_raw_by_slug = _collect_4u_ai_content(nuggets)
-    if changed_set or not (SITE_DIR / "nugget-index.json").exists():
-        (SITE_DIR / "nugget-index.json").write_text(build_nugget_index_json(nuggets), encoding="utf-8")
-        (SITE_DIR / "search-index.json").write_text(build_search_index_json(nuggets), encoding="utf-8")
+    internal_str, seedpod_raw_by_slug = _collect_4u_ai_content(seedpods)
+    if changed_set or not (SITE_DIR / "seedpod-index.json").exists():
+        (SITE_DIR / "seedpod-index.json").write_text(build_seedpod_index_json(seedpods), encoding="utf-8")
+        (SITE_DIR / "search-index.json").write_text(build_search_index_json(seedpods), encoding="utf-8")
         (SITE_DIR / "seed-nav.js").write_text(nav_seed_script_content(), encoding="utf-8")
         built_count += 3
         if verbose:
-            print("  Built nugget-index.json, search-index.json, seed-nav.js")
+            print("  Built seedpod-index.json, search-index.json, seed-nav.js")
 
     css_src = CONFIG_DIR / "site.css"
     css_dst = SITE_DIR / "site.css"
@@ -701,7 +701,7 @@ def main():
             if href in changed_set:
                 set_build_context(page_version_=page_versions[href], changed_in_build_=page_changed_in_builds[href], changed_time_=page_changed_times[href])
                 (SITE_DIR / href).write_text(
-                    build_md_file_page(path, nuggets, collected_md_refs, status_order, index_copy, explainer_terms, link_errors, wrap_class="wrap--full" if href == "map.html" else ""),
+                    build_md_file_page(path, seedpods, collected_md_refs, status_order, index_copy, explainer_terms, link_errors, wrap_class="wrap--full" if href == "map.html" else ""),
                     encoding="utf-8",
                 )
                 built_count += 1
@@ -712,7 +712,7 @@ def main():
             nav_built_paths.add((path / "page.md").resolve())
             if href in changed_set:
                 set_build_context(page_version_=page_versions[href], changed_in_build_=page_changed_in_builds[href], changed_time_=page_changed_times[href])
-                (SITE_DIR / href).write_text(build_md_dir_page(path, nuggets, collected_md_refs, status_order, explainer_terms, link_errors), encoding="utf-8")
+                (SITE_DIR / href).write_text(build_md_dir_page(path, seedpods, collected_md_refs, status_order, explainer_terms, link_errors), encoding="utf-8")
                 built_count += 1
                 if verbose:
                     print(f"  Built {href}")
@@ -722,7 +722,7 @@ def main():
         if list_path and list_path.resolve() not in nav_built_paths and list_href in changed_set:
             set_build_context(page_version_=page_versions[list_href], changed_in_build_=page_changed_in_builds[list_href], changed_time_=page_changed_times[list_href])
             (SITE_DIR / list_href).write_text(
-                build_md_file_page(list_path, nuggets, collected_md_refs, status_order, index_copy, explainer_terms, link_errors, wrap_class="wrap--full" if list_href == "map.html" else ""),
+                build_md_file_page(list_path, seedpods, collected_md_refs, status_order, index_copy, explainer_terms, link_errors, wrap_class="wrap--full" if list_href == "map.html" else ""),
                 encoding="utf-8",
             )
             built_count += 1
@@ -732,7 +732,7 @@ def main():
 
     if "internal.html" in changed_set:
         set_build_context(page_version_=page_versions["internal.html"], changed_in_build_=page_changed_in_builds["internal.html"], changed_time_=page_changed_times["internal.html"])
-        (SITE_DIR / "internal.html").write_text(build_internal_page(nuggets, collected_md_refs, link_errors), encoding="utf-8")
+        (SITE_DIR / "internal.html").write_text(build_internal_page(seedpods, collected_md_refs, link_errors), encoding="utf-8")
         built_count += 1
         if verbose:
             print("  Built internal.html")
@@ -748,8 +748,8 @@ def main():
         out_name = content_path_to_output_name(md_path, CONTENT_DIR)
         if out_name and out_name in changed_set:
             set_build_context(page_version_=page_versions[out_name], changed_in_build_=page_changed_in_builds[out_name], changed_time_=page_changed_times[out_name])
-            body_html = process_md_to_html(md_path, _md_context_with_special(nuggets, status_order, explainer_terms, link_errors=link_errors), collected_md_refs)
-            title = md_path.stem.replace("nugget", "pod").replace("-", " ").title()
+            body_html = process_md_to_html(md_path, _md_context_with_special(seedpods, status_order, explainer_terms, link_errors=link_errors), collected_md_refs)
+            title = md_path.stem.replace("seedpod", "seedpod").replace("-", " ").title()
             (SITE_DIR / out_name).write_text(build_static_page(title, body_html), encoding="utf-8")
             built_count += 1
             if verbose:
@@ -765,7 +765,7 @@ def main():
             p.unlink()
     if "index.html" in changed_set:
         set_build_context(page_version_=page_versions["index.html"], changed_in_build_=page_changed_in_builds["index.html"], changed_time_=page_changed_times["index.html"])
-        (SITE_DIR / "index.html").write_text(build_index(nuggets, index_copy, status_order, collected_md_refs, link_errors), encoding="utf-8")
+        (SITE_DIR / "index.html").write_text(build_index(seedpods, index_copy, status_order, collected_md_refs, link_errors), encoding="utf-8")
         built_count += 1
         if verbose:
             print("  Built index.html")
@@ -777,13 +777,13 @@ def main():
             print("  Built favicon.svg")
 
     if changed_set or not (SITE_DIR / "map.svg").exists():
-        (SITE_DIR / "map.svg").write_text(build_graph_svg(nuggets, show_title=False, link_nuggets=True, node_radius=40), encoding="utf-8")
+        (SITE_DIR / "map.svg").write_text(build_graph_svg(seedpods, show_title=False, link_seedpods=True, node_radius=40), encoding="utf-8")
         built_count += 1
         if verbose:
             print("  Built map.svg")
 
     if changed_set or not (SITE_DIR / "4u-ai.txt").exists():
-        build_4u_ai_txt(internal_str, nuggets, nugget_raw_by_slug)
+        build_4u_ai_txt(internal_str, seedpods, seedpod_raw_by_slug)
         built_count += 1
         if verbose:
             print("  Built 4u-ai.txt")
@@ -793,7 +793,7 @@ def main():
     state["pages"] = {pid: {"hash": page_hashes[pid], "page_version": page_versions[pid], "changed_in_build": page_changed_in_builds[pid], "changed_time": page_changed_times[pid].isoformat()} for pid in all_page_ids}
     STATE_FILE.write_text(json.dumps(state, indent=2), encoding="utf-8")
 
-    _warn_content_not_in_docs(nuggets, index_copy, collected_md_refs)
+    _warn_content_not_in_docs(seedpods, index_copy, collected_md_refs)
 
     if not content_changed_set:
         print("Nothing changed.")

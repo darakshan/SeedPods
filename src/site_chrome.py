@@ -7,7 +7,7 @@ import html as _html
 import re
 import sys
 
-from nugget_parser import CONTENT_DIR, load_index_copy
+from seedpod_parser import CONTENT_DIR, load_index_copy
 from site_paths import parse_list_menu
 
 _warn_callback = lambda msg, filepath=None: print(msg, file=sys.stderr)
@@ -16,11 +16,11 @@ build_version = 0
 page_version = 0
 changed_in_build = 0
 changed_time = None
-nugget_revisions = {}
+seedpod_revisions = {}
 
 
-def set_build_context(*, warn=None, build_time_=None, build_version_=None, page_version_=None, changed_in_build_=None, changed_time_=None, nugget_revisions_=None):
-    global _warn_callback, build_time, build_version, page_version, changed_in_build, changed_time, nugget_revisions
+def set_build_context(*, warn=None, build_time_=None, build_version_=None, page_version_=None, changed_in_build_=None, changed_time_=None, seedpod_revisions_=None):
+    global _warn_callback, build_time, build_version, page_version, changed_in_build, changed_time, seedpod_revisions
     if warn is not None:
         _warn_callback = warn
     if build_time_ is not None:
@@ -33,8 +33,8 @@ def set_build_context(*, warn=None, build_time_=None, build_version_=None, page_
         changed_in_build = changed_in_build_
     if changed_time_ is not None:
         changed_time = changed_time_
-    if nugget_revisions_ is not None:
-        nugget_revisions = nugget_revisions_
+    if seedpod_revisions_ is not None:
+        seedpod_revisions = seedpod_revisions_
 
 
 def _warn(msg, filepath=None):
@@ -125,7 +125,7 @@ def _more_page_label(key):
     return "Index" if key == "tags" else key.replace("-", " ").title()
 
 
-def nav(from_d=False, from_nuggets=False, layer_tabs_html=None):
+def nav(from_d=False, from_seedpods=False, layer_tabs_html=None):
     """Top nav: logo left; then Search, Go+input; then menu items from config (About, Lists, More)."""
     prefix, index_href, logo_src = "", "index.html", "logo.svg"
     list_menu_items = get_list_menu_items(load_index_copy())
@@ -146,12 +146,12 @@ def nav(from_d=False, from_nuggets=False, layer_tabs_html=None):
                 nav_item_parts.append(f'<li class="nav-link-item"><a href="{prefix}list.html" class="nav-btn">{_html.escape(label)}</a></li>')
         else:
             nav_item_parts.append(f'<li class="nav-link-item"><a href="{prefix}{href}" class="nav-btn">{_html.escape(label)}</a></li>')
-    search_li = '<li><button type="button" class="nav-search-btn nav-btn" aria-label="Search pods" onclick="seedNavOpenSearch();return false">Search</button></li>'
+    search_li = '<li><button type="button" class="nav-search-btn nav-btn" aria-label="Search seedpods" onclick="seedNavOpenSearch();return false">Search</button></li>'
     goto_li = (
         '<li class="nav-goto-wrap">'
-        '<label for="nav-goto-num" class="sr-only">Goto pod</label>'
+        '<label for="nav-goto-num" class="sr-only">Goto seedpod</label>'
         '<input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" onkeydown="if(event.key===\'Enter\'){event.preventDefault();seedNavGoFromInput(this);}">'
-        '<button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo(this);return false">Go</button>'
+        '<button type="button" class="nav-goto-btn nav-btn" aria-label="Go to seedpod" onclick="seedNavGo(this);return false">Go</button>'
         '</li>'
     )
     center_links = search_li + goto_li
@@ -237,7 +237,7 @@ NAV_LISTS_DROPDOWN_SCRIPT = """
 """
 
 SEARCH_DIALOG_HTML = """
-<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search pods" hidden>
+<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search seedpods" hidden>
   <div class="search-dialog-overlay" onclick="seedNavCloseSearch()"></div>
   <div class="search-dialog-inner">
     <div class="search-dialog-header">
@@ -284,7 +284,7 @@ window.seedNavToggleMenu=function(){
   if(p)p.style.display=open?"none":"flex";
 };
 window.seedNavGo=function(btn){var w=btn&&btn.closest?btn.closest(".nav-goto-wrap"):null;var i=w?w.querySelector(".nav-goto-input"):null;window.seedNavGoFromInput(i);};
-window.seedNavGoFromInput=function(input){if(!input)return;var v=(input.value||"").trim();if(!v)return;var p=window._seedNavIndexPromise||(window._seedNavIndexPromise=fetch("nugget-index.json").then(function(r){return r.json();}));p.then(function(idx){var s=idx[v]||idx[v.replace(/^0+/,"")]||(v.length<=3?idx[v.padStart(3,"0")]:null);if(s)window.location.href=s+".html";});};
+window.seedNavGoFromInput=function(input){if(!input)return;var v=(input.value||"").trim();if(!v)return;var p=window._seedNavIndexPromise||(window._seedNavIndexPromise=fetch("seedpod-index.json").then(function(r){return r.json();}));p.then(function(idx){var s=idx[v]||idx[v.replace(/^0+/,"")]||(v.length<=3?idx[v.padStart(3,"0")]:null);if(s)window.location.href=s+".html";});};
 window.seedNavOpenSearch=function(){var n=document.querySelector("nav");if(n&&n.classList.contains("nav-hamburger-open"))window.seedNavToggleMenu();var d=document.getElementById("search-dialog");var i=document.getElementById("search-dialog-input");if(d)d.removeAttribute("hidden");if(i){i.value="";i.focus();}window.seedNavRunSearch("");};
 window.seedNavCloseSearch=function(){var d=document.getElementById("search-dialog");if(d)d.setAttribute("hidden","");};
 window._seedNavSearchIndex=null;
@@ -305,7 +305,7 @@ window.seedNavRunSearch=function(q){
   var h="";
   if(nm.length){h+='<div class="search-section"><div class="search-section-title">Name</div><ul class="search-result-list">';nm.forEach(function(it){var d=document.createElement("div");d.textContent=it.num+". "+it.title;h+='<li><a href="'+it.slug+'.html">'+d.innerHTML+'</a></li>';});h+="</ul></div>";}
   if(cm.length){h+='<div class="search-section"><div class="search-section-title">Content</div><ul class="search-result-list">';cm.forEach(function(it){var titleDiv=document.createElement("div");titleDiv.textContent=it.num+". "+it.title;var snip=window._seedNavSnippet(it.content,q);var snipDiv=document.createElement("div");snipDiv.textContent=snip;h+='<li><a href="'+it.slug+'.html">'+titleDiv.innerHTML+'<br><span class="search-result-snippet">'+snipDiv.innerHTML+'</span></a></li>';});h+="</ul></div>";}
-  if(!h&&q)h='<p class="search-no-results">No pods match.</p>';
+  if(!h&&q)h='<p class="search-no-results">No seedpods match.</p>';
   el.innerHTML=h;
 };
 window.seedNavShowVersion=function(show){var el=document.querySelector(".page-end-version");if(el)el.classList.toggle("page-end-version-visible",!!show);};
