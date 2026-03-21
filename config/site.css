@@ -227,6 +227,13 @@ td a:hover{color:var(--accent)}
 .related-card-prelim{border-color:var(--line)}
 .related-card-prelim:hover{border-color:var(--warm)}
 .related-title{font-size:.95rem;font-weight:300}
+.inbound-refs{margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--line);display:flex;align-items:baseline;gap:.75rem;flex-wrap:wrap}
+.inbound-label{font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);flex-shrink:0}
+.inbound-links{display:flex;gap:.5rem;flex-wrap:wrap}
+.inbound-link{font-family:'DM Mono',monospace;font-size:.75rem;color:var(--warm);padding:.1rem .3rem;border-radius:2px}
+.inbound-link:hover{color:var(--accent)}
+.inbound-link.cat-colored{background:var(--cat-bg);color:var(--ink)}
+.inbound-link.cat-colored:hover{color:var(--accent)}
 .placeholder{font-style:italic}
 .proto-notice{margin-bottom:1.5rem;padding-left:1rem;border-left:3px solid var(--line);font-size:.95rem}
 .proto-notice .dim{font-style:italic}

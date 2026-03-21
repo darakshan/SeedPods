@@ -98,6 +98,29 @@ def build_nugget(n, all_nuggets, link_errors=None, site_dir=None):
       </a>"""
         related_cards_html = f'<div class="related-grid">{cards}\n      </div>'
 
+    inbound_nuggets = sorted(
+        [m for m in all_nuggets if num in m.get("related", [])],
+        key=lambda x: x.get("number", ""),
+    )
+    inbound_html = ""
+    if inbound_nuggets:
+        def _inbound_link(m):
+            mfile = nugget_tag(m) + ".html"
+            mnum = display_number(m.get("number", ""))
+            mtitle = _html.escape(m.get("title", ""))
+            mcat = m.get("category", "")
+            cls = "inbound-link"
+            if mcat and mcat in _category_colors:
+                cls += f" cat-colored {category_css_slug(mcat)}"
+            return f'<a href="{mfile}" class="{cls}" title="{mtitle}">{mnum}</a>'
+
+        links = "".join(_inbound_link(m) for m in inbound_nuggets)
+        count = len(inbound_nuggets)
+        label = f'{count} inbound reference' + ('' if count == 1 else 's')
+        inbound_html = f'<div class="inbound-refs"><span class="inbound-label">{label}</span><span class="inbound-links">{links}</span></div>'
+
+    show_related_section = bool(rel_nuggets or inbound_nuggets)
+
     surface_html = _layer_prose_to_html(layers.get("surface", "TBD"), all_nuggets, link_context)
     is_proto = status == "proto"
     is_rough = status == "rough"
@@ -140,11 +163,14 @@ def build_nugget(n, all_nuggets, link_errors=None, site_dir=None):
                     href = f'bibliography.html#{_html.escape(keyword)}'
                     parts.append(f'<p class="ref-entry"><a href="{href}">{first}</a>{rest}</p>')
                 parts.append("</div>")
-            if rel_nuggets:
+            if show_related_section:
                 parts.append('<div class="related-section">')
                 if prov_html or refs_list:
                     parts.append('<h3 class="layer-heading related-label">Related seeds</h3>')
-                parts.append(related_cards_html)
+                if related_cards_html:
+                    parts.append(related_cards_html)
+                if inbound_html:
+                    parts.append(inbound_html)
                 parts.append("</div>")
             return "\n    ".join(parts)
         if layer_id == "surface":
@@ -183,10 +209,12 @@ def build_nugget(n, all_nuggets, link_errors=None, site_dir=None):
             section_content = f'<div class="prose">{body}</div>'
         else:
             section_content = f'<h2 class="layer-heading">{label}</h2>\n    <div class="prose">{body}</div>'
-        if layer_id == "surface" and rel_nuggets and not refs_section_shown:
-            section_content += f'\n    <div class="related-section"><h3 class="layer-heading related-label">Related seeds</h3>\n      {related_cards_html}\n    </div>'
-        if layer_id == "brief" and is_proto and rel_nuggets and not refs_section_shown:
-            section_content += f'\n    <div class="related-section"><h3 class="layer-heading related-label">Related seeds</h3>\n      {related_cards_html}\n    </div>'
+        if layer_id == "surface" and show_related_section and not refs_section_shown:
+            inner = (f'\n      {related_cards_html}' if related_cards_html else "") + (f'\n      {inbound_html}' if inbound_html else "")
+            section_content += f'\n    <div class="related-section"><h3 class="layer-heading related-label">Related seeds</h3>{inner}\n    </div>'
+        if layer_id == "brief" and is_proto and show_related_section and not refs_section_shown:
+            inner = (f'\n      {related_cards_html}' if related_cards_html else "") + (f'\n      {inbound_html}' if inbound_html else "")
+            section_content += f'\n    <div class="related-section"><h3 class="layer-heading related-label">Related seeds</h3>{inner}\n    </div>'
         sections_parts.append(f'  <section id="{layer_id}" class="layer-section">\n    {section_content}\n  </section>')
 
     tabs_html = "\n      ".join(tabs_parts)
