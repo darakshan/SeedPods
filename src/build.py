@@ -434,6 +434,40 @@ def build_nugget_index_json(nuggets):
     return json.dumps(index)
 
 
+def _layer_text_for_search(text):
+    """Return plain searchable text from layer content: directives stripped/flattened, markdown headers de-hashed."""
+    if not text:
+        return ""
+
+    def _handler(verb, content, _ctx):
+        if verb == "note":
+            return ""
+        if verb in ("exercise", "warn"):
+            return content
+        if verb == "image":
+            args = [s.strip() for s in content.split(",")]
+            return args[1] if len(args) >= 2 else ""
+        if verb == "nugget":
+            m = re.match(r"\d+", content.strip())
+            return "Pod " + display_number(m.group(0)) if m else ""
+        if verb == "link":
+            return ""
+        return ""
+
+    handlers = {v: _handler for v in ("note", "exercise", "warn", "image", "nugget", "link",
+                                       "setting", "timestamp")}
+    ctx = {"warn": lambda *a, **kw: None, "notes": [], "handlers": handlers}
+    stripped, _ = process_directives(text, Path("."), ctx)
+
+    lines = []
+    for line in stripped.splitlines():
+        s = line.lstrip()
+        if s.startswith("#"):
+            s = re.sub(r"^#+\s*", "", s)
+        lines.append(s)
+    return " ".join(lines).strip()
+
+
 def build_search_index_json(nuggets, nugget_raw_by_slug=None):
     """Return JSON array of {num, title, slug, content}. If nugget_raw_by_slug given, content = raw file text (same as 4u-ai); else title + subtitle + layers."""
     out = []
@@ -448,7 +482,7 @@ def build_search_index_json(nuggets, nugget_raw_by_slug=None):
             layers = n.get("layers") or {}
             for key in ("surface", "depth", "brief", "provenance", "script", "images"):
                 if key in layers and layers[key]:
-                    parts.append(layers[key])
+                    parts.append(_layer_text_for_search(layers[key]))
             content = " ".join(parts).replace("\n", " ")
         out.append({"num": display_number(num), "title": title, "slug": slug, "content": content})
     return json.dumps(out)
@@ -636,7 +670,7 @@ def main():
     internal_str, nugget_raw_by_slug = _collect_4u_ai_content(nuggets)
     if changed_set or not (SITE_DIR / "nugget-index.json").exists():
         (SITE_DIR / "nugget-index.json").write_text(build_nugget_index_json(nuggets), encoding="utf-8")
-        (SITE_DIR / "search-index.json").write_text(build_search_index_json(nuggets, nugget_raw_by_slug), encoding="utf-8")
+        (SITE_DIR / "search-index.json").write_text(build_search_index_json(nuggets), encoding="utf-8")
         (SITE_DIR / "seed-nav.js").write_text(nav_seed_script_content(), encoding="utf-8")
         built_count += 3
         if verbose:
