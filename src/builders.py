@@ -405,7 +405,7 @@ def build_internal_page(nuggets=None, collected_md_refs=None, link_errors=None):
 
 
 def build_bibliography_body(nuggets):
-    """Bibliography table HTML from #ref in #provenance. For @bibliography directive."""
+    """Bibliography table HTML from @ref(...) directives in nugget layers. For @bibliography directive."""
     by_keyword = {}
     for n in nuggets:
         tag = nugget_tag(n)

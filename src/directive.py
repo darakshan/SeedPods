@@ -13,7 +13,7 @@ from pathlib import Path
 
 KNOWN_VERBS = {
     "include", "samples", "nuggets", "pods", "categories", "glossary", "bibliography", "index", "map",
-    "timestamp", "link", "note", "exercise", "nugget", "image", "setting", "warn",
+    "timestamp", "link", "note", "exercise", "nugget", "image", "setting", "warn", "ref",
 }
 
 _ROOT = Path(__file__).resolve().parent.parent
@@ -21,10 +21,23 @@ _IMAGE_EXTS = (".jpg", ".jpeg", ".png", ".webp", ".gif")
 
 
 def split_directive_args(content):
-    """Split directive content by comma; return list of stripped segments. Use for multi-arg directives."""
+    """Split directive content by comma; supports double-quoted segments to allow commas within arguments.
+    Returns list of stripped segments."""
     if not (content or "").strip():
         return []
-    return [s.strip() for s in content.split(",")]
+    args = []
+    current = []
+    in_quotes = False
+    for ch in content:
+        if ch == '"':
+            in_quotes = not in_quotes
+        elif ch == ',' and not in_quotes:
+            args.append(''.join(current).strip())
+            current = []
+        else:
+            current.append(ch)
+    args.append(''.join(current).strip())
+    return args
 
 
 def image_directive_handler(verb, content, context):

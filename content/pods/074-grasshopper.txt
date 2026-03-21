@@ -3,6 +3,10 @@
 #status draft1
 #date 2026-03-19
 #category knowledge
+#term play: As used in this pod: the frame-free, will-suspended mode of activity in which no external criterion of success applies. Distinguished from competitive games and organized sport (where the will is fully engaged), from exploration (goal-directed search within a frame), and from rest (recovery in service of further work).
+#term explore-exploit tradeoff: The tension in any adaptive system between using known strategies (exploiting) and searching for better ones (exploring). Both are still goal-directed; neither is equivalent to play in the sense this pod develops.
+#term temperature (AI): A parameter in generative AI systems controlling how broadly the model samples from its probability distribution. Higher temperature produces more varied, less predictable output — a mechanical approximation of wandering whose relationship to genuine play remains an open question.
+#term will-suspension: The state in which goal-directed effort is genuinely set aside, not redirected. Proposed here as the distinguishing feature of play, and as the mode that directed exploration cannot substitute for.
 #related 001, 026, 027
 
 #surface
@@ -16,7 +20,7 @@ Not failing to be an ant. Something that requires the will to step back — to s
 
 That state turns out to be one the brain needs, at any age, to do certain things that directed effort cannot reach.
 
-Richard Feynman — one of the great physicists of the twentieth century — was also a bongo drummer. Not as a creative exercise, not to cross-pollinate ideas across domains. He drummed because drumming was completely other. A place where he was not Feynman the Nobel laureate, not building toward anything, not even particularly accomplished. The value wasn't what drumming gave to physics. The value was the existence of a space where his will was genuinely offline.
+Richard Feynman@ref(feynman1985, "Feynman, Richard P. Surely You're Joking, Mr. Feynman! W. W. Norton, 1985. The drumming as genuinely other domain — not creative cross-pollination but will-suspension in a separate space.") — one of the great physicists of the twentieth century — was also a bongo drummer. Not as a creative exercise, not to cross-pollinate ideas across domains. He drummed because drumming was completely other. A place where he was not Feynman the Nobel laureate, not building toward anything, not even particularly accomplished. The value wasn't what drumming gave to physics. The value was the existence of a space where his will was genuinely offline.
 
 And it isn't only solitary. Every year tens of thousands of adults travel to the Nevada desert to build a temporary city with no commerce, no spectators, and no fixed program. They make absurd things. They encounter strangers outside the normal categories of society, let alone work. Burning Man is, among other things, a collective attempt to create a space where the productive frame is genuinely suspended — where the grasshopper mode is not just permitted but is the whole point.
 
@@ -105,17 +109,7 @@ mathematical: the function moves into the imaginary axis. Grasshopper play is
 cognitive/experiential: the will moves off the axis of goal-direction.
 
 The same word — play — may be pointing at the same deep structure in three
-different domains.
-
-#term play: As used in this pod: the frame-free, will-suspended mode of activity in which no external criterion of success applies. Distinguished from competitive games and organized sport (where the will is fully engaged), from exploration (goal-directed search within a frame), and from rest (recovery in service of further work).
-#term explore-exploit tradeoff: The tension in any adaptive system between using known strategies (exploiting) and searching for better ones (exploring). Both are still goal-directed; neither is equivalent to play in the sense this pod develops.
-#term temperature (AI): A parameter in generative AI systems controlling how broadly the model samples from its probability distribution. Higher temperature produces more varied, less predictable output — a mechanical approximation of wandering whose relationship to genuine play remains an open question.
-#term will-suspension: The state in which goal-directed effort is genuinely set aside, not redirected. Proposed here as the distinguishing feature of play, and as the mode that directed exploration cannot substitute for.
-
-#provenance
-#ref feynman1985 Feynman, Richard P. Surely You're Joking, Mr. Feynman! W. W. Norton, 1985. The drumming as genuinely other domain — not creative cross-pollination but will-suspension in a separate space.
-#ref aesop Aesop. The Ant and the Grasshopper. Traditional fable, ca. 6th century BCE. The cultural compression the pod argues encodes a framework too small for what it's trying to describe.
-#ref sutton2018 Sutton, Richard S., and Andrew G. Barto. Reinforcement Learning: An Introduction. 2nd ed. MIT Press, 2018. The explore/exploit framing — useful precisely as the contrast case, since both poles remain goal-directed.
+different domains.@ref(aesop, "Aesop. The Ant and the Grasshopper. Traditional fable, ca. 6th century BCE. The cultural compression the pod argues encodes a framework too small for what it's trying to describe.")@note(Aesop not mentioned by name in text — cited as the source of the ant-and-grasshopper fable.)@ref(sutton2018, "Sutton, Richard S., and Andrew G. Barto. Reinforcement Learning: An Introduction. 2nd ed. MIT Press, 2018. The explore/exploit framing — useful precisely as the contrast case, since both poles remain goal-directed.")@note(Sutton not mentioned by name in text — cited for the explore/exploit framing as the contrast case.)
 
 #script
 OPEN ON: A child in a summer field. Not doing anything in particular. Watching an insect. Following it a few steps. Losing interest. Lying back. The sky is very large.

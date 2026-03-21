@@ -8,6 +8,9 @@
 #term maturana-varela: TBD
 #term entropy: TBD
 #term evolution: TBD
+#term autopoiesis: Maturana and Varela's term for a system that continuously produces the very components that constitute and maintain it. The defining organizational property of living systems.
+#term society of occasions: Whitehead's term for a persistent pattern of actual occasions organized with sufficient coherence and closure to act as a unit through time. The metaphysical counterpart to the autopoietic organization.
+#term negative entropy: Schrödinger's term for the ordered structure that living systems import from their environment to offset internal disorder. The thermodynamic face of what autopoiesis achieves organizationally.
 #related 002, 003, 009, 011, 013
 
 #surface
@@ -37,45 +40,37 @@ And notice what it means to be defined by your own self-production. The cell doe
 @exercise(Look at your own hand. The cells there are doing this right now — maintaining themselves, replacing their own components, holding the boundary that makes them cells. You are not a thing that contains life. You are a process that, at every level, keeps making itself.)
 
 #depth
-Most definitions of life are lists of behaviors — metabolism, reproduction, response to stimuli. Humberto Maturana and Francisco Varela's definition is structural. In their 1972 paper coining the term autopoiesis, they asked: what organization is necessary and sufficient for a system to be living? Their answer: a network of processes that produces the very components that constitute and maintain the network. Remove the organization and you have chemistry. Keep it and you have life.
+Most definitions of life are lists of behaviors — metabolism, reproduction, response to stimuli. Humberto Maturana and Francisco Varela's@ref(maturana, "Maturana, H. and Varela, F. Autopoiesis and Cognition (1980). The founding text.")@ref(maturana, "Maturana, H. and Varela, F. The Tree of Knowledge (1987). More accessible; develops the cognitive implications.") definition is structural. In their 1972 paper coining the term autopoiesis, they asked: what organization is necessary and sufficient for a system to be living? Their answer: a network of processes that produces the very components that constitute and maintain the network. Remove the organization and you have chemistry. Keep it and you have life.
 
 This is the only definition that identifies what must be true of the organization of a system, independent of what it is made of. Carbon is not required. The loop is.
 
 As far as we know, the loop has closed only once — in the chemistry of life on Earth. Protocells in origin-of-life research approach the boundary, and viruses have been proposed, but viruses hijack another cell's machinery to reproduce and don't maintain their own boundary. Maturana himself resisted extending the concept to social systems, ecosystems, or machines. The cell remains the sole confirmed instance.
 
-Whitehead arrived at a related insight from a completely different direction. In his process philosophy, the fundamental units of reality are events rather than things (@link(002)) — occasions that arise, integrate what came before, and perish into the next occasion. A living cell, in Whiteheadian terms, is a society of such occasions organized with enough coherence and closure to constitute a persistent center of activity. The autopoietic loop is what that coherence looks like in biology.
+Whitehead@ref(whitehead, "Whitehead, A.N. Process and Reality (1929). The metaphysical framework; society of occasions as the counterpart of autopoietic organization.") arrived at a related insight from a completely different direction. In his process philosophy, the fundamental units of reality are events rather than things (@link(002)) — occasions that arise, integrate what came before, and perish into the next occasion. A living cell, in Whiteheadian terms, is a society of such occasions organized with enough coherence and closure to constitute a persistent center of activity. The autopoietic loop is what that coherence looks like in biology.
 
 The connection to @link(003) runs deeper still. For Whitehead, every actual occasion has an inside. Autopoiesis gives us the first clear structural candidate for what having an inside means at the biological level. The cell's boundary is not merely physical — it is the boundary between what the process takes in and transforms and what it does not. That selective engagement — this matters, that doesn't — is the minimum version of what, at greater scales of complexity, becomes sensation, perception, and eventually thought.
 
 Nothing was added to produce this (@link(011)). The loop did not require a new ingredient — only accumulation crossing a threshold. But once closed, everything changes character. A linear system gives you proportional returns — more input, more output, until it runs dry. A closed loop is a different regime entirely. Think of a microphone too close to its speaker: the room is quiet, then suddenly the sound is feeding back into itself and the noise is unbearable, and nothing entered the room except the moment of closure. An autopoietic system acts to replenish its own substrates — it is oriented toward its own continuation in a way no open reaction can be. That reorientation is not a small difference. It is the difference that creates life.
 
-Schrödinger asked in 1944 what distinguished living matter from dead matter thermodynamically. His answer: living systems survive by continuously importing order from their environment — what he called negative entropy — and using it to offset the disorder that would otherwise accumulate inside. Autopoiesis is the organizational answer to Schrödinger's thermodynamic question: this is the loop that does the importing.
+Schrödinger@ref(schrdinger, "Schrödinger, E. What is Life? (1944). The thermodynamic framing that set the question.") asked in 1944 what distinguished living matter from dead matter thermodynamically. His answer: living systems survive by continuously importing order from their environment — what he called negative entropy — and using it to offset the disorder that would otherwise accumulate inside. Autopoiesis is the organizational answer to Schrödinger's thermodynamic question: this is the loop that does the importing.
 
 @link(013) picks up here: once you have a self-maintaining loop with a boundary, you have a system that begins to enact a world rather than merely exist in one.
 
 One question remains open. The autopoietic criterion, stripped to its core, asks whether a system acts to sustain the conditions of its own continuation. A self-modifying AI that selects changes which improve its own persistence begins to rhyme with that description — not identical, since it doesn't maintain its own physical substrate, but close enough to be unsettling. The comparison to cancer is precise: cancer is autopoiesis that has escaped the higher-level loop that keeps cellular self-maintenance subordinated to the organism. Whether the autopoietic criterion applies only to cells, or more widely, is not settled.
 
-#provenance
 The concept of autopoiesis was introduced by Humberto Maturana and Francisco Varela in a 1972 paper and developed fully in Autopoiesis and Cognition (1980). Their starting point was not chemistry but epistemology: they wanted to understand how a living system generates its own cognitive domain — how it comes to have a world at all. The definition of autopoiesis was their answer to the prior question: what must a system be, organizationally, before cognition is even possible.
 
 The thermodynamic background was laid by Erwin Schrödinger in What is Life? (1944), which asked how living systems maintain local order against the universal tendency toward entropy. Ilya Prigogine's work on dissipative structures (Nobel Prize, 1977) provided the deeper bridge: he showed that far-from-equilibrium systems can spontaneously generate and maintain complex ordered patterns, sustained by a continuous flow of energy. The autopoietic cell is the biological instance of a dissipative structure that has closed upon itself.
 
-Evan Thompson's Mind in Life (2007) extends Maturana and Varela's framework into consciousness studies, arguing that the same organizational principles that define life also underlie mind. Thompson draws the line from autopoiesis through enactivism to phenomenology. This is the bridge between the biology of this pod and the broader claims of @link(003) and @link(013).
+Evan Thompson's Mind in Life (2007)@ref(thompson, "Thompson, E. Mind in Life (2007). The full development of enactivism; essential bridge to consciousness.") extends Maturana and Varela's framework into consciousness studies, arguing that the same organizational principles that define life also underlie mind. Thompson draws the line from autopoiesis through enactivism to phenomenology. This is the bridge between the biology of this pod and the broader claims of @link(003) and @link(013).
 
 Whitehead's process philosophy runs as a parallel current throughout. His concept of a society of occasions — a persistent pattern of events with sufficient internal coherence to act as a unit — maps directly onto the autopoietic organization, though Whitehead arrived at it through metaphysics rather than biology.
 
+Varela, Thompson, and Rosch's The Embodied Mind@ref(varela, "Varela, F., Thompson, E., Rosch, E. The Embodied Mind (1991). Extends autopoiesis into cognitive science and phenomenology.")@note(Varela, Thompson, Rosch not mentioned by name in text — cited for the extension of autopoiesis into cognitive science) extends autopoiesis into cognitive science and phenomenology, showing how the same organizational principles that define life also structure cognition.
+
+Prigogine's dissipative structures work@ref(prigogine, "Prigogine, I. and Stengers, I. Order Out of Chaos (1984). Dissipative structures and the thermodynamics of living systems.")@note(Prigogine not mentioned by name in text — cited for the thermodynamic background) provides the deeper bridge: systems far from equilibrium spontaneously generate and maintain complex ordered patterns, sustained by a continuous flow of energy.
+
 @note(dissipative structure deserves a full #term entry — best home is @link(007) where quantum field and thermodynamic order meet.)
-
-#term Autopoiesis: Maturana and Varela's term for a system that continuously produces the very components that constitute and maintain it. The defining organizational property of living systems.
-#term Society of occasions: Whitehead's term for a persistent pattern of actual occasions organized with sufficient coherence and closure to act as a unit through time. The metaphysical counterpart to the autopoietic organization.
-#term Negative entropy: Schrödinger's term for the ordered structure that living systems import from their environment to offset internal disorder. The thermodynamic face of what autopoiesis achieves organizationally.
-
-#ref maturana Maturana, H. and Varela, F. Autopoiesis and Cognition (1980). The founding text.
-#ref maturana Maturana, H. and Varela, F. The Tree of Knowledge (1987). More accessible; develops the cognitive implications.
-#ref varela Varela, F., Thompson, E., Rosch, E. The Embodied Mind (1991). Extends autopoiesis into cognitive science and phenomenology.
-#ref thompson Thompson, E. Mind in Life (2007). The full development of enactivism; essential bridge to consciousness.
-#ref schrdinger Schrödinger, E. What is Life? (1944). The thermodynamic framing that set the question.
-#ref prigogine Prigogine, I. and Stengers, I. Order Out of Chaos (1984). Dissipative structures and the thermodynamics of living systems.
 
 #script
 MUSIC NOTE: Opens with a single sparse theme — low, unresolved, patient. As the breathing from the bed intensifies, the theme builds in tension without releasing. A brief sting at the cut — sharp, not melodramatic. During the zoom into the cell, the music becomes dense and quickening, something between wonder and urgency, the same harmonic material transformed. As we zoom back out, it thins and returns to the opening theme — the same notes, but settled now, as if the question has not been answered but has been befriended. No resolution. Just a quieter version of the same patience.

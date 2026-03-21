@@ -1,413 +1,413 @@
 {
-  "build_version": 78,
+  "build_version": 82,
   "pages": {
     "index.html": {
-      "hash": "5a27b351c2433a632c7775e5aebb6fa0fa32ea8da873f12bd77b84389885e01e",
-      "page_version": 49,
-      "changed_in_build": 78,
-      "changed_time": "2026-03-21T07:25:22.363816-07:00"
+      "hash": "c3308fde7f2d115170bd63d38c45b12213a5e57e8391a1641b020ab0c4ee1614",
+      "page_version": 52,
+      "changed_in_build": 81,
+      "changed_time": "2026-03-21T09:01:28.121619-07:00"
     },
     "000-map.html": {
-      "hash": "57115ba6a1d3e2267fa90b5edfb88f0a4d781f6ab4f3d7411ecb356af9b353fc",
-      "page_version": 6,
-      "changed_in_build": 78,
-      "changed_time": "2026-03-21T07:25:22.363816-07:00"
+      "hash": "f5c40e17a0c57e374fdf04df464e732f33ad4a79c105c4867cfc628d18d76e8d",
+      "page_version": 7,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "001-caloric.html": {
-      "hash": "b139afcfa88d1dda375061829c3450487caaae943d2a1ac51e1f9cb311d4be7f",
-      "page_version": 9,
-      "changed_in_build": 78,
-      "changed_time": "2026-03-21T07:25:22.363816-07:00"
+      "hash": "59d716efe216cbb24dbeabfbfde9cbfaf1fee22fde8fd946cb0039152110044b",
+      "page_version": 10,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "002-events.html": {
-      "hash": "b5a678a0af518949540d634dcf6e43c4e9fcd7d8bdba3c105d01facd70cf8804",
-      "page_version": 7,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "8e8cbaf7e5ab319a942a7b54fc4817018120a1f2273522f377f6ce26c059d1c0",
+      "page_version": 8,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "003-inside.html": {
-      "hash": "487a40b52caff52657ac73a0df23363b8e9478e3dea62bf70207be8b7c33a1b5",
-      "page_version": 5,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "b3e6bcaf6d3696d6db24f7a9c50fae90106e023b8252f014457113eab05ceaab",
+      "page_version": 6,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "004-self.html": {
-      "hash": "ca3d5356563ffa21ef90f1eba27e710d51ece91a2697cd4d4e3e10fc026147a5",
-      "page_version": 5,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "c0d9ba2d97f03b006fe8035bab9a1108e5366c8806aef7a1ab38379ffb98e370",
+      "page_version": 6,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "005-freewill.html": {
-      "hash": "e7ff64da54c42eb842b474114cbb86f287602dae502dbb6673e037d50fe7d1d4",
-      "page_version": 6,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "0cea2112a8531d070d576116d36c50ae4308434f25cce434dd79ef11d8c0f5d0",
+      "page_version": 7,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "006-output.html": {
-      "hash": "288b2078f43cf34b6c2cb43407155adf381275464f7def4a18dbc5848381c95e",
-      "page_version": 8,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "847a93bf06236bae1e299ec0ac3c1b092c9ed28f50981cdfa6d6b28cd44ba3a6",
+      "page_version": 9,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "007-vacuum.html": {
-      "hash": "6209523d8ef8dffa3b593202b21d83583e181548f7afabba00cf2b19680358fe",
-      "page_version": 5,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "0dbb7d57b04fdcc57ec620e80b04568a5cd63f1ccba70c1d5f6452dbbf07eca1",
+      "page_version": 6,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "008-fields.html": {
-      "hash": "fb567a8833ae839fe3fd22783be76e077ef537d24db5b23c67caf084b9d30972",
-      "page_version": 6,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "96bfb906599dcb08101bbe9cf5689bd231343547990293c1718b180bb86365ae",
+      "page_version": 7,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "009-randomness.html": {
-      "hash": "c5043e9708b7e20bf6e4e5767a888b9cad5e2284a7bd15ddade9d1d25709aaf5",
-      "page_version": 5,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "25b8ab27b484f6c3ac33ddb094cb991949047cc7ede25cec479231ba7efed0fa",
+      "page_version": 6,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "010-largenumbers.html": {
-      "hash": "de44f30e6ae0ea4f63eedcaf6f18fb05a9d10f47629127b223d24bf88e784a32",
-      "page_version": 5,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "16fe989c98b6be84997e1a36788c5c9cb06f189fda54e60b190fb90a29a41310",
+      "page_version": 6,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "011-moreisdifferent.html": {
-      "hash": "2a9243befcbba7e2477246258b83d9af9a6479daf72f19669e2e06daac0a343b",
-      "page_version": 6,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "2571b584304c86caf97eff7c67f1b008fe15ec1a4612b5fc4a715e44f441ced8",
+      "page_version": 7,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "012-autopoiesis.html": {
-      "hash": "f72d794a15336c63fa4791136b76b008ae3c11bd1056e4f828ce65231a98dbf2",
-      "page_version": 4,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "540a70f389f98b7da7417435fca81324cf93e0d05efa1ea650750352327007f8",
+      "page_version": 5,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "013-enactment.html": {
-      "hash": "6512d07f7eba8b4784056ed06bdc0c56a42b6d89edc368777f19b39bea9a4eba",
-      "page_version": 5,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "1ddc46dcef816d2cdc39a992f2322fd355937b800f6e4ce509dbe7130b6e97dc",
+      "page_version": 6,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "014-cities.html": {
-      "hash": "d96e53e0758c945b669d529fdfa4a2abc4a45a0a5786e457e918c14b0abcabc5",
-      "page_version": 5,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "b537abbfd6e8c346c51e53a30ae747adfacec2a818ec8825473182026727f9dc",
+      "page_version": 6,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "015-aliens.html": {
-      "hash": "e1a49ff19096ae5adf67f01b9ed0189fb44bbac684465423aee42d7a844a4af4",
-      "page_version": 5,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "596c3d3d17129bff6c9ba2a1ffa1fb9ed97f510238b92f4105d009d8f79a7a66",
+      "page_version": 6,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "016-neuralnetwork.html": {
-      "hash": "79d561f9724f76f75ac734e211a754e701e39b69942a3eedb24b2282774201cd",
-      "page_version": 5,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "b828602098729ab8a2b66dd5b8e4e16bb71b57419b017ef25caa11a8edf4ae0f",
+      "page_version": 6,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "017-pastpresent.html": {
-      "hash": "64394abd03b2a5cebd9ffe3ae6075ce74793787e7eab76d1ba977e2e90756b8a",
-      "page_version": 4,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "1185f4588525549dcddbc19f424959e84dbb849dc3a62a7073431c1515d96634",
+      "page_version": 5,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "018-magnetization.html": {
-      "hash": "2f2ab050e91f0fbc31fe318c04b384012897b7e3d575f2b6c31ef6474f9eeb72",
-      "page_version": 5,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "33764fb95d4f437a878d984aab12e5a6dd553d57f328f2d85585d59f7501c125",
+      "page_version": 6,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "019-funerals.html": {
-      "hash": "9a6b13b3a188cd641fb56a86f9aa6cd07cded9963d37a3a817e6dfd2e6e3d8b0",
-      "page_version": 5,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "06cdbe66ce509294b51e6a6716f94c54e5431750f5777bbfb74b8183ba149cca",
+      "page_version": 6,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "020-penrose.html": {
-      "hash": "a1496987a945c1bd9e504464bdd9816fb2b6ca819bb6c0f750429792528b8de1",
-      "page_version": 5,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "add102267ccd99b24900d07b490c383e98cf0b635554e44abf5b6173788e735c",
+      "page_version": 6,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "021-just.html": {
-      "hash": "052f691933595e6b8a5f364292dd005092529d44dbcd28add42dd2f7da82586b",
-      "page_version": 5,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "f8bbb0421eb4ab6b61a6f7b936a2fd883c7ea86afa5ec399bee662c2112e9acf",
+      "page_version": 6,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "022-locked.html": {
-      "hash": "082b47a1f918de7d984c8d2899a6caf661dd209e2c8112fce0b0048b283cb080",
-      "page_version": 8,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "50d266a2affbca6bb37e6a64abb229aac6ccb63b6562807b448b4046a8498f8e",
+      "page_version": 9,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "023-stories.html": {
-      "hash": "c754fb11ff213a9d171ca39558cf98dc48fac116f8f9c16397413af5ffa38459",
-      "page_version": 5,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "213a13e2495ac8d295c20b25a7cb2592e942dd3601078a48e158322f26d2b374",
+      "page_version": 6,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "024-ghostmachine.html": {
-      "hash": "aa0b21344a209070923878da46ea02e99e304c84163757b3d5ba25214ba4afc6",
-      "page_version": 5,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "b2322acd07eb61ae612f9673b4999bf4bb19646eafe2ec5e783527f0374fcaa4",
+      "page_version": 6,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "025-widechannel.html": {
-      "hash": "fd07bc9849395087f350356bac5162d22be691197cde2d53ee95ae5a81656e92",
-      "page_version": 5,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "19addd82ebd59ba3de7389bc99abf600367c1e8dbda149442a8aeab94c45ed6e",
+      "page_version": 6,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "026-twotruths.html": {
-      "hash": "d2d17f38534edff245f943d39ccb31734e5f1bff0e27628e4bfa843b17ef7699",
-      "page_version": 5,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "74e9499e26dabb0d21f42fa116fa15092926a43c98daf2ce9c37f1f67077ab74",
+      "page_version": 6,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "027-usedtothink.html": {
-      "hash": "d26fda5fd24c4281725e1243d837769566c9c38e4f688dbd4c05c30b68a0381a",
-      "page_version": 5,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "c9813e56b57cef8cb226e81ede6664a12451a5ce9c25dc5525b322dfdaee603b",
+      "page_version": 6,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "028-network.html": {
-      "hash": "ae99ab903182e8bcc08a06e89aeb3ce96c23054d690fac7d2f1e8472ac5737ab",
-      "page_version": 5,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "87a4f6e901f4c991db8a3d25c7826702009ddc5b0a6bfb366b60646112d45702",
+      "page_version": 6,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "029-lighttime.html": {
-      "hash": "8b3e77cd51dfb57f50b2ea897104f859083d30549b7dfb00687dd3a1da778b36",
-      "page_version": 4,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "8b6617db0c8cde0ed80646281b1ef1364d0d87c3ba1386f815d773a83595f18a",
+      "page_version": 5,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "030-interference.html": {
-      "hash": "8a2d18303e8fc5bfee37b1543e4169c6e18c49b1ff1aa4ad8a9818f66b8597c5",
-      "page_version": 5,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "1d51f271ef200231e6e61f6cd835a2a550b6d2a778e747c5e1f133442bc8e369",
+      "page_version": 6,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "031-surfaceinside.html": {
-      "hash": "5047cfef8b5d0332b28caef8bd74ceb608c6fafde45efac058521621361ece93",
-      "page_version": 5,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "f30f02ff2be2f5f4ac9b62ffb5b3c0a047d89c0cb3b0684328bb5f37bdd89b57",
+      "page_version": 6,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "032-skyfossil.html": {
-      "hash": "c9a8693ce6e06f4405e1916894c924cba67ee67a49001df47097c17af3d2f646",
-      "page_version": 5,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "15eefaa0c60d74b09ad6a11b42acd8e4d30165f1891d1d664ff4356423d18834",
+      "page_version": 6,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "033-edge.html": {
-      "hash": "f7888d0a0c03064e881375f084d706af8db2ede39b4a2e555fa624ff62bb6ddd",
-      "page_version": 4,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "f99c6747b4b44b36260e1156e94d096d6b3eb7edb2c1d0af3d55b0e0954f4282",
+      "page_version": 5,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "034-onerule.html": {
-      "hash": "9aa4de24b2ffb29911efd286d599592e80ec300984a2682117a13aea49626182",
-      "page_version": 4,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "5fe410100af2e64353ba7a1f3edc49d438fcf7439f0a8b0f9ea2da7d1ccb44f3",
+      "page_version": 5,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "035-simplestnumbers.html": {
-      "hash": "14e9e5f5af9179de24851339a9fb18ade286e55d671cc5e71884371049d35807",
-      "page_version": 5,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "b41643b79f94bbb52b7156bbbd56b3cb12de777270543ebc8f2efdde7bbf5b0a",
+      "page_version": 6,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "036-universenoticing.html": {
-      "hash": "792d0674dcf317c0916e6838ccb58a44f052f024a4eb9729281b5e6ba68a9553",
-      "page_version": 5,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "d2c36ca60fd7900e6ea60c806d9f26dd32b6d4f78058932f6ed5f8b5a700d6e5",
+      "page_version": 6,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "037-assembly.html": {
-      "hash": "f153ee215c42f3ba49ca1585c10425621ea85babb73cb99cc832c6fb4d2fcd75",
-      "page_version": 5,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "9135bc3b6e7da4eeb1a1dfe37bec66174ccd173b4a16b4606e4d0c19419ea08f",
+      "page_version": 6,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "038-consonance-map.html": {
-      "hash": "8654d727ceac6705d618b4859a3d69baf74755ecfa3434ba3c3b161d4d3bf8d5",
-      "page_version": 5,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "dfde397ba923b00b55bb8df87c54adbfdd9ac729ad4ff2a21a374032aba4d51b",
+      "page_version": 6,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "040-stability.html": {
-      "hash": "a8b9dd1604e3e68573da6c9445b515518cb863d4f387e8a79a5dea73638a0ad7",
-      "page_version": 6,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "6d3560d5e420315a524fe9c863834477b81a8a5f6afa8fe5fed60a5cdeb084d4",
+      "page_version": 7,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "041-colorwheel.html": {
-      "hash": "410785175736f53bc9dacacab6829c61abf2fd0d7c40e035a55e72cc75c79bf4",
-      "page_version": 6,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "8f88537854c5cf07a900a70e632ead837c82f5a6163a07ca9bbe1103f6906ef0",
+      "page_version": 7,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "042-eyethinks.html": {
-      "hash": "ee5a9ac7227843841ba3b89430e472d294f3f812db4d63f1d51513a018b913bd",
-      "page_version": 6,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "5d1103ee67d6cf5cfca21dfbcb542603402e8f48b9fd9d482cee4fba9ff41676",
+      "page_version": 7,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "044-ai-retina.html": {
-      "hash": "a718b79e1e7c3c0270202a50bc49250fbc3fb33f97487c2095ca01f5110a2346",
-      "page_version": 7,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "a70a3c15c6f804431e0fe691d90cffd8880a825c9c8171d6143962a2c0469def",
+      "page_version": 8,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "045-baldwin.html": {
-      "hash": "8fd3f8d923fc1baf45c86ba66fac59aedf2a41a143c485c72c24263255e41fef",
-      "page_version": 6,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "2b7a7d2fa5d355b6a153e7cc6aadaa67c5bee87aed827c695f646224b17f4c39",
+      "page_version": 7,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "046-thinkfast.html": {
-      "hash": "652053c8dbe38667caeb1befc03f4ce7016a2023f606f28388fa6cb9d81350d8",
-      "page_version": 6,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "d6892dca1dc3865db3918064115fb6e6a92d3b3fb86a56d6f1765e6280b06768",
+      "page_version": 7,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "047-ai-feeling.html": {
-      "hash": "cf73092ef6ff833d20e2b2fc3556c3c1b7d835029867263da972661a9a847d84",
-      "page_version": 5,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "94fa187d6fba4c0a981137cb50ad0adee89a344e0f50f3b0cbf207aa84c04a26",
+      "page_version": 6,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "048-flashes.html": {
-      "hash": "7d78713d9050fb4afa188fd8add1cd7c4b44d6951da2e6839a814e6f5f743e38",
-      "page_version": 6,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "f89d83cd3158ffb3e057a84c4240d11f7025df331e207010e7cd2539947dc925",
+      "page_version": 7,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "049-strangeloop.html": {
-      "hash": "2f26148ab44c6c4aaaea8acc9eafeb9c2e24e2f560fd876020ad594ec0cb4ac1",
-      "page_version": 6,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "1c4224d2faa4fb1a3e197f475272b6c27252bf90d2d2dcaa2b5039ff68fa969a",
+      "page_version": 7,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "050-orthogonal.html": {
-      "hash": "a5b24f78d6fe9f54d1aa52e3125f1080e5d323ad7d257f5dd1bd8aa750bc364d",
-      "page_version": 5,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "4b62ad31d03177bb0963b4ed78ce5ecf23db35e8342b087341ed9eb2ee2711a0",
+      "page_version": 6,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "051-spacetime.html": {
-      "hash": "991b05b09860e58530b0c1e01aa89026f133483c5c3bb7ce9e84b18df82a80cc",
-      "page_version": 6,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "c279312778da6d3cf830ff1f15e32ea19a207fa40eb277ec26f17513819dbc0f",
+      "page_version": 7,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "052-dichotomy.html": {
-      "hash": "62131c4123a173d57cf5327fbee64dfde503402c682306196f2c69d245265f30",
-      "page_version": 6,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "a05e9d10b406aa5a084e34cc148e38ef46c77c17c36b84e0385b45d74cc14724",
+      "page_version": 7,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "053-dimensions.html": {
-      "hash": "2dfa02db4ff2cba825ad9f33f2bf04de10a699815386c617bf0eedb09f6b1c59",
-      "page_version": 5,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "1e8e7558f91b42be9b840286b69ebeef6ef752e0713bb8834fbac25400a58a6e",
+      "page_version": 6,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "054-bornharmonic.html": {
-      "hash": "a407e23bc115175ba5fd3d706bc5a118e825e49c2a65286103397a9a39e176c2",
-      "page_version": 5,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "ef2b2fad2abb07a15eb73534a542df49545b5982963b3b2d4c59dd3c703ef6f0",
+      "page_version": 6,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "056-mandelneural.html": {
-      "hash": "3abd4bbf0242d7f99364099e5739d4998d2251fde4bfd8c203ae76deb7815db3",
-      "page_version": 6,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "4048dc2e09939639ee0ada93a9ed3f569f1cd2cff4c03f7edbc094fc29087cf6",
+      "page_version": 7,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "057-superfarey.html": {
-      "hash": "40408e0b1a5346dfc6161972890d282cdf99c565d3c81fded98c8e1c716061ff",
-      "page_version": 5,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "fda1da6397a3a6fca74f2c0ca387f1565c707dcae7362a59648e4f11d117a895",
+      "page_version": 6,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "058-galacticnets.html": {
-      "hash": "d868ad2a1f02af308756d6a1eab61e5dd00d79658b967d486895255fcc928106",
-      "page_version": 5,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "aa7a754ef9e2e55911c1c47f9be3293e0d3f0462570a73bd385a8a9e98545eee",
+      "page_version": 6,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "059-galaxyevolve.html": {
-      "hash": "5a702e9b14a306f9b4326f48fed4329da9e84e8260cf3f4546c2811dc92213bf",
-      "page_version": 6,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "e6559ee583381b733990bc4d20d2f187814e5e579ffbe05255cf847a1d157097",
+      "page_version": 7,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "060-worldtests.html": {
-      "hash": "aeda3e7472b201b01df0629a27e9886b4c6f8843c3ee2305b473616f34fafff5",
-      "page_version": 5,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "9431575eec2da416426d67c851008e68067bac5f4ab83101ca872d8222e9db09",
+      "page_version": 6,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "061-babyuniverse.html": {
-      "hash": "91fead0d4aafe47cdc79e2824b0ba8698951883dbb4759dbcfc49393582c78f0",
-      "page_version": 6,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "3d375e57e0576b9df73f113e67c2738256df2fdef701ff6e2e21f294fed480b7",
+      "page_version": 7,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "062-branchingdice.html": {
-      "hash": "f162e3b6b38fff6c8fad78731a4259639c8160a0405ced86a01a001f69e651f0",
-      "page_version": 5,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "5f81f99d4e5991d2d5f6d5dd1a84bd1c6531ade1a15d5fbff22cb31fc26d306e",
+      "page_version": 6,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "063-mandelcrystals.html": {
-      "hash": "58dbbed5ff70b6771f175cf99b89b2c41a9ec80353c11de91f553cfe830b0c12",
-      "page_version": 5,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "0a3af0e03bd87e24a9b64068503df5b59ef5aac23386af52020dacb9dfeb8d27",
+      "page_version": 6,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "064-choicedimension.html": {
-      "hash": "501319f5343435320e1390660edfc5596c24c0e97b2b4b5a04c81b5924a60a4f",
-      "page_version": 5,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "32559060a2d6a4f1cfade986ef96f65ebac1d9511e233daa7265be5daef4a711",
+      "page_version": 6,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "065-feel-do.html": {
-      "hash": "a2f8b8e5fe524ddc77d21a3d33b622641e176b6e3a9439368707910e1e776f09",
-      "page_version": 6,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "839f9d979eca14bdd15775ab80c3c58570315508eac7544ef2428c03265b84b6",
+      "page_version": 7,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "066-cosmicattractor.html": {
-      "hash": "5748c9ffeb0ae5c3eb75236074f69bbaa632982efddca8bfafa91f633e5501bc",
-      "page_version": 5,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "2575d8dcc44623ede0e7964d805062eb87cdf9b472333f7584bf41d76a821d0c",
+      "page_version": 6,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "067-monads-holons.html": {
-      "hash": "289902ba625096566e59282e914ae05352ca7d8888480bda94a1737501b0482f",
-      "page_version": 6,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "d0bdc0cc68c9f236ec2205dd52703c0c7ab70a56429f18443dc625d657f884da",
+      "page_version": 7,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "068-bubbles.html": {
-      "hash": "9a4df849bf2249c8ac78b3cfccc995cf3257ae6522a286388546fc8385743371",
-      "page_version": 5,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "1b5d1875354d29e1963423fe3c954850d4e86e11888ed13b702e346ce6d6b33e",
+      "page_version": 6,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "069-love.html": {
-      "hash": "20494027b49a9cf4165348eeeca60f59ef537266f16c0f29423ac1d15e1fed26",
-      "page_version": 6,
-      "changed_in_build": 73,
-      "changed_time": "2026-03-20T17:42:37.989376-07:00"
+      "hash": "7d43f799414a4a915e8276a5a4ef132965c30d8744cde9b9b22e2247dd81d4fb",
+      "page_version": 7,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "070-harmony.html": {
       "hash": "a1d7c9868ebdc782ff5e87f46c8e2de4211bcfaf0defd8f8ff9edfa836d4f7e1",
@@ -428,167 +428,161 @@
       "changed_time": "2026-03-20T17:42:37.989376-07:00"
     },
     "073-moral-caution.html": {
-      "hash": "9abc2e20b937f101ffbd8001636e0ea08e22ce12e2d3602fe81deb12f50a6a6f",
-      "page_version": 6,
-      "changed_in_build": 74,
-      "changed_time": "2026-03-20T18:07:06.291414-07:00"
+      "hash": "8e875769b16906242866f0d615e605ade3f41407e5cfd12ccdb7a6f0807394a6",
+      "page_version": 7,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "074-grasshopper.html": {
-      "hash": "159bfc96f5cb222db21b66fc3ed7f9931412e7bc735ac12d4fa8dd51fcc45424",
-      "page_version": 3,
-      "changed_in_build": 74,
-      "changed_time": "2026-03-20T18:07:06.291414-07:00"
+      "hash": "3681add062ebbc6df8e6863709ae7356d027ba3f7c4da70f6dd22a9b1c4cca42",
+      "page_version": 4,
+      "changed_in_build": 79,
+      "changed_time": "2026-03-21T08:55:29.373062-07:00"
     },
     "about.html": {
-      "hash": "4e3cb6a1a5b827e9c9bfcd63e27b1a18673a7bff74e1d576bf414d0a4bb24369",
-      "page_version": 27,
-      "changed_in_build": 78,
-      "changed_time": "2026-03-21T07:25:22.363816-07:00"
+      "hash": "3d167b9c252b720aaa586632bcfce3133c6b19a8ec11f6babf96752401e20c41",
+      "page_version": 30,
+      "changed_in_build": 81,
+      "changed_time": "2026-03-21T09:01:28.121619-07:00"
     },
     "bibliography.html": {
-      "hash": "051d21d21dc59aebbc30432ce5bf30b6b3c5da4aba8952cc90fe32636f60a402",
-      "page_version": 27,
-      "changed_in_build": 78,
-      "changed_time": "2026-03-21T07:25:22.363816-07:00"
+      "hash": "5e0fa1b880755552c0ed283f1219b3c792ed62cc0966824d874800569399a7f1",
+      "page_version": 30,
+      "changed_in_build": 81,
+      "changed_time": "2026-03-21T09:01:28.121619-07:00"
     },
     "glossary.html": {
-      "hash": "74bf40d39ebf5e8da524b2aa6cca855bf99d6d7ed8d946ed5667487fc02d94b7",
-      "page_version": 27,
-      "changed_in_build": 78,
-      "changed_time": "2026-03-21T07:25:22.363816-07:00"
+      "hash": "7116ef3d3c10d5ea3bfddd275024c721a6ea1f65defc4a69464f5032026555b1",
+      "page_version": 30,
+      "changed_in_build": 81,
+      "changed_time": "2026-03-21T09:01:28.121619-07:00"
     },
     "list.html": {
-      "hash": "7702b9eaf783ebdbb6a39cfd2652e09d22d9195c46687958041c5784f035a51d",
-      "page_version": 27,
-      "changed_in_build": 78,
-      "changed_time": "2026-03-21T07:25:22.363816-07:00"
+      "hash": "6743428f80d5ee54a7112128af94472a128bd4e8ee9fc1bb3bdd22456cec96f2",
+      "page_version": 30,
+      "changed_in_build": 81,
+      "changed_time": "2026-03-21T09:01:28.121619-07:00"
     },
     "map.html": {
-      "hash": "d29d91f363d4f78426746a1685206e269d42ce529543698bbd6c51d8bd0cbf1a",
-      "page_version": 22,
-      "changed_in_build": 78,
-      "changed_time": "2026-03-21T07:25:22.363816-07:00"
+      "hash": "c35deb3738f5802aeb9ca1c165e10fed327a9ed6fbe5815944d1e7eda3b9c6b1",
+      "page_version": 25,
+      "changed_in_build": 81,
+      "changed_time": "2026-03-21T09:01:28.121619-07:00"
     },
     "more.html": {
-      "hash": "ea0474c9df69edc1b518062ad32ff07f1b7d27f5bf1b3ff06bf1f976bb4ca54f",
-      "page_version": 27,
-      "changed_in_build": 78,
-      "changed_time": "2026-03-21T07:25:22.363816-07:00"
+      "hash": "bb7d0faef30373f2ef957b33258a58026844c33fc182dc6441165a16ee716c9b",
+      "page_version": 31,
+      "changed_in_build": 82,
+      "changed_time": "2026-03-21T09:03:37.048413-07:00"
     },
     "internal.html": {
-      "hash": "07f497ab086177e4b390caf8456cd482475649da24fff5e3d0209fbf18e71e8b",
-      "page_version": 45,
-      "changed_in_build": 78,
-      "changed_time": "2026-03-21T07:25:22.363816-07:00"
+      "hash": "010cfc1cccb26b031a4498020564854037c0c31d53b7247a9af7c9986f54a300",
+      "page_version": 48,
+      "changed_in_build": 81,
+      "changed_time": "2026-03-21T09:01:28.121619-07:00"
     },
     "about-audiences.html": {
-      "hash": "5b0cbba36826cdedfaf69ee109097d0993c9946683f6869a45ddb9b749aa5e1a",
-      "page_version": 27,
-      "changed_in_build": 78,
-      "changed_time": "2026-03-21T07:25:22.363816-07:00"
+      "hash": "e319109e9f24d39444a6e262f73ca18926dda581624a08d97246caa944eca530",
+      "page_version": 30,
+      "changed_in_build": 81,
+      "changed_time": "2026-03-21T09:01:28.121619-07:00"
     },
     "about-authors.html": {
-      "hash": "e9eb5f8b5cb7d8472250ed532ebb28d09f90384c16108f50bfbdae3d764fad45",
-      "page_version": 27,
-      "changed_in_build": 78,
-      "changed_time": "2026-03-21T07:25:22.363816-07:00"
+      "hash": "016d7e615daf4abadd166f72221c0bcfa705e9b04d8fad6d5c9ac69c886f36c7",
+      "page_version": 30,
+      "changed_in_build": 81,
+      "changed_time": "2026-03-21T09:01:28.121619-07:00"
     },
     "about-goals.html": {
-      "hash": "518e4cc34ff69bf5572b76c5356bd6cd332911a719860085c8c603561da73907",
-      "page_version": 27,
-      "changed_in_build": 78,
-      "changed_time": "2026-03-21T07:25:22.363816-07:00"
+      "hash": "04deac8d52619a5a67eace35a89664dee01c4bd46e5fbfa240dce2ee0fb53655",
+      "page_version": 30,
+      "changed_in_build": 81,
+      "changed_time": "2026-03-21T09:01:28.121619-07:00"
     },
     "about-personal.html": {
-      "hash": "cf4fc542584db25932a9dcf7c210afc40e9fd54dd847f297504ef154e0fc4931",
-      "page_version": 27,
-      "changed_in_build": 78,
-      "changed_time": "2026-03-21T07:25:22.363816-07:00"
+      "hash": "abd8c08f06a9fe27eb10df819fb2122ece41a269796921b37d20639cd8c34d4c",
+      "page_version": 30,
+      "changed_in_build": 81,
+      "changed_time": "2026-03-21T09:01:28.121619-07:00"
     },
     "about-reviews.html": {
-      "hash": "5721c6c8fe9c995144b258728ae9d3dc04f2f57473d0bb380d1bd8238d20ffc6",
-      "page_version": 27,
-      "changed_in_build": 78,
-      "changed_time": "2026-03-21T07:25:22.363816-07:00"
+      "hash": "85fcc161ba31b735ac79aea44a88f9f4a6f76f300400fc6bf97beb5299070b2a",
+      "page_version": 30,
+      "changed_in_build": 81,
+      "changed_time": "2026-03-21T09:01:28.121619-07:00"
     },
     "about-status.html": {
-      "hash": "f88d1398a0415f43858573036d79694eb7ae8c569d46f82116f04aa20e664ae7",
-      "page_version": 22,
-      "changed_in_build": 78,
-      "changed_time": "2026-03-21T07:25:22.363816-07:00"
+      "hash": "4161e7094d72fa5883e7f769e16de9cfee86e68ae0aed3bc1c4666b9be74c0bd",
+      "page_version": 25,
+      "changed_in_build": 81,
+      "changed_time": "2026-03-21T09:01:28.121619-07:00"
     },
     "internal-build.html": {
-      "hash": "3fe3e479edcf72683a3466065cfa2a4ddb3c4c8540fa76bdad661c112ff35a83",
-      "page_version": 27,
-      "changed_in_build": 78,
-      "changed_time": "2026-03-21T07:25:22.363816-07:00"
+      "hash": "3c57cd422bb784ebbdc78b78fb9ab687dacb372879d02752481eacafb52d5faf",
+      "page_version": 30,
+      "changed_in_build": 81,
+      "changed_time": "2026-03-21T09:01:28.121619-07:00"
     },
     "internal-directives.html": {
-      "hash": "4e62cb075210c39a6a9b7efaf337e18da2d547e91d94f98ae0e3e5442373f8b0",
-      "page_version": 27,
-      "changed_in_build": 78,
-      "changed_time": "2026-03-21T07:25:22.363816-07:00"
+      "hash": "5a51e45cd1e00f788b20ca08c6c0c93b32abf1c8990a8b7fd231d2221b654a3d",
+      "page_version": 30,
+      "changed_in_build": 81,
+      "changed_time": "2026-03-21T09:01:28.121619-07:00"
     },
     "internal-early-structure.html": {
-      "hash": "569aec001b32d4df62a340484496f2ed4f3a8ba2853409cd3706ee8ba42fdb17",
-      "page_version": 27,
-      "changed_in_build": 78,
-      "changed_time": "2026-03-21T07:25:22.363816-07:00"
+      "hash": "0a76a18f0eb00d5ed39b350b5a97b9873fe4aa8ebfc0831fb3c2531e044e2a54",
+      "page_version": 30,
+      "changed_in_build": 81,
+      "changed_time": "2026-03-21T09:01:28.121619-07:00"
     },
     "internal-grammar.html": {
-      "hash": "6793d99dda9dfe6408f8a53c4226fcf75bbb5b68f5abf3e95163e23049a460af",
-      "page_version": 27,
-      "changed_in_build": 78,
-      "changed_time": "2026-03-21T07:25:22.363816-07:00"
+      "hash": "5d03abc3a0b6ad57f8dfc380c7871c2713ec76e694bdbb30d9cf1f413f2c50a5",
+      "page_version": 30,
+      "changed_in_build": 81,
+      "changed_time": "2026-03-21T09:01:28.121619-07:00"
     },
     "internal-images.html": {
-      "hash": "fc8a7026db7c1446c4be698d59fb44e4e41d6c6b5236996024aae7f8a3ee1695",
-      "page_version": 15,
-      "changed_in_build": 78,
-      "changed_time": "2026-03-21T07:25:22.363816-07:00"
+      "hash": "8b1159b4e0a133ad31fa2bd464ec65e748a8101d29dd364553555b16effc7bca",
+      "page_version": 18,
+      "changed_in_build": 81,
+      "changed_time": "2026-03-21T09:01:28.121619-07:00"
     },
     "internal-import-format.html": {
-      "hash": "3fe3e479edcf72683a3466065cfa2a4ddb3c4c8540fa76bdad661c112ff35a83",
-      "page_version": 27,
-      "changed_in_build": 78,
-      "changed_time": "2026-03-21T07:25:22.363816-07:00"
+      "hash": "3c57cd422bb784ebbdc78b78fb9ab687dacb372879d02752481eacafb52d5faf",
+      "page_version": 30,
+      "changed_in_build": 81,
+      "changed_time": "2026-03-21T09:01:28.121619-07:00"
     },
     "internal-nugget-urls.html": {
-      "hash": "545a37a5f4f3a40eabf5972456bb777e15c25e171bef5effff7cadf2dd6b1281",
-      "page_version": 27,
-      "changed_in_build": 78,
-      "changed_time": "2026-03-21T07:25:22.363816-07:00"
+      "hash": "7cabf433fbdf605720cf38367636b25fdd5af6c32d46b98bef1570cca4149393",
+      "page_version": 30,
+      "changed_in_build": 81,
+      "changed_time": "2026-03-21T09:01:28.121619-07:00"
     },
     "internal-scriptcraft.html": {
-      "hash": "1012b355f982e3d76800c58e7006b41f80543ecfc36957a09ea0b7453fb47dcc",
-      "page_version": 27,
-      "changed_in_build": 78,
-      "changed_time": "2026-03-21T07:25:22.363816-07:00"
+      "hash": "7b64c8ab42bf665289c96e4eaa8260205fc6142fbfcb597b8570a1194bc64c42",
+      "page_version": 30,
+      "changed_in_build": 81,
+      "changed_time": "2026-03-21T09:01:28.121619-07:00"
     },
     "internal-settings.html": {
-      "hash": "894c52034d8a8d87e92e3cec3792b373229fc81341bebf54838d78e75670e210",
-      "page_version": 27,
-      "changed_in_build": 78,
-      "changed_time": "2026-03-21T07:25:22.363816-07:00"
+      "hash": "b44e2c119aa453ca727456992a2df2be0911a5b1d172aac0f7cc68ea3a04d79f",
+      "page_version": 30,
+      "changed_in_build": 81,
+      "changed_time": "2026-03-21T09:01:28.121619-07:00"
     },
     "internal-structure.html": {
-      "hash": "21effb8e60c9995b8fcdc5b287d764379f6b8b5c1a40d055c0a651dc10dd2ce6",
-      "page_version": 27,
-      "changed_in_build": 78,
-      "changed_time": "2026-03-21T07:25:22.363816-07:00"
+      "hash": "a39e761f6cac5545be65a86be9fd6bdd97144d40c3fa519250c81fd3c7a90aa7",
+      "page_version": 30,
+      "changed_in_build": 81,
+      "changed_time": "2026-03-21T09:01:28.121619-07:00"
     },
     "internal-style-guidelines.html": {
-      "hash": "8eb2a5cdc1d6913244af89723f1ed82fb2b8aee8daf8c6eb887954c7eba42a72",
-      "page_version": 27,
-      "changed_in_build": 78,
-      "changed_time": "2026-03-21T07:25:22.363816-07:00"
-    },
-    "more-inside.html": {
-      "hash": "b88fc43caf63cc0e70a5a1f614ef769e08c56441e41bb10d01e7c69340fb10b0",
-      "page_version": 27,
-      "changed_in_build": 78,
-      "changed_time": "2026-03-21T07:25:22.363816-07:00"
+      "hash": "b9ae08fdc3c4ab0fe13de434316b3ca8d3604784fe92ad14266beefcff201c2f",
+      "page_version": 30,
+      "changed_in_build": 81,
+      "changed_time": "2026-03-21T09:01:28.121619-07:00"
     }
   },
-  "last_build_time": "2026-03-21T07:25:22.363816-07:00"
+  "last_build_time": "2026-03-21T09:03:37.048413-07:00"
 }

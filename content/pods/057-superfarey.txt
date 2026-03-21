@@ -7,7 +7,7 @@
 #term interpretability: TBD
 #related 053, 056, 016, 038, 035
 
-A neural network with d dimensions in its residual stream can represent far more than d independent concepts. This is called superposition and it has been studied carefully in the mechanistic interpretability literature. 
+A neural network with d dimensions in its residual stream can represent far more than d independent concepts. This is called superposition and it has been studied carefully in the mechanistic interpretability literature@ref(olsson, "Olsson, E. et al. Superposition, memorization, and double descent (2022). Or similar interpretability work on superposition."). 
 @image(057-superfarey,Superposition in high-dimensional neural representations,Wikimedia Commons)
 
 The mechanism: concepts are stored as nearly-orthogonal directions in the representation space. True orthogonality would allow exactly d independent concepts. Near-orthogonality — with small but nonzero interference — allows exponentially more. The network tolerates a small amount of crosstalk in exchange for vastly expanded capacity.
@@ -18,4 +18,3 @@ The implication: a sufficiently large neural network is not just storing informa
 
 #term Superposition: Storing more than d concepts in d dimensions by using nearly-orthogonal directions; studied in mechanistic interpretability.
 #term Farey depth: Threshold of acceptable interference; determines how many concepts fit at each level of the hierarchy.
-#ref olsson Olsson, E. et al. Superposition, memorization, and double descent (2022). Or similar interpretability work on superposition.

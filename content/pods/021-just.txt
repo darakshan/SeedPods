@@ -8,6 +8,10 @@
 #term cognition: TBD
 #term reductionism: TBD
 #term dismissal: TBD
+#term just (explanatory): when deployed to present a description of mechanism as a complete account of experience or process. Makes a claim of sufficiency that is never argued. Distinct from its innocent uses: timing ("I just arrived"), limitation ("I just want water"), or emphasis.
+#term category mistake: Ryle's term for applying an explanation from one category to something in a different category, then treating it as complete. The Concept of Mind (1949).
+#term intuition pump: Dennett's term for a device that makes a conclusion feel obvious without establishing it through argument. Intuition Pumps and Other Tools for Thinking (2013).
+#term fallacy of misplaced concreteness: Whitehead's term for mistaking a useful abstraction for the full concrete reality it was extracted from. Process and Reality (1929).
 #related 001, 006, 022, 003, 011
 
 #surface
@@ -29,26 +33,18 @@ That claim was never argued. The word made it for free.
 Listen for it today. "It's just pattern matching." "It's just a reflex." "It's just what evolution programmed us to do." Every time you hear "just" used to close down a question — ask yourself: has this actually been argued? Or did one small word just do all the philosophical work, while nobody was looking?
 
 #depth
-The philosopher Gilbert Ryle introduced a concept in 1949 that most people have never heard of but instantly recognize when they see it: the *category mistake*. A category mistake happens when you describe something using the wrong kind of explanation — and then act as if the description is complete. Ryle's most famous example is the ghost in the machine: the idea that somewhere inside the body's physical mechanism there must be a separate mental thing doing the real work. But the error runs in both directions. You can also dismiss experience by pointing at mechanism — and act as if the pointing is an explanation. That is what "just" does.
+The philosopher Gilbert Ryle@ref(ryle, "Ryle, G. The Concept of Mind (1949).") introduced a concept in 1949 that most people have never heard of but instantly recognize when they see it: the *category mistake*. A category mistake happens when you describe something using the wrong kind of explanation — and then act as if the description is complete. Ryle's most famous example is the ghost in the machine: the idea that somewhere inside the body's physical mechanism there must be a separate mental thing doing the real work. But the error runs in both directions. You can also dismiss experience by pointing at mechanism — and act as if the pointing is an explanation. That is what "just" does.
 
 "It's just oxytocin" reaches for a description from one category — biochemistry — and presents it as a complete account of something in another category entirely: experience, meaning, attachment. The chemistry is real. But chemistry and experience are not the same kind of thing. The word "just" is what makes the category mistake invisible. It says: this description is not only accurate, it is sufficient. That second claim — sufficiency — is never argued. It's assumed.
 
-Whitehead called the deeper version of this error the fallacy of misplaced concreteness: taking a useful abstraction and mistaking it for the full concrete reality. "Oxytocin" is an abstraction — a powerful and accurate one — extracted from something vastly richer. "Just" is the word that performs the substitution, replacing the rich thing with the abstraction and closing the door behind it.
+Whitehead@ref(whitehead, "Whitehead, A.N. Process and Reality (1929).") called the deeper version of this error the fallacy of misplaced concreteness: taking a useful abstraction and mistaking it for the full concrete reality. "Oxytocin" is an abstraction — a powerful and accurate one — extracted from something vastly richer. "Just" is the word that performs the substitution, replacing the rich thing with the abstraction and closing the door behind it.
 
-Daniel Dennett gave us a useful tool for spotting this move: the *intuition pump*. An intuition pump is a rhetorical device — often dressed as an argument — that makes a conclusion feel obvious without actually establishing it. "It's just oxytocin" is a near-perfect intuition pump. It conjures an image of reduction and completeness. It feels like clarity. The word "just" is the pump handle — pull it once and the dismissal flows naturally, without anyone noticing that no argument was made.
+Daniel Dennett@ref(dennett, "Dennett, D. Intuition Pumps and Other Tools for Thinking (2013).") gave us a useful tool for spotting this move: the *intuition pump*. An intuition pump is a rhetorical device — often dressed as an argument — that makes a conclusion feel obvious without actually establishing it. "It's just oxytocin" is a near-perfect intuition pump. It conjures an image of reduction and completeness. It feels like clarity. The word "just" is the pump handle — pull it once and the dismissal flows naturally, without anyone noticing that no argument was made.
 
 This matters beyond love and chemistry. The same move appears wherever hard questions get deflated: it's just pattern matching, it's just neurons firing, it's just what evolution programmed us to do. Each time, "just" is promising completeness it hasn't earned. Each time, a category mistake is being made and waved past. (See @link(001) for how this works at the level of entire scientific frameworks. See @link(006) for the specific case of AI and prediction. See @link(022) for what happens when we apply it to people.)
 
 Note for revision: find a better Ryle example — the ghost in the machine may be closer than the Oxford/University example. Also consider: ghost in the machine as its own pod.
 
-#provenance
-#term Just (explanatory): when deployed to present a description of mechanism as a complete account of experience or process. Makes a claim of sufficiency that is never argued. Distinct from its innocent uses: timing ("I just arrived"), limitation ("I just want water"), or emphasis.
-#term Category mistake: Ryle's term for applying an explanation from one category to something in a different category, then treating it as complete. The Concept of Mind (1949).
-#term Intuition pump: Dennett's term for a device that makes a conclusion feel obvious without establishing it through argument. Intuition Pumps and Other Tools for Thinking (2013).
-#term Fallacy of misplaced concreteness: Whitehead's term for mistaking a useful abstraction for the full concrete reality it was extracted from. Process and Reality (1929).
-#ref ryle Ryle, G. The Concept of Mind (1949).
-#ref whitehead Whitehead, A.N. Process and Reality (1929).
-#ref dennett Dennett, D. Intuition Pumps and Other Tools for Thinking (2013).
 
 #script
 [A casual food place. Two YOUNG MEN at a table. Trays, drinks, the usual noise.]

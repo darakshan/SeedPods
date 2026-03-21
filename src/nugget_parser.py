@@ -7,7 +7,7 @@ import re
 import sys
 from pathlib import Path
 
-from directive import process_directives
+from directive import process_directives, split_directive_args
 
 _ROOT = Path(__file__).resolve().parent.parent
 CONTENT_DIR = _ROOT / "content"
@@ -106,10 +106,23 @@ def parse_nugget(filepath, warn=None):
 
     SINGLE_LINE = {"title", "subtitle", "status", "date", "tags", "category", "related"}
 
+    def _ref_handler(verb, content, context):
+        args = split_directive_args(content or "")
+        if len(args) >= 2:
+            kw, ref_text = args[0].strip(), args[1].strip()
+        elif len(args) == 1:
+            kw = args[0].strip()
+            ref_text = kw
+        else:
+            return ""
+        if kw and ref_text:
+            refs.append((kw, ref_text))
+        return ""
+
     def flush():
         if current_layer and current_layer not in SINGLE_LINE:
             full = "\n".join(buffer).strip()
-            ctx = {"warn": w, "notes": notes, "handlers": {}}
+            ctx = {"warn": w, "notes": notes, "handlers": {"ref": _ref_handler}}
             stripped, _ = process_directives(full, filepath, ctx)
             layers[current_layer] = stripped
         buffer.clear()

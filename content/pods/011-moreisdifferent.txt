@@ -14,7 +14,7 @@ There is a colony of ants living somewhere near you. Hundreds of thousands of th
 
 @image(011-moreisdifferent,Superconductivity: emergent behaviour from sheer quantity,Wikimedia Commons)
 
-And yet the colony — as a whole — does things no ant decided. It maintains a steady internal temperature. It farms fungus. It wages war with tactical sophistication. It has a character: some colonies are aggressive, some cautious, some remarkably adaptable. The philosopher Douglas Hofstadter gave the name Aunt Hillary to one particular colony's personality. Aunt Hillary has opinions. Aunt Hillary has moods. No ant has ever met Aunt Hillary. No ant is Aunt Hillary. And yet there she is.
+And yet the colony — as a whole — does things no ant decided. It maintains a steady internal temperature. It farms fungus. It wages war with tactical sophistication. It has a character: some colonies are aggressive, some cautious, some remarkably adaptable. The philosopher Douglas Hofstadter@ref(hofstadter, "Hofstadter, D. Gödel, Escher, Bach. Basic Books, 1979. Aunt Hillary and the ant colony; strange loops and emergent levels.") gave the name Aunt Hillary to one particular colony's personality. Aunt Hillary has opinions. Aunt Hillary has moods. No ant has ever met Aunt Hillary. No ant is Aunt Hillary. And yet there she is.
 
 Where did she come from?
 
@@ -22,7 +22,7 @@ Nothing was added. There is no Aunt Hillary molecule, no special ant carrying th
 
 Aunt Hillary has moods. Whether she feels them is a question nobody has answered.
 
-This is what the physicist Philip Anderson meant when he wrote, in 1972, three words that still haven't been fully absorbed: more is different. Not just more of the same. A different kind of thing altogether.
+This is what the physicist Philip Anderson@ref(anderson, "Anderson, P.W. More Is Different. Science, 177(4047), 1972. Four pages. Still radical.") meant when he wrote, in 1972, three words that still haven't been fully absorbed: more is different. Not just more of the same. A different kind of thing altogether.
 
 ---
 
@@ -38,7 +38,7 @@ A joke is a sequence of words. The setup accumulates — a premise, a misdirecti
 
 Try to find the word that did it.
 
-You can't. The funny isn't in the punchline — every comedian knows this. A punchline without setup is a non-sequitur. Setup without punchline is just a story. The laugh lives in the relationship between all of them, and that relationship is nowhere until suddenly it's everywhere. The writer Arthur Koestler spent a whole book — The Act of Creation (1964) — arguing that this moment of collision between two accumulated frames of meaning is the same deep structure as scientific discovery and artistic insight. More accumulated. Something different arrived.
+You can't. The funny isn't in the punchline — every comedian knows this. A punchline without setup is a non-sequitur. Setup without punchline is just a story. The laugh lives in the relationship between all of them, and that relationship is nowhere until suddenly it's everywhere. The writer Arthur Koestler@ref(koestler, "Koestler, A. The Act of Creation. Hutchinson, 1964. Bisociation as the common structure of humor, discovery, and art.") spent a whole book — The Act of Creation (1964) — arguing that this moment of collision between two accumulated frames of meaning is the same deep structure as scientific discovery and artistic insight. More accumulated. Something different arrived.
 
 ---
 
@@ -59,7 +59,7 @@ This was a physicist making a philosopher's argument, and it landed hard in comp
 
 ---
 
-Arthur Koestler had arrived at a structurally identical conclusion from the opposite direction — through psychology, biology, and the history of science — and given it a precise name. In The Ghost in the Machine (1967) he introduced the concept of the holon: any entity that is simultaneously a whole in its own right and a part of a larger whole. An ant is a whole organism and a part of a colony. A word is a complete unit and a part of a sentence. A neuron is a cell and a part of a brain. A city block is a neighborhood and a part of a city.
+Arthur Koestler had arrived at a structurally identical conclusion from the opposite direction — through psychology, biology, and the history of science — and given it a precise name. In The Ghost in the Machine (1967)@ref(koestler, "Koestler, A. The Ghost in the Machine. Hutchinson, 1967. Holons and hierarchical organization. See also @link(024).") he introduced the concept of the holon: any entity that is simultaneously a whole in its own right and a part of a larger whole. An ant is a whole organism and a part of a colony. A word is a complete unit and a part of a sentence. A neuron is a cell and a part of a brain. A city block is a neighborhood and a part of a city.
 
 Reality, in Koestler's picture, is not a hierarchy of parts assembling into wholes. It is a nested structure of holons, each level having properties the levels below it do not. Aunt Hillary is a holon. So is the joke, considered as a complete act of meaning that is also part of a conversation.
 
@@ -67,7 +67,7 @@ In The Act of Creation (1964) Koestler had already identified what happens at th
 
 ---
 
-Alfred North Whitehead's vocabulary makes this precise. What Koestler calls a holon, Whitehead calls a society of actual occasions — a stable pattern of events organized around a common characteristic that persists through time. Aunt Hillary is a society. The city is a society. The neural network, processing its inherited weight structure through billions of forward passes, is a society. Each level of organization prehends — takes in and feels — the accumulated character of the levels below it, and synthesizes something that was not predictable from any of them.
+Alfred North Whitehead's@ref(whitehead, "Whitehead, A.N. Process and Reality. Macmillan, 1929. Societies of actual occasions as the basis of enduring entities.") vocabulary makes this precise. What Koestler calls a holon, Whitehead calls a society of actual occasions — a stable pattern of events organized around a common characteristic that persists through time. Aunt Hillary is a society. The city is a society. The neural network, processing its inherited weight structure through billions of forward passes, is a society. Each level of organization prehends — takes in and feels — the accumulated character of the levels below it, and synthesizes something that was not predictable from any of them.
 
 The question this raises — whether each level of society has not just emergent properties but an emergent inside, a locus of experience scaled to its complexity — is the question @link(003) opens and @link(024) takes further.
 
@@ -77,17 +77,10 @@ The weight matrix of a large neural network is the contemporary instance of Ande
 
 A related but distinct phenomenon — what happens when formal complexity generates self-reference rather than emergence — is the territory of @link(010). The architecture behind both, the nested vocabulary by which each level's stable outputs become the primitive units of the next level up, is @link(037).
 
-#provenance
 #term Holon: Arthur Koestler's term for any entity that is simultaneously a whole in its own right and a part of a larger whole. Reality in Koestler's picture is a nested hierarchy of holons rather than parts assembling into wholes.
 #term Bisociation: Koestler's term for the collision of two independent frames of reference that releases energy as laughter, insight, or aesthetic emotion. His claim: this is the common structure of humor, scientific discovery, and artistic creation.
 #term More is different: Philip Anderson's phrase (1972) for the principle that each level of complexity has emergent properties that cannot be derived from the level below. Not a violation of lower-level laws, but genuinely new phenomena requiring their own description.
 #term Society of actual occasions: Whitehead's term for a stable pattern of events organized around a common characteristic that persists through time. Ant colonies, cities, brains, and neural networks are all societies in this sense.
-
-#ref anderson Anderson, P.W. More Is Different. Science, 177(4047), 1972. Four pages. Still radical.
-#ref koestler Koestler, A. The Act of Creation. Hutchinson, 1964. Bisociation as the common structure of humor, discovery, and art.
-#ref koestler Koestler, A. The Ghost in the Machine. Hutchinson, 1967. Holons and hierarchical organization. See also @link(024).
-#ref hofstadter Hofstadter, D. Gödel, Escher, Bach. Basic Books, 1979. Aunt Hillary and the ant colony; strange loops and emergent levels.
-#ref whitehead Whitehead, A.N. Process and Reality. Macmillan, 1929. Societies of actual occasions as the basis of enduring entities.
 
 #script
 NOTE ON MUSIC: Gershwin's Rhapsody in Blue (1924, public domain) is the tonal reference — its movement between pastoral spaciousness and dense urban energy mirrors the script's arc exactly. Use a public domain recording, commission a new performance, or compose something in that spirit.

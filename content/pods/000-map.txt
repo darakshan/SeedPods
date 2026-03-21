@@ -73,13 +73,9 @@ What the categories share, underneath their differences, is a single recurring m
 
 The reader who follows connections rather than categories will eventually notice that the seeds form clusters regardless of their labels: a cluster around the event-not-thing ontology (@link(002), @link(007), @link(008)); a cluster around emergence and complexity (@link(009), @link(011), @link(012), @link(034)); a cluster around the limits of output as evidence (@link(006), @link(021), @link(022), @link(025)). These cross-category clusters are where the project's deeper structure lives.
 
-The categories are scaffolding. The web is the building.
+The categories are scaffolding. The web is the building.@ref(alexander1977, "Alexander, Christopher, Sara Ishikawa, and Murray Silverstein. A Pattern Language. Oxford University Press, 1977. The organizational inspiration for SeedPods — a navigable web of related ideas with no mandatory sequence, entered anywhere.")@note(Alexander not mentioned by name in text — cited as the organizational inspiration for SeedPods.)@ref(miller1956, "Miller, George A. 'The Magical Number Seven, Plus or Minus Two.' Psychological Review 63(2), 1956. The cognitive constraint that makes seven a natural upper bound for working-memory categories.")@note(Miller not mentioned by name in text — cited for the magical number seven as a working-memory constraint.)
 
 #term category: As used in this archive: one of seven provisional groupings used to give readers initial orientation. Not intended as a formal taxonomy. Seeds often belong to more than one and are assigned by primary hook.
-
-#provenance
-#ref alexander1977 Alexander, Christopher, Sara Ishikawa, and Murray Silverstein. A Pattern Language. Oxford University Press, 1977. The organizational inspiration for SeedPods — a navigable web of related ideas with no mandatory sequence, entered anywhere.
-#ref miller1956 Miller, George A. "The Magical Number Seven, Plus or Minus Two." Psychological Review 63(2), 1956. The cognitive constraint that makes seven a natural upper bound for working-memory categories.
 
 #script
 OPEN ON: An aerial view of a large, wild garden. No obvious paths. Dense. Beautiful. Slightly overwhelming.

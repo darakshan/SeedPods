@@ -1,8 +1,8 @@
-nav: about, list, more
+nav: about, list
 site_base: https://darakshan.github.io/SeedPods/
 site_dir: docs  # must match .github/workflows/pages.yml upload path
 
-list_menu: All Seeds | list, Bibliography | bibliography, Glossary | glossary, Map | map
+list_menu: All Seeds | list, Bibliography | bibliography, Glossary | glossary, Map | map, More | more
 
 section_head: All seeds
 repo_link: Full repository →

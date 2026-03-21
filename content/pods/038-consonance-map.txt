@@ -8,6 +8,10 @@
 #term farey: TBD
 #term music: TBD
 #term mathematics: TBD
+#term monochord: a single-stringed instrument used by Pythagoras to demonstrate the relationship between string length and musical pitch. Stopping the string at 1/2 its length gives the octave, 2/3 gives the fifth, 3/4 gives the fourth.
+#term attractor: a value or region toward which a repeated mathematical process converges. The Mandelbrot set is a map of which starting points are attracted to stability and which escape to infinity.
+#term farey sequence: the set of all fractions between 0 and 1 ordered by complexity — simplest denominators first. Governs both the positions of bulbs on the Mandelbrot cardioid and the hierarchy of consonant intervals in music.
+#term consonance score: a measure of how harmonious a musical interval sounds, based on the simplicity of its frequency ratio. Simpler ratios — smaller integers — score higher.
 #related 033, 035, 034, 056, 030
 
 #depth
@@ -19,7 +23,7 @@ have always known this, and the explanation has always been the same:
 simpler ratios sound more consonant. The frequency of G is almost
 exactly 3/2 times the frequency of C. The frequency of G-flat is
 closer to 7/5 — a more complex ratio, a less stable relationship.
-Pythagoras noticed this in the 6th century BC, experimenting with a
+Pythagoras@ref(pythagoras, "Pythagoras — consonance as simple integer ratios, discovered through string length experiments on the monochord.") noticed this in the 6th century BC, experimenting with a
 monochord. He didn't have a graph. He had a single string and a
 remarkable idea: that number and harmony are the same thing. Every
 culture that has independently developed music has found the simple
@@ -44,7 +48,7 @@ To understand why, you need one idea: the attractor. Some mathematical
 processes, when you repeat them, converge — they settle toward a
 stable value no matter where you start. Others diverge — they spiral
 outward to infinity. The boundary between the two is where things get
-interesting. In the 1970s and 80s, Benoît Mandelbrot was studying
+interesting. In the 1970s and 80s, Benoît Mandelbrot@ref(mandelbrot, "Mandelbrot, Benoît — The Fractal Geometry of Nature. Freeman, 1982. The boundary between convergence and escape as infinitely complex attractor.") was studying
 exactly this boundary for a deceptively simple formula — apply a rule,
 feed the result back in, repeat, and ask: does this converge or
 escape? He expected the boundary to be smooth and unremarkable. When
@@ -71,7 +75,7 @@ wider the moat of complexity surrounding it. This structure has a
 name — the Farey sequence — and the mathematics behind it belongs in
 the references. What matters here is that musicians have always felt
 it. The fifth sounds like itself, and nothing nearby sounds close.
-The moat is arithmetic, not psychology.
+The moat is arithmetic, not psychology.@ref(farey, "Farey, John (1816) — sequence of rationals ordered by denominator size; the Farey gap property.")
 
 Mandelbrot applied a formula and found a shape he didn't expect.
 Darakshan drew a map long wanted and found the same shape looking
@@ -82,16 +86,4 @@ complexity, wherever you find it.
 Whether that boundary also appears in the space where a neural network
 learns to think — where the weights that converge are separated from
 the weights that don't by a boundary of similar complexity — is an
-open question worth asking. [056]
-
-#provenance
-#ref pythagoras Pythagoras — consonance as simple integer ratios, discovered through string length experiments on the monochord.
-#ref mandelbrot Mandelbrot, Benoît — The Fractal Geometry of Nature. Freeman, 1982. The boundary between convergence and escape as infinitely complex attractor.
-#ref douady Douady & Hubbard — mathematical analysis of Mandelbrot bulb structure and periods; bulb positions governed by Farey arithmetic.
-#ref farey Farey, John (1816) — sequence of rationals ordered by denominator size; the Farey gap property.
-#ref stern-brocot Stern-Brocot tree — the complete ordered tree of rational numbers, same structure as the Farey sequence.
-
-#term monochord: a single-stringed instrument used by Pythagoras to demonstrate the relationship between string length and musical pitch. Stopping the string at 1/2 its length gives the octave, 2/3 gives the fifth, 3/4 gives the fourth.
-#term attractor: a value or region toward which a repeated mathematical process converges. The Mandelbrot set is a map of which starting points are attracted to stability and which escape to infinity.
-#term Farey sequence: the set of all fractions between 0 and 1 ordered by complexity — simplest denominators first. Governs both the positions of bulbs on the Mandelbrot cardioid and the hierarchy of consonant intervals in music.
-#term consonance score: a measure of how harmonious a musical interval sounds, based on the simplicity of its frequency ratio. Simpler ratios — smaller integers — score higher. The precise formula is to be confirmed.
+open question worth asking. [056]@ref(douady, "Douady & Hubbard — mathematical analysis of Mandelbrot bulb structure and periods; bulb positions governed by Farey arithmetic.")@note(Douady not mentioned by name in text — cited for mathematical analysis of Mandelbrot bulb structure.)@ref(stern-brocot, "Stern-Brocot tree — the complete ordered tree of rational numbers, same structure as the Farey sequence.")@note(Stern-Brocot tree not mentioned by name in text — cited for the complete ordered tree of rational numbers.)

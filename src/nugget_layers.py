@@ -121,6 +121,7 @@ def expand_layer_directives(raw, all_nuggets, filepath=None, extra_context=None)
         "link": _md_link_handler,
         "timestamp": _md_timestamp_handler,
         "setting": _md_setting_handler,
+        "ref": lambda verb, content, ctx: "",
     }
     ctx = {
         "warn": lambda msg, filepath=None: None,
