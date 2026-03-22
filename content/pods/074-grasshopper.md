@@ -10,7 +10,7 @@
 #related 001, 026, 027
 
 #surface
-You probably learned the fable the same way most of us did. The ant works all summer storing food. The grasshopper sings and plays. Winter comes. The grasshopper suffers. The moral is clear: stop playing, start working. Play is what you do when you should be doing something else.
+You probably learned Aesop's@ref(aesop, "Aesop. The Ant and the Grasshopper. Traditional fable, ca. 6th century BCE.") fable the same way most of us did. The ant works all summer storing food. The grasshopper sings and plays. Winter comes. The grasshopper suffers. The moral is clear: stop playing, start working. Play is what you do when you should be doing something else.
 
 A word about what we mean by play. Not competitive sport, not organized games, not exercise with a target. Those are perfectly good things, but the will is very much in charge of them — there is a score, a goal, a criterion for success. The play we mean is something else: the kind where none of that applies. What a child does when no one has organized anything. What happens when you follow something simply because it's interesting right now, with no plan for where it leads.
 
@@ -35,7 +35,7 @@ The grasshopper wasn't the story's failure. The grasshopper was doing something 
 #depth
 The fable's error runs deeper than "play is also valuable." Its deeper error is an assumption so embedded it's nearly invisible: that value only accrues when the will is in charge.
 
-The ant's will is always in charge. Even the scout ant exploring unfamiliar territory is serving a goal the colony already has. Exploration, in this sense, is still ant-mode — goal-directed search within a frame. The grasshopper is doing something categorically different: operating outside any frame, with no criterion for success except the intrinsic pull of the moment. This is not a different strategy for finding food. It is a different relationship to the question of what you're doing at all.
+The ant's will is always in charge. Even the scout ant exploring unfamiliar territory is serving a goal the colony already has. Exploration, in this sense, is still ant-mode — the explore pole of Richard Sutton's@ref(sutton2018, "Sutton, Richard S., and Andrew G. Barto. Reinforcement Learning: An Introduction. 2nd ed. MIT Press, 2018. The explore/exploit framing — useful precisely as the contrast case, since both poles remain goal-directed.") explore-exploit tradeoff, goal-directed search within a frame. The grasshopper is doing something categorically different: operating outside any frame, with no criterion for success except the intrinsic pull of the moment. This is not a different strategy for finding food. It is a different relationship to the question of what you're doing at all.
 
 The brain, it turns out, has something to say about this distinction. There is a long tradition of observation — from mathematicians, artists, scientists — that certain kinds of insight arrive not during directed effort but in its aftermath: in the bath, on the walk, in the middle of the night. This is sometimes described as the unconscious "working on" a problem, which smuggles the ant back in. A more precise description may be that the will's suspension changes what the brain has access to — opens registers that goal-directed search keeps closed. Feynman's drumming worked not because it fed his physics but because it genuinely wasn't physics. The separation was the point.
 
@@ -67,10 +67,7 @@ brain needs) to the structural (what any tightly coupled system needs). Or it
 could seed a separate seedpod — the engineering meaning of play as a lens on
 resilience more broadly.
 
-@note(Consider whether this fits in the Depth section of 074, or seeds a
-separate seedpod on mechanical/structural resilience. If added to 074, it would
-sit well after the Feynman paragraph as a structural analogy — not just humans
-but machines require play.)
+@note(Consider: own seedpod on mechanical/structural resilience, or add to 074 after the Feynman paragraph.)
 
 Addendum.
 The imaginary dimension — complex analysis
@@ -94,12 +91,7 @@ The resonance with the seedpod's argument: play is not a departure from the real
 work. It may be the dimension in which the real work's hidden structure
 becomes visible.
 
-@note(This is strong enough to be its own seedpod — possibly neighboring 074 on
-the map. The complex plane as a metaphor for what becomes visible when you
-relax the constraint to one dimension. Connects naturally to the mathematics
-seedpods (033, 034, 035) and potentially to consciousness as a dimension orthogonal
-to spacetime (050). Worth a full seedpod rather than a paragraph in 074 — the
-idea deserves room.)
+@note(Strong enough for its own seedpod neighboring 074. Connects to 033, 034, 035 and possibly 050.)
 
 Both extensions share an underlying structure: a system constrained to n
 dimensions, given a small permission to move in dimension n+1, reveals or
@@ -109,7 +101,7 @@ mathematical: the function moves into the imaginary axis. Grasshopper play is
 cognitive/experiential: the will moves off the axis of goal-direction.
 
 The same word — play — may be pointing at the same deep structure in three
-different domains.@ref(aesop, "Aesop. The Ant and the Grasshopper. Traditional fable, ca. 6th century BCE. The cultural compression the seedpod argues encodes a framework too small for what it's trying to describe.")@note(Aesop not mentioned by name in text — cited as the source of the ant-and-grasshopper fable.)@ref(sutton2018, "Sutton, Richard S., and Andrew G. Barto. Reinforcement Learning: An Introduction. 2nd ed. MIT Press, 2018. The explore/exploit framing — useful precisely as the contrast case, since both poles remain goal-directed.")@note(Sutton not mentioned by name in text — cited for the explore/exploit framing as the contrast case.)
+different domains.
 
 #script
 OPEN ON: A child in a summer field. Not doing anything in particular. Watching an insect. Following it a few steps. Losing interest. Lying back. The sky is very large.

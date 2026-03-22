@@ -61,7 +61,7 @@ The dominant assumption underlying most current theories of consciousness — th
 
 And now AI has arrived and made the crisis acute. If experience requires biological neurons, why? If it doesn't, what are we building, and how should we treat it? The ethical stakes of getting the framework wrong are no longer abstract.
 
-We may be living inside a caloric moment — after the anomalies have appeared but before someone removes the flawed primitive@ref(goff, "Goff, P. Galileo's Error (2019). Reconstructs a closely related position in contemporary language.")@ref(harris, "Harris, A. Conscious (2019). Lucid introduction to the hard problem.")@note(Goff and Harris not mentioned by name in this text — cited as further reading on the hard problem and panpsychism).
+We may be living inside a caloric moment — after the anomalies have appeared but before someone removes the flawed primitive. Philip Goff's@ref(goff, "Goff, P. Galileo's Error (2019). Reconstructs a closely related position in contemporary language.") Galileo's Error and Annaka Harris's@ref(harris, "Harris, A. Conscious (2019). Lucid introduction to the hard problem.") Conscious are among the recent books that argue the removal is overdue.
 
 Caloric theory was developed primarily by Antoine Lavoisier in the late 18th century and dominated chemistry and physics until Benjamin Thompson's cannon-boring observations (1798). James Prescott Joule's mechanical equivalent of heat experiments in the 1840s completed the transition to the kinetic theory.
 

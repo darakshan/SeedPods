@@ -16,7 +16,7 @@ The boundary between convergence and divergence in weight space is where the int
 
 The bulbs of the Mandelbrot set correspond to the basins of attraction — the regions of weight space that converge to good solutions. Larger bulbs correspond to more robust solutions, reachable from a wider range of starting points. The branching structure of the boundary corresponds to the fine structure of generalization — the increasingly subtle distinctions a deep model can make.
 
-This is not a metaphor. It is a structural homology between two iterative dynamical systems, one in two dimensions and one in hundreds of thousands@ref(elman, "Elman, J. Finding structure in time (1990). Recurrent networks and dynamics. See also mechanistic interpretability literature on loss landscapes.")@note(Elman not directly cited in text — given as entry point to the dynamics literature).
+This is not a metaphor. It is a structural homology between two iterative dynamical systems, one in two dimensions and one in hundreds of thousands.
 
 #term Weight space: The high-dimensional space of all possible network parameters; training is iteration in this space.
 #term Basin of attraction: Region of initial conditions that converge to the same attractor; analog of Mandelbrot bulbs.

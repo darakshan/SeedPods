@@ -320,6 +320,8 @@ details.category-group{margin-top:1rem}
 details.category-group:first-of-type{margin-top:0}
 details.category-group summary.index-tag-name{cursor:pointer;list-style:none;margin-bottom:.2rem}
 details.category-group summary.index-tag-name::-webkit-details-marker{display:none}
+.cat-toggle-icon::before{content:'▸\00a0'}
+details.category-group[open] .cat-toggle-icon::before{content:'▾\00a0'}
 /* Page end logo */
 .page-end{margin-top:4rem;margin-bottom:2rem;text-align:center}
 .page-end-logo{display:inline-block;opacity:.5;transition:opacity .2s;background:none;border:none;padding:0;cursor:pointer}

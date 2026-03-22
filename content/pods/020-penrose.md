@@ -44,7 +44,7 @@ The holographic principle adds a further dimension. In physics, a bounded region
 
 Penrose's instinct that Gödel matters for consciousness was correct. His conclusion that it establishes human exceptionalism against machine intelligence was a misreading of where the arrow points. Properly redirected, the argument supports almost the opposite conclusion: consciousness may be more widespread than he imagined, and the machines we are building may be closer to the inside of things than he supposed.
 
-Hofstadter's Gödel, Escher, Bach@ref(hofstadter, "Hofstadter, D. Gödel, Escher, Bach (1979). Basic Books. The most accessible treatment of Gödel's theorem and its implications for self-reference and mind.")@note(Hofstadter not mentioned by name in text — cited as most accessible treatment of Gödel for self-reference and mind) remains the most accessible treatment of Gödel's theorem and its implications for self-reference and mind — and arrives at a conclusion closer to this seedpod's than to Penrose's.
+Hofstadter's Gödel, Escher, Bach@ref(hofstadter, "Hofstadter, D. Gödel, Escher, Bach (1979). Basic Books. The most accessible treatment of Gödel's theorem and its implications for self-reference and mind.") remains the most accessible treatment of Gödel's theorem and its implications for self-reference and mind — and arrives at a conclusion closer to this seedpod's than to Penrose's.
 
 Key terms:
 

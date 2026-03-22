@@ -45,7 +45,7 @@ The convergence is the point. Two entirely different lines of inquiry — one tr
 
 @link(008) doesn't assert that the field is conscious. That question lives in @link(003). What it asserts is more modest and stranger: that the boundary we assumed between the physical medium and the experiencing subject was never as clear as we thought. If prehension is real — if reaching and feeling go all the way down — then the field was never merely a medium. It was always the inside of what physics describes from the outside. That is a different investigation than the one we thought we were conducting.
 
-Richard Feynman's Lectures on Physics@ref(feynman, "Feynman, R. The Feynman Lectures on Physics, Vol. 2. Addison-Wesley, 1964. The clearest physical account of electromagnetism available.")@note(Feynman not mentioned by name in text — cited for the clearest physical account of the field) remain the clearest physical account of what electromagnetism actually says about the world.
+Richard Feynman's Lectures on Physics@ref(feynman, "Feynman, R. The Feynman Lectures on Physics, Vol. 2. Addison-Wesley, 1964. The clearest physical account of electromagnetism available.") remain the clearest physical account of what electromagnetism actually says about the world.
 
 #term Electromagnetic field: the unified field described by James Clerk Maxwell's equations (1865), of which electricity, magnetism, and light are all aspects. Not a medium that contains these phenomena but the phenomenon itself. Pervades all of space.
 

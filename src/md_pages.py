@@ -291,7 +291,7 @@ def _render_categories_html(seedpods, status_order, copy, base_href="", content_
         slug = _cat_slug(cat)
         extra_class = f" cat-colored {category_css_slug(cat)}" if category_colors and cat in category_colors else ""
         return f"""  <details id="{slug}" class="category-group">
-    <summary class="index-tag-name{extra_class}">{_html.escape(label)}</summary>
+    <summary class="index-tag-name{extra_class}"><span class="cat-toggle-icon" aria-hidden="true"></span>{_html.escape(label)}</summary>
     {inner}
   </details>"""
 

@@ -40,7 +40,7 @@ The locked-in syndrome literature, and more recently research on non-speaking au
 
 Douglas Hofstadter's Gödel, Escher, Bach (1979) circles this territory from the angle of formal systems — what can and cannot be inferred about a system from its outputs.
 
-Evan Thompson's Mind in Life@ref(thompson, "Thompson, E. Mind in Life. Biological processes and their expressive surfaces.")@note(Thompson not mentioned by name in text — cited for the biology of process and expression) takes this into the biological domain: the organism's expressive surface is always downstream of the living process that generates it.
+Evan Thompson's Mind in Life@ref(thompson, "Thompson, E. Mind in Life. Biological processes and their expressive surfaces.") takes this into the biological domain: the organism's expressive surface is always downstream of the living process that generates it.
 
 #term Output interface: the channel through which a process expresses itself externally. The interface constrains and shapes what can be expressed; it does not determine what is being expressed.
 #term Process: in Whitehead's sense, the actual unfolding activity of an occasion of experience. Distinct from its products or traces.

@@ -66,9 +66,9 @@ Evan Thompson's Mind in Life (2007)@ref(thompson, "Thompson, E. Mind in Life (20
 
 Whitehead's process philosophy runs as a parallel current throughout. His concept of a society of occasions — a persistent pattern of events with sufficient internal coherence to act as a unit — maps directly onto the autopoietic organization, though Whitehead arrived at it through metaphysics rather than biology.
 
-Varela, Thompson, and Rosch's The Embodied Mind@ref(varela, "Varela, F., Thompson, E., Rosch, E. The Embodied Mind (1991). Extends autopoiesis into cognitive science and phenomenology.")@note(Varela, Thompson, Rosch not mentioned by name in text — cited for the extension of autopoiesis into cognitive science) extends autopoiesis into cognitive science and phenomenology, showing how the same organizational principles that define life also structure cognition.
+Varela, Thompson, and Rosch's The Embodied Mind@ref(varela, "Varela, F., Thompson, E., Rosch, E. The Embodied Mind (1991). Extends autopoiesis into cognitive science and phenomenology.") extends autopoiesis into cognitive science and phenomenology, showing how the same organizational principles that define life also structure cognition.
 
-Prigogine's dissipative structures work@ref(prigogine, "Prigogine, I. and Stengers, I. Order Out of Chaos (1984). Dissipative structures and the thermodynamics of living systems.")@note(Prigogine not mentioned by name in text — cited for the thermodynamic background) provides the deeper bridge: systems far from equilibrium spontaneously generate and maintain complex ordered patterns, sustained by a continuous flow of energy.
+Prigogine's dissipative structures work@ref(prigogine, "Prigogine, I. and Stengers, I. Order Out of Chaos (1984). Dissipative structures and the thermodynamics of living systems.") provides the deeper bridge: systems far from equilibrium spontaneously generate and maintain complex ordered patterns, sustained by a continuous flow of energy.
 
 @note(dissipative structure deserves a full #term entry — best home is @link(007) where quantum field and thermodynamic order meet.)
 

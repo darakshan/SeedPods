@@ -67,7 +67,7 @@ In biology, Charles Darwin@ref(darwin, "Darwin, C. On the Origin of Species. Joh
 
 In computer science and optimization, the simulated annealing algorithm (Kirkpatrick, Gelatt, Vecchi, 1983) formalized the principle that controlled randomness finds better solutions than pure determinism. Genetic algorithms (Holland, 1975) showed that simulated evolution solves engineering problems that analytical methods cannot.
 
-James Gleick's Chaos@ref(gleick, "Gleick, J. Chaos: Making a New Science. Viking, 1987. Accessible entry point to deterministic chaos and its relationship to randomness.")@note(Gleick not mentioned by name in text — cited as accessible entry point) remains the best introduction to deterministic chaos and its surprising relationship to structure.
+James Gleick's Chaos@ref(gleick, "Gleick, J. Chaos: Making a New Science. Viking, 1987. Accessible entry point to deterministic chaos and its relationship to randomness.") remains the best introduction to deterministic chaos and its surprising relationship to structure.
 
 In philosophy, Whitehead's process philosophy provides the deepest frame: genuine novelty — the creative advance into novelty — is constitutive of reality at every scale. Not a property of complex systems only, but the basic character of each actual occasion.
 

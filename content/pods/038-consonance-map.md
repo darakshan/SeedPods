@@ -86,4 +86,4 @@ complexity, wherever you find it.
 Whether that boundary also appears in the space where a neural network
 learns to think — where the weights that converge are separated from
 the weights that don't by a boundary of similar complexity — is an
-open question worth asking. [056]@ref(douady, "Douady & Hubbard — mathematical analysis of Mandelbrot bulb structure and periods; bulb positions governed by Farey arithmetic.")@note(Douady not mentioned by name in text — cited for mathematical analysis of Mandelbrot bulb structure.)@ref(stern-brocot, "Stern-Brocot tree — the complete ordered tree of rational numbers, same structure as the Farey sequence.")@note(Stern-Brocot tree not mentioned by name in text — cited for the complete ordered tree of rational numbers.)
+open question worth asking. [056]

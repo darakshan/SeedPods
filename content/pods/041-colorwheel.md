@@ -34,7 +34,8 @@ seeing. At the first layer of your retina, three cone types — roughly
 tuned to red, green, and blue — receive light. But they do not forward
 those raw signals. At the very next layer, still within the retina,
 those three signals are immediately recombined into two opponent
-channels: red against green, and blue against yellow. By the time
+channels: red against green, and blue against yellow — a transformation
+first identified by Ewald Hering@ref(hering, "Hering, Ewald — opponent process theory of color vision, 1892. The original proposal that color experience is organized around opposing pairs.") in 1892. By the time
 visual information reaches the optic nerve, the world has already been
 transformed. The retina is not a camera. It is a processor. And —
 here is the surprise — the retina is not separate from the brain.
@@ -71,7 +72,8 @@ channels that deliver perceptual experience. Each level is real. Each
 is incomplete without the others. [026]
 
 Why these two opponent axes and not others? Here is one compelling
-idea, though not one we can claim as settled: the red-green axis may
+idea, though not one we can claim as settled — developed in detail by
+J.D. Mollon@ref(mollon, "Mollon, J.D. — the uses and origins of primate colour vision. Journal of Experimental Biology, 1989. The fruit and co-evolution hypothesis.") among others: the red-green axis may
 record one of the longest conversations in the history of life —
 plants developing color to attract animals, animals refining the axis
 to read it, each driving the other forward. Flowers and fruit did not
@@ -98,4 +100,4 @@ eventually produces.
 What we experience as color — the redness of red, the completeness
 of a saturated hue, the restlessness of a muddied one — is the shape
 of that solution, felt from the inside. Why it feels like anything
-at all is a different question, and a deeper one. [042]@ref(hering, "Hering, Ewald — opponent process theory of color vision, 1892. The original proposal that color experience is organized around opposing pairs.")@note(Hering not mentioned by name in text — cited for the original opponent process theory.)@ref(hurvich, "Hurvich, L. and Jameson, D. — An opponent-process theory of color vision. Psychological Review, 1957. The modern formulation.")@note(Hurvich not mentioned by name in text — cited for the modern formulation of opponent process theory.)@ref(mollon, "Mollon, J.D. — the uses and origins of primate colour vision. Journal of Experimental Biology, 1989. The fruit and co-evolution hypothesis.")@note(Mollon not mentioned by name in text — cited for the fruit and co-evolution hypothesis.)@ref(field, "Field, D.J. — Relations between the statistics of natural images and the response properties of cortical cells. Journal of the Optical Society of America, 1987. The efficient coding hypothesis.")@note(Field not mentioned by name in text — cited for the efficient coding hypothesis.)@ref(simoncelli, "Simoncelli, E. and Olshausen, B. — Natural image statistics and neural representation. Annual Review of Neuroscience, 2001. Neural networks and natural image statistics.")@note(Simoncelli not mentioned by name in text — cited for neural networks and natural image statistics.)
+at all is a different question, and a deeper one. [042]
