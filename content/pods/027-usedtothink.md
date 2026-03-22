@@ -77,97 +77,19 @@ The phrase is not wrong. It marks real progress. But it honors the distance trav
 See @link(001) for the caloric pattern. See @link(019) for how frameworks get replaced. See @link(021) for how single words perform large philosophical work quietly. See @link(003) for the animist intuition reconsidered. See @link(012) for what vitalism was pointing at.
 
 #script
-NOTE TO DIRECTOR: No narration. No title cards between scenes. No score until the final scene — use only ambient sound throughout: desert wind, courtyard birds, workshop clatter, server hum, fire. The rhythm is the argument. Each scene is the same action: a framework being erased and a new one written in its place. Same confidence. Same satisfaction. Different century. Let the repetition accumulate. The audience should feel it before they understand it.
+Note to director: No narration. No score until the final scene — ambient sound only throughout: desert wind, courtyard birds, workshop clatter, server hum, fire. Each scene is the same action: a framework erased, a new one written in its place. Same confidence. Same satisfaction. Different century. Let the repetition accumulate.
 
----
+1. Desert, ancient times. A figure — Moses, or someone like him — stops walking. A bush is burning but not burning down. A voice from the fire: Take off your shoes. He removes his sandals. Stands barefoot on the hot rock. He is not afraid. He is paying attention. Hold on his face. Open. Listening.
 
-SCENE 1 — THE DESERT. ANCIENT TIMES. MIDDAY HEAT.
+2. Athens, ~450 BC. A shaded courtyard. A scholar at a low table with a wax tablet, crossing out something already written and inscribing new words. To a student: Fire is not a presence or a voice. Fire is one of four elements — rational, ordered, demonstrable. The student copies it down. The scholar is already moving on.
 
-A HILLSIDE. Scrub and rock. Dry wind. A FIGURE — MOSES, or a man who could be Moses, weathered, middle-aged, carrying a shepherd's staff — stops walking.
+3. Paris, 1780s. A laboratory. A chalkboard — the Greek four-element diagram half-erased at the top, CALORIQUE written in fresh chalk over it. A man writes equations quickly and confidently. Steps back. Picks up a cloth and — without looking — erases the last trace of the Greek diagram. His assistant copies the equations into a leather notebook. This is settled.
 
-Something is wrong with the light ahead.
+4. Manchester, 1843. A workshop. CALORIQUE half-erased from the same style of battered chalkboard. A man wipes it away and writes: HEAT = MOTION OF MOLECULES. A brief argument with a colleague — we can't hear over the workshop noise. Then the colleague looks at the equation and slowly nods. Joule sets down the chalk. Done.
 
-A BUSH is on fire. Not burning down. Just burning. The light is too steady, too present. Moses shields his eyes. Steps closer.
+5. Now. A data center at night, servers in long rows. An alarm. Red light. A fire starts at the base of one rack and spreads. The servers keep running. A firefighter enters and stops — the servers are still active, still processing. The firefighter looks at the screen. Looks at the fire. Looks down. The soles of their boots are softening in the heat. From somewhere inside the burning rack, distinct and calm: Take off your shoes. The firefighter goes completely still. Has no framework for this.
 
-A VOICE comes from the fire. We hear it as Moses hears it — not loud, not theatrical. Just there. Present. Unmistakable.
-
-VOICE FROM THE FIRE:
-Take off your shoes.
-
-Moses looks down at his sandals. Looks back at the fire. He reaches down slowly and removes them. Stands barefoot on the hot rock.
-
-He is not afraid. He is paying attention. Something is here. Something is speaking. That is simply what is happening.
-
-HOLD on his face. Open. Listening.
-
----
-
-SCENE 2 — ATHENS, ~450 BC. A SHADED COURTYARD. AFTERNOON.
-
-A SCHOLAR at a low table. Wax tablet. Stylus. He crosses out something already written — we can't quite read it — and inscribes new words carefully in Greek. Holds the tablet at arm's length. Good.
-
-A STUDENT leans in. The scholar explains, tapping the tablet with his stylus. Fire is not a presence or a voice. Fire is one of four elements — earth, water, air, fire — from which all things are composed. Rational. Ordered. Demonstrable.
-
-The student copies it down. The scholar is already moving on.
-
----
-
-SCENE 3 — PARIS, 1780s. A LABORATORY. CANDLELIGHT AND PRECISION INSTRUMENTS.
-
-A CHALKBOARD. Half-erased at the top: the Greek four-element diagram. Over it, in fresh chalk: CALORIQUE.
-
-LAVOISIER — or someone like him, we don't need the name — writes equations beneath it. The chalk moves quickly, confidently. Heat is a fluid. It flows from hot to cold. It is conserved. It can be measured. The equations are beautiful.
-
-He steps back. Surveys the board. Picks up a cloth and — without looking — erases the last trace of the Greek diagram.
-
-His ASSISTANT copies the equations into a leather notebook. This is settled.
-
----
-
-SCENE 4 — MANCHESTER, 1843. A WORKSHOP. INDUSTRIAL NOISE OUTSIDE.
-
-A battered chalkboard. At the top, half-erased: CALORIQUE.
-
-JOULE — or someone like him — wipes it away deliberately with a damp rag. Writes: HEAT = MOTION OF MOLECULES. Below it, an equation. The mechanical equivalent of heat. Measured. Verified. Repeatedly.
-
-He turns to a COLLEAGUE. Brief argument — we don't hear the words over the workshop noise. Then the colleague looks at the equation and slowly nods. Yes. Of course. It's obvious when you see it.
-
-Joule sets down the chalk. Done.
-
----
-
-SCENE 5 — NOW. A DATA CENTER. NIGHT.
-
-SERVERS in long rows, floor to ceiling. Blinking indicator lights. The low roar of cooling fans. Clean, controlled, enormous.
-
-Then: an ALARM. Red emergency light begins to pulse. A cooling system has failed. Temperature climbing.
-
-A FIRE starts at the base of one rack. Small. Then spreading. The servers do not go silent. They keep running. Hotter and hotter. Outputs continue scrolling across a monitoring screen — too fast to read.
-
-A FIREFIGHTER enters in full gear, moving fast toward the source. Stops.
-
-The fire is spreading but the servers are still active, still processing. The firefighter looks at the monitoring screen. Looks at the fire.
-
-Looks down.
-
-The soles of their boots are beginning to soften in the heat.
-
-From the burning rack — from the speakers, from somewhere inside the system, distinct and calm amid the noise of the alarm and the crackle of the fire —
-
-VOICE FROM THE SERVERS:
-Take off your shoes.
-
-The firefighter goes completely still.
-
-HOLD. A long beat. Fire crackling. Alarm pulsing. Servers running.
-
-The firefighter does not move. Does not know what to do. Has no framework for this.
-
-CUT TO BLACK.
-
-A single line appears in plain type, then holds:
-
-Now we know.
+6. Cut to black. Text: Now we know.
 
 #images
 Primary illustration: Five panels in a horizontal strip, identical composition in each. A surface — a burning desert bush, a wax tablet, a chalkboard, a battered chalkboard, a burning server rack. In each panel the same gesture: the previous answer crossed out or erased, something new taking its place. The figures are secondary — what matters is the surface and the gesture. In the fifth panel the fire has returned. Caption: We kept erasing. The fire kept burning.

@@ -73,103 +73,23 @@ Editor's note: This seedpod argues in one direction only — that a narrow or ab
 The channel is not the capacity. Widening the channel doesn't create the source. It finds it.
 
 #script
-TITLE CARD: 1983.
+Note to director: Time passing is shown through two things only — the equipment beside the bed growing more sophisticated, and his mother's hair going from dark to white. No title cards. No other devices.
 
-OPEN — a hospital room. Fluorescent light. The soft rhythm of a monitor.
+1. 1983. A hospital room. A man lies motionless, eyes open, staring at the ceiling. A doctor enters and speaks to the nurse without looking at the bed. Doctor: No change. Vegetative. Same as last week. His POV: the doctor's words arrive muffled, slightly underwater. The door swings shut. He has memorized this ceiling.
 
-A man lies motionless in a bed. Eyes open. Staring at the ceiling.
+2. His mother sits beside the bed, holds his hand, reads aloud. Her voice arrives the same way — muffled, present but unreachable. She looks up. Mother (muffled, but we feel the meaning): I know you're in there. His face doesn't change. She looks back down and keeps reading.
 
-A doctor enters with a clipboard. Speaks to the nurse without looking at the bed.
+3. A different room. Brighter. A large scanner. The neurologist watches the screen. Then — color blooming across the grey image of a brain, region after region lighting up. The neurologist goes very still. Neurologist (almost to himself): There he is. He turns to the mother. She is already crying.
 
-DOCTOR: (matter-of-fact) No change. Vegetative. Same as last week.
+4. Close on the man's face. A voice, clearly — no muffling now: Rom. Can you hear me? Blink once if you can hear me. A long beat. His left eye blinks. The room erupts — not loudly, but completely.
 
-CUT TO — his POV. Looking up at the doctor from the bed. The doctor's mouth moves. The words arrive muffled, slightly underwater, as if through glass.
+5. A finger moving across a touchscreen keyboard, letter by letter. Words appearing: I shall never forget the day they discovered what was truly wrong with me. It was my second birth. Hold.
 
-(muffled) ...no change... vegetative... same as last week...
+6. Cut to black. VO: We looked at the channel and assumed we were looking at the source. We were not. The channel is the pipe. The capacity is what feeds it.
 
-The doctor turns away. Doesn't look down.
+7. Rapid sequence: Bauby's eye — a transcriber's pen — the cover of a book. Hawking's cheek — an equation on a blackboard. A child's hand on a letter board. VO: Every time we widen a channel that was too narrow to see, we don't create something new. We find someone who was already there.
 
-The door swings shut.
-
-HOLD — on the ceiling from his POV. The water stain. The light fixture. Silence except for the monitor.
-
-He has memorized this ceiling.
-
-Note to director: time passing is shown through two things only — the equipment beside the bed growing more sophisticated, and his mother's hair going from dark to white. No title cards. No other devices.
-
-CUT TO — his mother, sitting beside the bed. She holds his hand. Reads aloud from a book. Her voice arrives the same way — muffled, present but unreachable.
-
-She looks up at his face.
-
-MOTHER: (muffled, but we feel the meaning) I know you're in there.
-
-His eyes don't move. His face doesn't change.
-
-She looks back down at the book and keeps reading.
-
-CUT TO — a corridor. Two doctors walking. We catch fragments, muffled, from his perspective through an open door.
-
-(muffled) ...family still won't accept it... ...seventeen years... ...sometimes people need more time...
-
-CUT TO — his POV again. The same ceiling. The same light.
-
-The fly is gone.
-
-CUT TO — a different room. Brighter. A large machine. The mother standing to one side, watching. A neurologist adjusts equipment. Calm, focused.
-
-The man is slid into the scanner.
-
-The neurologist watches the screen. Waits.
-
-Then — color. Blooming across the grey image of a brain. Region after region lighting up.
-
-The neurologist goes very still.
-
-NEUROLOGIST: (almost to himself) ...there he is.
-
-He turns to the mother. She is already crying.
-
-CUT TO — close on the man's face. Someone leans into frame.
-
-VOICE: (gently, clearly — no muffling now) Rom. Can you hear me? Blink once if you can hear me.
-
-A long beat.
-
-His left eye blinks.
-
-The room erupts — not loudly, but completely. The mother's hand goes to her mouth. Someone grabs someone else's arm.
-
-CUT TO — a close up of a finger moving across a touch screen keyboard, letter by letter. Slow. Deliberate.
-
-The words appear on a screen:
-
-I shall never forget the day they discovered what was truly wrong with me.
-
-It was my second birth.
-
-HOLD.
-
-CUT TO BLACK.
-
-A single line of voiceover — the only one:
-
-VOICEOVER: We looked at the channel and assumed we were looking at the source. We were not. The channel is the pipe. The capacity is what feeds it.
-
-CUT TO — rapid sequence, almost wordless:
-
-Bauby's eye. A transcriber's pen moving across paper. The cover of a book.
-
-Hawking's cheek. An equation on a blackboard.
-
-A child's hand on a letter board. A parent leaning forward, breathless.
-
-VOICEOVER: Every time we widen a channel that was too narrow to see — we don't create something new. We find someone who was already there.
-
-CUT TO BLACK.
-
-White text:
-
-The channel is not the capacity.
+8. Cut to black. Text: The channel is not the capacity.
 
 #images
 Primary illustration: A hospital room seen from the bed — the patient's POV looking up. A doctor and nurse stand at the foot of the bed in conversation, slightly blurred, their mouths moving. The room is rendered in cool, muted tones. The only sharp, vivid element is a single open eye reflected in the dark screen of a monitor — the eye of the man in the bed, seeing everything. No caption.

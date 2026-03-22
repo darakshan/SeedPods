@@ -56,19 +56,13 @@ Richard Feynman's Lectures on Physics@ref(feynman, "Feynman, R. The Feynman Lect
 #term Diffraction: the spreading and interference of waves when they pass through a gap or around an obstacle. Visible when light passes through a mesh screen. Evidence that light is a field phenomenon, not a particle traveling a straight path.
 
 #script
-SKELETON ONLY — not ready to draft.
+1. A summer night. A child on a porch, pressing her face against a screen door. A rhythmic, unidentifiable sound from inside — dim room beyond. Her body already receiving before she can resolve what it is.
 
-Setting: A summer night. A child on a porch. A screen door between her and the interior of the house.
+2. She retrieves her flashlight and shines it through the screen door. The mesh diffracts the beam — an interference pattern spreads across the far wall.
 
-Opening: The child hears a sound from inside — rhythmic, unidentifiable in the dark. She is outside, the room behind the screen is dim. She presses her face against the mesh, trying to see. Her body is already receiving — sound, faint warmth, maybe movement — before she can resolve what it is. This is the field carrying information before the light confirms anything.
+3. Inside, in the warm light: her grandmother in a rocking chair. The source of the sound. A presence continuously radiating, whether detected or not.
 
-Pivot: She retrieves her flashlight and shines it through the screen door. The mesh diffracts the beam — a visible interference pattern spreads across the far wall. Real physics, happening in the drama. Inside, in the warm light: her grandmother in a rocking chair. The source of the sound. Not a threat — a presence that was always there, continuously radiating, whether detected or not.
-
-Closing image: The interference pattern on the wall. Held.
-
-Voiceover: One line only, at the close. Not yet written — needs to land on the continuity between the light, the diffraction, and the seeing. The circuit completing.
-
-Open questions: What is the grandmother doing that produces an interesting sound? What is the child's age and situation? Does the screen door open? Does the whole film happen at the threshold?
+4. The interference pattern on the wall. Held. VO: [One line — the continuity between the light, the diffraction, and the seeing. The circuit completing. TBD.]
 
 #images
 Primary illustration: A screen door at night, seen from outside. Through the mesh, warm interior light and the suggestion of a figure in a rocking chair. The mesh itself is rendered with enough detail to show its grid structure — the diffraction grating that the drama will activate. The outside is dark blue; the inside is amber. The threshold is the image.

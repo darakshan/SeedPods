@@ -47,41 +47,15 @@ Evan Thompson's Mind in Life@ref(thompson, "Thompson, E. Mind in Life. Biologica
 #term Prediction: used here in the broadest sense: any process that selects a next state given a current one. Deliberately spans thermostats and minds.
 
 #script
-[A Victorian street fair. Noise, crowds, torchlight.]
+1. A Victorian street fair. A barker beside an ornate brass-fitted box — gears, drum, levers visible through glass. Barker: Ladies and gentlemen — the most extraordinary musical intelligence in the known world! It predicts what comes next with uncanny precision!
 
-[A BARKER stands beside an ornate wooden box, brass-fitted, the size of a trunk. A drum turns slowly inside a glass panel. Gears. Levers. Everything visible.]
+2. A child pulls at an intellectual's sleeve. Child: What is it? Is it alive? Intellectual: Look — you can see the mechanism. It reads the pattern and produces the next note. It's just a machine predicting its output. The music is irrelevant.
 
-BARKER: (expansive, theatrical)
-Ladies and gentlemen — the most extraordinary musical intelligence in the known world! It anticipates! It responds! It *predicts* what comes next with uncanny precision!
+3. The barker catches the intellectual's eye. Smiles slowly. Barker: Shall we open it then?
 
-[A CHILD pulls at an INTELLECTUAL's sleeve.]
+4. The door swings wide. Inside: a small disheveled man at a fortepiano. He looks up, blinking in the sudden light. Silence. Then — Mozart's laugh. That laugh. Filling the room.
 
-CHILD: What is it? Is it alive?
-
-INTELLECTUAL: (patient, slightly superior)
-No no. Look — you can see the mechanism. That drum, those pins, those levers. It reads the pattern and produces the next note. Perfectly explicable. It's just a machine predicting its output.
-
-CHILD: But the music —
-
-INTELLECTUAL: The music is irrelevant. What matters is the process. And the process is entirely mechanical. It's just prediction. Nothing more.
-
-[The BARKER catches the intellectual's eye. Smiles slowly.]
-
-BARKER: Shall we open it then?
-
-[A latch clicks. The door swings wide.]
-
-[Inside: a small disheveled figure at a fortepiano. He looks up, blinking in the sudden light.]
-
-[SILENCE.]
-
-[Then —]
-
-[Mozart's laugh. That laugh. Filling the theatre.]
-
-[FADE TO BLACK.]
-
-The output tells you nothing.
+5. Fade to black. Text: The output tells you nothing.
 
 #images
 Primary illustration

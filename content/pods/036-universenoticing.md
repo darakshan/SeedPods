@@ -17,7 +17,11 @@ Whitehead@ref(whitehead, "Whitehead, A.N. — Process and Reality, prehension, t
 @note(Teilhard and Whitehead were near-contemporaries. No documented direct exchange. Teilhard's major works suppressed by the Church, circulating only in manuscript. The synthesis had to wait.)
 
 #script
-Open on the cosmic microwave background — the earliest light, nearly uniform, nearly featureless. Pull forward through time. Galaxies forming. Stars. A planet. A cell. An eye opening. Hold on the eye. This is not the end of a story about matter. This is matter reaching a threshold it was always approaching. Cut to: the same eye, looking up at the cosmic microwave background on a screen. The universe looking at its own baby picture.
+1. The cosmic microwave background — the earliest light, nearly uniform, nearly featureless. Pull forward through time: galaxies forming, stars, a planet, a cell, an eye opening.
+
+2. Hold on the eye. This is not the end of a story about matter. This is matter reaching a threshold it was always approaching.
+
+3. The same eye, looking up at the cosmic microwave background on a screen. The universe looking at its own baby picture.
 
 #images
 Cosmic microwave background map

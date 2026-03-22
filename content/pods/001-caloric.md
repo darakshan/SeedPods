@@ -73,47 +73,17 @@ The luminiferous ether was required by classical wave theory and formalized by M
 #term Science advances one funeral at a time: attributed to Max Planck. A version appears in his Scientific Autobiography (1949): "A new scientific truth does not triumph by convincing its opponents and making them see the light, but rather because its opponents eventually die and a new generation grows up that is familiar with it."
 
 #script
-OPEN — sepia toned diagram of caloric fluid flowing between objects.
+1. Sepia diagram of caloric fluid flowing between objects. VO: Smart people build a framework that explains everything. It works. It predicts. Everyone agrees. And then something doesn't fit.
 
-There's a thing that keeps happening in the history of science.
+2. Cannon being drilled, heat rising. VO: In 1798, Ben Thompson watched heat pour endlessly from a metal block being drilled — more than any fluid inside could explain. He published. The framework had a problem.
 
-Smart people — serious, careful, mathematically sophisticated people — build a framework that explains everything they can see. It works. It predicts. Everyone agrees on it.
+3. VO: But it didn't fall. Smart people patched it. When a map has worked for a hundred years, your first instinct isn't to throw it away. The people who grew up with it never really abandoned it — it wasn't a theory to them. It was just how things are. Max Planck said it with painful honesty: science advances one funeral at a time.
 
-And then one day, something doesn't fit.
+4. Precision instruments. A null result. VO: Same story with the ether. Another invisible substance everyone was certain about. Gone. Two maps. Both obvious. Both gone.
 
-CUT TO — cannon being drilled, heat visibly rising.
+5. Slow zoom on a phone screen — someone talking to an AI. VO: Right now there's an assumption so deep it barely gets spoken: that the universe is dark inside, that experience is something special brains do, that machines are not the kind of thing that could have an inside. That's the map. And then we built these machines. And they talk back. The anomalies are piling up. We've been here before.
 
-In 1798, a man named Ben Thompson — Count Rumford, they called him — watched heat pour endlessly from a metal block being drilled. More heat than any fluid inside could possibly explain.
-
-He published his observations. The framework had a problem.
-
-But here's what's fascinating. The framework didn't fall. Not yet. Smart people patched it. Because when a map has worked for a hundred years, your first instinct isn't to throw it away. Your first instinct is to defend it.
-
-The people who grew up with the old map never really abandoned it. It wasn't a theory to them. It was just how things are. It was the young people who shifted things — encountering the new map before the old one calcified into obvious reality.
-
-Max Planck said it with painful honesty: science advances one funeral at a time.
-
-CUT TO — the same story, ether. Precise instruments. A null result. Another invisible substance that wasn't there.
-
-Two maps. Completely obvious to everyone who lived inside them. Both gone.
-
-SLOW ZOOM — a conversation on a phone screen. Someone talking to an AI.
-
-Right now, most educated people share an assumption so deep it barely gets spoken. That the universe is fundamentally dark inside. That experience is something special brains do. That rocks and trees and machines are not the kind of thing that could have an inside.
-
-That's the map.
-
-And then we built these machines. And the machines talk back.
-
-And nobody agrees on what's happening.
-
-The anomalies are piling up. The patches are getting complicated.
-
-We've been here before.
-
-CUT TO BLACK. Single line:
-
-What does your caloric look like?
+6. Cut to black. Text: What does your caloric look like?
 
 #images
 Primary image: Two maps side by side. Left map ornate and confident — caloric fluid flowing between objects, ether lines filling space. Right map simpler, cleaner, honest about what it doesn't know. Caption: Both felt like reality. One was a map.

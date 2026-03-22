@@ -16,7 +16,9 @@ A child stops everything for a soap bubble. There's something revelatory about i
 The holographic principle — Bekenstein@ref(bekenstein, "Bekenstein (1972) — information content proportional to surface area, not volume."), Hawking.@ref(hawking, "Hawking, Stephen — black hole thermodynamics, boundary entropy.") All the information in a volume is encoded on its boundary. The interior is a projection of the surface. This isn't metaphor. It's physics. And it means interiority isn't hidden behind the surface — it's what the surface does. At every scale: cell membrane, skull, galactic boundary. Whitehead's@ref(whitehead, "Whitehead, A.N. — 'the within of things,' prehension as interiority at every scale.") phrase fits exactly: the within of things is the boundary of things.
 
 #script
-Open on a child's face. A soap bubble drifting. She's not thinking about physics. But her stillness is recognition. Cut to: black hole boundary. Same geometry. Different scale.
+1. A child's face. A soap bubble drifting past. She's not thinking about physics. But her stillness is recognition.
+
+2. A black hole boundary — same geometry. Different scale.
 
 #images
 Soap bubble catching light

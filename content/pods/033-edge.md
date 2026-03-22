@@ -19,7 +19,11 @@ The Mandelbrot set has an inside and an outside. The inside is stable — points
 The bulbs of the Mandelbrot@ref(mandelbrot, "Mandelbrot, Benoit — fractal geometry, the boundary between order and chaos.") set appear at positions governed by the Farey sequence@ref(farey, "Farey sequence — rational numbers ordered by denominator size, governing bulb positions.") and Stern-Brocot tree — the same mathematics that governs musical consonance. The 1/2 bulb corresponds to the octave. The 1/3 bulb to the fifth. Stability under iteration justifies music — and justifies Pythagoras's@ref(pythagoras, "Pythagoras — consonance as simple integer ratios, now understood as stability under iteration.") ancient observation that the consonant intervals correspond to simple ratios. Each bulb sprouts branching structures whose branching number equals the bulb's period — the complexity of the resonance determines the complexity of the choices that emerge from it. Those branches are bifurcations. Each bifurcation is a world-split in Everett's@ref(everett, "Everett (1957) — bifurcations at the boundary as world-splits.") sense. The entire fractal boundary is a map of possibility space — the holographic surface between the stable interior and the infinite branching exterior. Consciousness may be what it feels like to be a point on that boundary.@ref(stern-brocot, "Stern-Brocot tree — the complete ordered tree of rational numbers, mediating consonance and bulb structure.")
 
 #script
-Zoom into the Mandelbrot boundary. Deeper. Deeper. It never resolves. At every scale the same complexity returns. Cut to: a coastline from a plane. Then from space. Then a neuron branching. The camera asks: is this the same thing? It is.
+1. Zoom into the Mandelbrot boundary. Deeper. Deeper. It never resolves. At every scale the same complexity returns.
+
+2. A coastline from a plane. Then from space. Then a neuron branching.
+
+3. The camera asks: is this the same thing? It is.
 
 #images
 Mandelbrot boundary zoom sequence

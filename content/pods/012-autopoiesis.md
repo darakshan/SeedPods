@@ -73,39 +73,19 @@ Prigogine's dissipative structures work@ref(prigogine, "Prigogine, I. and Stenge
 @note(dissipative structure deserves a full #term entry — best home is @link(007) where quantum field and thermodynamic order meet.)
 
 #script
-MUSIC NOTE: Opens with a single sparse theme — low, unresolved, patient. As the breathing from the bed intensifies, the theme builds in tension without releasing. A brief sting at the cut — sharp, not melodramatic. During the zoom into the cell, the music becomes dense and quickening, something between wonder and urgency, the same harmonic material transformed. As we zoom back out, it thins and returns to the opening theme — the same notes, but settled now, as if the question has not been answered but has been befriended. No resolution. Just a quieter version of the same patience.
+Note to composer: Opens sparse and low, unresolved. Builds with tension as the wound appears. Dense and urgent during the cell zoom. Returns to the opening theme at the end — same notes, but settled. No resolution. Just a quieter patience.
 
-OPEN ON — a room. Night. A bed. A person in the chair beside it, keeping vigil. On the nightstand, a candle burns. Through the window, a river, just visible.
+1. Night. A room. A candle burning on a nightstand. Through the window, a river. A person in a chair keeping vigil beside a bed. Labored breathing from the bed. Hold on the candle — its shape constant, though everything making it up is consumed second by second. Pan to the river — its shape constant, though the water is already gone. Text: Everything that holds its shape does so by constantly giving way.
 
-From the bed, labored breathing. A sound the director will know.
+2. The person presses a fingernail into their thumb. Watches the white crescent. Watches the blood come. Music sting.
 
-HOLD on the candle. Its shape perfectly constant — though everything that makes it up is consumed and replaced, second by second. PAN SLOWLY to the window. The river holds its shape too. The water is gone the moment it arrives. The shape remains.
+3. Zoom in through the skin — molecular machines at impossible speed in impossible density. The wound boundary already swarming with repair. The loop defending itself before it was asked to. Hold on the storm. Let it be beautiful.
 
-TEXT APPEARS over the candle and river, both in frame:
+4. Zoom back out to the thumb. The crescent fading. Skin reasserting its boundary. The breathing from the bed continues — or has stopped. The director will know. The person does not move.
 
-Everything that holds its shape does so by constantly giving way.
+5. Slow pan: candle, river, their hand. Still. Moving. Holding.
 
-TEXT FADES.
-
-RETURN to the person in the chair. They are looking at their own hand resting on the bed beside the one who is still breathing, barely. They press a fingernail into their thumb. Watch the white crescent. Watch the blood come. Whatever is on their face, we do not explain it.
-
-MUSIC STING.
-
-ZOOM IN — through the skin, into the storm. Molecular machines moving at impossible speed in impossible density. The boundary of the tiny wound already swarming with repair. The loop defending itself before it was asked to.
-
-HOLD on the storm. Let it be beautiful.
-
-ZOOM OUT — back to the thumb. The crescent fading. Skin reasserting its boundary.
-
-The breathing from the bed continues. Or it has stopped. The director will know.
-
-The person in the chair does not move.
-
-SLOW PAN — candle, river, their hand, all in frame or in sequence. Still. Moving. Holding.
-
-FADE TO BLACK. Text appears:
-
-Three billion years ago, something figured out how not to stop.
+6. Fade to black. Text: Three billion years ago, something figured out how not to stop.
 
 #images
 Primary illustration: The vigil room, rendered as a single still. Candlelight. The river through the window. A hand resting on a bed. Everything holding its shape. In the corner or as an inset, a circular diagram — not clinical, more like a mandala — showing the autopoietic loop: components producing the process, the process producing the components, the boundary containing both. The two images — the room and the diagram — rhyme without explaining each other.

@@ -83,25 +83,25 @@ A related but distinct phenomenon — what happens when formal complexity genera
 #term Society of actual occasions: Whitehead's term for a stable pattern of events organized around a common characteristic that persists through time. Ant colonies, cities, brains, and neural networks are all societies in this sense.
 
 #script
-NOTE ON MUSIC: Gershwin's Rhapsody in Blue (1924, public domain) is the tonal reference — its movement between pastoral spaciousness and dense urban energy mirrors the script's arc exactly. Use a public domain recording, commission a new performance, or compose something in that spirit.
+Note to composer: Gershwin's Rhapsody in Blue is the tonal reference — pastoral opening, then building to urban stride, then settling back.
 
-1. OPEN on a child outdoors on a hillside, following a single ant along the ground. Camera at ant level. Near silence — wind, grass, faint city hum in the distance. The pastoral opening of the music.
+1. A child on a hillside, following a single ant along the ground. Camera at ant level. Near silence.
 
-2. The child tracks the ant all the way to the ant hill. Stops. Looks. The music holds.
+2. The child tracks the ant to the hill. Stops. Looks.
 
-3. CUTAWAY into the hill — tunnels, chambers, organized activity rendered with warmth and precision. The colony doing things no ant decided. The music begins to build.
+3. Inside the hill: tunnels, chambers, organized activity. The colony doing things no ant decided. Music builds.
 
-4. THE SPLIT SHOT: cutaway ant hill on the bottom half of the frame, aerial city on the top half. The layouts mirror each other almost exactly — tunnels/streets, chambers/neighborhoods, ants/cars and people moving with identical patterns. Played with a light touch. The joke and the music's urban stride land together. Hold just long enough.
+4. Split shot: the ant hill cross-section on the bottom half of the frame, an aerial city on the top half. The layouts mirror each other — tunnels/streets, chambers/neighborhoods, ants/cars. Hold just long enough for the joke to land.
 
-5. Back to the child at the hill. The music settles. Quiet again.
+5. Back to the child at the hill. Music settles. Quiet.
 
-6. The hill's surface slowly, almost imperceptibly, resolves into a face. Aunt Hillary. Not scary — curious, old, amused.
+6. The hill's surface slowly resolves into a face — Aunt Hillary. Curious, old, amused.
 
-7. The child leans in and asks something. [NOTE TO WRITER: find the line a real child would actually say to an ant hill it suddenly suspected was alive. Simple enough to be funny, deep enough to carry the whole seedpod. Do not force it now.]
+7. The child leans in and asks something. [Line TBD — something a real child would say to an ant hill it suddenly suspects is alive.]
 
-8. Aunt Hillary laughs — not a human laugh, something that comes from everywhere at once, from all the tunnels simultaneously. The laugh is the final musical note. One note. Held.
+8. Aunt Hillary laughs — not a human laugh, something from all the tunnels at once. One note. Held.
 
-9. PULL BACK to the single ant crossing the ground. Unremarkable. Knowing nothing. Silence.
+9. Pull back to a single ant crossing bare ground. Knowing nothing. Silence.
 
 #images
 Primary illustration: The split shot as a static image. Bottom half: a cross-section of an ant hill — tunnels, chambers, ants moving with purpose, rendered with scientific precision but warm in color. Top half: an aerial view of a city grid — streets, intersections, people and cars. The layouts mirror each other almost exactly. No caption. The image is the argument.

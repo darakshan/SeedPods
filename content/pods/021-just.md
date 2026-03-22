@@ -47,51 +47,13 @@ Note for revision: find a better Ryle example — the ghost in the machine may b
 
 
 #script
-[A casual food place. Two YOUNG MEN at a table. Trays, drinks, the usual noise.]
+1. A casual food place. Two young men at a table. A woman walks up to the counter; she doesn't notice them. Danny goes still, then puts his head down on his arms. Danny: I am so in love with her. And she doesn't even see me. Marcus puts a hand on his shoulder. Marcus: Hey. It's just a crush. You'll be fine.
 
-[A BEAUTIFUL WOMAN walks up to the counter. She doesn't notice them.]
+2. Slow push in on Danny's face. VO: Notice what just happened. Marcus was kind. Probably even right. But that word — just — didn't explain the feeling. It dismissed it. It said: we have named this thing, therefore we have accounted for everything worth accounting for. That claim was never argued. One small word made it, quietly, while nobody was looking.
 
-[DANNY stops mid-sentence. Stares. Something happens to his face.]
+3. Rapid cuts — different voices, different moments. A person sobbing over a dog: It's just a dog. You can get another one. Two people staring at a strange coincidence: It's just a coincidence. VO: Every time — that word, in that role — ask yourself: has anything actually been explained? Or did "just" do all the work while nobody was watching?
 
-[He puts his head down on his arms on the table.]
-
-DANNY: (muffled, genuine)
-I am so in love with her. And she doesn't even see me.
-
-[MARCUS watches him for a moment. Then puts a hand on his shoulder.]
-
-MARCUS: (kindly, gently)
-Hey. Come on. It's just a crush. You'll be fine.
-
-[SLOW PUSH IN on Danny's face, still buried in his arms.]
-
-VOICEOVER: Notice what just happened.
-
-Marcus was kind. Marcus meant well. And what he said was probably even true.
-
-But that word — *just* — did something neither of them noticed. It didn't explain the feeling. It dismissed it. It said: we have named this thing, therefore we have accounted for everything worth accounting for.
-
-That claim was never argued. One small word made it, quietly, while nobody was looking.
-
-VOICEOVER: Listen for it. It's everywhere.
-
-[RAPID CUT — different voices, different moments.]
-
-[A person sobbing over a dog. A friend's arm around them.]
-FRIEND: It's just a dog. You can get another one.
-
-[Two people staring at something strange — the same dream, the same number appearing again and again. One turns to the other.]
-FRIEND: It's just a coincidence.
-
-VOICEOVER: Every time — that word, in that role — ask yourself:
-
-Has anything actually been explained?
-
-Or did "just" do all the work while nobody was watching?
-
-[CUT TO BLACK.]
-
-Next time someone says "just" — ask what it's hiding.
+4. Cut to black. Text: Next time someone says "just" — ask what it's hiding.
 
 #images
 Primary illustration

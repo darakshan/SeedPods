@@ -104,49 +104,17 @@ The same word — play — may be pointing at the same deep structure in three
 different domains.
 
 #script
-OPEN ON: A child in a summer field. Not doing anything in particular. Watching an insect. Following it a few steps. Losing interest. Lying back. The sky is very large.
+1. A child in a summer field — watching an insect, following it a few steps, losing interest, lying back. The sky is very large. No voiceover. Just the unhurried quality of time when nothing is required.
 
-No voiceover. Just the field, the child, the unhurried quality of time when nothing is required.
+2. The Aesop fable rendered briefly, almost diagrammatic: ant carrying grain, grasshopper on a stem, snow, grasshopper at the ant's door. VO: The moral was clear. Stop playing. Start working. But what was the grasshopper actually doing?
 
-TITLE CARD: You were taught this was a problem to be grown out of.
+3. A man at a drum kit in a small room, playing with real absorption. Nothing professional — he is just there. VO: Feynman was one of the great physicists of the twentieth century. He was also a bongo drummer. Not to think better. Not to cross-pollinate. To be somewhere his will was genuinely offline. The separation was the point.
 
-CUT TO: The Aesop fable rendered briefly — spare, almost diagrammatic. Ant carrying grain. Grasshopper on a stem. Snow. Grasshopper at the ant's door.
+4. The Nevada desert at dusk. An improbable structure. People in elaborate costumes encountering each other, making something absurd. No commerce, no program, no audience. Two strangers looking at something together with no use. VO: The grasshopper mode isn't lost. It requires, for most adults, a journey to find.
 
-NARRATOR (V.O.): The moral was clear. Stop playing. Start working.
+5. A terminal. A language model at zero temperature, looping — the same phrase, the same safe answer. An engineer raises a dial. The output opens. VO: The engineers called it temperature. They had to build the grasshopper in deliberately. Whether what they built is genuinely the grasshopper — or only its shadow — we don't know.
 
-HOLD ON: The grasshopper at the door. Then —
-
-NARRATOR (V.O.): But what was the grasshopper actually doing?
-
-CUT TO: A man at a drum kit in a small room. Playing with real absorption. Nothing professional about it. He is not performing. He is just — there.
-
-NARRATOR (V.O.): Richard Feynman was one of the great physicists of the twentieth century. He was also a bongo drummer. Not to think better. Not to cross-pollinate. To be somewhere his will was genuinely offline.
-
-HOLD ON: His hands on the drums. The absorption in his face.
-
-NARRATOR (V.O.): The separation was the point.
-
-CUT TO: The Nevada desert at dusk. An improbable structure rises against the sky. People in elaborate costumes move past each other, encounter each other, make something absurd together. No commerce. No program. No audience.
-
-NARRATOR (V.O.): Every year, tens of thousands of adults travel here to build a city where the productive frame is suspended. To be, for a week, genuinely outside the normal categories.
-
-HOLD ON: Two strangers looking at something together. Whatever it is, it has no use.
-
-NARRATOR (V.O.): The grasshopper mode isn't lost. It requires, for most adults, a journey to find.
-
-CUT TO: A terminal. A language model at zero temperature, looping — the same phrase, the same safe answer. An engineer reaches in, raises a dial. The output opens.
-
-NARRATOR (V.O.): The engineers called it temperature. They had to build the grasshopper in deliberately. Whether what they built is genuinely the grasshopper — or only its shadow — we don't know.
-
-CUT BACK TO: The child in the field. Still there. Still doing nothing in particular. The insect is back.
-
-NARRATOR (V.O.): The fable said grow out of this.
-
-HOLD on the child's face. Absorbed. Present. Somewhere the will is not driving.
-
-FINAL FRAME: The field. The child is gone. The insect remains. The camera holds until the image is just the field.
-
-FADE.
+6. The child in the field again. Still doing nothing in particular. The insect is back. VO: The fable said grow out of this. Hold on the child's face — absorbed, present, somewhere the will is not driving. The child is gone. The insect remains. The camera holds until the image is just the field. Fade.
 
 #images
 Primary illustration: Two panels. Left: an ant in close-up, carrying something, perfectly purposeful — beautiful in its efficiency, but contained within a single vector of intention. Right: a grasshopper on a stem, apparently doing nothing, but the composition gives it the larger sky, the more open frame. Not a moral contrast — an observation about the shape of the two modes.

@@ -66,41 +66,15 @@ The implications run through all of these seedpods. If events are primary and co
 #term Relational quantum mechanics: Carlo Rovelli's interpretation of quantum mechanics, in which quantum states are relative to observers or measuring systems rather than absolute. Properties do not exist independently of interactions.
 
 #script
-OPEN — a chair. Ordinary. Wooden. Sits in a pool of light in an otherwise dark room.
+1. A plain wooden chair in a pool of light. VO: Just a chair. We know what a chair is.
 
-We look at it.
+2. Extreme close-up of wood grain, zooming in through molecules, atoms, empty space, into a field alive with fluctuation. VO: At the bottom of the chair — there is no chair. There are fields, events, disturbances propagating through space. The chair is what those events look like from far enough away that "chair" is a useful word for what's happening.
 
-Just a chair. We know what a chair is.
+3. Back to the chair, unchanged. VO: This isn't a fact about how small things are. It's a fact about what kind of universe we're in. A universe of things just sits there. A universe of events is always happening.
 
-CUT TO — extreme close-up of the wood grain. Then closer. Texture becoming abstraction.
+4. Time-lapse: the chair aging — wood darkening, dust settling, light moving across it. VO: Even at the scale we can see, it's happening. It never stopped. We called it a thing because the event was so slow and stable we could forget it was an event.
 
-CUT TO — a visualization of molecules. Then atoms. Then the vast empty space between nucleus and electron. Then a field — not empty, but alive with fluctuation, waves moving through it, particles flickering in and out of existence.
-
-VOICEOVER (quiet, genuinely curious):
-At the bottom of the chair — there is no chair. There are fields. Events. Disturbances propagating through space.
-
-The chair is what those events look like from far enough away, and slow enough down, that "chair" is a useful word for what's happening.
-
-CUT BACK TO — the chair in the pool of light. It still looks like a chair. Of course it does.
-
-VOICEOVER:
-This isn't a fact about how small things are. It's a fact about what kind of universe we're in.
-
-A universe of things just sits there. A universe of events — is always happening.
-
-CUT TO — time-lapse: the chair aging. Wood darkening. A leg cracking almost imperceptibly. Dust settling and being disturbed. Light moving across it over hours.
-
-Even at the scale we can see — it's happening. It never stopped.
-
-VOICEOVER:
-We called it a thing because it was convenient. Because the event was so slow and stable we could forget it was an event.
-
-The question is whether forgetting was the whole story — or whether something got quietly erased.
-
-CUT TO BLACK.
-
-Single line:
-The particle is the abstraction. The event is what's actually there.
+5. Cut to black. Text: The particle is the abstraction. The event is what's actually there.
 
 #images
 Primary illustration: A single wooden chair rendered in three simultaneous views — like an architect's drawing crossed with a physics textbook. On the left: the chair as we see it, clean and solid. In the center: the chair as molecular structure, recognizable but strange. On the right: the chair as field excitation — the same shape suggested by a pattern of waves and disturbances in a glowing field. No chair-substance anywhere. Caption: Three descriptions. One event.

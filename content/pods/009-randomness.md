@@ -81,115 +81,19 @@ In philosophy, Whitehead's process philosophy provides the deepest frame: genuin
 #term Local maximum: a solution that is better than all its immediate neighbors but not the best solution overall. The trap that pure hill-climbing optimization falls into; escaped by introducing randomness into the search.
 
 #script
-MUSIC NOTE TO COMPOSER
+Note to composer: Three themes — a child's theme (simple, solo piano), a snowflake journey (sparse single line blooming to six simultaneous voices as the crystal arms branch), and an evolutionary journey (slow, ancient, accumulating). The child's theme opens and closes; the others are reached and returned from.
 
-Three themes, one unified composition.
+1. A field of falling snow, late grey light. A child, arms out, face tilted up, catching snowflakes. The child lowers one arm and looks at a single snowflake on a mittened hand — intricate, exact, symmetrical beyond reason.
 
-The CHILD'S THEME: simple, almost naive — solo piano or music box, something a child might hum. It opens the film, returns briefly at the midpoint when the snowflake lands, and returns again at the close — but transformed by everything in between. The same notes, heard differently.
+2. We rise with the child's gaze through the falling snow — up past the flakes, finding a single dust mote tumbling in cold air. We slow to match it. A water molecule attaches, then another. The first hint of a branch — one direction, apparently random. Then simultaneously, five more arms appear mirroring the first exactly. Music blooms: six lines at once. The crystal falls through warmer air, then colder, each layer writing its terms into the shape. No hand. No plan. Just a random path through cold air writing itself in ice.
 
-The SNOWFLAKE JOURNEY: begins sparse, a single delicate line, as the camera rises into the sky. As the crystal arms begin to form, voices or instruments enter one by one — then two simultaneously, then six at once as all six arms branch together. The music mirrors the structure it is describing. It should feel like something becoming itself.
+3. The snowflake lands on the mitten. The child stares at it. Slow zoom into the child's eye — iris filling the frame, ancient and complex. We go deeper. There, in the iris, a trilobite — 500 million years old, feeling its way across a dim seafloor.
 
-The EVOLUTIONARY JOURNEY: slower, deeper, more ancient in character. A different tempo entirely — time moving at a different rate. It begins when we enter the iris and find the trilobite, and builds steadily, accumulating, as we move forward through time. It reaches its fullest expression at the child's eye, where it resolves back into the Child's Theme — the oldest music and the newest arriving at the same place.
+4. A rapid sequence forward through time: jellyfish with light-sensing organs — insect with compound eyes — amphibian blinking in open air for the first time — nocturnal mammal, eyes enormous — primate looking down at its own hands. Eye after eye, each built by accumulation, by random variation a force wouldn't let stay small. No blueprint. Just time and a rule.
 
----
+5. The child's eye again, filling the frame. Same notes as the opening. We have traveled 500 million years to return. Pull back: the child, the mitten, the snowflake melted while we were away. The child looks up at the sky. Snow still falling in scattered random profusion.
 
-OPEN — A field of falling snow. Late afternoon light, grey and soft.
-
-THE CHILD'S THEME begins. Simple. Delicate.
-
-A CHILD, maybe seven, stands with both arms out and face tilted up. Eyes wide. Catching snowflakes. Snow falls in scattered, random profusion around them.
-
-The child lowers one arm. Looks at a single snowflake on a mittened hand.
-
-HOLD on the snowflake. Intricate, exact, symmetrical beyond reason.
-
-The child's breath fogs the air.
-
-The child looks back up at the sky.
-
-We take the child's position. Looking up. Snow falling toward us in beautiful scattered chaos, each flake growing as it approaches.
-
-THE SNOWFLAKE JOURNEY begins — sparse, a single line.
-
-We begin to rise. Slowly at first — the child's upturned face receding below us, the field widening, the snow thickening around us as we climb.
-
-We rise faster. The flakes are enormous now, whole worlds of crystal passing us as we ascend.
-
-We find one. A single particle of dust, tumbling slowly in the cold air. We slow to match it.
-
-HOLD — traveling with the dust mote. The sound of wind, very faint. The music nearly silent.
-
-A water molecule attaches. Then another.
-
-The faintest suggestion of a shape beginning.
-
-We fall with it now. Slowly at first.
-
-A third molecule. A fourth. The first hint of a branch — one direction, apparently random. A second instrument enters.
-
-Then — simultaneously — five more branches appear, mirroring the first exactly. Five more voices enter at once.
-
-The music blooms. Six lines, simultaneous, mirroring each other.
-
-The crystal falls through a slightly warmer layer. The arms slow. Thicken at the joints.
-
-Then colder. The tips accelerate, reaching, branching again — all six at once, all six the same. The music branches with them.
-
-The snowflake is becoming itself. No hand. No plan. Just a random path through cold air, writing itself in the language of ice.
-
-It falls faster now. The child's mittened hand appearing below us, growing larger —
-
-SMASH CUT — the snowflake landing on the mitten.
-
-THE CHILD'S THEME returns briefly. A single phrase. Recognition.
-
-The child stares at the snowflake.
-
-SLOW ZOOM INTO THE CHILD'S EYE — closer and closer, the iris filling the frame. Extraordinary in its complexity — layered, textured, fractal, ancient-looking.
-
-THE EVOLUTIONARY JOURNEY begins. Low. Patient. Old.
-
-We keep going. Into the iris itself. The texture resolving, shifting —
-
-AND THERE — in the complexity of the iris, unmistakably, a shape. Segmented. Primordial. Whether reflection, abstraction, or something stranger is left deliberately unresolved.
-
-A TRILOBITE. 500 million years old. We pull back slowly to reveal it whole — small, armored, feeling its way across a seafloor in dim ancient light. Its primitive eye catching something. Turning toward it.
-
-CUT TO — a JELLYFISH, translucent, pulsing slowly in ancient water. Its light-sensing organs, barely eyes at all, responding to a shift in the current.
-
-CUT TO — an INSECT in shallow water, compound eyes faceted, registering the surface above.
-
-CUT TO — an AMPHIBIAN on the shoreline. Blinking in open air for the first time. The eye adjusting to a new medium.
-
-CUT TO — a small NOCTURNAL MAMMAL. Eyes enormous, adapted for darkness. Watching. Alert. Something has changed in the music — it is accumulating, building.
-
-CUT TO — a PRIMATE in forest canopy. Eyes forward-facing now, depth perception, color. Looking down at its own hands.
-
-The cuts accelerate —
-
-Eye after eye after eye. Each one a little more capable. Each one built by accumulation, by random variation that a force wouldn't let stay small. No blueprint. No watchmaker. Just time, and a rule, and randomness that kept finding something to work with.
-
-The music reaches its fullest complexity —
-
-Until —
-
-THE CHILD'S EYE again. Filling the frame.
-
-THE CHILD'S THEME returns. The same notes as the opening. But we have traveled 500 million years to get back to them.
-
-We pull back slowly. The child's face. The mittened hand still extended. The snowflake gone — melted in the moment we were away.
-
-The child looks at the empty mitten.
-
-Looks back up at the sky. Snow still falling in scattered, random profusion.
-
-SLOW ZOOM OUT — wider and wider, the child growing small in the field, the late light holding.
-
-The music resolves. Simply. Quietly.
-
-HOLD.
-
-FADE TO BLACK.
+6. Wide zoom out — the child grows small in the field. Fade to black.
 
 #images
 Primary illustration: Close on the child's face, tilted slightly upward, snow falling around them in scattered, random profusion — chaos in every direction. In the child's eye, ambiguously present — perhaps a reflection, perhaps an abstraction, perhaps something stranger — the perfect symmetrical form of a single snowflake. The contrast between the scattered randomness of the falling snow and the impossible order caught in the eye is the whole image. Warm light. No caption.

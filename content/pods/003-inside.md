@@ -61,48 +61,17 @@ Thomas Nagel's famous question — what is it like to be a bat?@ref(nagel, "Nage
 #term Prehension: Whitehead's term for the way each actual occasion takes in and registers what surrounds it before completing itself. Plain English equivalent: feeling, taking-in. The root is the same as "apprehend."
 
 #script
-OPEN — extreme close-up of a human eye. Iris in full detail. Light moving across it.
+1. Extreme close-up of a human eye, iris in full detail. VO: We know this is an inside looking out.
 
-We know this is an inside looking out.
+2. Overhead shot — a single drop falls into a glass of water, rings spreading outward. VO: We assume this has no inside at all.
 
-CUT TO — a glass of water. Overhead shot. A single drop falls in. Rings spread outward.
+3. A rainbow seen from a car window. The car moves; the rainbow stays still. The car stops; the rainbow shifts. VO: We're not sure what to say about this one. It isn't really there. But something is happening. Where exactly does the inside switch on?
 
-We assume this has no inside at all.
+4. Series of images held briefly: an earthworm in soil — a bee landing on a flower — a newborn asleep — a forest in wind. VO: Somewhere on that list, most people feel something shift. But nobody can say exactly where. The question isn't whether rocks have feelings the way you do. The question is whether "nothing at all" is actually the right answer.
 
-CUT TO — a rainbow. Seen from a car window, moving. The rainbow stays still as the car moves. Then the car stops and the rainbow shifts.
+5. Time-lapse of a seed germinating underground, root finding its way through dark soil. VO: What if experience doesn't switch on at a threshold — like a light you flip? What if it's more like temperature? Present everywhere. Just almost unimaginably cold at the bottom. Not feeling what you feel. But something, rather than nothing.
 
-We're not sure what to say about this one. It isn't really there. But something is happening.
-
-Pause.
-
-Where exactly does the inside switch on?
-
-CUT TO — a series of images, each held for two seconds: an earthworm moving through soil. A bee landing on a flower. A newborn asleep. A forest in wind.
-
-Somewhere on that list, most people feel something shift. A sense that — yes, there is something home. And then a sense that — probably not, this is just mechanism.
-
-But nobody can say exactly where.
-
-VOICEOVER (calm, curious, not declaratory):
-The question isn't whether rocks have feelings the way you do. They don't. The question is whether "nothing at all" is actually the right answer — or whether it's just the answer that felt obvious inside the framework we inherited.
-
-CUT TO — time-lapse of a seed germinating. Underground. Dark. The root feeling its way through soil.
-
-What if experience doesn't switch on at a threshold — like a light you flip?
-
-What if it's more like temperature? Present everywhere. Just almost unimaginably cold at the bottom.
-
-HOLD — on the root finding its way. No light. Just movement. Just something happening.
-
-VOICEOVER:
-Not feeling what you feel. Not thinking what you think. But something, rather than nothing.
-
-That's a different universe than the one we thought we were living in.
-
-CUT TO BLACK.
-
-Single line:
-Everything has an inside.
+6. Cut to black. Text: Everything has an inside.
 
 #images
 Primary illustration: A cross-section of a raindrop in mid-fall — rendered with scientific precision on the outside (surface tension, velocity vectors, aerodynamic distortion) and something else entirely on the inside: not organs, not a face, but a quality of light. Warm. Present. Not labeled. The contrast between the clinical outside and the luminous inside is the whole image. Caption: The outside is well described. The inside has no name yet.
