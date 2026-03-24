@@ -230,8 +230,8 @@ def _seed_row_html(n, base_href, status_order, stub_only=False, first_image_href
         byline_parts.append(rev_span)
     if cat_span:
         byline_parts.append(cat_span)
-    byline_inner = " · ".join(byline_parts)
-    byline = f"{_html.escape(subtitle)} · {byline_inner}" if subtitle else byline_inner
+    byline_inner = f'<span class="seed-byline-unit">{" · ".join(byline_parts)}</span>'
+    byline = f"{_html.escape(subtitle)} {byline_inner}" if subtitle else byline_inner
     data_attrs = ""
     if not stub_only:
         status_rank = {s: i for i, s in enumerate(status_order or [])}

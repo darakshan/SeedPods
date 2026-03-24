@@ -257,6 +257,7 @@ td a:hover{color:var(--accent)}
 .seed-title a:hover{color:var(--link)}
 .seed-sub{font-size:.85rem;line-height:1.4}
 .seed-status{font-family:'DM Mono',monospace;font-size:.7em;letter-spacing:.1em;text-transform:uppercase;color:var(--warm);opacity:.9}
+.seed-byline-unit{white-space:nowrap}
 /* About pages */
 .page-body{padding:1.5rem 0}
 .page-body p{font-size:1.1rem;line-height:1.8;margin-bottom:1.2rem}
