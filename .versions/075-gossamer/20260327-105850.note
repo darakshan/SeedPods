@@ -1,0 +1,1 @@
+Yes — earlier I tried using `field: title` with `mode: set` to edit just the title metadata, and it failed by trying to replace the entire file. Let me test if that's fixed now:

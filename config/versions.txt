@@ -1,0 +1,49 @@
+home: 3
+
+075-gossamer: 16
+
+068-bubbles: 2
+
+069-love: 5
+
+076-fivewindows: 4
+
+archive-summary: 2
+
+018-magnetization: 4
+
+prompt-delta: 1
+
+023-stories: 7
+
+035-simplestnumbers: 2
+
+036-universenoticing: 2
+
+045-baldwin: 2
+
+049-strangeloop: 2
+
+052-dichotomy: 2
+
+061-babyuniverse: 2
+
+064-choicedimension: 2
+
+067-monads-holons: 2
+
+002-events: 1
+
+003-inside: 1
+
+011-moreisdifferent: 1
+
+022-locked: 1
+
+074-grasshopper: 1
+
+070-harmony: 2
+
+025-widechannel: 1
+
+026-twotruths: 5

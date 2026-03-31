@@ -1,0 +1,23 @@
+#title Beauty
+#status proto
+#date 2026-03-17
+#category sensation
+#term beauty: TBD
+#term mathematics: TBD
+#term perception: TBD
+#term wabi-sabi: TBD
+#related 038, 030, 033, 035, 034
+
+Beauty is in the eye of the beholder — and also in the mathematics of the thing beheld. 
+@image(071-beauty,The golden ratio in nature: beauty and mathematics,Wikimedia Commons)
+
+The golden ratio. Phi. A number that emerges from a formula involving 5. Where does the 5 come from? Why does this particular irrational number keep appearing in living forms — in shells, in phyllotaxis, in the proportions that feel right?
+
+Pi, e, i, phi — the deep constants. Each one a kind of inevitability, a ratio that the structure of things keeps discovering on its own.
+
+Wabi-sabi: the Japanese aesthetic of imperfection, transience, incompleteness. Beauty as the trace of process, not the product of control. The crack in the bowl. The asymmetry in the garden. The opposite of the golden ratio — and yet both are beautiful.
+
+Balance in all things. Peacefulness and energy — as a kind of temperature. The phenomenology of beauty is a dynamic equilibrium: not stillness but a held tension, a harmony between opposites.
+
+The eye of the beholder is also an event. What it finds beautiful is not arbitrary — it is a record of the structures that have mattered.
+

@@ -1,0 +1,31 @@
+── 2026-03-28 21:00 ──
+
+[you] Please add this
+
+@image(023-stories,Cave paintings: reality made of stories,Wikimedia Commons)
+
+After the first paragraph of pod 23
+
+[claude] I see — the surface layer currently just has "TBD" as a placeholder, so there's no first paragraph to insert after yet. The depth layer has substantial content, but you asked specifically about "the first paragraph of pod 23."
+
+Did you want me to:
+1. Add the image directive after the first paragraph of the **depth** layer (after "How right she was.")
+2. Wait until surface content is written, then add it there
+3. Something else?
+
+Let me know which you intended.
+
+[you] Yes, the first paragraph of pod 23 happens to be in the depth section
+
+✏ [1] Reality Is Made of Stories, Not Atoms
+
+[you] I just had a conversation with you that seems to have disappeared from my view of the conversation. The last thing I see is your addition of the image link into pod 23.  Do you have a memory of anything after that?
+
+[claude] I don't have any memory of conversation after what you're seeing now. Each conversation appears fresh to me — I don't retain anything between sessions, and I don't have access to conversation history beyond what's currently in our thread.
+
+So from my perspective, we're just now getting to the image insertion. Let me do that:
+
+[claude] That places the image directive right after the opening paragraph of the depth layer. 
+
+As for the disappeared conversation — that's frustrating. Whatever we discussed is lost to me as well. If you remember the gist of what we were working on, I'm happy to pick it back up.
+
