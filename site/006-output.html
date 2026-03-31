@@ -81,18 +81,18 @@ document.addEventListener("DOMContentLoaded",function(){var p=document.getElemen
   </li>
 </ul><button type="button" class="nav-hamburger-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav-hamburger-panel" onclick="seedNavToggleMenu();return false">&#9776;</button></div>
 </div>
-  <div class="layer-tabs">
-    <div class="layer-tabs-inner">
-      <span class="layer-tabs-prev"><a href="005-freewill.html">&lt;&lt;</a></span>
-      <div class="layer-tabs-center">
-        <a href="#surface" class="layer-tab">Surface</a>
-      <a href="#depth" class="layer-tab">Depth</a>
-      <span class="layer-tab layer-tab-disabled">Provenance</span>
-      <a href="#script" class="layer-tab">Script</a>
-      <a href="#images" class="layer-tab">Images</a>
-      <span class="layer-tab layer-tab-disabled">Brief</span>
+  <div class="section-tabs">
+    <div class="section-tabs-inner">
+      <span class="section-tabs-prev"><a href="005-freewill.html">&lt;&lt;</a></span>
+      <div class="section-tabs-center">
+        <a href="#surface" class="section-tab">Surface</a>
+      <a href="#depth" class="section-tab">Depth</a>
+      <span class="section-tab section-tab-disabled">Provenance</span>
+      <a href="#script" class="section-tab">Script</a>
+      <a href="#images" class="section-tab">Images</a>
+      <span class="section-tab section-tab-disabled">Brief</span>
       </div>
-      <span class="layer-tabs-next"><a href="007-vacuum.html">&gt;&gt;</a></span>
+      <span class="section-tabs-next"><a href="007-vacuum.html">&gt;&gt;</a></span>
     </div>
   </div>
 <div class="nav-hamburger-panel" id="nav-hamburger-panel" role="menu" aria-hidden="true">
@@ -127,8 +127,8 @@ document.addEventListener("DOMContentLoaded",function(){var p=document.getElemen
     <h1>You Can't Judge a Process by Its Output</h1>
     <p class="premise">A thermostat predicts. Mozart predicted. The simplicity of the output tells you nothing.</p>
   </div>
-    <section id="surface" class="layer-section">
-    <h2 class="layer-heading">Surface</h2>
+    <section id="surface" class="pod-section">
+    <h2 class="section-heading">Surface</h2>
     <div class="prose"><p>A thermostat predicts the future. Not impressively — it just decides whether the room is about to get too cold. But it predicts: given the current temperature, what comes next?</p>
 <figure class="directive-image directive-image--left"><img src="images/006-output.jpg" alt=""><figcaption>Feedback control system: the output tells you nothing about the process</figcaption></figure>
 <p>A weather forecaster also predicts. So does a chess engine. So did Mozart, deciding which note resolves the tension in a phrase. So does a language model, choosing the next word in a sentence.</p>
@@ -140,8 +140,8 @@ document.addEventListener("DOMContentLoaded",function(){var p=document.getElemen
 <p>Whatever is happening inside while you do that — that’s the question.</p>
 </div>
   </section>
-  <section id="depth" class="layer-section">
-    <h2 class="layer-heading">Depth</h2>
+  <section id="depth" class="pod-section">
+    <h2 class="section-heading">Depth</h2>
     <div class="prose"><p>The philosopher Alfred North Whitehead drew a distinction that most people never make explicit: between the <em>act</em> and its <em>expression</em>. A process unfolds in time, internally, with a character that is entirely its own. What it produces — the output, the artifact, the behavior — is a downstream trace of that process, shaped and compressed by the act of expression itself. The trace is real. But it is not the process. Mistaking one for the other is, in Whitehead’s view, one of the deepest errors in Western thought.</p>
 <p>Alan Turing understood this when he designed his famous test. The question “can machines think?” he declared unanswerable — not because it’s too hard, but because “think” points at a process, and we have no direct access to processes, only outputs. So he reframed the question entirely: can a machine produce outputs indistinguishable from a thinking human? That’s a question we can actually investigate. Whether it’s the <em>right</em> question is something people are still arguing about — but the move itself was philosophically precise. Turing wasn’t being evasive. He was acknowledging exactly what this seedpod is about: you cannot get to the process through the output. So he built a test that only uses the output, and was honest that this is all we ever have.</p>
 <p>This is why “it’s just predicting the next word” fails as a dismissal. It describes the output interface of a language model accurately. It says nothing about the process. The same logical error would dismiss Mozart as “just choosing the next note,” or a mathematician as “just writing the next symbol.” At sufficient abstraction, every complex process becomes “just” doing something simple. The word <em>just</em> is almost always a flag that someone has described the output and mistaken it for an explanation. (See <a href="021-just.html">The Word &quot;Just&quot; Is a Confession</a>.)</p>
@@ -151,8 +151,8 @@ document.addEventListener("DOMContentLoaded",function(){var p=document.getElemen
 <p>Evan Thompson’s Mind in Life takes this into the biological domain: the organism’s expressive surface is always downstream of the living process that generates it.</p>
 </div>
   </section>
-  <section id="script" class="layer-section">
-    <h2 class="layer-heading">Script</h2>
+  <section id="script" class="pod-section">
+    <h2 class="section-heading">Script</h2>
     <div class="prose"><ol>
 <li><p>A Victorian street fair. A barker beside an ornate brass-fitted box — gears, drum, levers visible through glass. Barker: Ladies and gentlemen — the most extraordinary musical intelligence in the known world! It predicts what comes next with uncanny precision!</p>
 </li>
@@ -167,8 +167,8 @@ document.addEventListener("DOMContentLoaded",function(){var p=document.getElemen
 </ol>
 </div>
   </section>
-  <section id="images" class="layer-section">
-    <h2 class="layer-heading">Images</h2>
+  <section id="images" class="pod-section">
+    <h2 class="section-heading">Images</h2>
     <div class="prose"><p>Primary illustration
 The Victorian box, front and center, with its glass panel showing the mechanism — drum, pins, levers — all clearly visible and labeled in an engraving style. The door is swinging open. Inside, just barely visible in the shadow, a small figure at a fortepiano. The contrast between the clinical exterior and the human interior is the whole image.</p>
 <p>Shareable graphic
@@ -182,7 +182,7 @@ The ornate box, door ajar, a sliver of warm candlelight escaping from inside. No
 </div>
   </section>
   <div class="related-section">
-    <h3 class="layer-heading related-label">Related pods</h3>
+    <h3 class="section-heading related-label">Related pods</h3>
     <div class="related-grid">  <a href="025-widechannel.html" class="related-card related-card-prelim cat-colored cat-ai-minds">
     <div class="related-title">25. We Don't Know Who or What We're Talking To</div>
   </a>

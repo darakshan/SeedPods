@@ -81,18 +81,18 @@ document.addEventListener("DOMContentLoaded",function(){var p=document.getElemen
   </li>
 </ul><button type="button" class="nav-hamburger-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav-hamburger-panel" onclick="seedNavToggleMenu();return false">&#9776;</button></div>
 </div>
-  <div class="layer-tabs">
-    <div class="layer-tabs-inner">
-      <span class="layer-tabs-prev"><a href="054-bornharmonic.html">&lt;&lt;</a></span>
-      <div class="layer-tabs-center">
-        <span class="layer-tab layer-tab-disabled">Surface</span>
-      <span class="layer-tab layer-tab-disabled">Depth</span>
-      <span class="layer-tab layer-tab-disabled">Provenance</span>
-      <span class="layer-tab layer-tab-disabled">Script</span>
-      <span class="layer-tab layer-tab-disabled">Images</span>
-      <a href="#brief" class="layer-tab">Brief</a>
+  <div class="section-tabs">
+    <div class="section-tabs-inner">
+      <span class="section-tabs-prev"><a href="054-bornharmonic.html">&lt;&lt;</a></span>
+      <div class="section-tabs-center">
+        <span class="section-tab section-tab-disabled">Surface</span>
+      <span class="section-tab section-tab-disabled">Depth</span>
+      <span class="section-tab section-tab-disabled">Provenance</span>
+      <span class="section-tab section-tab-disabled">Script</span>
+      <span class="section-tab section-tab-disabled">Images</span>
+      <a href="#brief" class="section-tab">Brief</a>
       </div>
-      <span class="layer-tabs-next"><a href="057-superfarey.html">&gt;&gt;</a></span>
+      <span class="section-tabs-next"><a href="057-superfarey.html">&gt;&gt;</a></span>
     </div>
   </div>
 <div class="nav-hamburger-panel" id="nav-hamburger-panel" role="menu" aria-hidden="true">
@@ -127,8 +127,8 @@ document.addEventListener("DOMContentLoaded",function(){var p=document.getElemen
     <h1>Neural Networks as High-Dimensional Mandelbrot Sets</h1>
     
   </div>
-    <section id="brief" class="layer-section">
-    <h2 class="layer-heading">Brief</h2>
+    <section id="brief" class="pod-section">
+    <h2 class="section-heading">Brief</h2>
     <div class="prose"><p>Training a neural network is, in a precise sense, computing a Mandelbrot set in a space of hundreds of thousands of dimensions.</p>
 <p>The weight space is the high-dimensional analog of the complex plane. The loss landscape is the iteration — each training step applies the rule, adjusts the weights, and checks whether the system is converging or diverging. The trained network is a point that didn’t escape — a stable attractor in weight space.</p>
 <p>The boundary between convergence and divergence in weight space is where the interesting behavior lives. Models near that boundary generalize well — they are poised between memorizing training data (stable interior) and failing to learn anything (escape to infinity). The best models sit on the edge.</p>
@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded",function(){var p=document.getElemen
 </div>
   </section>
   <div class="related-section">
-    <h3 class="layer-heading related-label">Related pods</h3>
+    <h3 class="section-heading related-label">Related pods</h3>
     <div class="related-grid">  <a href="038-consonance-map.html" class="related-card related-card-prelim cat-colored cat-sensation">
     <div class="related-title">38. The Surprising Consonance Map</div>
   </a>

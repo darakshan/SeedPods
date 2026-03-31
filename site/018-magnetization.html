@@ -81,18 +81,18 @@ document.addEventListener("DOMContentLoaded",function(){var p=document.getElemen
   </li>
 </ul><button type="button" class="nav-hamburger-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav-hamburger-panel" onclick="seedNavToggleMenu();return false">&#9776;</button></div>
 </div>
-  <div class="layer-tabs">
-    <div class="layer-tabs-inner">
-      <span class="layer-tabs-prev"><a href="017-pastpresent.html">&lt;&lt;</a></span>
-      <div class="layer-tabs-center">
-        <a href="#surface" class="layer-tab">Surface</a>
-      <a href="#depth" class="layer-tab">Depth</a>
-      <span class="layer-tab layer-tab-disabled">Provenance</span>
-      <span class="layer-tab layer-tab-disabled">Script</span>
-      <span class="layer-tab layer-tab-disabled">Images</span>
-      <a href="#brief" class="layer-tab">Brief</a>
+  <div class="section-tabs">
+    <div class="section-tabs-inner">
+      <span class="section-tabs-prev"><a href="017-pastpresent.html">&lt;&lt;</a></span>
+      <div class="section-tabs-center">
+        <a href="#surface" class="section-tab">Surface</a>
+      <a href="#depth" class="section-tab">Depth</a>
+      <span class="section-tab section-tab-disabled">Provenance</span>
+      <span class="section-tab section-tab-disabled">Script</span>
+      <span class="section-tab section-tab-disabled">Images</span>
+      <a href="#brief" class="section-tab">Brief</a>
       </div>
-      <span class="layer-tabs-next"><a href="019-funerals.html">&gt;&gt;</a></span>
+      <span class="section-tabs-next"><a href="019-funerals.html">&gt;&gt;</a></span>
     </div>
   </div>
 <div class="nav-hamburger-panel" id="nav-hamburger-panel" role="menu" aria-hidden="true">
@@ -127,8 +127,8 @@ document.addEventListener("DOMContentLoaded",function(){var p=document.getElemen
     <h1>Ideas Magnetize Through a Group Like Iron</h1>
     <p class="premise">Only a seed group of influencers is necessary. Then the field does the rest.</p>
   </div>
-    <section id="surface" class="layer-section">
-    <h2 class="layer-heading">Surface</h2>
+    <section id="surface" class="pod-section">
+    <h2 class="section-heading">Surface</h2>
     <div class="prose"><figure class="directive-image directive-image--left"><img src="images/018-magnetization.jpg" alt=""><figcaption>Ideas spreading through a group like magnetic domains</figcaption></figure>
 <p>Heat a piece of iron past a certain temperature and it loses its magnetism. The atoms are still there, still spinning, but their spins point every which way — the material is disordered, uncommitted. Now let it cool. At first, nothing visible happens. But at scattered points, a few neighboring atoms happen to align. These become seeds.</p>
 <p>Here’s what happens next: each aligned cluster affects its neighbors. The atoms at the boundary feel a pull toward the ordered state. They join. The cluster grows. As it grows, it has more surface area — more boundary, more neighbors to recruit. The growth accelerates. Meanwhile other seeds are growing too, spreading toward each other across the still-disordered space.</p>
@@ -144,8 +144,8 @@ document.addEventListener("DOMContentLoaded",function(){var p=document.getElemen
 <div class="cta">Think of a change you've lived through — in your workplace, your family, your culture. Can you identify the seeds? The moment when figure and ground flipped? The holdout holes that eventually closed — or didn't?</div>
 </div>
   </section>
-  <section id="depth" class="layer-section">
-    <h2 class="layer-heading">Depth</h2>
+  <section id="depth" class="pod-section">
+    <h2 class="section-heading">Depth</h2>
     <div class="prose"><p>The physics is well understood. A ferromagnetic material like iron has atoms whose electron spins can align with their neighbors. Above the Curie temperature, thermal agitation overwhelms this tendency — the spins point randomly, and there’s no net magnetization. Below it, the alignment force wins locally, and domains of aligned spins form and grow. The transition is a canonical example of spontaneous symmetry breaking (<a href="009-randomness.html">Structure Is What Randomness Does</a>) — the disordered state is symmetric (no preferred direction), the ordered state breaks that symmetry by choosing one.</p>
 <p>What makes this pattern so portable is its abstract structure: a medium of coupled elements, each influenced by its neighbors, sitting near a transition threshold. The elements don’t have to be atoms. They can be people, neurons, water molecules, or bars of a song in memory. The coupling doesn’t have to be magnetic exchange interaction. It can be social pressure, synaptic connection, hydrogen bonding, or associative recall. The mathematics transfers.</p>
 <p>Sociologist Mark Granovetter formalized a version of this for collective behavior in his 1978 paper on threshold models. Each person has a threshold — the fraction of others who must act before they will join. A few people have threshold zero (they’ll act alone). Most need to see others first. Granovetter showed that the distribution of thresholds determines whether a cascade happens at all, and how far it spreads. The seeds are the low-threshold individuals. The percolation threshold is the moment when enough have joined that the remaining holdouts face a majority.</p>
@@ -154,8 +154,8 @@ document.addEventListener("DOMContentLoaded",function(){var p=document.getElemen
 <p>The practical implication is counterintuitive: persuasion is overrated. You don’t change a system by arguing with every element. You change it by seeding the right clusters in a medium that’s ready to shift, then letting propagation do the work. The question is never “how do I convince everyone?” It’s “where are the low-threshold nodes, and is the temperature right?”</p>
 </div>
   </section>
-  <section id="brief" class="layer-section">
-    <h2 class="layer-heading">Brief</h2>
+  <section id="brief" class="pod-section">
+    <h2 class="section-heading">Brief</h2>
     <div class="prose"><p>The physics of phase transitions offers a precise vocabulary for what the surface layer describes intuitively. A ferromagnetic material like iron consists of magnetic domains — regions where atomic spins are aligned. Above the Curie temperature, thermal agitation overwhelms the alignment; the domains dissolve into disorder. Below it, the material is ready to magnetize, but needs seeds: nucleation sites where alignment begins.</p>
 <p>Nucleation is the hard part. A single aligned atom in a sea of disorder will be pulled back toward randomness by its disordered neighbors. But a cluster of aligned atoms — if it reaches a critical size — becomes self-sustaining. The atoms at the boundary now feel more pull from the ordered interior than from the disordered exterior. The cluster grows. This is why impurities matter in freezing water: they provide surfaces where the first stable ice crystals can form.</p>
 <p>The percolation threshold is the moment of topological inversion. Mathematically, it’s the point at which a random graph becomes connected — when there’s a path from any node to any other through the new state. Before this threshold, the seeds are isolated islands. After it, they form a spanning cluster — a continent — and the old state survives only in pockets. The system has flipped.</p>
@@ -167,7 +167,7 @@ document.addEventListener("DOMContentLoaded",function(){var p=document.getElemen
 </div>
   </section>
   <div class="related-section">
-    <h3 class="layer-heading related-label">Related pods</h3>
+    <h3 class="section-heading related-label">Related pods</h3>
     <div class="related-grid">  <a href="009-randomness.html" class="related-card cat-colored cat-biology">
     <div class="related-title">9. Structure Is What Randomness Does</div>
   </a>

@@ -3,3 +3,6 @@
 .buildstate/history.csv
 docs/
 __pycache__/
+.git
+.versions
+site/
