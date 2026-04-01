@@ -12,9 +12,7 @@ This website is under construction.  It contains TBDs, Warnings, incompletene se
 
 Some day, inshallah, some or all of these seedpods will turned into a book, or a movie, or a series of articles, or who knows what, in a linear progression. Time will tell.
 
-- Darakshan
-
-### More about SeedPods
+## More about SeedPods
 
 - @link(goals.md)
 - @link(authors.md)
@@ -23,7 +21,7 @@ Some day, inshallah, some or all of these seedpods will turned into a book, or a
 - @link(personal.md)
 - @link(status.md)
 
-### Acknowledgements
+## Acknowledgements
 
 This collection is partly inspired by Doug Hofstadter's amazing 1979 book Gödel, Escher, Bach. That book is a romp though many of the same ideas, but we've come along way. I can only hope to reflect some of its light.  
 
@@ -38,10 +36,10 @@ So the elevator speech for SeedPods might be "A website about Process philosphy 
 -- Darakshan Farber, March 2026
 
 
-### Caveat Lector
+## Caveat Lector
 
-(what I wrote)
+(unfinished.  Here's what I wrote)
 Claude AI has helped me build this software and flesh out its content. Others may contribute in the future. Of course there will be inaccuracies and misunderstandings -- mine as well as Claude's.  But since this is a *livng* archive, it can evolve and in the process ratchet up its quality over time.
 
-(what Claude wrote with me)
+(and here's what Claude wrote with me)
 Many of the ideas gathered here sit at the edge of what is settled. Some connections are speculative; some, if we are honest, may turn out to be pure fantasy — and a few may bear the fingerprints of an AI that occasionally confuses confidence with correctness. We have tried to distinguish intuition from established fact, but the line is not always clean, and we have not always drawn it perfectly. This is, in part, deliberate. The fragment and the conjecture have their own honorable tradition — from Heraclitean shards to the notebooks of Novalis — and some truths seem to require the poetic gesture before the formal proof arrives. We offer these seedpods not as conclusions but as invitations: seeds, not harvests. Where we have overreached, we hope the reach itself points somewhere worth going.

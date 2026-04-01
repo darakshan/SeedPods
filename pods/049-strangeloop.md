@@ -13,5 +13,5 @@ Whatever that means.
 
 #term Strange loop: Hofstadter's term for a system that, in the course of its operation, encounters or includes itself.
 
-#images
+@section(images)
 @image(049-strangeloop, "Escher's drawing hands: the strange loop that contains itself", "Wikimedia Commons")

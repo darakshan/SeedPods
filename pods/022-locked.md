@@ -18,7 +18,7 @@
 #term facilitated communication (FC): a technique in which a facilitator supports a nonspeaking person's hand or arm while they type or point to letters. Widely used with nonspeaking autistic individuals. Scientifically contested: controlled studies have repeatedly shown that in many cases the facilitator, not the person, is the source of the communication — often unconsciously. The controversy does not settle the question of what nonspeaking individuals understand or experience; it only complicates the question of how to reliably access it.
 #related 001, 006, 016, 021, 025
 
-#surface
+@section(surface)
 In 1983, a young Belgian man named Rom Houben was in a car crash. He was 20 years old — an engineering student, a martial arts enthusiast. The crash left him paralyzed, and doctors diagnosed him as being in a vegetative state. Unconscious. Absent. Gone inside.
 
 @image(022-locked,AAC communication device: channel constraint is not a capacity limit,Wikimedia Commons)
@@ -49,7 +49,7 @@ The channel is not the capacity. It never was.
 
 @exercise("Think of someone in your life whose inner world you might be underestimating — because they're quiet, or slow to speak, or communicate differently than you do. You are probably reading the channel. The source may be something else entirely.")
 
-#depth
+@section(depth)
 The Rom Houben case is not an isolated anomaly. A 2009 study by Steven Laureys and the Coma Science Group estimated that as many as four in ten patients diagnosed as being in a vegetative state may be misdiagnosed — conscious to some degree, but without a channel even wide enough to register with the tools and attention available. The stamp of unconsciousness, once applied, is extraordinarily hard to remove. As Laureys put it: "Anyone who bears the stamp of 'unconscious' just one time hardly ever gets rid of it again."
 
 This is the clinical version of a much deeper error — one that shows up wherever we judge an interior by its exterior output.
@@ -72,7 +72,7 @@ Editor's note: This seedpod argues in one direction only — that a narrow or ab
 
 The channel is not the capacity. Widening the channel doesn't create the source. It finds it.
 
-#script
+@section(script)
 Note to director: Time passing is shown through two things only — the equipment beside the bed growing more sophisticated, and his mother's hair going from dark to white. No title cards. No other devices.
 
 1. 1983. A hospital room. A man lies motionless, eyes open, staring at the ceiling. A doctor enters and speaks to the nurse without looking at the bed. Doctor: No change. Vegetative. Same as last week. His POV: the doctor's words arrive muffled, slightly underwater. The door swings shut. He has memorized this ceiling.
@@ -91,7 +91,7 @@ Note to director: Time passing is shown through two things only — the equipmen
 
 8. Cut to black. Text: The channel is not the capacity.
 
-#images
+@section(images)
 Primary illustration: A hospital room seen from the bed — the patient's POV looking up. A doctor and nurse stand at the foot of the bed in conversation, slightly blurred, their mouths moving. The room is rendered in cool, muted tones. The only sharp, vivid element is a single open eye reflected in the dark screen of a monitor — the eye of the man in the bed, seeing everything. No caption.
 
 Shareable graphic: A graphic illustration — not photographic — of a large old-fashioned keyhole, the kind Alice might peer through. Seen through the keyhole: a close-up human eye, fully alert, looking directly back at you. The world on this side of the lock is dark. The eye on the other side is vivid. Single line of text beneath:

@@ -7,7 +7,7 @@
 #term process-philosophy: TBD
 #related 001, 003, 004, 008, 051
 
-#surface
+@section(surface)
 There is a chair in your room. You know what a chair is.
 
 @image(002-events,Feynman diagram: reality as discrete particle interaction events,Wikimedia Commons)
@@ -40,7 +40,7 @@ A note on language: from here on, we'll sometimes say "things" because that's ho
 
 @exercise("Sit in a chair and look at it. Not through it, at it. Try to catch it in the act of being an event rather than a thing. It will keep looking like a thing. That's the point — the event is so slow and stable that 'thing' is a perfectly good shortcut. The question is whether the shortcut is the whole truth, or whether something is happening that the word 'thing' quietly erases.")
 
-#depth
+@section(depth)
 Alfred North Whitehead@ref(whitehead, "Whitehead, A.N. Process and Reality. Macmillan, 1929. The primary text. Part I develops the fallacy of misplaced concreteness; Part II develops the doctrine of actual occasions.")@ref(whitehead, "Whitehead, A.N. Science and the Modern World. Macmillan, 1925. More accessible introduction to the critique of substance-based thinking.") (1861–1947) — mathematician, co-author with Bertrand Russell of the Principia Mathematica, and late in his career a philosopher of nature — argued that Western thought had made a specific and consequential error at the foundation of modern science. He called it the fallacy of misplaced concreteness: taking an abstraction and treating it as if it were the concrete reality.
 
 The abstraction in question is the thing — the enduring object, the particle, the substance with fixed properties. Science proceeded by abstracting objects from the flow of events, assigning them stable properties, and calculating their interactions. This was enormously productive. It gave us Newtonian mechanics, chemistry, engineering. The error was not in using the abstraction — it was in forgetting it was an abstraction. The particle became, in the scientific imagination, the basic unit of reality. The event — the happening, the moment of occurrence — was demoted to something that merely happened to objects.
@@ -65,7 +65,7 @@ The implications run through all of these seedpods. If events are primary and co
 #term Family resemblance: Wittgenstein's term for the way members of a category (chairs, games, languages) share overlapping similarities without any single feature common to all. The category is held together by a web of resemblances, not by a shared essence.
 #term Relational quantum mechanics: Carlo Rovelli's interpretation of quantum mechanics, in which quantum states are relative to observers or measuring systems rather than absolute. Properties do not exist independently of interactions.
 
-#script
+@section(script)
 1. A plain wooden chair in a pool of light. VO: Just a chair. We know what a chair is.
 
 2. Extreme close-up of wood grain, zooming in through molecules, atoms, empty space, into a field alive with fluctuation. VO: At the bottom of the chair — there is no chair. There are fields, events, disturbances propagating through space. The chair is what those events look like from far enough away that "chair" is a useful word for what's happening.
@@ -76,7 +76,7 @@ The implications run through all of these seedpods. If events are primary and co
 
 5. Cut to black. Text: The particle is the abstraction. The event is what's actually there.
 
-#images
+@section(images)
 Primary illustration: A single wooden chair rendered in three simultaneous views — like an architect's drawing crossed with a physics textbook. On the left: the chair as we see it, clean and solid. In the center: the chair as molecular structure, recognizable but strange. On the right: the chair as field excitation — the same shape suggested by a pattern of waves and disturbances in a glowing field. No chair-substance anywhere. Caption: Three descriptions. One event.
 
 Shareable graphic: A painted pipe in the style of Magritte. Beneath it, in careful script: "This is not a thing." The joke lands immediately for those who know the painting. For those who don't, the point still stands on its own.

@@ -11,5 +11,5 @@ If evolution and neural network training find the same solutions, a natural ques
 
 #term Baldwin effect: Selection for learnability narrows the genetic starting point until the trait appears innate; no Lamarckian inheritance required.
 
-#images
+@section(images)
 @image(045-baldwin, "Waddington's epigenetic landscape: learned behaviour becoming hardwired", "Wikimedia Commons")

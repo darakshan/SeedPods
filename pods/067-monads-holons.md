@@ -19,5 +19,5 @@ The holographic principle may be the physics of what Leibniz was gesturing at ph
 #term Monad: Leibniz's indivisible unit of experience; each contains a complete representation of the universe from its perspective.
 #term AdS/CFT: Maldacena's correspondence: a gravitational theory in the bulk is equivalent to a quantum theory on the boundary; each boundary point encodes the interior.
 
-#images
+@section(images)
 @image(067-monads-holons, "Leibniz's I Ching hexagram diagram of 1701", "Wikimedia Commons")

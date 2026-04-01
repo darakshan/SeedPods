@@ -10,7 +10,7 @@
 #term symmetry-breaking: TBD
 #related 011, 007, 012, 005, 034
 
-#surface
+@section(surface)
 Look up on a clear night, away from city lights. What you're seeing is not decoration. It is the consequence of a mistake. 
 @image(009-randomness,Structure from randomness: a lightning branch,Wikimedia Commons)
 
@@ -48,7 +48,7 @@ This is the thing worth sitting with: the structure didn't come despite the rand
 
 @exercise(Find something intricate near you — a frost pattern on glass, a crack in old plaster, the branching of a tree against the sky. Don't look for the designer. Look for the original asymmetry, the tiny difference that a force found and refused to leave alone. It's always there. Structure is what randomness does when you give it enough time and something to push against.)
 
-#depth
+@section(depth)
 The technical term for what the Surface was describing is "spontaneous symmetry breaking." A system sits in a state that is perfectly symmetric but unstable — like a ball balanced on the peak of a hill. Any random perturbation causes it to fall into a lower-energy asymmetric state and stay there. The universe does this at every scale, from the Higgs field in the first moments after the Big Bang to the formation of every crystal, every dune, every weather system. The symmetry breaks not because something designed it to, but because perfect symmetry, at sufficient energy, is inherently unstable. Randomness finds the crack. Structure follows.
 
 A jazz musician improvising knows this without knowing the name. The key, the chord changes, the form — these are the rules, the constraints, the grammar of the moment. Within them, each note choice is genuinely free, shaped by what just happened and what the musician's ear is reaching toward, but not determined. The structure makes the freedom coherent. The freedom makes the structure alive. Remove the rules and you have noise. Remove the freedom and you have a recording. Jazz is what happens when they are both fully present simultaneously.
@@ -80,7 +80,7 @@ In philosophy, Whitehead's process philosophy provides the deepest frame: genuin
 #term Autopoiesis: the property of living systems that continuously produce the very components that sustain them; coined by Maturana and Varela. The cell does not merely use its components — it makes them, circularly, as the condition of its own continued existence.
 #term Local maximum: a solution that is better than all its immediate neighbors but not the best solution overall. The trap that pure hill-climbing optimization falls into; escaped by introducing randomness into the search.
 
-#script
+@section(script)
 Note to composer: Three themes — a child's theme (simple, solo piano), a snowflake journey (sparse single line blooming to six simultaneous voices as the crystal arms branch), and an evolutionary journey (slow, ancient, accumulating). The child's theme opens and closes; the others are reached and returned from.
 
 1. A field of falling snow, late grey light. A child, arms out, face tilted up, catching snowflakes. The child lowers one arm and looks at a single snowflake on a mittened hand — intricate, exact, symmetrical beyond reason.
@@ -95,7 +95,7 @@ Note to composer: Three themes — a child's theme (simple, solo piano), a snowf
 
 6. Wide zoom out — the child grows small in the field. Fade to black.
 
-#images
+@section(images)
 Primary illustration: Close on the child's face, tilted slightly upward, snow falling around them in scattered, random profusion — chaos in every direction. In the child's eye, ambiguously present — perhaps a reflection, perhaps an abstraction, perhaps something stranger — the perfect symmetrical form of a single snowflake. The contrast between the scattered randomness of the falling snow and the impossible order caught in the eye is the whole image. Warm light. No caption.
 
 Shareable graphic: The same scene rendered as a clean, minimal graphic. Snow scattered randomly across the frame in beautiful profusion. The child's face at the center, looking up. In the eye, the snowflake — ambiguous, perfect. One line beneath:

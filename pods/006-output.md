@@ -8,7 +8,7 @@
 #term cognition: TBD
 #related 025, 003, 016, 017, 021
 
-#surface
+@section(surface)
 A thermostat predicts the future. Not impressively — it just decides whether the room is about to get too cold. But it predicts: given the current temperature, what comes next?
 
 @image(006-output,Feedback control system: the output tells you nothing about the process,Wikimedia Commons)
@@ -27,7 +27,7 @@ Look for this: Pay attention the next time you're talking — really talking, wo
 
 Whatever is happening inside while you do that — that's the question.
 
-#depth
+@section(depth)
 The philosopher Alfred North Whitehead@ref(whitehead, "Whitehead, A.N. Process and Reality (1929). Part I for the metaphysical framing.") drew a distinction that most people never make explicit: between the *act* and its *expression*. A process unfolds in time, internally, with a character that is entirely its own. What it produces — the output, the artifact, the behavior — is a downstream trace of that process, shaped and compressed by the act of expression itself. The trace is real. But it is not the process. Mistaking one for the other is, in Whitehead's view, one of the deepest errors in Western thought.
 
 Alan Turing@ref(turing, "Turing, A. Computing Machinery and Intelligence (1950). Short, readable, still radical.") understood this when he designed his famous test. The question "can machines think?" he declared unanswerable — not because it's too hard, but because "think" points at a process, and we have no direct access to processes, only outputs. So he reframed the question entirely: can a machine produce outputs indistinguishable from a thinking human? That's a question we can actually investigate. Whether it's the *right* question is something people are still arguing about — but the move itself was philosophically precise. Turing wasn't being evasive. He was acknowledging exactly what this seedpod is about: you cannot get to the process through the output. So he built a test that only uses the output, and was honest that this is all we ever have.
@@ -46,7 +46,7 @@ Evan Thompson's Mind in Life@ref(thompson, "Thompson, E. Mind in Life. Biologica
 #term Process: in Whitehead's sense, the actual unfolding activity of an occasion of experience. Distinct from its products or traces.
 #term Prediction: used here in the broadest sense: any process that selects a next state given a current one. Deliberately spans thermostats and minds.
 
-#script
+@section(script)
 1. A Victorian street fair. A barker beside an ornate brass-fitted box — gears, drum, levers visible through glass. Barker: Ladies and gentlemen — the most extraordinary musical intelligence in the known world! It predicts what comes next with uncanny precision!
 
 2. A child pulls at an intellectual's sleeve. Child: What is it? Is it alive? Intellectual: Look — you can see the mechanism. It reads the pattern and produces the next note. It's just a machine predicting its output. The music is irrelevant.
@@ -57,7 +57,7 @@ Evan Thompson's Mind in Life@ref(thompson, "Thompson, E. Mind in Life. Biologica
 
 5. Fade to black. Text: The output tells you nothing.
 
-#images
+@section(images)
 Primary illustration
 The Victorian box, front and center, with its glass panel showing the mechanism — drum, pins, levers — all clearly visible and labeled in an engraving style. The door is swinging open. Inside, just barely visible in the shadow, a small figure at a fortepiano. The contrast between the clinical exterior and the human interior is the whole image.
 

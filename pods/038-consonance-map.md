@@ -14,7 +14,7 @@
 #term consonance score: a measure of how harmonious a musical interval sounds, based on the simplicity of its frequency ratio. Simpler ratios — smaller integers — score higher.
 #related 033, 035, 034, 056, 030
 
-#depth
+@section(depth)
 @image(038-consonance-map,Fourier harmonics: the overtone series underlying musical consonance,Wikimedia Commons)
 Play a C and a G on a piano. They sound stable together — resolved,
 at rest. Now play a C and a G-flat. The interval wants to move

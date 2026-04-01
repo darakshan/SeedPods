@@ -13,7 +13,7 @@
 #term negative entropy: Schrödinger's term for the ordered structure that living systems import from their environment to offset internal disorder. The thermodynamic face of what autopoiesis achieves organizationally.
 #related 002, 003, 009, 011, 013
 
-#surface
+@section(surface)
 Here's a question that sounds simple: what makes something alive? 
 @image(012-autopoiesis,The cell that makes itself: autopoiesis under the microscope,Wikimedia Commons)
 
@@ -39,7 +39,7 @@ And notice what it means to be defined by your own self-production. The cell doe
 
 @exercise(Look at your own hand. The cells there are doing this right now — maintaining themselves, replacing their own components, holding the boundary that makes them cells. You are not a thing that contains life. You are a process that, at every level, keeps making itself.)
 
-#depth
+@section(depth)
 Most definitions of life are lists of behaviors — metabolism, reproduction, response to stimuli. Humberto Maturana and Francisco Varela's@ref(maturana, "Maturana, H. and Varela, F. Autopoiesis and Cognition (1980). The founding text.")@ref(maturana, "Maturana, H. and Varela, F. The Tree of Knowledge (1987). More accessible; develops the cognitive implications.") definition is structural. In their 1972 paper coining the term autopoiesis, they asked: what organization is necessary and sufficient for a system to be living? Their answer: a network of processes that produces the very components that constitute and maintain the network. Remove the organization and you have chemistry. Keep it and you have life.
 
 This is the only definition that identifies what must be true of the organization of a system, independent of what it is made of. Carbon is not required. The loop is.
@@ -72,7 +72,7 @@ Prigogine's dissipative structures work@ref(prigogine, "Prigogine, I. and Stenge
 
 @note(dissipative structure deserves a full #term entry — best home is @link(007) where quantum field and thermodynamic order meet.)
 
-#script
+@section(script)
 Note to composer: Opens sparse and low, unresolved. Builds with tension as the wound appears. Dense and urgent during the cell zoom. Returns to the opening theme at the end — same notes, but settled. No resolution. Just a quieter patience.
 
 1. Night. A room. A candle burning on a nightstand. Through the window, a river. A person in a chair keeping vigil beside a bed. Labored breathing from the bed. Hold on the candle — its shape constant, though everything making it up is consumed second by second. Pan to the river — its shape constant, though the water is already gone. Text: Everything that holds its shape does so by constantly giving way.
@@ -87,7 +87,7 @@ Note to composer: Opens sparse and low, unresolved. Builds with tension as the w
 
 6. Fade to black. Text: Three billion years ago, something figured out how not to stop.
 
-#images
+@section(images)
 Primary illustration: The vigil room, rendered as a single still. Candlelight. The river through the window. A hand resting on a bed. Everything holding its shape. In the corner or as an inset, a circular diagram — not clinical, more like a mandala — showing the autopoietic loop: components producing the process, the process producing the components, the boundary containing both. The two images — the room and the diagram — rhyme without explaining each other.
 
 Shareable graphic: Black background. The closing line in spare type, centered:

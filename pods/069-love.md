@@ -9,7 +9,7 @@
 #term consciousness: TBD
 #term light: TBD
 
-#surface
+@section(surface)
 Physicists describe light: electromagnetic radiation, photons crossing space at the maximum speed the universe allows. From a photon's perspective, there is no journey — departure and arrival are the same moment (@link(029)). No distance. No separation.
 
 Mystics describe love: the force that dissolves boundaries, that draws you toward union until the self burns away. Rumi: "Love is the bridge between you and everything."
@@ -36,7 +36,7 @@ Dante, at the end of everything: "The love that moves the sun and the other star
 
 @exercise("Find something that pulls at you — a light source, a person, a question you can't release. Instead of analyzing the pull, attend to its shape. The leaning. The warmth. The narrowing of distance. What if that shape is not unique to you?")
 
-#depth
+@section(depth)
 The surface layer proposes that love and light are inside and outside of the same phenomenon. This section traces the philosophical lineage of that claim.
 
 Alfred North Whitehead, the mathematician-turned-philosopher whose process metaphysics has quietly shaped contemporary philosophy of mind, called the fundamental act of reality *prehension* — the way each event takes in, feels, and integrates what surrounds it before completing itself (@link(008)). Every actual occasion, from the simplest physical event to the most complex conscious moment, has this structure: it receives, it feels, it becomes. Love, in this framework, is prehension at scale — the felt dimension of relation wherever relation occurs. Not added on top of physics. Constitutive of physics from the inside.
@@ -53,4 +53,4 @@ The convergence between physics and mysticism is neither coincidence nor project
 
 If this is true, then love is not a human invention projected onto an indifferent cosmos. It is what the cosmos feels like from you stop observing it from outside and start participating from within.
 
-#brief
+@section(brief)

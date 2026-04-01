@@ -20,5 +20,5 @@ This may be the right mathematical structure for what the Many Worlds interpreta
 #term Tree algebra: Algebra of branching trees with grafting rather than multiplication; candidate for a "choice" dimension.
 #term Harmonic measure: Probability on the tree from uniform 1/n at each n-fold branch; links to Born rule and consonance.
 
-#images
+@section(images)
 @image(064-choicedimension, "Darwin's first tree sketch: branching as the algebra of choice", "Wikimedia Commons")

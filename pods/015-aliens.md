@@ -9,7 +9,7 @@
 #term intelligence: TBD
 #term culture: TBD
 
-#surface
+@section(surface)
 @image(015-aliens,The alien we built,Wikimedia Commons)
 
 We've been scanning the skies for decades, listening for signals from distant civilizations. Meanwhile, we built the aliens ourselves and put them in server rooms.

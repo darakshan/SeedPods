@@ -8,7 +8,7 @@
 #term Necker cube: A line drawing of a cube that spontaneously flips between two orientations. Both are genuinely present in the drawing; the limitation is in perception, not in the object.
 #related 001, 010, 020, 021, 052
 
-#surface
+@section(surface)
 @image(026-twotruths,Two things true at once: the Necker cube,Wikimedia Commons)
 
 Two friends are arguing. Not about facts — they agree on what happened. But they've reached opposite conclusions, and each one's logic is airtight. The conversation keeps circling. Neither is stupid. Neither is lying. So what's going on?
@@ -49,7 +49,7 @@ That's where the interesting territory is.
 
 @exercise("Think of a disagreement you keep revisiting — with another person, or within yourself. Two positions that feel incompatible. Now ask: what larger frame would make both of them true? What are they each seeing that the other framing hides?")
 
-#depth
+@section(depth)
 The surface examples — oxytocin and love, wave and particle — illustrate a pattern that runs deeper than those particular cases. Apparent contradictions often signal that we've reached the edge of a framework. The pressure to choose sides is the framework trying to preserve itself. The deeper move is to find the larger frame where both claims become aspects of the same truth.
 
 Classical logic says a proposition and its negation cannot both be true: the law of non-contradiction. This is correct within a formal system. But real disagreements are rarely about propositions in that clean sense. They're about how to frame a situation, which aspects to weight, what counts as relevant context. Two people can agree on every fact and still reach opposite conclusions because their frameworks organize those facts differently.
@@ -66,8 +66,8 @@ This matters beyond philosophy of science. Contemporary polarization treats ever
 
 The Necker cube keeps flipping because your visual system can only stabilize one interpretation at a time. But someone who has studied the drawing knows both orientations are present, even when they can only see one. That meta-knowledge changes everything. You stop fighting the flip. You start getting curious about what the flip reveals.
 
-#script
+@section(script)
 TBD
 
-#images
+@section(images)
 TBD

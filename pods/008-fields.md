@@ -10,7 +10,7 @@
 #term electromagnetism: TBD
 #related 030, 003, 007, 017, 029
 
-#surface
+@section(surface)
 You've been using light as a metaphor your whole life. 
 @image(008-fields,The electromagnetic field made visible in iron filings,Wikimedia Commons)
 
@@ -34,7 +34,7 @@ What if "medium of feeling" isn't a metaphor at all — just an accurate descrip
 
 @exercise(Next time you're in a room and you turn on a light, remember that the light reaching your eye and the signal traveling down your optic nerve are both disturbances in the same kind of field. The light didn't stop being physics when it became vision. Something continuous happened. What you call "seeing" is the field completing a circuit — from the source, through space, into the structure that notices.)
 
-#depth
+@section(depth)
 James Clerk Maxwell's@ref(maxwell, "Maxwell, J.C. A Treatise on Electricity and Magnetism. Oxford, 1873. The foundational text of classical electromagnetism.") unification of electricity and magnetism in 1865 revealed that light, electricity, and magnetism are all aspects of a single field — but the deeper surprise is what connects that field to radiation. A stationary charge is quiet. A charge moving at constant velocity adds a magnetic component but still doesn't radiate. Only a charge that accelerates — that changes its velocity — shakes the field, and that shake propagates outward as light. A star emits light because its atoms are in violent thermal motion, constantly accelerating and decelerating in collision. The light is not separate from the field; it is the field in motion, triggered by the event of acceleration.
 
 This matters for consciousness because the nervous system is not merely influenced by the electromagnetic field — it is a structure within it. Neural signals are electrochemical events: charge moving, accelerating, propagating. Every firing neuron is, in the precise physical sense, an antenna — disturbing the field, contributing to a pattern that extends beyond the neuron itself. The field doesn't stop at the skull.
@@ -55,7 +55,7 @@ Richard Feynman's Lectures on Physics@ref(feynman, "Feynman, R. The Feynman Lect
 
 #term Diffraction: the spreading and interference of waves when they pass through a gap or around an obstacle. Visible when light passes through a mesh screen. Evidence that light is a field phenomenon, not a particle traveling a straight path.
 
-#script
+@section(script)
 1. A summer night. A child on a porch, pressing her face against a screen door. A rhythmic, unidentifiable sound from inside — dim room beyond. Her body already receiving before she can resolve what it is.
 
 2. She retrieves her flashlight and shines it through the screen door. The mesh diffracts the beam — an interference pattern spreads across the far wall.
@@ -64,7 +64,7 @@ Richard Feynman's Lectures on Physics@ref(feynman, "Feynman, R. The Feynman Lect
 
 4. The interference pattern on the wall. Held. VO: [One line — the continuity between the light, the diffraction, and the seeing. The circuit completing. TBD.]
 
-#images
+@section(images)
 Primary illustration: A screen door at night, seen from outside. Through the mesh, warm interior light and the suggestion of a figure in a rocking chair. The mesh itself is rendered with enough detail to show its grid structure — the diffraction grating that the drama will activate. The outside is dark blue; the inside is amber. The threshold is the image.
 
 Shareable graphic: Black background. A grid of light and dark bands — a diffraction pattern. Single line of text: "The light didn't stop being physics when it became seeing." Clean type, no other elements.

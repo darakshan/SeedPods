@@ -5,11 +5,11 @@
 #category consciousness
 #related 001, 015, 025, 027, 073
 
-#surface
+@section(surface)
 
 TBD
 
-#depth
+@section(depth)
 
 Muriel Rukeyser wrote that "the universe is made of stories, not of atoms." @ref(rukeyser, 'Rukeyser, Muriel. *The Speed of Darkness*. Random House, 1968.') How right she was.
 
@@ -39,7 +39,7 @@ What then? One cannot step outside narrative to perceive without framing. But on
 
 The atoms are indifferent to our agreements. But we are not, because the story we converge on becomes the world we inhabit and the selves we become.
 
-#provenance
+@section(provenance)
 
-#script
+@section(script)
 TBD

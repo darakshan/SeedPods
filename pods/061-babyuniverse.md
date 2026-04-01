@@ -17,5 +17,5 @@ This is not poetry. It is a literal description of the causal chain.
 #term CMB: Cosmic microwave background; the oldest observable light, from 380,000 years after the Big Bang.
 #term Inflation: The early-universe phase of exponential expansion that amplified quantum fluctuations into cosmic structure.
 
-#images
+@section(images)
 @image(061-babyuniverse, "WMAP cosmic microwave background: the universe's baby picture", "Wikimedia Commons")

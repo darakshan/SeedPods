@@ -6,7 +6,7 @@
 #category debug
 #tags meta, framework, software, collections
 
-#brief
+@section(brief)
 Gossamer is an iOS/macOS app for building and exploring collections of linked ideas, with an AI collaborator to help think things through. SeedPods is one such collection. Yours might be something else entirely.
 
 ## What a Collection Is

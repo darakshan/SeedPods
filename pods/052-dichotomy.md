@@ -18,5 +18,5 @@ Apply this to consciousness: Whitehead's discrete occasions are excitations of a
 #term Actual occasion: Whitehead's discrete unit of experience; here interpreted as excitation of a continuous field.
 #term Quantum field: Continuous field whose excitations are particles; model for consciousness as field with occasional events.
 
-#images
+@section(images)
 @image(052-dichotomy, "Cantor's dust: discrete and continuous as a false dichotomy", "Wikimedia Commons")

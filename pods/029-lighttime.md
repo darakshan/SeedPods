@@ -11,7 +11,7 @@
 #term harmonics: TBD
 #related 008, 002, 017, 038, 041
 
-#depth
+@section(depth)
 In special relativity, time dilation reaches its limit at the speed
 of light: a photon has no proper time. From the photon's reference
 frame — to the extent that frame is meaningful — emission and

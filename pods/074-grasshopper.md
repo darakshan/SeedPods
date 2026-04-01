@@ -9,7 +9,7 @@
 #term temperature (AI): A parameter in generative AI systems controlling how broadly the model samples from its probability distribution. Higher temperature produces more varied, less predictable output — a mechanical approximation of wandering whose relationship to genuine play remains an open question.
 #term will-suspension: The state in which goal-directed effort is genuinely set aside, not redirected. Proposed here as the distinguishing feature of play, and as the mode that directed exploration cannot substitute for.
 
-#surface
+@section(surface)
 You probably learned Aesop's fable the same way most of us did. The ant works all summer storing food. The grasshopper sings and plays. Winter comes. The grasshopper suffers. The moral is clear: stop playing, start working. Play is what you do when you should be doing something else.
 
 A word about what we mean by play. Not competitive sport, not organized games, not exercise with a target. Those are perfectly good things, but the will is very much in charge of them — there is a score, a goal, a criterion for success. The play we mean is something else: the kind where none of that applies. What a child does when no one has organized anything. What happens when you follow something simply because it's interesting right now, with no plan for where it leads.
@@ -32,7 +32,7 @@ The grasshopper wasn't the story's failure. The grasshopper was doing something 
 
 @exercise("Try this: Think of something you do — or used to do — where the question 'is this productive?' genuinely doesn't apply. Not rest, not hobby-as-self-improvement. Something where your will steps back. Notice how hard it is to protect time for it, and what that tells you about which mode your life is organized around.")
 
-#depth
+@section(depth)
 The fable's error runs deeper than "play is also valuable." Its deeper error is an assumption so embedded it's nearly invisible: that value only accrues when the will is in charge.
 
 The ant's will is always in charge. Even the scout ant exploring unfamiliar territory is serving a goal the colony already has. Exploration, in this sense, is still ant-mode — the explore pole of Richard Sutton's explore-exploit tradeoff, goal-directed search within a frame. The grasshopper is doing something categorically different: operating outside any frame, with no criterion for success except the intrinsic pull of the moment. This is not a different strategy for finding food. It is a different relationship to the question of what you're doing at all.
@@ -103,7 +103,7 @@ cognitive/experiential: the will moves off the axis of goal-direction.
 The same word — play — may be pointing at the same deep structure in three
 different domains.
 
-#script
+@section(script)
 1. A child in a summer field — watching an insect, following it a few steps, losing interest, lying back. The sky is very large. No voiceover. Just the unhurried quality of time when nothing is required.
 
 2. The Aesop fable rendered briefly, almost diagrammatic: ant carrying grain, grasshopper on a stem, snow, grasshopper at the ant's door. VO: The moral was clear. Stop playing. Start working. But what was the grasshopper actually doing?
@@ -116,7 +116,7 @@ different domains.
 
 6. The child in the field again. Still doing nothing in particular. The insect is back. VO: The fable said grow out of this. Hold on the child's face — absorbed, present, somewhere the will is not driving. The child is gone. The insect remains. The camera holds until the image is just the field. Fade.
 
-#images
+@section(images)
 Primary illustration: Two panels. Left: an ant in close-up, carrying something, perfectly purposeful — beautiful in its efficiency, but contained within a single vector of intention. Right: a grasshopper on a stem, apparently doing nothing, but the composition gives it the larger sky, the more open frame. Not a moral contrast — an observation about the shape of the two modes.
 
 Social graphic: White text on dark field — "The fable had no slot for the will stepping back." Grasshopper silhouette, very spare.

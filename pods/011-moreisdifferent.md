@@ -9,7 +9,7 @@
 #term AI: TBD
 #related 003, 010, 014, 024, 037
 
-#surface
+@section(surface)
 There is a colony of ants living somewhere near you. Hundreds of thousands of them, maybe millions. Each one knows almost nothing. It can follow a scent trail. It can respond to its immediate neighbors. That is more or less the complete list of what any individual ant can do.
 
 @image(011-moreisdifferent,Superconductivity: emergent behaviour from sheer quantity,Wikimedia Commons)
@@ -50,7 +50,7 @@ We have been here before. The ant knew nothing about Aunt Hillary. We knew somet
 
 @exercise("Next time you laugh at something, try to find the exact word that made it funny. Notice that you can't. The laugh was never in any one place. It was in the count.")
 
-#depth
+@section(depth)
 In 1972 the physicist Philip Anderson published a short paper called "More Is Different." He was arguing against an assumption so embedded in science it rarely gets stated: that if you understand the lower level, you understand the higher one. That chemistry is just applied physics. That biology is just applied chemistry. That psychology is just applied biology.
 
 Anderson said: no. Each level of complexity has properties that cannot be derived from the level below. They are not violations of lower-level laws — nothing supernatural is happening. But they are genuinely new. Superconductivity cannot be predicted from the behavior of individual electrons. Wetness is not a property of any water molecule. The lower level is necessary but not sufficient. More, at each threshold, becomes different.
@@ -82,7 +82,7 @@ A related but distinct phenomenon — what happens when formal complexity genera
 #term More is different: Philip Anderson's phrase (1972) for the principle that each level of complexity has emergent properties that cannot be derived from the level below. Not a violation of lower-level laws, but genuinely new phenomena requiring their own description.
 #term Society of actual occasions: Whitehead's term for a stable pattern of events organized around a common characteristic that persists through time. Ant colonies, cities, brains, and neural networks are all societies in this sense.
 
-#script
+@section(script)
 Note to composer: Gershwin's Rhapsody in Blue is the tonal reference — pastoral opening, then building to urban stride, then settling back.
 
 1. A child on a hillside, following a single ant along the ground. Camera at ant level. Near silence.
@@ -103,7 +103,7 @@ Note to composer: Gershwin's Rhapsody in Blue is the tonal reference — pastora
 
 9. Pull back to a single ant crossing bare ground. Knowing nothing. Silence.
 
-#images
+@section(images)
 Primary illustration: The split shot as a static image. Bottom half: a cross-section of an ant hill — tunnels, chambers, ants moving with purpose, rendered with scientific precision but warm in color. Top half: an aerial view of a city grid — streets, intersections, people and cars. The layouts mirror each other almost exactly. No caption. The image is the argument.
 
 Shareable graphic: A 2x2 matrix. Top left: a single ant. Bottom left: a single person. Top right: an ant hill. Bottom right: a city. Caption: More is different. The casual reader sees a size comparison. The reader who gets it sees that both rows are the same story.

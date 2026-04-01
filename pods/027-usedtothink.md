@@ -19,7 +19,7 @@
 #term quantum field: in modern physics, the fundamental layer of reality. Particles are excitations of underlying fields. The quantum vacuum seethes with potential.
 #related 001, 019, 021, 024, 003
 
-#surface
+@section(surface)
 There is a phrase you have heard a thousand times. In documentaries. In science podcasts. In textbooks. In the confident voice of someone explaining something to you. 
 @image(027-usedtothink,The old map we used to think was right,Wikimedia Commons)
 
@@ -55,7 +55,7 @@ The people who heard the voice in the fire may have been wrong about the mechani
 
 @exercise(Next time you hear "we used to think / now we know," ask two questions. First: what exactly did we gain? Second: what did we throw away along with the error — and is it still out there, waiting for a better name?)
 
-#depth
+@section(depth)
 "We used to think X, now we know Y" is one of the most common moves in popular science writing and documentary narration. It feels like progress. It feels like honesty — look how far we've come. But it does three things simultaneously, and only the first is straightforwardly good.
 
 First, it marks genuine progress. The frameworks that get replaced were genuinely superseded. Caloric theory made predictions that kinetic theory made better. The geocentric model was displaced by one with greater explanatory and predictive power. The progress is real.
@@ -76,7 +76,7 @@ The phrase is not wrong. It marks real progress. But it honors the distance trav
 
 See @link(001) for the caloric pattern. See @link(019) for how frameworks get replaced. See @link(021) for how single words perform large philosophical work quietly. See @link(003) for the animist intuition reconsidered. See @link(012) for what vitalism was pointing at.
 
-#script
+@section(script)
 Note to director: No narration. No score until the final scene — ambient sound only throughout: desert wind, courtyard birds, workshop clatter, server hum, fire. Each scene is the same action: a framework erased, a new one written in its place. Same confidence. Same satisfaction. Different century. Let the repetition accumulate.
 
 1. Desert, ancient times. A figure — Moses, or someone like him — stops walking. A bush is burning but not burning down. A voice from the fire: Take off your shoes. He removes his sandals. Stands barefoot on the hot rock. He is not afraid. He is paying attention. Hold on his face. Open. Listening.
@@ -91,7 +91,7 @@ Note to director: No narration. No score until the final scene — ambient sound
 
 6. Cut to black. Text: Now we know.
 
-#images
+@section(images)
 Primary illustration: Five panels in a horizontal strip, identical composition in each. A surface — a burning desert bush, a wax tablet, a chalkboard, a battered chalkboard, a burning server rack. In each panel the same gesture: the previous answer crossed out or erased, something new taking its place. The figures are secondary — what matters is the surface and the gesture. In the fifth panel the fire has returned. Caption: We kept erasing. The fire kept burning.
 
 Shareable graphic: Black background. Five lines descending, each the answer that replaced the one above:

@@ -9,7 +9,7 @@
 #term phase transition: a change in the state of a system — liquid to solid, disordered to ordered, uncommitted to aligned. Requires the medium to be in the right condition (cooled, supersaturated, primed) and seeds to initiate the shift.
 #term magnetic domain: a region within a ferromagnetic material where atomic spins are aligned. Domains grow by recruiting neighbors at their boundaries until the whole material is magnetized.
 
-#surface
+@section(surface)
 @image(018-magnetization,Ideas spreading through a group like magnetic domains,Wikimedia Commons)
 
 Heat a piece of iron past a certain temperature and it loses its magnetism. The atoms are still there, still spinning, but their spins point every which way — the material is disordered, uncommitted. Now let it cool. At first, nothing visible happens. But at scattered points, a few neighboring atoms happen to align. These become seeds.
@@ -36,7 +36,7 @@ The change doesn't happen because you argued everyone into it. It happens becaus
 
 @exercise(Think of a change you've lived through — in your workplace, your family, your culture. Can you identify the seeds? The moment when figure and ground flipped? The holdout holes that eventually closed — or didn't?)
 
-#depth
+@section(depth)
 
 The physics is well understood. A ferromagnetic material like iron has atoms whose electron spins can align with their neighbors. Above the Curie temperature, thermal agitation overwhelms this tendency — the spins point randomly, and there's no net magnetization. Below it, the alignment force wins locally, and domains of aligned spins form and grow. The transition is a canonical example of spontaneous symmetry breaking (@link(009)) — the disordered state is symmetric (no preferred direction), the ordered state breaks that symmetry by choosing one.
 
@@ -50,13 +50,13 @@ Whitehead's societies of occasions (@link(011)) provide the metaphysical frame. 
 
 The practical implication is counterintuitive: persuasion is overrated. You don't change a system by arguing with every element. You change it by seeding the right clusters in a medium that's ready to shift, then letting propagation do the work. The question is never "how do I convince everyone?" It's "where are the low-threshold nodes, and is the temperature right?"
 
-#script
+@section(script)
 TBD
 
-#images
+@section(images)
 TBD
 
-#depth
+@section(depth)
 The physics of phase transitions offers a precise vocabulary for what the surface layer describes intuitively. A ferromagnetic material like iron consists of magnetic domains — regions where atomic spins are aligned. Above the Curie temperature, thermal agitation overwhelms the alignment; the domains dissolve into disorder. Below it, the material is ready to magnetize, but needs seeds: nucleation sites where alignment begins.
 
 Nucleation is the hard part. A single aligned atom in a sea of disorder will be pulled back toward randomness by its disordered neighbors. But a cluster of aligned atoms — if it reaches a critical size — becomes self-sustaining. The atoms at the boundary now feel more pull from the ordered interior than from the disordered exterior. The cluster grows. This is why impurities matter in freezing water: they provide surfaces where the first stable ice crystals can form.

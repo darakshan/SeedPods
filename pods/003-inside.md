@@ -6,7 +6,7 @@
 #term experience: TBD
 #related 001, 002, 005, 008, 036
 
-#surface
+@section(surface)
 Here is what everyone knows: matter is dark inside. 
 @image(003-inside,A geode opened: the inside revealed,Wikimedia Commons)
 
@@ -38,7 +38,7 @@ That shift — from "obviously nothing" to "something we don't have words for ye
 
 @exercise("Watch rain on a window. Pick one drop. For thirty seconds, hold the question open — not 'does it feel something?' but 'what would it mean if it did?' You don't have to believe it. Just try not closing the door.")
 
-#depth
+@section(depth)
 Alfred North Whitehead@ref(whitehead, "Whitehead, A.N. Process and Reality. Macmillan, 1929. The primary text. Dense but foundational.")@ref(whitehead, "Whitehead, A.N. Adventures of Ideas. Macmillan, 1933. More accessible; Part III is directly relevant.") (1861–1947) — mathematician, co-author with Bertrand Russell of the Principia Mathematica, and late in his career a philosopher of nature — made a claim that his contemporaries found strange and that serious philosophers are now returning to: experience is not a biological anomaly. It is constitutive of what it means for anything to happen at all.
 
 Whitehead's position is not the soft version of this claim — that maybe complex systems feel something. It is stronger: every actual occasion, his term for the fundamental event of reality, does not merely occur externally. It takes in what surrounds it, integrates that intake, and completes itself. He called this taking-in a "feeling" — or in his technical vocabulary, a "prehension," from the same root as "apprehend." The feeling is the inside of the event. Not metaphor. Not projection. The inside is what the event is, from within. If the process is real, the interiority is real — scaled and textured by the complexity of the entity, but not absent at any level.
@@ -60,7 +60,7 @@ Thomas Nagel's famous question — what is it like to be a bat?@ref(nagel, "Nage
 #term Hard problem of consciousness: David Chalmers' term (1995) for the question of why any physical process gives rise to subjective experience at all. Distinguished from the "easy problems" of explaining attention, memory, and behavior — which are hard in practice but tractable in principle. The hard problem is why there is something it is like to be a system at all.
 #term Prehension: Whitehead's term for the way each actual occasion takes in and registers what surrounds it before completing itself. Plain English equivalent: feeling, taking-in. The root is the same as "apprehend."
 
-#script
+@section(script)
 1. Extreme close-up of a human eye, iris in full detail. VO: We know this is an inside looking out.
 
 2. Overhead shot — a single drop falls into a glass of water, rings spreading outward. VO: We assume this has no inside at all.
@@ -73,7 +73,7 @@ Thomas Nagel's famous question — what is it like to be a bat?@ref(nagel, "Nage
 
 6. Cut to black. Text: Everything has an inside.
 
-#images
+@section(images)
 Primary illustration: A cross-section of a raindrop in mid-fall — rendered with scientific precision on the outside (surface tension, velocity vectors, aerodynamic distortion) and something else entirely on the inside: not organs, not a face, but a quality of light. Warm. Present. Not labeled. The contrast between the clinical outside and the luminous inside is the whole image. Caption: The outside is well described. The inside has no name yet.
 
 Shareable graphic: Black background. A simple gradient — very dark at the edges, very faint warm light at the center. Single line of text: "Something, rather than nothing." Tagline beneath: seedPods.com

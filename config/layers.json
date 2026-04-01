@@ -1,0 +1,8 @@
+[
+    {"name": "surface",    "displayName": "Surface",    "orderSpecific": true, "optional": false},
+    {"name": "depth",      "displayName": "Depth",      "orderSpecific": true, "optional": false},
+    {"name": "provenance", "displayName": "Provenance", "orderSpecific": true, "optional": true},
+    {"name": "script",     "displayName": "Script",     "orderSpecific": true, "optional": false},
+    {"name": "images",     "displayName": "Images",     "orderSpecific": true, "optional": false}
+  ]
+  

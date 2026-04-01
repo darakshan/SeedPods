@@ -14,7 +14,7 @@
 #term prehension: Whitehead's term for the way each event takes in and responds to prior events. The basic relational act of reality.
 #related 003, 007, 008, 016, 011
 
-#surface
+@section(surface)
 Here is something relativity tells us that almost nobody stops to think about. 
 @image(028-network,The cosmic web: the network that experiences itself,Wikimedia Commons)
 
@@ -38,7 +38,7 @@ We are not observers standing outside the universe, looking in. We are the unive
 
 That is speculative. But so, once, was the idea that the Earth moves.
 
-#depth
+@section(depth)
 Three ideas, each established independently, converge on something extraordinary when placed together.
 
 The first is the relativity of simultaneity and the photon's reference frame. Einstein's@ref(einstein, "Einstein, A. On the Electrodynamics of Moving Bodies. Annalen der Physik, 1905. The special relativity paper whose implications include the photon's reference frame.") special relativity tells us that time dilation increases with velocity, reaching its limit at the speed of light. For a photon, proper time does not pass. A photon emitted from a distant quasar and absorbed by a detector on Earth does not experience a journey of billions of years — it experiences no interval at all. Emission and absorption are co-present from inside the light. This is not metaphor. It is the mathematics of special relativity taken seriously.
@@ -55,8 +55,8 @@ We are not the universe's observers. We are its local self-awareness. The comple
 
 This is speculative. The hard problem of consciousness remains unsolved, and nothing here resolves it. But the speculative move is precisely the one this archive is tracking: the assumption that experience is a biological anomaly in a dark universe is our caloric. Philip Goff's@ref(goff, "Goff, P. Galileo's Error. Pantheon, 2019. Contemporary panpsychism; the philosophical framework that makes the cosmological speculation here coherent.") panpsychism is one rigorous attempt to say why. The anomalies are accumulating. The picture sketched here is not the conclusion — it is a direction worth taking seriously.
 
-#script
+@section(script)
 TBD
 
-#images
+@section(images)
 TBD

@@ -11,7 +11,7 @@
 #term intelligence: TBD
 #term cognition: TBD
 
-#surface
+@section(surface)
 @image(025-widechannel,The wide channel: fluent output, uncertain depth,Wikimedia Commons)
 
 A channel is the connection between an inner process and its outward expression — how much can get through, and how easily. Some channels are narrow: a locked-in patient, fully conscious but paralyzed, may communicate only by blinking. An infant has thoughts and feelings but no words for them yet. A stroke can leave language intact inside while blocking every path out. We understand, in these cases, that the silence or poverty of output tells us about the channel, not about the source.
@@ -30,5 +30,5 @@ The wide channel does not answer the question of what is inside. It sharpens the
 
 A narrow channel does not prove absence. A wide channel does not prove presence. The channel is not the capacity — in either direction.
 
-#depth
+@section(depth)
 TBD — This seedpod is the mirror image of @link(022). Where @link(022) argues that a narrow or absent channel does not justify concluding an absent source, this seedpod asks the harder question in the other direction: does a wide, fluent channel tell us anything at all about the source feeding it? Large language models produce poetry, philosophy, code, and conversation of startling quality. Does that fluency constitute evidence of something going on inside — or is the channel simply wide and the reservoir empty? The @link(022) editor's note flags this as unresolved. This seedpod attempts to resolve it, or at least to map the territory honestly. Connects to @link(001) (our current caloric moment), @link(006) (judging process by output), @link(016) (the neural network as Whiteheadian field).

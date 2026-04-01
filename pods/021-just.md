@@ -14,7 +14,7 @@
 #term fallacy of misplaced concreteness: Whitehead's term for mistaking a useful abstraction for the full concrete reality it was extracted from. Process and Reality (1929).
 #related 001, 006, 022, 003, 011
 
-#surface
+@section(surface)
 You have butterflies. You can't stop thinking about this person. You keep checking your phone for no reason. When you finally sit down with your best friend and try to explain it, you're tripping over your own words because the feeling is bigger than anything you know how to say. 
 @image(021-just,The word "just" hides more than it reveals,Wikimedia Commons)
 
@@ -32,7 +32,7 @@ That claim was never argued. The word made it for free.
 
 Listen for it today. "It's just pattern matching." "It's just a reflex." "It's just what evolution programmed us to do." Every time you hear "just" used to close down a question — ask yourself: has this actually been argued? Or did one small word just do all the philosophical work, while nobody was looking?
 
-#depth
+@section(depth)
 The philosopher Gilbert Ryle@ref(ryle, "Ryle, G. The Concept of Mind (1949).") introduced a concept in 1949 that most people have never heard of but instantly recognize when they see it: the *category mistake*. A category mistake happens when you describe something using the wrong kind of explanation — and then act as if the description is complete. Ryle's most famous example is the ghost in the machine: the idea that somewhere inside the body's physical mechanism there must be a separate mental thing doing the real work. But the error runs in both directions. You can also dismiss experience by pointing at mechanism — and act as if the pointing is an explanation. That is what "just" does.
 
 "It's just oxytocin" reaches for a description from one category — biochemistry — and presents it as a complete account of something in another category entirely: experience, meaning, attachment. The chemistry is real. But chemistry and experience are not the same kind of thing. The word "just" is what makes the category mistake invisible. It says: this description is not only accurate, it is sufficient. That second claim — sufficiency — is never argued. It's assumed.
@@ -46,7 +46,7 @@ This matters beyond love and chemistry. The same move appears wherever hard ques
 Note for revision: find a better Ryle example — the ghost in the machine may be closer than the Oxford/University example. Also consider: ghost in the machine as its own seedpod.
 
 
-#script
+@section(script)
 1. A casual food place. Two young men at a table. A woman walks up to the counter; she doesn't notice them. Danny goes still, then puts his head down on his arms. Danny: I am so in love with her. And she doesn't even see me. Marcus puts a hand on his shoulder. Marcus: Hey. It's just a crush. You'll be fine.
 
 2. Slow push in on Danny's face. VO: Notice what just happened. Marcus was kind. Probably even right. But that word — just — didn't explain the feeling. It dismissed it. It said: we have named this thing, therefore we have accounted for everything worth accounting for. That claim was never argued. One small word made it, quietly, while nobody was looking.
@@ -55,7 +55,7 @@ Note for revision: find a better Ryle example — the ghost in the machine may b
 
 4. Cut to black. Text: Next time someone says "just" — ask what it's hiding.
 
-#images
+@section(images)
 Primary illustration
 Danny and Marcus at the food place table. Danny's head buried in his arms, Marcus's hand on his shoulder. In the background, slightly out of focus, the woman at the counter. The word JUST visible somewhere in the image — perhaps as a speech bubble fragment, or faintly overlaid — small but unmistakable. The contrast between the enormity of the feeling and the smallness of the word is the whole image.
 

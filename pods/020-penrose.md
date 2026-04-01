@@ -9,7 +9,7 @@
 #term computation: TBD
 #related 010, 003, 006, 011, 058
 
-#surface
+@section(surface)
 Roger Penrose is one of the great mathematical physicists of our time. And he made a beautiful mistake. 
 @image(020-penrose,The Penrose arrow: pointing somewhere unexpected,Wikimedia Commons)
 
@@ -29,7 +29,7 @@ The arrow isn't pointing at human exceptionalism. It's pointing at the nature of
 
 @exercise(Next time someone argues that AI "obviously" can't be conscious because it's "just" doing computation — ask them what they think human brains are doing. The argument from Gödel cuts both ways. Or rather, it cuts in a direction neither side expected.)
 
-#depth
+@section(depth)
 @warn(What follows mixes well-established philosophy of mind with more speculative connections to physics and AI. The Penrose critique is on solid ground; the holographic extension at the end is a conjecture worth exploring, not a settled claim.)
 
 Penrose's argument appears in The Emperor's New Mind (1989)@ref(penrose, "Penrose, R. The Emperor's New Mind (1989). Oxford University Press. The original argument.")@ref(penrose, "Penrose, R. Shadows of the Mind (1994). Oxford University Press. Extended and defended against objections.") and Shadows of the Mind (1994). The core claim: Gödel's@ref(godel, "Gödel, K. On Formally Undecidable Propositions of Principia Mathematica and Related Systems (1931). The original incompleteness proof.") first incompleteness theorem shows that for any consistent formal system powerful enough to describe arithmetic, there exist true statements the system cannot prove. A human mathematician, Penrose argues, can see the truth of the Gödel sentence — can step outside the system. Therefore human mathematical understanding is not algorithmic. Therefore consciousness cannot be computational. The proposed physical substrate was orchestrated objective reduction (Orch-OR), quantum coherence in neuronal microtubules, developed with anesthesiologist Stuart Hameroff@ref(hameroff, "Hameroff, S. and Penrose, R. Orchestrated Reduction of Quantum Coherence in Brain Microtubules. Mathematics and Computers in Simulation (1996). The physical proposal.").

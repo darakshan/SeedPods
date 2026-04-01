@@ -15,7 +15,7 @@
 #term subtractive color mixing: mixing pigments, where each pigment absorbs certain wavelengths. The primary colors at this level are closer to cyan, magenta, and yellow. The painter's intuition of red, yellow, blue is an approximation of this layer combined with the opponent channel layer above it.
 #related 038, 026, 012, 042, 044
 
-#depth
+@section(depth)
 @image(041-colorwheel,Munsell hue wheel: the mind closes the spectrum into a circle,Wikimedia Commons)
 The visible spectrum is a line segment. At one end, violet, around
 380 nanometers. At the other, red, around 700 nanometers. Physically
