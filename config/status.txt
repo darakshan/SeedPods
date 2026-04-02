@@ -1,6 +1,0 @@
-draft1   # complete; word count checked (and any status starting with draft)
-rough    # all 4 sections but need a lot of work
-partial  # 2–3 sections with content
-prelim   # 1 section, complete
-proto    # 1 section, rough
-empty    # 0 sections

@@ -1,12 +1,12 @@
-#title Neural Networks as High-Dimensional Mandelbrot Sets
-#status proto
-#date 2026-03-15
-#category AI-minds
-#term neural-networks: TBD
-#term mandelbrot-set: TBD
-#term training: TBD
-#term generalization: TBD
-#related 038, 057, 016, 053, 034
+@title Neural Networks as High-Dimensional Mandelbrot Sets
+@status proto
+@date 2026-03-15
+@category AI-minds
+@term neural-networks: TBD
+@term mandelbrot-set: TBD
+@term training: TBD
+@term generalization: TBD
+@related 009, 011, 034, 038, 053
 
 Training a neural network is, in a precise sense, computing a Mandelbrot set in a space of hundreds of thousands of dimensions.
 
@@ -18,6 +18,6 @@ The bulbs of the Mandelbrot set correspond to the basins of attraction — the r
 
 This is not a metaphor. It is a structural homology between two iterative dynamical systems, one in two dimensions and one in hundreds of thousands.
 
-#term Weight space: The high-dimensional space of all possible network parameters; training is iteration in this space.
-#term Basin of attraction: Region of initial conditions that converge to the same attractor; analog of Mandelbrot bulbs.
+@term Weight space: The high-dimensional space of all possible network parameters; training is iteration in this space.
+@term Basin of attraction: Region of initial conditions that converge to the same attractor; analog of Mandelbrot bulbs.
 @image(056-mandelneural,Julia set: neural network state space as fractal geometry,Wikimedia Commons)

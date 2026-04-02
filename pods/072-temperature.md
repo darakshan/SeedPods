@@ -1,6 +1,6 @@
-#title Temperature
-#status proto
-#date 2026-03-17
+@title Temperature
+@status proto
+@date 2026-03-17
 
 Temperature is another phenomenon that bridges physics, biology, and lived experience — and now AI. It manifests across all three: in the physical world, in human perception, in the computational.
 
@@ -14,11 +14,11 @@ But AIs also have an internal setting called "temperature".  The higher the temp
 
 Sunburn. Burnt out. Looking at the sun. Temperature is not just a measurement. It is a phenomenological condition.
 
-#category sensation
-#term temperature: TBD
-#term physics: TBD
-#term AI: TBD
-#term perception: TBD
-#related 001, 008, 030, 007, 047
+@category sensation
+@term temperature: TBD
+@term physics: TBD
+@term AI: TBD
+@term perception: TBD
+@related 001, 007, 018, 047, 056
 
 @image(072-temperature,Maxwell-Boltzmann speed distribution: temperature as molecular kinetic energy,Wikimedia Commons)

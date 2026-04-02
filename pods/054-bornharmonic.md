@@ -1,11 +1,11 @@
-#title The Born Rule as Harmonic Measure
-#status proto
-#date 2026-03-15
-#category physics
-#term quantum-mechanics: TBD
-#term many-worlds: TBD
-#term mandelbrot-set: TBD
-#related 060, 038, 062, 053, 057
+@title The Born Rule as Harmonic Measure
+@status proto
+@date 2026-03-15
+@category physics
+@term quantum-mechanics: TBD
+@term many-worlds: TBD
+@term mandelbrot-set: TBD
+@related 009, 038, 053, 057, 062
 
 The Born rule is quantum mechanics' most mysterious postulate. It says the probability of a measurement outcome is proportional to the square of the wavefunction's amplitude. 
 @image(054-bornharmonic,Standing wave harmonics: the Born rule as harmonic measure,Wikimedia Commons) It works perfectly. Nobody knows why it is the square and not something else.
@@ -18,5 +18,5 @@ If the universe's wavefunction branches according to a similar tree structure â€
 
 This is speculative. But it is the right kind of speculative â€” it connects two things that are separately mysterious (why the Born rule, why the Mandelbrot measure) and asks if they are the same mystery.
 
-#term Born rule: The quantum postulate that measurement outcome probability is the squared amplitude; origin remains unexplained.
-#term Harmonic measure: Natural probability measure on the Mandelbrot boundary; favors simpler (more consonant) branches.
+@term Born rule: The quantum postulate that measurement outcome probability is the squared amplitude; origin remains unexplained.
+@term Harmonic measure: Natural probability measure on the Mandelbrot boundary; favors simpler (more consonant) branches.

@@ -1,18 +1,18 @@
-#title The Network That Experiences Itself
-#subtitle Stars and galaxies are not isolated objects. From inside a light beam, there is no distance between them at all.
-#status partial
-#date 2026-03-12
-#category consciousness
-#term cosmology: TBD
-#term physics: TBD
-#term relativity: TBD
-#term panpsychism: the philosophical position that experience or something like it is a fundamental and ubiquitous feature of reality, not a late biological emergence. Distinguished from animism by its philosophical rigor; from mysticism by its grounding in physics and mathematics.
-#term emergence: TBD
-#term proper time: in special relativity, the time elapsed as measured by a clock moving with an object. For a photon moving at the speed of light, proper time is zero. The photon does not experience duration.
-#term reference frame: the perspective from which measurements are made. Different reference frames can disagree about durations and distances while agreeing on the underlying physics. The photon's reference frame is a legitimate physical perspective.
-#term wheeler one-electron universe: John Wheeler's 1940s proposal, conveyed to Richard Feynman, that a single electron tracing a worldline through spacetime, zigzagging forward and backward in time, could account for all electrons and positrons in the universe. Not a mainstream theory; notable as a pointer toward the possibility that apparent multiplicity may be underlying unity.
-#term prehension: Whitehead's term for the way each event takes in and responds to prior events. The basic relational act of reality.
-#related 003, 007, 008, 016, 011
+@title The Network That Experiences Itself
+@subtitle Stars and galaxies are not isolated objects. From inside a light beam, there is no distance between them at all.
+@status partial
+@date 2026-03-12
+@category consciousness
+@term cosmology: TBD
+@term physics: TBD
+@term relativity: TBD
+@term panpsychism: the philosophical position that experience or something like it is a fundamental and ubiquitous feature of reality, not a late biological emergence. Distinguished from animism by its philosophical rigor; from mysticism by its grounding in physics and mathematics.
+@term emergence: TBD
+@term proper time: in special relativity, the time elapsed as measured by a clock moving with an object. For a photon moving at the speed of light, proper time is zero. The photon does not experience duration.
+@term reference frame: the perspective from which measurements are made. Different reference frames can disagree about durations and distances while agreeing on the underlying physics. The photon's reference frame is a legitimate physical perspective.
+@term wheeler one-electron universe: John Wheeler's 1940s proposal, conveyed to Richard Feynman, that a single electron tracing a worldline through spacetime, zigzagging forward and backward in time, could account for all electrons and positrons in the universe. Not a mainstream theory; notable as a pointer toward the possibility that apparent multiplicity may be underlying unity.
+@term prehension: Whitehead's term for the way each event takes in and responds to prior events. The basic relational act of reality.
+@related 007, 008, 016, 029, 058
 
 @section(surface)
 Here is something relativity tells us that almost nobody stops to think about. 

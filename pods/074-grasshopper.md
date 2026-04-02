@@ -1,13 +1,13 @@
-#title The Grasshopper Was Right
-#subtitle The fable taught us that play is what you do instead of working. It was wrong.
-#status draft1
-#date 2026-03-19
-#category knowledge
-#related 001, 026, 027
-#term play: As used in this seedpod: the frame-free, will-suspended mode of activity in which no external criterion of success applies. Distinguished from competitive games and organized sport (where the will is fully engaged), from exploration (goal-directed search within a frame), and from rest (recovery in service of further work).
-#term explore-exploit tradeoff: The tension in any adaptive system between using known strategies (exploiting) and searching for better ones (exploring). Both are still goal-directed; neither is equivalent to play in the sense this seedpod develops.
-#term temperature (AI): A parameter in generative AI systems controlling how broadly the model samples from its probability distribution. Higher temperature produces more varied, less predictable output — a mechanical approximation of wandering whose relationship to genuine play remains an open question.
-#term will-suspension: The state in which goal-directed effort is genuinely set aside, not redirected. Proposed here as the distinguishing feature of play, and as the mode that directed exploration cannot substitute for.
+@title The Grasshopper Was Right
+@subtitle The fable taught us that play is what you do instead of working. It was wrong.
+@status draft1
+@date 2026-03-19
+@category knowledge
+@related 005, 009, 046, 052, 072
+@term play: As used in this seedpod: the frame-free, will-suspended mode of activity in which no external criterion of success applies. Distinguished from competitive games and organized sport (where the will is fully engaged), from exploration (goal-directed search within a frame), and from rest (recovery in service of further work).
+@term explore-exploit tradeoff: The tension in any adaptive system between using known strategies (exploiting) and searching for better ones (exploring). Both are still goal-directed; neither is equivalent to play in the sense this seedpod develops.
+@term temperature (AI): A parameter in generative AI systems controlling how broadly the model samples from its probability distribution. Higher temperature produces more varied, less predictable output — a mechanical approximation of wandering whose relationship to genuine play remains an open question.
+@term will-suspension: The state in which goal-directed effort is genuinely set aside, not redirected. Proposed here as the distinguishing feature of play, and as the mode that directed exploration cannot substitute for.
 
 @section(surface)
 You probably learned Aesop's fable the same way most of us did. The ant works all summer storing food. The grasshopper sings and plays. Winter comes. The grasshopper suffers. The moral is clear: stop playing, start working. Play is what you do when you should be doing something else.

@@ -1,10 +1,10 @@
-#title Leibniz as the Unlikely Ancestor of the Holographic Principle
-#status proto
-#date 2026-03-15
-#category physics
-#term holographic-principle: TBD
-#term monads: TBD
-#related 051, 068, 024, 003, 037
+@title Leibniz as the Unlikely Ancestor of the Holographic Principle
+@status proto
+@date 2026-03-15
+@category physics
+@term holographic-principle: TBD
+@term monads: TBD
+@related 003, 011, 037, 058, 068
 
 Leibniz@ref(leibniz, "Leibniz, G.W. Monadology (1714). Maldacena, J. The large N limit of superconformal field theories (1998). AdS/CFT.") proposed that reality is composed of monads — indivisible, windowless units of experience. Each monad has no direct causal contact with any other. Each monad contains within itself a complete representation of the entire universe, from its own perspective. The universe is not a collection of interacting objects. It is a collection of perspectives, each one containing all the others.
 
@@ -16,8 +16,8 @@ Leibniz was not right about the details. But the structure — interiority as fu
 
 The holographic principle may be the physics of what Leibniz was gesturing at philosophically.
 
-#term Monad: Leibniz's indivisible unit of experience; each contains a complete representation of the universe from its perspective.
-#term AdS/CFT: Maldacena's correspondence: a gravitational theory in the bulk is equivalent to a quantum theory on the boundary; each boundary point encodes the interior.
+@term Monad: Leibniz's indivisible unit of experience; each contains a complete representation of the universe from its perspective.
+@term AdS/CFT: Maldacena's correspondence: a gravitational theory in the bulk is equivalent to a quantum theory on the boundary; each boundary point encodes the interior.
 
 @section(images)
 @image(067-monads-holons, "Leibniz's I Ching hexagram diagram of 1701", "Wikimedia Commons")

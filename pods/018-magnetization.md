@@ -1,13 +1,13 @@
-#title Ideas Magnetize Through a Group Like Iron
-#subtitle Only a seed group of influencers is necessary. Then the field does the rest.
-#status proto
-#date 2026-03-28
-#category knowledge
-#related 009, 011, 019, 001, 045
-#term nucleation: the formation of small ordered regions (nuclei or seeds) within a disordered medium. The seeds provide a template that neighboring elements can join, initiating a phase transition.
-#term percolation threshold: the critical moment when isolated clusters become a connected network. Before it, seeds are islands; after it, they form a continent and the remaining disorder is surrounded.
-#term phase transition: a change in the state of a system — liquid to solid, disordered to ordered, uncommitted to aligned. Requires the medium to be in the right condition (cooled, supersaturated, primed) and seeds to initiate the shift.
-#term magnetic domain: a region within a ferromagnetic material where atomic spins are aligned. Domains grow by recruiting neighbors at their boundaries until the whole material is magnetized.
+@title Ideas Magnetize Through a Group Like Iron
+@subtitle Only a seed group of influencers is necessary. Then the field does the rest.
+@status proto
+@date 2026-03-28
+@category knowledge
+@related 009, 011, 014, 056, 063
+@term nucleation: the formation of small ordered regions (nuclei or seeds) within a disordered medium. The seeds provide a template that neighboring elements can join, initiating a phase transition.
+@term percolation threshold: the critical moment when isolated clusters become a connected network. Before it, seeds are islands; after it, they form a continent and the remaining disorder is surrounded.
+@term phase transition: a change in the state of a system — liquid to solid, disordered to ordered, uncommitted to aligned. Requires the medium to be in the right condition (cooled, supersaturated, primed) and seeds to initiate the shift.
+@term magnetic domain: a region within a ferromagnetic material where atomic spins are aligned. Domains grow by recruiting neighbors at their boundaries until the whole material is magnetized.
 
 @section(surface)
 @image(018-magnetization,Ideas spreading through a group like magnetic domains,Wikimedia Commons)

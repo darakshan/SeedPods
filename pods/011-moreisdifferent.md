@@ -1,13 +1,13 @@
-#title More Is Different
-#subtitle Nothing was added. The numbers just got large enough.
-#status rough
-#date 2026-03-14
-#category consciousness
-#term emergence: TBD
-#term complexity: TBD
-#term holons: TBD
-#term AI: TBD
-#related 003, 010, 014, 024, 037
+@title More Is Different
+@subtitle Nothing was added. The numbers just got large enough.
+@status rough
+@date 2026-03-14
+@category consciousness
+@term emergence: TBD
+@term complexity: TBD
+@term holons: TBD
+@term AI: TBD
+@related 002, 009, 010, 014, 037
 
 @section(surface)
 There is a colony of ants living somewhere near you. Hundreds of thousands of them, maybe millions. Each one knows almost nothing. It can follow a scent trail. It can respond to its immediate neighbors. That is more or less the complete list of what any individual ant can do.
@@ -77,10 +77,10 @@ The weight matrix of a large neural network is the contemporary instance of Ande
 
 A related but distinct phenomenon — what happens when formal complexity generates self-reference rather than emergence — is the territory of @link(010). The architecture behind both, the nested vocabulary by which each level's stable outputs become the primitive units of the next level up, is @link(037).
 
-#term Holon: Arthur Koestler's term for any entity that is simultaneously a whole in its own right and a part of a larger whole. Reality in Koestler's picture is a nested hierarchy of holons rather than parts assembling into wholes.
-#term Bisociation: Koestler's term for the collision of two independent frames of reference that releases energy as laughter, insight, or aesthetic emotion. His claim: this is the common structure of humor, scientific discovery, and artistic creation.
-#term More is different: Philip Anderson's phrase (1972) for the principle that each level of complexity has emergent properties that cannot be derived from the level below. Not a violation of lower-level laws, but genuinely new phenomena requiring their own description.
-#term Society of actual occasions: Whitehead's term for a stable pattern of events organized around a common characteristic that persists through time. Ant colonies, cities, brains, and neural networks are all societies in this sense.
+@term Holon: Arthur Koestler's term for any entity that is simultaneously a whole in its own right and a part of a larger whole. Reality in Koestler's picture is a nested hierarchy of holons rather than parts assembling into wholes.
+@term Bisociation: Koestler's term for the collision of two independent frames of reference that releases energy as laughter, insight, or aesthetic emotion. His claim: this is the common structure of humor, scientific discovery, and artistic creation.
+@term More is different: Philip Anderson's phrase (1972) for the principle that each level of complexity has emergent properties that cannot be derived from the level below. Not a violation of lower-level laws, but genuinely new phenomena requiring their own description.
+@term Society of actual occasions: Whitehead's term for a stable pattern of events organized around a common characteristic that persists through time. Ant colonies, cities, brains, and neural networks are all societies in this sense.
 
 @section(script)
 Note to composer: Gershwin's Rhapsody in Blue is the tonal reference — pastoral opening, then building to urban stride, then settling back.

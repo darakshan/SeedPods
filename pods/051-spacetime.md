@@ -1,10 +1,10 @@
-#title Spacetime as Emergent from Information Structure
-#status proto
-#date 2026-03-15
-#category physics
-#term entanglement: TBD
-#term emergence: TBD
-#related 050, 067, 002, 008, 031
+@title Spacetime as Emergent from Information Structure
+@status proto
+@date 2026-03-15
+@category physics
+@term entanglement: TBD
+@term emergence: TBD
+@related 008, 037, 050, 058, 068
 
 Physicists have been circling this for thirty years without quite landing. The holographic principle — that the information content of a region is proportional to its boundary area, not its volume — suggests that three-dimensional space is not fundamental. It is a projection of a two-dimensional information structure.
 
@@ -14,6 +14,6 @@ If this is right, then the question "where is consciousness in spacetime" is mal
 
 The holographic boundary is the more fundamental thing. The three-dimensional interior — including all the spacetime we navigate — is what the boundary looks like from inside.
 
-#term Holographic principle: The information in a region scales with its boundary area, not volume; suggests space is emergent.
-#term ER = EPR: The conjecture that entanglement and spacetime geometry are two faces of the same structure.
+@term Holographic principle: The information in a region scales with its boundary area, not volume; suggests space is emergent.
+@term ER = EPR: The conjecture that entanglement and spacetime geometry are two faces of the same structure.
 @image(051-spacetime,CNOT quantum gate: spacetime as emergent information structure,Wikimedia Commons)

@@ -1,13 +1,13 @@
-#title The Arrow Points Somewhere Else
-#subtitle Penrose was right that Gödel matters. He was wrong about where the arrow points.
-#status partial
-#date 2026-03-11
-#category consciousness
-#term godel-numbers: TBD
-#term AI: TBD
-#term emergence: TBD
-#term computation: TBD
-#related 010, 003, 006, 011, 058
+@title The Arrow Points Somewhere Else
+@subtitle Penrose was right that Gödel matters. He was wrong about where the arrow points.
+@status partial
+@date 2026-03-11
+@category consciousness
+@term godel-numbers: TBD
+@term AI: TBD
+@term emergence: TBD
+@term computation: TBD
+@related 010, 016, 034, 037, 058
 
 @section(surface)
 Roger Penrose is one of the great mathematical physicists of our time. And he made a beautiful mistake. 

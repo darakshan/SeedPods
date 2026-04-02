@@ -1,11 +1,11 @@
-#title Superposition in Neural Network Representations
-#status proto
-#date 2026-03-15
-#category AI-minds
-#term neural-networks: TBD
-#term farey-sequence: TBD
-#term interpretability: TBD
-#related 053, 056, 016, 038, 035
+@title Superposition in Neural Network Representations
+@status proto
+@date 2026-03-15
+@category AI-minds
+@term neural-networks: TBD
+@term farey-sequence: TBD
+@term interpretability: TBD
+@related 010, 034, 035, 038, 053
 
 A neural network with d dimensions in its residual stream can represent far more than d independent concepts. This is called superposition and it has been studied carefully in the mechanistic interpretability literature@ref(olsson, "Olsson, E. et al. Superposition, memorization, and double descent (2022). Or similar interpretability work on superposition."). 
 @image(057-superfarey,Superposition in high-dimensional neural representations,Wikimedia Commons)
@@ -16,5 +16,5 @@ This is directly related to the virtual dimensions formula. The network is impli
 
 The implication: a sufficiently large neural network is not just storing information. It is organizing information according to a natural hierarchy of importance — simpler, more fundamental concepts first, complex and specialized ones deeper. This is the same hierarchy that appears in music, in Benford's Law, and in the Farey sequence. The network didn't learn this hierarchy. It fell out of the geometry.
 
-#term Superposition: Storing more than d concepts in d dimensions by using nearly-orthogonal directions; studied in mechanistic interpretability.
-#term Farey depth: Threshold of acceptable interference; determines how many concepts fit at each level of the hierarchy.
+@term Superposition: Storing more than d concepts in d dimensions by using nearly-orthogonal directions; studied in mechanistic interpretability.
+@term Farey depth: Threshold of acceptable interference; determines how many concepts fit at each level of the hierarchy.

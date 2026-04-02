@@ -1,14 +1,14 @@
-#title The Field Is the Medium of Feeling
-#subtitle Physics and Whitehead converged on the same discovery from opposite directions.
-#status draft1
-#date 2026-03-12
-#category sensation
-#term physics: TBD
-#term fields: TBD
-#term quantum-mechanics: TBD
-#term consciousness: TBD
-#term electromagnetism: TBD
-#related 030, 003, 007, 017, 029
+@title The Field Is the Medium of Feeling
+@subtitle Physics and Whitehead converged on the same discovery from opposite directions.
+@status draft1
+@date 2026-03-12
+@category sensation
+@term physics: TBD
+@term fields: TBD
+@term quantum-mechanics: TBD
+@term consciousness: TBD
+@term electromagnetism: TBD
+@related 003, 007, 016, 017, 029
 
 @section(surface)
 You've been using light as a metaphor your whole life. 
@@ -47,13 +47,13 @@ The convergence is the point. Two entirely different lines of inquiry — one tr
 
 Richard Feynman's Lectures on Physics@ref(feynman, "Feynman, R. The Feynman Lectures on Physics, Vol. 2. Addison-Wesley, 1964. The clearest physical account of electromagnetism available.") remain the clearest physical account of what electromagnetism actually says about the world.
 
-#term Electromagnetic field: the unified field described by James Clerk Maxwell's equations (1865), of which electricity, magnetism, and light are all aspects. Not a medium that contains these phenomena but the phenomenon itself. Pervades all of space.
+@term Electromagnetic field: the unified field described by James Clerk Maxwell's equations (1865), of which electricity, magnetism, and light are all aspects. Not a medium that contains these phenomena but the phenomenon itself. Pervades all of space.
 
-#term Radiation: what the electromagnetic field does when a charged particle accelerates. The disturbance propagates outward as light. A stationary charge is silent; only acceleration speaks.
+@term Radiation: what the electromagnetic field does when a charged particle accelerates. The disturbance propagates outward as light. A stationary charge is silent; only acceleration speaks.
 
-#term Prehension: Alfred North Whitehead's term for the fundamental act by which any event takes in and is shaped by what surrounds it. Not a metaphor for perception but a proposed feature of reality at every scale: each occasion reaches out and feels its environment before it can become itself. Whitehead argued the electromagnetic field is the physical medium through which this reaching occurs.
+@term Prehension: Alfred North Whitehead's term for the fundamental act by which any event takes in and is shaped by what surrounds it. Not a metaphor for perception but a proposed feature of reality at every scale: each occasion reaches out and feels its environment before it can become itself. Whitehead argued the electromagnetic field is the physical medium through which this reaching occurs.
 
-#term Diffraction: the spreading and interference of waves when they pass through a gap or around an obstacle. Visible when light passes through a mesh screen. Evidence that light is a field phenomenon, not a particle traveling a straight path.
+@term Diffraction: the spreading and interference of waves when they pass through a gap or around an obstacle. Visible when light passes through a mesh screen. Evidence that light is a field phenomenon, not a particle traveling a straight path.
 
 @section(script)
 1. A summer night. A child on a porch, pressing her face against a screen door. A rhythmic, unidentifiable sound from inside — dim room beyond. Her body already receiving before she can resolve what it is.

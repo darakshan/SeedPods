@@ -1,11 +1,11 @@
-#title The Virtual Dimensions Formula as a Publishable Conjecture
-#status proto
-#date 2026-03-15
-#category mathematics
-#term farey-sequence: TBD
-#term neural-networks: TBD
-#term many-worlds: TBD
-#related 057, 060, 038, 054, 056
+@title The Virtual Dimensions Formula as a Publishable Conjecture
+@status proto
+@date 2026-03-15
+@category mathematics
+@term farey-sequence: TBD
+@term neural-networks: TBD
+@term many-worlds: TBD
+@related 057, 060, 038, 054, 056
 
 If you have a space with d actual dimensions, how many nearly-orthogonal directions can you fit in it? The answer matters because nearly-orthogonal directions can carry independent information without crosstalk — like independent channels. 
 @image(053-dimensions,High-dimensional geometry: virtual dimensions,Wikimedia Commons)
@@ -22,5 +22,5 @@ Where d is actual dimensions, n is Farey depth (your consonance threshold), and 
 
 Applications: neural network superposition capacity, Many Worlds branch distinguishability, and potentially the information capacity of physical space itself. The formula connects musical consonance, high-dimensional geometry, and quantum branching under one expression. That connection has not been made explicitly in the literature.
 
-#term Johnson-Lindenstrauss: The result that high-dimensional data can be projected to lower dimension while approximately preserving distances; exponential in d directions.
-#term Farey depth: The complexity level in the Farey hierarchy; used here as a principled threshold for "nearly orthogonal."
+@term Johnson-Lindenstrauss: The result that high-dimensional data can be projected to lower dimension while approximately preserving distances; exponential in d directions.
+@term Farey depth: The complexity level in the Farey hierarchy; used here as a principled threshold for "nearly orthogonal."

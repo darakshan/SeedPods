@@ -1,12 +1,12 @@
-#title Two Things Can Be True at Once
-#subtitle Contradiction is often the sign of a framework too small for the reality it's trying to hold.
-#status partial
-#date 2026-03-12
-#category knowledge
-#term complementarity: Niels Bohr's principle that mutually exclusive descriptions (wave and particle) can both be necessary for a complete account of quantum phenomena. Neither alone is sufficient; both together are required.
-#term framework: A set of assumptions, categories, and relationships that organize how we interpret experience. Frameworks are enabling — they let us see patterns — but also limiting, since what falls outside them becomes invisible or paradoxical.
-#term Necker cube: A line drawing of a cube that spontaneously flips between two orientations. Both are genuinely present in the drawing; the limitation is in perception, not in the object.
-#related 001, 010, 020, 021, 052
+@title Two Things Can Be True at Once
+@subtitle Contradiction is often the sign of a framework too small for the reality it's trying to hold.
+@status partial
+@date 2026-03-12
+@category knowledge
+@term complementarity: Niels Bohr's principle that mutually exclusive descriptions (wave and particle) can both be necessary for a complete account of quantum phenomena. Neither alone is sufficient; both together are required.
+@term framework: A set of assumptions, categories, and relationships that organize how we interpret experience. Frameworks are enabling — they let us see patterns — but also limiting, since what falls outside them becomes invisible or paradoxical.
+@term Necker cube: A line drawing of a cube that spontaneously flips between two orientations. Both are genuinely present in the drawing; the limitation is in perception, not in the object.
+@related 002, 020, 041, 052, 069
 
 @section(surface)
 @image(026-twotruths,Two things true at once: the Necker cube,Wikimedia Commons)

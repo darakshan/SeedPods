@@ -1,18 +1,18 @@
-#title The Word "Just" Is a Confession
-#subtitle When someone says a process is "just" doing something, they've described the output and mistaken it for an explanation.
-#status draft1
-#date 2026-03-11
-#category knowledge
-#term language: TBD
-#term rhetoric: TBD
-#term cognition: TBD
-#term reductionism: TBD
-#term dismissal: TBD
-#term just (explanatory): when deployed to present a description of mechanism as a complete account of experience or process. Makes a claim of sufficiency that is never argued. Distinct from its innocent uses: timing ("I just arrived"), limitation ("I just want water"), or emphasis.
-#term category mistake: Ryle's term for applying an explanation from one category to something in a different category, then treating it as complete. The Concept of Mind (1949).
-#term intuition pump: Dennett's term for a device that makes a conclusion feel obvious without establishing it through argument. Intuition Pumps and Other Tools for Thinking (2013).
-#term fallacy of misplaced concreteness: Whitehead's term for mistaking a useful abstraction for the full concrete reality it was extracted from. Process and Reality (1929).
-#related 001, 006, 022, 003, 011
+@title The Word "Just" Is a Confession
+@subtitle When someone says a process is "just" doing something, they've described the output and mistaken it for an explanation.
+@status draft1
+@date 2026-03-11
+@category knowledge
+@term language: TBD
+@term rhetoric: TBD
+@term cognition: TBD
+@term reductionism: TBD
+@term dismissal: TBD
+@term just (explanatory): when deployed to present a description of mechanism as a complete account of experience or process. Makes a claim of sufficiency that is never argued. Distinct from its innocent uses: timing ("I just arrived"), limitation ("I just want water"), or emphasis.
+@term category mistake: Ryle's term for applying an explanation from one category to something in a different category, then treating it as complete. The Concept of Mind (1949).
+@term intuition pump: Dennett's term for a device that makes a conclusion feel obvious without establishing it through argument. Intuition Pumps and Other Tools for Thinking (2013).
+@term fallacy of misplaced concreteness: Whitehead's term for mistaking a useful abstraction for the full concrete reality it was extracted from. Process and Reality (1929).
+@related 003, 006, 022, 025, 069
 
 @section(surface)
 You have butterflies. You can't stop thinking about this person. You keep checking your phone for no reason. When you finally sit down with your best friend and try to explain it, you're tripping over your own words because the feeling is bigger than anything you know how to say. 

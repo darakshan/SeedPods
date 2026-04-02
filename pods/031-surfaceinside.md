@@ -1,12 +1,12 @@
-#title The Surface Is the Inside 
-#subtitle The Bubble
-#status rough
-#date 2026-03-14
-#category physics
-#term holographic: TBD
-#term boundary: TBD
-#term interiority: TBD
-#related 003, 008, 004, 014, 067
+@title The Surface Is the Inside 
+@subtitle The Bubble
+@status rough
+@date 2026-03-14
+@category physics
+@term holographic: TBD
+@term boundary: TBD
+@term interiority: TBD
+@related 003, 004, 008, 014, 068
 
 @section(surface)
 A child stops everything for a soap bubble. There's something revelatory about it — not just beautiful. As if it's showing us something we already knew. It is. 

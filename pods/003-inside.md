@@ -1,10 +1,10 @@
-#title Everything Has an Inside
-#subtitle Not just brains. Not just animals. Experience may go all the way down.
-#status draft1
-#date 2026-03-13
-#category consciousness
-#term experience: TBD
-#related 001, 002, 005, 008, 036
+@title Everything Has an Inside
+@subtitle Not just brains. Not just animals. Experience may go all the way down.
+@status draft1
+@date 2026-03-13
+@category consciousness
+@term experience: TBD
+@related 001, 002, 008, 031, 069
 
 @section(surface)
 Here is what everyone knows: matter is dark inside. 
@@ -55,10 +55,10 @@ This has direct implications for how we think about AI. A neural network trained
 
 Thomas Nagel's famous question — what is it like to be a bat?@ref(nagel, "Nagel, T. What Is It Like to Be a Bat? Philosophical Review, 1974. The classic paper establishing that subjective experience cannot be fully captured from an objective viewpoint.") — established that subjective experience cannot be fully captured from an objective viewpoint, and remains the sharpest formulation of what makes the hard problem hard.
 
-#term Panpsychism: the philosophical position that experience or mind is a fundamental and ubiquitous feature of reality, not a late biological product. Distinguished from animism (which attributes spirits or agency to natural objects) by its grounding in rigorous argument rather than cultural tradition.
-#term Actual occasion: Alfred North Whitehead's term for the fundamental unit of reality: a discrete event of becoming that takes in its environment, integrates it, and completes itself. Enduring objects are families (Whitehead: "societies") of actual occasions stable enough to appear permanent.
-#term Hard problem of consciousness: David Chalmers' term (1995) for the question of why any physical process gives rise to subjective experience at all. Distinguished from the "easy problems" of explaining attention, memory, and behavior — which are hard in practice but tractable in principle. The hard problem is why there is something it is like to be a system at all.
-#term Prehension: Whitehead's term for the way each actual occasion takes in and registers what surrounds it before completing itself. Plain English equivalent: feeling, taking-in. The root is the same as "apprehend."
+@term Panpsychism: the philosophical position that experience or mind is a fundamental and ubiquitous feature of reality, not a late biological product. Distinguished from animism (which attributes spirits or agency to natural objects) by its grounding in rigorous argument rather than cultural tradition.
+@term Actual occasion: Alfred North Whitehead's term for the fundamental unit of reality: a discrete event of becoming that takes in its environment, integrates it, and completes itself. Enduring objects are families (Whitehead: "societies") of actual occasions stable enough to appear permanent.
+@term Hard problem of consciousness: David Chalmers' term (1995) for the question of why any physical process gives rise to subjective experience at all. Distinguished from the "easy problems" of explaining attention, memory, and behavior — which are hard in practice but tractable in principle. The hard problem is why there is something it is like to be a system at all.
+@term Prehension: Whitehead's term for the way each actual occasion takes in and registers what surrounds it before completing itself. Plain English equivalent: feeling, taking-in. The root is the same as "apprehend."
 
 @section(script)
 1. Extreme close-up of a human eye, iris in full detail. VO: We know this is an inside looking out.

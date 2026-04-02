@@ -1,10 +1,10 @@
-#title Whitehead's God as Initial Condition and Attractor
-#status proto
-#date 2026-03-15
-#category consciousness
-#term god: TBD
-#term attractor: TBD
-#related 050, 059, 060, 005, 058
+@title Whitehead's God as Initial Condition and Attractor
+@status proto
+@date 2026-03-15
+@category consciousness
+@term god: TBD
+@term attractor: TBD
+@related 009, 034, 058, 059, 060
 
 Whitehead's God is not the God of theism — not a person who intervenes in history or answers prayers. God in Whitehead's system plays two roles in the metaphysics of process.
 
@@ -16,6 +16,6 @@ In the language of dynamical systems: God is both the initial condition of the i
 
 Teilhard's Omega Point is this attractor made cosmic — the state toward which the entire evolutionary process converges. Whitehead gives the mechanism (the lure operating at every occasion). Teilhard gives the destination@ref(whitehead, "Whitehead, A.N. Process and Reality (1929). God as ground of possibility and lure. Teilhard de Chardin, P. The Phenomenon of Man (1955). Omega Point."). Together they describe a universe that is going somewhere, and knows it, at every scale.
 
-#term Initial aim: Whitehead's lure — the pull each occasion feels toward the best possibility available; not compulsion but attraction.
-#term Eternal objects: The realm of possibility that God holds available; occasions select from it in their self-determination.
+@term Initial aim: Whitehead's lure — the pull each occasion feels toward the best possibility available; not compulsion but attraction.
+@term Eternal objects: The realm of possibility that God holds available; occasions select from it in their self-determination.
 @image(066-cosmicattractor,Lorenz attractor: God as initial condition and cosmic attractor,Wikimedia Commons)

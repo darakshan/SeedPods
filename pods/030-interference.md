@@ -1,15 +1,15 @@
-#title The Pattern Is What the Waves Do Together
-#subtitle Harmony, the double slit, and thought may all be the same phenomenon at different scales.
-#status proto
-#date 2026-03-12
-#category sensation
-#term physics: TBD
-#term music: TBD
-#term consciousness: TBD
-#term harmony: TBD
-#term fields: TBD
-#term double-slit: TBD
-#related 008, 007, 009, 029, 054
+@title The Pattern Is What the Waves Do Together
+@subtitle Harmony, the double slit, and thought may all be the same phenomenon at different scales.
+@status proto
+@date 2026-03-12
+@category sensation
+@term physics: TBD
+@term music: TBD
+@term consciousness: TBD
+@term harmony: TBD
+@term fields: TBD
+@term double-slit: TBD
+@related 007, 009, 016, 029, 054
 
 Interference is the mechanism by which two waves meeting in the same medium reinforce or cancel depending on their phase relationship. In music this produces consonance and dissonance — the reason certain intervals feel stable and others tense is that their interference patterns are periodic and regular, or not. 
 @image(030-interference,The double-slit interference pattern,Wikimedia Commons) In the double slit experiment it produces the banded pattern on the screen that proves light is a wave phenomenon. In the brain, millions of neurons continuously disturbing the electromagnetic field produce overlapping interference patterns whose structure may be what we call thought.

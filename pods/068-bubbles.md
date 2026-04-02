@@ -1,11 +1,11 @@
-#title The Soap Bubble as Recognition, Not Metaphor
-#status proto
-#date 2026-03-15
-#category biology
-#term recognition: TBD
-#term boundary: TBD
-#term interiority: TBD
-#related 051, 067, 031, 003, 037
+@title The Soap Bubble as Recognition, Not Metaphor
+@status proto
+@date 2026-03-15
+@category biology
+@term recognition: TBD
+@term boundary: TBD
+@term interiority: TBD
+@related 051, 067, 031, 003, 037
 
 Children stop for soap bubbles. Adults do too, if they are honest. The response is disproportionate to what a soap bubble is — a thin film of soapy water, lasting seconds. The attraction runs deeper than aesthetics. 
 @image(068-bubbles,A soap bubble: recognition, not metaphor,Wikimedia Commons)
@@ -18,4 +18,4 @@ A soap bubble makes this visible. The surface is all there is. There is no hidde
 
 When a child stops for a soap bubble, she is recognizing the structure of her own existence. She doesn't know this. But the stillness is not puzzlement. It is recognition.
 
-#term Holographic principle: The information in a region is encoded on its boundary; the interior is what the boundary does.
+@term Holographic principle: The information in a region is encoded on its boundary; the interior is what the boundary does.

@@ -1,11 +1,11 @@
-#title Discrete and Continuous as a False Dichotomy
-#status proto
-#date 2026-03-15
-#category mathematics
-#term consciousness: TBD
-#term quantum: TBD
-#term discrete-continuous: TBD
-#related 002, 008, 007, 004, 034
+@title Discrete and Continuous as a False Dichotomy
+@status proto
+@date 2026-03-15
+@category mathematics
+@term consciousness: TBD
+@term quantum: TBD
+@term discrete-continuous: TBD
+@related 002, 004, 007, 008, 048
 
 Physics already resolved this, and the resolution is worth stating cleanly because it keeps coming up in philosophy of mind.
 
@@ -15,8 +15,8 @@ But physics shows us the dichotomy is false. An electron is not a particle that 
 
 Apply this to consciousness: Whitehead's discrete occasions are excitations of a continuous consciousness field@ref(whitehead, "Whitehead, A.N. Process and Reality (1929). Occasions and societies. Quantum field theory: e.g. Peskin & Schroeder (1995)."). The field is always there. The occasions are what the field does when it organizes itself into events. This makes Whitehead more coherent, not less — his "societies of occasions" are stable excitation patterns in the field, exactly as particles are stable excitation patterns in quantum fields.
 
-#term Actual occasion: Whitehead's discrete unit of experience; here interpreted as excitation of a continuous field.
-#term Quantum field: Continuous field whose excitations are particles; model for consciousness as field with occasional events.
+@term Actual occasion: Whitehead's discrete unit of experience; here interpreted as excitation of a continuous field.
+@term Quantum field: Continuous field whose excitations are particles; model for consciousness as field with occasional events.
 
 @section(images)
 @image(052-dichotomy, "Cantor's dust: discrete and continuous as a false dichotomy", "Wikimedia Commons")

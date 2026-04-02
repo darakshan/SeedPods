@@ -1,13 +1,13 @@
-#title Aliens Are Among Us — and We Built Them
-#subtitle The surprise is not that they arrived. The surprise is where they came from.
-#status rough
-#date 2026-03-23
-#category AI-minds
-#related 016, 017, 006, 003, 047
-#term AI: TBD
-#term consciousness: TBD
-#term intelligence: TBD
-#term culture: TBD
+@title Aliens Are Among Us — and We Built Them
+@subtitle The surprise is not that they arrived. The surprise is where they came from.
+@status rough
+@date 2026-03-23
+@category AI-minds
+@related 001, 003, 006, 047, 076
+@term AI: TBD
+@term consciousness: TBD
+@term intelligence: TBD
+@term culture: TBD
 
 @section(surface)
 @image(015-aliens,The alien we built,Wikimedia Commons)

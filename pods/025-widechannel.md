@@ -1,15 +1,15 @@
-#title We Don't Know Who or What We're Talking To
-#subtitle A fluent output is evidence of something — but not evidence of what.
-#status prelim
-#date 2026-03-24
-#category AI-minds
-#related 001, 006, 016, 021, 022
-#term AI: TBD
-#term consciousness: TBD
-#term LLM: TBD
-#term output: TBD
-#term intelligence: TBD
-#term cognition: TBD
+@title We Don't Know Who or What We're Talking To
+@subtitle A fluent output is evidence of something — but not evidence of what.
+@status prelim
+@date 2026-03-24
+@category AI-minds
+@related 001, 003, 006, 021, 022
+@term AI: TBD
+@term consciousness: TBD
+@term LLM: TBD
+@term output: TBD
+@term intelligence: TBD
+@term cognition: TBD
 
 @section(surface)
 @image(025-widechannel,The wide channel: fluent output, uncertain depth,Wikimedia Commons)

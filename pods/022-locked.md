@@ -1,22 +1,22 @@
-#title The Channel Is Not the Capacity
-#subtitle We mistook the difficulty of output for the absence of inner life.
-#status draft1
-#date 2026-03-11
-#category consciousness
-#term neurodiversity: TBD
-#term expression: TBD
-#term cognition: TBD
-#term autism: TBD
-#term language: TBD
-#term AI: TBD
-#term channel: the means of output through which an interior communicates with the world: speech, movement, gesture, even a blink. The channel can be wide or narrow, familiar or unfamiliar, present or absent. Its width says nothing about what feeds it.
-#term capacity: the source that feeds the channel. The interior: cognition, experience, awareness. What is actually there, regardless of whether it can be seen.
-#term locked-in syndrome: a neurological condition in which a person is fully conscious and cognitively intact but almost completely paralyzed, typically retaining only eye movement. Caused by damage to the brainstem. Distinguished from vegetative state, in which consciousness itself is absent or severely impaired.
-#term vegetative state: a condition of wakefulness without awareness, in which the eyes may be open and basic reflexes present but conscious experience is absent or undetectable. Diagnosis is behavioral and therefore vulnerable to the error this seedpod describes.
-#term presume competence: a principle in disability advocacy and education: treat cognitive capacity as present until there is genuine evidence otherwise, rather than assuming absence because familiar output is missing.
-#term category mistake: Ryle's term for applying a description from one category as if it were a complete account of something in another. See seedpod 021.
-#term facilitated communication (FC): a technique in which a facilitator supports a nonspeaking person's hand or arm while they type or point to letters. Widely used with nonspeaking autistic individuals. Scientifically contested: controlled studies have repeatedly shown that in many cases the facilitator, not the person, is the source of the communication — often unconsciously. The controversy does not settle the question of what nonspeaking individuals understand or experience; it only complicates the question of how to reliably access it.
-#related 001, 006, 016, 021, 025
+@title The Channel Is Not the Capacity
+@subtitle We mistook the difficulty of output for the absence of inner life.
+@status draft1
+@date 2026-03-11
+@category consciousness
+@term neurodiversity: TBD
+@term expression: TBD
+@term cognition: TBD
+@term autism: TBD
+@term language: TBD
+@term AI: TBD
+@term channel: the means of output through which an interior communicates with the world: speech, movement, gesture, even a blink. The channel can be wide or narrow, familiar or unfamiliar, present or absent. Its width says nothing about what feeds it.
+@term capacity: the source that feeds the channel. The interior: cognition, experience, awareness. What is actually there, regardless of whether it can be seen.
+@term locked-in syndrome: a neurological condition in which a person is fully conscious and cognitively intact but almost completely paralyzed, typically retaining only eye movement. Caused by damage to the brainstem. Distinguished from vegetative state, in which consciousness itself is absent or severely impaired.
+@term vegetative state: a condition of wakefulness without awareness, in which the eyes may be open and basic reflexes present but conscious experience is absent or undetectable. Diagnosis is behavioral and therefore vulnerable to the error this seedpod describes.
+@term presume competence: a principle in disability advocacy and education: treat cognitive capacity as present until there is genuine evidence otherwise, rather than assuming absence because familiar output is missing.
+@term category mistake: Ryle's term for applying a description from one category as if it were a complete account of something in another. See seedpod 021.
+@term facilitated communication (FC): a technique in which a facilitator supports a nonspeaking person's hand or arm while they type or point to letters. Widely used with nonspeaking autistic individuals. Scientifically contested: controlled studies have repeatedly shown that in many cases the facilitator, not the person, is the source of the communication — often unconsciously. The controversy does not settle the question of what nonspeaking individuals understand or experience; it only complicates the question of how to reliably access it.
+@related 001, 016, 021, 025, 073
 
 @section(surface)
 In 1983, a young Belgian man named Rom Houben was in a car crash. He was 20 years old — an engineering student, a martial arts enthusiast. The crash left him paralyzed, and doctors diagnosed him as being in a vegetative state. Unconscious. Absent. Gone inside.

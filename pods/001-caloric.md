@@ -1,16 +1,16 @@
-#title The Map That Was Wrong
-#subtitle Every era has a framework so obvious it's invisible — until it isn't.
-#status draft1
-#date 2026-03-25
-#category knowledge
-#related 002, 011, 018, 019, 027
-#term history-of-science: TBD
-#term consciousness: TBD
-#term AI: TBD
-#term Paradigm shift: Thomas Kuhn's term for the revolutionary replacement of one scientific framework by another, as distinct from normal cumulative progress. From The Structure of Scientific Revolutions (1962, University of Chicago Press).
-#term Fallacy of misplaced concreteness: Whitehead's term for the error of mistaking a useful abstraction for the underlying concrete reality. Appears throughout Process and Reality (1929).
-#term The hard problem of consciousness: philosopher David Chalmers' term for the question of why physical processes give rise to subjective experience at all. From Facing Up to the Problem of Consciousness, Journal of Consciousness Studies (1995).
-#term Science advances one funeral at a time: attributed to Max Planck. A version appears in his Scientific Autobiography (1949): "A new scientific truth does not triumph by convincing its opponents and making them see the light, but rather because its opponents eventually die and a new generation grows up that is familiar with it."
+@title The Map That Was Wrong
+@subtitle Every era has a framework so obvious it's invisible — until it isn't.
+@status draft1
+@date 2026-03-25
+@category knowledge
+@related 002, 003, 015, 047, 065
+@term history-of-science: TBD
+@term consciousness: TBD
+@term AI: TBD
+@term Paradigm shift: Thomas Kuhn's term for the revolutionary replacement of one scientific framework by another, as distinct from normal cumulative progress. From The Structure of Scientific Revolutions (1962, University of Chicago Press).
+@term Fallacy of misplaced concreteness: Whitehead's term for the error of mistaking a useful abstraction for the underlying concrete reality. Appears throughout Process and Reality (1929).
+@term The hard problem of consciousness: philosopher David Chalmers' term for the question of why physical processes give rise to subjective experience at all. From Facing Up to the Problem of Consciousness, Journal of Consciousness Studies (1995).
+@term Science advances one funeral at a time: attributed to Max Planck. A version appears in his Scientific Autobiography (1949): "A new scientific truth does not triumph by convincing its opponents and making them see the light, but rather because its opponents eventually die and a new generation grows up that is familiar with it."
 
 @section(surface)
 Before we start, forget everything you know about molecules and atoms. Pretend you never learned that stuff. It's 1800 and you're a smart, educated person. 

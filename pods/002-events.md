@@ -1,11 +1,11 @@
-#title Reality Is Events, Not Things
-#subtitle The particle is the abstraction. The event is what's actually there.
-#status draft1
-#date 2026-03-13
-#category physics
-#term ontology: TBD
-#term process-philosophy: TBD
-#related 001, 003, 004, 008, 051
+@title Reality Is Events, Not Things
+@subtitle The particle is the abstraction. The event is what's actually there.
+@status draft1
+@date 2026-03-13
+@category physics
+@term ontology: TBD
+@term process-philosophy: TBD
+@related 001, 003, 004, 008, 037
 
 @section(surface)
 There is a chair in your room. You know what a chair is.
@@ -59,11 +59,11 @@ The convergence of Whitehead, Kant, Rovelli, and Wittgenstein on the same dissol
 
 The implications run through all of these seedpods. If events are primary and constituted by their relationships, then every event has two sides — an outside that physics describes, and an inside that it does not. That is the territory of @link(003). If the self is a stable pattern of events rather than an enduring substance, that is @link(004). If the field is the medium through which events reach each other, that is @link(008).
 
-#term Fallacy of misplaced concreteness: Alfred North Whitehead's term for the error of treating an abstraction as if it were the concrete reality. The paradigm case: treating the particle — a scientific abstraction useful for calculation — as the fundamental unit of nature, while forgetting that it was abstracted from the concrete flow of events.
-#term Actual occasion: Whitehead's term for the fundamental unit of reality: a discrete event of becoming. Enduring objects are families (Whitehead: "societies") of actual occasions whose pattern is stable enough to appear permanent. The occasion is primary; the object is derivative.
-#term Quantum field: in quantum field theory, the fundamental entities are fields that pervade space. Particles are localized excitations of these fields, brought into being by interactions and resolved by others. The field is ontologically primary; the particle is a derived event.
-#term Family resemblance: Wittgenstein's term for the way members of a category (chairs, games, languages) share overlapping similarities without any single feature common to all. The category is held together by a web of resemblances, not by a shared essence.
-#term Relational quantum mechanics: Carlo Rovelli's interpretation of quantum mechanics, in which quantum states are relative to observers or measuring systems rather than absolute. Properties do not exist independently of interactions.
+@term Fallacy of misplaced concreteness: Alfred North Whitehead's term for the error of treating an abstraction as if it were the concrete reality. The paradigm case: treating the particle — a scientific abstraction useful for calculation — as the fundamental unit of nature, while forgetting that it was abstracted from the concrete flow of events.
+@term Actual occasion: Whitehead's term for the fundamental unit of reality: a discrete event of becoming. Enduring objects are families (Whitehead: "societies") of actual occasions whose pattern is stable enough to appear permanent. The occasion is primary; the object is derivative.
+@term Quantum field: in quantum field theory, the fundamental entities are fields that pervade space. Particles are localized excitations of these fields, brought into being by interactions and resolved by others. The field is ontologically primary; the particle is a derived event.
+@term Family resemblance: Wittgenstein's term for the way members of a category (chairs, games, languages) share overlapping similarities without any single feature common to all. The category is held together by a web of resemblances, not by a shared essence.
+@term Relational quantum mechanics: Carlo Rovelli's interpretation of quantum mechanics, in which quantum states are relative to observers or measuring systems rather than absolute. Properties do not exist independently of interactions.
 
 @section(script)
 1. A plain wooden chair in a pool of light. VO: Just a chair. We know what a chair is.

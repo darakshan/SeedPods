@@ -1,12 +1,12 @@
-#title The Architecture of Levels
-#subtitle TBD
-#status proto
-#date 2026-03-14
-#category mathematics
-#term emergence: TBD
-#term hierarchy: TBD
-#term holons: TBD
-#related 011, 002, 012, 014, 067
+@title The Architecture of Levels
+@subtitle TBD
+@status proto
+@date 2026-03-14
+@category mathematics
+@term emergence: TBD
+@term hierarchy: TBD
+@term holons: TBD
+@related 011, 002, 012, 014, 067
 
 NOTE: This depth sketch was developed in session 2026-03-14. The seedpod needs a full Surface, Script, and Images before it can advance beyond prelim.
 
@@ -25,6 +25,6 @@ Sara Walker's assembly theory@ref(walker, "Walker, S.I. et al. Assembly theory (
 
 These three are not competing accounts. They are the same architecture described from physics, philosophy, and biology respectively.
 
-#term Assembly theory: Walker et al.: complexity measured by assembly index (steps to construct); high-index, high-copy objects signal life.
-#term Holon: Koestler's whole/part; the stable "sentence" at one level becomes the "word" at the next.
-#term Society of occasions: Whitehead's persistent pattern of events that functions as vocabulary for the next level.
+@term Assembly theory: Walker et al.: complexity measured by assembly index (steps to construct); high-index, high-copy objects signal life.
+@term Holon: Koestler's whole/part; the stable "sentence" at one level becomes the "word" at the next.
+@term Society of occasions: Whitehead's persistent pattern of events that functions as vocabulary for the next level.

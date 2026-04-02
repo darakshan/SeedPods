@@ -1,11 +1,11 @@
-#title One Rule Is Enough
-#subtitle The Single Iterating Point
-#status rough
-#date 2026-03-14
-#category mathematics
-#term iteration: TBD
-#term mandelbrot-set: TBD
-#related 002, 007, 009, 003, 011
+@title One Rule Is Enough
+@subtitle The Single Iterating Point
+@status rough
+@date 2026-03-14
+@category mathematics
+@term iteration: TBD
+@term mandelbrot-set: TBD
+@related 002, 007, 009, 003, 011
 
 @section(surface)
 The Mandelbrot set is computed one point at a time. One rule. Applied again and again. The infinite complexity of its boundary — all those bulbs, all that branching, the self-similarity at every scale — was never added. It accumulated. The universe may work the same way. 

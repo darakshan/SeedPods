@@ -1,10 +1,10 @@
-#title Each Galaxy as a Thread of Cosmic Evolution
-#status proto
-#date 2026-03-15
-#category physics
-#term cosmology: TBD
-#term evolution: TBD
-#related 058, 066, 032, 061, 037
+@title Each Galaxy as a Thread of Cosmic Evolution
+@status proto
+@date 2026-03-15
+@category physics
+@term cosmology: TBD
+@term evolution: TBD
+@related 009, 036, 037, 058, 066
 
 The standard view treats galaxies as structures — gravitationally bound collections of stars, gas, and dark matter. Background scenery for the story of life.
 
@@ -14,5 +14,5 @@ The telos of this evolution is not survival. It is self-awareness — the univer
 
 The night sky is not a backdrop. It is a fossil record — the accumulated evidence of fourteen billion years of directed process, written in light.
 
-#term Omega Point: Teilhard's convergence of cosmic evolution toward maximum complexity and self-awareness.
+@term Omega Point: Teilhard's convergence of cosmic evolution toward maximum complexity and self-awareness.
 @image(059-galaxyevolve,Hubble morphological sequence: each galaxy as a thread of cosmic evolution,Wikimedia Commons)

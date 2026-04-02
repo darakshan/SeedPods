@@ -1,12 +1,12 @@
-#title Mandelbrot Structure in Physical Crystals
-#status proto
-#date 2026-03-15
-#category mathematics
-#term physics: TBD
-#term fractals: TBD
-#term quasicrystals: TBD
-#term mandelbrot-set: TBD
-#related 038, 033, 034, 056, 035
+@title Mandelbrot Structure in Physical Crystals
+@status proto
+@date 2026-03-15
+@category mathematics
+@term physics: TBD
+@term fractals: TBD
+@term quasicrystals: TBD
+@term mandelbrot-set: TBD
+@related 007, 018, 033, 038, 056
 
 Mandelbrot-like fractal structure has been found in physical systems — not as visual coincidence but as a consequence of the same iterative mathematics running in physical substrates. 
 @image(063-mandelcrystals,A snowflake: Mandelbrot structure in physical crystals,Wikimedia Commons)
@@ -19,5 +19,5 @@ Charge density waves in certain conducting crystals produce quasi-fractal interf
 
 The philosophical point: the crystal is not computing the Mandelbrot set. It does not know it is drawing a fractal. It is simply obeying local rules. And the Mandelbrot structure emerges anyway — because Mandelbrot structure is what local iterative rules produce at their boundaries, regardless of the physical substrate. The mathematics is substrate-independent.
 
-#term Quasicrystal: Ordered but non-periodic structure; often with golden-ratio and Farey-related geometry.
-#term Stern-Brocot tree: A tree of rationals related to the Farey sequence; governs ordering and Mandelbrot boundary structure.
+@term Quasicrystal: Ordered but non-periodic structure; often with golden-ratio and Farey-related geometry.
+@term Stern-Brocot tree: A tree of rationals related to the Farey sequence; governs ordering and Mandelbrot boundary structure.

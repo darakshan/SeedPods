@@ -1,15 +1,15 @@
-#title The Edge Is Where Everything Happens
-#subtitle The Mandelbrot Boundary
-#status rough
-#date 2026-03-14
-#category sensation
-#term mandelbrot-set: TBD
-#term fractal: TBD
-#term farey-sequence: TBD
-#term consonance: TBD
-#term boundary: TBD
-#term crystals: Mandelbrot-like structure found in magnetic domain boundaries and quasicrystals, same iterative mathematics running in physical substrate.
-#related 002, 007, 009, 030, 005
+@title The Edge Is Where Everything Happens
+@subtitle The Mandelbrot Boundary
+@status rough
+@date 2026-03-14
+@category sensation
+@term mandelbrot-set: TBD
+@term fractal: TBD
+@term farey-sequence: TBD
+@term consonance: TBD
+@term boundary: TBD
+@term crystals: Mandelbrot-like structure found in magnetic domain boundaries and quasicrystals, same iterative mathematics running in physical substrate.
+@related 002, 005, 007, 009, 056
 
 @section(surface)
 The Mandelbrot set has an inside and an outside. The inside is stable — points that keep returning. The outside escapes to infinity. The boundary between them is infinitely complex, self-similar at every scale, and inexhaustible. That boundary is where everything interesting happens. Including you. 

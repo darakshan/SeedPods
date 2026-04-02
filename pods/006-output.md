@@ -1,12 +1,12 @@
-#title You Can't Judge a Process by Its Output
-#subtitle A thermostat predicts. Mozart predicted. The simplicity of the output tells you nothing.
-#status draft1
-#date 2026-03-11
-#category consciousness
-#term AI: TBD
-#term intelligence: TBD
-#term cognition: TBD
-#related 025, 003, 016, 017, 021
+@title You Can't Judge a Process by Its Output
+@subtitle A thermostat predicts. Mozart predicted. The simplicity of the output tells you nothing.
+@status draft1
+@date 2026-03-11
+@category consciousness
+@term AI: TBD
+@term intelligence: TBD
+@term cognition: TBD
+@related 016, 021, 025, 037, 045
 
 @section(surface)
 A thermostat predicts the future. Not impressively — it just decides whether the room is about to get too cold. But it predicts: given the current temperature, what comes next?
@@ -42,9 +42,9 @@ Douglas Hofstadter's Gödel, Escher, Bach (1979) circles this territory from the
 
 Evan Thompson's Mind in Life@ref(thompson, "Thompson, E. Mind in Life. Biological processes and their expressive surfaces.") takes this into the biological domain: the organism's expressive surface is always downstream of the living process that generates it.
 
-#term Output interface: the channel through which a process expresses itself externally. The interface constrains and shapes what can be expressed; it does not determine what is being expressed.
-#term Process: in Whitehead's sense, the actual unfolding activity of an occasion of experience. Distinct from its products or traces.
-#term Prediction: used here in the broadest sense: any process that selects a next state given a current one. Deliberately spans thermostats and minds.
+@term Output interface: the channel through which a process expresses itself externally. The interface constrains and shapes what can be expressed; it does not determine what is being expressed.
+@term Process: in Whitehead's sense, the actual unfolding activity of an occasion of experience. Distinct from its products or traces.
+@term Prediction: used here in the broadest sense: any process that selects a next state given a current one. Deliberately spans thermostats and minds.
 
 @section(script)
 1. A Victorian street fair. A barker beside an ornate brass-fitted box — gears, drum, levers visible through glass. Barker: Ladies and gentlemen — the most extraordinary musical intelligence in the known world! It predicts what comes next with uncanny precision!

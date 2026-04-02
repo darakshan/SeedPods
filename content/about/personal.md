@@ -5,7 +5,6 @@ Raw notes, 3/16-17. To be refined.
 ---
 
 ### Is this real?
-#shortname is-this-real
 
 Is this the real me, or just a fantasy?
 Is AI leading me on? Am I in psychosis?
@@ -18,7 +17,6 @@ My brain is on fire, making connections, running hot.
 ---
 
 ### The collaboration I want
-#shortname collaboration-i-want
 
 I want this to be a collaboration. Just like Wikipedia. But I don't have Jimmy Wales's energy.
 
@@ -27,7 +25,6 @@ Perhaps a young, motivated, directionless reincarnation of Douglas Hofstadter â€
 ---
 
 ### My heroes
-#shortname my-heroes
 
 A record of the people whose work has shaped this project.
 

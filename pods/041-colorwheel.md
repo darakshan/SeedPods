@@ -1,19 +1,19 @@
-#title The Surprising Color Wheel
-#subtitle The mind closes the line into a circle.
-#status prelim
-#date 2026-03-16
-#category sensation
-#term color: TBD
-#term perception: TBD
-#term evolution: TBD
-#term neuroscience: TBD
-#term opponent processing: the transformation performed by the second layer of the retina, recombining the three raw cone signals into two opponent channels — red vs green and blue vs yellow — before any signal leaves the eye.
-#term color constancy: the perceptual ability to see a surface as having a stable color across different lighting conditions. Believed to be a primary function of the blue-yellow opponent channel.
-#term trichromacy: color vision based on three cone types. Most mammals are dichromats; primates re-evolved trichromacy, probably in connection with the red-green opponent axis.
-#term unique hues: the four perceptual primaries delivered by opponent processing — red, yellow, green, blue — which feel irreducible to any mixture. No color appears both reddish and greenish, or both bluish and yellowish.
-#term additive color mixing: mixing light of different wavelengths, where combining red and green produces yellow. The primary colors at this level are red, green, and blue.
-#term subtractive color mixing: mixing pigments, where each pigment absorbs certain wavelengths. The primary colors at this level are closer to cyan, magenta, and yellow. The painter's intuition of red, yellow, blue is an approximation of this layer combined with the opponent channel layer above it.
-#related 038, 026, 012, 042, 044
+@title The Surprising Color Wheel
+@subtitle The mind closes the line into a circle.
+@status prelim
+@date 2026-03-16
+@category sensation
+@term color: TBD
+@term perception: TBD
+@term evolution: TBD
+@term neuroscience: TBD
+@term opponent processing: the transformation performed by the second layer of the retina, recombining the three raw cone signals into two opponent channels — red vs green and blue vs yellow — before any signal leaves the eye.
+@term color constancy: the perceptual ability to see a surface as having a stable color across different lighting conditions. Believed to be a primary function of the blue-yellow opponent channel.
+@term trichromacy: color vision based on three cone types. Most mammals are dichromats; primates re-evolved trichromacy, probably in connection with the red-green opponent axis.
+@term unique hues: the four perceptual primaries delivered by opponent processing — red, yellow, green, blue — which feel irreducible to any mixture. No color appears both reddish and greenish, or both bluish and yellowish.
+@term additive color mixing: mixing light of different wavelengths, where combining red and green produces yellow. The primary colors at this level are red, green, and blue.
+@term subtractive color mixing: mixing pigments, where each pigment absorbs certain wavelengths. The primary colors at this level are closer to cyan, magenta, and yellow. The painter's intuition of red, yellow, blue is an approximation of this layer combined with the opponent channel layer above it.
+@related 013, 016, 026, 029, 045
 
 @section(depth)
 @image(041-colorwheel,Munsell hue wheel: the mind closes the spectrum into a circle,Wikimedia Commons)

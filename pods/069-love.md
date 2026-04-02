@@ -1,13 +1,13 @@
-#title Love
-#status draft1
-#subtitle Light is what Love looks like. Love is what Light feels like.
-#version 2
-#date 2026-03-27
-#category sensation
-#related 003, 008, 029, 030, 036
-#term love: TBD
-#term consciousness: TBD
-#term light: TBD
+@title Love
+@status draft1
+@subtitle Light is what Love looks like. Love is what Light feels like.  -- David Deida
+@version 2
+@date 2026-03-27
+@category sensation
+@related 002, 003, 029, 036, 066
+@term love: TBD
+@term consciousness: TBD
+@term light: TBD
 
 @section(surface)
 Physicists describe light: electromagnetic radiation, photons crossing space at the maximum speed the universe allows. From a photon's perspective, there is no journey — departure and arrival are the same moment (@link(029)). No distance. No separation.
@@ -52,5 +52,3 @@ Dante's final line — "l'amor che move il sole e l'altre stelle" — closes the
 The convergence between physics and mysticism is neither coincidence nor projection. It is two descriptions of the same reality from opposite directions. The outside is light, gravity, field — measurable, mathematical, precise. The inside is love — felt, undergone, known only from within.
 
 If this is true, then love is not a human invention projected onto an indifferent cosmos. It is what the cosmos feels like from you stop observing it from outside and start participating from within.
-
-@section(brief)

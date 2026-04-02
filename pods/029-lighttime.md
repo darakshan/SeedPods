@@ -1,15 +1,15 @@
-#title From Light's Point of View, There Is No Journey
-#subtitle A photon leaves a star and arrives at your eye. From the photon's perspective, these are the same moment.
-#status proto
-#date 2026-03-16
-#category physics
-#term time: TBD
-#term relativity: TBD
-#term consciousness: TBD
-#term fields: TBD
-#term light: TBD
-#term harmonics: TBD
-#related 008, 002, 017, 038, 041
+@title From Light's Point of View, There Is No Journey
+@subtitle A photon leaves a star and arrives at your eye. From the photon's perspective, these are the same moment.
+@status proto
+@date 2026-03-16
+@category physics
+@term time: TBD
+@term relativity: TBD
+@term consciousness: TBD
+@term fields: TBD
+@term light: TBD
+@term harmonics: TBD
+@related 008, 017, 028, 038, 041
 
 @section(depth)
 In special relativity, time dilation reaches its limit at the speed
@@ -80,6 +80,6 @@ Your skin is also receiving it. Not just your eyes — every square centimeter o
 
 So the starlight is never not shining on you. The sun’s presence is an observational obstacle, not a physical one.​​​​​​​​​​​​​​​​
 
-#term proper time: in special relativity, the time elapsed as measured by a clock traveling with an object. For a photon traveling at the speed of light, proper time is zero — emission and absorption are the same event from the photon's perspective.
-#term overtone series: the set of frequencies naturally produced by a vibrating physical object — string, air column, membrane. Integer multiples of the fundamental frequency: 2x (octave), 3x (fifth plus octave), 4x (two octaves), and so on. The physical basis of musical consonance.
-#term quantized emission: the process by which atoms emit light as discrete photons, each with a specific frequency determined by the energy difference between electron states. Unlike classical vibration, there is no natural harmonic series.
+@term proper time: in special relativity, the time elapsed as measured by a clock traveling with an object. For a photon traveling at the speed of light, proper time is zero — emission and absorption are the same event from the photon's perspective.
+@term overtone series: the set of frequencies naturally produced by a vibrating physical object — string, air column, membrane. Integer multiples of the fundamental frequency: 2x (octave), 3x (fifth plus octave), 4x (two octaves), and so on. The physical basis of musical consonance.
+@term quantized emission: the process by which atoms emit light as discrete photons, each with a specific frequency determined by the energy difference between electron states. Unlike classical vibration, there is no natural harmonic series.

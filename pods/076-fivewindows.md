@@ -1,9 +1,9 @@
-#title Five Windows, One Room
-#subtitle Light, sound, smell, touch, taste — all vibration in space and time. Yet each feels utterly unlike the others. That gap is the mystery.
-#status proto
-#date 2026-03-28
-#category sensation
-#related 008, 030, 035, 038, 041
+@title Five Windows, One Room
+@subtitle Light, sound, smell, touch, taste — all vibration in space and time. Yet each feels utterly unlike the others. That gap is the mystery.
+@status proto
+@date 2026-03-28
+@category sensation
+@related 002, 003, 013, 015, 029
 
 The physics is almost embarrassingly unified. Light is electromagnetic vibration. Sound is pressure waves — air molecules oscillating back and forth. Smell and taste are molecular shapes binding to receptors, but those bonds vibrate too, and the receptors respond to timing patterns. Touch is mechanical vibration of skin. Temperature is the average kinetic energy of molecules — which is to say, how hard they're vibrating. Even proprioception, your sense of where your body is, relies on cells that fire in rhythmic patterns when stretched.
 

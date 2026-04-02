@@ -1,13 +1,13 @@
-#title The Sky Is a Fossil Record
-#subtitle Fossils of Primal Evolution
-#status rough
-#date 2026-03-14
-#category physics
-#term cosmology: TBD
-#term evolution: TBD
-#term many-worlds: TBD
-#term omega-point: TBD
-#related 009, 028, 029, 061, 059
+@title The Sky Is a Fossil Record
+@subtitle Fossils of Primal Evolution
+@status rough
+@date 2026-03-14
+@category physics
+@term cosmology: TBD
+@term evolution: TBD
+@term many-worlds: TBD
+@term omega-point: TBD
+@related 009, 028, 036, 037, 058
 
 @section(surface)
 When you look at the night sky you think you're seeing space. You're actually seeing time. But there's a third thing you're seeing that nobody told you — you're seeing evolution. Not biological evolution. Something older. 

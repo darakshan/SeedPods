@@ -1,15 +1,15 @@
-#title The Simplest Numbers Come First
-#subtitle Farey, Benford, and the Shape of Infinity
-#status rough
-#date 2026-03-14
-#category sensation
-#term farey-sequence: TBD
-#term benfords-law: TBD
-#term consonance: TBD
-#term mathematics: TBD
-#term iteration: TBD
-#term virtual-dimension-formula: TBD
-#related 033, 034, 009, 030, 010
+@title The Simplest Numbers Come First
+@subtitle Farey, Benford, and the Shape of Infinity
+@status rough
+@date 2026-03-14
+@category sensation
+@term farey-sequence: TBD
+@term benfords-law: TBD
+@term consonance: TBD
+@term mathematics: TBD
+@term iteration: TBD
+@term virtual-dimension-formula: TBD
+@related 009, 010, 034, 057, 062
 
 @section(surface)
 @image(035-simplestnumbers, "Benford's law: simpler numbers appear first in natural data", "Wikimedia Commons")

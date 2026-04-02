@@ -6,7 +6,7 @@ It's is a living archive of thoughts I've been gathering all his life.  SeedPods
 
 A deep purpose of this project is intuition repair — our own as much as anyone's. Most of these seedpods are not introducing new information. They are revisiting assumptions so familiar they've become invisible. Each seedpod earns its place by containing a genuine surprise: a moment where the world turns out to be slightly different from what we'd been assuming. The surprise is the point.
 
-A few of these ideas are original, speculative, likely wrong.
+Many of the ideas here will be well known to certain experts but might be surprises to you. Occasionally there will be a few fresh ideas, maybe original, often speculative, perhaps highly controversial, likely wrong. Mostly though, it’s about the connections between ideas.  We hope you will find them surprising, fascinating, and enjoyable. 
 
 This website is under construction.  It contains TBDs, Warnings, incompletene sections, and no doubt errors and hallucinations.  @link(about/Caveat lector).
 
@@ -43,3 +43,4 @@ Claude AI has helped me build this software and flesh out its content. Others ma
 
 (and here's what Claude wrote with me)
 Many of the ideas gathered here sit at the edge of what is settled. Some connections are speculative; some, if we are honest, may turn out to be pure fantasy — and a few may bear the fingerprints of an AI that occasionally confuses confidence with correctness. We have tried to distinguish intuition from established fact, but the line is not always clean, and we have not always drawn it perfectly. This is, in part, deliberate. The fragment and the conjecture have their own honorable tradition — from Heraclitean shards to the notebooks of Novalis — and some truths seem to require the poetic gesture before the formal proof arrives. We offer these seedpods not as conclusions but as invitations: seeds, not harvests. Where we have overreached, we hope the reach itself points somewhere worth going.
+

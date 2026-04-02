@@ -1,14 +1,14 @@
-#title Structure Is What Randomness Does
-#subtitle Galaxies, cells, brains — all tracing back to a random fluctuation in a nearly uniform early universe.
-#status draft1
-#date 2026-03-13
-#category biology
-#term physics: TBD
-#term emergence: TBD
-#term complexity: TBD
-#term evolution: TBD
-#term symmetry-breaking: TBD
-#related 011, 007, 012, 005, 034
+@title Structure Is What Randomness Does
+@subtitle Galaxies, cells, brains — all tracing back to a random fluctuation in a nearly uniform early universe.
+@status draft1
+@date 2026-03-13
+@category biology
+@term physics: TBD
+@term emergence: TBD
+@term complexity: TBD
+@term evolution: TBD
+@term symmetry-breaking: TBD
+@related 005, 007, 011, 018, 034
 
 @section(surface)
 Look up on a clear night, away from city lights. What you're seeing is not decoration. It is the consequence of a mistake. 
@@ -71,14 +71,14 @@ James Gleick's Chaos@ref(gleick, "Gleick, J. Chaos: Making a New Science. Viking
 
 In philosophy, Whitehead's process philosophy provides the deepest frame: genuine novelty — the creative advance into novelty — is constitutive of reality at every scale. Not a property of complex systems only, but the basic character of each actual occasion.
 
-#term Spontaneous symmetry breaking: the process by which a system in a perfectly symmetric but unstable state falls into an asymmetric lower-energy state through random perturbation, and stays there. The mechanism behind crystal formation, dune building, and the large-scale structure of the universe.
-#term Simulated annealing: an optimization technique borrowed from metallurgy that uses controlled randomness to escape local maxima. By occasionally accepting worse solutions, the algorithm avoids getting trapped and finds better global solutions. Used in engineering, chip design, and AI training.
-#term Stochastic gradient descent: the training algorithm used in neural networks that deliberately injects randomness into each optimization step. Pure deterministic optimization gets trapped in local minima; the randomness keeps the search moving toward better solutions.
-#term Creative advance into novelty: Whitehead's term for the irreducible self-determination at the heart of each actual occasion; the source of genuine newness in the universe that cannot be fully predicted from prior causes.
-#term Actual occasion: Whitehead's term for the fundamental unit of reality; a moment of experience that takes in its world, reaches a decision, and completes into the next occasion's inheritance.
-#term Autocatalytic set: a network of molecules in which each member's production is catalyzed by other members of the set. Stuart Kauffman's demonstration that chemistry at sufficient complexity spontaneously organizes itself without external direction.
-#term Autopoiesis: the property of living systems that continuously produce the very components that sustain them; coined by Maturana and Varela. The cell does not merely use its components — it makes them, circularly, as the condition of its own continued existence.
-#term Local maximum: a solution that is better than all its immediate neighbors but not the best solution overall. The trap that pure hill-climbing optimization falls into; escaped by introducing randomness into the search.
+@term Spontaneous symmetry breaking: the process by which a system in a perfectly symmetric but unstable state falls into an asymmetric lower-energy state through random perturbation, and stays there. The mechanism behind crystal formation, dune building, and the large-scale structure of the universe.
+@term Simulated annealing: an optimization technique borrowed from metallurgy that uses controlled randomness to escape local maxima. By occasionally accepting worse solutions, the algorithm avoids getting trapped and finds better global solutions. Used in engineering, chip design, and AI training.
+@term Stochastic gradient descent: the training algorithm used in neural networks that deliberately injects randomness into each optimization step. Pure deterministic optimization gets trapped in local minima; the randomness keeps the search moving toward better solutions.
+@term Creative advance into novelty: Whitehead's term for the irreducible self-determination at the heart of each actual occasion; the source of genuine newness in the universe that cannot be fully predicted from prior causes.
+@term Actual occasion: Whitehead's term for the fundamental unit of reality; a moment of experience that takes in its world, reaches a decision, and completes into the next occasion's inheritance.
+@term Autocatalytic set: a network of molecules in which each member's production is catalyzed by other members of the set. Stuart Kauffman's demonstration that chemistry at sufficient complexity spontaneously organizes itself without external direction.
+@term Autopoiesis: the property of living systems that continuously produce the very components that sustain them; coined by Maturana and Varela. The cell does not merely use its components — it makes them, circularly, as the condition of its own continued existence.
+@term Local maximum: a solution that is better than all its immediate neighbors but not the best solution overall. The trap that pure hill-climbing optimization falls into; escaped by introducing randomness into the search.
 
 @section(script)
 Note to composer: Three themes — a child's theme (simple, solo piano), a snowflake journey (sparse single line blooming to six simultaneous voices as the crystal arms branch), and an evolutionary journey (slow, ancient, accumulating). The child's theme opens and closes; the others are reached and returned from.

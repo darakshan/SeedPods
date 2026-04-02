@@ -1,18 +1,18 @@
-#title The Surprising Consonance Map
-#subtitle Draw the intervals. Recognize the shape.
-#status prelim
-#date 2026-03-16
-#category sensation
-#term consonance: TBD
-#term mandelbrot: TBD
-#term farey: TBD
-#term music: TBD
-#term mathematics: TBD
-#term monochord: a single-stringed instrument used by Pythagoras to demonstrate the relationship between string length and musical pitch. Stopping the string at 1/2 its length gives the octave, 2/3 gives the fifth, 3/4 gives the fourth.
-#term attractor: a value or region toward which a repeated mathematical process converges. The Mandelbrot set is a map of which starting points are attracted to stability and which escape to infinity.
-#term farey sequence: the set of all fractions between 0 and 1 ordered by complexity — simplest denominators first. Governs both the positions of bulbs on the Mandelbrot cardioid and the hierarchy of consonant intervals in music.
-#term consonance score: a measure of how harmonious a musical interval sounds, based on the simplicity of its frequency ratio. Simpler ratios — smaller integers — score higher.
-#related 033, 035, 034, 056, 030
+@title The Surprising Consonance Map
+@subtitle Draw the intervals. Recognize the shape.
+@status prelim
+@date 2026-03-16
+@category sensation
+@term consonance: TBD
+@term mandelbrot: TBD
+@term farey: TBD
+@term music: TBD
+@term mathematics: TBD
+@term monochord: a single-stringed instrument used by Pythagoras to demonstrate the relationship between string length and musical pitch. Stopping the string at 1/2 its length gives the octave, 2/3 gives the fifth, 3/4 gives the fourth.
+@term attractor: a value or region toward which a repeated mathematical process converges. The Mandelbrot set is a map of which starting points are attracted to stability and which escape to infinity.
+@term farey sequence: the set of all fractions between 0 and 1 ordered by complexity — simplest denominators first. Governs both the positions of bulbs on the Mandelbrot cardioid and the hierarchy of consonant intervals in music.
+@term consonance score: a measure of how harmonious a musical interval sounds, based on the simplicity of its frequency ratio. Simpler ratios — smaller integers — score higher.
+@related 010, 034, 053, 056, 062
 
 @section(depth)
 @image(038-consonance-map,Fourier harmonics: the overtone series underlying musical consonance,Wikimedia Commons)

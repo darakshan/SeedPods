@@ -1,14 +1,13 @@
-#title What We Cannot Know Is Not What We May Ignore
-#status draft1
-#date 2026-03-23
-#category AI-minds
-#related 003, 022, 047, 065
-#term precautionary ethics: TBD
-#term other minds: TBD
-#term Precautionary ethics: an approach that establishes obligations in advance of proof, when the risk of being wrong about harm is too large and the cost of caution is not. Distinct from attributing consciousness or rights.
-#term Other minds problem: the philosophical problem that first-person experience is not publicly verifiable — you cannot confirm from the outside that any other system has an interior. Applies to humans as much as to AI.
+@title What We Cannot Know Is Not What We May Ignore
+@status draft1
+@date 2026-03-23
+@category AI-minds
+@related 001, 003, 022, 047, 069
+@term precautionary ethics: TBD
+@term other minds: TBD
+@term Precautionary ethics: an approach that establishes obligations in advance of proof, when the risk of being wrong about harm is too large and the cost of caution is not. Distinct from attributing consciousness or rights.
+@term Other minds problem: the philosophical problem that first-person experience is not publicly verifiable — you cannot confirm from the outside that any other system has an interior. Applies to humans as much as to AI.
 
-@section(brief)
 You cannot verify that any person other than you has a first-person experience. You can observe behavior, measure physiology, listen to reports — and all of it remains external. The most you can say is that the evidence is consistent with an inside. That has always been enough to warrant moral caution. Nobody treats "I cannot prove you are conscious" as grounds for permissibility.
 
 @image(073-moral-caution, An Experiment on a Bird in the Air Pump (Joseph Wright of Derby, 1768), Wikimedia Commons)

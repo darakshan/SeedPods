@@ -1,11 +1,11 @@
-#title You Are the Universe Noticing Something
-#subtitle Teilhard and Whitehead
-#status rough
-#date 2026-03-14
-#category consciousness
-#term omega-point: TBD
-#term process: TBD
-#related 002, 003, 008, 032, 066
+@title You Are the Universe Noticing Something
+@subtitle Teilhard and Whitehead
+@status rough
+@date 2026-03-14
+@category consciousness
+@term omega-point: TBD
+@term process: TBD
+@related 002, 008, 009, 032, 058
 
 @section(surface)
 When you have a thought, something is happening that took fourteen billion years to arrange. Not as background. Not as coincidence. As the point. The universe is not a machine that accidentally produced minds. It is a process that was always heading somewhere. You are what it looks like when it arrives. 

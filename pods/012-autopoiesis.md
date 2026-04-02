@@ -1,17 +1,17 @@
-#title The Cell That Makes Itself
-#subtitle Life is defined not by what it's made of, but by the circular process that keeps making it.
-#status draft1
-#date 2026-03-11
-#category biology
-#term life: TBD
-#term cells: TBD
-#term maturana-varela: TBD
-#term entropy: TBD
-#term evolution: TBD
-#term autopoiesis: Maturana and Varela's term for a system that continuously produces the very components that constitute and maintain it. The defining organizational property of living systems.
-#term society of occasions: Whitehead's term for a persistent pattern of actual occasions organized with sufficient coherence and closure to act as a unit through time. The metaphysical counterpart to the autopoietic organization.
-#term negative entropy: Schrödinger's term for the ordered structure that living systems import from their environment to offset internal disorder. The thermodynamic face of what autopoiesis achieves organizationally.
-#related 002, 003, 009, 011, 013
+@title The Cell That Makes Itself
+@subtitle Life is defined not by what it's made of, but by the circular process that keeps making it.
+@status draft1
+@date 2026-03-11
+@category biology
+@term life: TBD
+@term cells: TBD
+@term maturana-varela: TBD
+@term entropy: TBD
+@term evolution: TBD
+@term autopoiesis: Maturana and Varela's term for a system that continuously produces the very components that constitute and maintain it. The defining organizational property of living systems.
+@term society of occasions: Whitehead's term for a persistent pattern of actual occasions organized with sufficient coherence and closure to act as a unit through time. The metaphysical counterpart to the autopoietic organization.
+@term negative entropy: Schrödinger's term for the ordered structure that living systems import from their environment to offset internal disorder. The thermodynamic face of what autopoiesis achieves organizationally.
+@related 002, 003, 011, 031, 037
 
 @section(surface)
 Here's a question that sounds simple: what makes something alive? 

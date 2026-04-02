@@ -1,12 +1,12 @@
-#title Harmony
-#status proto
-#date 2026-03-17
-#category sensation
-#term music: TBD
-#term mathematics: TBD
-#term consonance: TBD
-#term harmony: TBD
-#related 030, 038, 035, 040, 053
+@title Harmony
+@status proto
+@date 2026-03-17
+@category sensation
+@term music: TBD
+@term mathematics: TBD
+@term consonance: TBD
+@term harmony: TBD
+@related 002, 009, 029, 034, 040
 
 @image(070-harmony,Lissajous figure: harmonic frequency ratios made visible,Wikimedia Commons)
 

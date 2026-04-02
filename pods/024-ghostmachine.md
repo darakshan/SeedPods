@@ -1,13 +1,13 @@
-#title Ghost in the Machine
-#subtitle TBD
-#status proto
-#date 2026-03-14
-#category consciousness
-#term materialism: TBD
-#term mind-body: TBD
-#term category mistake: Ryle's term for treating a process or capacity as if it were a thing (e.g. the mind as a ghost in the machine).
-#term holon: Koestler's term for a whole that is also a part of a larger whole; each level has genuine interiority.
-#related 003, 006, 011, 021, 065
+@title Ghost in the Machine
+@subtitle TBD
+@status proto
+@date 2026-03-14
+@category consciousness
+@term materialism: TBD
+@term mind-body: TBD
+@term category mistake: Ryle's term for treating a process or capacity as if it were a thing (e.g. the mind as a ghost in the machine).
+@term holon: Koestler's term for a whole that is also a part of a larger whole; each level has genuine interiority.
+@related 002, 012, 021, 037, 067
 
 NOTE: This depth sketch was developed in session 2026-03-14. The seedpod needs a full Surface, Script, and Images before it can advance beyond prelim.
 

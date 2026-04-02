@@ -1,9 +1,9 @@
-#title Many Worlds as Parallel Evolutionary Experiments
-#status proto
-#date 2026-03-15
-#category physics
-#term quantum: TBD
-#related 054, 059, 062, 064, 009
+@title Many Worlds as Parallel Evolutionary Experiments
+@status proto
+@date 2026-03-15
+@category physics
+@term quantum: TBD
+@related 005, 009, 058, 062, 064
 
 Everett's Many Worlds interpretation@ref(everett, "Everett, H. Relative state formulation of quantum mechanics (1957). DeWitt, B. The many-universes interpretation (1970).") says every quantum branch is real. The universe does not choose between possibilities — it explores all of them simultaneously, in nearly-orthogonal subspaces of Hilbert space.
 
@@ -11,5 +11,5 @@ Combined with the galactic evolution picture, this becomes something remarkable.
 
 Teilhard imagined one Omega Point — a single convergence at the end of cosmic history. Many Worlds suggests the attractor is deeper than any single thread. Every branch may be feeling toward the same convergence from a different direction. The Omega Point is not a location in one timeline. It is a feature of the structure of possibility space itself — an attractor that every branch of the wavefunction approaches along its own path.
 
-#term Many Worlds: Everett's interpretation in which all quantum branches are real; the wavefunction does not collapse.
+@term Many Worlds: Everett's interpretation in which all quantum branches are real; the wavefunction does not collapse.
 @image(060-worldtests,Many worlds: parallel quantum branches as evolutionary experiments,Wikimedia Commons)

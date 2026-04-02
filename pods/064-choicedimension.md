@@ -1,11 +1,11 @@
-#title The Choice Dimension as Tree Algebra
-#status proto
-#date 2026-03-15
-#category mathematics
-#term many-worlds: TBD
-#term choice: TBD
-#term mandelbrot-set: TBD
-#related 060, 062, 054, 005, 038
+@title The Choice Dimension as Tree Algebra
+@status proto
+@date 2026-03-15
+@category mathematics
+@term many-worlds: TBD
+@term choice: TBD
+@term mandelbrot-set: TBD
+@related 005, 038, 046, 054, 060
 
 The proposal to add "choice" as a fifth dimension — alongside space, time — runs into a mathematical obstacle. The Mandelbrot set depends on the algebraic structure of complex multiplication. To generalize to five dimensions you need a five-dimensional number system with coherent multiplication. Such systems are severely constrained — quaternions work, octonions work, but five dimensions has no clean analog.
 
@@ -17,8 +17,8 @@ If the choice dimension is a tree algebra fibered over the four dimensions of sp
 
 This may be the right mathematical structure for what the Many Worlds interpretation@ref(everett, "Everett, H. Relative state formulation (1957). Douady, A. and Hubbard, J. On the dynamics of polynomial-like maps (1985).") is actually describing.
 
-#term Tree algebra: Algebra of branching trees with grafting rather than multiplication; candidate for a "choice" dimension.
-#term Harmonic measure: Probability on the tree from uniform 1/n at each n-fold branch; links to Born rule and consonance.
+@term Tree algebra: Algebra of branching trees with grafting rather than multiplication; candidate for a "choice" dimension.
+@term Harmonic measure: Probability on the tree from uniform 1/n at each n-fold branch; links to Born rule and consonance.
 
 @section(images)
 @image(064-choicedimension, "Darwin's first tree sketch: branching as the algebra of choice", "Wikimedia Commons")
