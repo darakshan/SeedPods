@@ -65,9 +65,3 @@ Kurt Gödel's incompleteness theorems@ref(godel, "Gödel, K. 'On Formally Undeci
 This matters beyond philosophy of science. Contemporary polarization treats every disagreement as zero-sum: someone must be wrong, someone must win. The frame of "pick a side" is itself the problem. Developing the capacity to hold two truths at once isn't relativism — both positions have to actually be true, not merely held. It's a more accurate model of how reality works when it exceeds our frameworks.
 
 The Necker cube keeps flipping because your visual system can only stabilize one interpretation at a time. But someone who has studied the drawing knows both orientations are present, even when they can only see one. That meta-knowledge changes everything. You stop fighting the flip. You start getting curious about what the flip reveals.
-
-@section(script)
-TBD
-
-@section(images)
-TBD

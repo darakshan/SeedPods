@@ -36,9 +36,9 @@
       "hex" : "#F9C6F0"
     },
     {
-      "category" : "debug",
+      "category" : "zzz-debug",
       "color_name" : "gray",
-      "hex" : "#BEBEBE"
+      "hex" : "#C0C0C0"
     }
   ],
   "depth_max_words" : 600,
@@ -80,7 +80,7 @@
       "max" : 700,
       "min" : 400,
       "name" : "surface",
-      "optional" : false,
+      "optional" : true,
       "orderSpecific" : true
     },
     {
@@ -88,7 +88,7 @@
       "max" : 600,
       "min" : 300,
       "name" : "depth",
-      "optional" : false,
+      "optional" : true,
       "orderSpecific" : true
     },
     {
@@ -100,13 +100,13 @@
     {
       "displayName" : "Script",
       "name" : "script",
-      "optional" : false,
+      "optional" : true,
       "orderSpecific" : true
     },
     {
       "displayName" : "Images",
       "name" : "images",
-      "optional" : false,
+      "optional" : true,
       "orderSpecific" : true
     }
   ],

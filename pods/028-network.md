@@ -54,9 +54,3 @@ Place these three together: a universe whose parts are connected without distanc
 We are not the universe's observers. We are its local self-awareness. The complexity that produces human consciousness is the same process that has been running, at every scale, since the beginning. We are not the exception. We are a particularly articulate instance.
 
 This is speculative. The hard problem of consciousness remains unsolved, and nothing here resolves it. But the speculative move is precisely the one this archive is tracking: the assumption that experience is a biological anomaly in a dark universe is our caloric. Philip Goff's@ref(goff, "Goff, P. Galileo's Error. Pantheon, 2019. Contemporary panpsychism; the philosophical framework that makes the cosmological speculation here coherent.") panpsychism is one rigorous attempt to say why. The anomalies are accumulating. The picture sketched here is not the conclusion — it is a direction worth taking seriously.
-
-@section(script)
-TBD
-
-@section(images)
-TBD

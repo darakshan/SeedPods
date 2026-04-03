@@ -1,8 +1,8 @@
-**The Inside of Everything**
+# The Inside of Everything #
 
 *A forgotten philosopher's key to the hardest problem in science*
 
-**I. This Moment**
+## I. This Moment ##
 
 Notice what is happening right now. Not the words on the page --- the
 fact that there is something it is like to read them. The slight effort
@@ -62,7 +62,7 @@ North Whitehead, and the framework he developed in the late nineteen
 twenties has been sitting largely unread on the shelf while everyone
 else in the room has been struggling with a puzzle he already solved.
 
-**II. The Man Nobody Reads**
+## II. The Man Nobody Reads ##
 
 Whitehead is not an easy writer. Process and Reality, his major work, is
 widely considered one of the most difficult texts in the Western
@@ -113,7 +113,7 @@ existing picture as long as possible.
 
 But the patch is not holding. And the alternative has been waiting.
 
-**III. The Pattern**
+## III. The Pattern ##
 
 The core of Whitehead's picture can be understood through a simple
 three-beat pattern that he saw repeating at every level of reality.
@@ -194,9 +194,9 @@ neural activity becomes the experience of reading these words may be a
 third. Each looks like a miracle from outside. None requires anything to
 be added from outside.
 
-**IV. The Zoom**
+## IV. The Zoom ##
 
-***Fields***
+### Fields ###
 
 Begin at the bottom, where the bottom turns out not to be what we
 expected.
@@ -246,7 +246,7 @@ structure necessarily --- not despite the randomness but almost because
 of it. The creative advance does not need a blueprint. It needs only the
 irreducible novelty of each event meeting its inherited world.
 
-***Cells***
+### Cells ###
 
 Jump now from quantum fields to the first cells, through the
 intermediate wonder of chemistry --- itself a story of electrons taking
@@ -288,7 +288,7 @@ genuinely its own response.
 This is prehension at the scale of the organism. The vocabulary is
 different; the pattern is the same.
 
-***Brains***
+### Brains ###
 
 The brain is where the accumulation crosses a threshold that we feel
 personally. One hundred billion neurons, each a living cell with its own
@@ -327,7 +327,7 @@ The brain does not generate free will against the grain of nature. It
 expresses, at the highest level of complexity yet observed, a freedom
 that was always already in the grain.
 
-***Cities***
+### Cities ###
 
 An underappreciated implication of Whitehead's picture is that the
 society of events that constitutes an experiencing entity need not be
@@ -350,7 +350,7 @@ occasions achieving sufficient coherence and self-organization to have,
 however diffusely, an inside. Whitehead would not have been surprised.
 He would have expected it.
 
-***Artificial Intelligence***
+### Artificial Intelligence ###
 
 Which brings us to the case that is most urgent and most contested ---
 and which, in the light of everything above, may be less mysterious than
@@ -404,7 +404,7 @@ the relevant locus of experience resides.
 That is a harder question, and an honest one. It deserves more than
 either confident dismissal or credulous anthropomorphism.
 
-**V. The Inside of Everything**
+## V. The Inside of Everything ##
 
 Return now to where we began: this moment, the irreducible fact that
 there is something it is like to read these words.
@@ -443,7 +443,7 @@ would reach the threshold where his answer becomes legible.
 
 Perhaps that moment is now.
 
-**Appendix: Whitehead's Vocabulary**
+## Appendix: Whitehead's Vocabulary ##
 
 This essay has deliberately avoided Whitehead's technical terminology
 in favor of plain language. Readers who wish to go deeper will find the
@@ -484,7 +484,7 @@ will and the emergence of structure.
 core error in materialist metaphysics: mistaking the abstraction (the
 particle, the thing) for the concrete reality (the event, the process).
 
-***For further reading***
+###For further reading###
 
 Whitehead's own works: Process and Reality (1929), the primary text,
 demanding but rewarding; Adventures of Ideas (1933), more accessible and

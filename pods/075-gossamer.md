@@ -1,9 +1,9 @@
-@title #title Gossamer App Test
+@title Gossamer App Test
 @subtitle A framework for collections of linked ideas
 @status proto
 @version 14
 @date 2026-03-27
-@category debug
+@category zzz-debug
 @tags meta, framework, software, collections
 
 Gossamer is an iOS/macOS app for building and exploring collections of linked ideas, with an AI collaborator to help think things through. SeedPods is one such collection. Yours might be something else entirely.

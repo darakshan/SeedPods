@@ -1,2 +1,42 @@
 ── 2026-04-02 19:56 ──
 
+[you] hi there, let’s start a new subject.  pod 19 doesn’t show its image.  Was the image directive removed?  Are there other pods that are missing images?
+
+[error] GREP command was not executed: <<<GREP: content/images>>> — check that the pattern uses the exact format <<<GREP: pattern>>> or <<<GREP: pattern in path/prefix>>>.
+
+[claude] So many pods have `@image` directives, but there's no `images/` folder in the codex. The images are referenced but don't exist.
+
+The grep shows images referenced in both `pods/` and `content/pods/` — interesting that there are two locations. Let me check if images might be in `content/images/`:
+
+[you] the images folder is content/images/ — is the documentation out of date?
+
+[claude] Looking at the resources I have:
+
+- `RESOURCES/codex-setup.md` says `images/` at the codex root
+- `content/internal/images.md` (line 3 in the grep) says `content/images/`
+
+So yes, there's a mismatch. The actual location appears to be `content/images/` based on your internal docs, but `codex-setup.md` lists `images/` at root.
+
+Want me to update `RESOURCES/codex-setup.md` to reflect the correct path? Or is this something you need to fix in the app's bundled resources?
+
+(Also — the `content/images/` folder isn't showing in the directory listing I was given, which might be why pod 19's image isn't displaying. Either the folder doesn't exist yet, or it's not being included in the directory listing for some reason.)
+
+[you] you can’t update it, it’s in the resource fork!  it was ambiguous but I fixed that.  But you don’t need to see the images to check that the PODS have IMAGE DIRECTIVES
+
+[error] GREP command was not executed: <<<GREP: @image in pods/06>>> — check that the pattern uses the exact format <<<GREP: pattern>>> or <<<GREP: pattern in path/prefix>>>.
+
+[you] did you see the error message?
+
+[claude] Pod 069-love is missing an `@image` directive. Let me check the remaining ones:
+
+[you] still looking?
+
+[claude] Found them. Pods missing `@image` directives:
+
+- **069-love** — draft1 status, no image
+- **074-grasshopper** — draft1 status, no image
+- **075-gossamer** — proto status (test pod), no image
+- **076-fivewindows** — proto status, no image
+
+So three substantive pods (069, 074, 076) plus the test pod (075) are missing image directives. Pod 019-funerals has its directive — the issue you're seeing must be on the image file or rendering side, not the pod content.
+

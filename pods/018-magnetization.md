@@ -50,12 +50,6 @@ Whitehead's societies of occasions (@link(011)) provide the metaphysical frame. 
 
 The practical implication is counterintuitive: persuasion is overrated. You don't change a system by arguing with every element. You change it by seeding the right clusters in a medium that's ready to shift, then letting propagation do the work. The question is never "how do I convince everyone?" It's "where are the low-threshold nodes, and is the temperature right?"
 
-@section(script)
-TBD
-
-@section(images)
-TBD
-
 @section(depth)
 The physics of phase transitions offers a precise vocabulary for what the surface layer describes intuitively. A ferromagnetic material like iron consists of magnetic domains — regions where atomic spins are aligned. Above the Curie temperature, thermal agitation overwhelms the alignment; the domains dissolve into disorder. Below it, the material is ready to magnetize, but needs seeds: nucleation sites where alignment begins.
 
