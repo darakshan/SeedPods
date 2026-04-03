@@ -1,7 +1,6 @@
 .DS_Store
-.venv
-.buildstate/history.csv
 docs/
-__pycache__/
 .git
 .versions
+.claude/
+.cursor

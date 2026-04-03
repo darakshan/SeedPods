@@ -1,1 +1,0 @@
-/Users/darakshan/Software/Python/SeedPods/.venv/bin/python /Users/darakshan/Software/Python/SeedPods/src/build.py

@@ -10,6 +10,4 @@ The structure is inspired by the modular organization of Christopher Alexander's
 
 Pods are presented in different layers: surface, depth, scripts, and images. 
 
-Pod sources are Markdown files in `content/pods/`; the site is generated into `docs/` by a Python build script. 
-
-To build the html files, use "just build".
+Pod sources are Markdown files in `content/pods/`; the site is generated into `docs/` by the Gossamer app. 

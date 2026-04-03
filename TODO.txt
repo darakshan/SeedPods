@@ -1,3 +1,0 @@
-- integrate internal/context.md into other documents
-- normalize #refs in bibliography to eliminate duplications
-
