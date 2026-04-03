@@ -1,0 +1,8 @@
+=== buildSite 2026-04-03 16:02:04 +0000 ===
++0.000s  start build  pods=74
++0.356s  SiteBuilder: detached task finished, back on MainActor
++0.357s  builder.build() returned
++0.360s  updateUIView: buildId=3, scheduling installAndLoad
++0.365s  installAndLoad: webView=exists
++0.366s  loadHTML: calling loadHTMLString [37294 chars]  readTime=0.000s
++0.394s  webView didFinish navigation

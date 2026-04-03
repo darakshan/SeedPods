@@ -5,4 +5,3 @@ docs/
 __pycache__/
 .git
 .versions
-site/

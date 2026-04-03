@@ -1,27 +1,119 @@
 {
-  "nav": "about, list",
-  "site_base": "https://darakshan.github.io/SeedPods/",
-  "site_dir": "docs",
-  "section_head": "All seeds",
-  "repo_link": "Full repository →",
-  "view_all": "View all {n} seeds →",
-  "surface_min_words": 400,
-  "surface_max_words": 700,
-  "depth_min_words": 300,
-  "depth_max_words": 600,
-  "min_related_in_degree": 2,
-
-
-  "menu_title": "Lists",
-  "list_menu": [
-    {"name": "All the Seeds",    "link": "list"},
-    {"name": "Bibliography", "link": "bibliography"},
-    {"name": "Glossary",     "link": "glossary"},
-    {"name": "Map",          "link": "map"},
-    {"name": "More",         "link": "more"}
+  "categories" : [
+    {
+      "category" : "AI-minds",
+      "color_name" : "pink",
+      "hex" : "#FFB6C1"
+    },
+    {
+      "category" : "biology",
+      "color_name" : "creamsicle",
+      "hex" : "#FECBA1"
+    },
+    {
+      "category" : "consciousness",
+      "color_name" : "light yellow",
+      "hex" : "#FFFACD"
+    },
+    {
+      "category" : "knowledge",
+      "color_name" : "yellow-green",
+      "hex" : "#C8E8A4"
+    },
+    {
+      "category" : "mathematics",
+      "color_name" : "blue-green",
+      "hex" : "#AFEEEE"
+    },
+    {
+      "category" : "physics",
+      "color_name" : "light blue",
+      "hex" : "#BDE0FE"
+    },
+    {
+      "category" : "sensation",
+      "color_name" : "magenta",
+      "hex" : "#F9C6F0"
+    },
+    {
+      "category" : "debug",
+      "color_name" : "gray",
+      "hex" : "#BEBEBE"
+    }
   ],
-
-  "status": [
+  "depth_max_words" : 600,
+  "depth_min_words" : 300,
+  "devices" : {
+    "5E2DCE06-6BD4-4669-A4D9-177DEC7F31C7" : "iPhone",
+    "F86E0D90-9B7A-4EDF-BCC0-70F721D036D9" : "macbook"
+  },
+  "list_menu" : [
+    {
+      "link" : "list",
+      "name" : "All the Seeds"
+    },
+    {
+      "link" : "bibliography",
+      "name" : "Bibliography"
+    },
+    {
+      "link" : "glossary",
+      "name" : "Glossary"
+    },
+    {
+      "link" : "map",
+      "name" : "Map"
+    },
+    {
+      "link" : "more",
+      "name" : "More"
+    }
+  ],
+  "menu_title" : "Lists",
+  "min_related_in_degree" : 2,
+  "nav" : "about, list",
+  "repo_link" : "Full repository →",
+  "section_head" : "All seeds",
+  "sections" : [
+    {
+      "displayName" : "Surface",
+      "max" : 700,
+      "min" : 400,
+      "name" : "surface",
+      "optional" : false,
+      "orderSpecific" : true
+    },
+    {
+      "displayName" : "Depth",
+      "max" : 600,
+      "min" : 300,
+      "name" : "depth",
+      "optional" : false,
+      "orderSpecific" : true
+    },
+    {
+      "displayName" : "Provenance",
+      "name" : "provenance",
+      "optional" : true,
+      "orderSpecific" : true
+    },
+    {
+      "displayName" : "Script",
+      "name" : "script",
+      "optional" : false,
+      "orderSpecific" : true
+    },
+    {
+      "displayName" : "Images",
+      "name" : "images",
+      "optional" : false,
+      "orderSpecific" : true
+    }
+  ],
+  "site" : "docs",
+  "site_base" : "https:\/\/darakshan.github.io\/SeedPods\/",
+  "site_dir" : "docs",
+  "status" : [
     "draft1",
     "rough",
     "partial",
@@ -29,23 +121,7 @@
     "proto",
     "empty"
   ],
-
-  "sections": [
-    {"name": "surface",    "displayName": "Surface",    "orderSpecific": true, "optional": false, "min": 400, "max": 700},
-    {"name": "depth",      "displayName": "Depth",      "orderSpecific": true, "optional": false, "min": 300, "max": 600},
-    {"name": "provenance", "displayName": "Provenance", "orderSpecific": true, "optional": true},
-    {"name": "script",     "displayName": "Script",     "orderSpecific": true, "optional": false},
-    {"name": "images",     "displayName": "Images",     "orderSpecific": true, "optional": false}
-  ],
-
-  "categories": [
-    {"category": "AI-minds",      "color_name": "pink",         "hex": "#FFB6C1"},
-    {"category": "biology",       "color_name": "creamsicle",   "hex": "#FECBA1"},
-    {"category": "consciousness", "color_name": "light yellow", "hex": "#FFFACD"},
-    {"category": "knowledge",     "color_name": "yellow-green", "hex": "#C8E8A4"},
-    {"category": "mathematics",   "color_name": "blue-green",   "hex": "#AFEEEE"},
-    {"category": "physics",       "color_name": "light blue",   "hex": "#BDE0FE"},
-    {"category": "sensation",     "color_name": "magenta",      "hex": "#F9C6F0"},
-    {"category": "debug",         "color_name": "gray",         "hex": "#BEBEBE"}
-  ]
+  "surface_max_words" : 700,
+  "surface_min_words" : 400,
+  "view_all" : "View all {n} seeds →"
 }
