@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Map of the Territory</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;600&family=DM+Mono:wght@300;400&display=swap">
+<link rel="icon" href="logo.svg">
+<link rel="stylesheet" href="site.css">
+<script>
+window.__pods__={"000":"000-map","001":"001-caloric","002":"002-events","003":"003-inside","004":"004-self","005":"005-freewill","006":"006-output","007":"007-vacuum","008":"008-fields","009":"009-randomness","010":"010-largenumbers","011":"011-moreisdifferent","012":"012-autopoiesis","013":"013-enactment","014":"014-cities","015":"015-aliens","016":"016-neuralnetwork","017":"017-pastpresent","018":"018-magnetization","019":"019-funerals","020":"020-penrose","021":"021-just","022":"022-locked","023":"023-stories","024":"024-ghostmachine","025":"025-widechannel","026":"026-twotruths","027":"027-usedtothink","028":"028-network","029":"029-lighttime","030":"030-interference","031":"031-surfaceinside","032":"032-skyfossil","033":"033-edge","034":"034-onerule","035":"035-simplestnumbers","036":"036-universenoticing","037":"037-assembly","038":"038-consonance-map","040":"040-stability","041":"041-colorwheel","042":"042-eyethinks","044":"044-ai-retina","045":"045-baldwin","046":"046-thinkfast","047":"047-ai-feeling","048":"048-flashes","049":"049-strangeloop","050":"050-orthogonal","051":"051-spacetime","052":"052-dichotomy","053":"053-dimensions","054":"054-bornharmonic","056":"056-mandelneural","057":"057-superfarey","058":"058-galacticnets","059":"059-galaxyevolve","060":"060-worldtests","061":"061-babyuniverse","062":"062-branchingdice","063":"063-mandelcrystals","064":"064-choicedimension","065":"065-feel-do","066":"066-cosmicattractor","067":"067-monads-holons","068":"068-bubbles","069":"069-love","070":"070-harmony","071":"071-beauty","072":"072-temperature","073":"073-moral-caution","074":"074-grasshopper","075":"075-gossamer","076":"076-fivewindows"};
+window._seedNavSearchIndex=null;
+window._seedNavSearchIndexPromise=null;
+function _seedNavLoadIndex(){if(window._seedNavSearchIndex)return Promise.resolve(window._seedNavSearchIndex);if(!window._seedNavSearchIndexPromise){window._seedNavSearchIndexPromise=fetch('search-index.json').then(function(r){return r.json();}).then(function(d){window._seedNavSearchIndex=d;return d;});}return window._seedNavSearchIndexPromise;}
+function seedNavGo(){
+  var inp=document.getElementById('nav-goto-num');
+  if(!inp)return;
+  var v=inp.value.trim().replace(/^0+/,'');
+  if(!v)return;
+  var pad=v.padStart(3,'0');
+  var fn=window.__pods__[pad]||window.__pods__[v];
+  if(!fn){var k=Object.keys(window.__pods__).find(function(k){return parseInt(k,10)===parseInt(v,10)});if(k)fn=window.__pods__[k];}
+  if(fn)window.location.href=fn+'.html';
+}
+window.seedNavOpenSearch=function(){var n=document.querySelector("nav");if(n&&n.classList.contains("nav-hamburger-open"))window.seedNavToggleMenu();var d=document.getElementById("search-dialog");var i=document.getElementById("search-dialog-input");if(d)d.removeAttribute("hidden");if(i){i.value="";i.focus();}_seedNavLoadIndex();window.seedNavRunSearch("");};
+window.seedNavCloseSearch=function(){var d=document.getElementById("search-dialog");if(d)d.setAttribute("hidden","");};
+window._seedNavSnippet=function(content,q){if(!content||!q)return"";var c=content.toLowerCase();var i=c.indexOf(q);if(i<0)return"";var len=100;var start=Math.max(0,i-len);var end=Math.min(content.length,i+q.length+len);var s=content.substring(start,end).replace(/\s+/g," ").trim();if(start>0)s="\u2026 "+s;if(end<content.length)s=s+" \u2026";return s;};
+window.seedNavRunSearch=function(q){
+  q=(q||"").toLowerCase().trim();
+  var el=document.getElementById("search-dialog-results");
+  var countEl=document.getElementById("search-dialog-count");
+  if(!el)return;
+  if(!q){el.innerHTML="";if(countEl)countEl.textContent="";return;}
+  _seedNavLoadIndex().then(function(index){
+    var nm=[],cm=[];
+    for(var j=0;j<index.length;j++){var it=index[j];if((it.title||"").toLowerCase().indexOf(q)>=0)nm.push(it);else if((it.content||"").toLowerCase().indexOf(q)>=0)cm.push(it);}
+    var slugs={};
+    nm.forEach(function(it){slugs[it.slug]=1;});cm.forEach(function(it){slugs[it.slug]=1;});
+    var n=Object.keys(slugs).length;
+    if(countEl)countEl.textContent=n===1?"1 found":n+" found";
+    var h="";
+    if(nm.length){h+='<div class="search-section"><div class="search-section-title">Name</div><ul class="search-result-list">';nm.forEach(function(it){var d=document.createElement("div");d.textContent=it.num+". "+it.title;h+='<li><a href="'+it.slug+'.html">'+d.innerHTML+'</a></li>';});h+="</ul></div>";}
+    if(cm.length){h+='<div class="search-section"><div class="search-section-title">Content</div><ul class="search-result-list">';cm.forEach(function(it){var titleDiv=document.createElement("div");titleDiv.textContent=it.num+". "+it.title;var snip=window._seedNavSnippet(it.content,q);var snipDiv=document.createElement("div");snipDiv.textContent=snip;h+='<li><a href="'+it.slug+'.html">'+titleDiv.innerHTML+'<br><span class="search-result-snippet">'+snipDiv.innerHTML+'</span></a></li>';});h+="</ul></div>";}
+    if(!h&&q)h='<p class="search-no-results">No pods match.</p>';
+    el.innerHTML=h;
+  });
+};
+window.seedNavToggleMenu=function(){var n=document.querySelector("nav");var b=document.querySelector(".nav-hamburger-btn");var p=document.getElementById("nav-hamburger-panel");if(!n||!b)return;var open=n.classList.contains("nav-hamburger-open");n.classList.toggle("nav-hamburger-open",!open);b.setAttribute("aria-expanded",!open?"true":"false");if(p)p.style.display=open?"none":"flex";};
+window.seedNavShowVersion=function(show){var el=document.querySelector(".page-end-version");if(el)el.classList.toggle("page-end-version-visible",!!show);};
+window.seedNavToggleVersion=function(){var el=document.querySelector(".page-end-version");if(el)el.classList.toggle("page-end-version-visible");};
+document.addEventListener("keydown",function(e){if(e.key==="Escape"){var n=document.querySelector("nav");if(n&&n.classList.contains("nav-hamburger-open"))window.seedNavToggleMenu();else window.seedNavCloseSearch();}});
+document.addEventListener("DOMContentLoaded",function(){var p=document.getElementById("nav-hamburger-panel");if(p){p.style.display="none";var list=p.querySelector(".nav-hamburger-list");if(list)list.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){if(document.querySelector("nav").classList.contains("nav-hamburger-open"))window.seedNavToggleMenu();});});}});
+</script>
+</head>
+<body>
+<nav style="position:sticky;top:0;z-index:100;">
+<div class="nav-row">
+<div class="nav-brand">
+<a href="index.html" class="nav-logo">
+<img src="logo.svg" alt="" class="nav-logo-icon">
+<span class="nav-logo-text">Gossamer</span>
+</a>
+</div>
+<div class="nav-center"><ul class="nav-links nav-links-center">
+  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search pods" onclick="seedNavOpenSearch();return false">Search</button></li>
+  <li class="nav-goto-wrap">
+    <label for="nav-goto-num" class="sr-only">Goto pod</label>
+    <input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}">
+    <button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button>
+  </li>
+</ul></div>
+<div class="nav-end"><ul class="nav-links nav-links-end">
+  <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
+            <li class="nav-link-item nav-item-dropdown nav-lists-dropdown">
+            <a href="list.html" class="nav-btn">Lists</a>
+            <button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-label="Lists menu"></button>
+            <ul class="nav-dropdown">
+              <li><a href="list.html">All the Seeds</a></li>
+              <li><a href="bibliography.html">Bibliography</a></li>
+              <li><a href="glossary.html">Glossary</a></li>
+              <li><a href="map.html">Map</a></li>
+              <li><a href="more.html">More</a></li>
+            </ul>
+          </li>
+</ul><button type="button" class="nav-hamburger-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav-hamburger-panel" onclick="seedNavToggleMenu();return false">&#9776;</button></div>
+</div>
+  <div class="section-tabs">
+    <div class="section-tabs-inner">
+      <span class="section-tabs-prev"></span>
+      <div class="section-tabs-center">
+        <a href="#surface" class="section-tab">Surface</a>
+      <a href="#depth" class="section-tab">Depth</a>
+      <a href="#provenance" class="section-tab">Provenance</a>
+      <a href="#script" class="section-tab">Script</a>
+      <a href="#images" class="section-tab">Images</a>
+      </div>
+      <span class="section-tabs-next"><a href="001-caloric.html">&gt;&gt;</a></span>
+    </div>
+  </div>
+<div class="nav-hamburger-panel" id="nav-hamburger-panel" role="menu" aria-hidden="true">
+  <div class="nav-hamburger-overlay" onclick="seedNavToggleMenu()"></div>
+  <div class="nav-hamburger-inner">
+    <ul class="nav-hamburger-list">
+      <li><a href="about.html">About</a></li>
+      <li><a href="list.html">All the Seeds</a></li>
+              <li><a href="bibliography.html">Bibliography</a></li>
+              <li><a href="glossary.html">Glossary</a></li>
+              <li><a href="map.html">Map</a></li>
+              <li><a href="more.html">More</a></li>
+    </ul>
+  </div>
+</div>
+</nav>
+<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search pods" hidden>
+  <div class="search-dialog-overlay" onclick="seedNavCloseSearch()"></div>
+  <div class="search-dialog-inner">
+    <div class="search-dialog-header">
+      <input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)">
+      <button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button>
+    </div>
+    <div id="search-dialog-count" class="search-dialog-count"></div>
+    <div id="search-dialog-results" class="search-dialog-results"></div>
+  </div>
+</div>
+<div class="wrap">
+  <div class="meta-row">
+    <a href="index.html#knowledge" class="tag">knowledge</a><span class="mono small dim"> · </span><span class="mono small warm">Pod 0</span><span class="mono small dim"> · draft1</span>
+  </div>
+  <div class="seedpod-header fade cat-colored cat-knowledge">
+    <h1>A Map of the Territory</h1>
+    <p class="premise">Seven categories, arbitrarily drawn — and why that's fine.</p>
+  </div>
+  <section id="surface" class="pod-section">
+  <h2 class="section-heading">Surface</h2>
+  <div class="prose"><p>The seedpods gathered here have been sorted into seven categories. We want to be honest with you from the start: the sorting is somewhat arbitrary. A seedpod about color perception could live in sensation, or in physics, or in biology. A seedpod about AI could live in consciousness, or in knowledge, or in AI-minds. The categories are not walls. They are more like the colored flags a gardener uses to mark rough areas — useful for orientation, not meant to be taken too seriously.</p>
+<p>With that caveat cheerfully lodged, here is the map.</p>
+<figure class="directive-image directive-image--left"><img src="images/000-map.jpg" alt=""><figcaption>A map of all the SeedPods as defined in this build</figcaption></figure>
+<hr>
+<p><strong>Consciousness</strong> is the big one. The question underneath everything else: what is it like to be something? Not just humans — possibly cells, possibly fields, possibly the universe itself. These seedpods take seriously the possibility that experience is not a late biological accident but something woven into the fabric of things from the beginning. Start here if you want to be immediately disoriented in a productive way.</p>
+<p>A place to start: <a href="003-inside.html">Everything Has an Inside</a> — <em>Everything Has an Inside.</em></p>
+<hr>
+<p><strong>Sensation</strong> is where consciousness gets concrete. Color. Harmony. Temperature. Love. Beauty. These are not soft topics — they turn out to be windows onto some of the deepest puzzles in philosophy and physics. How does a frequency become a feeling? How does the eye decide what it sees before the brain is consulted? These seedpods stay close to experience, to the felt texture of being alive.</p>
+<p>A place to start: <a href="038-consonance-map.html">The Surprising Consonance Map</a> — <em>The Surprising Consonance Map.</em></p>
+<hr>
+<p><strong>Physics</strong> is the seedpods that take seriously what modern science actually says about reality — which turns out to be much stranger than the materialist picture most of us absorbed in school. Fields, not particles. Events, not things. A vacuum that seethes with potential. A photon that experiences no journey. The physics seedpods are where the scientific and the philosophical start to converge.</p>
+<p>A place to start: <a href="008-fields.html">The Field Is the Medium of Feeling</a> — <em>The Field Is the Medium of Feeling.</em></p>
+<hr>
+<p><strong>Mathematics</strong> is the seedpods about structure — the patterns that show up whether or not anyone put them there. Mandelbrot sets at the boundary between order and chaos. The simplest fractions organizing consonance. One rule, iterated, generating infinite complexity. These seedpods are for anyone who ever suspected mathematics was trying to tell us something beyond the textbook.</p>
+<p>A place to start: <a href="033-edge.html">The Edge Is Where Everything Happens</a> — <em>The Edge Is Where Everything Happens.</em></p>
+<hr>
+<p><strong>Biology</strong> is the seedpods about life as a process, not a substance. The cell that makes itself. The organism that enacts its world rather than passively receiving it. Learning that becomes hardwired across generations. Life turns out to be less about what it’s made of and more about the circular, self-sustaining patterns that keep making it.</p>
+<p>A place to start: <a href="012-autopoiesis.html">The Cell That Makes Itself</a> — <em>The Cell That Makes Itself.</em></p>
+<hr>
+<p><strong>AI-Minds</strong> is the newest neighborhood, and perhaps the most urgent. These seedpods look at artificial intelligence not as a product or a threat but as a philosophical occasion — a new kind of entity that forces us to sharpen questions we thought we had settled. What is thought? What is experience? What does it mean to understand something? The machines are asking us these questions whether we want to answer them or not.</p>
+<p>A place to start: <a href="021-just.html">The Word &quot;Just&quot; Is a Confession</a> — <em>The Word “Just” Is a Confession.</em></p>
+<hr>
+<p><strong>Knowledge</strong> is the seedpods about how we know — and how often we don’t, and don’t know that we don’t. Paradigm shifts. The phrase “we used to think.” The stories we tell that become more real than the facts they were meant to explain. These seedpods are epistemological in the best sense: they make you a more careful, more humble, more delighted inhabitant of your own mind.</p>
+<p>A place to start: <a href="001-caloric.html">The Map That Was Wrong</a> — <em>The Map That Was Wrong.</em></p>
+<hr>
+<p>That’s the map. But remember: you don’t have to follow it. The seedpods are connected to each other by numbered links — follow any thread that pulls you. The categories will dissolve as you go, and something more like a web will take their place. That’s the point.</p>
+<p>The garden is large. Start anywhere.</p>
+</div>
+</section>
+<section id="depth" class="pod-section">
+  <h2 class="section-heading">Depth</h2>
+  <div class="prose"><p>The seven categories were not derived from a theory. They were induced from the collection — a pragmatic carving of the space that seemed to give readers useful handholds without forcing the ideas into shapes they don’t naturally have.</p>
+<p>Other carvings were possible. One could organize by scale: quantum → cellular → organismal → social → cosmic. Or by method: empirical → mathematical → phenomenological → speculative. Or by provenance: Whitehead → Gödel → Varela → contemporary AI. Each would illuminate different connections and obscure others.</p>
+<p>The choice of seven is not magical, though seven is a satisfying number for a human working memory — cognitive psychologist George Miller identified it as roughly the limit of working memory in 1956. The choice of these seven reflects what the collection has actually grown toward: a sustained interest in consciousness and its physical underpinnings (consciousness, sensation, physics), a fascination with the structural patterns that generate complexity from simplicity (mathematics, biology), and an urgent engagement with the new entities and the old epistemological questions they reactivate (AI-minds, knowledge).</p>
+<p>What the categories share, underneath their differences, is a single recurring move: finding that the familiar concept — matter, sensation, number, life, mind, knowledge — is stranger and more interesting than the standard picture allows. Each category is a department of the same renovation project.</p>
+<p>The reader who follows connections rather than categories will eventually notice that the seedpods form clusters regardless of their labels: a cluster around the event-not-thing ontology (<a href="002-events.html">Reality Is Events, Not Things</a>, <a href="007-vacuum.html">The Vacuum Is Not Empty</a>, <a href="008-fields.html">The Field Is the Medium of Feeling</a>); a cluster around emergence and complexity (<a href="009-randomness.html">Structure Is What Randomness Does</a>, <a href="011-moreisdifferent.html">More Is Different</a>, <a href="012-autopoiesis.html">The Cell That Makes Itself</a>, <a href="034-onerule.html">One Rule Is Enough</a>); a cluster around the limits of output as evidence (<a href="006-output.html">You Can’t Judge a Process by Its Output</a>, <a href="021-just.html">The Word &quot;Just&quot; Is a Confession</a>, <a href="022-locked.html">The Channel Is Not the Capacity</a>, <a href="025-widechannel.html">We Don’t Know Who or What We’re Talking To</a>). These cross-category clusters are where the project’s deeper structure lives.</p>
+<p>The categories are scaffolding. The web is the building — a structure Christopher Alexander made explicit in A Pattern Language: a navigable collection of related ideas with no mandatory sequence, entered anywhere.</p>
+</div>
+</section>
+<section id="provenance" class="pod-section">
+    <div class="related-section">
+    <h3 class="section-heading related-label">Related pods</h3>
+    <div class="related-grid">  <a href="002-events.html" class="related-card cat-colored cat-physics">
+    <div class="related-title">2. Reality Is Events, Not Things</div>
+  </a>
+  <a href="003-inside.html" class="related-card cat-colored cat-consciousness">
+    <div class="related-title">3. Everything Has an Inside</div>
+  </a>
+  <a href="008-fields.html" class="related-card cat-colored cat-sensation">
+    <div class="related-title">8. The Field Is the Medium of Feeling</div>
+  </a>
+  <a href="009-randomness.html" class="related-card cat-colored cat-biology">
+    <div class="related-title">9. Structure Is What Randomness Does</div>
+  </a>
+  <a href="011-moreisdifferent.html" class="related-card related-card-prelim cat-colored cat-consciousness">
+    <div class="related-title">11. More Is Different</div>
+  </a>
+      </div>
+  </div>
+</section>
+<section id="script" class="pod-section">
+  <h2 class="section-heading">Script</h2>
+  <div class="prose"><ol>
+<li><p>Aerial view of a large wild garden — dense, beautiful, no obvious paths. A visitor at the gate. VO: Every garden needs some paths. Not because nature organizes itself neatly. It doesn’t. But a visitor at the gate needs somewhere to begin.</p>
+</li>
+<li><p>A hand placing small colored flags in the earth, one by one, different colors marking rough sections. Not walls — just flags.</p>
+</li>
+<li><p>Rapid sequence of seven images, each barely a second: a close-up eye (CONSCIOUSNESS) — a tuning fork vibrating (SENSATION) — a field of stars (PHYSICS) — the Mandelbrot boundary (MATHEMATICS) — a cell dividing (BIOLOGY) — a blinking cursor (AI-MINDS) — an old wrong map (KNOWLEDGE). VO: Seven sections. Somewhat arbitrarily drawn.</p>
+</li>
+<li><p>The visitor again, deeper in now, no longer following the path — moving toward whatever is interesting. VO: The categories will dissolve as you go. Something more like a web will take their place. That’s the point.</p>
+</li>
+<li><p>Aerial view, wide. The visitor is small. The flags are barely visible. Fade.</p>
+</li>
+</ol>
+</div>
+</section>
+<section id="images" class="pod-section">
+  <h2 class="section-heading">Images</h2>
+  <div class="prose"><p>Primary illustration: A hand-drawn map of the garden — loose, warm, slightly whimsical. Seven labeled sections with soft borders that blur into each other. A few seedpod titles written in as landmarks. The style should feel like an explorer’s field notebook, not a corporate diagram.</p>
+<p>Social graphic: The seven category names arranged in a loose circle on a dark background, connected by faint lines. No hierarchy. Center text: “Enter anywhere.”</p>
+<p>Video thumbnail: The aerial garden view — lush, dense, slightly mysterious. A single stone path visible entering from the bottom. No text overlay needed.</p>
+<p>Secondary illustration: The same garden map but with a few cross-category connection lines drawn in a different color — showing the clusters that form regardless of category labels.</p>
+</div>
+</section>
+</div>
+<div class="page-end" id="page-end-version" data-page-version="1">
+  <button class="page-end-logo" aria-label="Show page info"
+    onmouseenter="typeof seedNavShowVersion==='function'&&seedNavShowVersion(true)"
+    onmouseleave="typeof seedNavShowVersion==='function'&&seedNavShowVersion(false)"
+    ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
+    <img src="logo.svg" alt="" width="32" height="32">
+  </button>
+  <span class="page-end-version" aria-hidden="true">Rev 1 · 2026-04-03 · 11:23</span>
+</div>
+</body>
+</html>

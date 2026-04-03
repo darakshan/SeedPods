@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bibliography</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;600&family=DM+Mono:wght@300;400&display=swap">
+<link rel="icon" href="logo.svg">
+<link rel="stylesheet" href="site.css">
+<script>
+window.__pods__={"000":"000-map","001":"001-caloric","002":"002-events","003":"003-inside","004":"004-self","005":"005-freewill","006":"006-output","007":"007-vacuum","008":"008-fields","009":"009-randomness","010":"010-largenumbers","011":"011-moreisdifferent","012":"012-autopoiesis","013":"013-enactment","014":"014-cities","015":"015-aliens","016":"016-neuralnetwork","017":"017-pastpresent","018":"018-magnetization","019":"019-funerals","020":"020-penrose","021":"021-just","022":"022-locked","023":"023-stories","024":"024-ghostmachine","025":"025-widechannel","026":"026-twotruths","027":"027-usedtothink","028":"028-network","029":"029-lighttime","030":"030-interference","031":"031-surfaceinside","032":"032-skyfossil","033":"033-edge","034":"034-onerule","035":"035-simplestnumbers","036":"036-universenoticing","037":"037-assembly","038":"038-consonance-map","040":"040-stability","041":"041-colorwheel","042":"042-eyethinks","044":"044-ai-retina","045":"045-baldwin","046":"046-thinkfast","047":"047-ai-feeling","048":"048-flashes","049":"049-strangeloop","050":"050-orthogonal","051":"051-spacetime","052":"052-dichotomy","053":"053-dimensions","054":"054-bornharmonic","056":"056-mandelneural","057":"057-superfarey","058":"058-galacticnets","059":"059-galaxyevolve","060":"060-worldtests","061":"061-babyuniverse","062":"062-branchingdice","063":"063-mandelcrystals","064":"064-choicedimension","065":"065-feel-do","066":"066-cosmicattractor","067":"067-monads-holons","068":"068-bubbles","069":"069-love","070":"070-harmony","071":"071-beauty","072":"072-temperature","073":"073-moral-caution","074":"074-grasshopper","075":"075-gossamer","076":"076-fivewindows"};
+window._seedNavSearchIndex=null;
+window._seedNavSearchIndexPromise=null;
+function _seedNavLoadIndex(){if(window._seedNavSearchIndex)return Promise.resolve(window._seedNavSearchIndex);if(!window._seedNavSearchIndexPromise){window._seedNavSearchIndexPromise=fetch('search-index.json').then(function(r){return r.json();}).then(function(d){window._seedNavSearchIndex=d;return d;});}return window._seedNavSearchIndexPromise;}
+function seedNavGo(){
+  var inp=document.getElementById('nav-goto-num');
+  if(!inp)return;
+  var v=inp.value.trim().replace(/^0+/,'');
+  if(!v)return;
+  var pad=v.padStart(3,'0');
+  var fn=window.__pods__[pad]||window.__pods__[v];
+  if(!fn){var k=Object.keys(window.__pods__).find(function(k){return parseInt(k,10)===parseInt(v,10)});if(k)fn=window.__pods__[k];}
+  if(fn)window.location.href=fn+'.html';
+}
+window.seedNavOpenSearch=function(){var n=document.querySelector("nav");if(n&&n.classList.contains("nav-hamburger-open"))window.seedNavToggleMenu();var d=document.getElementById("search-dialog");var i=document.getElementById("search-dialog-input");if(d)d.removeAttribute("hidden");if(i){i.value="";i.focus();}_seedNavLoadIndex();window.seedNavRunSearch("");};
+window.seedNavCloseSearch=function(){var d=document.getElementById("search-dialog");if(d)d.setAttribute("hidden","");};
+window._seedNavSnippet=function(content,q){if(!content||!q)return"";var c=content.toLowerCase();var i=c.indexOf(q);if(i<0)return"";var len=100;var start=Math.max(0,i-len);var end=Math.min(content.length,i+q.length+len);var s=content.substring(start,end).replace(/\s+/g," ").trim();if(start>0)s="\u2026 "+s;if(end<content.length)s=s+" \u2026";return s;};
+window.seedNavRunSearch=function(q){
+  q=(q||"").toLowerCase().trim();
+  var el=document.getElementById("search-dialog-results");
+  var countEl=document.getElementById("search-dialog-count");
+  if(!el)return;
+  if(!q){el.innerHTML="";if(countEl)countEl.textContent="";return;}
+  _seedNavLoadIndex().then(function(index){
+    var nm=[],cm=[];
+    for(var j=0;j<index.length;j++){var it=index[j];if((it.title||"").toLowerCase().indexOf(q)>=0)nm.push(it);else if((it.content||"").toLowerCase().indexOf(q)>=0)cm.push(it);}
+    var slugs={};
+    nm.forEach(function(it){slugs[it.slug]=1;});cm.forEach(function(it){slugs[it.slug]=1;});
+    var n=Object.keys(slugs).length;
+    if(countEl)countEl.textContent=n===1?"1 found":n+" found";
+    var h="";
+    if(nm.length){h+='<div class="search-section"><div class="search-section-title">Name</div><ul class="search-result-list">';nm.forEach(function(it){var d=document.createElement("div");d.textContent=it.num+". "+it.title;h+='<li><a href="'+it.slug+'.html">'+d.innerHTML+'</a></li>';});h+="</ul></div>";}
+    if(cm.length){h+='<div class="search-section"><div class="search-section-title">Content</div><ul class="search-result-list">';cm.forEach(function(it){var titleDiv=document.createElement("div");titleDiv.textContent=it.num+". "+it.title;var snip=window._seedNavSnippet(it.content,q);var snipDiv=document.createElement("div");snipDiv.textContent=snip;h+='<li><a href="'+it.slug+'.html">'+titleDiv.innerHTML+'<br><span class="search-result-snippet">'+snipDiv.innerHTML+'</span></a></li>';});h+="</ul></div>";}
+    if(!h&&q)h='<p class="search-no-results">No pods match.</p>';
+    el.innerHTML=h;
+  });
+};
+window.seedNavToggleMenu=function(){var n=document.querySelector("nav");var b=document.querySelector(".nav-hamburger-btn");var p=document.getElementById("nav-hamburger-panel");if(!n||!b)return;var open=n.classList.contains("nav-hamburger-open");n.classList.toggle("nav-hamburger-open",!open);b.setAttribute("aria-expanded",!open?"true":"false");if(p)p.style.display=open?"none":"flex";};
+window.seedNavShowVersion=function(show){var el=document.querySelector(".page-end-version");if(el)el.classList.toggle("page-end-version-visible",!!show);};
+window.seedNavToggleVersion=function(){var el=document.querySelector(".page-end-version");if(el)el.classList.toggle("page-end-version-visible");};
+document.addEventListener("keydown",function(e){if(e.key==="Escape"){var n=document.querySelector("nav");if(n&&n.classList.contains("nav-hamburger-open"))window.seedNavToggleMenu();else window.seedNavCloseSearch();}});
+document.addEventListener("DOMContentLoaded",function(){var p=document.getElementById("nav-hamburger-panel");if(p){p.style.display="none";var list=p.querySelector(".nav-hamburger-list");if(list)list.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){if(document.querySelector("nav").classList.contains("nav-hamburger-open"))window.seedNavToggleMenu();});});}});
+</script>
+</head>
+<body>
+<nav style="position:sticky;top:0;z-index:100;">
+<div class="nav-row">
+<div class="nav-brand">
+<a href="index.html" class="nav-logo">
+<img src="logo.svg" alt="" class="nav-logo-icon">
+<span class="nav-logo-text">Gossamer</span>
+</a>
+</div>
+<div class="nav-center"><ul class="nav-links nav-links-center">
+  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search pods" onclick="seedNavOpenSearch();return false">Search</button></li>
+  <li class="nav-goto-wrap">
+    <label for="nav-goto-num" class="sr-only">Goto pod</label>
+    <input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}">
+    <button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button>
+  </li>
+</ul></div>
+<div class="nav-end"><ul class="nav-links nav-links-end">
+  <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
+            <li class="nav-link-item nav-item-dropdown nav-lists-dropdown">
+            <a href="list.html" class="nav-btn">Lists</a>
+            <button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-label="Lists menu"></button>
+            <ul class="nav-dropdown">
+              <li><a href="list.html">All the Seeds</a></li>
+              <li><a href="bibliography.html">Bibliography</a></li>
+              <li><a href="glossary.html">Glossary</a></li>
+              <li><a href="map.html">Map</a></li>
+              <li><a href="more.html">More</a></li>
+            </ul>
+          </li>
+</ul><button type="button" class="nav-hamburger-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav-hamburger-panel" onclick="seedNavToggleMenu();return false">&#9776;</button></div>
+</div>
+
+<div class="nav-hamburger-panel" id="nav-hamburger-panel" role="menu" aria-hidden="true">
+  <div class="nav-hamburger-overlay" onclick="seedNavToggleMenu()"></div>
+  <div class="nav-hamburger-inner">
+    <ul class="nav-hamburger-list">
+      <li><a href="about.html">About</a></li>
+      <li><a href="list.html">All the Seeds</a></li>
+              <li><a href="bibliography.html">Bibliography</a></li>
+              <li><a href="glossary.html">Glossary</a></li>
+              <li><a href="map.html">Map</a></li>
+              <li><a href="more.html">More</a></li>
+    </ul>
+  </div>
+</div>
+</nav>
+<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search pods" hidden>
+  <div class="search-dialog-overlay" onclick="seedNavCloseSearch()"></div>
+  <div class="search-dialog-inner">
+    <div class="search-dialog-header">
+      <input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)">
+      <button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button>
+    </div>
+    <div id="search-dialog-count" class="search-dialog-count"></div>
+    <div id="search-dialog-results" class="search-dialog-results"></div>
+  </div>
+</div>
+<div class="wrap"><div class="page-body home-page fade"><h1>Bibliography</h1>
+<p>References from all seedpods, grouped by keyword.</p>
+<p>Note: currently the same reference may appear multiple times. A future update will merge references from different seedpods into a single entry.</p>
+<hr class="index-tag-rule"><div id="anderson" class="index-tag-name">anderson</div>
+<div class="bib-entry"><span class="bib-text">Anderson, P.W. More Is Different. Science, 177(4047), 1972. Four pages. Still radical.</span> <a href="011-moreisdifferent.html" class="bib-tag">11</a></div>
+<hr class="index-tag-rule"><div id="arnold" class="index-tag-name">arnold</div>
+<div class="bib-entry"><span class="bib-text">Arnold, V.I. Small Denominators (1961). KAM theory and the stability of quasiperiodic motion.</span> <a href="040-stability.html" class="bib-tag">40</a></div>
+<hr class="index-tag-rule"><div id="baldwin" class="index-tag-name">baldwin</div>
+<div class="bib-entry"><span class="bib-text">Baldwin, J.M. A new factor in evolution (1896). The original proposal. Simpson, G.G. The Baldwin effect (1953). Modern synthesis treatment.</span> <a href="045-baldwin.html" class="bib-tag">45</a></div>
+<hr class="index-tag-rule"><div id="barlow" class="index-tag-name">barlow</div>
+<div class="bib-entry"><span class="bib-text">Barlow, H. Redundancy reduction revisited (2001). Efficient coding and the structure of natural signals.</span> <a href="044-ai-retina.html" class="bib-tag">44</a></div>
+<hr class="index-tag-rule"><div id="bauby" class="index-tag-name">bauby</div>
+<div class="bib-entry"><span class="bib-text">Bauby, J-D. The Diving Bell and the Butterfly. Knopf, 1997. The primary text. Essential.</span> <a href="022-locked.html" class="bib-tag">22</a></div>
+<hr class="index-tag-rule"><div id="bekenstein" class="index-tag-name">bekenstein</div>
+<div class="bib-entry"><span class="bib-text">Bekenstein (1972) — information content proportional to surface area, not volume.</span> <a href="031-surfaceinside.html" class="bib-tag">31</a></div>
+<hr class="index-tag-rule"><div id="benford" class="index-tag-name">benford</div>
+<div class="bib-entry"><span class="bib-text">Benford, Frank (1938) — leading digit law in real world numerical data.</span> <a href="035-simplestnumbers.html" class="bib-tag">35</a></div>
+<hr class="index-tag-rule"><div id="bohr" class="index-tag-name">bohr</div>
+<div class="bib-entry"><span class="bib-text">Bohr, N. 'The Quantum Postulate and the Recent Development of Atomic Theory.' Nature, 1928. The original statement of complementarity.</span> <a href="026-twotruths.html" class="bib-tag">26</a></div>
+<hr class="index-tag-rule"><div id="butterfield" class="index-tag-name">butterfield</div>
+<div class="bib-entry"><span class="bib-text">Butterfield, H. The Whig Interpretation of History. Bell, 1931. Named the tendency to read history as progress toward the present.</span> <a href="027-usedtothink.html" class="bib-tag">27</a></div>
+<hr class="index-tag-rule"><div id="campbell" class="index-tag-name">campbell</div>
+<div class="bib-entry"><span class="bib-text">Campbell, Joseph. *The Hero with a Thousand Faces*. Pantheon Books, 1949. The monomyth structure we project onto experience.</span> <a href="023-stories.html" class="bib-tag">23</a></div>
+<hr class="index-tag-rule"><div id="chalmers" class="index-tag-name">chalmers (3)</div>
+<div class="bib-entry"><span class="bib-text">Chalmers, D. The Conscious Mind (1996). Zombies and the hard problem. Compare Dennett, D. Consciousness Explained (1991). Dissolution of the distinction.</span> <a href="065-feel-do.html" class="bib-tag">65</a></div>
+<div class="bib-entry"><span class="bib-text">Chalmers, D. The Conscious Mind. Oxford, 1996. Introduced the hard problem; argues for a position close to property dualism.</span> <a href="003-inside.html" class="bib-tag">3</a></div>
+<div class="bib-entry"><span class="bib-text">Chalmers, D. The Hard Problem of Consciousness (1995). The problem that may dissolve rather than be solved.</span> <a href="047-ai-feeling.html" class="bib-tag">47</a></div>
+<hr class="index-tag-rule"><div id="darwin" class="index-tag-name">darwin</div>
+<div class="bib-entry"><span class="bib-text">Darwin, C. On the Origin of Species. John Murray, 1859.</span> <a href="009-randomness.html" class="bib-tag">9</a></div>
+<hr class="index-tag-rule"><div id="dennett" class="index-tag-name">dennett (2)</div>
+<div class="bib-entry"><span class="bib-text">Dennett, D. Consciousness Explained (1991). Multiple drafts and the narrative construction of the self.</span> <a href="048-flashes.html" class="bib-tag">48</a></div>
+<div class="bib-entry"><span class="bib-text">Dennett, D. Intuition Pumps and Other Tools for Thinking (2013).</span> <a href="021-just.html" class="bib-tag">21</a></div>
+<hr class="index-tag-rule"><div id="dickens" class="index-tag-name">dickens</div>
+<div class="bib-entry"><span class="bib-text">Dickens, K. The Telepathy Tapes. Podcast, Season 1, 2024.</span> <a href="022-locked.html" class="bib-tag">22</a></div>
+<hr class="index-tag-rule"><div id="douady" class="index-tag-name">douady</div>
+<div class="bib-entry"><span class="bib-text">Douady, A. and Hubbard, J. On the dynamics of polynomial-like maps (1985). Harmonic measure and the boundary.</span> <a href="062-branchingdice.html" class="bib-tag">62</a></div>
+<hr class="index-tag-rule"><div id="edelman" class="index-tag-name">edelman</div>
+<div class="bib-entry"><span class="bib-text">Edelman, G. Neural Darwinism (1987). Selectionist theory of brain function. Friston, K. The free-energy principle (2010). Predictive processing.</span> <a href="046-thinkfast.html" class="bib-tag">46</a></div>
+<hr class="index-tag-rule"><div id="einstein" class="index-tag-name">einstein</div>
+<div class="bib-entry"><span class="bib-text">Einstein, A. On the Electrodynamics of Moving Bodies. Annalen der Physik, 1905. The special relativity paper whose implications include the photon's reference frame.</span> <a href="028-network.html" class="bib-tag">28</a></div>
+<hr class="index-tag-rule"><div id="everett" class="index-tag-name">everett (5)</div>
+<div class="bib-entry"><span class="bib-text">Everett (1957) — bifurcations at the boundary as world-splits.</span> <a href="033-edge.html" class="bib-tag">33</a></div>
+<div class="bib-entry"><span class="bib-text">Everett (1957) — Many Worlds: every quantum branch real, universe exploring all paths simultaneously.</span> <a href="032-skyfossil.html" class="bib-tag">32</a></div>
+<div class="bib-entry"><span class="bib-text">Everett, H. Relative state formulation (1957). Douady, A. and Hubbard, J. On the dynamics of polynomial-like maps (1985).</span> <a href="064-choicedimension.html" class="bib-tag">64</a></div>
+<div class="bib-entry"><span class="bib-text">Everett, H. Relative state formulation of quantum mechanics (1957). DeWitt, B. The many-universes interpretation (1970).</span> <a href="060-worldtests.html" class="bib-tag">60</a></div>
+<div class="bib-entry"><span class="bib-text">Everett, H. Relative state formulation of quantum mechanics (1957). Many Worlds. Douady, A. and Hubbard, J. On the dynamics of polynomial-like maps (1985). Harmonic measure on Julia sets.</span> <a href="054-bornharmonic.html" class="bib-tag">54</a></div>
+<hr class="index-tag-rule"><div id="farey" class="index-tag-name">farey (3)</div>
+<div class="bib-entry"><span class="bib-text">Farey sequence — rational numbers ordered by denominator size, governing bulb positions.</span> <a href="033-edge.html" class="bib-tag">33</a></div>
+<div class="bib-entry"><span class="bib-text">Farey, John (1816) — sequence of rationals ordered by denominator size.</span> <a href="035-simplestnumbers.html" class="bib-tag">35</a></div>
+<div class="bib-entry"><span class="bib-text">Farey, John (1816) — sequence of rationals ordered by denominator size; the Farey gap property.</span> <a href="038-consonance-map.html" class="bib-tag">38</a></div>
+<hr class="index-tag-rule"><div id="feynman" class="index-tag-name">feynman (2)</div>
+<div class="bib-entry"><span class="bib-text">Feynman, R. The Development of the Space-Time View of Quantum Electrodynamics. Nobel Lecture, 1965. Contains Feynman's account of Wheeler's one-electron proposal.</span> <a href="028-network.html" class="bib-tag">28</a></div>
+<div class="bib-entry"><span class="bib-text">Feynman, R. The Feynman Lectures on Physics, Vol. 2. Addison-Wesley, 1964. The clearest physical account of electromagnetism available.</span> <a href="008-fields.html" class="bib-tag">8</a></div>
+<hr class="index-tag-rule"><div id="gleick" class="index-tag-name">gleick</div>
+<div class="bib-entry"><span class="bib-text">Gleick, J. Chaos: Making a New Science. Viking, 1987. Accessible entry point to deterministic chaos and its relationship to randomness.</span> <a href="009-randomness.html" class="bib-tag">9</a></div>
+<hr class="index-tag-rule"><div id="godel" class="index-tag-name">godel (3)</div>
+<div class="bib-entry"><span class="bib-text">Gödel, K. 'On Formally Undecidable Propositions of Principia Mathematica and Related Systems.' 1931.</span> <a href="026-twotruths.html" class="bib-tag">26</a></div>
+<div class="bib-entry"><span class="bib-text">Gödel, K. On Formally Undecidable Propositions (1931). Douglas Hofstadter, Gödel Escher Bach (1979) for the accessible treatment.</span> <a href="010-largenumbers.html" class="bib-tag">10</a></div>
+<div class="bib-entry"><span class="bib-text">Gödel, K. On Formally Undecidable Propositions of Principia Mathematica and Related Systems (1931). The original incompleteness proof.</span> <a href="020-penrose.html" class="bib-tag">20</a></div>
+<hr class="index-tag-rule"><div id="goff" class="index-tag-name">goff (4)</div>
+<div class="bib-entry"><span class="bib-text">Goff, P. Galileo's Error. Pantheon, 2019. Contemporary panpsychism; the philosophical framework that makes the cosmological speculation here coherent.</span> <a href="028-network.html" class="bib-tag">28</a></div>
+<div class="bib-entry"><span class="bib-text">Goff, P. Galileo's Error. Pantheon, 2019. Reconstructs panpsychism in contemporary analytic idiom; the rehabilitation of the animist intuition in respectable philosophical form.</span> <a href="027-usedtothink.html" class="bib-tag">27</a></div>
+<div class="bib-entry"><span class="bib-text">Goff, P. Galileo's Error. Pantheon, 2019. The clearest contemporary reconstruction of panpsychism in analytic idiom.</span> <a href="003-inside.html" class="bib-tag">3</a></div>
+<div class="bib-entry"><span class="bib-text">Goff, P., Seager, W., Allen-Hermanson, S. Panpsychism. Stanford Encyclopedia of Philosophy, 2022. Comprehensive overview of the philosophical landscape.</span> <a href="003-inside.html" class="bib-tag">3</a></div>
+<hr class="index-tag-rule"><div id="goffman" class="index-tag-name">goffman</div>
+<div class="bib-entry"><span class="bib-text">Goffman, Erving. *The Presentation of Self in Everyday Life*. Anchor Books, 1959. Social interaction as theatrical performance; identity as enacted rather than expressed.</span> <a href="023-stories.html" class="bib-tag">23</a></div>
+<hr class="index-tag-rule"><div id="hameroff" class="index-tag-name">hameroff</div>
+<div class="bib-entry"><span class="bib-text">Hameroff, S. and Penrose, R. Orchestrated Reduction of Quantum Coherence in Brain Microtubules. Mathematics and Computers in Simulation (1996). The physical proposal.</span> <a href="020-penrose.html" class="bib-tag">20</a></div>
+<hr class="index-tag-rule"><div id="hawking" class="index-tag-name">hawking</div>
+<div class="bib-entry"><span class="bib-text">Hawking, Stephen — black hole thermodynamics, boundary entropy.</span> <a href="031-surfaceinside.html" class="bib-tag">31</a></div>
+<hr class="index-tag-rule"><div id="hering" class="index-tag-name">hering</div>
+<div class="bib-entry"><span class="bib-text">Hering, Ewald — opponent process theory of color vision, 1892. The original proposal that color experience is organized around opposing pairs.</span> <a href="041-colorwheel.html" class="bib-tag">41</a></div>
+<hr class="index-tag-rule"><div id="hofstadter" class="index-tag-name">hofstadter (3)</div>
+<div class="bib-entry"><span class="bib-text">Hofstadter, D. Gödel, Escher, Bach (1979). Basic Books. The most accessible treatment of Gödel's theorem and its implications for self-reference and mind.</span> <a href="020-penrose.html" class="bib-tag">20</a></div>
+<div class="bib-entry"><span class="bib-text">Hofstadter, D. Gödel, Escher, Bach (1979). Strange loops, self-reference, and the structure of mind.</span> <a href="049-strangeloop.html" class="bib-tag">49</a></div>
+<div class="bib-entry"><span class="bib-text">Hofstadter, D. Gödel, Escher, Bach. Basic Books, 1979. Aunt Hillary and the ant colony; strange loops and emergent levels.</span> <a href="011-moreisdifferent.html" class="bib-tag">11</a></div>
+<hr class="index-tag-rule"><div id="hurvich" class="index-tag-name">hurvich</div>
+<div class="bib-entry"><span class="bib-text">Hurvich, L. and Jameson, D. An opponent-process theory of color vision (1957). Foundational account of opponent coding.</span> <a href="042-eyethinks.html" class="bib-tag">42</a></div>
+<hr class="index-tag-rule"><div id="johnson" class="index-tag-name">johnson</div>
+<div class="bib-entry"><span class="bib-text">Johnson, W. and Lindenstrauss, J. Extensions of Lipschitz maps (1984). The classical dimension-reduction lemma.</span> <a href="053-dimensions.html" class="bib-tag">53</a></div>
+<hr class="index-tag-rule"><div id="joule" class="index-tag-name">joule</div>
+<div class="bib-entry"><span class="bib-text">Joule, J.P. On the Mechanical Equivalent of Heat. Philosophical Transactions of the Royal Society, 1850. The experimental work that displaced caloric theory.</span> <a href="027-usedtothink.html" class="bib-tag">27</a></div>
+<hr class="index-tag-rule"><div id="kahneman" class="index-tag-name">kahneman</div>
+<div class="bib-entry"><span class="bib-text">Kahneman, Daniel. *Thinking, Fast and Slow*. Farrar, Straus and Giroux, 2011. System 1 as the automatic, story-generating mode of cognition; WYSIATI as the illusion of completeness.</span> <a href="023-stories.html" class="bib-tag">23</a></div>
+<hr class="index-tag-rule"><div id="kant" class="index-tag-name">kant</div>
+<div class="bib-entry"><span class="bib-text">Kant, I. Critique of Pure Reason. 1781. The foundational text on the thing-in-itself and the limits of human knowledge.</span> <a href="002-events.html" class="bib-tag">2</a></div>
+<hr class="index-tag-rule"><div id="katie" class="index-tag-name">katie</div>
+<div class="bib-entry"><span class="bib-text">Katie, Byron. *Loving What Is: Four Questions That Can Change Your Life*. Harmony Books, 2002. &quot;The Work&quot; as a method for questioning interpretive narratives.</span> <a href="023-stories.html" class="bib-tag">23</a></div>
+<hr class="index-tag-rule"><div id="kauffman" class="index-tag-name">kauffman (2)</div>
+<div class="bib-entry"><span class="bib-text">Kauffman, S. At Home in the Universe. Oxford University Press, 1995. More accessible version of the same ideas.</span> <a href="009-randomness.html" class="bib-tag">9</a></div>
+<div class="bib-entry"><span class="bib-text">Kauffman, S. The Origins of Order. Oxford University Press, 1993. Autocatalytic sets and order for free.</span> <a href="009-randomness.html" class="bib-tag">9</a></div>
+<hr class="index-tag-rule"><div id="kirkpatrick" class="index-tag-name">kirkpatrick</div>
+<div class="bib-entry"><span class="bib-text">Kirkpatrick, S., Gelatt, C.D., Vecchi, M.P. Optimization by Simulated Annealing. Science, 220(4598), 1983.</span> <a href="009-randomness.html" class="bib-tag">9</a></div>
+<hr class="index-tag-rule"><div id="koestler" class="index-tag-name">koestler (4)</div>
+<div class="bib-entry"><span class="bib-text">Koestler, A. The Act of Creation. Hutchinson, 1964. Bisociation as the common structure of humor, discovery, and art.</span> <a href="011-moreisdifferent.html" class="bib-tag">11</a></div>
+<div class="bib-entry"><span class="bib-text">Koestler, A. The Ghost in the Machine (1967). Holons and the hierarchy of whole/part.</span> <a href="037-assembly.html" class="bib-tag">37</a></div>
+<div class="bib-entry"><span class="bib-text">Koestler, A. The Ghost in the Machine (1967). What was lost when the ghost was expelled; holons and hierarchy.</span> <a href="024-ghostmachine.html" class="bib-tag">24</a></div>
+<div class="bib-entry"><span class="bib-text">Koestler, A. The Ghost in the Machine. Hutchinson, 1967. Holons and hierarchical organization. See also @link(024).</span> <a href="011-moreisdifferent.html" class="bib-tag">11</a></div>
+<hr class="index-tag-rule"><div id="kuhn" class="index-tag-name">kuhn (3)</div>
+<div class="bib-entry"><span class="bib-text">kuhn</span> <a href="023-stories.html" class="bib-tag">23</a></div>
+<div class="bib-entry"><span class="bib-text">Kuhn, T.S. The Structure of Scientific Revolutions (1962).</span> <a href="019-funerals.html" class="bib-tag">19</a></div>
+<div class="bib-entry"><span class="bib-text">Kuhn, T.S. The Structure of Scientific Revolutions. University of Chicago Press, 1962. The foundational text on paradigms and scientific revolutions.</span> <a href="027-usedtothink.html" class="bib-tag">27</a></div>
+<hr class="index-tag-rule"><div id="lakoff" class="index-tag-name">lakoff</div>
+<div class="bib-entry"><span class="bib-text">Lakoff, George, and Mark Johnson. *Metaphors We Live By*. University of Chicago Press, 1980. The foundational argument that conceptual thought is structured by metaphor.</span> <a href="023-stories.html" class="bib-tag">23</a></div>
+<hr class="index-tag-rule"><div id="laureys" class="index-tag-name">laureys</div>
+<div class="bib-entry"><span class="bib-text">Laureys, S. et al. Unresponsive wakefulness syndrome: a new name for the vegetative state or apallic syndrome. BMC Medicine, 2010.</span> <a href="022-locked.html" class="bib-tag">22</a></div>
+<hr class="index-tag-rule"><div id="lavoisier" class="index-tag-name">lavoisier</div>
+<div class="bib-entry"><span class="bib-text">Lavoisier, A. Elements of Chemistry. 1789. The work that formalized caloric theory — a reminder that the theory was scientifically serious.</span> <a href="027-usedtothink.html" class="bib-tag">27</a></div>
+<hr class="index-tag-rule"><div id="leibniz" class="index-tag-name">leibniz</div>
+<div class="bib-entry"><span class="bib-text">Leibniz, G.W. Monadology (1714). Maldacena, J. The large N limit of superconformal field theories (1998). AdS/CFT.</span> <a href="067-monads-holons.html" class="bib-tag">67</a></div>
+<hr class="index-tag-rule"><div id="mandelbrot" class="index-tag-name">mandelbrot (3)</div>
+<div class="bib-entry"><span class="bib-text">Mandelbrot, Benoit — fractal geometry, the boundary between order and chaos.</span> <a href="033-edge.html" class="bib-tag">33</a></div>
+<div class="bib-entry"><span class="bib-text">Mandelbrot, Benoit — infinite complexity from a single iterative rule.</span> <a href="034-onerule.html" class="bib-tag">34</a></div>
+<div class="bib-entry"><span class="bib-text">Mandelbrot, Benoît — The Fractal Geometry of Nature. Freeman, 1982. The boundary between convergence and escape as infinitely complex attractor.</span> <a href="038-consonance-map.html" class="bib-tag">38</a></div>
+<hr class="index-tag-rule"><div id="maturana" class="index-tag-name">maturana (5)</div>
+<div class="bib-entry"><span class="bib-text">Maturana, H. and Varela, F. Autopoiesis and Cognition (1980). The founding text.</span> <a href="012-autopoiesis.html" class="bib-tag">12</a></div>
+<div class="bib-entry"><span class="bib-text">Maturana, H. and Varela, F. Autopoiesis and Cognition. Reidel, 1980.</span> <a href="009-randomness.html" class="bib-tag">9</a></div>
+<div class="bib-entry"><span class="bib-text">Maturana, H. and Varela, F. Autopoiesis and Cognition. Reidel, 1980. The biological basis for the claim that living organization is qualitatively distinct — the phenomenon the vitalists were pointing at.</span> <a href="027-usedtothink.html" class="bib-tag">27</a></div>
+<div class="bib-entry"><span class="bib-text">Maturana, H. and Varela, F. The Tree of Knowledge (1987).</span> <a href="013-enactment.html" class="bib-tag">13</a></div>
+<div class="bib-entry"><span class="bib-text">Maturana, H. and Varela, F. The Tree of Knowledge (1987). More accessible; develops the cognitive implications.</span> <a href="012-autopoiesis.html" class="bib-tag">12</a></div>
+<hr class="index-tag-rule"><div id="maxwell" class="index-tag-name">maxwell</div>
+<div class="bib-entry"><span class="bib-text">Maxwell, J.C. A Treatise on Electricity and Magnetism. Oxford, 1873. The foundational text of classical electromagnetism.</span> <a href="008-fields.html" class="bib-tag">8</a></div>
+<hr class="index-tag-rule"><div id="mollon" class="index-tag-name">mollon</div>
+<div class="bib-entry"><span class="bib-text">Mollon, J.D. — the uses and origins of primate colour vision. Journal of Experimental Biology, 1989. The fruit and co-evolution hypothesis.</span> <a href="041-colorwheel.html" class="bib-tag">41</a></div>
+<hr class="index-tag-rule"><div id="nagel" class="index-tag-name">nagel</div>
+<div class="bib-entry"><span class="bib-text">Nagel, T. What Is It Like to Be a Bat? Philosophical Review, 1974. The classic paper establishing that subjective experience cannot be fully captured from an objective viewpoint.</span> <a href="003-inside.html" class="bib-tag">3</a></div>
+<hr class="index-tag-rule"><div id="newcomb" class="index-tag-name">newcomb</div>
+<div class="bib-entry"><span class="bib-text">Newcomb, Simon (1881) — noticed Benford's pattern fifty years earlier, ignored.</span> <a href="035-simplestnumbers.html" class="bib-tag">35</a></div>
+<hr class="index-tag-rule"><div id="olsson" class="index-tag-name">olsson</div>
+<div class="bib-entry"><span class="bib-text">Olsson, E. et al. Superposition, memorization, and double descent (2022). Or similar interpretability work on superposition.</span> <a href="057-superfarey.html" class="bib-tag">57</a></div>
+<hr class="index-tag-rule"><div id="penrose" class="index-tag-name">penrose (2)</div>
+<div class="bib-entry"><span class="bib-text">Penrose, R. Shadows of the Mind (1994). Oxford University Press. Extended and defended against objections.</span> <a href="020-penrose.html" class="bib-tag">20</a></div>
+<div class="bib-entry"><span class="bib-text">Penrose, R. The Emperor's New Mind (1989). Oxford University Press. The original argument.</span> <a href="020-penrose.html" class="bib-tag">20</a></div>
+<hr class="index-tag-rule"><div id="planck" class="index-tag-name">planck (2)</div>
+<div class="bib-entry"><span class="bib-text">Planck Collaboration. Planck 2018 results (2018). The CMB and the seeds of structure.</span> <a href="061-babyuniverse.html" class="bib-tag">61</a></div>
+<div class="bib-entry"><span class="bib-text">Planck, M. Scientific Autobiography (1949).</span> <a href="019-funerals.html" class="bib-tag">19</a></div>
+<hr class="index-tag-rule"><div id="prigogine" class="index-tag-name">prigogine (2)</div>
+<div class="bib-entry"><span class="bib-text">Prigogine, I. and Stengers, I. Order Out of Chaos (1984). Dissipative structures and the thermodynamics of living systems.</span> <a href="012-autopoiesis.html" class="bib-tag">12</a></div>
+<div class="bib-entry"><span class="bib-text">Prigogine, I. and Stengers, I. Order Out of Chaos. Bantam, 1984. Accessible account of dissipative structures and self-organization.</span> <a href="009-randomness.html" class="bib-tag">9</a></div>
+<hr class="index-tag-rule"><div id="pythagoras" class="index-tag-name">pythagoras (2)</div>
+<div class="bib-entry"><span class="bib-text">Pythagoras — consonance as simple integer ratios, discovered through string length experiments on the monochord.</span> <a href="038-consonance-map.html" class="bib-tag">38</a></div>
+<div class="bib-entry"><span class="bib-text">Pythagoras — consonance as simple integer ratios, now understood as stability under iteration.</span> <a href="033-edge.html" class="bib-tag">33</a></div>
+<hr class="index-tag-rule"><div id="rovelli" class="index-tag-name">rovelli (3)</div>
+<div class="bib-entry"><span class="bib-text">Rovelli, C. Reality Is Not What It Seems. Riverhead, 2017. A physicist's accessible account of the dissolution of the object in quantum gravity.</span> <a href="002-events.html" class="bib-tag">2</a></div>
+<div class="bib-entry"><span class="bib-text">Rovelli, C. Relational Quantum Mechanics. International Journal of Theoretical Physics, 1996. The original paper proposing that quantum states are relative to observers, not absolute.</span> <a href="002-events.html" class="bib-tag">2</a></div>
+<div class="bib-entry"><span class="bib-text">Rovelli, C. The Order of Time. Riverhead, 2018. On the dissolution of the thing-based picture of time; convergent with Whitehead from within physics.</span> <a href="002-events.html" class="bib-tag">2</a></div>
+<hr class="index-tag-rule"><div id="rukeyser" class="index-tag-name">rukeyser</div>
+<div class="bib-entry"><span class="bib-text">Rukeyser, Muriel. *The Speed of Darkness*. Random House, 1968.</span> <a href="023-stories.html" class="bib-tag">23</a></div>
+<hr class="index-tag-rule"><div id="ryle" class="index-tag-name">ryle (3)</div>
+<div class="bib-entry"><span class="bib-text">Ryle, G. The Concept of Mind (1949).</span> <a href="021-just.html" class="bib-tag">21</a></div>
+<div class="bib-entry"><span class="bib-text">Ryle, G. The Concept of Mind (1949). The ghost-in-the-machine diagnosis and category mistakes.</span> <a href="024-ghostmachine.html" class="bib-tag">24</a></div>
+<div class="bib-entry"><span class="bib-text">Ryle, G. The Concept of Mind. Hutchinson, 1949. Source of the category mistake.</span> <a href="022-locked.html" class="bib-tag">22</a></div>
+<hr class="index-tag-rule"><div id="sagan" class="index-tag-name">sagan</div>
+<div class="bib-entry"><span class="bib-text">Sagan, Carl — 'we are a way for the cosmos to know itself' — the surface version of this idea.</span> <a href="036-universenoticing.html" class="bib-tag">36</a></div>
+<hr class="index-tag-rule"><div id="schnabel" class="index-tag-name">schnabel</div>
+<div class="bib-entry"><span class="bib-text">Schnabel, J. (dir.) The Diving Bell and the Butterfly. Film, 2007.</span> <a href="022-locked.html" class="bib-tag">22</a></div>
+<hr class="index-tag-rule"><div id="schrdinger" class="index-tag-name">schrdinger</div>
+<div class="bib-entry"><span class="bib-text">Schrödinger, E. What is Life? (1944). The thermodynamic framing that set the question.</span> <a href="012-autopoiesis.html" class="bib-tag">12</a></div>
+<hr class="index-tag-rule"><div id="shechtman" class="index-tag-name">shechtman</div>
+<div class="bib-entry"><span class="bib-text">Shechtman, D. et al. Metallic phase with long-range order (1984). Quasicrystals. Penrose, R. Pentaplexity (1974). Tilings.</span> <a href="063-mandelcrystals.html" class="bib-tag">63</a></div>
+<hr class="index-tag-rule"><div id="stern-brocot" class="index-tag-name">stern-brocot</div>
+<div class="bib-entry"><span class="bib-text">Stern-Brocot tree — the complete ordered tree of rational numbers, mediating consonance and bulb structure.</span> <a href="033-edge.html" class="bib-tag">33</a></div>
+<hr class="index-tag-rule"><div id="susskind" class="index-tag-name">susskind (2)</div>
+<div class="bib-entry"><span class="bib-text">Susskind, L. The World as a Hologram (1995). 't Hooft, G. Dimensional reduction in quantum gravity (1993).</span> <a href="068-bubbles.html" class="bib-tag">68</a></div>
+<div class="bib-entry"><span class="bib-text">Susskind, L. The World as a Hologram (1995). Van Raamsdonk, M. Building up spacetime with quantum entanglement (2010).</span> <a href="051-spacetime.html" class="bib-tag">51</a></div>
+<hr class="index-tag-rule"><div id="teilhard" class="index-tag-name">teilhard (3)</div>
+<div class="bib-entry"><span class="bib-text">Teilhard de Chardin, P. The Phenomenon of Man (1955). Cosmic evolution and the Omega Point.</span> <a href="059-galaxyevolve.html" class="bib-tag">59</a></div>
+<div class="bib-entry"><span class="bib-text">Teilhard de Chardin, Pierre — Omega Point, noosphere, cosmic evolution toward consciousness.</span> <a href="032-skyfossil.html" class="bib-tag">32</a></div>
+<div class="bib-entry"><span class="bib-text">Teilhard de Chardin, Pierre — The Phenomenon of Man, the Omega Point, the noosphere.</span> <a href="036-universenoticing.html" class="bib-tag">36</a></div>
+<hr class="index-tag-rule"><div id="thompson" class="index-tag-name">thompson (3)</div>
+<div class="bib-entry"><span class="bib-text">Thompson, E. Mind in Life (2007).</span> <a href="013-enactment.html" class="bib-tag">13</a></div>
+<div class="bib-entry"><span class="bib-text">Thompson, E. Mind in Life (2007). The full development of enactivism; essential bridge to consciousness.</span> <a href="012-autopoiesis.html" class="bib-tag">12</a></div>
+<div class="bib-entry"><span class="bib-text">Thompson, E. Mind in Life. Biological processes and their expressive surfaces.</span> <a href="006-output.html" class="bib-tag">6</a></div>
+<hr class="index-tag-rule"><div id="turing" class="index-tag-name">turing</div>
+<div class="bib-entry"><span class="bib-text">Turing, A. Computing Machinery and Intelligence (1950). Short, readable, still radical.</span> <a href="006-output.html" class="bib-tag">6</a></div>
+<hr class="index-tag-rule"><div id="varela" class="index-tag-name">varela</div>
+<div class="bib-entry"><span class="bib-text">Varela, F., Thompson, E., Rosch, E. The Embodied Mind (1991). Extends autopoiesis into cognitive science and phenomenology.</span> <a href="012-autopoiesis.html" class="bib-tag">12</a></div>
+<hr class="index-tag-rule"><div id="vyse" class="index-tag-name">vyse</div>
+<div class="bib-entry"><span class="bib-text">Vyse, S. The Telepathy Tapes: A Skeptical Analysis. Skeptical Inquirer, 2025.</span> <a href="022-locked.html" class="bib-tag">22</a></div>
+<hr class="index-tag-rule"><div id="walker" class="index-tag-name">walker</div>
+<div class="bib-entry"><span class="bib-text">Walker, S.I. et al. Assembly theory (Nature 2023). Assembly index and the signature of life.</span> <a href="037-assembly.html" class="bib-tag">37</a></div>
+<hr class="index-tag-rule"><div id="wheeler" class="index-tag-name">wheeler</div>
+<div class="bib-entry"><span class="bib-text">Wheeler, John — one-electron universe, proposed by Feynman, entertained seriously; and 'it from bit': the universe as information processing.</span> <a href="034-onerule.html" class="bib-tag">34</a></div>
+<hr class="index-tag-rule"><div id="whitehead" class="index-tag-name">whitehead (27)</div>
+<div class="bib-entry"><span class="bib-text">Whitehead, A.N. Adventures of Ideas. Macmillan, 1933. More accessible; Part III is directly relevant.</span> <a href="003-inside.html" class="bib-tag">3</a></div>
+<div class="bib-entry"><span class="bib-text">Whitehead, A.N. Process and Reality (1929).</span> <a href="021-just.html" class="bib-tag">21</a></div>
+<div class="bib-entry"><span class="bib-text">Whitehead, A.N. Process and Reality (1929). Actual occasions and the three-phase process of becoming.</span> <a href="016-neuralnetwork.html" class="bib-tag">16</a></div>
+<div class="bib-entry"><span class="bib-text">Whitehead, A.N. Process and Reality (1929). Creative advance. Teilhard de Chardin, P. The Phenomenon of Man (1955). Cosmic direction.</span> <a href="058-galacticnets.html" class="bib-tag">58</a></div>
+<div class="bib-entry"><span class="bib-text">Whitehead, A.N. Process and Reality (1929). Eternal objects and prehension as the structure of possibility and connection.</span> <a href="007-vacuum.html" class="bib-tag">7</a></div>
+<div class="bib-entry"><span class="bib-text">Whitehead, A.N. Process and Reality (1929). Experience as the interior dimension of process, not a separate substance.</span> <a href="024-ghostmachine.html" class="bib-tag">24</a></div>
+<div class="bib-entry"><span class="bib-text">Whitehead, A.N. Process and Reality (1929). God as ground of possibility and lure. Teilhard de Chardin, P. The Phenomenon of Man (1955). Omega Point.</span> <a href="066-cosmicattractor.html" class="bib-tag">66</a></div>
+<div class="bib-entry"><span class="bib-text">Whitehead, A.N. Process and Reality (1929). Occasions and societies. Quantum field theory: e.g. Peskin &amp; Schroeder (1995).</span> <a href="052-dichotomy.html" class="bib-tag">52</a></div>
+<div class="bib-entry"><span class="bib-text">Whitehead, A.N. Process and Reality (1929). Part I for the metaphysical framing.</span> <a href="006-output.html" class="bib-tag">6</a></div>
+<div class="bib-entry"><span class="bib-text">Whitehead, A.N. Process and Reality (1929). Prehension and the interiority of occasions. Teilhard de Chardin, P. The Phenomenon of Man (1955). The within of things.</span> <a href="050-orthogonal.html" class="bib-tag">50</a></div>
+<div class="bib-entry"><span class="bib-text">Whitehead, A.N. Process and Reality (1929). See especially Part II on 'contrast' as a category of existence.</span> <a href="026-twotruths.html" class="bib-tag">26</a></div>
+<div class="bib-entry"><span class="bib-text">Whitehead, A.N. Process and Reality (1929). Societies and the scaling of experience to collective entities.</span> <a href="014-cities.html" class="bib-tag">14</a></div>
+<div class="bib-entry"><span class="bib-text">Whitehead, A.N. Process and Reality (1929). Source for the creative advance and the universality of self-determination.</span> <a href="005-freewill.html" class="bib-tag">5</a></div>
+<div class="bib-entry"><span class="bib-text">Whitehead, A.N. Process and Reality (1929). The definitive statement of process metaphysics and the society-of-occasions view of the self.</span> <a href="004-self.html" class="bib-tag">4</a></div>
+<div class="bib-entry"><span class="bib-text">Whitehead, A.N. Process and Reality (1929). The metaphysical framework; society of occasions as the counterpart of autopoietic organization.</span> <a href="012-autopoiesis.html" class="bib-tag">12</a></div>
+<div class="bib-entry"><span class="bib-text">Whitehead, A.N. Process and Reality (1929). The past as objectively immortal and fully ingredient in the present.</span> <a href="017-pastpresent.html" class="bib-tag">17</a></div>
+<div class="bib-entry"><span class="bib-text">Whitehead, A.N. Process and Reality. Macmillan, 1929.</span> <a href="009-randomness.html" class="bib-tag">9</a> <a href="028-network.html" class="bib-tag">28</a></div>
+<div class="bib-entry"><span class="bib-text">Whitehead, A.N. Process and Reality. Macmillan, 1929. Societies of actual occasions as the basis of enduring entities.</span> <a href="011-moreisdifferent.html" class="bib-tag">11</a></div>
+<div class="bib-entry"><span class="bib-text">Whitehead, A.N. Process and Reality. Macmillan, 1929. The primary philosophical text. See especially Part III on prehension.</span> <a href="008-fields.html" class="bib-tag">8</a></div>
+<div class="bib-entry"><span class="bib-text">Whitehead, A.N. Process and Reality. Macmillan, 1929. The primary source for the claim that experience is constitutive of reality at every scale.</span> <a href="027-usedtothink.html" class="bib-tag">27</a></div>
+<div class="bib-entry"><span class="bib-text">Whitehead, A.N. Process and Reality. Macmillan, 1929. The primary text. Dense but foundational.</span> <a href="003-inside.html" class="bib-tag">3</a></div>
+<div class="bib-entry"><span class="bib-text">Whitehead, A.N. Process and Reality. Macmillan, 1929. The primary text. Part I develops the fallacy of misplaced concreteness; Part II develops the doctrine of actual occasions.</span> <a href="002-events.html" class="bib-tag">2</a></div>
+<div class="bib-entry"><span class="bib-text">Whitehead, A.N. Science and the Modern World. Macmillan, 1925. More accessible introduction to the critique of substance-based thinking.</span> <a href="002-events.html" class="bib-tag">2</a></div>
+<div class="bib-entry"><span class="bib-text">Whitehead, A.N. — 'the within of things,' prehension as interiority at every scale.</span> <a href="031-surfaceinside.html" class="bib-tag">31</a></div>
+<div class="bib-entry"><span class="bib-text">Whitehead, A.N. — creative advance into novelty as fundamental character of reality.</span> <a href="032-skyfossil.html" class="bib-tag">32</a></div>
+<div class="bib-entry"><span class="bib-text">Whitehead, A.N. — each actual occasion grasping the previous and generating the next.</span> <a href="034-onerule.html" class="bib-tag">34</a></div>
+<div class="bib-entry"><span class="bib-text">Whitehead, A.N. — Process and Reality, prehension, the creative advance into novelty.</span> <a href="036-universenoticing.html" class="bib-tag">36</a></div>
+<hr class="index-tag-rule"><div id="wittgenstein" class="index-tag-name">wittgenstein</div>
+<div class="bib-entry"><span class="bib-text">Wittgenstein, L. Philosophical Investigations. Blackwell, 1953. §47 on the simple parts of a chair; §66–67 on family resemblance.</span> <a href="002-events.html" class="bib-tag">2</a></div>
+<hr class="index-tag-rule"><div id="wolfram" class="index-tag-name">wolfram</div>
+<div class="bib-entry"><span class="bib-text">Wolfram, Stephen — A New Kind of Science: simple rules generating irreducible complexity.</span> <a href="034-onerule.html" class="bib-tag">34</a></div>
+</div></div>
+<div class="page-end" id="page-end-version" data-page-version="1">
+  <button class="page-end-logo" aria-label="Show page info"
+    onmouseenter="typeof seedNavShowVersion==='function'&&seedNavShowVersion(true)"
+    onmouseleave="typeof seedNavShowVersion==='function'&&seedNavShowVersion(false)"
+    ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
+    <img src="logo.svg" alt="" width="32" height="32">
+  </button>
+  <span class="page-end-version" aria-hidden="true">Rev 1 · 2026-04-03 · 11:18</span>
+</div>
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SeedPods</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;600&family=DM+Mono:wght@300;400&display=swap">
+<link rel="icon" href="logo.svg">
+<link rel="stylesheet" href="site.css">
+<script>
+window.__pods__={"000":"000-map","001":"001-caloric","002":"002-events","003":"003-inside","004":"004-self","005":"005-freewill","006":"006-output","007":"007-vacuum","008":"008-fields","009":"009-randomness","010":"010-largenumbers","011":"011-moreisdifferent","012":"012-autopoiesis","013":"013-enactment","014":"014-cities","015":"015-aliens","016":"016-neuralnetwork","017":"017-pastpresent","018":"018-magnetization","019":"019-funerals","020":"020-penrose","021":"021-just","022":"022-locked","023":"023-stories","024":"024-ghostmachine","025":"025-widechannel","026":"026-twotruths","027":"027-usedtothink","028":"028-network","029":"029-lighttime","030":"030-interference","031":"031-surfaceinside","032":"032-skyfossil","033":"033-edge","034":"034-onerule","035":"035-simplestnumbers","036":"036-universenoticing","037":"037-assembly","038":"038-consonance-map","040":"040-stability","041":"041-colorwheel","042":"042-eyethinks","044":"044-ai-retina","045":"045-baldwin","046":"046-thinkfast","047":"047-ai-feeling","048":"048-flashes","049":"049-strangeloop","050":"050-orthogonal","051":"051-spacetime","052":"052-dichotomy","053":"053-dimensions","054":"054-bornharmonic","056":"056-mandelneural","057":"057-superfarey","058":"058-galacticnets","059":"059-galaxyevolve","060":"060-worldtests","061":"061-babyuniverse","062":"062-branchingdice","063":"063-mandelcrystals","064":"064-choicedimension","065":"065-feel-do","066":"066-cosmicattractor","067":"067-monads-holons","068":"068-bubbles","069":"069-love","070":"070-harmony","071":"071-beauty","072":"072-temperature","073":"073-moral-caution","074":"074-grasshopper","075":"075-gossamer","076":"076-fivewindows"};
+window._seedNavSearchIndex=null;
+window._seedNavSearchIndexPromise=null;
+function _seedNavLoadIndex(){if(window._seedNavSearchIndex)return Promise.resolve(window._seedNavSearchIndex);if(!window._seedNavSearchIndexPromise){window._seedNavSearchIndexPromise=fetch('search-index.json').then(function(r){return r.json();}).then(function(d){window._seedNavSearchIndex=d;return d;});}return window._seedNavSearchIndexPromise;}
+function seedNavGo(){
+  var inp=document.getElementById('nav-goto-num');
+  if(!inp)return;
+  var v=inp.value.trim().replace(/^0+/,'');
+  if(!v)return;
+  var pad=v.padStart(3,'0');
+  var fn=window.__pods__[pad]||window.__pods__[v];
+  if(!fn){var k=Object.keys(window.__pods__).find(function(k){return parseInt(k,10)===parseInt(v,10)});if(k)fn=window.__pods__[k];}
+  if(fn)window.location.href=fn+'.html';
+}
+window.seedNavOpenSearch=function(){var n=document.querySelector("nav");if(n&&n.classList.contains("nav-hamburger-open"))window.seedNavToggleMenu();var d=document.getElementById("search-dialog");var i=document.getElementById("search-dialog-input");if(d)d.removeAttribute("hidden");if(i){i.value="";i.focus();}_seedNavLoadIndex();window.seedNavRunSearch("");};
+window.seedNavCloseSearch=function(){var d=document.getElementById("search-dialog");if(d)d.setAttribute("hidden","");};
+window._seedNavSnippet=function(content,q){if(!content||!q)return"";var c=content.toLowerCase();var i=c.indexOf(q);if(i<0)return"";var len=100;var start=Math.max(0,i-len);var end=Math.min(content.length,i+q.length+len);var s=content.substring(start,end).replace(/\s+/g," ").trim();if(start>0)s="\u2026 "+s;if(end<content.length)s=s+" \u2026";return s;};
+window.seedNavRunSearch=function(q){
+  q=(q||"").toLowerCase().trim();
+  var el=document.getElementById("search-dialog-results");
+  var countEl=document.getElementById("search-dialog-count");
+  if(!el)return;
+  if(!q){el.innerHTML="";if(countEl)countEl.textContent="";return;}
+  _seedNavLoadIndex().then(function(index){
+    var nm=[],cm=[];
+    for(var j=0;j<index.length;j++){var it=index[j];if((it.title||"").toLowerCase().indexOf(q)>=0)nm.push(it);else if((it.content||"").toLowerCase().indexOf(q)>=0)cm.push(it);}
+    var slugs={};
+    nm.forEach(function(it){slugs[it.slug]=1;});cm.forEach(function(it){slugs[it.slug]=1;});
+    var n=Object.keys(slugs).length;
+    if(countEl)countEl.textContent=n===1?"1 found":n+" found";
+    var h="";
+    if(nm.length){h+='<div class="search-section"><div class="search-section-title">Name</div><ul class="search-result-list">';nm.forEach(function(it){var d=document.createElement("div");d.textContent=it.num+". "+it.title;h+='<li><a href="'+it.slug+'.html">'+d.innerHTML+'</a></li>';});h+="</ul></div>";}
+    if(cm.length){h+='<div class="search-section"><div class="search-section-title">Content</div><ul class="search-result-list">';cm.forEach(function(it){var titleDiv=document.createElement("div");titleDiv.textContent=it.num+". "+it.title;var snip=window._seedNavSnippet(it.content,q);var snipDiv=document.createElement("div");snipDiv.textContent=snip;h+='<li><a href="'+it.slug+'.html">'+titleDiv.innerHTML+'<br><span class="search-result-snippet">'+snipDiv.innerHTML+'</span></a></li>';});h+="</ul></div>";}
+    if(!h&&q)h='<p class="search-no-results">No pods match.</p>';
+    el.innerHTML=h;
+  });
+};
+window.seedNavToggleMenu=function(){var n=document.querySelector("nav");var b=document.querySelector(".nav-hamburger-btn");var p=document.getElementById("nav-hamburger-panel");if(!n||!b)return;var open=n.classList.contains("nav-hamburger-open");n.classList.toggle("nav-hamburger-open",!open);b.setAttribute("aria-expanded",!open?"true":"false");if(p)p.style.display=open?"none":"flex";};
+window.seedNavShowVersion=function(show){var el=document.querySelector(".page-end-version");if(el)el.classList.toggle("page-end-version-visible",!!show);};
+window.seedNavToggleVersion=function(){var el=document.querySelector(".page-end-version");if(el)el.classList.toggle("page-end-version-visible");};
+document.addEventListener("keydown",function(e){if(e.key==="Escape"){var n=document.querySelector("nav");if(n&&n.classList.contains("nav-hamburger-open"))window.seedNavToggleMenu();else window.seedNavCloseSearch();}});
+document.addEventListener("DOMContentLoaded",function(){var p=document.getElementById("nav-hamburger-panel");if(p){p.style.display="none";var list=p.querySelector(".nav-hamburger-list");if(list)list.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){if(document.querySelector("nav").classList.contains("nav-hamburger-open"))window.seedNavToggleMenu();});});}});
+</script>
+</head>
+<body>
+<nav style="position:sticky;top:0;z-index:100;">
+<div class="nav-row">
+<div class="nav-brand">
+<a href="index.html" class="nav-logo">
+<img src="logo.svg" alt="" class="nav-logo-icon">
+<span class="nav-logo-text">Gossamer</span>
+</a>
+</div>
+<div class="nav-center"><ul class="nav-links nav-links-center">
+  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search pods" onclick="seedNavOpenSearch();return false">Search</button></li>
+  <li class="nav-goto-wrap">
+    <label for="nav-goto-num" class="sr-only">Goto pod</label>
+    <input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}">
+    <button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button>
+  </li>
+</ul></div>
+<div class="nav-end"><ul class="nav-links nav-links-end">
+  <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
+            <li class="nav-link-item nav-item-dropdown nav-lists-dropdown">
+            <a href="list.html" class="nav-btn">Lists</a>
+            <button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-label="Lists menu"></button>
+            <ul class="nav-dropdown">
+              <li><a href="list.html">All the Seeds</a></li>
+              <li><a href="bibliography.html">Bibliography</a></li>
+              <li><a href="glossary.html">Glossary</a></li>
+              <li><a href="map.html">Map</a></li>
+              <li><a href="more.html">More</a></li>
+            </ul>
+          </li>
+</ul><button type="button" class="nav-hamburger-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav-hamburger-panel" onclick="seedNavToggleMenu();return false">&#9776;</button></div>
+</div>
+
+<div class="nav-hamburger-panel" id="nav-hamburger-panel" role="menu" aria-hidden="true">
+  <div class="nav-hamburger-overlay" onclick="seedNavToggleMenu()"></div>
+  <div class="nav-hamburger-inner">
+    <ul class="nav-hamburger-list">
+      <li><a href="about.html">About</a></li>
+      <li><a href="list.html">All the Seeds</a></li>
+              <li><a href="bibliography.html">Bibliography</a></li>
+              <li><a href="glossary.html">Glossary</a></li>
+              <li><a href="map.html">Map</a></li>
+              <li><a href="more.html">More</a></li>
+    </ul>
+  </div>
+</div>
+</nav>
+<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search pods" hidden>
+  <div class="search-dialog-overlay" onclick="seedNavCloseSearch()"></div>
+  <div class="search-dialog-inner">
+    <div class="search-dialog-header">
+      <input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)">
+      <button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button>
+    </div>
+    <div id="search-dialog-count" class="search-dialog-count"></div>
+    <div id="search-dialog-results" class="search-dialog-results"></div>
+  </div>
+</div>
+<div class="wrap"><div class="page-body home-page fade"><h3>Working archive — not for public consumption</h3>
+<h1>SeedPods</h1>
+<h2>Small ideas that change how you see.</h2>
+<p>SeedPods is a collection of ideas that many of us will find surprising. This collection is alive, ever changing, incomplete, and growing. It is also the flagship content for the Gossamer app.</p>
+<p>Each pod is elaborated in several ways — a simple surface of the idea, a deep dive into it, references to works that go even further, a dramatic exposition, and images (or for now, ideas for images).</p>
+<p>The pods are organized into seven color-coded categories below. Click on any category to see its pods. You can find an overview of them all here: <a href="000-map.html">A Map of the Territory</a>.</p>
+<div class="index-by-tag seed-categories">
+<div class="map-row-btns categories-toggle-btns"><span class="map-row-btn categories-count">74 pods</span><button type="button" class="map-row-btn" onclick="this.closest('.seed-categories').querySelectorAll('details').forEach(function(d){d.open=true})">open all</button><button type="button" class="map-row-btn" onclick="this.closest('.seed-categories').querySelectorAll('details').forEach(function(d){d.open=false})">close all</button></div>
+  <details id="AI-minds" class="category-group">
+    <summary class="index-tag-name cat-colored cat-ai-minds"><span class="cat-toggle-icon" aria-hidden="true"></span>AI minds</summary>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/015-aliens.jpg" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="015-aliens.html">15. Aliens Are Among Us — and We Built Them</a><br><span class="repo-subtitle">The surprise is not that they arrived. The surprise is where they came from.</span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/016-neuralnetwork.jpg" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="016-neuralnetwork.html">16. The Network Is a Field Having Occasions</a><br><span class="repo-subtitle">A neural network is not analogous to Whitehead's picture. It is a concrete instance of it.</span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/017-pastpresent.jpg" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="017-pastpresent.html">17. The Past Is Fully Present</a><br><span class="repo-subtitle">In a transformer network, time is almost geometric — the entire context simultaneously available, not receding.</span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/025-widechannel.jpg" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="025-widechannel.html">25. We Don't Know Who or What We're Talking To</a><br><span class="repo-subtitle">A fluent output is evidence of something — but not evidence of what.</span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/046-thinkfast.png" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="046-thinkfast.html">46. Thought as Evolution in Milliseconds</a><br><span class="repo-subtitle"></span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/056-mandelneural.jpg" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="056-mandelneural.html">56. Neural Networks as High-Dimensional Mandelbrot Sets</a><br><span class="repo-subtitle"></span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/057-superfarey.jpg" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="057-superfarey.html">57. Superposition in Neural Network Representations</a><br><span class="repo-subtitle"></span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/058-galacticnets.jpg" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="058-galacticnets.html">58. Galaxies and AI Weight Matrices as Structural Homologs</a><br><span class="repo-subtitle"></span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/073-moral-caution.jpg" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="073-moral-caution.html">73. What We Cannot Know Is Not What We May Ignore</a><br><span class="repo-subtitle"></span></div></div>
+  </details>
+  <details id="biology" class="category-group">
+    <summary class="index-tag-name cat-colored cat-biology"><span class="cat-toggle-icon" aria-hidden="true"></span>biology</summary>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/009-randomness.jpg" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="009-randomness.html">9. Structure Is What Randomness Does</a><br><span class="repo-subtitle">Galaxies, cells, brains — all tracing back to a random fluctuation in a nearly uniform early universe.</span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/012-autopoiesis.jpg" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="012-autopoiesis.html">12. The Cell That Makes Itself</a><br><span class="repo-subtitle">Life is defined not by what it's made of, but by the circular process that keeps making it.</span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/013-enactment.jpg" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="013-enactment.html">13. The Organism Enacts Its World</a><br><span class="repo-subtitle">Cognition is not passive reception. The organism and its environment co-arise.</span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/014-cities.jpg" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="014-cities.html">14. Cities Have an Inside Too</a><br><span class="repo-subtitle">The society of events that constitutes an experiencing entity need not be biological.</span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/045-baldwin.png" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="045-baldwin.html">45. How Learning Becomes Hardwired: The Baldwin Effect</a><br><span class="repo-subtitle"></span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/068-bubbles.jpg" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="068-bubbles.html">68. The Soap Bubble as Recognition, Not Metaphor</a><br><span class="repo-subtitle"></span></div></div>
+  </details>
+  <details id="consciousness" class="category-group">
+    <summary class="index-tag-name cat-colored cat-consciousness"><span class="cat-toggle-icon" aria-hidden="true"></span>consciousness</summary>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/003-inside.jpg" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="003-inside.html">3. Everything Has an Inside</a><br><span class="repo-subtitle">Not just brains. Not just animals. Experience may go all the way down.</span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/004-self.jpg" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="004-self.html">4. The Self Is a Pattern, Not a Thing</a><br><span class="repo-subtitle">The mystic's insight and the philosopher's proof arrive at the same place.</span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/005-freewill.jpg" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="005-freewill.html">5. Freedom Is What Nature Does Everywhere</a><br><span class="repo-subtitle">Free will is not the exception to physics. It is physics, at its most complex and self-aware.</span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/006-output.jpg" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="006-output.html">6. You Can't Judge a Process by Its Output</a><br><span class="repo-subtitle">A thermostat predicts. Mozart predicted. The simplicity of the output tells you nothing.</span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/011-moreisdifferent.jpg" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="011-moreisdifferent.html">11. More Is Different</a><br><span class="repo-subtitle">Nothing was added. The numbers just got large enough.</span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/020-penrose.jpg" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="020-penrose.html">20. The Arrow Points Somewhere Else</a><br><span class="repo-subtitle">Penrose was right that Gödel matters. He was wrong about where the arrow points.</span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/022-locked.png" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="022-locked.html">22. The Channel Is Not the Capacity</a><br><span class="repo-subtitle">We mistook the difficulty of output for the absence of inner life.</span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/023-stories.jpg" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="023-stories.html">23. Reality Is Made of Stories, Not Atoms</a><br><span class="repo-subtitle">The story we agree upon becomes the world we live in.</span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/024-ghostmachine.jpg" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="024-ghostmachine.html">24. Ghost in the Machine</a><br><span class="repo-subtitle">TBD</span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/028-network.jpg" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="028-network.html">28. The Network That Experiences Itself</a><br><span class="repo-subtitle">Stars and galaxies are not isolated objects. From inside a light beam, there is no distance between them at all.</span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/036-universenoticing.jpg" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="036-universenoticing.html">36. You Are the Universe Noticing Something</a><br><span class="repo-subtitle">Teilhard and Whitehead</span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/047-ai-feeling.png" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="047-ai-feeling.html">47. The Distinction Between Feeling and Functioning May Evaporate</a><br><span class="repo-subtitle"></span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/048-flashes.png" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="048-flashes.html">48. Consciousness Comes in Flashes — For All of Us</a><br><span class="repo-subtitle"></span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/049-strangeloop.jpg" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="049-strangeloop.html">49. The Strange Loop That Contains Itself</a><br><span class="repo-subtitle"></span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/050-orthogonal.png" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="050-orthogonal.html">50. Consciousness as a Dimension Orthogonal to Spacetime</a><br><span class="repo-subtitle"></span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/065-feel-do.jpg" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="065-feel-do.html">65. The Feeling/Function Distinction Will Dissolve</a><br><span class="repo-subtitle"></span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/066-cosmicattractor.png" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="066-cosmicattractor.html">66. Whitehead's God as Initial Condition and Attractor</a><br><span class="repo-subtitle"></span></div></div>
+  </details>
+  <details id="knowledge" class="category-group">
+    <summary class="index-tag-name cat-colored cat-knowledge"><span class="cat-toggle-icon" aria-hidden="true"></span>knowledge</summary>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/000-map.jpg" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="000-map.html">0. A Map of the Territory</a><br><span class="repo-subtitle">Seven categories, arbitrarily drawn — and why that's fine.</span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/001-caloric.jpg" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="001-caloric.html">1. The Map That Was Wrong</a><br><span class="repo-subtitle">Every era has a framework so obvious it's invisible — until it isn't.</span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/010-largenumbers.jpg" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="010-largenumbers.html">10. Our Intuitions About Large Numbers Are Completely Unreliable</a><br><span class="repo-subtitle">The number Gödel constructed was just a number — arrived at by routine steps. And it broke the system.</span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/018-magnetization.jpg" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="018-magnetization.html">18. Ideas Magnetize Through a Group Like Iron</a><br><span class="repo-subtitle">Only a seed group of influencers is necessary. Then the field does the rest.</span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/019-funerals.jpg" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="019-funerals.html">19. Science Advances One Funeral at a Time</a><br><span class="repo-subtitle">The map doesn't get replaced. The people holding the old map get replaced.</span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/021-just.jpg" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="021-just.html">21. The Word &quot;Just&quot; Is a Confession</a><br><span class="repo-subtitle">When someone says a process is &quot;just&quot; doing something, they've described the output and mistaken it for an explanation.</span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/026-twotruths.jpg" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="026-twotruths.html">26. Two Things Can Be True at Once</a><br><span class="repo-subtitle">Contradiction is often the sign of a framework too small for the reality it's trying to hold.</span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/027-usedtothink.jpg" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="027-usedtothink.html">27. We Used to Think. Now We Know.</a><br><span class="repo-subtitle">The phrase that flatters the present and buries the past — and will be used against us.</span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb seed-row-thumb--empty"></div><div class="index-entry-body"><a href="074-grasshopper.html">74. The Grasshopper Was Right</a><br><span class="repo-subtitle">The fable taught us that play is what you do instead of working. It was wrong.</span></div></div>
+  </details>
+  <details id="mathematics" class="category-group">
+    <summary class="index-tag-name cat-colored cat-mathematics"><span class="cat-toggle-icon" aria-hidden="true"></span>mathematics</summary>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/034-onerule.png" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="034-onerule.html">34. One Rule Is Enough</a><br><span class="repo-subtitle">The Single Iterating Point</span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/037-assembly.jpg" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="037-assembly.html">37. The Architecture of Levels</a><br><span class="repo-subtitle">TBD</span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/040-stability.png" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="040-stability.html">40. Two Opposite Kinds of Stability</a><br><span class="repo-subtitle"></span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/052-dichotomy.png" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="052-dichotomy.html">52. Discrete and Continuous as a False Dichotomy</a><br><span class="repo-subtitle"></span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/053-dimensions.jpg" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="053-dimensions.html">53. The Virtual Dimensions Formula as a Publishable Conjecture</a><br><span class="repo-subtitle"></span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/062-branchingdice.jpg" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="062-branchingdice.html">62. Branching Numbers as Finite Dice</a><br><span class="repo-subtitle"></span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/063-mandelcrystals.jpg" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="063-mandelcrystals.html">63. Mandelbrot Structure in Physical Crystals</a><br><span class="repo-subtitle"></span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/064-choicedimension.jpg" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="064-choicedimension.html">64. The Choice Dimension as Tree Algebra</a><br><span class="repo-subtitle"></span></div></div>
+  </details>
+  <details id="physics" class="category-group">
+    <summary class="index-tag-name cat-colored cat-physics"><span class="cat-toggle-icon" aria-hidden="true"></span>physics</summary>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/002-events.png" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="002-events.html">2. Reality Is Events, Not Things</a><br><span class="repo-subtitle">The particle is the abstraction. The event is what's actually there.</span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/007-vacuum.jpg" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="007-vacuum.html">7. The Vacuum Is Not Empty</a><br><span class="repo-subtitle">The quantum field seethes with potential. The event is what the field does.</span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/029-lighttime.jpg" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="029-lighttime.html">29. From Light's Point of View, There Is No Journey</a><br><span class="repo-subtitle">A photon leaves a star and arrives at your eye. From the photon's perspective, these are the same moment.</span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/031-surfaceinside.jpg" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="031-surfaceinside.html">31. The Surface Is the Inside</a><br><span class="repo-subtitle">The Bubble</span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/032-skyfossil.jpg" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="032-skyfossil.html">32. The Sky Is a Fossil Record</a><br><span class="repo-subtitle">Fossils of Primal Evolution</span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/051-spacetime.png" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="051-spacetime.html">51. Spacetime as Emergent from Information Structure</a><br><span class="repo-subtitle"></span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/054-bornharmonic.jpg" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="054-bornharmonic.html">54. The Born Rule as Harmonic Measure</a><br><span class="repo-subtitle"></span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/059-galaxyevolve.png" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="059-galaxyevolve.html">59. Each Galaxy as a Thread of Cosmic Evolution</a><br><span class="repo-subtitle"></span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/060-worldtests.png" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="060-worldtests.html">60. Many Worlds as Parallel Evolutionary Experiments</a><br><span class="repo-subtitle"></span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/061-babyuniverse.png" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="061-babyuniverse.html">61. The Cosmic Microwave Background as the Universe's Baby Picture</a><br><span class="repo-subtitle"></span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/067-monads-holons.jpg" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="067-monads-holons.html">67. Leibniz as the Unlikely Ancestor of the Holographic Principle</a><br><span class="repo-subtitle"></span></div></div>
+  </details>
+  <details id="sensation" class="category-group">
+    <summary class="index-tag-name cat-colored cat-sensation"><span class="cat-toggle-icon" aria-hidden="true"></span>sensation</summary>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/008-fields.jpg" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="008-fields.html">8. The Field Is the Medium of Feeling</a><br><span class="repo-subtitle">Physics and Whitehead converged on the same discovery from opposite directions.</span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/030-interference.jpg" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="030-interference.html">30. The Pattern Is What the Waves Do Together</a><br><span class="repo-subtitle">Harmony, the double slit, and thought may all be the same phenomenon at different scales.</span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/033-edge.jpg" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="033-edge.html">33. The Edge Is Where Everything Happens</a><br><span class="repo-subtitle">The Mandelbrot Boundary</span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/035-simplestnumbers.png" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="035-simplestnumbers.html">35. The Simplest Numbers Come First</a><br><span class="repo-subtitle">Farey, Benford, and the Shape of Infinity</span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/038-consonance-map.png" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="038-consonance-map.html">38. The Surprising Consonance Map</a><br><span class="repo-subtitle">Draw the intervals. Recognize the shape.</span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/041-colorwheel.png" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="041-colorwheel.html">41. The Surprising Color Wheel</a><br><span class="repo-subtitle">The mind closes the line into a circle.</span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/042-eyethinks.png" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="042-eyethinks.html">42. Opponent Processing: The Eye Thinks Before the Brain Does</a><br><span class="repo-subtitle"></span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/044-ai-retina.jpg" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="044-ai-retina.html">44. Artificial Networks Rediscover the Retina</a><br><span class="repo-subtitle"></span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/069-love.jpg" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="069-love.html">69. Love</a><br><span class="repo-subtitle">Light is what Love looks like. Love is what Light feels like.  -- David Deida</span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/070-harmony.jpg" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="070-harmony.html">70. Harmony</a><br><span class="repo-subtitle"></span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/071-beauty.jpg" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="071-beauty.html">71. Beauty</a><br><span class="repo-subtitle"></span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb"><img src="images/072-temperature.png" alt="" class="seed-thumb"></div><div class="index-entry-body"><a href="072-temperature.html">72. Temperature</a><br><span class="repo-subtitle"></span></div></div>
+    <div class="index-entry"><div class="seed-row-thumb seed-row-thumb--empty"></div><div class="index-entry-body"><a href="076-fivewindows.html">76. Five Windows, One Room</a><br><span class="repo-subtitle">Light, sound, smell, touch, taste — all vibration in space and time. Yet each feels utterly unlike the others. That gap is the mystery.</span></div></div>
+  </details>
+  <details id="zzz-debug" class="category-group">
+    <summary class="index-tag-name cat-colored cat-zzz-debug"><span class="cat-toggle-icon" aria-hidden="true"></span>zzz debug</summary>
+    <div class="index-entry"><div class="seed-row-thumb seed-row-thumb--empty"></div><div class="index-entry-body"><a href="075-gossamer.html">75. Gossamer App Test</a><br><span class="repo-subtitle">A framework for collections of linked ideas</span></div></div>
+  </details>
+</div>
+</div></div>
+<div class="page-end" id="page-end-version" data-page-version="3">
+  <button class="page-end-logo" aria-label="Show page info"
+    onmouseenter="typeof seedNavShowVersion==='function'&&seedNavShowVersion(true)"
+    onmouseleave="typeof seedNavShowVersion==='function'&&seedNavShowVersion(false)"
+    ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
+    <img src="logo.svg" alt="" width="32" height="32">
+  </button>
+  <span class="page-end-version" aria-hidden="true">Rev 3 · 2026-04-03 · 15:23</span>
+</div>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Surprising Consonance Map</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;600&family=DM+Mono:wght@300;400&display=swap">
+<link rel="icon" href="logo.svg">
+<link rel="stylesheet" href="site.css">
+<script>
+window.__pods__={"000":"000-map","001":"001-caloric","002":"002-events","003":"003-inside","004":"004-self","005":"005-freewill","006":"006-output","007":"007-vacuum","008":"008-fields","009":"009-randomness","010":"010-largenumbers","011":"011-moreisdifferent","012":"012-autopoiesis","013":"013-enactment","014":"014-cities","015":"015-aliens","016":"016-neuralnetwork","017":"017-pastpresent","018":"018-magnetization","019":"019-funerals","020":"020-penrose","021":"021-just","022":"022-locked","023":"023-stories","024":"024-ghostmachine","025":"025-widechannel","026":"026-twotruths","027":"027-usedtothink","028":"028-network","029":"029-lighttime","030":"030-interference","031":"031-surfaceinside","032":"032-skyfossil","033":"033-edge","034":"034-onerule","035":"035-simplestnumbers","036":"036-universenoticing","037":"037-assembly","038":"038-consonance-map","040":"040-stability","041":"041-colorwheel","042":"042-eyethinks","044":"044-ai-retina","045":"045-baldwin","046":"046-thinkfast","047":"047-ai-feeling","048":"048-flashes","049":"049-strangeloop","050":"050-orthogonal","051":"051-spacetime","052":"052-dichotomy","053":"053-dimensions","054":"054-bornharmonic","056":"056-mandelneural","057":"057-superfarey","058":"058-galacticnets","059":"059-galaxyevolve","060":"060-worldtests","061":"061-babyuniverse","062":"062-branchingdice","063":"063-mandelcrystals","064":"064-choicedimension","065":"065-feel-do","066":"066-cosmicattractor","067":"067-monads-holons","068":"068-bubbles","069":"069-love","070":"070-harmony","071":"071-beauty","072":"072-temperature","073":"073-moral-caution","074":"074-grasshopper","075":"075-gossamer","076":"076-fivewindows"};
+window._seedNavSearchIndex=null;
+window._seedNavSearchIndexPromise=null;
+function _seedNavLoadIndex(){if(window._seedNavSearchIndex)return Promise.resolve(window._seedNavSearchIndex);if(!window._seedNavSearchIndexPromise){window._seedNavSearchIndexPromise=fetch('search-index.json').then(function(r){return r.json();}).then(function(d){window._seedNavSearchIndex=d;return d;});}return window._seedNavSearchIndexPromise;}
+function seedNavGo(){
+  var inp=document.getElementById('nav-goto-num');
+  if(!inp)return;
+  var v=inp.value.trim().replace(/^0+/,'');
+  if(!v)return;
+  var pad=v.padStart(3,'0');
+  var fn=window.__pods__[pad]||window.__pods__[v];
+  if(!fn){var k=Object.keys(window.__pods__).find(function(k){return parseInt(k,10)===parseInt(v,10)});if(k)fn=window.__pods__[k];}
+  if(fn)window.location.href=fn+'.html';
+}
+window.seedNavOpenSearch=function(){var n=document.querySelector("nav");if(n&&n.classList.contains("nav-hamburger-open"))window.seedNavToggleMenu();var d=document.getElementById("search-dialog");var i=document.getElementById("search-dialog-input");if(d)d.removeAttribute("hidden");if(i){i.value="";i.focus();}_seedNavLoadIndex();window.seedNavRunSearch("");};
+window.seedNavCloseSearch=function(){var d=document.getElementById("search-dialog");if(d)d.setAttribute("hidden","");};
+window._seedNavSnippet=function(content,q){if(!content||!q)return"";var c=content.toLowerCase();var i=c.indexOf(q);if(i<0)return"";var len=100;var start=Math.max(0,i-len);var end=Math.min(content.length,i+q.length+len);var s=content.substring(start,end).replace(/\s+/g," ").trim();if(start>0)s="\u2026 "+s;if(end<content.length)s=s+" \u2026";return s;};
+window.seedNavRunSearch=function(q){
+  q=(q||"").toLowerCase().trim();
+  var el=document.getElementById("search-dialog-results");
+  var countEl=document.getElementById("search-dialog-count");
+  if(!el)return;
+  if(!q){el.innerHTML="";if(countEl)countEl.textContent="";return;}
+  _seedNavLoadIndex().then(function(index){
+    var nm=[],cm=[];
+    for(var j=0;j<index.length;j++){var it=index[j];if((it.title||"").toLowerCase().indexOf(q)>=0)nm.push(it);else if((it.content||"").toLowerCase().indexOf(q)>=0)cm.push(it);}
+    var slugs={};
+    nm.forEach(function(it){slugs[it.slug]=1;});cm.forEach(function(it){slugs[it.slug]=1;});
+    var n=Object.keys(slugs).length;
+    if(countEl)countEl.textContent=n===1?"1 found":n+" found";
+    var h="";
+    if(nm.length){h+='<div class="search-section"><div class="search-section-title">Name</div><ul class="search-result-list">';nm.forEach(function(it){var d=document.createElement("div");d.textContent=it.num+". "+it.title;h+='<li><a href="'+it.slug+'.html">'+d.innerHTML+'</a></li>';});h+="</ul></div>";}
+    if(cm.length){h+='<div class="search-section"><div class="search-section-title">Content</div><ul class="search-result-list">';cm.forEach(function(it){var titleDiv=document.createElement("div");titleDiv.textContent=it.num+". "+it.title;var snip=window._seedNavSnippet(it.content,q);var snipDiv=document.createElement("div");snipDiv.textContent=snip;h+='<li><a href="'+it.slug+'.html">'+titleDiv.innerHTML+'<br><span class="search-result-snippet">'+snipDiv.innerHTML+'</span></a></li>';});h+="</ul></div>";}
+    if(!h&&q)h='<p class="search-no-results">No pods match.</p>';
+    el.innerHTML=h;
+  });
+};
+window.seedNavToggleMenu=function(){var n=document.querySelector("nav");var b=document.querySelector(".nav-hamburger-btn");var p=document.getElementById("nav-hamburger-panel");if(!n||!b)return;var open=n.classList.contains("nav-hamburger-open");n.classList.toggle("nav-hamburger-open",!open);b.setAttribute("aria-expanded",!open?"true":"false");if(p)p.style.display=open?"none":"flex";};
+window.seedNavShowVersion=function(show){var el=document.querySelector(".page-end-version");if(el)el.classList.toggle("page-end-version-visible",!!show);};
+window.seedNavToggleVersion=function(){var el=document.querySelector(".page-end-version");if(el)el.classList.toggle("page-end-version-visible");};
+document.addEventListener("keydown",function(e){if(e.key==="Escape"){var n=document.querySelector("nav");if(n&&n.classList.contains("nav-hamburger-open"))window.seedNavToggleMenu();else window.seedNavCloseSearch();}});
+document.addEventListener("DOMContentLoaded",function(){var p=document.getElementById("nav-hamburger-panel");if(p){p.style.display="none";var list=p.querySelector(".nav-hamburger-list");if(list)list.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){if(document.querySelector("nav").classList.contains("nav-hamburger-open"))window.seedNavToggleMenu();});});}});
+</script>
+</head>
+<body>
+<nav style="position:sticky;top:0;z-index:100;">
+<div class="nav-row">
+<div class="nav-brand">
+<a href="index.html" class="nav-logo">
+<img src="logo.svg" alt="" class="nav-logo-icon">
+<span class="nav-logo-text">Gossamer</span>
+</a>
+</div>
+<div class="nav-center"><ul class="nav-links nav-links-center">
+  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search pods" onclick="seedNavOpenSearch();return false">Search</button></li>
+  <li class="nav-goto-wrap">
+    <label for="nav-goto-num" class="sr-only">Goto pod</label>
+    <input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}">
+    <button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button>
+  </li>
+</ul></div>
+<div class="nav-end"><ul class="nav-links nav-links-end">
+  <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
+            <li class="nav-link-item nav-item-dropdown nav-lists-dropdown">
+            <a href="list.html" class="nav-btn">Lists</a>
+            <button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-label="Lists menu"></button>
+            <ul class="nav-dropdown">
+              <li><a href="list.html">All the Seeds</a></li>
+              <li><a href="bibliography.html">Bibliography</a></li>
+              <li><a href="glossary.html">Glossary</a></li>
+              <li><a href="map.html">Map</a></li>
+              <li><a href="more.html">More</a></li>
+            </ul>
+          </li>
+</ul><button type="button" class="nav-hamburger-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav-hamburger-panel" onclick="seedNavToggleMenu();return false">&#9776;</button></div>
+</div>
+  <div class="section-tabs">
+    <div class="section-tabs-inner">
+      <span class="section-tabs-prev"><a href="037-assembly.html">&lt;&lt;</a></span>
+      <div class="section-tabs-center">
+        <a href="#depth" class="section-tab">Depth</a>
+      <a href="#provenance" class="section-tab">Provenance</a>
+      </div>
+      <span class="section-tabs-next"><a href="040-stability.html">&gt;&gt;</a></span>
+    </div>
+  </div>
+<div class="nav-hamburger-panel" id="nav-hamburger-panel" role="menu" aria-hidden="true">
+  <div class="nav-hamburger-overlay" onclick="seedNavToggleMenu()"></div>
+  <div class="nav-hamburger-inner">
+    <ul class="nav-hamburger-list">
+      <li><a href="about.html">About</a></li>
+      <li><a href="list.html">All the Seeds</a></li>
+              <li><a href="bibliography.html">Bibliography</a></li>
+              <li><a href="glossary.html">Glossary</a></li>
+              <li><a href="map.html">Map</a></li>
+              <li><a href="more.html">More</a></li>
+    </ul>
+  </div>
+</div>
+</nav>
+<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search pods" hidden>
+  <div class="search-dialog-overlay" onclick="seedNavCloseSearch()"></div>
+  <div class="search-dialog-inner">
+    <div class="search-dialog-header">
+      <input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)">
+      <button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button>
+    </div>
+    <div id="search-dialog-count" class="search-dialog-count"></div>
+    <div id="search-dialog-results" class="search-dialog-results"></div>
+  </div>
+</div>
+<div class="wrap">
+  <div class="meta-row">
+    <a href="index.html#sensation" class="tag">sensation</a><span class="mono small dim"> · </span><span class="mono small warm">Pod 38</span><span class="mono small dim"> · prelim</span>
+  </div>
+  <div class="seedpod-header fade cat-colored cat-sensation">
+    <h1>The Surprising Consonance Map</h1>
+    <p class="premise">Draw the intervals. Recognize the shape.</p>
+  </div>
+  <section id="depth" class="pod-section">
+  <h2 class="section-heading">Depth</h2>
+  <div class="prose"><figure class="directive-image directive-image--left"><img src="images/038-consonance-map.png" alt=""><figcaption>Fourier harmonics: the overtone series underlying musical consonance</figcaption></figure>
+Play a C and a G on a piano. They sound stable together — resolved,
+at rest. Now play a C and a G-flat. The interval wants to move
+somewhere else, to resolve into something more comfortable. Musicians
+have always known this, and the explanation has always been the same:
+simpler ratios sound more consonant. The frequency of G is almost
+exactly 3/2 times the frequency of C. The frequency of G-flat is
+closer to 7/5 — a more complex ratio, a less stable relationship.
+Pythagoras noticed this in the 6th century BC, experimenting with a
+monochord. He didn't have a graph. He had a single string and a
+remarkable idea: that number and harmony are the same thing. Every
+culture that has independently developed music has found the simple
+ratios first. The octave (2:1), the fifth (3:2), the fourth (4:3) —
+these are universal. But what does the full landscape of consonance
+look like? How are all the intervals related to each other, all at
+once?
+<p>Darakshan had wanted to see that map for a long time. When it finally
+became easy enough to draw — score every ratio by how simple it is,
+arrange the results around a circle representing one octave — this is
+what appeared.</p>
+<figure class="directive-image directive-image--left"><img src="images/harmonic-clock.jpg" alt=""><figcaption>The Harmonic Clock</figcaption></figure>
+<p>That’s a Mandelbrot set.</p>
+<figure class="directive-image directive-image--left"><img src="images/mandelbrot-boundary.jpg" alt=""><figcaption>The Mandelbrot Set</figcaption></figure>
+<p>Not a visual resemblance. The same object, seen from two different
+angles.</p>
+<p>To understand why, you need one idea: the attractor. Some mathematical
+processes, when you repeat them, converge — they settle toward a
+stable value no matter where you start. Others diverge — they spiral
+outward to infinity. The boundary between the two is where things get
+interesting. In the 1970s and 80s, Benoît Mandelbrot was studying
+exactly this boundary for a deceptively simple formula — apply a rule,
+feed the result back in, repeat, and ask: does this converge or
+escape? He expected the boundary to be smooth and unremarkable. When
+the image came back, he thought the computer had a bug. The boundary
+was infinitely complex, self-similar at every scale, inexhaustible.
+He checked the program. It was right.</p>
+<p>What Mandelbrot had found was a map of attraction. The large cardioid
+at the center is the region of simplest stability. Around it cluster
+smaller bulbs, and around each of those, smaller ones still, branching
+without end. Each bulb sits at a position indexed by a fraction, and
+the size of the bulb is governed by the simplicity of that fraction.
+The bulb at position 1/2 is the largest. The bulb at 1/3 is next.
+Then 2/5, then 3/7. The tallest bars in the harmonic chart occupy
+exactly those positions. Bulb size and consonance score are the same
+ranking, expressed in two different languages.</p>
+<p>Look again at the harmonic clock image. Notice the wide dark gaps
+flanking the tallest spikes — the deep silence around the fifth and
+the fourth, the emptiness around the octave. Those gaps are not
+accidents. They are a provable property of the rational numbers:
+simple ratios repel each other. The more consonant the interval, the
+wider the moat of complexity surrounding it. This structure has a
+name — the Farey sequence — and the mathematics behind it belongs in
+the references. What matters here is that musicians have always felt
+it. The fifth sounds like itself, and nothing nearby sounds close.
+The moat is arithmetic, not psychology.</p>
+<p>Mandelbrot applied a formula and found a shape he didn’t expect.
+Darakshan drew a map long wanted and found the same shape looking
+back. Two questions, one surprise. The echo is not coincidental — it
+is what happens when you draw the boundary between order and
+complexity, wherever you find it.</p>
+<p>Whether that boundary also appears in the space where a neural network
+learns to think — where the weights that converge are separated from
+the weights that don’t by a boundary of similar complexity — is an
+open question worth asking. [056]</p>
+</div>
+</section>
+<section id="provenance" class="pod-section">
+    <h3 class="section-heading ref-heading">Further reading</h3>
+  <div class="prose ref-list"><p class="ref-entry"><a href="bibliography.html#pythagoras">Pythagoras</a> — consonance as simple integer ratios, discovered through string length experiments on the monochord.</p>
+<p class="ref-entry"><a href="bibliography.html#mandelbrot">Mandelbrot,</a> Benoît — The Fractal Geometry of Nature. Freeman, 1982. The boundary between convergence and escape as infinitely complex attractor.</p>
+<p class="ref-entry"><a href="bibliography.html#farey">Farey,</a> John (1816) — sequence of rationals ordered by denominator size; the Farey gap property.</p></div>
+      <div class="related-section">
+    <h3 class="section-heading related-label">Related pods</h3>
+    <div class="related-grid">  <a href="010-largenumbers.html" class="related-card related-card-prelim cat-colored cat-knowledge">
+    <div class="related-title">10. Our Intuitions About Large Numbers Are Completely Unreliable</div>
+  </a>
+  <a href="034-onerule.html" class="related-card related-card-prelim cat-colored cat-mathematics">
+    <div class="related-title">34. One Rule Is Enough</div>
+  </a>
+  <a href="053-dimensions.html" class="related-card related-card-prelim cat-colored cat-mathematics">
+    <div class="related-title">53. The Virtual Dimensions Formula as a Publishable Conjecture</div>
+  </a>
+  <a href="056-mandelneural.html" class="related-card related-card-prelim cat-colored cat-ai-minds">
+    <div class="related-title">56. Neural Networks as High-Dimensional Mandelbrot Sets</div>
+  </a>
+  <a href="062-branchingdice.html" class="related-card related-card-prelim cat-colored cat-mathematics">
+    <div class="related-title">62. Branching Numbers as Finite Dice</div>
+  </a>
+      </div>
+    <div class="inbound-refs"><span class="inbound-label">10 inbound references</span><span class="inbound-links"><a href="029-lighttime.html" class="inbound-link cat-colored cat-physics" title="From Light's Point of View, There Is No Journey">29</a><a href="040-stability.html" class="inbound-link cat-colored cat-mathematics" title="Two Opposite Kinds of Stability">40</a><a href="049-strangeloop.html" class="inbound-link cat-colored cat-consciousness" title="The Strange Loop That Contains Itself">49</a><a href="053-dimensions.html" class="inbound-link cat-colored cat-mathematics" title="The Virtual Dimensions Formula as a Publishable Conjecture">53</a><a href="054-bornharmonic.html" class="inbound-link cat-colored cat-physics" title="The Born Rule as Harmonic Measure">54</a><a href="056-mandelneural.html" class="inbound-link cat-colored cat-ai-minds" title="Neural Networks as High-Dimensional Mandelbrot Sets">56</a><a href="057-superfarey.html" class="inbound-link cat-colored cat-ai-minds" title="Superposition in Neural Network Representations">57</a><a href="062-branchingdice.html" class="inbound-link cat-colored cat-mathematics" title="Branching Numbers as Finite Dice">62</a><a href="063-mandelcrystals.html" class="inbound-link cat-colored cat-mathematics" title="Mandelbrot Structure in Physical Crystals">63</a><a href="064-choicedimension.html" class="inbound-link cat-colored cat-mathematics" title="The Choice Dimension as Tree Algebra">64</a></span></div>
+  </div>
+</section>
+</div>
+<div class="page-end" id="page-end-version" data-page-version="1">
+  <button class="page-end-logo" aria-label="Show page info"
+    onmouseenter="typeof seedNavShowVersion==='function'&&seedNavShowVersion(true)"
+    onmouseleave="typeof seedNavShowVersion==='function'&&seedNavShowVersion(false)"
+    ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
+    <img src="logo.svg" alt="" width="32" height="32">
+  </button>
+  <span class="page-end-version" aria-hidden="true">Rev 1 · 2026-04-03 · 11:23</span>
+</div>
+</body>
+</html>

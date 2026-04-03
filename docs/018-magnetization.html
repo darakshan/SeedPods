@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ideas Magnetize Through a Group Like Iron</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;600&family=DM+Mono:wght@300;400&display=swap">
+<link rel="icon" href="logo.svg">
+<link rel="stylesheet" href="site.css">
+<script>
+window.__pods__={"000":"000-map","001":"001-caloric","002":"002-events","003":"003-inside","004":"004-self","005":"005-freewill","006":"006-output","007":"007-vacuum","008":"008-fields","009":"009-randomness","010":"010-largenumbers","011":"011-moreisdifferent","012":"012-autopoiesis","013":"013-enactment","014":"014-cities","015":"015-aliens","016":"016-neuralnetwork","017":"017-pastpresent","018":"018-magnetization","019":"019-funerals","020":"020-penrose","021":"021-just","022":"022-locked","023":"023-stories","024":"024-ghostmachine","025":"025-widechannel","026":"026-twotruths","027":"027-usedtothink","028":"028-network","029":"029-lighttime","030":"030-interference","031":"031-surfaceinside","032":"032-skyfossil","033":"033-edge","034":"034-onerule","035":"035-simplestnumbers","036":"036-universenoticing","037":"037-assembly","038":"038-consonance-map","040":"040-stability","041":"041-colorwheel","042":"042-eyethinks","044":"044-ai-retina","045":"045-baldwin","046":"046-thinkfast","047":"047-ai-feeling","048":"048-flashes","049":"049-strangeloop","050":"050-orthogonal","051":"051-spacetime","052":"052-dichotomy","053":"053-dimensions","054":"054-bornharmonic","056":"056-mandelneural","057":"057-superfarey","058":"058-galacticnets","059":"059-galaxyevolve","060":"060-worldtests","061":"061-babyuniverse","062":"062-branchingdice","063":"063-mandelcrystals","064":"064-choicedimension","065":"065-feel-do","066":"066-cosmicattractor","067":"067-monads-holons","068":"068-bubbles","069":"069-love","070":"070-harmony","071":"071-beauty","072":"072-temperature","073":"073-moral-caution","074":"074-grasshopper","075":"075-gossamer","076":"076-fivewindows"};
+window._seedNavSearchIndex=null;
+window._seedNavSearchIndexPromise=null;
+function _seedNavLoadIndex(){if(window._seedNavSearchIndex)return Promise.resolve(window._seedNavSearchIndex);if(!window._seedNavSearchIndexPromise){window._seedNavSearchIndexPromise=fetch('search-index.json').then(function(r){return r.json();}).then(function(d){window._seedNavSearchIndex=d;return d;});}return window._seedNavSearchIndexPromise;}
+function seedNavGo(){
+  var inp=document.getElementById('nav-goto-num');
+  if(!inp)return;
+  var v=inp.value.trim().replace(/^0+/,'');
+  if(!v)return;
+  var pad=v.padStart(3,'0');
+  var fn=window.__pods__[pad]||window.__pods__[v];
+  if(!fn){var k=Object.keys(window.__pods__).find(function(k){return parseInt(k,10)===parseInt(v,10)});if(k)fn=window.__pods__[k];}
+  if(fn)window.location.href=fn+'.html';
+}
+window.seedNavOpenSearch=function(){var n=document.querySelector("nav");if(n&&n.classList.contains("nav-hamburger-open"))window.seedNavToggleMenu();var d=document.getElementById("search-dialog");var i=document.getElementById("search-dialog-input");if(d)d.removeAttribute("hidden");if(i){i.value="";i.focus();}_seedNavLoadIndex();window.seedNavRunSearch("");};
+window.seedNavCloseSearch=function(){var d=document.getElementById("search-dialog");if(d)d.setAttribute("hidden","");};
+window._seedNavSnippet=function(content,q){if(!content||!q)return"";var c=content.toLowerCase();var i=c.indexOf(q);if(i<0)return"";var len=100;var start=Math.max(0,i-len);var end=Math.min(content.length,i+q.length+len);var s=content.substring(start,end).replace(/\s+/g," ").trim();if(start>0)s="\u2026 "+s;if(end<content.length)s=s+" \u2026";return s;};
+window.seedNavRunSearch=function(q){
+  q=(q||"").toLowerCase().trim();
+  var el=document.getElementById("search-dialog-results");
+  var countEl=document.getElementById("search-dialog-count");
+  if(!el)return;
+  if(!q){el.innerHTML="";if(countEl)countEl.textContent="";return;}
+  _seedNavLoadIndex().then(function(index){
+    var nm=[],cm=[];
+    for(var j=0;j<index.length;j++){var it=index[j];if((it.title||"").toLowerCase().indexOf(q)>=0)nm.push(it);else if((it.content||"").toLowerCase().indexOf(q)>=0)cm.push(it);}
+    var slugs={};
+    nm.forEach(function(it){slugs[it.slug]=1;});cm.forEach(function(it){slugs[it.slug]=1;});
+    var n=Object.keys(slugs).length;
+    if(countEl)countEl.textContent=n===1?"1 found":n+" found";
+    var h="";
+    if(nm.length){h+='<div class="search-section"><div class="search-section-title">Name</div><ul class="search-result-list">';nm.forEach(function(it){var d=document.createElement("div");d.textContent=it.num+". "+it.title;h+='<li><a href="'+it.slug+'.html">'+d.innerHTML+'</a></li>';});h+="</ul></div>";}
+    if(cm.length){h+='<div class="search-section"><div class="search-section-title">Content</div><ul class="search-result-list">';cm.forEach(function(it){var titleDiv=document.createElement("div");titleDiv.textContent=it.num+". "+it.title;var snip=window._seedNavSnippet(it.content,q);var snipDiv=document.createElement("div");snipDiv.textContent=snip;h+='<li><a href="'+it.slug+'.html">'+titleDiv.innerHTML+'<br><span class="search-result-snippet">'+snipDiv.innerHTML+'</span></a></li>';});h+="</ul></div>";}
+    if(!h&&q)h='<p class="search-no-results">No pods match.</p>';
+    el.innerHTML=h;
+  });
+};
+window.seedNavToggleMenu=function(){var n=document.querySelector("nav");var b=document.querySelector(".nav-hamburger-btn");var p=document.getElementById("nav-hamburger-panel");if(!n||!b)return;var open=n.classList.contains("nav-hamburger-open");n.classList.toggle("nav-hamburger-open",!open);b.setAttribute("aria-expanded",!open?"true":"false");if(p)p.style.display=open?"none":"flex";};
+window.seedNavShowVersion=function(show){var el=document.querySelector(".page-end-version");if(el)el.classList.toggle("page-end-version-visible",!!show);};
+window.seedNavToggleVersion=function(){var el=document.querySelector(".page-end-version");if(el)el.classList.toggle("page-end-version-visible");};
+document.addEventListener("keydown",function(e){if(e.key==="Escape"){var n=document.querySelector("nav");if(n&&n.classList.contains("nav-hamburger-open"))window.seedNavToggleMenu();else window.seedNavCloseSearch();}});
+document.addEventListener("DOMContentLoaded",function(){var p=document.getElementById("nav-hamburger-panel");if(p){p.style.display="none";var list=p.querySelector(".nav-hamburger-list");if(list)list.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){if(document.querySelector("nav").classList.contains("nav-hamburger-open"))window.seedNavToggleMenu();});});}});
+</script>
+</head>
+<body>
+<nav style="position:sticky;top:0;z-index:100;">
+<div class="nav-row">
+<div class="nav-brand">
+<a href="index.html" class="nav-logo">
+<img src="logo.svg" alt="" class="nav-logo-icon">
+<span class="nav-logo-text">Gossamer</span>
+</a>
+</div>
+<div class="nav-center"><ul class="nav-links nav-links-center">
+  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search pods" onclick="seedNavOpenSearch();return false">Search</button></li>
+  <li class="nav-goto-wrap">
+    <label for="nav-goto-num" class="sr-only">Goto pod</label>
+    <input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}">
+    <button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button>
+  </li>
+</ul></div>
+<div class="nav-end"><ul class="nav-links nav-links-end">
+  <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
+            <li class="nav-link-item nav-item-dropdown nav-lists-dropdown">
+            <a href="list.html" class="nav-btn">Lists</a>
+            <button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-label="Lists menu"></button>
+            <ul class="nav-dropdown">
+              <li><a href="list.html">All the Seeds</a></li>
+              <li><a href="bibliography.html">Bibliography</a></li>
+              <li><a href="glossary.html">Glossary</a></li>
+              <li><a href="map.html">Map</a></li>
+              <li><a href="more.html">More</a></li>
+            </ul>
+          </li>
+</ul><button type="button" class="nav-hamburger-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav-hamburger-panel" onclick="seedNavToggleMenu();return false">&#9776;</button></div>
+</div>
+  <div class="section-tabs">
+    <div class="section-tabs-inner">
+      <span class="section-tabs-prev"><a href="017-pastpresent.html">&lt;&lt;</a></span>
+      <div class="section-tabs-center">
+        <a href="#surface" class="section-tab">Surface</a>
+      <a href="#depth" class="section-tab">Depth</a>
+      <a href="#provenance" class="section-tab">Provenance</a>
+      </div>
+      <span class="section-tabs-next"><a href="019-funerals.html">&gt;&gt;</a></span>
+    </div>
+  </div>
+<div class="nav-hamburger-panel" id="nav-hamburger-panel" role="menu" aria-hidden="true">
+  <div class="nav-hamburger-overlay" onclick="seedNavToggleMenu()"></div>
+  <div class="nav-hamburger-inner">
+    <ul class="nav-hamburger-list">
+      <li><a href="about.html">About</a></li>
+      <li><a href="list.html">All the Seeds</a></li>
+              <li><a href="bibliography.html">Bibliography</a></li>
+              <li><a href="glossary.html">Glossary</a></li>
+              <li><a href="map.html">Map</a></li>
+              <li><a href="more.html">More</a></li>
+    </ul>
+  </div>
+</div>
+</nav>
+<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search pods" hidden>
+  <div class="search-dialog-overlay" onclick="seedNavCloseSearch()"></div>
+  <div class="search-dialog-inner">
+    <div class="search-dialog-header">
+      <input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)">
+      <button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button>
+    </div>
+    <div id="search-dialog-count" class="search-dialog-count"></div>
+    <div id="search-dialog-results" class="search-dialog-results"></div>
+  </div>
+</div>
+<div class="wrap">
+  <div class="meta-row">
+    <a href="index.html#knowledge" class="tag">knowledge</a><span class="mono small dim"> · </span><span class="mono small warm">Pod 18</span><span class="mono small dim"> · proto</span>
+  </div>
+  <div class="seedpod-header fade cat-colored cat-knowledge">
+    <h1>Ideas Magnetize Through a Group Like Iron</h1>
+    <p class="premise">Only a seed group of influencers is necessary. Then the field does the rest.</p>
+  </div>
+  <section id="_prolog" class="pod-section pod-prolog">
+  <div class="prose"><p>The physics of phase transitions offers a precise vocabulary for what the surface layer describes intuitively. A ferromagnetic material like iron consists of magnetic domains — regions where atomic spins are aligned. Above the Curie temperature, thermal agitation overwhelms the alignment; the domains dissolve into disorder. Below it, the material is ready to magnetize, but needs seeds: nucleation sites where alignment begins.</p>
+<p>Nucleation is the hard part. A single aligned atom in a sea of disorder will be pulled back toward randomness by its disordered neighbors. But a cluster of aligned atoms — if it reaches a critical size — becomes self-sustaining. The atoms at the boundary now feel more pull from the ordered interior than from the disordered exterior. The cluster grows. This is why impurities matter in freezing water: they provide surfaces where the first stable ice crystals can form.</p>
+<p>The percolation threshold is the moment of topological inversion. Mathematically, it’s the point at which a random graph becomes connected — when there’s a path from any node to any other through the new state. Before this threshold, the seeds are isolated islands. After it, they form a spanning cluster — a continent — and the old state survives only in pockets. The system has flipped.</p>
+<p>This maps directly onto social dynamics. Everett Rogers’ diffusion of innovations research identified the same S-curve: slow adoption among early adopters, acceleration through the early majority, saturation as laggards join or remain isolated. Malcolm Gladwell popularized this as “the tipping point” — though the physics is older and more precise. The sociologist Mark Granovetter showed that individuals have different thresholds for joining a collective action; the distribution of those thresholds determines whether a cascade occurs or fizzles.</p>
+<p>What the physics adds to the sociology: the medium must be receptive. You cannot magnetize iron above its Curie temperature no matter how strong the external field. You cannot freeze water above 0°C no matter how many nucleation sites you provide. Social movements fail not only because they lack seeds but because the population isn’t primed — isn’t “cooled” into a state where local alignment can propagate. The readiness of the medium is as important as the strength of the seeds.</p>
+<p>The connection to <a href="019-funerals.html">Science Advances One Funeral at a Time</a> — science advances one funeral at a time — is direct. Paradigm shifts are phase transitions in the scientific community. The old paradigm’s holders are above their Curie temperature; they cannot be remagnetized. The new paradigm spreads through younger scientists who never aligned with the old framework. Generational replacement is nucleation and growth in slow motion.</p>
+<p>The connection to <a href="009-randomness.html">Structure Is What Randomness Does</a> — structure is what randomness does — runs deeper. The initial nucleation sites are often random: which atoms happen to align first, which individuals happen to adopt early. But once the seeds exist, the dynamics are deterministic. Randomness starts the process; the field completes it. This is the signature of emergent structure throughout nature: contingent origins, lawful unfolding.</p>
+<p>Whitehead would recognize this pattern. Each actual occasion takes in its neighbors and completes itself in light of them. When enough occasions align — when a society of occasions shares a common character — that character propagates. The phase transition is not imposed from outside. It emerges from the accumulated local alignments of occasions that feel each other and respond.</p>
+</div>
+</section>
+<section id="surface" class="pod-section">
+  <h2 class="section-heading">Surface</h2>
+  <div class="prose"><figure class="directive-image directive-image--left"><img src="images/018-magnetization.jpg" alt=""><figcaption>Ideas spreading through a group like magnetic domains</figcaption></figure>
+<p>Heat a piece of iron past a certain temperature and it loses its magnetism. The atoms are still there, still spinning, but their spins point every which way — the material is disordered, uncommitted. Now let it cool. At first, nothing visible happens. But at scattered points, a few neighboring atoms happen to align. These become seeds.</p>
+<p>Here’s what happens next: each aligned cluster affects its neighbors. The atoms at the boundary feel a pull toward the ordered state. They join. The cluster grows. As it grows, it has more surface area — more boundary, more neighbors to recruit. The growth accelerates. Meanwhile other seeds are growing too, spreading toward each other across the still-disordered space.</p>
+<p>There’s a moment — and this is the thing worth watching for — when figure and ground flip. At first you have small islands of order in a sea of chaos. Then suddenly you have a mostly-ordered material with shrinking holes of disorder. The holes close. The iron is magnetized.</p>
+<p>The same pattern runs everywhere structure emerges from a receptive medium:</p>
+<p><strong>Water freezing.</strong> Ice crystals nucleate around impurities — dust, dissolved gases, scratches on the container. Each crystal grows at its edges, recruiting liquid water into its lattice. The crystals spread until they meet, and then there is ice.</p>
+<p><strong>Ideas spreading through a population.</strong> A few early adopters pick up a new word, a new style, a new way of seeing. Their neighbors hear it, see it, feel the pull. The neighborhoods grow. At some point the thing tips from “something a few people are doing” to “something everyone does with holdouts.” The holdouts shrink. The culture has shifted.</p>
+<p><strong>Learning a song.</strong> You don’t learn it bar by bar from the beginning. You learn the chorus first, maybe — it’s catchiest, it repeats. Then a verse sticks. Then the bridge. You have islands of fluency in a sea of uncertainty. You practice, and the islands expand toward each other. One day the gaps close and you know the song.</p>
+<p><strong>A standing ovation.</strong> Two people stand. The people next to them feel the pressure and rise. The standing region expands. More surface area, more neighbors pulled up. Suddenly the room flips — mostly standing, with a few holdouts still seated. The holdouts capitulate or remain visibly outside the new consensus.</p>
+<p>The physics term is “nucleation and growth.” The critical moment — when islands become continent, when figure and ground exchange — is the percolation threshold. Before it, the seeds are isolated. After it, they’re connected, and the remaining disorder is the thing that’s surrounded.</p>
+<p>This matters for anyone trying to change something. You don’t need to convert everyone. You don’t even need to convert most people. You need to seed the right clusters in a material that’s ready to shift — cooled below the transition temperature, supersaturated, primed. Then you need to let the boundaries do their work.</p>
+<p>The change doesn’t happen because you argued everyone into it. It happens because local alignment propagates. The field does the rest.</p>
+<div class="cta">Think of a change you've lived through — in your workplace, your family, your culture. Can you identify the seeds? The moment when figure and ground flipped? The holdout holes that eventually closed — or didn't?</div>
+</div>
+</section>
+<section id="depth" class="pod-section">
+  <h2 class="section-heading">Depth</h2>
+  <div class="prose"><p>The physics is well understood. A ferromagnetic material like iron has atoms whose electron spins can align with their neighbors. Above the Curie temperature, thermal agitation overwhelms this tendency — the spins point randomly, and there’s no net magnetization. Below it, the alignment force wins locally, and domains of aligned spins form and grow. The transition is a canonical example of spontaneous symmetry breaking (<a href="009-randomness.html">Structure Is What Randomness Does</a>) — the disordered state is symmetric (no preferred direction), the ordered state breaks that symmetry by choosing one.</p>
+<p>What makes this pattern so portable is its abstract structure: a medium of coupled elements, each influenced by its neighbors, sitting near a transition threshold. The elements don’t have to be atoms. They can be people, neurons, water molecules, or bars of a song in memory. The coupling doesn’t have to be magnetic exchange interaction. It can be social pressure, synaptic connection, hydrogen bonding, or associative recall. The mathematics transfers.</p>
+<p>Sociologist Mark Granovetter formalized a version of this for collective behavior in his 1978 paper on threshold models. Each person has a threshold — the fraction of others who must act before they will join. A few people have threshold zero (they’ll act alone). Most need to see others first. Granovetter showed that the distribution of thresholds determines whether a cascade happens at all, and how far it spreads. The seeds are the low-threshold individuals. The percolation threshold is the moment when enough have joined that the remaining holdouts face a majority.</p>
+<p>This connects to <a href="019-funerals.html">Science Advances One Funeral at a Time</a> — science advances one funeral at a time. The old paradigm’s defenders are high-threshold individuals who never flip. The young scientists are low-threshold — they encounter the new framework before the old one calcified, and it simply makes more sense. Generational replacement is slow magnetization: the new alignment spreads not by converting the disordered but by waiting for them to leave the system.</p>
+<p>Whitehead’s societies of occasions (<a href="011-moreisdifferent.html">More Is Different</a>) provide the metaphysical frame. A society is a pattern of events that sustains itself through time by passing its character to successor events. When conditions are right, a new character can nucleate — a few occasions embody a new pattern, and their neighbors inherit it. The society transforms. What was background becomes foreground. The old pattern persists only in shrinking pockets until it is gone or merely vestigial.</p>
+<p>The practical implication is counterintuitive: persuasion is overrated. You don’t change a system by arguing with every element. You change it by seeding the right clusters in a medium that’s ready to shift, then letting propagation do the work. The question is never “how do I convince everyone?” It’s “where are the low-threshold nodes, and is the temperature right?”</p>
+</div>
+</section>
+<section id="provenance" class="pod-section">
+    <div class="related-section">
+    <h3 class="section-heading related-label">Related pods</h3>
+    <div class="related-grid">  <a href="009-randomness.html" class="related-card cat-colored cat-biology">
+    <div class="related-title">9. Structure Is What Randomness Does</div>
+  </a>
+  <a href="011-moreisdifferent.html" class="related-card related-card-prelim cat-colored cat-consciousness">
+    <div class="related-title">11. More Is Different</div>
+  </a>
+  <a href="014-cities.html" class="related-card related-card-prelim cat-colored cat-biology">
+    <div class="related-title">14. Cities Have an Inside Too</div>
+  </a>
+  <a href="056-mandelneural.html" class="related-card related-card-prelim cat-colored cat-ai-minds">
+    <div class="related-title">56. Neural Networks as High-Dimensional Mandelbrot Sets</div>
+  </a>
+  <a href="063-mandelcrystals.html" class="related-card related-card-prelim cat-colored cat-mathematics">
+    <div class="related-title">63. Mandelbrot Structure in Physical Crystals</div>
+  </a>
+      </div>
+    <div class="inbound-refs"><span class="inbound-label">4 inbound references</span><span class="inbound-links"><a href="009-randomness.html" class="inbound-link cat-colored cat-biology" title="Structure Is What Randomness Does">9</a><a href="014-cities.html" class="inbound-link cat-colored cat-biology" title="Cities Have an Inside Too">14</a><a href="063-mandelcrystals.html" class="inbound-link cat-colored cat-mathematics" title="Mandelbrot Structure in Physical Crystals">63</a><a href="072-temperature.html" class="inbound-link cat-colored cat-sensation" title="Temperature">72</a></span></div>
+  </div>
+</section>
+</div>
+<div class="page-end" id="page-end-version" data-page-version="4">
+  <button class="page-end-logo" aria-label="Show page info"
+    onmouseenter="typeof seedNavShowVersion==='function'&&seedNavShowVersion(true)"
+    onmouseleave="typeof seedNavShowVersion==='function'&&seedNavShowVersion(false)"
+    ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
+    <img src="logo.svg" alt="" width="32" height="32">
+  </button>
+  <span class="page-end-version" aria-hidden="true">Rev 4 · 2026-04-03 · 15:56</span>
+</div>
+</body>
+</html>
