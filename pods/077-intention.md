@@ -22,4 +22,6 @@ Teilhard de Chardin saw this decades earlier: evolution is not random drift but 
 
 From this view, the universe need not be said to "have" intention in the human sense. But it may be the kind of system whose dynamics don't merely permit intention — they favor it. This invites the hypothesis that what we call intention reflects something deeper in the structure of reality itself. [TEST EDIT 1]
 
+[TEST EDIT 2]
+
 
