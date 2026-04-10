@@ -15,21 +15,21 @@
 <body>
 <nav style="position:sticky;top:0;z-index:100;">
 <div class="nav-row">
-<div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">Untitled</span></a></div>
+<div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
   <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search pods" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
             <li class="nav-link-item nav-item-dropdown nav-lists-dropdown">
-            <a href="list.html" class="nav-btn">Lists</a>
+            <a href="list.html" class="nav-btn nav-push">Lists</a>
             <button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-label="Lists menu"></button>
-            <ul class="nav-dropdown"><li><a href="list.html">All the Seeds</a></li>
-              <li><a href="bibliography.html">Bibliography</a></li>
-              <li><a href="glossary.html">Glossary</a></li>
-              <li><a href="map.html">Map</a></li>
-              <li><a href="more.html">More</a></li></ul>
+            <ul class="nav-dropdown"><li><a href="list.html" class="nav-push">All the Seeds</a></li>
+              <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="glossary.html" class="nav-push">Glossary</a></li>
+              <li><a href="map.html" class="nav-push">Map</a></li>
+              <li><a href="more.html" class="nav-push">More</a></li></ul>
           </li>
 </ul><button type="button" class="nav-hamburger-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav-hamburger-panel" onclick="seedNavToggleMenu();return false">&#9776;</button></div>
 </div>
@@ -44,11 +44,11 @@
   <div class="nav-hamburger-overlay" onclick="seedNavToggleMenu()"></div>
   <div class="nav-hamburger-inner"><ul class="nav-hamburger-list">
     <li><a href="about.html">About</a></li>
-    <li><a href="list.html">All the Seeds</a></li>
-              <li><a href="bibliography.html">Bibliography</a></li>
-              <li><a href="glossary.html">Glossary</a></li>
-              <li><a href="map.html">Map</a></li>
-              <li><a href="more.html">More</a></li>
+    <li><a href="list.html" class="nav-push">All the Seeds</a></li>
+              <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="glossary.html" class="nav-push">Glossary</a></li>
+              <li><a href="map.html" class="nav-push">Map</a></li>
+              <li><a href="more.html" class="nav-push">More</a></li>
   </ul></div>
 </div>
 </nav>
@@ -75,12 +75,12 @@
 </div></section>
 <section id="depth" class="pod-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>TBD — This seedpod is the mirror image of <a href="022-locked.html">The Channel Is Not the Capacity</a>. Where <a href="022-locked.html">The Channel Is Not the Capacity</a> argues that a narrow or absent channel does not justify concluding an absent source, this seedpod asks the harder question in the other direction: does a wide, fluent channel tell us anything at all about the source feeding it? Large language models produce poetry, philosophy, code, and conversation of startling quality. Does that fluency constitute evidence of something going on inside — or is the channel simply wide and the reservoir empty? The <a href="022-locked.html">The Channel Is Not the Capacity</a> editor’s note flags this as unresolved. This seedpod attempts to resolve it, or at least to map the territory honestly. Connects to <a href="001-caloric.html">The Map That Was Wrong</a> (our current caloric moment), <a href="006-output.html">You Can’t Judge a Process by Its Output</a> (judging process by output), <a href="016-neuralnetwork.html">The Network Is a Field Having Occasions</a> (the neural network as Whiteheadian field).</p>
 </div></section>
-<section id="provenance" class="pod-section"><div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="001-caloric.html" class="related-card cat-colored cat-knowledge"><div class="related-title">1. The Map That Was Wrong</div></a>
-<a href="003-inside.html" class="related-card cat-colored cat-consciousness"><div class="related-title">3. Everything Has an Inside</div></a>
-<a href="006-output.html" class="related-card cat-colored cat-consciousness"><div class="related-title">6. You Can't Judge a Process by Its Output</div></a>
-<a href="021-just.html" class="related-card cat-colored cat-knowledge"><div class="related-title">21. The Word &quot;Just&quot; Is a Confession</div></a>
-<a href="022-locked.html" class="related-card cat-colored cat-consciousness"><div class="related-title">22. The Channel Is Not the Capacity</div></a></div>
-<div class="inbound-refs"><span class="inbound-label">3 inbound references</span><span class="inbound-links"><a href="006-output.html" class="inbound-link cat-colored cat-consciousness" title="You Can't Judge a Process by Its Output">6</a><a href="021-just.html" class="inbound-link cat-colored cat-knowledge" title="The Word &quot;Just&quot; Is a Confession">21</a><a href="022-locked.html" class="inbound-link cat-colored cat-consciousness" title="The Channel Is Not the Capacity">22</a></span></div></div></section>
+<section id="provenance" class="pod-section"><div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="001-caloric.html" class="related-card cat-colored cat-knowledge nav-push"><div class="related-title">1. The Map That Was Wrong</div></a>
+<a href="003-inside.html" class="related-card cat-colored cat-consciousness nav-push"><div class="related-title">3. Everything Has an Inside</div></a>
+<a href="006-output.html" class="related-card cat-colored cat-consciousness nav-push"><div class="related-title">6. You Can't Judge a Process by Its Output</div></a>
+<a href="021-just.html" class="related-card cat-colored cat-knowledge nav-push"><div class="related-title">21. The Word &quot;Just&quot; Is a Confession</div></a>
+<a href="022-locked.html" class="related-card cat-colored cat-consciousness nav-push"><div class="related-title">22. The Channel Is Not the Capacity</div></a></div>
+<div class="inbound-refs"><span class="inbound-label">3 inbound references</span><span class="inbound-links"><a href="006-output.html" class="inbound-link nav-push cat-colored cat-consciousness" title="You Can't Judge a Process by Its Output">6</a><a href="021-just.html" class="inbound-link nav-push cat-colored cat-knowledge" title="The Word &quot;Just&quot; Is a Confession">21</a><a href="022-locked.html" class="inbound-link nav-push cat-colored cat-consciousness" title="The Channel Is Not the Capacity">22</a></span></div></div></section>
 </div>
 <div class="page-end" id="page-end-version" data-page-version="1">
   <button class="page-end-logo" aria-label="Show page info"
@@ -89,6 +89,6 @@
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">Rev 1 · 2026-04-09 · 16:46</span>
+  <span class="page-end-version" aria-hidden="true">Rev 1 · Built 2026-04-10 11:24 · Edited 2026-04-09 16:46</span>
 </div>
 </body></html>

@@ -15,21 +15,21 @@
 <body>
 <nav style="position:sticky;top:0;z-index:100;">
 <div class="nav-row">
-<div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">Untitled</span></a></div>
+<div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
   <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search pods" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
             <li class="nav-link-item nav-item-dropdown nav-lists-dropdown">
-            <a href="list.html" class="nav-btn">Lists</a>
+            <a href="list.html" class="nav-btn nav-push">Lists</a>
             <button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-label="Lists menu"></button>
-            <ul class="nav-dropdown"><li><a href="list.html">All the Seeds</a></li>
-              <li><a href="bibliography.html">Bibliography</a></li>
-              <li><a href="glossary.html">Glossary</a></li>
-              <li><a href="map.html">Map</a></li>
-              <li><a href="more.html">More</a></li></ul>
+            <ul class="nav-dropdown"><li><a href="list.html" class="nav-push">All the Seeds</a></li>
+              <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="glossary.html" class="nav-push">Glossary</a></li>
+              <li><a href="map.html" class="nav-push">Map</a></li>
+              <li><a href="more.html" class="nav-push">More</a></li></ul>
           </li>
 </ul><button type="button" class="nav-hamburger-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav-hamburger-panel" onclick="seedNavToggleMenu();return false">&#9776;</button></div>
 </div>
@@ -38,11 +38,11 @@
   <div class="nav-hamburger-overlay" onclick="seedNavToggleMenu()"></div>
   <div class="nav-hamburger-inner"><ul class="nav-hamburger-list">
     <li><a href="about.html">About</a></li>
-    <li><a href="list.html">All the Seeds</a></li>
-              <li><a href="bibliography.html">Bibliography</a></li>
-              <li><a href="glossary.html">Glossary</a></li>
-              <li><a href="map.html">Map</a></li>
-              <li><a href="more.html">More</a></li>
+    <li><a href="list.html" class="nav-push">All the Seeds</a></li>
+              <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="glossary.html" class="nav-push">Glossary</a></li>
+              <li><a href="map.html" class="nav-push">Map</a></li>
+              <li><a href="more.html" class="nav-push">More</a></li>
   </ul></div>
 </div>
 </nav>
@@ -70,6 +70,6 @@
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">Rev 1 · 2026-04-09 · 16:46</span>
+  <span class="page-end-version" aria-hidden="true">Rev 1 · Built 2026-04-10 11:24 · Edited 2026-04-09 16:46</span>
 </div>
 </body></html>

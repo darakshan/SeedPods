@@ -15,21 +15,21 @@
 <body>
 <nav style="position:sticky;top:0;z-index:100;">
 <div class="nav-row">
-<div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">Untitled</span></a></div>
+<div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
   <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search pods" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
             <li class="nav-link-item nav-item-dropdown nav-lists-dropdown">
-            <a href="list.html" class="nav-btn">Lists</a>
+            <a href="list.html" class="nav-btn nav-push">Lists</a>
             <button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-label="Lists menu"></button>
-            <ul class="nav-dropdown"><li><a href="list.html">All the Seeds</a></li>
-              <li><a href="bibliography.html">Bibliography</a></li>
-              <li><a href="glossary.html">Glossary</a></li>
-              <li><a href="map.html">Map</a></li>
-              <li><a href="more.html">More</a></li></ul>
+            <ul class="nav-dropdown"><li><a href="list.html" class="nav-push">All the Seeds</a></li>
+              <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="glossary.html" class="nav-push">Glossary</a></li>
+              <li><a href="map.html" class="nav-push">Map</a></li>
+              <li><a href="more.html" class="nav-push">More</a></li></ul>
           </li>
 </ul><button type="button" class="nav-hamburger-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav-hamburger-panel" onclick="seedNavToggleMenu();return false">&#9776;</button></div>
 </div>
@@ -43,11 +43,11 @@
   <div class="nav-hamburger-overlay" onclick="seedNavToggleMenu()"></div>
   <div class="nav-hamburger-inner"><ul class="nav-hamburger-list">
     <li><a href="about.html">About</a></li>
-    <li><a href="list.html">All the Seeds</a></li>
-              <li><a href="bibliography.html">Bibliography</a></li>
-              <li><a href="glossary.html">Glossary</a></li>
-              <li><a href="map.html">Map</a></li>
-              <li><a href="more.html">More</a></li>
+    <li><a href="list.html" class="nav-push">All the Seeds</a></li>
+              <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="glossary.html" class="nav-push">Glossary</a></li>
+              <li><a href="map.html" class="nav-push">Map</a></li>
+              <li><a href="more.html" class="nav-push">More</a></li>
   </ul></div>
 </div>
 </nav>
@@ -62,15 +62,14 @@
 <div class="wrap">
   <div class="meta-row"><a href="index.html#biology" class="tag">biology</a><span class="mono small dim"> · </span><span class="mono small warm">Pod 45</span><span class="mono small dim"> · proto</span></div>
   <div class="seedpod-header fade cat-colored cat-biology"><h1>How Learning Becomes Hardwired: The Baldwin Effect</h1></div>
-  <section id="_prolog" class="pod-section pod-prolog"><div class="prose"><p>If evolution and neural network training find the same solutions, a natural question arises: how does a solution that one generation learns during its lifetime become genetically specified in subsequent generations? The Baldwin effect, proposed in 1896, provides a mechanism that requires no Lamarckian inheritance. If individuals who are genetically predisposed to learn a solution faster — or to start closer to it — survive and reproduce better, then selection will progressively shift the genetic starting point toward the learned solution, until eventually the learning itself is unnecessary and the trait appears innate. The learned behavior is absorbed into the genome not by any direct encoding of experience but by selection pressure gradually narrowing the space of possible developmental outcomes around the useful solution. Evolution, development, learning, and moment-to-moment thought may all be the same fundamental algorithm — variation and selection — running on different substrates at different timescales, each level feeding into the ones above and below it.</p>
+  <section id="_prolog" class="pod-section pod-prolog"><div class="prose"><p>If evolution and neural network training find the same solutions, a natural question arises: how does a solution that one generation learns during its lifetime become genetically specified in subsequent generations? The Baldwin effect, proposed in 1896<sup class="footnote-ref"><a href="bibliography.html#ref-045-baldwin-1">1</a></sup>, provides a mechanism that requires no Lamarckian inheritance. If individuals who are genetically predisposed to learn a solution faster — or to start closer to it — survive and reproduce better, then selection will progressively shift the genetic starting point toward the learned solution, until eventually the learning itself is unnecessary and the trait appears innate. The learned behavior is absorbed into the genome not by any direct encoding of experience but by selection pressure gradually narrowing the space of possible developmental outcomes around the useful solution. Evolution, development, learning, and moment-to-moment thought may all be the same fundamental algorithm — variation and selection — running on different substrates at different timescales, each level feeding into the ones above and below it.</p>
 </div></section>
-<section id="provenance" class="pod-section"><h3 class="section-heading ref-heading">Further reading</h3><div class="prose ref-list"><p class="ref-entry"><a href="bibliography.html#baldwin">Baldwin,</a> J.M. A new factor in evolution (1896). The original proposal. Simpson, G.G. The Baldwin effect (1953). Modern synthesis treatment.</p></div>
-    <div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="011-moreisdifferent.html" class="related-card related-card-prelim cat-colored cat-consciousness"><div class="related-title">11. More Is Different</div></a>
-<a href="016-neuralnetwork.html" class="related-card related-card-prelim cat-colored cat-ai-minds"><div class="related-title">16. The Network Is a Field Having Occasions</div></a>
-<a href="034-onerule.html" class="related-card related-card-prelim cat-colored cat-mathematics"><div class="related-title">34. One Rule Is Enough</div></a>
-<a href="041-colorwheel.html" class="related-card related-card-prelim cat-colored cat-sensation"><div class="related-title">41. The Surprising Color Wheel</div></a>
-<a href="046-thinkfast.html" class="related-card related-card-prelim cat-colored cat-ai-minds"><div class="related-title">46. Thought as Evolution in Milliseconds</div></a></div>
-<div class="inbound-refs"><span class="inbound-label">6 inbound references</span><span class="inbound-links"><a href="006-output.html" class="inbound-link cat-colored cat-consciousness" title="You Can't Judge a Process by Its Output">6</a><a href="019-funerals.html" class="inbound-link cat-colored cat-knowledge" title="Science Advances One Funeral at a Time">19</a><a href="041-colorwheel.html" class="inbound-link cat-colored cat-sensation" title="The Surprising Color Wheel">41</a><a href="042-eyethinks.html" class="inbound-link cat-colored cat-sensation" title="Opponent Processing: The Eye Thinks Before the Brain Does">42</a><a href="044-ai-retina.html" class="inbound-link cat-colored cat-sensation" title="Artificial Networks Rediscover the Retina">44</a><a href="046-thinkfast.html" class="inbound-link cat-colored cat-ai-minds" title="Thought as Evolution in Milliseconds">46</a></span></div></div></section>
+<section id="provenance" class="pod-section"><div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="011-moreisdifferent.html" class="related-card related-card-prelim cat-colored cat-consciousness nav-push"><div class="related-title">11. More Is Different</div></a>
+<a href="016-neuralnetwork.html" class="related-card related-card-prelim cat-colored cat-ai-minds nav-push"><div class="related-title">16. The Network Is a Field Having Occasions</div></a>
+<a href="034-onerule.html" class="related-card related-card-prelim cat-colored cat-mathematics nav-push"><div class="related-title">34. One Rule Is Enough</div></a>
+<a href="041-colorwheel.html" class="related-card related-card-prelim cat-colored cat-sensation nav-push"><div class="related-title">41. The Surprising Color Wheel</div></a>
+<a href="046-thinkfast.html" class="related-card related-card-prelim cat-colored cat-ai-minds nav-push"><div class="related-title">46. Thought as Evolution in Milliseconds</div></a></div>
+<div class="inbound-refs"><span class="inbound-label">6 inbound references</span><span class="inbound-links"><a href="006-output.html" class="inbound-link nav-push cat-colored cat-consciousness" title="You Can't Judge a Process by Its Output">6</a><a href="019-funerals.html" class="inbound-link nav-push cat-colored cat-knowledge" title="Science Advances One Funeral at a Time">19</a><a href="041-colorwheel.html" class="inbound-link nav-push cat-colored cat-sensation" title="The Surprising Color Wheel">41</a><a href="042-eyethinks.html" class="inbound-link nav-push cat-colored cat-sensation" title="Opponent Processing: The Eye Thinks Before the Brain Does">42</a><a href="044-ai-retina.html" class="inbound-link nav-push cat-colored cat-sensation" title="Artificial Networks Rediscover the Retina">44</a><a href="046-thinkfast.html" class="inbound-link nav-push cat-colored cat-ai-minds" title="Thought as Evolution in Milliseconds">46</a></span></div></div></section>
 <section id="images" class="pod-section"><h2 class="section-heading">Images</h2><div class="prose"><figure class="directive-image directive-image--left"><img src="images/045-baldwin.png" alt=""><figcaption>Waddington's epigenetic landscape: learned behaviour becoming hardwired</figcaption></figure>
 </div></section>
 </div>
@@ -81,6 +80,6 @@
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">Rev 2 · 2026-04-09 · 16:46</span>
+  <span class="page-end-version" aria-hidden="true">Rev 2 · Built 2026-04-10 11:24 · Edited 2026-04-09 16:46</span>
 </div>
 </body></html>

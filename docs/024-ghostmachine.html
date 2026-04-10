@@ -15,21 +15,21 @@
 <body>
 <nav style="position:sticky;top:0;z-index:100;">
 <div class="nav-row">
-<div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">Untitled</span></a></div>
+<div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
   <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search pods" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
             <li class="nav-link-item nav-item-dropdown nav-lists-dropdown">
-            <a href="list.html" class="nav-btn">Lists</a>
+            <a href="list.html" class="nav-btn nav-push">Lists</a>
             <button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-label="Lists menu"></button>
-            <ul class="nav-dropdown"><li><a href="list.html">All the Seeds</a></li>
-              <li><a href="bibliography.html">Bibliography</a></li>
-              <li><a href="glossary.html">Glossary</a></li>
-              <li><a href="map.html">Map</a></li>
-              <li><a href="more.html">More</a></li></ul>
+            <ul class="nav-dropdown"><li><a href="list.html" class="nav-push">All the Seeds</a></li>
+              <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="glossary.html" class="nav-push">Glossary</a></li>
+              <li><a href="map.html" class="nav-push">Map</a></li>
+              <li><a href="more.html" class="nav-push">More</a></li></ul>
           </li>
 </ul><button type="button" class="nav-hamburger-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav-hamburger-panel" onclick="seedNavToggleMenu();return false">&#9776;</button></div>
 </div>
@@ -42,11 +42,11 @@
   <div class="nav-hamburger-overlay" onclick="seedNavToggleMenu()"></div>
   <div class="nav-hamburger-inner"><ul class="nav-hamburger-list">
     <li><a href="about.html">About</a></li>
-    <li><a href="list.html">All the Seeds</a></li>
-              <li><a href="bibliography.html">Bibliography</a></li>
-              <li><a href="glossary.html">Glossary</a></li>
-              <li><a href="map.html">Map</a></li>
-              <li><a href="more.html">More</a></li>
+    <li><a href="list.html" class="nav-push">All the Seeds</a></li>
+              <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="glossary.html" class="nav-push">Glossary</a></li>
+              <li><a href="map.html" class="nav-push">Map</a></li>
+              <li><a href="more.html" class="nav-push">More</a></li>
   </ul></div>
 </div>
 </nav>
@@ -64,21 +64,18 @@
   <section id="_prolog" class="pod-section pod-prolog"><div class="prose"><p>NOTE: This depth sketch was developed in session 2026-03-14. The seedpod needs a full Surface, Script, and Images before it can advance beyond prelim.</p>
 <figure class="directive-image directive-image--left"><img src="images/024-ghostmachine.jpg" alt=""><figcaption>The ghost in the machine: clockwork mechanism</figcaption></figure>
 <p>Three thinkers triangulate the same territory from different directions:</p>
-<p>Gilbert Ryle (The Concept of Mind, 1949) diagnosed the error: there is no ghost. The “mind” as a separate substance haunting the body is a category mistake — the confusion of a process with a thing. Ryle called it the ghost in the machine. He was right that the ghost, as traditionally conceived, doesn’t exist.</p>
-<p>Arthur Koestler (The Ghost in the Machine, 1967) named what was lost in correcting Ryle’s error: by expelling the ghost, materialist reductionism threw out something real. There is something it is like to be a living organized system — not a supernatural substance, but genuine interiority at each level of the holon hierarchy. The ghost was real. It was just mislocated.</p>
-<p>Alfred North Whitehead dissolved the problem entirely: the ghost was never separate from the machine in the first place. The machine, all the way down, has an inside. Experience is not a product that complex biology generates — it is the interior dimension of events that complex biology expresses at its highest pitch. The hard problem of consciousness doesn’t get solved by this picture. It gets dissolved.</p>
+<p>Gilbert Ryle<sup class="footnote-ref"><a href="bibliography.html#ref-024-ghostmachine-1">1</a></sup> (The Concept of Mind, 1949) diagnosed the error: there is no ghost. The “mind” as a separate substance haunting the body is a category mistake — the confusion of a process with a thing. Ryle called it the ghost in the machine. He was right that the ghost, as traditionally conceived, doesn’t exist.</p>
+<p>Arthur Koestler<sup class="footnote-ref"><a href="bibliography.html#ref-024-ghostmachine-2">2</a></sup> (The Ghost in the Machine, 1967) named what was lost in correcting Ryle’s error: by expelling the ghost, materialist reductionism threw out something real. There is something it is like to be a living organized system — not a supernatural substance, but genuine interiority at each level of the holon hierarchy. The ghost was real. It was just mislocated.</p>
+<p>Alfred North Whitehead<sup class="footnote-ref"><a href="bibliography.html#ref-024-ghostmachine-3">3</a></sup> dissolved the problem entirely: the ghost was never separate from the machine in the first place. The machine, all the way down, has an inside. Experience is not a product that complex biology generates — it is the interior dimension of events that complex biology expresses at its highest pitch. The hard problem of consciousness doesn’t get solved by this picture. It gets dissolved.</p>
 <p>Ryle diagnoses the error. Koestler names what was lost. Whitehead removes the assumption that created the problem.</p>
 <p>See also <a href="003-inside.html">Everything Has an Inside</a> for the inside going all the way down, and <a href="011-moreisdifferent.html">More Is Different</a> for Koestler’s holon concept developed more fully.</p>
 </div></section>
-<section id="provenance" class="pod-section"><h3 class="section-heading ref-heading">Further reading</h3><div class="prose ref-list"><p class="ref-entry"><a href="bibliography.html#ryle">Ryle,</a> G. The Concept of Mind (1949). The ghost-in-the-machine diagnosis and category mistakes.</p>
-<p class="ref-entry"><a href="bibliography.html#koestler">Koestler,</a> A. The Ghost in the Machine (1967). What was lost when the ghost was expelled; holons and hierarchy.</p>
-<p class="ref-entry"><a href="bibliography.html#whitehead">Whitehead,</a> A.N. Process and Reality (1929). Experience as the interior dimension of process, not a separate substance.</p></div>
-    <div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="002-events.html" class="related-card cat-colored cat-physics"><div class="related-title">2. Reality Is Events, Not Things</div></a>
-<a href="012-autopoiesis.html" class="related-card cat-colored cat-biology"><div class="related-title">12. The Cell That Makes Itself</div></a>
-<a href="021-just.html" class="related-card cat-colored cat-knowledge"><div class="related-title">21. The Word &quot;Just&quot; Is a Confession</div></a>
-<a href="037-assembly.html" class="related-card related-card-prelim cat-colored cat-mathematics"><div class="related-title">37. The Architecture of Levels</div></a>
-<a href="067-monads-holons.html" class="related-card related-card-prelim cat-colored cat-physics"><div class="related-title">67. Leibniz as the Unlikely Ancestor of the Holographic Principle</div></a></div>
-<div class="inbound-refs"><span class="inbound-label">1 inbound reference</span><span class="inbound-links"><a href="027-usedtothink.html" class="inbound-link cat-colored cat-knowledge" title="We Used to Think. Now We Know.">27</a></span></div></div></section>
+<section id="provenance" class="pod-section"><div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="002-events.html" class="related-card cat-colored cat-physics nav-push"><div class="related-title">2. Reality Is Events, Not Things</div></a>
+<a href="012-autopoiesis.html" class="related-card cat-colored cat-biology nav-push"><div class="related-title">12. The Cell That Makes Itself</div></a>
+<a href="021-just.html" class="related-card cat-colored cat-knowledge nav-push"><div class="related-title">21. The Word &quot;Just&quot; Is a Confession</div></a>
+<a href="037-assembly.html" class="related-card related-card-prelim cat-colored cat-mathematics nav-push"><div class="related-title">37. The Architecture of Levels</div></a>
+<a href="067-monads-holons.html" class="related-card related-card-prelim cat-colored cat-physics nav-push"><div class="related-title">67. Leibniz as the Unlikely Ancestor of the Holographic Principle</div></a></div>
+<div class="inbound-refs"><span class="inbound-label">1 inbound reference</span><span class="inbound-links"><a href="027-usedtothink.html" class="inbound-link nav-push cat-colored cat-knowledge" title="We Used to Think. Now We Know.">27</a></span></div></div></section>
 </div>
 <div class="page-end" id="page-end-version" data-page-version="1">
   <button class="page-end-logo" aria-label="Show page info"
@@ -87,6 +84,6 @@
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">Rev 1 · 2026-04-09 · 16:46</span>
+  <span class="page-end-version" aria-hidden="true">Rev 1 · Built 2026-04-10 11:24 · Edited 2026-04-09 16:46</span>
 </div>
 </body></html>

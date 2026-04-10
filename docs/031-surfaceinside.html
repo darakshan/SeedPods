@@ -15,21 +15,21 @@
 <body>
 <nav style="position:sticky;top:0;z-index:100;">
 <div class="nav-row">
-<div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">Untitled</span></a></div>
+<div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
   <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search pods" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
             <li class="nav-link-item nav-item-dropdown nav-lists-dropdown">
-            <a href="list.html" class="nav-btn">Lists</a>
+            <a href="list.html" class="nav-btn nav-push">Lists</a>
             <button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-label="Lists menu"></button>
-            <ul class="nav-dropdown"><li><a href="list.html">All the Seeds</a></li>
-              <li><a href="bibliography.html">Bibliography</a></li>
-              <li><a href="glossary.html">Glossary</a></li>
-              <li><a href="map.html">Map</a></li>
-              <li><a href="more.html">More</a></li></ul>
+            <ul class="nav-dropdown"><li><a href="list.html" class="nav-push">All the Seeds</a></li>
+              <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="glossary.html" class="nav-push">Glossary</a></li>
+              <li><a href="map.html" class="nav-push">Map</a></li>
+              <li><a href="more.html" class="nav-push">More</a></li></ul>
           </li>
 </ul><button type="button" class="nav-hamburger-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav-hamburger-panel" onclick="seedNavToggleMenu();return false">&#9776;</button></div>
 </div>
@@ -46,11 +46,11 @@
   <div class="nav-hamburger-overlay" onclick="seedNavToggleMenu()"></div>
   <div class="nav-hamburger-inner"><ul class="nav-hamburger-list">
     <li><a href="about.html">About</a></li>
-    <li><a href="list.html">All the Seeds</a></li>
-              <li><a href="bibliography.html">Bibliography</a></li>
-              <li><a href="glossary.html">Glossary</a></li>
-              <li><a href="map.html">Map</a></li>
-              <li><a href="more.html">More</a></li>
+    <li><a href="list.html" class="nav-push">All the Seeds</a></li>
+              <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="glossary.html" class="nav-push">Glossary</a></li>
+              <li><a href="map.html" class="nav-push">Map</a></li>
+              <li><a href="more.html" class="nav-push">More</a></li>
   </ul></div>
 </div>
 </nav>
@@ -68,17 +68,14 @@
   <section id="surface" class="pod-section"><h2 class="section-heading">Surface</h2><div class="prose"><p>A child stops everything for a soap bubble. There’s something revelatory about it — not just beautiful. As if it’s showing us something we already knew. It is.</p>
 <figure class="directive-image directive-image--left"><img src="images/031-surfaceinside.jpg" alt=""><figcaption>Soap bubble: the surface is the inside</figcaption></figure>
 </div></section>
-<section id="depth" class="pod-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>The holographic principle — Bekenstein, Hawking. All the information in a volume is encoded on its boundary. The interior is a projection of the surface. This isn’t metaphor. It’s physics. And it means interiority isn’t hidden behind the surface — it’s what the surface does. At every scale: cell membrane, skull, galactic boundary. Whitehead’s phrase fits exactly: the within of things is the boundary of things.</p>
+<section id="depth" class="pod-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>The holographic principle — Bekenstein<sup class="footnote-ref"><a href="bibliography.html#ref-031-surfaceinside-1">1</a></sup>, Hawking.<sup class="footnote-ref"><a href="bibliography.html#ref-031-surfaceinside-2">2</a></sup> All the information in a volume is encoded on its boundary. The interior is a projection of the surface. This isn’t metaphor. It’s physics. And it means interiority isn’t hidden behind the surface — it’s what the surface does. At every scale: cell membrane, skull, galactic boundary. Whitehead’s<sup class="footnote-ref"><a href="bibliography.html#ref-031-surfaceinside-3">3</a></sup> phrase fits exactly: the within of things is the boundary of things.</p>
 </div></section>
-<section id="provenance" class="pod-section"><h3 class="section-heading ref-heading">Further reading</h3><div class="prose ref-list"><p class="ref-entry"><a href="bibliography.html#bekenstein">Bekenstein</a> (1972) — information content proportional to surface area, not volume.</p>
-<p class="ref-entry"><a href="bibliography.html#hawking">Hawking,</a> Stephen — black hole thermodynamics, boundary entropy.</p>
-<p class="ref-entry"><a href="bibliography.html#whitehead">Whitehead,</a> A.N. — 'the within of things,' prehension as interiority at every scale.</p></div>
-    <div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="003-inside.html" class="related-card cat-colored cat-consciousness"><div class="related-title">3. Everything Has an Inside</div></a>
-<a href="004-self.html" class="related-card related-card-prelim cat-colored cat-consciousness"><div class="related-title">4. The Self Is a Pattern, Not a Thing</div></a>
-<a href="008-fields.html" class="related-card cat-colored cat-sensation"><div class="related-title">8. The Field Is the Medium of Feeling</div></a>
-<a href="014-cities.html" class="related-card related-card-prelim cat-colored cat-biology"><div class="related-title">14. Cities Have an Inside Too</div></a>
-<a href="068-bubbles.html" class="related-card related-card-prelim cat-colored cat-biology"><div class="related-title">68. The Soap Bubble as Recognition, Not Metaphor</div></a></div>
-<div class="inbound-refs"><span class="inbound-label">4 inbound references</span><span class="inbound-links"><a href="003-inside.html" class="inbound-link cat-colored cat-consciousness" title="Everything Has an Inside">3</a><a href="004-self.html" class="inbound-link cat-colored cat-consciousness" title="The Self Is a Pattern, Not a Thing">4</a><a href="012-autopoiesis.html" class="inbound-link cat-colored cat-biology" title="The Cell That Makes Itself">12</a><a href="068-bubbles.html" class="inbound-link cat-colored cat-biology" title="The Soap Bubble as Recognition, Not Metaphor">68</a></span></div></div></section>
+<section id="provenance" class="pod-section"><div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="003-inside.html" class="related-card cat-colored cat-consciousness nav-push"><div class="related-title">3. Everything Has an Inside</div></a>
+<a href="004-self.html" class="related-card related-card-prelim cat-colored cat-consciousness nav-push"><div class="related-title">4. The Self Is a Pattern, Not a Thing</div></a>
+<a href="008-fields.html" class="related-card cat-colored cat-sensation nav-push"><div class="related-title">8. The Field Is the Medium of Feeling</div></a>
+<a href="014-cities.html" class="related-card related-card-prelim cat-colored cat-biology nav-push"><div class="related-title">14. Cities Have an Inside Too</div></a>
+<a href="068-bubbles.html" class="related-card related-card-prelim cat-colored cat-biology nav-push"><div class="related-title">68. The Soap Bubble as Recognition, Not Metaphor</div></a></div>
+<div class="inbound-refs"><span class="inbound-label">4 inbound references</span><span class="inbound-links"><a href="003-inside.html" class="inbound-link nav-push cat-colored cat-consciousness" title="Everything Has an Inside">3</a><a href="004-self.html" class="inbound-link nav-push cat-colored cat-consciousness" title="The Self Is a Pattern, Not a Thing">4</a><a href="012-autopoiesis.html" class="inbound-link nav-push cat-colored cat-biology" title="The Cell That Makes Itself">12</a><a href="068-bubbles.html" class="inbound-link nav-push cat-colored cat-biology" title="The Soap Bubble as Recognition, Not Metaphor">68</a></span></div></div></section>
 <section id="script" class="pod-section"><h2 class="section-heading">Script</h2><div class="prose"><ol>
 <li><p>A child’s face. A soap bubble drifting past. She’s not thinking about physics. But her stillness is recognition.</p>
 </li>
@@ -98,6 +95,6 @@ Cell membrane electron microscopy</p>
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">Rev 1 · 2026-04-09 · 16:46</span>
+  <span class="page-end-version" aria-hidden="true">Rev 1 · Built 2026-04-10 11:24 · Edited 2026-04-09 16:46</span>
 </div>
 </body></html>

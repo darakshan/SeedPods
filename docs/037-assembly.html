@@ -15,21 +15,21 @@
 <body>
 <nav style="position:sticky;top:0;z-index:100;">
 <div class="nav-row">
-<div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">Untitled</span></a></div>
+<div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
   <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search pods" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
             <li class="nav-link-item nav-item-dropdown nav-lists-dropdown">
-            <a href="list.html" class="nav-btn">Lists</a>
+            <a href="list.html" class="nav-btn nav-push">Lists</a>
             <button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-label="Lists menu"></button>
-            <ul class="nav-dropdown"><li><a href="list.html">All the Seeds</a></li>
-              <li><a href="bibliography.html">Bibliography</a></li>
-              <li><a href="glossary.html">Glossary</a></li>
-              <li><a href="map.html">Map</a></li>
-              <li><a href="more.html">More</a></li></ul>
+            <ul class="nav-dropdown"><li><a href="list.html" class="nav-push">All the Seeds</a></li>
+              <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="glossary.html" class="nav-push">Glossary</a></li>
+              <li><a href="map.html" class="nav-push">Map</a></li>
+              <li><a href="more.html" class="nav-push">More</a></li></ul>
           </li>
 </ul><button type="button" class="nav-hamburger-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav-hamburger-panel" onclick="seedNavToggleMenu();return false">&#9776;</button></div>
 </div>
@@ -42,11 +42,11 @@
   <div class="nav-hamburger-overlay" onclick="seedNavToggleMenu()"></div>
   <div class="nav-hamburger-inner"><ul class="nav-hamburger-list">
     <li><a href="about.html">About</a></li>
-    <li><a href="list.html">All the Seeds</a></li>
-              <li><a href="bibliography.html">Bibliography</a></li>
-              <li><a href="glossary.html">Glossary</a></li>
-              <li><a href="map.html">Map</a></li>
-              <li><a href="more.html">More</a></li>
+    <li><a href="list.html" class="nav-push">All the Seeds</a></li>
+              <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="glossary.html" class="nav-push">Glossary</a></li>
+              <li><a href="map.html" class="nav-push">Map</a></li>
+              <li><a href="more.html" class="nav-push">More</a></li>
   </ul></div>
 </div>
 </nav>
@@ -66,19 +66,17 @@
 <figure class="directive-image directive-image--left"><img src="images/037-assembly.jpg" alt=""><figcaption>Nested levels: the architecture of assembly</figcaption></figure> And those sentences, when they stabilize, become the new vocabulary for the next level of abstraction. Atoms are the vocabulary from which molecules are built. Molecules stabilize into the vocabulary from which cells are built. Cells into the vocabulary from which organisms are built. Each level's sentences are the next level's words.
 <p>This is not the same claim as <a href="011-moreisdifferent.html">More Is Different</a> — “more is different.” That seedpod is about accumulation crossing thresholds into qualitative change. This seedpod is about the <em>architecture</em> behind those thresholds — the generative mechanism that explains why more keeps becoming different. Of course more is different: because at sufficient complexity the sentences stabilize into a new vocabulary and you are now operating in a different register entirely.</p>
 <p>Three frameworks describe the same architecture from different angles:</p>
-<p>Arthur Koestler’s holons (<a href="011-moreisdifferent.html">More Is Different</a>, <a href="024-ghostmachine.html">Ghost in the Machine</a>): entities that are simultaneously wholes and parts of larger wholes. The holon is the stable sentence that becomes the next level’s word.</p>
+<p>Arthur Koestler’s<sup class="footnote-ref"><a href="bibliography.html#ref-037-assembly-1">1</a></sup> holons (<a href="011-moreisdifferent.html">More Is Different</a>, <a href="024-ghostmachine.html">Ghost in the Machine</a>): entities that are simultaneously wholes and parts of larger wholes. The holon is the stable sentence that becomes the next level’s word.</p>
 <p>Alfred North Whitehead’s societies of actual occasions: stable patterns of events that persist through time and become the inherited world of the next level of events. The society is the sentence. The next society prehends it as vocabulary.</p>
-<p>Sara Walker’s assembly theory: complex objects can only exist if assembled through a sequence of steps. The assembly index measures complexity by the length of that sequence. High assembly index objects that reproduce at high copy number are the signature of life. The history is stored in the structure — the sentence is still present in the word, compressed.</p>
+<p>Sara Walker’s assembly theory<sup class="footnote-ref"><a href="bibliography.html#ref-037-assembly-2">2</a></sup>: complex objects can only exist if assembled through a sequence of steps. The assembly index measures complexity by the length of that sequence. High assembly index objects that reproduce at high copy number are the signature of life. The history is stored in the structure — the sentence is still present in the word, compressed.</p>
 <p>These three are not competing accounts. They are the same architecture described from physics, philosophy, and biology respectively.</p>
 </div></section>
-<section id="provenance" class="pod-section"><h3 class="section-heading ref-heading">Further reading</h3><div class="prose ref-list"><p class="ref-entry"><a href="bibliography.html#koestler">Koestler,</a> A. The Ghost in the Machine (1967). Holons and the hierarchy of whole/part.</p>
-<p class="ref-entry"><a href="bibliography.html#walker">Walker,</a> S.I. et al. Assembly theory (Nature 2023). Assembly index and the signature of life.</p></div>
-    <div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="011-moreisdifferent.html" class="related-card related-card-prelim cat-colored cat-consciousness"><div class="related-title">11. More Is Different</div></a>
-<a href="002-events.html" class="related-card cat-colored cat-physics"><div class="related-title">2. Reality Is Events, Not Things</div></a>
-<a href="012-autopoiesis.html" class="related-card cat-colored cat-biology"><div class="related-title">12. The Cell That Makes Itself</div></a>
-<a href="014-cities.html" class="related-card related-card-prelim cat-colored cat-biology"><div class="related-title">14. Cities Have an Inside Too</div></a>
-<a href="067-monads-holons.html" class="related-card related-card-prelim cat-colored cat-physics"><div class="related-title">67. Leibniz as the Unlikely Ancestor of the Holographic Principle</div></a></div>
-<div class="inbound-refs"><span class="inbound-label">18 inbound references</span><span class="inbound-links"><a href="002-events.html" class="inbound-link cat-colored cat-physics" title="Reality Is Events, Not Things">2</a><a href="004-self.html" class="inbound-link cat-colored cat-consciousness" title="The Self Is a Pattern, Not a Thing">4</a><a href="006-output.html" class="inbound-link cat-colored cat-consciousness" title="You Can't Judge a Process by Its Output">6</a><a href="011-moreisdifferent.html" class="inbound-link cat-colored cat-consciousness" title="More Is Different">11</a><a href="012-autopoiesis.html" class="inbound-link cat-colored cat-biology" title="The Cell That Makes Itself">12</a><a href="014-cities.html" class="inbound-link cat-colored cat-biology" title="Cities Have an Inside Too">14</a><a href="016-neuralnetwork.html" class="inbound-link cat-colored cat-ai-minds" title="The Network Is a Field Having Occasions">16</a><a href="020-penrose.html" class="inbound-link cat-colored cat-consciousness" title="The Arrow Points Somewhere Else">20</a><a href="024-ghostmachine.html" class="inbound-link cat-colored cat-consciousness" title="Ghost in the Machine">24</a><a href="032-skyfossil.html" class="inbound-link cat-colored cat-physics" title="The Sky Is a Fossil Record">32</a><a href="042-eyethinks.html" class="inbound-link cat-colored cat-sensation" title="Opponent Processing: The Eye Thinks Before the Brain Does">42</a><a href="044-ai-retina.html" class="inbound-link cat-colored cat-sensation" title="Artificial Networks Rediscover the Retina">44</a><a href="046-thinkfast.html" class="inbound-link cat-colored cat-ai-minds" title="Thought as Evolution in Milliseconds">46</a><a href="051-spacetime.html" class="inbound-link cat-colored cat-physics" title="Spacetime as Emergent from Information Structure">51</a><a href="058-galacticnets.html" class="inbound-link cat-colored cat-ai-minds" title="Galaxies and AI Weight Matrices as Structural Homologs">58</a><a href="059-galaxyevolve.html" class="inbound-link cat-colored cat-physics" title="Each Galaxy as a Thread of Cosmic Evolution">59</a><a href="067-monads-holons.html" class="inbound-link cat-colored cat-physics" title="Leibniz as the Unlikely Ancestor of the Holographic Principle">67</a><a href="068-bubbles.html" class="inbound-link cat-colored cat-biology" title="The Soap Bubble as Recognition, Not Metaphor">68</a></span></div></div></section>
+<section id="provenance" class="pod-section"><div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="011-moreisdifferent.html" class="related-card related-card-prelim cat-colored cat-consciousness nav-push"><div class="related-title">11. More Is Different</div></a>
+<a href="002-events.html" class="related-card cat-colored cat-physics nav-push"><div class="related-title">2. Reality Is Events, Not Things</div></a>
+<a href="012-autopoiesis.html" class="related-card cat-colored cat-biology nav-push"><div class="related-title">12. The Cell That Makes Itself</div></a>
+<a href="014-cities.html" class="related-card related-card-prelim cat-colored cat-biology nav-push"><div class="related-title">14. Cities Have an Inside Too</div></a>
+<a href="067-monads-holons.html" class="related-card related-card-prelim cat-colored cat-physics nav-push"><div class="related-title">67. Leibniz as the Unlikely Ancestor of the Holographic Principle</div></a></div>
+<div class="inbound-refs"><span class="inbound-label">18 inbound references</span><span class="inbound-links"><a href="002-events.html" class="inbound-link nav-push cat-colored cat-physics" title="Reality Is Events, Not Things">2</a><a href="004-self.html" class="inbound-link nav-push cat-colored cat-consciousness" title="The Self Is a Pattern, Not a Thing">4</a><a href="006-output.html" class="inbound-link nav-push cat-colored cat-consciousness" title="You Can't Judge a Process by Its Output">6</a><a href="011-moreisdifferent.html" class="inbound-link nav-push cat-colored cat-consciousness" title="More Is Different">11</a><a href="012-autopoiesis.html" class="inbound-link nav-push cat-colored cat-biology" title="The Cell That Makes Itself">12</a><a href="014-cities.html" class="inbound-link nav-push cat-colored cat-biology" title="Cities Have an Inside Too">14</a><a href="016-neuralnetwork.html" class="inbound-link nav-push cat-colored cat-ai-minds" title="The Network Is a Field Having Occasions">16</a><a href="020-penrose.html" class="inbound-link nav-push cat-colored cat-consciousness" title="The Arrow Points Somewhere Else">20</a><a href="024-ghostmachine.html" class="inbound-link nav-push cat-colored cat-consciousness" title="Ghost in the Machine">24</a><a href="032-skyfossil.html" class="inbound-link nav-push cat-colored cat-physics" title="The Sky Is a Fossil Record">32</a><a href="042-eyethinks.html" class="inbound-link nav-push cat-colored cat-sensation" title="Opponent Processing: The Eye Thinks Before the Brain Does">42</a><a href="044-ai-retina.html" class="inbound-link nav-push cat-colored cat-sensation" title="Artificial Networks Rediscover the Retina">44</a><a href="046-thinkfast.html" class="inbound-link nav-push cat-colored cat-ai-minds" title="Thought as Evolution in Milliseconds">46</a><a href="051-spacetime.html" class="inbound-link nav-push cat-colored cat-physics" title="Spacetime as Emergent from Information Structure">51</a><a href="058-galacticnets.html" class="inbound-link nav-push cat-colored cat-ai-minds" title="Galaxies and AI Weight Matrices as Structural Homologs">58</a><a href="059-galaxyevolve.html" class="inbound-link nav-push cat-colored cat-physics" title="Each Galaxy as a Thread of Cosmic Evolution">59</a><a href="067-monads-holons.html" class="inbound-link nav-push cat-colored cat-physics" title="Leibniz as the Unlikely Ancestor of the Holographic Principle">67</a><a href="068-bubbles.html" class="inbound-link nav-push cat-colored cat-biology" title="The Soap Bubble as Recognition, Not Metaphor">68</a></span></div></div></section>
 </div>
 <div class="page-end" id="page-end-version" data-page-version="1">
   <button class="page-end-logo" aria-label="Show page info"
@@ -87,6 +85,6 @@
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">Rev 1 · 2026-04-09 · 16:46</span>
+  <span class="page-end-version" aria-hidden="true">Rev 1 · Built 2026-04-10 11:24 · Edited 2026-04-09 16:46</span>
 </div>
 </body></html>

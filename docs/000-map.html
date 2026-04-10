@@ -15,21 +15,21 @@
 <body>
 <nav style="position:sticky;top:0;z-index:100;">
 <div class="nav-row">
-<div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">Untitled</span></a></div>
+<div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
   <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search pods" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
             <li class="nav-link-item nav-item-dropdown nav-lists-dropdown">
-            <a href="list.html" class="nav-btn">Lists</a>
+            <a href="list.html" class="nav-btn nav-push">Lists</a>
             <button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-label="Lists menu"></button>
-            <ul class="nav-dropdown"><li><a href="list.html">All the Seeds</a></li>
-              <li><a href="bibliography.html">Bibliography</a></li>
-              <li><a href="glossary.html">Glossary</a></li>
-              <li><a href="map.html">Map</a></li>
-              <li><a href="more.html">More</a></li></ul>
+            <ul class="nav-dropdown"><li><a href="list.html" class="nav-push">All the Seeds</a></li>
+              <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="glossary.html" class="nav-push">Glossary</a></li>
+              <li><a href="map.html" class="nav-push">Map</a></li>
+              <li><a href="more.html" class="nav-push">More</a></li></ul>
           </li>
 </ul><button type="button" class="nav-hamburger-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav-hamburger-panel" onclick="seedNavToggleMenu();return false">&#9776;</button></div>
 </div>
@@ -46,11 +46,11 @@
   <div class="nav-hamburger-overlay" onclick="seedNavToggleMenu()"></div>
   <div class="nav-hamburger-inner"><ul class="nav-hamburger-list">
     <li><a href="about.html">About</a></li>
-    <li><a href="list.html">All the Seeds</a></li>
-              <li><a href="bibliography.html">Bibliography</a></li>
-              <li><a href="glossary.html">Glossary</a></li>
-              <li><a href="map.html">Map</a></li>
-              <li><a href="more.html">More</a></li>
+    <li><a href="list.html" class="nav-push">All the Seeds</a></li>
+              <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="glossary.html" class="nav-push">Glossary</a></li>
+              <li><a href="map.html" class="nav-push">Map</a></li>
+              <li><a href="more.html" class="nav-push">More</a></li>
   </ul></div>
 </div>
 </nav>
@@ -100,11 +100,12 @@
 <p>The reader who follows connections rather than categories will eventually notice that the seedpods form clusters regardless of their labels: a cluster around the event-not-thing ontology (<a href="002-events.html">Reality Is Events, Not Things</a>, <a href="007-vacuum.html">The Vacuum Is Not Empty</a>, <a href="008-fields.html">The Field Is the Medium of Feeling</a>); a cluster around emergence and complexity (<a href="009-randomness.html">Structure Is What Randomness Does</a>, <a href="011-moreisdifferent.html">More Is Different</a>, <a href="012-autopoiesis.html">The Cell That Makes Itself</a>, <a href="034-onerule.html">One Rule Is Enough</a>); a cluster around the limits of output as evidence (<a href="006-output.html">You Can’t Judge a Process by Its Output</a>, <a href="021-just.html">The Word &quot;Just&quot; Is a Confession</a>, <a href="022-locked.html">The Channel Is Not the Capacity</a>, <a href="025-widechannel.html">We Don’t Know Who or What We’re Talking To</a>). These cross-category clusters are where the project’s deeper structure lives.</p>
 <p>The categories are scaffolding. The web is the building — a structure Christopher Alexander made explicit in A Pattern Language: a navigable collection of related ideas with no mandatory sequence, entered anywhere.</p>
 </div></section>
-<section id="provenance" class="pod-section"><div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="002-events.html" class="related-card cat-colored cat-physics"><div class="related-title">2. Reality Is Events, Not Things</div></a>
-<a href="003-inside.html" class="related-card cat-colored cat-consciousness"><div class="related-title">3. Everything Has an Inside</div></a>
-<a href="008-fields.html" class="related-card cat-colored cat-sensation"><div class="related-title">8. The Field Is the Medium of Feeling</div></a>
-<a href="009-randomness.html" class="related-card cat-colored cat-biology"><div class="related-title">9. Structure Is What Randomness Does</div></a>
-<a href="011-moreisdifferent.html" class="related-card related-card-prelim cat-colored cat-consciousness"><div class="related-title">11. More Is Different</div></a></div></div></section>
+<section id="provenance" class="pod-section"><div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="002-events.html" class="related-card cat-colored cat-physics nav-push"><div class="related-title">2. Reality Is Events, Not Things</div></a>
+<a href="003-inside.html" class="related-card cat-colored cat-consciousness nav-push"><div class="related-title">3. Everything Has an Inside</div></a>
+<a href="008-fields.html" class="related-card cat-colored cat-sensation nav-push"><div class="related-title">8. The Field Is the Medium of Feeling</div></a>
+<a href="009-randomness.html" class="related-card cat-colored cat-biology nav-push"><div class="related-title">9. Structure Is What Randomness Does</div></a>
+<a href="011-moreisdifferent.html" class="related-card related-card-prelim cat-colored cat-consciousness nav-push"><div class="related-title">11. More Is Different</div></a></div>
+<div class="inbound-refs"><span class="inbound-label">0 inbound references</span><span class="inbound-links"></span></div></div></section>
 <section id="script" class="pod-section"><h2 class="section-heading">Script</h2><div class="prose"><ol>
 <li><p>Aerial view of a large wild garden — dense, beautiful, no obvious paths. A visitor at the gate. VO: Every garden needs some paths. Not because nature organizes itself neatly. It doesn’t. But a visitor at the gate needs somewhere to begin.</p>
 </li>
@@ -131,6 +132,6 @@
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">Rev 1 · 2026-04-09 · 16:46</span>
+  <span class="page-end-version" aria-hidden="true">Rev 1 · Built 2026-04-10 11:24 · Edited 2026-04-09 16:46</span>
 </div>
 </body></html>

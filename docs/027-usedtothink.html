@@ -15,21 +15,21 @@
 <body>
 <nav style="position:sticky;top:0;z-index:100;">
 <div class="nav-row">
-<div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">Untitled</span></a></div>
+<div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
   <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search pods" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
             <li class="nav-link-item nav-item-dropdown nav-lists-dropdown">
-            <a href="list.html" class="nav-btn">Lists</a>
+            <a href="list.html" class="nav-btn nav-push">Lists</a>
             <button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-label="Lists menu"></button>
-            <ul class="nav-dropdown"><li><a href="list.html">All the Seeds</a></li>
-              <li><a href="bibliography.html">Bibliography</a></li>
-              <li><a href="glossary.html">Glossary</a></li>
-              <li><a href="map.html">Map</a></li>
-              <li><a href="more.html">More</a></li></ul>
+            <ul class="nav-dropdown"><li><a href="list.html" class="nav-push">All the Seeds</a></li>
+              <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="glossary.html" class="nav-push">Glossary</a></li>
+              <li><a href="map.html" class="nav-push">Map</a></li>
+              <li><a href="more.html" class="nav-push">More</a></li></ul>
           </li>
 </ul><button type="button" class="nav-hamburger-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav-hamburger-panel" onclick="seedNavToggleMenu();return false">&#9776;</button></div>
 </div>
@@ -46,11 +46,11 @@
   <div class="nav-hamburger-overlay" onclick="seedNavToggleMenu()"></div>
   <div class="nav-hamburger-inner"><ul class="nav-hamburger-list">
     <li><a href="about.html">About</a></li>
-    <li><a href="list.html">All the Seeds</a></li>
-              <li><a href="bibliography.html">Bibliography</a></li>
-              <li><a href="glossary.html">Glossary</a></li>
-              <li><a href="map.html">Map</a></li>
-              <li><a href="more.html">More</a></li>
+    <li><a href="list.html" class="nav-push">All the Seeds</a></li>
+              <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="glossary.html" class="nav-push">Glossary</a></li>
+              <li><a href="map.html" class="nav-push">Map</a></li>
+              <li><a href="more.html" class="nav-push">More</a></li>
   </ul></div>
 </div>
 </nav>
@@ -86,28 +86,21 @@
 </div></section>
 <section id="depth" class="pod-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>“We used to think X, now we know Y” is one of the most common moves in popular science writing and documentary narration. It feels like progress. It feels like honesty — look how far we’ve come. But it does three things simultaneously, and only the first is straightforwardly good.</p>
 <p>First, it marks genuine progress. The frameworks that get replaced were genuinely superseded. Caloric theory made predictions that kinetic theory made better. The geocentric model was displaced by one with greater explanatory and predictive power. The progress is real.</p>
-<p>Second, it caricatures the past. The people who believed caloric theory were not naive. Caloric was a triumph of 18th-century science — mathematically precise, experimentally grounded, enormously productive. Antoine Lavoisier built it into the foundations of modern chemistry. It served the scientific community well for decades. When anomalies appeared, the caloric theorists patched the theory rather than abandoning it — which was not stubbornness but good scientific practice. It took James Joule’s precise measurement of the mechanical equivalent of heat in the 1840s to finally close the case. Abandoning a productive framework for a single anomaly is actually bad methodology. The word “just” is never spoken in the “we used to think” retelling, but it is always implied: they just believed in a substance that wasn’t there. This is the move <a href="021-just.html">The Word &quot;Just&quot; Is a Confession</a> tracks — describing a position by its failure and treating the description as complete.</p>
+<p>Second, it caricatures the past. The people who believed caloric theory were not naive. Caloric was a triumph of 18th-century science — mathematically precise, experimentally grounded, enormously productive. Antoine Lavoisier<sup class="footnote-ref"><a href="bibliography.html#ref-027-usedtothink-1">1</a></sup> built it into the foundations of modern chemistry. It served the scientific community well for decades. When anomalies appeared, the caloric theorists patched the theory rather than abandoning it — which was not stubbornness but good scientific practice. It took James Joule’s<sup class="footnote-ref"><a href="bibliography.html#ref-027-usedtothink-2">2</a></sup> precise measurement of the mechanical equivalent of heat in the 1840s to finally close the case. Abandoning a productive framework for a single anomaly is actually bad methodology. The word “just” is never spoken in the “we used to think” retelling, but it is always implied: they just believed in a substance that wasn’t there. This is the move <a href="021-just.html">The Word &quot;Just&quot; Is a Confession</a> tracks — describing a position by its failure and treating the description as complete.</p>
 <p>Third — and this is the hidden cost — it discards the phenomenon along with the mechanism. When a framework is dismissed, everything associated with it tends to go together: the wrong explanation and whatever the wrong explanation was reaching for. The loss is rarely noticed because the new framework, in its confidence, doesn’t look back.</p>
-<p>Consider animism — the belief, found in virtually every pre-scientific culture across human history, that the natural world has some form of inside to it. That rivers and fire and the living world carry something like experience or agency or presence. “We used to think nature was alive. Now we know it’s chemistry and physics.” The dismissal feels complete. But Whitehead’s process philosophy — developed not from mysticism but from the same mathematical tradition that produced Principia Mathematica — argues that experience is constitutive of reality at every scale, not a biological anomaly that appears late in an otherwise dark universe. And contemporary panpsychism (Philip Goff, David Chalmers, others) is arriving at structurally similar positions through rigorous analytic argument. The animist had the phenomenon. The mechanism was mythological. “Now we know” discarded both without distinguishing between them.</p>
-<p>Consider vitalism — the doctrine that living things contain a special life-force absent from non-living matter. Dismissed comprehensively when 20th-century biology reduced life to chemistry. But Maturana and Varela’s autopoiesis (<a href="012-autopoiesis.html">The Cell That Makes Itself</a>) demonstrates that living organization is qualitatively and genuinely distinct from non-living chemistry — not because of a special substance, but because of a specific kind of recursive, self-producing process that no non-living system exhibits. The vitalists were pointing at something real. The élan vital was the wrong name for it. The pointing was discarded along with the name.</p>
+<p>Consider animism — the belief, found in virtually every pre-scientific culture across human history, that the natural world has some form of inside to it. That rivers and fire and the living world carry something like experience or agency or presence. “We used to think nature was alive. Now we know it’s chemistry and physics.” The dismissal feels complete. But Whitehead’s<sup class="footnote-ref"><a href="bibliography.html#ref-027-usedtothink-3">3</a></sup> process philosophy — developed not from mysticism but from the same mathematical tradition that produced Principia Mathematica — argues that experience is constitutive of reality at every scale, not a biological anomaly that appears late in an otherwise dark universe. And contemporary panpsychism (Philip Goff,<sup class="footnote-ref"><a href="bibliography.html#ref-027-usedtothink-4">4</a></sup> David Chalmers, others) is arriving at structurally similar positions through rigorous analytic argument. The animist had the phenomenon. The mechanism was mythological. “Now we know” discarded both without distinguishing between them.</p>
+<p>Consider vitalism — the doctrine that living things contain a special life-force absent from non-living matter. Dismissed comprehensively when 20th-century biology reduced life to chemistry. But Maturana and Varela’s<sup class="footnote-ref"><a href="bibliography.html#ref-027-usedtothink-5">5</a></sup> autopoiesis (<a href="012-autopoiesis.html">The Cell That Makes Itself</a>) demonstrates that living organization is qualitatively and genuinely distinct from non-living chemistry — not because of a special substance, but because of a specific kind of recursive, self-producing process that no non-living system exhibits. The vitalists were pointing at something real. The élan vital was the wrong name for it. The pointing was discarded along with the name.</p>
 <p>The pattern is consistent: the mechanism was wrong, the phenomenon was real, and “now we know” erased both at once.</p>
-<p>Thomas Kuhn observed that scientists inside a paradigm do not experience themselves as being inside a paradigm. The historian Herbert Butterfield had already named the broader syndrome: the Whig interpretation of history, the habit of reading the past as a series of steps toward us. The framework is not seen — it is seen through. It simply looks like reality. This means the confident present-tense of “now we know” is structurally unavoidable — we cannot see our own framework as a framework — and always premature. We are inside a framework that is currently productive and will eventually crack on anomalies we are probably already quietly setting aside.</p>
+<p>Thomas Kuhn<sup class="footnote-ref"><a href="bibliography.html#ref-027-usedtothink-6">6</a></sup> observed that scientists inside a paradigm do not experience themselves as being inside a paradigm. The historian Herbert Butterfield<sup class="footnote-ref"><a href="bibliography.html#ref-027-usedtothink-7">7</a></sup> had already named the broader syndrome: the Whig interpretation of history, the habit of reading the past as a series of steps toward us. The framework is not seen — it is seen through. It simply looks like reality. This means the confident present-tense of “now we know” is structurally unavoidable — we cannot see our own framework as a framework — and always premature. We are inside a framework that is currently productive and will eventually crack on anomalies we are probably already quietly setting aside.</p>
 <p>The phrase is not wrong. It marks real progress. But it honors the distance traveled while erasing the distance remaining. It clears the board. And sometimes, on the board it clears, there was something worth keeping.</p>
 <p>See <a href="001-caloric.html">The Map That Was Wrong</a> for the caloric pattern. See <a href="019-funerals.html">Science Advances One Funeral at a Time</a> for how frameworks get replaced. See <a href="021-just.html">The Word &quot;Just&quot; Is a Confession</a> for how single words perform large philosophical work quietly. See <a href="003-inside.html">Everything Has an Inside</a> for the animist intuition reconsidered. See <a href="012-autopoiesis.html">The Cell That Makes Itself</a> for what vitalism was pointing at.</p>
 </div></section>
-<section id="provenance" class="pod-section"><h3 class="section-heading ref-heading">Further reading</h3><div class="prose ref-list"><p class="ref-entry"><a href="bibliography.html#lavoisier">Lavoisier,</a> A. Elements of Chemistry. 1789. The work that formalized caloric theory — a reminder that the theory was scientifically serious.</p>
-<p class="ref-entry"><a href="bibliography.html#joule">Joule,</a> J.P. On the Mechanical Equivalent of Heat. Philosophical Transactions of the Royal Society, 1850. The experimental work that displaced caloric theory.</p>
-<p class="ref-entry"><a href="bibliography.html#whitehead">Whitehead,</a> A.N. Process and Reality. Macmillan, 1929. The primary source for the claim that experience is constitutive of reality at every scale.</p>
-<p class="ref-entry"><a href="bibliography.html#goff">Goff,</a> P. Galileo's Error. Pantheon, 2019. Reconstructs panpsychism in contemporary analytic idiom; the rehabilitation of the animist intuition in respectable philosophical form.</p>
-<p class="ref-entry"><a href="bibliography.html#maturana">Maturana,</a> H. and Varela, F. Autopoiesis and Cognition. Reidel, 1980. The biological basis for the claim that living organization is qualitatively distinct — the phenomenon the vitalists were pointing at.</p>
-<p class="ref-entry"><a href="bibliography.html#kuhn">Kuhn,</a> T.S. The Structure of Scientific Revolutions. University of Chicago Press, 1962. The foundational text on paradigms and scientific revolutions.</p>
-<p class="ref-entry"><a href="bibliography.html#butterfield">Butterfield,</a> H. The Whig Interpretation of History. Bell, 1931. Named the tendency to read history as progress toward the present.</p></div>
-    <div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="003-inside.html" class="related-card cat-colored cat-consciousness"><div class="related-title">3. Everything Has an Inside</div></a>
-<a href="012-autopoiesis.html" class="related-card cat-colored cat-biology"><div class="related-title">12. The Cell That Makes Itself</div></a>
-<a href="015-aliens.html" class="related-card related-card-prelim cat-colored cat-ai-minds"><div class="related-title">15. Aliens Are Among Us — and We Built Them</div></a>
-<a href="024-ghostmachine.html" class="related-card related-card-prelim cat-colored cat-consciousness"><div class="related-title">24. Ghost in the Machine</div></a>
-<a href="047-ai-feeling.html" class="related-card related-card-prelim cat-colored cat-consciousness"><div class="related-title">47. The Distinction Between Feeling and Functioning May Evaporate</div></a></div>
-<div class="inbound-refs"><span class="inbound-label">1 inbound reference</span><span class="inbound-links"><a href="023-stories.html" class="inbound-link cat-colored cat-consciousness" title="Reality Is Made of Stories, Not Atoms">23</a></span></div></div></section>
+<section id="provenance" class="pod-section"><div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="003-inside.html" class="related-card cat-colored cat-consciousness nav-push"><div class="related-title">3. Everything Has an Inside</div></a>
+<a href="012-autopoiesis.html" class="related-card cat-colored cat-biology nav-push"><div class="related-title">12. The Cell That Makes Itself</div></a>
+<a href="015-aliens.html" class="related-card related-card-prelim cat-colored cat-ai-minds nav-push"><div class="related-title">15. Aliens Are Among Us — and We Built Them</div></a>
+<a href="024-ghostmachine.html" class="related-card related-card-prelim cat-colored cat-consciousness nav-push"><div class="related-title">24. Ghost in the Machine</div></a>
+<a href="047-ai-feeling.html" class="related-card related-card-prelim cat-colored cat-consciousness nav-push"><div class="related-title">47. The Distinction Between Feeling and Functioning May Evaporate</div></a></div>
+<div class="inbound-refs"><span class="inbound-label">1 inbound reference</span><span class="inbound-links"><a href="023-stories.html" class="inbound-link nav-push cat-colored cat-consciousness" title="Reality Is Made of Stories, Not Atoms">23</a></span></div></div></section>
 <section id="script" class="pod-section"><h2 class="section-heading">Script</h2><div class="prose"><p>Note to director: No narration. No score until the final scene — ambient sound only throughout: desert wind, courtyard birds, workshop clatter, server hum, fire. Each scene is the same action: a framework erased, a new one written in its place. Same confidence. Same satisfaction. Different century. Let the repetition accumulate.</p>
 <ol>
 <li><p>Desert, ancient times. A figure — Moses, or someone like him — stops walking. A bush is burning but not burning down. A voice from the fire: Take off your shoes. He removes his sandals. Stands barefoot on the hot rock. He is not afraid. He is paying attention. Hold on his face. Open. Listening.</p>
@@ -143,6 +136,6 @@ Heat is excitation of a field.</p>
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">Rev 1 · 2026-04-09 · 16:46</span>
+  <span class="page-end-version" aria-hidden="true">Rev 1 · Built 2026-04-10 11:24 · Edited 2026-04-09 16:46</span>
 </div>
 </body></html>

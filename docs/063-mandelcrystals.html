@@ -15,21 +15,21 @@
 <body>
 <nav style="position:sticky;top:0;z-index:100;">
 <div class="nav-row">
-<div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">Untitled</span></a></div>
+<div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
   <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search pods" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
             <li class="nav-link-item nav-item-dropdown nav-lists-dropdown">
-            <a href="list.html" class="nav-btn">Lists</a>
+            <a href="list.html" class="nav-btn nav-push">Lists</a>
             <button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-label="Lists menu"></button>
-            <ul class="nav-dropdown"><li><a href="list.html">All the Seeds</a></li>
-              <li><a href="bibliography.html">Bibliography</a></li>
-              <li><a href="glossary.html">Glossary</a></li>
-              <li><a href="map.html">Map</a></li>
-              <li><a href="more.html">More</a></li></ul>
+            <ul class="nav-dropdown"><li><a href="list.html" class="nav-push">All the Seeds</a></li>
+              <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="glossary.html" class="nav-push">Glossary</a></li>
+              <li><a href="map.html" class="nav-push">Map</a></li>
+              <li><a href="more.html" class="nav-push">More</a></li></ul>
           </li>
 </ul><button type="button" class="nav-hamburger-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav-hamburger-panel" onclick="seedNavToggleMenu();return false">&#9776;</button></div>
 </div>
@@ -42,11 +42,11 @@
   <div class="nav-hamburger-overlay" onclick="seedNavToggleMenu()"></div>
   <div class="nav-hamburger-inner"><ul class="nav-hamburger-list">
     <li><a href="about.html">About</a></li>
-    <li><a href="list.html">All the Seeds</a></li>
-              <li><a href="bibliography.html">Bibliography</a></li>
-              <li><a href="glossary.html">Glossary</a></li>
-              <li><a href="map.html">Map</a></li>
-              <li><a href="more.html">More</a></li>
+    <li><a href="list.html" class="nav-push">All the Seeds</a></li>
+              <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="glossary.html" class="nav-push">Glossary</a></li>
+              <li><a href="map.html" class="nav-push">Map</a></li>
+              <li><a href="more.html" class="nav-push">More</a></li>
   </ul></div>
 </div>
 </nav>
@@ -63,18 +63,17 @@
   <div class="seedpod-header fade cat-colored cat-mathematics"><h1>Mandelbrot Structure in Physical Crystals</h1></div>
   <section id="_prolog" class="pod-section pod-prolog"><div class="prose"><p>Mandelbrot-like fractal structure has been found in physical systems — not as visual coincidence but as a consequence of the same iterative mathematics running in physical substrates.</p>
 <figure class="directive-image directive-image--left"><img src="images/063-mandelcrystals.jpg" alt=""><figcaption>A snowflake: Mandelbrot structure in physical crystals</figcaption></figure>
-<p>Quasicrystals and Penrose tilings show self-similar structure governed by the golden ratio — which sits at a specific location in the Farey sequence and Stern-Brocot tree, the same location that determines key features of the Mandelbrot boundary geometry.</p>
+<p>Quasicrystals and Penrose tilings<sup class="footnote-ref"><a href="bibliography.html#ref-063-mandelcrystals-1">1</a></sup> show self-similar structure governed by the golden ratio — which sits at a specific location in the Farey sequence and Stern-Brocot tree, the same location that determines key features of the Mandelbrot boundary geometry.</p>
 <p>Magnetic domain boundaries in certain ferromagnetic materials form fractal walls that closely mirror Mandelbrot geometry. The physics is iterated nearest-neighbor interactions — each atom responding to its neighbors by a local rule, and the global boundary structure emerging from that iteration without being planned.</p>
 <p>Charge density waves in certain conducting crystals produce quasi-fractal interference patterns through similar mechanisms.</p>
 <p>The philosophical point: the crystal is not computing the Mandelbrot set. It does not know it is drawing a fractal. It is simply obeying local rules. And the Mandelbrot structure emerges anyway — because Mandelbrot structure is what local iterative rules produce at their boundaries, regardless of the physical substrate. The mathematics is substrate-independent.</p>
 </div></section>
-<section id="provenance" class="pod-section"><h3 class="section-heading ref-heading">Further reading</h3><div class="prose ref-list"><p class="ref-entry"><a href="bibliography.html#shechtman">Shechtman,</a> D. et al. Metallic phase with long-range order (1984). Quasicrystals. Penrose, R. Pentaplexity (1974). Tilings.</p></div>
-    <div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="007-vacuum.html" class="related-card related-card-prelim cat-colored cat-physics"><div class="related-title">7. The Vacuum Is Not Empty</div></a>
-<a href="018-magnetization.html" class="related-card related-card-prelim cat-colored cat-knowledge"><div class="related-title">18. Ideas Magnetize Through a Group Like Iron</div></a>
-<a href="033-edge.html" class="related-card related-card-prelim cat-colored cat-sensation"><div class="related-title">33. The Edge Is Where Everything Happens</div></a>
-<a href="038-consonance-map.html" class="related-card related-card-prelim cat-colored cat-sensation"><div class="related-title">38. The Surprising Consonance Map</div></a>
-<a href="056-mandelneural.html" class="related-card related-card-prelim cat-colored cat-ai-minds"><div class="related-title">56. Neural Networks as High-Dimensional Mandelbrot Sets</div></a></div>
-<div class="inbound-refs"><span class="inbound-label">1 inbound reference</span><span class="inbound-links"><a href="018-magnetization.html" class="inbound-link cat-colored cat-knowledge" title="Ideas Magnetize Through a Group Like Iron">18</a></span></div></div></section>
+<section id="provenance" class="pod-section"><div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="007-vacuum.html" class="related-card related-card-prelim cat-colored cat-physics nav-push"><div class="related-title">7. The Vacuum Is Not Empty</div></a>
+<a href="018-magnetization.html" class="related-card related-card-prelim cat-colored cat-knowledge nav-push"><div class="related-title">18. Ideas Magnetize Through a Group Like Iron</div></a>
+<a href="033-edge.html" class="related-card related-card-prelim cat-colored cat-sensation nav-push"><div class="related-title">33. The Edge Is Where Everything Happens</div></a>
+<a href="038-consonance-map.html" class="related-card related-card-prelim cat-colored cat-sensation nav-push"><div class="related-title">38. The Surprising Consonance Map</div></a>
+<a href="056-mandelneural.html" class="related-card related-card-prelim cat-colored cat-ai-minds nav-push"><div class="related-title">56. Neural Networks as High-Dimensional Mandelbrot Sets</div></a></div>
+<div class="inbound-refs"><span class="inbound-label">1 inbound reference</span><span class="inbound-links"><a href="018-magnetization.html" class="inbound-link nav-push cat-colored cat-knowledge" title="Ideas Magnetize Through a Group Like Iron">18</a></span></div></div></section>
 </div>
 <div class="page-end" id="page-end-version" data-page-version="1">
   <button class="page-end-logo" aria-label="Show page info"
@@ -83,6 +82,6 @@
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">Rev 1 · 2026-04-09 · 16:46</span>
+  <span class="page-end-version" aria-hidden="true">Rev 1 · Built 2026-04-10 11:24 · Edited 2026-04-09 16:46</span>
 </div>
 </body></html>

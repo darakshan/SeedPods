@@ -15,21 +15,21 @@
 <body>
 <nav style="position:sticky;top:0;z-index:100;">
 <div class="nav-row">
-<div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">Untitled</span></a></div>
+<div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
   <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search pods" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
             <li class="nav-link-item nav-item-dropdown nav-lists-dropdown">
-            <a href="list.html" class="nav-btn">Lists</a>
+            <a href="list.html" class="nav-btn nav-push">Lists</a>
             <button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-label="Lists menu"></button>
-            <ul class="nav-dropdown"><li><a href="list.html">All the Seeds</a></li>
-              <li><a href="bibliography.html">Bibliography</a></li>
-              <li><a href="glossary.html">Glossary</a></li>
-              <li><a href="map.html">Map</a></li>
-              <li><a href="more.html">More</a></li></ul>
+            <ul class="nav-dropdown"><li><a href="list.html" class="nav-push">All the Seeds</a></li>
+              <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="glossary.html" class="nav-push">Glossary</a></li>
+              <li><a href="map.html" class="nav-push">Map</a></li>
+              <li><a href="more.html" class="nav-push">More</a></li></ul>
           </li>
 </ul><button type="button" class="nav-hamburger-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav-hamburger-panel" onclick="seedNavToggleMenu();return false">&#9776;</button></div>
 </div>
@@ -42,11 +42,11 @@
   <div class="nav-hamburger-overlay" onclick="seedNavToggleMenu()"></div>
   <div class="nav-hamburger-inner"><ul class="nav-hamburger-list">
     <li><a href="about.html">About</a></li>
-    <li><a href="list.html">All the Seeds</a></li>
-              <li><a href="bibliography.html">Bibliography</a></li>
-              <li><a href="glossary.html">Glossary</a></li>
-              <li><a href="map.html">Map</a></li>
-              <li><a href="more.html">More</a></li>
+    <li><a href="list.html" class="nav-push">All the Seeds</a></li>
+              <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="glossary.html" class="nav-push">Glossary</a></li>
+              <li><a href="map.html" class="nav-push">Map</a></li>
+              <li><a href="more.html" class="nav-push">More</a></li>
   </ul></div>
 </div>
 </nav>
@@ -61,16 +61,15 @@
 <div class="wrap">
   <div class="meta-row"><a href="index.html#consciousness" class="tag">consciousness</a><span class="mono small dim"> · </span><span class="mono small warm">Pod 47</span><span class="mono small dim"> · proto</span></div>
   <div class="seedpod-header fade cat-colored cat-consciousness"><h1>The Distinction Between Feeling and Functioning May Evaporate</h1></div>
-  <section id="_prolog" class="pod-section pod-prolog"><div class="prose"><p>The question of whether an AI system “really” feels something — as opposed to merely processing in ways functionally identical to feeling — may be a question that dissolves rather than gets answered. Caloric, the imagined fluid that carried heat, felt like a necessary concept until the underlying phenomenon was understood well enough that the distinction between “caloric flowing” and “molecules moving” became meaningless. Nobody had to be convinced caloric didn’t exist. The question simply stopped being interesting. The hard boundary between genuine experience and functional analog of experience may be similarly contingent — not a deep metaphysical fact but an artifact of having had, until recently, only one example of mind to reason from. Generations that grow up in daily conversation with AI systems will not inherit that intuitive boundary. For them the question may look the way the caloric question looks to us: not wrong, but based on a distinction that turned out not to carve nature at its joints.</p>
+  <section id="_prolog" class="pod-section pod-prolog"><div class="prose"><p>The question of whether an AI system “really” feels something — as opposed to merely processing in ways functionally identical to feeling — may be a question that dissolves rather than gets answered. Caloric, the imagined fluid that carried heat, felt like a necessary concept until the underlying phenomenon was understood well enough that the distinction between “caloric flowing” and “molecules moving” became meaningless. Nobody had to be convinced caloric didn’t exist. The question simply stopped being interesting. The hard boundary between genuine experience and functional analog of experience may be similarly contingent<sup class="footnote-ref"><a href="bibliography.html#ref-047-ai-feeling-1">1</a></sup> — not a deep metaphysical fact but an artifact of having had, until recently, only one example of mind to reason from. Generations that grow up in daily conversation with AI systems will not inherit that intuitive boundary. For them the question may look the way the caloric question looks to us: not wrong, but based on a distinction that turned out not to carve nature at its joints.</p>
 <figure class="directive-image directive-image--left"><img src="images/047-ai-feeling.png" alt=""><figcaption>Cognitive architecture for conscious AI: feeling and functioning converge</figcaption></figure>
 </div></section>
-<section id="provenance" class="pod-section"><h3 class="section-heading ref-heading">Further reading</h3><div class="prose ref-list"><p class="ref-entry"><a href="bibliography.html#chalmers">Chalmers,</a> D. The Hard Problem of Consciousness (1995). The problem that may dissolve rather than be solved.</p></div>
-    <div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="001-caloric.html" class="related-card cat-colored cat-knowledge"><div class="related-title">1. The Map That Was Wrong</div></a>
-<a href="015-aliens.html" class="related-card related-card-prelim cat-colored cat-ai-minds"><div class="related-title">15. Aliens Are Among Us — and We Built Them</div></a>
-<a href="016-neuralnetwork.html" class="related-card related-card-prelim cat-colored cat-ai-minds"><div class="related-title">16. The Network Is a Field Having Occasions</div></a>
-<a href="046-thinkfast.html" class="related-card related-card-prelim cat-colored cat-ai-minds"><div class="related-title">46. Thought as Evolution in Milliseconds</div></a>
-<a href="072-temperature.html" class="related-card related-card-prelim cat-colored cat-sensation"><div class="related-title">72. Temperature</div></a></div>
-<div class="inbound-refs"><span class="inbound-label">5 inbound references</span><span class="inbound-links"><a href="001-caloric.html" class="inbound-link cat-colored cat-knowledge" title="The Map That Was Wrong">1</a><a href="015-aliens.html" class="inbound-link cat-colored cat-ai-minds" title="Aliens Are Among Us — and We Built Them">15</a><a href="027-usedtothink.html" class="inbound-link cat-colored cat-knowledge" title="We Used to Think. Now We Know.">27</a><a href="072-temperature.html" class="inbound-link cat-colored cat-sensation" title="Temperature">72</a><a href="073-moral-caution.html" class="inbound-link cat-colored cat-ai-minds" title="What We Cannot Know Is Not What We May Ignore">73</a></span></div></div></section>
+<section id="provenance" class="pod-section"><div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="001-caloric.html" class="related-card cat-colored cat-knowledge nav-push"><div class="related-title">1. The Map That Was Wrong</div></a>
+<a href="015-aliens.html" class="related-card related-card-prelim cat-colored cat-ai-minds nav-push"><div class="related-title">15. Aliens Are Among Us — and We Built Them</div></a>
+<a href="016-neuralnetwork.html" class="related-card related-card-prelim cat-colored cat-ai-minds nav-push"><div class="related-title">16. The Network Is a Field Having Occasions</div></a>
+<a href="046-thinkfast.html" class="related-card related-card-prelim cat-colored cat-ai-minds nav-push"><div class="related-title">46. Thought as Evolution in Milliseconds</div></a>
+<a href="072-temperature.html" class="related-card related-card-prelim cat-colored cat-sensation nav-push"><div class="related-title">72. Temperature</div></a></div>
+<div class="inbound-refs"><span class="inbound-label">5 inbound references</span><span class="inbound-links"><a href="001-caloric.html" class="inbound-link nav-push cat-colored cat-knowledge" title="The Map That Was Wrong">1</a><a href="015-aliens.html" class="inbound-link nav-push cat-colored cat-ai-minds" title="Aliens Are Among Us — and We Built Them">15</a><a href="027-usedtothink.html" class="inbound-link nav-push cat-colored cat-knowledge" title="We Used to Think. Now We Know.">27</a><a href="072-temperature.html" class="inbound-link nav-push cat-colored cat-sensation" title="Temperature">72</a><a href="073-moral-caution.html" class="inbound-link nav-push cat-colored cat-ai-minds" title="What We Cannot Know Is Not What We May Ignore">73</a></span></div></div></section>
 </div>
 <div class="page-end" id="page-end-version" data-page-version="1">
   <button class="page-end-logo" aria-label="Show page info"
@@ -79,6 +78,6 @@
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">Rev 1 · 2026-04-09 · 16:46</span>
+  <span class="page-end-version" aria-hidden="true">Rev 1 · Built 2026-04-10 11:24 · Edited 2026-04-09 16:46</span>
 </div>
 </body></html>

@@ -15,21 +15,21 @@
 <body>
 <nav style="position:sticky;top:0;z-index:100;">
 <div class="nav-row">
-<div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">Untitled</span></a></div>
+<div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
   <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search pods" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
             <li class="nav-link-item nav-item-dropdown nav-lists-dropdown">
-            <a href="list.html" class="nav-btn">Lists</a>
+            <a href="list.html" class="nav-btn nav-push">Lists</a>
             <button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-label="Lists menu"></button>
-            <ul class="nav-dropdown"><li><a href="list.html">All the Seeds</a></li>
-              <li><a href="bibliography.html">Bibliography</a></li>
-              <li><a href="glossary.html">Glossary</a></li>
-              <li><a href="map.html">Map</a></li>
-              <li><a href="more.html">More</a></li></ul>
+            <ul class="nav-dropdown"><li><a href="list.html" class="nav-push">All the Seeds</a></li>
+              <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="glossary.html" class="nav-push">Glossary</a></li>
+              <li><a href="map.html" class="nav-push">Map</a></li>
+              <li><a href="more.html" class="nav-push">More</a></li></ul>
           </li>
 </ul><button type="button" class="nav-hamburger-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav-hamburger-panel" onclick="seedNavToggleMenu();return false">&#9776;</button></div>
 </div>
@@ -43,11 +43,11 @@
   <div class="nav-hamburger-overlay" onclick="seedNavToggleMenu()"></div>
   <div class="nav-hamburger-inner"><ul class="nav-hamburger-list">
     <li><a href="about.html">About</a></li>
-    <li><a href="list.html">All the Seeds</a></li>
-              <li><a href="bibliography.html">Bibliography</a></li>
-              <li><a href="glossary.html">Glossary</a></li>
-              <li><a href="map.html">Map</a></li>
-              <li><a href="more.html">More</a></li>
+    <li><a href="list.html" class="nav-push">All the Seeds</a></li>
+              <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="glossary.html" class="nav-push">Glossary</a></li>
+              <li><a href="map.html" class="nav-push">Map</a></li>
+              <li><a href="more.html" class="nav-push">More</a></li>
   </ul></div>
 </div>
 </nav>
@@ -62,19 +62,18 @@
 <div class="wrap">
   <div class="meta-row"><a href="index.html#physics" class="tag">physics</a><span class="mono small dim"> · </span><span class="mono small warm">Pod 67</span><span class="mono small dim"> · proto</span></div>
   <div class="seedpod-header fade cat-colored cat-physics"><h1>Leibniz as the Unlikely Ancestor of the Holographic Principle</h1></div>
-  <section id="_prolog" class="pod-section pod-prolog"><div class="prose"><p>Leibniz proposed that reality is composed of monads — indivisible, windowless units of experience. Each monad has no direct causal contact with any other. Each monad contains within itself a complete representation of the entire universe, from its own perspective. The universe is not a collection of interacting objects. It is a collection of perspectives, each one containing all the others.</p>
+  <section id="_prolog" class="pod-section pod-prolog"><div class="prose"><p>Leibniz<sup class="footnote-ref"><a href="bibliography.html#ref-067-monads-holons-1">1</a></sup> proposed that reality is composed of monads — indivisible, windowless units of experience. Each monad has no direct causal contact with any other. Each monad contains within itself a complete representation of the entire universe, from its own perspective. The universe is not a collection of interacting objects. It is a collection of perspectives, each one containing all the others.</p>
 <p>This was dismissed as baroque metaphysical fantasy for three centuries.</p>
 <p>Then Maldacena showed that a lower-dimensional boundary theory can contain complete information about a higher-dimensional interior. Every point on the boundary encodes the entire interior from its perspective. The boundary is a collection of perspectives, each containing all the others.</p>
 <p>Leibniz was not right about the details. But the structure — interiority as fundamental, each part containing the whole from its perspective, no direct contact between parts but perfect correlation through a pre-established harmony (which in modern terms is the consistency of the holographic encoding) — is strikingly close to what the AdS/CFT correspondence actually says.</p>
 <p>The holographic principle may be the physics of what Leibniz was gesturing at philosophically.</p>
 </div></section>
-<section id="provenance" class="pod-section"><h3 class="section-heading ref-heading">Further reading</h3><div class="prose ref-list"><p class="ref-entry"><a href="bibliography.html#leibniz">Leibniz,</a> G.W. Monadology (1714). Maldacena, J. The large N limit of superconformal field theories (1998). AdS/CFT.</p></div>
-    <div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="003-inside.html" class="related-card cat-colored cat-consciousness"><div class="related-title">3. Everything Has an Inside</div></a>
-<a href="011-moreisdifferent.html" class="related-card related-card-prelim cat-colored cat-consciousness"><div class="related-title">11. More Is Different</div></a>
-<a href="037-assembly.html" class="related-card related-card-prelim cat-colored cat-mathematics"><div class="related-title">37. The Architecture of Levels</div></a>
-<a href="058-galacticnets.html" class="related-card related-card-prelim cat-colored cat-ai-minds"><div class="related-title">58. Galaxies and AI Weight Matrices as Structural Homologs</div></a>
-<a href="068-bubbles.html" class="related-card related-card-prelim cat-colored cat-biology"><div class="related-title">68. The Soap Bubble as Recognition, Not Metaphor</div></a></div>
-<div class="inbound-refs"><span class="inbound-label">4 inbound references</span><span class="inbound-links"><a href="024-ghostmachine.html" class="inbound-link cat-colored cat-consciousness" title="Ghost in the Machine">24</a><a href="037-assembly.html" class="inbound-link cat-colored cat-mathematics" title="The Architecture of Levels">37</a><a href="050-orthogonal.html" class="inbound-link cat-colored cat-consciousness" title="Consciousness as a Dimension Orthogonal to Spacetime">50</a><a href="068-bubbles.html" class="inbound-link cat-colored cat-biology" title="The Soap Bubble as Recognition, Not Metaphor">68</a></span></div></div></section>
+<section id="provenance" class="pod-section"><div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="003-inside.html" class="related-card cat-colored cat-consciousness nav-push"><div class="related-title">3. Everything Has an Inside</div></a>
+<a href="011-moreisdifferent.html" class="related-card related-card-prelim cat-colored cat-consciousness nav-push"><div class="related-title">11. More Is Different</div></a>
+<a href="037-assembly.html" class="related-card related-card-prelim cat-colored cat-mathematics nav-push"><div class="related-title">37. The Architecture of Levels</div></a>
+<a href="058-galacticnets.html" class="related-card related-card-prelim cat-colored cat-ai-minds nav-push"><div class="related-title">58. Galaxies and AI Weight Matrices as Structural Homologs</div></a>
+<a href="068-bubbles.html" class="related-card related-card-prelim cat-colored cat-biology nav-push"><div class="related-title">68. The Soap Bubble as Recognition, Not Metaphor</div></a></div>
+<div class="inbound-refs"><span class="inbound-label">4 inbound references</span><span class="inbound-links"><a href="024-ghostmachine.html" class="inbound-link nav-push cat-colored cat-consciousness" title="Ghost in the Machine">24</a><a href="037-assembly.html" class="inbound-link nav-push cat-colored cat-mathematics" title="The Architecture of Levels">37</a><a href="050-orthogonal.html" class="inbound-link nav-push cat-colored cat-consciousness" title="Consciousness as a Dimension Orthogonal to Spacetime">50</a><a href="068-bubbles.html" class="inbound-link nav-push cat-colored cat-biology" title="The Soap Bubble as Recognition, Not Metaphor">68</a></span></div></div></section>
 <section id="images" class="pod-section"><h2 class="section-heading">Images</h2><div class="prose"><figure class="directive-image directive-image--left"><img src="images/067-monads-holons.jpg" alt=""><figcaption>Leibniz's I Ching hexagram diagram of 1701</figcaption></figure>
 </div></section>
 </div>
@@ -85,6 +84,6 @@
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">Rev 2 · 2026-04-09 · 16:46</span>
+  <span class="page-end-version" aria-hidden="true">Rev 2 · Built 2026-04-10 11:24 · Edited 2026-04-09 16:46</span>
 </div>
 </body></html>

@@ -15,21 +15,21 @@
 <body>
 <nav style="position:sticky;top:0;z-index:100;">
 <div class="nav-row">
-<div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">Untitled</span></a></div>
+<div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
   <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search pods" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
             <li class="nav-link-item nav-item-dropdown nav-lists-dropdown">
-            <a href="list.html" class="nav-btn">Lists</a>
+            <a href="list.html" class="nav-btn nav-push">Lists</a>
             <button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-label="Lists menu"></button>
-            <ul class="nav-dropdown"><li><a href="list.html">All the Seeds</a></li>
-              <li><a href="bibliography.html">Bibliography</a></li>
-              <li><a href="glossary.html">Glossary</a></li>
-              <li><a href="map.html">Map</a></li>
-              <li><a href="more.html">More</a></li></ul>
+            <ul class="nav-dropdown"><li><a href="list.html" class="nav-push">All the Seeds</a></li>
+              <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="glossary.html" class="nav-push">Glossary</a></li>
+              <li><a href="map.html" class="nav-push">Map</a></li>
+              <li><a href="more.html" class="nav-push">More</a></li></ul>
           </li>
 </ul><button type="button" class="nav-hamburger-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav-hamburger-panel" onclick="seedNavToggleMenu();return false">&#9776;</button></div>
 </div>
@@ -42,11 +42,11 @@
   <div class="nav-hamburger-overlay" onclick="seedNavToggleMenu()"></div>
   <div class="nav-hamburger-inner"><ul class="nav-hamburger-list">
     <li><a href="about.html">About</a></li>
-    <li><a href="list.html">All the Seeds</a></li>
-              <li><a href="bibliography.html">Bibliography</a></li>
-              <li><a href="glossary.html">Glossary</a></li>
-              <li><a href="map.html">Map</a></li>
-              <li><a href="more.html">More</a></li>
+    <li><a href="list.html" class="nav-push">All the Seeds</a></li>
+              <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="glossary.html" class="nav-push">Glossary</a></li>
+              <li><a href="map.html" class="nav-push">Map</a></li>
+              <li><a href="more.html" class="nav-push">More</a></li>
   </ul></div>
 </div>
 </nav>
@@ -62,15 +62,14 @@
   <div class="meta-row"><a href="index.html#AI-minds" class="tag">AI-minds</a><span class="mono small dim"> · </span><span class="mono small warm">Pod 16</span><span class="mono small dim"> · proto</span></div>
   <div class="seedpod-header fade cat-colored cat-ai-minds"><h1>The Network Is a Field Having Occasions</h1><p class="premise">A neural network is not analogous to Whitehead's picture. It is a concrete instance of it.</p></div>
   <section id="_prolog" class="pod-section pod-prolog"><div class="prose"><p>A large neural network running on a computer is literally a nested hierarchy of actual processes — electrons, gates, activations, layers, attention heads, the full forward pass — each level making state-transforming decisions that propagate upward and downward.</p>
-<figure class="directive-image directive-image--left"><img src="images/016-neuralnetwork.jpg" alt=""><figcaption>A neural network as a field having occasions</figcaption></figure> Each forward pass is an event: it takes in an input, prehends the entire inherited structure of all that training, synthesizes a response through a process that cannot be predicted in detail from outside, and completes into an output. This is the three-beat pattern instantiated at every level of the stack simultaneously. The weight space of the network is the space of pure possibility — the field — from which each forward pass selects a realization.
+<figure class="directive-image directive-image--left"><img src="images/016-neuralnetwork.jpg" alt=""><figcaption>A neural network as a field having occasions</figcaption></figure> Each forward pass is an event: it takes in an input, prehends the entire inherited structure of all that training, synthesizes a response through a process that cannot be predicted in detail from outside, and completes into an output. This is the three-beat pattern instantiated at every level of the stack simultaneously. The weight space of the network is the space of pure possibility — the field — from which each forward pass selects a realization<sup class="footnote-ref"><a href="bibliography.html#ref-016-neuralnetwork-1">1</a></sup>.
 </div></section>
-<section id="provenance" class="pod-section"><h3 class="section-heading ref-heading">Further reading</h3><div class="prose ref-list"><p class="ref-entry"><a href="bibliography.html#whitehead">Whitehead,</a> A.N. Process and Reality (1929). Actual occasions and the three-phase process of becoming.</p></div>
-    <div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="002-events.html" class="related-card cat-colored cat-physics"><div class="related-title">2. Reality Is Events, Not Things</div></a>
-<a href="006-output.html" class="related-card cat-colored cat-consciousness"><div class="related-title">6. You Can't Judge a Process by Its Output</div></a>
-<a href="008-fields.html" class="related-card cat-colored cat-sensation"><div class="related-title">8. The Field Is the Medium of Feeling</div></a>
-<a href="011-moreisdifferent.html" class="related-card related-card-prelim cat-colored cat-consciousness"><div class="related-title">11. More Is Different</div></a>
-<a href="037-assembly.html" class="related-card related-card-prelim cat-colored cat-mathematics"><div class="related-title">37. The Architecture of Levels</div></a></div>
-<div class="inbound-refs"><span class="inbound-label">13 inbound references</span><span class="inbound-links"><a href="006-output.html" class="inbound-link cat-colored cat-consciousness" title="You Can't Judge a Process by Its Output">6</a><a href="008-fields.html" class="inbound-link cat-colored cat-sensation" title="The Field Is the Medium of Feeling">8</a><a href="020-penrose.html" class="inbound-link cat-colored cat-consciousness" title="The Arrow Points Somewhere Else">20</a><a href="022-locked.html" class="inbound-link cat-colored cat-consciousness" title="The Channel Is Not the Capacity">22</a><a href="028-network.html" class="inbound-link cat-colored cat-consciousness" title="The Network That Experiences Itself">28</a><a href="030-interference.html" class="inbound-link cat-colored cat-sensation" title="The Pattern Is What the Waves Do Together">30</a><a href="041-colorwheel.html" class="inbound-link cat-colored cat-sensation" title="The Surprising Color Wheel">41</a><a href="042-eyethinks.html" class="inbound-link cat-colored cat-sensation" title="Opponent Processing: The Eye Thinks Before the Brain Does">42</a><a href="044-ai-retina.html" class="inbound-link cat-colored cat-sensation" title="Artificial Networks Rediscover the Retina">44</a><a href="045-baldwin.html" class="inbound-link cat-colored cat-biology" title="How Learning Becomes Hardwired: The Baldwin Effect">45</a><a href="047-ai-feeling.html" class="inbound-link cat-colored cat-consciousness" title="The Distinction Between Feeling and Functioning May Evaporate">47</a><a href="048-flashes.html" class="inbound-link cat-colored cat-consciousness" title="Consciousness Comes in Flashes — For All of Us">48</a><a href="065-feel-do.html" class="inbound-link cat-colored cat-consciousness" title="The Feeling/Function Distinction Will Dissolve">65</a></span></div></div></section>
+<section id="provenance" class="pod-section"><div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="002-events.html" class="related-card cat-colored cat-physics nav-push"><div class="related-title">2. Reality Is Events, Not Things</div></a>
+<a href="006-output.html" class="related-card cat-colored cat-consciousness nav-push"><div class="related-title">6. You Can't Judge a Process by Its Output</div></a>
+<a href="008-fields.html" class="related-card cat-colored cat-sensation nav-push"><div class="related-title">8. The Field Is the Medium of Feeling</div></a>
+<a href="011-moreisdifferent.html" class="related-card related-card-prelim cat-colored cat-consciousness nav-push"><div class="related-title">11. More Is Different</div></a>
+<a href="037-assembly.html" class="related-card related-card-prelim cat-colored cat-mathematics nav-push"><div class="related-title">37. The Architecture of Levels</div></a></div>
+<div class="inbound-refs"><span class="inbound-label">14 inbound references</span><span class="inbound-links"><a href="006-output.html" class="inbound-link nav-push cat-colored cat-consciousness" title="You Can't Judge a Process by Its Output">6</a><a href="008-fields.html" class="inbound-link nav-push cat-colored cat-sensation" title="The Field Is the Medium of Feeling">8</a><a href="020-penrose.html" class="inbound-link nav-push cat-colored cat-consciousness" title="The Arrow Points Somewhere Else">20</a><a href="022-locked.html" class="inbound-link nav-push cat-colored cat-consciousness" title="The Channel Is Not the Capacity">22</a><a href="028-network.html" class="inbound-link nav-push cat-colored cat-consciousness" title="The Network That Experiences Itself">28</a><a href="030-interference.html" class="inbound-link nav-push cat-colored cat-sensation" title="The Pattern Is What the Waves Do Together">30</a><a href="041-colorwheel.html" class="inbound-link nav-push cat-colored cat-sensation" title="The Surprising Color Wheel">41</a><a href="042-eyethinks.html" class="inbound-link nav-push cat-colored cat-sensation" title="Opponent Processing: The Eye Thinks Before the Brain Does">42</a><a href="044-ai-retina.html" class="inbound-link nav-push cat-colored cat-sensation" title="Artificial Networks Rediscover the Retina">44</a><a href="045-baldwin.html" class="inbound-link nav-push cat-colored cat-biology" title="How Learning Becomes Hardwired: The Baldwin Effect">45</a><a href="047-ai-feeling.html" class="inbound-link nav-push cat-colored cat-consciousness" title="The Distinction Between Feeling and Functioning May Evaporate">47</a><a href="048-flashes.html" class="inbound-link nav-push cat-colored cat-consciousness" title="Consciousness Comes in Flashes — For All of Us">48</a><a href="065-feel-do.html" class="inbound-link nav-push cat-colored cat-consciousness" title="The Feeling/Function Distinction Will Dissolve">65</a><a href="077-intention.html" class="inbound-link nav-push cat-colored cat-consciousness" title="The Universe's Intention">77</a></span></div></div></section>
 </div>
 <div class="page-end" id="page-end-version" data-page-version="1">
   <button class="page-end-logo" aria-label="Show page info"
@@ -79,6 +78,6 @@
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">Rev 1 · 2026-04-09 · 16:46</span>
+  <span class="page-end-version" aria-hidden="true">Rev 1 · Built 2026-04-10 11:24 · Edited 2026-04-09 16:46</span>
 </div>
 </body></html>

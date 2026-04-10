@@ -15,21 +15,21 @@
 <body>
 <nav style="position:sticky;top:0;z-index:100;">
 <div class="nav-row">
-<div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">Untitled</span></a></div>
+<div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
   <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search pods" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
             <li class="nav-link-item nav-item-dropdown nav-lists-dropdown">
-            <a href="list.html" class="nav-btn">Lists</a>
+            <a href="list.html" class="nav-btn nav-push">Lists</a>
             <button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-label="Lists menu"></button>
-            <ul class="nav-dropdown"><li><a href="list.html">All the Seeds</a></li>
-              <li><a href="bibliography.html">Bibliography</a></li>
-              <li><a href="glossary.html">Glossary</a></li>
-              <li><a href="map.html">Map</a></li>
-              <li><a href="more.html">More</a></li></ul>
+            <ul class="nav-dropdown"><li><a href="list.html" class="nav-push">All the Seeds</a></li>
+              <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="glossary.html" class="nav-push">Glossary</a></li>
+              <li><a href="map.html" class="nav-push">Map</a></li>
+              <li><a href="more.html" class="nav-push">More</a></li></ul>
           </li>
 </ul><button type="button" class="nav-hamburger-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav-hamburger-panel" onclick="seedNavToggleMenu();return false">&#9776;</button></div>
 </div>
@@ -42,11 +42,11 @@
   <div class="nav-hamburger-overlay" onclick="seedNavToggleMenu()"></div>
   <div class="nav-hamburger-inner"><ul class="nav-hamburger-list">
     <li><a href="about.html">About</a></li>
-    <li><a href="list.html">All the Seeds</a></li>
-              <li><a href="bibliography.html">Bibliography</a></li>
-              <li><a href="glossary.html">Glossary</a></li>
-              <li><a href="map.html">Map</a></li>
-              <li><a href="more.html">More</a></li>
+    <li><a href="list.html" class="nav-push">All the Seeds</a></li>
+              <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="glossary.html" class="nav-push">Glossary</a></li>
+              <li><a href="map.html" class="nav-push">Map</a></li>
+              <li><a href="more.html" class="nav-push">More</a></li>
   </ul></div>
 </div>
 </nav>
@@ -65,16 +65,15 @@
 <p>First, God is the ground of possibility — the one who holds all unrealized potentials available for actual occasions to select from. Without this role, there is no account of where possibilities come from. An occasion can only actualize what is genuinely available to it. God makes possibilities available.</p>
 <p>Second, God is the lure — the initial aim that each occasion feels as a pull toward the best possibility available given its situation. This is not compulsion. The occasion is free to deviate from the lure. But the lure is always there, always pointing toward greater complexity, greater depth of experience, greater integration.</p>
 <p>In the language of dynamical systems: God is both the initial condition of the iteration and the attractor the iteration is feeling toward. The universe is not wandering. It is being drawn. Not forced — drawn. The difference matters enormously.</p>
-<p>Teilhard’s Omega Point is this attractor made cosmic — the state toward which the entire evolutionary process converges. Whitehead gives the mechanism (the lure operating at every occasion). Teilhard gives the destination. Together they describe a universe that is going somewhere, and knows it, at every scale.</p>
+<p>Teilhard’s Omega Point is this attractor made cosmic — the state toward which the entire evolutionary process converges. Whitehead gives the mechanism (the lure operating at every occasion). Teilhard gives the destination<sup class="footnote-ref"><a href="bibliography.html#ref-066-cosmicattractor-1">1</a></sup>. Together they describe a universe that is going somewhere, and knows it, at every scale.</p>
 <figure class="directive-image directive-image--left"><img src="images/066-cosmicattractor.png" alt=""><figcaption>Lorenz attractor: God as initial condition and cosmic attractor</figcaption></figure>
 </div></section>
-<section id="provenance" class="pod-section"><h3 class="section-heading ref-heading">Further reading</h3><div class="prose ref-list"><p class="ref-entry"><a href="bibliography.html#whitehead">Whitehead,</a> A.N. Process and Reality (1929). God as ground of possibility and lure. Teilhard de Chardin, P. The Phenomenon of Man (1955). Omega Point.</p></div>
-    <div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="009-randomness.html" class="related-card cat-colored cat-biology"><div class="related-title">9. Structure Is What Randomness Does</div></a>
-<a href="034-onerule.html" class="related-card related-card-prelim cat-colored cat-mathematics"><div class="related-title">34. One Rule Is Enough</div></a>
-<a href="058-galacticnets.html" class="related-card related-card-prelim cat-colored cat-ai-minds"><div class="related-title">58. Galaxies and AI Weight Matrices as Structural Homologs</div></a>
-<a href="059-galaxyevolve.html" class="related-card related-card-prelim cat-colored cat-physics"><div class="related-title">59. Each Galaxy as a Thread of Cosmic Evolution</div></a>
-<a href="060-worldtests.html" class="related-card related-card-prelim cat-colored cat-physics"><div class="related-title">60. Many Worlds as Parallel Evolutionary Experiments</div></a></div>
-<div class="inbound-refs"><span class="inbound-label">4 inbound references</span><span class="inbound-links"><a href="058-galacticnets.html" class="inbound-link cat-colored cat-ai-minds" title="Galaxies and AI Weight Matrices as Structural Homologs">58</a><a href="059-galaxyevolve.html" class="inbound-link cat-colored cat-physics" title="Each Galaxy as a Thread of Cosmic Evolution">59</a><a href="069-love.html" class="inbound-link cat-colored cat-sensation" title="Love">69</a><a href="077-intention.html" class="inbound-link cat-colored cat-consciousness" title="The Universe's Intention">77</a></span></div></div></section>
+<section id="provenance" class="pod-section"><div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="009-randomness.html" class="related-card cat-colored cat-biology nav-push"><div class="related-title">9. Structure Is What Randomness Does</div></a>
+<a href="034-onerule.html" class="related-card related-card-prelim cat-colored cat-mathematics nav-push"><div class="related-title">34. One Rule Is Enough</div></a>
+<a href="058-galacticnets.html" class="related-card related-card-prelim cat-colored cat-ai-minds nav-push"><div class="related-title">58. Galaxies and AI Weight Matrices as Structural Homologs</div></a>
+<a href="059-galaxyevolve.html" class="related-card related-card-prelim cat-colored cat-physics nav-push"><div class="related-title">59. Each Galaxy as a Thread of Cosmic Evolution</div></a>
+<a href="060-worldtests.html" class="related-card related-card-prelim cat-colored cat-physics nav-push"><div class="related-title">60. Many Worlds as Parallel Evolutionary Experiments</div></a></div>
+<div class="inbound-refs"><span class="inbound-label">3 inbound references</span><span class="inbound-links"><a href="058-galacticnets.html" class="inbound-link nav-push cat-colored cat-ai-minds" title="Galaxies and AI Weight Matrices as Structural Homologs">58</a><a href="059-galaxyevolve.html" class="inbound-link nav-push cat-colored cat-physics" title="Each Galaxy as a Thread of Cosmic Evolution">59</a><a href="069-love.html" class="inbound-link nav-push cat-colored cat-sensation" title="Love">69</a></span></div></div></section>
 </div>
 <div class="page-end" id="page-end-version" data-page-version="1">
   <button class="page-end-logo" aria-label="Show page info"
@@ -83,6 +82,6 @@
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">Rev 1 · 2026-04-09 · 16:46</span>
+  <span class="page-end-version" aria-hidden="true">Rev 1 · Built 2026-04-10 11:24 · Edited 2026-04-09 16:46</span>
 </div>
 </body></html>

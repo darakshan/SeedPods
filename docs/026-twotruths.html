@@ -15,21 +15,21 @@
 <body>
 <nav style="position:sticky;top:0;z-index:100;">
 <div class="nav-row">
-<div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">Untitled</span></a></div>
+<div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
   <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search pods" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
             <li class="nav-link-item nav-item-dropdown nav-lists-dropdown">
-            <a href="list.html" class="nav-btn">Lists</a>
+            <a href="list.html" class="nav-btn nav-push">Lists</a>
             <button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-label="Lists menu"></button>
-            <ul class="nav-dropdown"><li><a href="list.html">All the Seeds</a></li>
-              <li><a href="bibliography.html">Bibliography</a></li>
-              <li><a href="glossary.html">Glossary</a></li>
-              <li><a href="map.html">Map</a></li>
-              <li><a href="more.html">More</a></li></ul>
+            <ul class="nav-dropdown"><li><a href="list.html" class="nav-push">All the Seeds</a></li>
+              <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="glossary.html" class="nav-push">Glossary</a></li>
+              <li><a href="map.html" class="nav-push">Map</a></li>
+              <li><a href="more.html" class="nav-push">More</a></li></ul>
           </li>
 </ul><button type="button" class="nav-hamburger-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav-hamburger-panel" onclick="seedNavToggleMenu();return false">&#9776;</button></div>
 </div>
@@ -44,11 +44,11 @@
   <div class="nav-hamburger-overlay" onclick="seedNavToggleMenu()"></div>
   <div class="nav-hamburger-inner"><ul class="nav-hamburger-list">
     <li><a href="about.html">About</a></li>
-    <li><a href="list.html">All the Seeds</a></li>
-              <li><a href="bibliography.html">Bibliography</a></li>
-              <li><a href="glossary.html">Glossary</a></li>
-              <li><a href="map.html">Map</a></li>
-              <li><a href="more.html">More</a></li>
+    <li><a href="list.html" class="nav-push">All the Seeds</a></li>
+              <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="glossary.html" class="nav-push">Glossary</a></li>
+              <li><a href="map.html" class="nav-push">Map</a></li>
+              <li><a href="more.html" class="nav-push">More</a></li>
   </ul></div>
 </div>
 </nav>
@@ -86,22 +86,19 @@
 </div></section>
 <section id="depth" class="pod-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>The surface examples — oxytocin and love, wave and particle — illustrate a pattern that runs deeper than those particular cases. Apparent contradictions often signal that we’ve reached the edge of a framework. The pressure to choose sides is the framework trying to preserve itself. The deeper move is to find the larger frame where both claims become aspects of the same truth.</p>
 <p>Classical logic says a proposition and its negation cannot both be true: the law of non-contradiction. This is correct within a formal system. But real disagreements are rarely about propositions in that clean sense. They’re about how to frame a situation, which aspects to weight, what counts as relevant context. Two people can agree on every fact and still reach opposite conclusions because their frameworks organize those facts differently.</p>
-<p>Niels Bohr’s complementarity principle emerged from exactly this situation. Wave and particle descriptions are both necessary for a complete account of quantum phenomena. They’re mutually exclusive in application — you can’t use both simultaneously in the same experimental setup — but jointly exhaustive. Neither alone captures what the electron is. The framework of “it must be one or the other” was the problem, not the electron.</p>
-<p>Alfred North Whitehead’s process philosophy offers a different angle on the same insight. For Whitehead, contrast is how experience achieves depth. A flat experience has no tension, no richness. A rich experience holds differences together without collapsing them into sameness or rejecting one side. The universe doesn’t resolve contradictions by eliminating terms — it holds them in creative tension, and that tension is where novelty emerges.</p>
+<p>Niels Bohr’s complementarity principle<sup class="footnote-ref"><a href="bibliography.html#ref-026-twotruths-1">1</a></sup> emerged from exactly this situation. Wave and particle descriptions are both necessary for a complete account of quantum phenomena. They’re mutually exclusive in application — you can’t use both simultaneously in the same experimental setup — but jointly exhaustive. Neither alone captures what the electron is. The framework of “it must be one or the other” was the problem, not the electron.</p>
+<p>Alfred North Whitehead’s process philosophy offers a different angle on the same insight. For Whitehead, contrast is how experience achieves depth.<sup class="footnote-ref"><a href="bibliography.html#ref-026-twotruths-2">2</a></sup> A flat experience has no tension, no richness. A rich experience holds differences together without collapsing them into sameness or rejecting one side. The universe doesn’t resolve contradictions by eliminating terms — it holds them in creative tension, and that tension is where novelty emerges.</p>
 <p>The caloric story from <a href="001-caloric.html">The Map That Was Wrong</a> shows this pattern in the history of science. Heat flows like a fluid — this was the core claim of caloric theory, and it’s actually true. Thermal diffusion is real; heat really does flow from hot to cold in ways that fluid-flow mathematics describes beautifully. Heat is also molecular motion — this is the kinetic theory that replaced caloric. The “contradiction” was between two descriptions of the same phenomenon operating at different levels. The old theory wasn’t wrong about the patterns it described. It was wrong about the underlying mechanism. Both claims were true; the framework that made them seem contradictory was too small.</p>
-<p>Kurt Gödel’s incompleteness theorems provide perhaps the purest example. Gödel constructed a statement that is both true and unprovable within any sufficiently powerful formal system. The system cannot contain both the statement’s truth and its proof. But reality can. The contradiction exists only from inside the system; from outside, there’s no paradox — just a limitation of what the system can see (see <a href="010-largenumbers.html">Our Intuitions About Large Numbers Are Completely Unreliable</a> and <a href="020-penrose.html">The Arrow Points Somewhere Else</a>).</p>
+<p>Kurt Gödel’s incompleteness theorems<sup class="footnote-ref"><a href="bibliography.html#ref-026-twotruths-3">3</a></sup> provide perhaps the purest example. Gödel constructed a statement that is both true and unprovable within any sufficiently powerful formal system. The system cannot contain both the statement’s truth and its proof. But reality can. The contradiction exists only from inside the system; from outside, there’s no paradox — just a limitation of what the system can see (see <a href="010-largenumbers.html">Our Intuitions About Large Numbers Are Completely Unreliable</a> and <a href="020-penrose.html">The Arrow Points Somewhere Else</a>).</p>
 <p>This matters beyond philosophy of science. Contemporary polarization treats every disagreement as zero-sum: someone must be wrong, someone must win. The frame of “pick a side” is itself the problem. Developing the capacity to hold two truths at once isn’t relativism — both positions have to actually be true, not merely held. It’s a more accurate model of how reality works when it exceeds our frameworks.</p>
 <p>The Necker cube keeps flipping because your visual system can only stabilize one interpretation at a time. But someone who has studied the drawing knows both orientations are present, even when they can only see one. That meta-knowledge changes everything. You stop fighting the flip. You start getting curious about what the flip reveals.</p>
 </div></section>
-<section id="provenance" class="pod-section"><h3 class="section-heading ref-heading">Further reading</h3><div class="prose ref-list"><p class="ref-entry"><a href="bibliography.html#bohr">Bohr,</a> N. 'The Quantum Postulate and the Recent Development of Atomic Theory.' Nature, 1928. The original statement of complementarity.</p>
-<p class="ref-entry"><a href="bibliography.html#whitehead">Whitehead,</a> A.N. Process and Reality (1929). See especially Part II on 'contrast' as a category of existence.</p>
-<p class="ref-entry"><a href="bibliography.html#godel">Gödel,</a> K. 'On Formally Undecidable Propositions of Principia Mathematica and Related Systems.' 1931.</p></div>
-    <div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="002-events.html" class="related-card cat-colored cat-physics"><div class="related-title">2. Reality Is Events, Not Things</div></a>
-<a href="020-penrose.html" class="related-card cat-colored cat-consciousness"><div class="related-title">20. The Arrow Points Somewhere Else</div></a>
-<a href="041-colorwheel.html" class="related-card related-card-prelim cat-colored cat-sensation"><div class="related-title">41. The Surprising Color Wheel</div></a>
-<a href="052-dichotomy.html" class="related-card related-card-prelim cat-colored cat-mathematics"><div class="related-title">52. Discrete and Continuous as a False Dichotomy</div></a>
-<a href="069-love.html" class="related-card cat-colored cat-sensation"><div class="related-title">69. Love</div></a></div>
-<div class="inbound-refs"><span class="inbound-label">1 inbound reference</span><span class="inbound-links"><a href="041-colorwheel.html" class="inbound-link cat-colored cat-sensation" title="The Surprising Color Wheel">41</a></span></div></div></section>
+<section id="provenance" class="pod-section"><div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="002-events.html" class="related-card cat-colored cat-physics nav-push"><div class="related-title">2. Reality Is Events, Not Things</div></a>
+<a href="020-penrose.html" class="related-card cat-colored cat-consciousness nav-push"><div class="related-title">20. The Arrow Points Somewhere Else</div></a>
+<a href="041-colorwheel.html" class="related-card related-card-prelim cat-colored cat-sensation nav-push"><div class="related-title">41. The Surprising Color Wheel</div></a>
+<a href="052-dichotomy.html" class="related-card related-card-prelim cat-colored cat-mathematics nav-push"><div class="related-title">52. Discrete and Continuous as a False Dichotomy</div></a>
+<a href="069-love.html" class="related-card cat-colored cat-sensation nav-push"><div class="related-title">69. Love</div></a></div>
+<div class="inbound-refs"><span class="inbound-label">1 inbound reference</span><span class="inbound-links"><a href="041-colorwheel.html" class="inbound-link nav-push cat-colored cat-sensation" title="The Surprising Color Wheel">41</a></span></div></div></section>
 </div>
 <div class="page-end" id="page-end-version" data-page-version="5">
   <button class="page-end-logo" aria-label="Show page info"
@@ -110,6 +107,6 @@
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">Rev 5 · 2026-04-09 · 16:46</span>
+  <span class="page-end-version" aria-hidden="true">Rev 5 · Built 2026-04-10 11:24 · Edited 2026-04-09 16:46</span>
 </div>
 </body></html>

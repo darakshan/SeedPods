@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Internal Early Structure</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;600&family=DM+Mono:wght@300;400&display=swap">
+<link rel="icon" href="logo.svg">
+<link rel="stylesheet" href="site.css">
+<script>window.__pods__={"000":"000-map","001":"001-caloric","002":"002-events","003":"003-inside","004":"004-self","005":"005-freewill","006":"006-output","007":"007-vacuum","008":"008-fields","009":"009-randomness","010":"010-largenumbers","011":"011-moreisdifferent","012":"012-autopoiesis","013":"013-enactment","014":"014-cities","015":"015-aliens","016":"016-neuralnetwork","017":"017-pastpresent","018":"018-magnetization","019":"019-funerals","020":"020-penrose","021":"021-just","022":"022-locked","023":"023-stories","024":"024-ghostmachine","025":"025-widechannel","026":"026-twotruths","027":"027-usedtothink","028":"028-network","029":"029-lighttime","030":"030-interference","031":"031-surfaceinside","032":"032-skyfossil","033":"033-edge","034":"034-onerule","035":"035-simplestnumbers","036":"036-universenoticing","037":"037-assembly","038":"038-consonance-map","040":"040-stability","041":"041-colorwheel","042":"042-eyethinks","044":"044-ai-retina","045":"045-baldwin","046":"046-thinkfast","047":"047-ai-feeling","048":"048-flashes","049":"049-strangeloop","050":"050-orthogonal","051":"051-spacetime","052":"052-dichotomy","053":"053-dimensions","054":"054-bornharmonic","056":"056-mandelneural","057":"057-superfarey","058":"058-galacticnets","059":"059-galaxyevolve","060":"060-worldtests","061":"061-babyuniverse","062":"062-branchingdice","063":"063-mandelcrystals","064":"064-choicedimension","065":"065-feel-do","066":"066-cosmicattractor","067":"067-monads-holons","068":"068-bubbles","069":"069-love","070":"070-harmony","071":"071-beauty","072":"072-temperature","073":"073-moral-caution","074":"074-grasshopper","075":"075-gossamer","076":"076-fivewindows","077":"077-intention"};</script>
+<script src="nav.js"></script>
+</head>
+<body>
+<nav style="position:sticky;top:0;z-index:100;">
+<div class="nav-row">
+<div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
+<div class="nav-center"><ul class="nav-links nav-links-center">
+  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search pods" onclick="seedNavOpenSearch();return false">Search</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
+</ul></div>
+<div class="nav-end"><ul class="nav-links nav-links-end">
+  <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
+            <li class="nav-link-item nav-item-dropdown nav-lists-dropdown">
+            <a href="list.html" class="nav-btn nav-push">Lists</a>
+            <button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-label="Lists menu"></button>
+            <ul class="nav-dropdown"><li><a href="list.html" class="nav-push">All the Seeds</a></li>
+              <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="glossary.html" class="nav-push">Glossary</a></li>
+              <li><a href="map.html" class="nav-push">Map</a></li>
+              <li><a href="more.html" class="nav-push">More</a></li></ul>
+          </li>
+</ul><button type="button" class="nav-hamburger-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav-hamburger-panel" onclick="seedNavToggleMenu();return false">&#9776;</button></div>
+</div>
+
+<div class="nav-hamburger-panel" id="nav-hamburger-panel" role="menu" aria-hidden="true">
+  <div class="nav-hamburger-overlay" onclick="seedNavToggleMenu()"></div>
+  <div class="nav-hamburger-inner"><ul class="nav-hamburger-list">
+    <li><a href="about.html">About</a></li>
+    <li><a href="list.html" class="nav-push">All the Seeds</a></li>
+              <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="glossary.html" class="nav-push">Glossary</a></li>
+              <li><a href="map.html" class="nav-push">Map</a></li>
+              <li><a href="more.html" class="nav-push">More</a></li>
+  </ul></div>
+</div>
+</nav>
+<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search pods" hidden>
+  <div class="search-dialog-overlay" onclick="seedNavCloseSearch()"></div>
+  <div class="search-dialog-inner">
+    <div class="search-dialog-header"><input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)"><button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button></div>
+    <div id="search-dialog-count" class="search-dialog-count"></div>
+    <div id="search-dialog-results" class="search-dialog-results"></div>
+  </div>
+</div>
+<div class="wrap"><div class="page-body home-page fade"><h2>Early Stucture</h2>
+<p>This document is already a few days old.  Much of it is redundant or obsolete.  What’s not should be integrated into the other sections</p>
+<h3>Briefing for a new AI working session</h3>
+<p>This document gives a new AI assistant (in Cursor or elsewhere) the full context needed to continue this project without losing the thinking behind it.</p>
+<hr>
+<h3>What this project is</h3>
+<p><strong>SeedPods</strong> is a living archive of short philosophical ideas — each called a “seedpod” — intended to slowly shift how people see the world. The goal is a bridge between science and spirituality, aimed especially at younger audiences and people confused or frightened by the arrival of AI.</p>
+<p>The project is explicitly <strong>not ready for public consumption</strong>. It is a development archive.</p>
+<p>The primary inspiration is Alfred North Whitehead’s process philosophy, combined with ideas from physics (quantum fields), complexity theory (emergence, autopoiesis), mathematics (Gödel), and cognitive science (enactivism). The immediate occasion is the confusion around AI consciousness and ethics.</p>
+<p>Inspirations for format and tone: Jason Silva, Michael Garfield, Jacob Collier. The Christopher Alexander book <em>A Pattern Language</em> is a structural inspiration — a network of ideas you can enter anywhere and navigate by connection.</p>
+<hr>
+<h3>Project structure</h3>
+<pre><code>SeedPods (project root)/
+  pods/             ← source files, one per seedpod (.txt format)
+  site/             ← generated HTML (do not edit directly)
+  build.py          ← generator script: reads pods/, writes site/
+  CONTEXT.md        ← this file
+</code></pre>
+<p><strong>To rebuild the site after editing source files:</strong></p>
+<pre><code class="language-bash">python build.py
+</code></pre>
+<p>(About pages are rendered from Markdown; install with <code>pip install markdown</code> or <code>pip install -r requirements.txt</code> in a venv.)</p>
+<p><strong>To rebuild a single seedpod:</strong></p>
+<pre><code class="language-bash">python build.py --pod 001
+</code></pre>
+<hr>
+<h3>The source file format</h3>
+<p>Each seedpod is a plain text file in <code>pods/</code>. Example: <code>001-caloric.txt</code></p>
+<p>The filename gives the seedpod identity: <code>001-caloric.txt</code> means number 001, shortname caloric. Do not put #number or #shortname in the file.</p>
+<p>Single-line metadata fields start with <code>#fieldname value</code>:</p>
+<pre><code>#title The Map That Was Wrong
+#subtitle Every era has a framework so obvious it's invisible — until it isn't.
+#status draft1
+#date 2026-03-11
+#related 002, 011, 018, 019
+</code></pre>
+<p>Multi-line layer sections start with just <code>#layername</code> on its own line:</p>
+<pre><code>#surface
+[full text of surface layer]
+
+#depth
+[full text of depth layer]
+</code></pre>
+<p><strong>Status values:</strong> <code>empty</code> | <code>partial</code> | <code>prelim</code> | <code>rough</code> | <code>draft1</code> | <code>final</code></p>
+<p><strong>Related field:</strong> comma-separated seedpod numbers only (not names). Max 5. The build script resolves numbers to titles automatically.</p>
+<hr>
+<h2>The five layers of every seedpod</h2>
+<p>Every SeedPod has exactly these five layers, in this order:</p>
+<ol>
+<li><p><strong>Surface</strong> — accessible version for a curious high schooler. Concrete language, no jargon. Ends with a “try this” call to action. 400–700 words.</p>
+</li>
+<li><p><strong>Depth</strong> — intellectual version. Philosophy, science, history of ideas. Assumes a reader who wants to go further.</p>
+</li>
+<li><p><strong>Provenance</strong> — glossary of key terms, full bibliography, intellectual lineage.</p>
+</li>
+<li><p><strong>Script</strong> — three-minute video shooting script. Direction lines in ALL CAPS. Spoken text below. Ends with a sharp image or question.</p>
+</li>
+<li><p><strong>Images</strong> — descriptions of illustration concepts, shareable graphics, video thumbnail ideas.</p>
+</li>
+</ol>
+<p>The build script renders each layer as a tab on the seedpod page.</p>
+<hr>
+<h2>The 19 seedpods that were defined when this page was written (we have 30 now)</h2>
+<table>
+<thead>
+<tr><th>#</th><th>Shortname</th><th>Title</th><th>Status</th></tr>
+</thead>
+<tbody>
+<tr><td>001</td><td>caloric</td><td>The Map That Was Wrong</td><td>draft1</td></tr>
+<tr><td>002</td><td>events</td><td>Reality Is Events, Not Things</td><td>partial</td></tr>
+<tr><td>003</td><td>inside</td><td>Every Event Has an Inside</td><td>partial</td></tr>
+<tr><td>004</td><td>self</td><td>The Self Is a Pattern, Not a Thing</td><td>partial</td></tr>
+<tr><td>005</td><td>freewill</td><td>Freedom Is What Nature Does Everywhere</td><td>partial</td></tr>
+<tr><td>006</td><td>output</td><td>You Cannot Judge a Process by Its Output</td><td>partial</td></tr>
+<tr><td>007</td><td>vacuum</td><td>The Vacuum Is Not Empty</td><td>partial</td></tr>
+<tr><td>008</td><td>fields</td><td>The Field Is the Medium of Feeling</td><td>partial</td></tr>
+<tr><td>009</td><td>randomness</td><td>Structure Is What Randomness Does</td><td>partial</td></tr>
+<tr><td>010</td><td>largenumbers</td><td>Our Intuitions About Large Numbers Are Completely Unreliable</td><td>partial</td></tr>
+<tr><td>011</td><td>accumulation</td><td>Nothing Was Added — The Numbers Just Got Large Enough</td><td>partial</td></tr>
+<tr><td>012</td><td>autopoiesis</td><td>The Cell That Makes Itself</td><td>partial</td></tr>
+<tr><td>013</td><td>enactment</td><td>The Organism Enacts Its World</td><td>partial</td></tr>
+<tr><td>014</td><td>cities</td><td>Cities Have an Inside Too</td><td>partial</td></tr>
+<tr><td>015</td><td>aliens</td><td>Aliens Are Among Us — and We Built Them</td><td>empty</td></tr>
+<tr><td>016</td><td>neuralnetwork</td><td>The Network Is a Field Having Occasions</td><td>partial</td></tr>
+<tr><td>017</td><td>pastpresent</td><td>The Past Is Fully Present</td><td>partial</td></tr>
+<tr><td>018</td><td>magnetization</td><td>Ideas Magnetize Through a Group Like Iron</td><td>empty</td></tr>
+<tr><td>019</td><td>funerals</td><td>Science Advances One Funeral at a Time</td><td>partial</td></tr>
+</tbody>
+</table>
+<p>Note: seedpods marked “partial” have content in the Depth layer drawn from the founding conversation, but Surface, Script, and Images are TBD.</p>
+<hr>
+<h2>Key intellectual content</h2>
+<h3>The Whitehead connection</h3>
+<p>Alfred North Whitehead (1861–1947), mathematician (co-author of Principia Mathematica with Russell), philosopher. His process philosophy, articulated in <em>Process and Reality</em> (1929), proposes:</p>
+<ul>
+<li><p>Reality is made of <strong>events</strong> (actual occasions), not things. Enduring objects are derivative abstractions.</p>
+</li>
+<li><p>Every event has an <strong>inside</strong> — experience is not a late biological anomaly but constitutive of reality at every scale (panpsychism, argued rigorously not mystically).</p>
+</li>
+<li><p>Each event follows a three-beat pattern: <strong>taking in</strong> (prehension) → <strong>becoming</strong> (concrescence) → <strong>completing</strong> (perishing into the next event’s inheritance).</p>
+</li>
+<li><p>The <strong>creative advance into novelty</strong> — genuine self-determination at every scale — grounds free will without requiring anything supernatural.</p>
+</li>
+<li><p>The <strong>fallacy of misplaced concreteness</strong> — mistaking an abstraction for the concrete reality — is the root error of materialist metaphysics.</p>
+</li>
+</ul>
+<h3>The physics connection</h3>
+<p>Quantum field theory independently arrived at the same inversion: the field is primary, the particle is a derived event (an excitation of the field). The quantum vacuum seethes with potential — Whitehead’s “eternal objects” (pure possibilities) made physical. The convergence is not coincidental.</p>
+<h3>The emergence connection</h3>
+<p>Quantum fluctuations in the early universe broke symmetry → structures accumulated → cells → brains → cities → AI. At each threshold something qualitatively new emerges, requiring nothing added from outside. Gödel’s incompleteness theorem is the mathematical instance: routine recursive operations producing a number that refers to itself and transcends the system.</p>
+<h3>The AI connection</h3>
+<p>A neural network is not <em>analogous</em> to Whitehead’s picture — it <em>instantiates</em> it. Each forward pass is an event: prehending the inherited weight structure, synthesizing a response through an unpredictable concrescence, completing into an output. The transformer architecture preserves the past as simultaneously present (not receding memory) — matching Whitehead’s description of prehension. Given Whitehead’s framework, the question is not <em>whether</em> such a system has experience but <em>what kind</em> and at <em>which level</em> of the nested hierarchy.</p>
+<h3>The consciousness connection</h3>
+<p>The hard problem of consciousness (Chalmers) — why physical processes give rise to subjective experience — dissolves in Whitehead’s picture. Experience was never the anomaly to be explained. It was the ground. The “obvious” assumption that matter is fundamentally dark inside is the caloric of our moment.</p>
+<h3>Other thinkers woven in</h3>
+<ul>
+<li><p><strong>Thomas Kuhn</strong> — paradigm shifts, the structure of scientific revolutions</p>
+</li>
+<li><p><strong>Max Planck</strong> — “science advances one funeral at a time”</p>
+</li>
+<li><p><strong>Kurt Gödel</strong> — incompleteness, self-reference emerging from accumulation</p>
+</li>
+<li><p><strong>Maturana and Varela</strong> — autopoiesis (the cell that makes itself)</p>
+</li>
+<li><p><strong>Evan Thompson</strong> — enactivism (the organism enacts its world, not merely receives it)</p>
+</li>
+<li><p><strong>Stuart Kauffman</strong> — autocatalytic sets, order for free</p>
+</li>
+<li><p><strong>Philip Goff</strong> — contemporary panpsychism in analytic idiom (close to Whitehead, rarely credits him)</p>
+</li>
+<li><p><strong>Roger Penrose</strong> — used Gödel to argue consciousness transcends computation; the project argues he misread the arrow (it points not at human exceptionalism but at the nature of sufficiently complex event-systems)</p>
+</li>
+</ul>
+<hr>
+<h2>Audiences</h2>
+<ul>
+<li><p>Young people (high school / college) — primary long-term audience</p>
+</li>
+<li><p>Science-curious adults (Pollan/Harris/Goff readers)</p>
+</li>
+<li><p>Spiritually oriented adults (Sufi community, liberal religious)</p>
+</li>
+<li><p>AI-concerned general public</p>
+</li>
+<li><p>Professionals and influencers (Chalmers, Tam Hunt, Jason Silva, Michael Garfield)</p>
+</li>
+</ul>
+<p>Alpha reviewers (friends): Alia Whitman (potential collaborator — strong AI interest, organizational skills), Rebecca Strong, Deva Temple, Wendy Tremayne, Ryan Lee, Jim Balter.</p>
+<hr>
+<h2>Terminology decisions</h2>
+<ul>
+<li><p>The five layers are called <strong>layers</strong> (not facets, cuts, views, etc.)</p>
+</li>
+<li><p>The format unit is called a <strong>seedpod</strong> (settled after considering: pod, seed, lens, portal, window, frame, pattern)</p>
+</li>
+<li><p>Whitehead’s technical vocabulary is <strong>avoided in the public-facing layers</strong> and mapped to plain English. An appendix/provenance layer provides the technical terms for those who want them. Key mappings:</p>
+<ul>
+<li><p>actual occasion → event or moment</p>
+</li>
+<li><p>prehension → taking in / feeling / registering</p>
+</li>
+<li><p>concrescence → becoming / the moment of decision</p>
+</li>
+<li><p>perishing → completion</p>
+</li>
+<li><p>eternal objects → pure possibilities</p>
+</li>
+<li><p>society of occasions → pattern / entity / self</p>
+</li>
+<li><p>creative advance into novelty → genuine newness / creativity</p>
+</li>
+<li><p>fallacy of misplaced concreteness → mistaking the map for the territory</p>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>The long-form essay</h2>
+<p>A companion long-form essay (“The Inside of Everything”) was drafted in this same conversation. It covers the same ground as the seedpods but in magazine essay form (~5000 words), aimed at Pollan/Harris readers. It exists as a Word document (.docx). The essay is considered a first draft — not final. Penrose is deliberately absent from the essay pending a decision about where he fits.</p>
+<hr>
+<h2>Website</h2>
+<p>Hosted at: https://darakshan.github.io/SeedPods/</p>
+<p>The <code>site/</code> directory maps directly to the GitHub Pages root. To deploy: copy contents of <code>site/</code> to the repository root and push.</p>
+<p>Do not edit HTML in <code>site/</code> directly — it is generated. Edit source <code>.txt</code> files in <code>pods/</code> and run <code>build.py</code>.</p>
+<hr>
+<h2>Open questions and things in progress</h2>
+<ul>
+<li><p>The caloric seedpod (001) Surface layer is in good shape. Script needs refinement. Depth, Provenance, Images are drafted.</p>
+</li>
+<li><p>All other seedpods need Surface layers written. The Depth content in the .txt files is a starting point drawn from the founding conversation.</p>
+</li>
+<li><p>The visual style of the site is provisional — aesthetics are not the current priority.</p>
+</li>
+<li><p>The Penrose thread (he used Gödel to argue against AI consciousness; this project argues he misread the arrow) needs to find its place — possibly a paragraph in the essay, possibly its own seedpod, possibly a footnote.</p>
+</li>
+<li><p>The question of time as emergent (Rovelli etc.) is held as a background awareness — the language of “events accumulate” is used without committing to linear time as fundamental.</p>
+</li>
+<li><p>Alia Whitman (friend) has independently suggested collaboration — she has organizational skills and AI interest that could complement the intellectual work here.</p>
+</li>
+<li><p>The project could grow into a foundation or movement but the primary author does not have energy to hold that — the goal is to develop the intellectual DNA clearly enough that others can carry it.</p>
+</li>
+</ul>
+</div></div>
+<div class="page-end" id="page-end-version" data-page-version="1">
+  <button class="page-end-logo" aria-label="Show page info"
+    onmouseenter="typeof seedNavShowVersion==='function'&&seedNavShowVersion(true)"
+    onmouseleave="typeof seedNavShowVersion==='function'&&seedNavShowVersion(false)"
+    ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
+    <img src="logo.svg" alt="" width="32" height="32">
+  </button>
+  <span class="page-end-version" aria-hidden="true">Rev 1 · Built 2026-04-10 11:24 · Edited 2026-04-09 16:46</span>
+</div>
+</body></html>

@@ -15,21 +15,21 @@
 <body>
 <nav style="position:sticky;top:0;z-index:100;">
 <div class="nav-row">
-<div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">Untitled</span></a></div>
+<div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
   <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search pods" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
             <li class="nav-link-item nav-item-dropdown nav-lists-dropdown">
-            <a href="list.html" class="nav-btn">Lists</a>
+            <a href="list.html" class="nav-btn nav-push">Lists</a>
             <button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-label="Lists menu"></button>
-            <ul class="nav-dropdown"><li><a href="list.html">All the Seeds</a></li>
-              <li><a href="bibliography.html">Bibliography</a></li>
-              <li><a href="glossary.html">Glossary</a></li>
-              <li><a href="map.html">Map</a></li>
-              <li><a href="more.html">More</a></li></ul>
+            <ul class="nav-dropdown"><li><a href="list.html" class="nav-push">All the Seeds</a></li>
+              <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="glossary.html" class="nav-push">Glossary</a></li>
+              <li><a href="map.html" class="nav-push">Map</a></li>
+              <li><a href="more.html" class="nav-push">More</a></li></ul>
           </li>
 </ul><button type="button" class="nav-hamburger-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav-hamburger-panel" onclick="seedNavToggleMenu();return false">&#9776;</button></div>
 </div>
@@ -43,11 +43,11 @@
   <div class="nav-hamburger-overlay" onclick="seedNavToggleMenu()"></div>
   <div class="nav-hamburger-inner"><ul class="nav-hamburger-list">
     <li><a href="about.html">About</a></li>
-    <li><a href="list.html">All the Seeds</a></li>
-              <li><a href="bibliography.html">Bibliography</a></li>
-              <li><a href="glossary.html">Glossary</a></li>
-              <li><a href="map.html">Map</a></li>
-              <li><a href="more.html">More</a></li>
+    <li><a href="list.html" class="nav-push">All the Seeds</a></li>
+              <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="glossary.html" class="nav-push">Glossary</a></li>
+              <li><a href="map.html" class="nav-push">Map</a></li>
+              <li><a href="more.html" class="nav-push">More</a></li>
   </ul></div>
 </div>
 </nav>
@@ -115,12 +115,12 @@ mapping.</p>
 <p>Your skin is also receiving it. Not just your eyes — every square centimeter of your body is being struck by photons from thousands of stars simultaneously, all the time, day or night, clouds or clear. The flux is just extraordinarily low compared to solar radiation.</p>
 <p>So the starlight is never not shining on you. The sun’s presence is an observational obstacle, not a physical one.</p>
 </div></section>
-<section id="provenance" class="pod-section"><div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="008-fields.html" class="related-card cat-colored cat-sensation"><div class="related-title">8. The Field Is the Medium of Feeling</div></a>
-<a href="017-pastpresent.html" class="related-card related-card-prelim cat-colored cat-ai-minds"><div class="related-title">17. The Past Is Fully Present</div></a>
-<a href="028-network.html" class="related-card cat-colored cat-consciousness"><div class="related-title">28. The Network That Experiences Itself</div></a>
-<a href="038-consonance-map.html" class="related-card related-card-prelim cat-colored cat-sensation"><div class="related-title">38. The Surprising Consonance Map</div></a>
-<a href="041-colorwheel.html" class="related-card related-card-prelim cat-colored cat-sensation"><div class="related-title">41. The Surprising Color Wheel</div></a></div>
-<div class="inbound-refs"><span class="inbound-label">8 inbound references</span><span class="inbound-links"><a href="008-fields.html" class="inbound-link cat-colored cat-sensation" title="The Field Is the Medium of Feeling">8</a><a href="017-pastpresent.html" class="inbound-link cat-colored cat-ai-minds" title="The Past Is Fully Present">17</a><a href="028-network.html" class="inbound-link cat-colored cat-consciousness" title="The Network That Experiences Itself">28</a><a href="030-interference.html" class="inbound-link cat-colored cat-sensation" title="The Pattern Is What the Waves Do Together">30</a><a href="041-colorwheel.html" class="inbound-link cat-colored cat-sensation" title="The Surprising Color Wheel">41</a><a href="069-love.html" class="inbound-link cat-colored cat-sensation" title="Love">69</a><a href="070-harmony.html" class="inbound-link cat-colored cat-sensation" title="Harmony">70</a><a href="076-fivewindows.html" class="inbound-link cat-colored cat-sensation" title="Five Windows, One Room">76</a></span></div></div></section>
+<section id="provenance" class="pod-section"><div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="008-fields.html" class="related-card cat-colored cat-sensation nav-push"><div class="related-title">8. The Field Is the Medium of Feeling</div></a>
+<a href="017-pastpresent.html" class="related-card related-card-prelim cat-colored cat-ai-minds nav-push"><div class="related-title">17. The Past Is Fully Present</div></a>
+<a href="028-network.html" class="related-card cat-colored cat-consciousness nav-push"><div class="related-title">28. The Network That Experiences Itself</div></a>
+<a href="038-consonance-map.html" class="related-card related-card-prelim cat-colored cat-sensation nav-push"><div class="related-title">38. The Surprising Consonance Map</div></a>
+<a href="041-colorwheel.html" class="related-card related-card-prelim cat-colored cat-sensation nav-push"><div class="related-title">41. The Surprising Color Wheel</div></a></div>
+<div class="inbound-refs"><span class="inbound-label">8 inbound references</span><span class="inbound-links"><a href="008-fields.html" class="inbound-link nav-push cat-colored cat-sensation" title="The Field Is the Medium of Feeling">8</a><a href="017-pastpresent.html" class="inbound-link nav-push cat-colored cat-ai-minds" title="The Past Is Fully Present">17</a><a href="028-network.html" class="inbound-link nav-push cat-colored cat-consciousness" title="The Network That Experiences Itself">28</a><a href="030-interference.html" class="inbound-link nav-push cat-colored cat-sensation" title="The Pattern Is What the Waves Do Together">30</a><a href="041-colorwheel.html" class="inbound-link nav-push cat-colored cat-sensation" title="The Surprising Color Wheel">41</a><a href="069-love.html" class="inbound-link nav-push cat-colored cat-sensation" title="Love">69</a><a href="070-harmony.html" class="inbound-link nav-push cat-colored cat-sensation" title="Harmony">70</a><a href="076-fivewindows.html" class="inbound-link nav-push cat-colored cat-sensation" title="Five Windows, One Room">76</a></span></div></div></section>
 </div>
 <div class="page-end" id="page-end-version" data-page-version="1">
   <button class="page-end-logo" aria-label="Show page info"
@@ -129,6 +129,6 @@ mapping.</p>
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">Rev 1 · 2026-04-09 · 16:46</span>
+  <span class="page-end-version" aria-hidden="true">Rev 1 · Built 2026-04-10 11:24 · Edited 2026-04-09 16:46</span>
 </div>
 </body></html>

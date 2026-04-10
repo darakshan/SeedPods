@@ -15,42 +15,39 @@
 <body>
 <nav style="position:sticky;top:0;z-index:100;">
 <div class="nav-row">
-<div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">Untitled</span></a></div>
+<div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
   <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search pods" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
             <li class="nav-link-item nav-item-dropdown nav-lists-dropdown">
-            <a href="list.html" class="nav-btn">Lists</a>
+            <a href="list.html" class="nav-btn nav-push">Lists</a>
             <button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-label="Lists menu"></button>
-            <ul class="nav-dropdown"><li><a href="list.html">All the Seeds</a></li>
-              <li><a href="bibliography.html">Bibliography</a></li>
-              <li><a href="glossary.html">Glossary</a></li>
-              <li><a href="map.html">Map</a></li>
-              <li><a href="more.html">More</a></li></ul>
+            <ul class="nav-dropdown"><li><a href="list.html" class="nav-push">All the Seeds</a></li>
+              <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="glossary.html" class="nav-push">Glossary</a></li>
+              <li><a href="map.html" class="nav-push">Map</a></li>
+              <li><a href="more.html" class="nav-push">More</a></li></ul>
           </li>
 </ul><button type="button" class="nav-hamburger-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav-hamburger-panel" onclick="seedNavToggleMenu();return false">&#9776;</button></div>
 </div>
   <div class="section-tabs"><div class="section-tabs-inner">
     <span class="section-tabs-prev"><a href="076-fivewindows.html">&lt;&lt;</a></span>
-    <div class="section-tabs-center"><a href="#surface" class="section-tab">Surface</a>
-      <a href="#depth" class="section-tab">Depth</a>
-      <a href="#provenance" class="section-tab">Provenance</a>
-      <a href="#script" class="section-tab">Script</a>
-      <a href="#images" class="section-tab">Images</a></div>
+    <div class="section-tabs-center"><a href="#depth" class="section-tab">Depth</a>
+      <a href="#provenance" class="section-tab">Provenance</a></div>
     <span class="section-tabs-next"></span>
   </div></div>
 <div class="nav-hamburger-panel" id="nav-hamburger-panel" role="menu" aria-hidden="true">
   <div class="nav-hamburger-overlay" onclick="seedNavToggleMenu()"></div>
   <div class="nav-hamburger-inner"><ul class="nav-hamburger-list">
     <li><a href="about.html">About</a></li>
-    <li><a href="list.html">All the Seeds</a></li>
-              <li><a href="bibliography.html">Bibliography</a></li>
-              <li><a href="glossary.html">Glossary</a></li>
-              <li><a href="map.html">Map</a></li>
-              <li><a href="more.html">More</a></li>
+    <li><a href="list.html" class="nav-push">All the Seeds</a></li>
+              <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="glossary.html" class="nav-push">Glossary</a></li>
+              <li><a href="map.html" class="nav-push">Map</a></li>
+              <li><a href="more.html" class="nav-push">More</a></li>
   </ul></div>
 </div>
 </nav>
@@ -65,32 +62,21 @@
 <div class="wrap">
   <div class="meta-row"><a href="index.html#consciousness" class="tag">consciousness</a><span class="mono small dim"> · </span><span class="mono small warm">Pod 77</span><span class="mono small dim"> · prelim</span></div>
   <div class="seedpod-header fade cat-colored cat-consciousness"><h1>The Universe's Intention</h1><p class="premise">Intention is not imposed on the universe from outside; it is a natural outcome of the kinds of systems the universe produces.</p></div>
-  <section id="surface" class="pod-section"><h2 class="section-heading">Surface</h2><div class="prose"><p>TBD</p>
-</div></section>
-<section id="depth" class="pod-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>The universe demonstrably gives rise to systems with intrinsic intention — human beings being the most familiar example. This establishes something important: intention is not outside physics, but a phenomenon that emerges within it. Terrence Deacon’s <em>Incomplete Nature</em> offers the most rigorous contemporary account of how this happens: constraints propagate through thermodynamic and semiotic levels until “aboutness” — genuine reference to something absent — becomes possible.</p>
-<p>Across multiple domains — quantum systems, biological evolution, neural networks — we observe a shared structure: a space of possibilities shaped and constrained by environmental interaction, where only certain stable configurations persist. Stuart Kauffman calls this “order for free”: self-organization that arises not despite the second law but because of how energy flows through open systems. His work on autocatalytic sets shows that life-like dynamics emerge generically once chemical diversity crosses a threshold.</p>
+  <section id="depth" class="pod-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>The universe demonstrably gives rise to systems with intrinsic intention — human beings being the most familiar example. This establishes something important: intention is not outside physics, but a phenomenon that emerges within it. Terrence Deacon’s <em>Incomplete Nature</em> offers the most rigorous contemporary account of how this happens: constraints propagate through thermodynamic and semiotic levels until “aboutness” — genuine reference to something absent — becomes possible. <sup class="footnote-ref"><a href="bibliography.html#ref-077-intention-1">1</a></sup></p>
+<p>Across multiple domains — quantum systems, biological evolution, neural networks — we observe a shared structure: a space of possibilities shaped and constrained by environmental interaction, where only certain stable configurations persist. Stuart Kauffman calls this “order for free”: self-organization that arises not despite the second law but because of how energy flows through open systems. His work on autocatalytic sets shows that life-like dynamics emerge generically once chemical diversity crosses a threshold. <sup class="footnote-ref"><a href="bibliography.html#ref-077-intention-2">2</a></sup></p>
 <p>In biology, this process produces organisms with goals. In artificial systems, it produces behaviors that approximate goal-directedness. In physics, through mechanisms such as decoherence, it shapes which states become effectively real.</p>
 <p>This suggests a unifying perspective: intention may not be a unique property of specific organisms, but a recurring feature of sufficiently complex systems that maintain themselves under environmental constraints.</p>
-<p>But the question presses further. If the universe reliably generates intention-bearing structures, might the universe as a whole have something analogous to intention? Thomas Nagel’s <em>Mind and Cosmos</em> argues that the emergence of consciousness is too improbable under orthodox materialism; he proposes that natural teleology — a bias toward mind — may be woven into cosmic law.  The suggestion is controversial, but it names the puzzle: why does the universe keep producing structures that care?</p>
-<p>Not thought as we know it — but neither do plants reaching for the sun. Michael Marder’s <em>Plant-Thinking</em> rehabilitates vegetal intentionality: the heliotrope doesn’t deliberate, yet it orients, anticipates, and responds.  If intention admits of degrees and modes, cosmic-scale analogs become easier to imagine.</p>
-<p>Teilhard de Chardin saw this decades earlier: evolution is not random drift but a vector toward complexity and consciousness — what he called the Omega Point.  Contemporary cosmology doesn’t require his theology, but it echoes his observation: the universe’s initial conditions and physical constants appear finely tuned for the emergence of structure, life, and mind.</p>
-<p>From this view, the universe need not be said to “have” intention in the human sense. But it may be the kind of system whose dynamics don’t merely permit intention — they favor it. This invites the hypothesis that what we call intention reflects something deeper in the structure of reality itself.</p>
+<p>But the question presses further. If the universe reliably generates intention-bearing structures, might the universe as a whole have something analogous to intention? Thomas Nagel’s <em>Mind and Cosmos</em> argues that the emergence of consciousness is too improbable under orthodox materialism; he proposes that natural teleology — a bias toward mind — may be woven into cosmic law. <sup class="footnote-ref"><a href="bibliography.html#ref-077-intention-3">3</a></sup> The suggestion is controversial, but it names the puzzle: why does the universe keep producing structures that care?</p>
+<p>Not thought as we know it — but neither do plants reaching for the sun. Michael Marder’s <em>Plant-Thinking</em> rehabilitates vegetal intentionality: the heliotrope doesn’t deliberate, yet it orients, anticipates, and responds. <sup class="footnote-ref"><a href="bibliography.html#ref-077-intention-4">4</a></sup> If intention admits of degrees and modes, cosmic-scale analogs become easier to imagine.</p>
+<p>Teilhard de Chardin saw this decades earlier: evolution is not random drift but a vector toward complexity and consciousness — what he called the Omega Point. <sup class="footnote-ref"><a href="bibliography.html#ref-077-intention-5">5</a></sup> Contemporary cosmology doesn’t require his theology, but it echoes his observation: the universe’s initial conditions and physical constants appear finely tuned for the emergence of structure, life, and mind.</p>
+<p>From this view, the universe need not be said to “have” intention in the human sense. But it may be the kind of system whose dynamics don’t merely permit intention — they favor it. This invites the hypothesis that what we call intention reflects something deeper in the structure of reality itself. [TEST EDIT 1]</p>
 </div></section>
-<section id="provenance" class="pod-section"><h2 class="section-heading">Provenance</h2>
-<div class="prose"><p>TBD</p>
-</div>
-<h3 class="section-heading ref-heading">Further reading</h3><div class="prose ref-list"><p class="ref-entry"><a href="bibliography.html#deacon">Terrence</a> Deacon, Incomplete Nature: How Mind Emerged from Matter, W.W. Norton, 2012.</p>
-<p class="ref-entry"><a href="bibliography.html#kauffman">Stuart</a> Kauffman, At Home in the Universe: The Search for the Laws of Self-Organization and Complexity, Oxford University Press, 1995.</p>
-<p class="ref-entry"><a href="bibliography.html#nagel">Thomas</a> Nagel, Mind and Cosmos: Why the Materialist Neo-Darwinian Conception of Nature Is Almost Certainly False, Oxford University Press, 2012.</p>
-<p class="ref-entry"><a href="bibliography.html#marder">Michael</a> Marder, Plant-Thinking: A Philosophy of Vegetal Life, Columbia University Press, 2013.</p>
-<p class="ref-entry"><a href="bibliography.html#teilhard">Pierre</a> Teilhard de Chardin, The Phenomenon of Man, Harper &amp; Row, 1959.</p></div>
-<div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="003-inside.html" class="related-card cat-colored cat-consciousness"><div class="related-title">3. Everything Has an Inside</div></a>
-<a href="005-freewill.html" class="related-card related-card-prelim cat-colored cat-consciousness"><div class="related-title">5. Freedom Is What Nature Does Everywhere</div></a>
-<a href="066-cosmicattractor.html" class="related-card related-card-prelim cat-colored cat-consciousness"><div class="related-title">66. Whitehead's God as Initial Condition and Attractor</div></a></div></div></section>
-<section id="script" class="pod-section"><h2 class="section-heading">Script</h2><div class="prose"><p>TBD</p>
-</div></section>
-<section id="images" class="pod-section"><h2 class="section-heading">Images</h2><div class="prose"><p>TBD</p>
-</div></section>
+<section id="provenance" class="pod-section"><div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="012-autopoiesis.html" class="related-card cat-colored cat-biology nav-push"><div class="related-title">12. The Cell That Makes Itself</div></a>
+<a href="002-events.html" class="related-card cat-colored cat-physics nav-push"><div class="related-title">2. Reality Is Events, Not Things</div></a>
+<a href="016-neuralnetwork.html" class="related-card related-card-prelim cat-colored cat-ai-minds nav-push"><div class="related-title">16. The Network Is a Field Having Occasions</div></a>
+<a href="009-randomness.html" class="related-card cat-colored cat-biology nav-push"><div class="related-title">9. Structure Is What Randomness Does</div></a>
+<a href="001-caloric.html" class="related-card cat-colored cat-knowledge nav-push"><div class="related-title">1. The Map That Was Wrong</div></a></div>
+<div class="inbound-refs"><span class="inbound-label">0 inbound references</span><span class="inbound-links"></span></div></div></section>
 </div>
 <div class="page-end" id="page-end-version" data-page-version="1">
   <button class="page-end-logo" aria-label="Show page info"
@@ -99,6 +85,6 @@
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">Rev 1 · 2026-04-09 · 18:05</span>
+  <span class="page-end-version" aria-hidden="true">Rev 1 · Built 2026-04-10 11:24 · Edited 2026-04-10 10:55</span>
 </div>
 </body></html>

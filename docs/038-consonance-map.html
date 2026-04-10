@@ -15,21 +15,21 @@
 <body>
 <nav style="position:sticky;top:0;z-index:100;">
 <div class="nav-row">
-<div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">Untitled</span></a></div>
+<div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
   <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search pods" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
             <li class="nav-link-item nav-item-dropdown nav-lists-dropdown">
-            <a href="list.html" class="nav-btn">Lists</a>
+            <a href="list.html" class="nav-btn nav-push">Lists</a>
             <button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-label="Lists menu"></button>
-            <ul class="nav-dropdown"><li><a href="list.html">All the Seeds</a></li>
-              <li><a href="bibliography.html">Bibliography</a></li>
-              <li><a href="glossary.html">Glossary</a></li>
-              <li><a href="map.html">Map</a></li>
-              <li><a href="more.html">More</a></li></ul>
+            <ul class="nav-dropdown"><li><a href="list.html" class="nav-push">All the Seeds</a></li>
+              <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="glossary.html" class="nav-push">Glossary</a></li>
+              <li><a href="map.html" class="nav-push">Map</a></li>
+              <li><a href="more.html" class="nav-push">More</a></li></ul>
           </li>
 </ul><button type="button" class="nav-hamburger-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav-hamburger-panel" onclick="seedNavToggleMenu();return false">&#9776;</button></div>
 </div>
@@ -43,11 +43,11 @@
   <div class="nav-hamburger-overlay" onclick="seedNavToggleMenu()"></div>
   <div class="nav-hamburger-inner"><ul class="nav-hamburger-list">
     <li><a href="about.html">About</a></li>
-    <li><a href="list.html">All the Seeds</a></li>
-              <li><a href="bibliography.html">Bibliography</a></li>
-              <li><a href="glossary.html">Glossary</a></li>
-              <li><a href="map.html">Map</a></li>
-              <li><a href="more.html">More</a></li>
+    <li><a href="list.html" class="nav-push">All the Seeds</a></li>
+              <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="glossary.html" class="nav-push">Glossary</a></li>
+              <li><a href="map.html" class="nav-push">Map</a></li>
+              <li><a href="more.html" class="nav-push">More</a></li>
   </ul></div>
 </div>
 </nav>
@@ -70,7 +70,7 @@ have always known this, and the explanation has always been the same:
 simpler ratios sound more consonant. The frequency of G is almost
 exactly 3/2 times the frequency of C. The frequency of G-flat is
 closer to 7/5 — a more complex ratio, a less stable relationship.
-Pythagoras noticed this in the 6th century BC, experimenting with a
+Pythagoras<sup class="footnote-ref"><a href="bibliography.html#ref-038-consonance-map-1">1</a></sup> noticed this in the 6th century BC, experimenting with a
 monochord. He didn't have a graph. He had a single string and a
 remarkable idea: that number and harmony are the same thing. Every
 culture that has independently developed music has found the simple
@@ -91,7 +91,7 @@ angles.</p>
 processes, when you repeat them, converge — they settle toward a
 stable value no matter where you start. Others diverge — they spiral
 outward to infinity. The boundary between the two is where things get
-interesting. In the 1970s and 80s, Benoît Mandelbrot was studying
+interesting. In the 1970s and 80s, Benoît Mandelbrot<sup class="footnote-ref"><a href="bibliography.html#ref-038-consonance-map-2">2</a></sup> was studying
 exactly this boundary for a deceptively simple formula — apply a rule,
 feed the result back in, repeat, and ask: does this converge or
 escape? He expected the boundary to be smooth and unremarkable. When
@@ -116,7 +116,7 @@ wider the moat of complexity surrounding it. This structure has a
 name — the Farey sequence — and the mathematics behind it belongs in
 the references. What matters here is that musicians have always felt
 it. The fifth sounds like itself, and nothing nearby sounds close.
-The moat is arithmetic, not psychology.</p>
+The moat is arithmetic, not psychology.<sup class="footnote-ref"><a href="bibliography.html#ref-038-consonance-map-3">3</a></sup></p>
 <p>Mandelbrot applied a formula and found a shape he didn’t expect.
 Darakshan drew a map long wanted and found the same shape looking
 back. Two questions, one surprise. The echo is not coincidental — it
@@ -127,15 +127,12 @@ learns to think — where the weights that converge are separated from
 the weights that don’t by a boundary of similar complexity — is an
 open question worth asking. [056]</p>
 </div></section>
-<section id="provenance" class="pod-section"><h3 class="section-heading ref-heading">Further reading</h3><div class="prose ref-list"><p class="ref-entry"><a href="bibliography.html#pythagoras">Pythagoras</a> — consonance as simple integer ratios, discovered through string length experiments on the monochord.</p>
-<p class="ref-entry"><a href="bibliography.html#mandelbrot">Mandelbrot,</a> Benoît — The Fractal Geometry of Nature. Freeman, 1982. The boundary between convergence and escape as infinitely complex attractor.</p>
-<p class="ref-entry"><a href="bibliography.html#farey">Farey,</a> John (1816) — sequence of rationals ordered by denominator size; the Farey gap property.</p></div>
-    <div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="010-largenumbers.html" class="related-card related-card-prelim cat-colored cat-knowledge"><div class="related-title">10. Our Intuitions About Large Numbers Are Completely Unreliable</div></a>
-<a href="034-onerule.html" class="related-card related-card-prelim cat-colored cat-mathematics"><div class="related-title">34. One Rule Is Enough</div></a>
-<a href="053-dimensions.html" class="related-card related-card-prelim cat-colored cat-mathematics"><div class="related-title">53. The Virtual Dimensions Formula as a Publishable Conjecture</div></a>
-<a href="056-mandelneural.html" class="related-card related-card-prelim cat-colored cat-ai-minds"><div class="related-title">56. Neural Networks as High-Dimensional Mandelbrot Sets</div></a>
-<a href="062-branchingdice.html" class="related-card related-card-prelim cat-colored cat-mathematics"><div class="related-title">62. Branching Numbers as Finite Dice</div></a></div>
-<div class="inbound-refs"><span class="inbound-label">10 inbound references</span><span class="inbound-links"><a href="029-lighttime.html" class="inbound-link cat-colored cat-physics" title="From Light's Point of View, There Is No Journey">29</a><a href="040-stability.html" class="inbound-link cat-colored cat-mathematics" title="Two Opposite Kinds of Stability">40</a><a href="049-strangeloop.html" class="inbound-link cat-colored cat-consciousness" title="The Strange Loop That Contains Itself">49</a><a href="053-dimensions.html" class="inbound-link cat-colored cat-mathematics" title="The Virtual Dimensions Formula as a Publishable Conjecture">53</a><a href="054-bornharmonic.html" class="inbound-link cat-colored cat-physics" title="The Born Rule as Harmonic Measure">54</a><a href="056-mandelneural.html" class="inbound-link cat-colored cat-ai-minds" title="Neural Networks as High-Dimensional Mandelbrot Sets">56</a><a href="057-superfarey.html" class="inbound-link cat-colored cat-ai-minds" title="Superposition in Neural Network Representations">57</a><a href="062-branchingdice.html" class="inbound-link cat-colored cat-mathematics" title="Branching Numbers as Finite Dice">62</a><a href="063-mandelcrystals.html" class="inbound-link cat-colored cat-mathematics" title="Mandelbrot Structure in Physical Crystals">63</a><a href="064-choicedimension.html" class="inbound-link cat-colored cat-mathematics" title="The Choice Dimension as Tree Algebra">64</a></span></div></div></section>
+<section id="provenance" class="pod-section"><div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="010-largenumbers.html" class="related-card related-card-prelim cat-colored cat-knowledge nav-push"><div class="related-title">10. Our Intuitions About Large Numbers Are Completely Unreliable</div></a>
+<a href="034-onerule.html" class="related-card related-card-prelim cat-colored cat-mathematics nav-push"><div class="related-title">34. One Rule Is Enough</div></a>
+<a href="053-dimensions.html" class="related-card related-card-prelim cat-colored cat-mathematics nav-push"><div class="related-title">53. The Virtual Dimensions Formula as a Publishable Conjecture</div></a>
+<a href="056-mandelneural.html" class="related-card related-card-prelim cat-colored cat-ai-minds nav-push"><div class="related-title">56. Neural Networks as High-Dimensional Mandelbrot Sets</div></a>
+<a href="062-branchingdice.html" class="related-card related-card-prelim cat-colored cat-mathematics nav-push"><div class="related-title">62. Branching Numbers as Finite Dice</div></a></div>
+<div class="inbound-refs"><span class="inbound-label">10 inbound references</span><span class="inbound-links"><a href="029-lighttime.html" class="inbound-link nav-push cat-colored cat-physics" title="From Light's Point of View, There Is No Journey">29</a><a href="040-stability.html" class="inbound-link nav-push cat-colored cat-mathematics" title="Two Opposite Kinds of Stability">40</a><a href="049-strangeloop.html" class="inbound-link nav-push cat-colored cat-consciousness" title="The Strange Loop That Contains Itself">49</a><a href="053-dimensions.html" class="inbound-link nav-push cat-colored cat-mathematics" title="The Virtual Dimensions Formula as a Publishable Conjecture">53</a><a href="054-bornharmonic.html" class="inbound-link nav-push cat-colored cat-physics" title="The Born Rule as Harmonic Measure">54</a><a href="056-mandelneural.html" class="inbound-link nav-push cat-colored cat-ai-minds" title="Neural Networks as High-Dimensional Mandelbrot Sets">56</a><a href="057-superfarey.html" class="inbound-link nav-push cat-colored cat-ai-minds" title="Superposition in Neural Network Representations">57</a><a href="062-branchingdice.html" class="inbound-link nav-push cat-colored cat-mathematics" title="Branching Numbers as Finite Dice">62</a><a href="063-mandelcrystals.html" class="inbound-link nav-push cat-colored cat-mathematics" title="Mandelbrot Structure in Physical Crystals">63</a><a href="064-choicedimension.html" class="inbound-link nav-push cat-colored cat-mathematics" title="The Choice Dimension as Tree Algebra">64</a></span></div></div></section>
 </div>
 <div class="page-end" id="page-end-version" data-page-version="1">
   <button class="page-end-logo" aria-label="Show page info"
@@ -144,6 +141,6 @@ open question worth asking. [056]</p>
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">Rev 1 · 2026-04-09 · 16:46</span>
+  <span class="page-end-version" aria-hidden="true">Rev 1 · Built 2026-04-10 11:24 · Edited 2026-04-09 16:46</span>
 </div>
 </body></html>

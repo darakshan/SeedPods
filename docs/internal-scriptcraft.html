@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Internal Scriptcraft</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;600&family=DM+Mono:wght@300;400&display=swap">
+<link rel="icon" href="logo.svg">
+<link rel="stylesheet" href="site.css">
+<script>window.__pods__={"000":"000-map","001":"001-caloric","002":"002-events","003":"003-inside","004":"004-self","005":"005-freewill","006":"006-output","007":"007-vacuum","008":"008-fields","009":"009-randomness","010":"010-largenumbers","011":"011-moreisdifferent","012":"012-autopoiesis","013":"013-enactment","014":"014-cities","015":"015-aliens","016":"016-neuralnetwork","017":"017-pastpresent","018":"018-magnetization","019":"019-funerals","020":"020-penrose","021":"021-just","022":"022-locked","023":"023-stories","024":"024-ghostmachine","025":"025-widechannel","026":"026-twotruths","027":"027-usedtothink","028":"028-network","029":"029-lighttime","030":"030-interference","031":"031-surfaceinside","032":"032-skyfossil","033":"033-edge","034":"034-onerule","035":"035-simplestnumbers","036":"036-universenoticing","037":"037-assembly","038":"038-consonance-map","040":"040-stability","041":"041-colorwheel","042":"042-eyethinks","044":"044-ai-retina","045":"045-baldwin","046":"046-thinkfast","047":"047-ai-feeling","048":"048-flashes","049":"049-strangeloop","050":"050-orthogonal","051":"051-spacetime","052":"052-dichotomy","053":"053-dimensions","054":"054-bornharmonic","056":"056-mandelneural","057":"057-superfarey","058":"058-galacticnets","059":"059-galaxyevolve","060":"060-worldtests","061":"061-babyuniverse","062":"062-branchingdice","063":"063-mandelcrystals","064":"064-choicedimension","065":"065-feel-do","066":"066-cosmicattractor","067":"067-monads-holons","068":"068-bubbles","069":"069-love","070":"070-harmony","071":"071-beauty","072":"072-temperature","073":"073-moral-caution","074":"074-grasshopper","075":"075-gossamer","076":"076-fivewindows","077":"077-intention"};</script>
+<script src="nav.js"></script>
+</head>
+<body>
+<nav style="position:sticky;top:0;z-index:100;">
+<div class="nav-row">
+<div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
+<div class="nav-center"><ul class="nav-links nav-links-center">
+  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search pods" onclick="seedNavOpenSearch();return false">Search</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
+</ul></div>
+<div class="nav-end"><ul class="nav-links nav-links-end">
+  <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
+            <li class="nav-link-item nav-item-dropdown nav-lists-dropdown">
+            <a href="list.html" class="nav-btn nav-push">Lists</a>
+            <button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-label="Lists menu"></button>
+            <ul class="nav-dropdown"><li><a href="list.html" class="nav-push">All the Seeds</a></li>
+              <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="glossary.html" class="nav-push">Glossary</a></li>
+              <li><a href="map.html" class="nav-push">Map</a></li>
+              <li><a href="more.html" class="nav-push">More</a></li></ul>
+          </li>
+</ul><button type="button" class="nav-hamburger-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav-hamburger-panel" onclick="seedNavToggleMenu();return false">&#9776;</button></div>
+</div>
+
+<div class="nav-hamburger-panel" id="nav-hamburger-panel" role="menu" aria-hidden="true">
+  <div class="nav-hamburger-overlay" onclick="seedNavToggleMenu()"></div>
+  <div class="nav-hamburger-inner"><ul class="nav-hamburger-list">
+    <li><a href="about.html">About</a></li>
+    <li><a href="list.html" class="nav-push">All the Seeds</a></li>
+              <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="glossary.html" class="nav-push">Glossary</a></li>
+              <li><a href="map.html" class="nav-push">Map</a></li>
+              <li><a href="more.html" class="nav-push">More</a></li>
+  </ul></div>
+</div>
+</nav>
+<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search pods" hidden>
+  <div class="search-dialog-overlay" onclick="seedNavCloseSearch()"></div>
+  <div class="search-dialog-inner">
+    <div class="search-dialog-header"><input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)"><button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button></div>
+    <div id="search-dialog-count" class="search-dialog-count"></div>
+    <div id="search-dialog-results" class="search-dialog-results"></div>
+  </div>
+</div>
+<div class="wrap"><div class="page-body home-page fade"><h2>ScriptCraft</h2>
+<p>These notes are intended for addition to the Structure page under Layer 4: Script. Learned in practice, sessions of 2026-03-11 and 2026-03-22.</p>
+<p>The script is not an illustrated voiceover. It is a film. Start from what the camera can show and earn every word of narration.</p>
+<p><strong>On format</strong>
+Write the script as a numbered list of scenes, not as flowing prose with CUT TO / VOICEOVER headers scattered through it. Each numbered entry is one scene: the visual direction and any narration together in a single line or two. This is an outline from which a real shooting script will be unfolded later — not the finished script itself. Aim for 4–8 scenes for a typical seedpod. If you are writing more than eight, you are writing a screenplay, not an outline.</p>
+<p><strong>On integrating narration</strong>
+Don’t separate VO from its scene. Write it as part of the same numbered entry: the image, then “VO:” and the words. This keeps the visual and the verbal together where they belong, and makes the script readable at a glance.</p>
+<p><strong>On music notes</strong>
+If the score matters to the concept, put the composer note as a brief header before scene 1 — not interspersed in the scene list. One short paragraph is enough. Trust the composer with the execution.</p>
+<p><strong>On POV</strong>
+The most powerful tool for conveying an interior is point of view. Don’t tell the audience someone is conscious — put the audience inside their experience. They will feel it before they understand it.</p>
+<p><strong>On sound</strong>
+Sound design can carry a turn that no narration could. In seedpod #22, the shift from muffled to clear — the moment someone finally addresses Rom directly — is the emotional climax. It costs nothing to write and everything to experience. Sound is the color of film. You don’t always need to go from black and white to color — a shift in acoustic quality can do the same work more subtly.</p>
+<p><strong>On time</strong>
+Resist title cards. Let the world of the film show time passing — through objects, through faces, through what has changed in a room. A mother’s hair going from dark to white is worth ten years of title cards. Give the director the idea and trust them with the execution — a brief note in the script is enough.</p>
+<p><strong>On voiceover</strong>
+Use it sparingly — only when the image alone genuinely cannot carry the idea. Two moments of voiceover in a three-minute film is probably the maximum. More than that and you are writing an essay, not a film. In the outline format, VO that appears in every scene is a red flag: you are writing narrated slideshow, not a film. If the VO can be cut without losing the scene’s meaning, cut it.</p>
+<p><strong>On the closing image</strong>
+The script should end on something the eye can hold, not something the ear just heard. Text on black is a last resort. A held image is better. The final frame should be able to stand alone as a still.</p>
+<p><strong>On props and objects</strong>
+Objects do narrative work that dialogue cannot. A monitor growing more sophisticated over the years, a phone becoming a smartphone, a mother’s reading glasses appearing and then thickening — these are not decoration. They are the story told sideways, which is often the most powerful way to tell it.</p>
+<p><strong>On compression</strong>
+The original scene outline for a three-minute seedpod should fit comfortably on one screen. If it doesn’t, it hasn’t been edited. Everything that belongs in a shooting script — exact dialogue, camera angles, performance notes, scene-by-scene music cues — belongs in a later document, not in the #script layer. The #script layer answers: what do we see, in what order, and what if anything do we hear? Nothing more.</p>
+<p><strong>General principle</strong>
+Show the inside by controlling what the audience sees and hears from the outside. The script’s job is to engineer that experience — not to explain it.</p>
+</div></div>
+<div class="page-end" id="page-end-version" data-page-version="1">
+  <button class="page-end-logo" aria-label="Show page info"
+    onmouseenter="typeof seedNavShowVersion==='function'&&seedNavShowVersion(true)"
+    onmouseleave="typeof seedNavShowVersion==='function'&&seedNavShowVersion(false)"
+    ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
+    <img src="logo.svg" alt="" width="32" height="32">
+  </button>
+  <span class="page-end-version" aria-hidden="true">Rev 1 · Built 2026-04-10 11:24 · Edited 2026-04-09 16:46</span>
+</div>
+</body></html>

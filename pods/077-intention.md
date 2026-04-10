@@ -3,10 +3,7 @@
 @status prelim
 @date 2026-04-09
 @category consciousness
-@related 003, 005, 066
-
-@section(surface)
-TBD
+@related 012, 002, 016, 009, 001
 
 @section(depth)
 The universe demonstrably gives rise to systems with intrinsic intention — human beings being the most familiar example. This establishes something important: intention is not outside physics, but a phenomenon that emerges within it. Terrence Deacon's *Incomplete Nature* offers the most rigorous contemporary account of how this happens: constraints propagate through thermodynamic and semiotic levels until "aboutness" — genuine reference to something absent — becomes possible. @ref(deacon, "Terrence Deacon, Incomplete Nature: How Mind Emerged from Matter, W.W. Norton, 2012.")
@@ -23,13 +20,6 @@ Not thought as we know it — but neither do plants reaching for the sun. Michae
 
 Teilhard de Chardin saw this decades earlier: evolution is not random drift but a vector toward complexity and consciousness — what he called the Omega Point. @ref(teilhard, "Pierre Teilhard de Chardin, The Phenomenon of Man, Harper & Row, 1959.") Contemporary cosmology doesn't require his theology, but it echoes his observation: the universe's initial conditions and physical constants appear finely tuned for the emergence of structure, life, and mind.
 
-From this view, the universe need not be said to "have" intention in the human sense. But it may be the kind of system whose dynamics don't merely permit intention — they favor it. This invites the hypothesis that what we call intention reflects something deeper in the structure of reality itself.
+From this view, the universe need not be said to "have" intention in the human sense. But it may be the kind of system whose dynamics don't merely permit intention — they favor it. This invites the hypothesis that what we call intention reflects something deeper in the structure of reality itself. [TEST EDIT 1]
 
-@section(provenance)
-TBD
 
-@section(script)
-TBD
-
-@section(images)
-TBD

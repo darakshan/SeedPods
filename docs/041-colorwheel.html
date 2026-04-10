@@ -15,21 +15,21 @@
 <body>
 <nav style="position:sticky;top:0;z-index:100;">
 <div class="nav-row">
-<div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">Untitled</span></a></div>
+<div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
   <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search pods" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
             <li class="nav-link-item nav-item-dropdown nav-lists-dropdown">
-            <a href="list.html" class="nav-btn">Lists</a>
+            <a href="list.html" class="nav-btn nav-push">Lists</a>
             <button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-label="Lists menu"></button>
-            <ul class="nav-dropdown"><li><a href="list.html">All the Seeds</a></li>
-              <li><a href="bibliography.html">Bibliography</a></li>
-              <li><a href="glossary.html">Glossary</a></li>
-              <li><a href="map.html">Map</a></li>
-              <li><a href="more.html">More</a></li></ul>
+            <ul class="nav-dropdown"><li><a href="list.html" class="nav-push">All the Seeds</a></li>
+              <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="glossary.html" class="nav-push">Glossary</a></li>
+              <li><a href="map.html" class="nav-push">Map</a></li>
+              <li><a href="more.html" class="nav-push">More</a></li></ul>
           </li>
 </ul><button type="button" class="nav-hamburger-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav-hamburger-panel" onclick="seedNavToggleMenu();return false">&#9776;</button></div>
 </div>
@@ -43,11 +43,11 @@
   <div class="nav-hamburger-overlay" onclick="seedNavToggleMenu()"></div>
   <div class="nav-hamburger-inner"><ul class="nav-hamburger-list">
     <li><a href="about.html">About</a></li>
-    <li><a href="list.html">All the Seeds</a></li>
-              <li><a href="bibliography.html">Bibliography</a></li>
-              <li><a href="glossary.html">Glossary</a></li>
-              <li><a href="map.html">Map</a></li>
-              <li><a href="more.html">More</a></li>
+    <li><a href="list.html" class="nav-push">All the Seeds</a></li>
+              <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="glossary.html" class="nav-push">Glossary</a></li>
+              <li><a href="map.html" class="nav-push">Map</a></li>
+              <li><a href="more.html" class="nav-push">More</a></li>
   </ul></div>
 </div>
 </nav>
@@ -80,7 +80,7 @@ tuned to red, green, and blue — receive light. But they do not forward
 those raw signals. At the very next layer, still within the retina,
 those three signals are immediately recombined into two opponent
 channels: red against green, and blue against yellow — a transformation
-first identified by Ewald Hering in 1892. By the time
+first identified by Ewald Hering<sup class="footnote-ref"><a href="bibliography.html#ref-041-colorwheel-1">1</a></sup> in 1892. By the time
 visual information reaches the optic nerve, the world has already been
 transformed. The retina is not a camera. It is a processor. And —
 here is the surprise — the retina is not separate from the brain.
@@ -115,7 +115,7 @@ channels that deliver perceptual experience. Each level is real. Each
 is incomplete without the others. [026]</p>
 <p>Why these two opponent axes and not others? Here is one compelling
 idea, though not one we can claim as settled — developed in detail by
-J.D. Mollon among others: the red-green axis may
+J.D. Mollon<sup class="footnote-ref"><a href="bibliography.html#ref-041-colorwheel-2">2</a></sup> among others: the red-green axis may
 record one of the longest conversations in the history of life —
 plants developing color to attract animals, animals refining the axis
 to read it, each driving the other forward. Flowers and fruit did not
@@ -142,14 +142,12 @@ of a saturated hue, the restlessness of a muddied one — is the shape
 of that solution, felt from the inside. Why it feels like anything
 at all is a different question, and a deeper one. [042]</p>
 </div></section>
-<section id="provenance" class="pod-section"><h3 class="section-heading ref-heading">Further reading</h3><div class="prose ref-list"><p class="ref-entry"><a href="bibliography.html#hering">Hering,</a> Ewald — opponent process theory of color vision, 1892. The original proposal that color experience is organized around opposing pairs.</p>
-<p class="ref-entry"><a href="bibliography.html#mollon">Mollon,</a> J.D. — the uses and origins of primate colour vision. Journal of Experimental Biology, 1989. The fruit and co-evolution hypothesis.</p></div>
-    <div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="013-enactment.html" class="related-card related-card-prelim cat-colored cat-biology"><div class="related-title">13. The Organism Enacts Its World</div></a>
-<a href="016-neuralnetwork.html" class="related-card related-card-prelim cat-colored cat-ai-minds"><div class="related-title">16. The Network Is a Field Having Occasions</div></a>
-<a href="026-twotruths.html" class="related-card cat-colored cat-knowledge"><div class="related-title">26. Two Things Can Be True at Once</div></a>
-<a href="029-lighttime.html" class="related-card related-card-prelim cat-colored cat-physics"><div class="related-title">29. From Light's Point of View, There Is No Journey</div></a>
-<a href="045-baldwin.html" class="related-card related-card-prelim cat-colored cat-biology"><div class="related-title">45. How Learning Becomes Hardwired: The Baldwin Effect</div></a></div>
-<div class="inbound-refs"><span class="inbound-label">4 inbound references</span><span class="inbound-links"><a href="023-stories.html" class="inbound-link cat-colored cat-consciousness" title="Reality Is Made of Stories, Not Atoms">23</a><a href="026-twotruths.html" class="inbound-link cat-colored cat-knowledge" title="Two Things Can Be True at Once">26</a><a href="029-lighttime.html" class="inbound-link cat-colored cat-physics" title="From Light's Point of View, There Is No Journey">29</a><a href="045-baldwin.html" class="inbound-link cat-colored cat-biology" title="How Learning Becomes Hardwired: The Baldwin Effect">45</a></span></div></div></section>
+<section id="provenance" class="pod-section"><div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="013-enactment.html" class="related-card related-card-prelim cat-colored cat-biology nav-push"><div class="related-title">13. The Organism Enacts Its World</div></a>
+<a href="016-neuralnetwork.html" class="related-card related-card-prelim cat-colored cat-ai-minds nav-push"><div class="related-title">16. The Network Is a Field Having Occasions</div></a>
+<a href="026-twotruths.html" class="related-card cat-colored cat-knowledge nav-push"><div class="related-title">26. Two Things Can Be True at Once</div></a>
+<a href="029-lighttime.html" class="related-card related-card-prelim cat-colored cat-physics nav-push"><div class="related-title">29. From Light's Point of View, There Is No Journey</div></a>
+<a href="045-baldwin.html" class="related-card related-card-prelim cat-colored cat-biology nav-push"><div class="related-title">45. How Learning Becomes Hardwired: The Baldwin Effect</div></a></div>
+<div class="inbound-refs"><span class="inbound-label">4 inbound references</span><span class="inbound-links"><a href="023-stories.html" class="inbound-link nav-push cat-colored cat-consciousness" title="Reality Is Made of Stories, Not Atoms">23</a><a href="026-twotruths.html" class="inbound-link nav-push cat-colored cat-knowledge" title="Two Things Can Be True at Once">26</a><a href="029-lighttime.html" class="inbound-link nav-push cat-colored cat-physics" title="From Light's Point of View, There Is No Journey">29</a><a href="045-baldwin.html" class="inbound-link nav-push cat-colored cat-biology" title="How Learning Becomes Hardwired: The Baldwin Effect">45</a></span></div></div></section>
 </div>
 <div class="page-end" id="page-end-version" data-page-version="1">
   <button class="page-end-logo" aria-label="Show page info"
@@ -158,6 +156,6 @@ at all is a different question, and a deeper one. [042]</p>
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">Rev 1 · 2026-04-09 · 16:46</span>
+  <span class="page-end-version" aria-hidden="true">Rev 1 · Built 2026-04-10 11:24 · Edited 2026-04-09 16:46</span>
 </div>
 </body></html>

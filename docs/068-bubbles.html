@@ -15,21 +15,21 @@
 <body>
 <nav style="position:sticky;top:0;z-index:100;">
 <div class="nav-row">
-<div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">Untitled</span></a></div>
+<div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
   <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search pods" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
             <li class="nav-link-item nav-item-dropdown nav-lists-dropdown">
-            <a href="list.html" class="nav-btn">Lists</a>
+            <a href="list.html" class="nav-btn nav-push">Lists</a>
             <button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-label="Lists menu"></button>
-            <ul class="nav-dropdown"><li><a href="list.html">All the Seeds</a></li>
-              <li><a href="bibliography.html">Bibliography</a></li>
-              <li><a href="glossary.html">Glossary</a></li>
-              <li><a href="map.html">Map</a></li>
-              <li><a href="more.html">More</a></li></ul>
+            <ul class="nav-dropdown"><li><a href="list.html" class="nav-push">All the Seeds</a></li>
+              <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="glossary.html" class="nav-push">Glossary</a></li>
+              <li><a href="map.html" class="nav-push">Map</a></li>
+              <li><a href="more.html" class="nav-push">More</a></li></ul>
           </li>
 </ul><button type="button" class="nav-hamburger-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav-hamburger-panel" onclick="seedNavToggleMenu();return false">&#9776;</button></div>
 </div>
@@ -42,11 +42,11 @@
   <div class="nav-hamburger-overlay" onclick="seedNavToggleMenu()"></div>
   <div class="nav-hamburger-inner"><ul class="nav-hamburger-list">
     <li><a href="about.html">About</a></li>
-    <li><a href="list.html">All the Seeds</a></li>
-              <li><a href="bibliography.html">Bibliography</a></li>
-              <li><a href="glossary.html">Glossary</a></li>
-              <li><a href="map.html">Map</a></li>
-              <li><a href="more.html">More</a></li>
+    <li><a href="list.html" class="nav-push">All the Seeds</a></li>
+              <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="glossary.html" class="nav-push">Glossary</a></li>
+              <li><a href="map.html" class="nav-push">Map</a></li>
+              <li><a href="more.html" class="nav-push">More</a></li>
   </ul></div>
 </div>
 </nav>
@@ -64,17 +64,16 @@
   <section id="_prolog" class="pod-section pod-prolog"><div class="prose"><p>Children stop for soap bubbles. Adults do too, if they are honest. The response is disproportionate to what a soap bubble is — a thin film of soapy water, lasting seconds. The attraction runs deeper than aesthetics.</p>
 <figure class="directive-image directive-image--left"><img src="images/068-bubbles.jpg" alt=""><figcaption>A soap bubble: recognition</figcaption></figure>
 <p>The proposal: we are drawn to soap bubbles because we recognize something. Not consciously. Not propositionally. But structurally — the bubble shows us something about what we are.</p>
-<p>If the holographic principle is correct, then every bounded region of spacetime is a bubble in a precise sense. All the information in the interior is encoded on the surface. The interiority is not separate from the boundary — it is what the boundary does. The within of things is the surface of things, seen from inside.</p>
+<p>If the holographic principle<sup class="footnote-ref"><a href="bibliography.html#ref-068-bubbles-1">1</a></sup> is correct, then every bounded region of spacetime is a bubble in a precise sense. All the information in the interior is encoded on the surface. The interiority is not separate from the boundary — it is what the boundary does. The within of things is the surface of things, seen from inside.</p>
 <p>A soap bubble makes this visible. The surface is all there is. There is no hidden interior behind the film — the film is both container and content. The iridescent colors are the information the surface is carrying. The transparency shows you that the inside and outside are separated by almost nothing — a film a few molecules thick — and yet the separation is total and the inside is genuinely inside.</p>
 <p>When a child stops for a soap bubble, she is recognizing the structure of her own existence. She doesn’t know this. But the stillness is not puzzlement. It is recognition.</p>
 </div></section>
-<section id="provenance" class="pod-section"><h3 class="section-heading ref-heading">Further reading</h3><div class="prose ref-list"><p class="ref-entry"><a href="bibliography.html#susskind">Susskind,</a> L. The World as a Hologram (1995). 't Hooft, G. Dimensional reduction in quantum gravity (1993).</p></div>
-    <div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="051-spacetime.html" class="related-card related-card-prelim cat-colored cat-physics"><div class="related-title">51. Spacetime as Emergent from Information Structure</div></a>
-<a href="067-monads-holons.html" class="related-card related-card-prelim cat-colored cat-physics"><div class="related-title">67. Leibniz as the Unlikely Ancestor of the Holographic Principle</div></a>
-<a href="031-surfaceinside.html" class="related-card related-card-prelim cat-colored cat-physics"><div class="related-title">31. The Surface Is the Inside</div></a>
-<a href="003-inside.html" class="related-card cat-colored cat-consciousness"><div class="related-title">3. Everything Has an Inside</div></a>
-<a href="037-assembly.html" class="related-card related-card-prelim cat-colored cat-mathematics"><div class="related-title">37. The Architecture of Levels</div></a></div>
-<div class="inbound-refs"><span class="inbound-label">3 inbound references</span><span class="inbound-links"><a href="031-surfaceinside.html" class="inbound-link cat-colored cat-physics" title="The Surface Is the Inside">31</a><a href="051-spacetime.html" class="inbound-link cat-colored cat-physics" title="Spacetime as Emergent from Information Structure">51</a><a href="067-monads-holons.html" class="inbound-link cat-colored cat-physics" title="Leibniz as the Unlikely Ancestor of the Holographic Principle">67</a></span></div></div></section>
+<section id="provenance" class="pod-section"><div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="051-spacetime.html" class="related-card related-card-prelim cat-colored cat-physics nav-push"><div class="related-title">51. Spacetime as Emergent from Information Structure</div></a>
+<a href="067-monads-holons.html" class="related-card related-card-prelim cat-colored cat-physics nav-push"><div class="related-title">67. Leibniz as the Unlikely Ancestor of the Holographic Principle</div></a>
+<a href="031-surfaceinside.html" class="related-card related-card-prelim cat-colored cat-physics nav-push"><div class="related-title">31. The Surface Is the Inside</div></a>
+<a href="003-inside.html" class="related-card cat-colored cat-consciousness nav-push"><div class="related-title">3. Everything Has an Inside</div></a>
+<a href="037-assembly.html" class="related-card related-card-prelim cat-colored cat-mathematics nav-push"><div class="related-title">37. The Architecture of Levels</div></a></div>
+<div class="inbound-refs"><span class="inbound-label">3 inbound references</span><span class="inbound-links"><a href="031-surfaceinside.html" class="inbound-link nav-push cat-colored cat-physics" title="The Surface Is the Inside">31</a><a href="051-spacetime.html" class="inbound-link nav-push cat-colored cat-physics" title="Spacetime as Emergent from Information Structure">51</a><a href="067-monads-holons.html" class="inbound-link nav-push cat-colored cat-physics" title="Leibniz as the Unlikely Ancestor of the Holographic Principle">67</a></span></div></div></section>
 </div>
 <div class="page-end" id="page-end-version" data-page-version="2">
   <button class="page-end-logo" aria-label="Show page info"
@@ -83,6 +82,6 @@
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">Rev 2 · 2026-04-09 · 16:46</span>
+  <span class="page-end-version" aria-hidden="true">Rev 2 · Built 2026-04-10 11:24 · Edited 2026-04-09 16:46</span>
 </div>
 </body></html>

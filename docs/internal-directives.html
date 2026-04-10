@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>&amp;#64; directives</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;600&family=DM+Mono:wght@300;400&display=swap">
+<link rel="icon" href="logo.svg">
+<link rel="stylesheet" href="site.css">
+<script>window.__pods__={"000":"000-map","001":"001-caloric","002":"002-events","003":"003-inside","004":"004-self","005":"005-freewill","006":"006-output","007":"007-vacuum","008":"008-fields","009":"009-randomness","010":"010-largenumbers","011":"011-moreisdifferent","012":"012-autopoiesis","013":"013-enactment","014":"014-cities","015":"015-aliens","016":"016-neuralnetwork","017":"017-pastpresent","018":"018-magnetization","019":"019-funerals","020":"020-penrose","021":"021-just","022":"022-locked","023":"023-stories","024":"024-ghostmachine","025":"025-widechannel","026":"026-twotruths","027":"027-usedtothink","028":"028-network","029":"029-lighttime","030":"030-interference","031":"031-surfaceinside","032":"032-skyfossil","033":"033-edge","034":"034-onerule","035":"035-simplestnumbers","036":"036-universenoticing","037":"037-assembly","038":"038-consonance-map","040":"040-stability","041":"041-colorwheel","042":"042-eyethinks","044":"044-ai-retina","045":"045-baldwin","046":"046-thinkfast","047":"047-ai-feeling","048":"048-flashes","049":"049-strangeloop","050":"050-orthogonal","051":"051-spacetime","052":"052-dichotomy","053":"053-dimensions","054":"054-bornharmonic","056":"056-mandelneural","057":"057-superfarey","058":"058-galacticnets","059":"059-galaxyevolve","060":"060-worldtests","061":"061-babyuniverse","062":"062-branchingdice","063":"063-mandelcrystals","064":"064-choicedimension","065":"065-feel-do","066":"066-cosmicattractor","067":"067-monads-holons","068":"068-bubbles","069":"069-love","070":"070-harmony","071":"071-beauty","072":"072-temperature","073":"073-moral-caution","074":"074-grasshopper","075":"075-gossamer","076":"076-fivewindows","077":"077-intention"};</script>
+<script src="nav.js"></script>
+</head>
+<body>
+<nav style="position:sticky;top:0;z-index:100;">
+<div class="nav-row">
+<div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
+<div class="nav-center"><ul class="nav-links nav-links-center">
+  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search pods" onclick="seedNavOpenSearch();return false">Search</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
+</ul></div>
+<div class="nav-end"><ul class="nav-links nav-links-end">
+  <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
+            <li class="nav-link-item nav-item-dropdown nav-lists-dropdown">
+            <a href="list.html" class="nav-btn nav-push">Lists</a>
+            <button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-label="Lists menu"></button>
+            <ul class="nav-dropdown"><li><a href="list.html" class="nav-push">All the Seeds</a></li>
+              <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="glossary.html" class="nav-push">Glossary</a></li>
+              <li><a href="map.html" class="nav-push">Map</a></li>
+              <li><a href="more.html" class="nav-push">More</a></li></ul>
+          </li>
+</ul><button type="button" class="nav-hamburger-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav-hamburger-panel" onclick="seedNavToggleMenu();return false">&#9776;</button></div>
+</div>
+
+<div class="nav-hamburger-panel" id="nav-hamburger-panel" role="menu" aria-hidden="true">
+  <div class="nav-hamburger-overlay" onclick="seedNavToggleMenu()"></div>
+  <div class="nav-hamburger-inner"><ul class="nav-hamburger-list">
+    <li><a href="about.html">About</a></li>
+    <li><a href="list.html" class="nav-push">All the Seeds</a></li>
+              <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="glossary.html" class="nav-push">Glossary</a></li>
+              <li><a href="map.html" class="nav-push">Map</a></li>
+              <li><a href="more.html" class="nav-push">More</a></li>
+  </ul></div>
+</div>
+</nav>
+<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search pods" hidden>
+  <div class="search-dialog-overlay" onclick="seedNavCloseSearch()"></div>
+  <div class="search-dialog-inner">
+    <div class="search-dialog-header"><input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)"><button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button></div>
+    <div id="search-dialog-count" class="search-dialog-count"></div>
+    <div id="search-dialog-results" class="search-dialog-results"></div>
+  </div>
+</div>
+<div class="wrap"><div class="page-body home-page fade"><h1>@ directives</h1>
+<p>@ directives work in two contexts:</p>
+<ul>
+<li><p><strong><code>.md</code> files</strong> under <code>content/</code> (home, nav file/dir pages, internal, and any referenced docs). Pipeline: <strong>@include</strong> first, then other directives, then Markdown → HTML.</p>
+</li>
+<li><p><strong>SeedPod layer text</strong> (Surface, Depth, Provenance, etc. in <code>content/pods/*.md</code>). Directives are expanded when building seedpod HTML. Layer text also supports full Markdown styling (bold, italic, headings, lists, code, tables, etc.).</p>
+</li>
+</ul>
+<p>All directives work in both contexts unless marked <strong><code>.md</code> only</strong>. The table below lists all directives:</p>
+<ol>
+<li><p><strong>@bibliography</strong> — <code>.md</code> only</p>
+</li>
+<li><p><strong>@exercise(text)</strong></p>
+</li>
+<li><p><strong>@glossary</strong> — <code>.md</code> only</p>
+</li>
+<li><p><strong>@image(file, caption, credit)</strong></p>
+</li>
+<li><p><strong>@include(path)</strong> — <code>.md</code> only</p>
+</li>
+<li><p><strong>@index</strong> — <code>.md</code> only</p>
+</li>
+<li><p><strong>@link(locator)</strong> or <strong>@link(locator, text)</strong></p>
+</li>
+<li><p><strong>@map</strong> — <code>.md</code> only</p>
+</li>
+<li><p><strong>@pods</strong> — <code>.md</code> only</p>
+</li>
+<li><p><strong>@samples</strong> or <strong>@samples(n)</strong> — <code>.md</code> only</p>
+</li>
+<li><p><strong>@setting(key)</strong></p>
+</li>
+<li><p><strong>@timestamp</strong></p>
+</li>
+<li><p><strong>@warn(message)</strong></p>
+</li>
+</ol>
+<hr>
+<h2>@include(path)</h2>
+<ul>
+<li><p><strong>Syntax</strong>: <code>@include(filename)</code> — path relative to the current file’s directory. Parentheses required.</p>
+</li>
+<li><p><strong>Effect</strong>: The directive is replaced by the full contents of that file. If the resolved path leaves that directory or the file is missing, a warning is emitted and the directive is left unchanged.</p>
+</li>
+<li><p><strong>Example</strong>: From <code>content/internal/page.md</code>, <code>@include(structure.md)</code> pulls in <code>content/internal/structure.md</code>.</p>
+</li>
+<li><p><strong>Where</strong>: <code>.md</code> files only.</p>
+</li>
+</ul>
+<h2>@samples and @samples(n)</h2>
+<ul>
+<li><p><strong>Syntax</strong>: <code>@samples</code> or <code>@samples(n)</code> — optional number (default 5, capped at 50).</p>
+</li>
+<li><p><strong>Effect</strong>: The line is replaced by a block of seedpod rows (links to seedpod pages). The number is how many to show (default 5, capped at 50). Order and styling use <code>config/status.txt</code> and index copy (e.g. view-all link on home). On the home page this is rendered as the full “seedpod list” section; on other pages it is just the requested number of rows.</p>
+</li>
+<li><p><strong>Where</strong>: <code>.md</code> files only.</p>
+</li>
+</ul>
+<h2>@pods</h2>
+<ul>
+<li><p><strong>Syntax</strong>: <code>@pods</code> (no arguments).</p>
+</li>
+<li><p><strong>Effect</strong>: Replaced by the full list of all seedpod rows (same block as the list page), with sort UI. No “view all” link is added (the page is the full list).</p>
+</li>
+<li><p><strong>Where</strong>: <code>.md</code> files only.</p>
+</li>
+</ul>
+<h2>@glossary</h2>
+<ul>
+<li><p><strong>Syntax</strong>: <code>@glossary</code> (no arguments).</p>
+</li>
+<li><p><strong>Effect</strong>: Replaced by the glossary table (terms and definitions from all seedpods, grouped by term). Use in any <code>.md</code> file (e.g. <code>content/glossary.md</code>) to build a glossary page.</p>
+</li>
+<li><p><strong>Where</strong>: <code>.md</code> files only.</p>
+</li>
+</ul>
+<h2>@bibliography</h2>
+<ul>
+<li><p><strong>Syntax</strong>: <code>@bibliography</code> (no arguments).</p>
+</li>
+<li><p><strong>Effect</strong>: Replaced by the bibliography (references from <code>#ref</code> in <code>#provenance</code>, grouped by keyword). Use in any <code>.md</code> file (e.g. <code>content/bibliography.md</code>) to build a bibliography page.</p>
+</li>
+<li><p><strong>Where</strong>: <code>.md</code> files only.</p>
+</li>
+</ul>
+<h2>@index</h2>
+<ul>
+<li><p><strong>Syntax</strong>: <code>@index</code> (no arguments).</p>
+</li>
+<li><p><strong>Effect</strong>: Replaced by the index (seedpods by tag and by status). Use in any <code>.md</code> file (e.g. <code>content/tags.md</code>) to build an index page.</p>
+</li>
+<li><p><strong>Where</strong>: <code>.md</code> files only.</p>
+</li>
+</ul>
+<h2>@map</h2>
+<ul>
+<li><p><strong>Syntax</strong>: <code>@map</code> (no arguments).</p>
+</li>
+<li><p><strong>Effect</strong>: Replaced by the map (graph of seedpods with category/status filters). Use in any <code>.md</code> file (e.g. <code>content/map.md</code>) to build a map page.</p>
+</li>
+<li><p><strong>Where</strong>: <code>.md</code> files only.</p>
+</li>
+</ul>
+<h2>@setting(key)</h2>
+<ul>
+<li><p><strong>Syntax</strong>: <code>@setting(key)</code> — key is a single word (e.g. <code>site_base</code>, <code>site_dir</code>).</p>
+</li>
+<li><p><strong>Effect</strong>: Replaced by the value of that key from <code>config/settings.txt</code>. Used so the builder can insert settings into HTML. For <code>site_base</code>, the value is returned with no trailing slash so you can concatenate with <code>/{path}</code>.</p>
+</li>
+<li><p><strong>Example</strong>: <code>@setting(site_base)</code> expands to the site base URL (e.g. <code>https://example.com/SeedPods</code>).</p>
+</li>
+</ul>
+<h2>@timestamp</h2>
+<ul>
+<li><p><strong>Syntax</strong>: <code>@timestamp</code> (no arguments). May appear anywhere inline.</p>
+</li>
+<li><p><strong>Effect</strong>: Replaced by the build timestamp (e.g. <code>YYYY-MM-DD HH:MM Pacific</code>). If build time is not available, the token may be left unchanged.</p>
+</li>
+</ul>
+<h2>@link(locator) or @link(locator, text)</h2>
+<ul>
+<li><p><strong>Syntax</strong>: <code>@link(locator)</code> or <code>@link(locator, text)</code>. Text is optional; if omitted it defaults to the seedpod title (for seedpod number locators) or the locator itself (for other types).</p>
+</li>
+<li><p><strong>Effect</strong>: Replaced by <code>&lt;a href=&quot;...&quot;&gt;text&lt;/a&gt;</code>. Missing seedpods or unresolvable <code>.md</code> files are build errors.</p>
+</li>
+<li><p><strong>Locator</strong> can be:</p>
+<ul>
+<li><p>A <strong>seedpod number</strong> (e.g. <code>002</code>): links to that seedpod’s page. If no seedpod matches, it is a build error.</p>
+</li>
+<li><p>A <strong>path to a <code>.md</code> file</strong> (e.g. <code>internal/inside.md</code>): resolved relative to the current file’s directory. The build registers that file to be built, and the href becomes the output name (e.g. <code>internal-inside.html</code>).</p>
+</li>
+<li><p>A <strong>path-only name</strong> (e.g. <code>about</code>, <code>about/authors</code>): looks for <code>content/{name}.md</code> or <code>content/{name}/page.md</code>.</p>
+</li>
+<li><p>Anything else (e.g. <code>about.html</code>): used as the href as-is.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2>@image(file, caption, credit)</h2>
+<ul>
+<li><p><strong>Syntax</strong>: <code>@image(file, caption, credit)</code> — arguments are comma-separated. Only the first (file) is required; caption and credit are optional.</p>
+</li>
+<li><p><strong>Effect</strong>: The directive is replaced by a figure: the image is copied from <code>content/images/</code> to the site output (e.g. <code>docs/images/</code>). The image is shown at 50% column width, floated left, with text wrapping. If caption or credit are given, a <code>&lt;figcaption&gt;</code> is added (credit in <code>&lt;cite&gt;</code>).</p>
+</li>
+<li><p><strong>File</strong>: Basename only (no path). The build looks for <code>content/images/file</code> with extension <code>.jpg</code>, <code>.jpeg</code>, <code>.png</code>, <code>.webp</code>, or <code>.gif</code> and copies it to the site’s <code>images/</code> directory. If no file is found, a warning is emitted and the directive is left unchanged.</p>
+</li>
+<li><p><strong>Example</strong>: <code>@image(harmonic-clock)</code> or <code>@image(mandelbrot-boundary, Mandelbrot Set, Wikipedia)</code>.</p>
+</li>
+</ul>
+<h2>@exercise(text)</h2>
+<ul>
+<li><p><strong>Syntax</strong>: <code>@exercise(Try this: ...)</code> — parentheses must balance if the text contains <code>)</code>.</p>
+</li>
+<li><p><strong>Effect</strong>: The text inside the parentheses is rendered as a call-to-action block (<code>&lt;div class=&quot;cta&quot;&gt;...&lt;/div&gt;</code>). The inner text may contain <code>@link(NNN)</code>.</p>
+</li>
+<li><p><strong>Where</strong>: SeedPod layer text only (Surface, Depth, Provenance, Images).</p>
+</li>
+</ul>
+<h2>@warn(message)</h2>
+<ul>
+<li><p><strong>Syntax</strong>: <code>@warn(message)</code>.</p>
+</li>
+<li><p><strong>Effect</strong>: The text is rendered as a notice block with a vertical bar to the left (<code>&lt;div class=&quot;warn-notice&quot;&gt;...&lt;/div&gt;</code>), same style as the proto and rough notices. Use for editorial caveats such as flagging speculative content.</p>
+</li>
+<li><p><strong>Where</strong>: SeedPod layer text only.</p>
+</li>
+</ul>
+</div></div>
+<div class="page-end" id="page-end-version" data-page-version="1">
+  <button class="page-end-logo" aria-label="Show page info"
+    onmouseenter="typeof seedNavShowVersion==='function'&&seedNavShowVersion(true)"
+    onmouseleave="typeof seedNavShowVersion==='function'&&seedNavShowVersion(false)"
+    ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
+    <img src="logo.svg" alt="" width="32" height="32">
+  </button>
+  <span class="page-end-version" aria-hidden="true">Rev 1 · Built 2026-04-10 11:24 · Edited 2026-04-09 16:46</span>
+</div>
+</body></html>
