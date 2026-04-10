@@ -123,6 +123,6 @@
   ],
   "surface_max_words" : 700,
   "surface_min_words" : 400,
-  "version" : 4,
+  "version" : 5,
   "view_all" : "View all {n} seeds →"
 }
