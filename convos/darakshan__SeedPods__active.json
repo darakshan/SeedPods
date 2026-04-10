@@ -158,5 +158,30 @@
     "content" : "[edit accepted: pods\/077-intention.md]",
     "isHidden" : true,
     "role" : "user"
+  },
+  {
+    "content" : "now add test edit 3",
+    "isHidden" : false,
+    "role" : "user"
+  },
+  {
+    "content" : "",
+    "isHidden" : false,
+    "role" : "assistant"
+  },
+  {
+    "content" : "hello?",
+    "isHidden" : false,
+    "role" : "user"
+  },
+  {
+    "content" : "Sorry about that — I went silent on you. Let me propose the edit:",
+    "isHidden" : false,
+    "role" : "assistant"
+  },
+  {
+    "content" : "[edit accepted: pods\/077-intention.md]",
+    "isHidden" : true,
+    "role" : "user"
   }
 ]
