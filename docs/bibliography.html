@@ -9,105 +9,47 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;600&family=DM+Mono:wght@300;400&display=swap">
 <link rel="icon" href="logo.svg">
 <link rel="stylesheet" href="site.css">
-<script>
-window.__pods__={"000":"000-map","001":"001-caloric","002":"002-events","003":"003-inside","004":"004-self","005":"005-freewill","006":"006-output","007":"007-vacuum","008":"008-fields","009":"009-randomness","010":"010-largenumbers","011":"011-moreisdifferent","012":"012-autopoiesis","013":"013-enactment","014":"014-cities","015":"015-aliens","016":"016-neuralnetwork","017":"017-pastpresent","018":"018-magnetization","019":"019-funerals","020":"020-penrose","021":"021-just","022":"022-locked","023":"023-stories","024":"024-ghostmachine","025":"025-widechannel","026":"026-twotruths","027":"027-usedtothink","028":"028-network","029":"029-lighttime","030":"030-interference","031":"031-surfaceinside","032":"032-skyfossil","033":"033-edge","034":"034-onerule","035":"035-simplestnumbers","036":"036-universenoticing","037":"037-assembly","038":"038-consonance-map","040":"040-stability","041":"041-colorwheel","042":"042-eyethinks","044":"044-ai-retina","045":"045-baldwin","046":"046-thinkfast","047":"047-ai-feeling","048":"048-flashes","049":"049-strangeloop","050":"050-orthogonal","051":"051-spacetime","052":"052-dichotomy","053":"053-dimensions","054":"054-bornharmonic","056":"056-mandelneural","057":"057-superfarey","058":"058-galacticnets","059":"059-galaxyevolve","060":"060-worldtests","061":"061-babyuniverse","062":"062-branchingdice","063":"063-mandelcrystals","064":"064-choicedimension","065":"065-feel-do","066":"066-cosmicattractor","067":"067-monads-holons","068":"068-bubbles","069":"069-love","070":"070-harmony","071":"071-beauty","072":"072-temperature","073":"073-moral-caution","074":"074-grasshopper","075":"075-gossamer","076":"076-fivewindows"};
-window._seedNavSearchIndex=null;
-window._seedNavSearchIndexPromise=null;
-function _seedNavLoadIndex(){if(window._seedNavSearchIndex)return Promise.resolve(window._seedNavSearchIndex);if(!window._seedNavSearchIndexPromise){window._seedNavSearchIndexPromise=fetch('search-index.json').then(function(r){return r.json();}).then(function(d){window._seedNavSearchIndex=d;return d;});}return window._seedNavSearchIndexPromise;}
-function seedNavGo(){
-  var inp=document.getElementById('nav-goto-num');
-  if(!inp)return;
-  var v=inp.value.trim().replace(/^0+/,'');
-  if(!v)return;
-  var pad=v.padStart(3,'0');
-  var fn=window.__pods__[pad]||window.__pods__[v];
-  if(!fn){var k=Object.keys(window.__pods__).find(function(k){return parseInt(k,10)===parseInt(v,10)});if(k)fn=window.__pods__[k];}
-  if(fn)window.location.href=fn+'.html';
-}
-window.seedNavOpenSearch=function(){var n=document.querySelector("nav");if(n&&n.classList.contains("nav-hamburger-open"))window.seedNavToggleMenu();var d=document.getElementById("search-dialog");var i=document.getElementById("search-dialog-input");if(d)d.removeAttribute("hidden");if(i){i.value="";i.focus();}_seedNavLoadIndex();window.seedNavRunSearch("");};
-window.seedNavCloseSearch=function(){var d=document.getElementById("search-dialog");if(d)d.setAttribute("hidden","");};
-window._seedNavSnippet=function(content,q){if(!content||!q)return"";var c=content.toLowerCase();var i=c.indexOf(q);if(i<0)return"";var len=100;var start=Math.max(0,i-len);var end=Math.min(content.length,i+q.length+len);var s=content.substring(start,end).replace(/\s+/g," ").trim();if(start>0)s="\u2026 "+s;if(end<content.length)s=s+" \u2026";return s;};
-window.seedNavRunSearch=function(q){
-  q=(q||"").toLowerCase().trim();
-  var el=document.getElementById("search-dialog-results");
-  var countEl=document.getElementById("search-dialog-count");
-  if(!el)return;
-  if(!q){el.innerHTML="";if(countEl)countEl.textContent="";return;}
-  _seedNavLoadIndex().then(function(index){
-    var nm=[],cm=[];
-    for(var j=0;j<index.length;j++){var it=index[j];if((it.title||"").toLowerCase().indexOf(q)>=0)nm.push(it);else if((it.content||"").toLowerCase().indexOf(q)>=0)cm.push(it);}
-    var slugs={};
-    nm.forEach(function(it){slugs[it.slug]=1;});cm.forEach(function(it){slugs[it.slug]=1;});
-    var n=Object.keys(slugs).length;
-    if(countEl)countEl.textContent=n===1?"1 found":n+" found";
-    var h="";
-    if(nm.length){h+='<div class="search-section"><div class="search-section-title">Name</div><ul class="search-result-list">';nm.forEach(function(it){var d=document.createElement("div");d.textContent=it.num+". "+it.title;h+='<li><a href="'+it.slug+'.html">'+d.innerHTML+'</a></li>';});h+="</ul></div>";}
-    if(cm.length){h+='<div class="search-section"><div class="search-section-title">Content</div><ul class="search-result-list">';cm.forEach(function(it){var titleDiv=document.createElement("div");titleDiv.textContent=it.num+". "+it.title;var snip=window._seedNavSnippet(it.content,q);var snipDiv=document.createElement("div");snipDiv.textContent=snip;h+='<li><a href="'+it.slug+'.html">'+titleDiv.innerHTML+'<br><span class="search-result-snippet">'+snipDiv.innerHTML+'</span></a></li>';});h+="</ul></div>";}
-    if(!h&&q)h='<p class="search-no-results">No pods match.</p>';
-    el.innerHTML=h;
-  });
-};
-window.seedNavToggleMenu=function(){var n=document.querySelector("nav");var b=document.querySelector(".nav-hamburger-btn");var p=document.getElementById("nav-hamburger-panel");if(!n||!b)return;var open=n.classList.contains("nav-hamburger-open");n.classList.toggle("nav-hamburger-open",!open);b.setAttribute("aria-expanded",!open?"true":"false");if(p)p.style.display=open?"none":"flex";};
-window.seedNavShowVersion=function(show){var el=document.querySelector(".page-end-version");if(el)el.classList.toggle("page-end-version-visible",!!show);};
-window.seedNavToggleVersion=function(){var el=document.querySelector(".page-end-version");if(el)el.classList.toggle("page-end-version-visible");};
-document.addEventListener("keydown",function(e){if(e.key==="Escape"){var n=document.querySelector("nav");if(n&&n.classList.contains("nav-hamburger-open"))window.seedNavToggleMenu();else window.seedNavCloseSearch();}});
-document.addEventListener("DOMContentLoaded",function(){var p=document.getElementById("nav-hamburger-panel");if(p){p.style.display="none";var list=p.querySelector(".nav-hamburger-list");if(list)list.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){if(document.querySelector("nav").classList.contains("nav-hamburger-open"))window.seedNavToggleMenu();});});}});
-</script>
+<script>window.__pods__={"000":"000-map","001":"001-caloric","002":"002-events","003":"003-inside","004":"004-self","005":"005-freewill","006":"006-output","007":"007-vacuum","008":"008-fields","009":"009-randomness","010":"010-largenumbers","011":"011-moreisdifferent","012":"012-autopoiesis","013":"013-enactment","014":"014-cities","015":"015-aliens","016":"016-neuralnetwork","017":"017-pastpresent","018":"018-magnetization","019":"019-funerals","020":"020-penrose","021":"021-just","022":"022-locked","023":"023-stories","024":"024-ghostmachine","025":"025-widechannel","026":"026-twotruths","027":"027-usedtothink","028":"028-network","029":"029-lighttime","030":"030-interference","031":"031-surfaceinside","032":"032-skyfossil","033":"033-edge","034":"034-onerule","035":"035-simplestnumbers","036":"036-universenoticing","037":"037-assembly","038":"038-consonance-map","040":"040-stability","041":"041-colorwheel","042":"042-eyethinks","044":"044-ai-retina","045":"045-baldwin","046":"046-thinkfast","047":"047-ai-feeling","048":"048-flashes","049":"049-strangeloop","050":"050-orthogonal","051":"051-spacetime","052":"052-dichotomy","053":"053-dimensions","054":"054-bornharmonic","056":"056-mandelneural","057":"057-superfarey","058":"058-galacticnets","059":"059-galaxyevolve","060":"060-worldtests","061":"061-babyuniverse","062":"062-branchingdice","063":"063-mandelcrystals","064":"064-choicedimension","065":"065-feel-do","066":"066-cosmicattractor","067":"067-monads-holons","068":"068-bubbles","069":"069-love","070":"070-harmony","071":"071-beauty","072":"072-temperature","073":"073-moral-caution","074":"074-grasshopper","075":"075-gossamer","076":"076-fivewindows","077":"077-intention"};</script>
+<script src="nav.js"></script>
 </head>
 <body>
 <nav style="position:sticky;top:0;z-index:100;">
 <div class="nav-row">
-<div class="nav-brand">
-<a href="index.html" class="nav-logo">
-<img src="logo.svg" alt="" class="nav-logo-icon">
-<span class="nav-logo-text">Gossamer</span>
-</a>
-</div>
+<div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">Untitled</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
   <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search pods" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap">
-    <label for="nav-goto-num" class="sr-only">Goto pod</label>
-    <input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}">
-    <button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button>
-  </li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
             <li class="nav-link-item nav-item-dropdown nav-lists-dropdown">
             <a href="list.html" class="nav-btn">Lists</a>
             <button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-label="Lists menu"></button>
-            <ul class="nav-dropdown">
-              <li><a href="list.html">All the Seeds</a></li>
+            <ul class="nav-dropdown"><li><a href="list.html">All the Seeds</a></li>
               <li><a href="bibliography.html">Bibliography</a></li>
               <li><a href="glossary.html">Glossary</a></li>
               <li><a href="map.html">Map</a></li>
-              <li><a href="more.html">More</a></li>
-            </ul>
+              <li><a href="more.html">More</a></li></ul>
           </li>
 </ul><button type="button" class="nav-hamburger-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav-hamburger-panel" onclick="seedNavToggleMenu();return false">&#9776;</button></div>
 </div>
 
 <div class="nav-hamburger-panel" id="nav-hamburger-panel" role="menu" aria-hidden="true">
   <div class="nav-hamburger-overlay" onclick="seedNavToggleMenu()"></div>
-  <div class="nav-hamburger-inner">
-    <ul class="nav-hamburger-list">
-      <li><a href="about.html">About</a></li>
-      <li><a href="list.html">All the Seeds</a></li>
+  <div class="nav-hamburger-inner"><ul class="nav-hamburger-list">
+    <li><a href="about.html">About</a></li>
+    <li><a href="list.html">All the Seeds</a></li>
               <li><a href="bibliography.html">Bibliography</a></li>
               <li><a href="glossary.html">Glossary</a></li>
               <li><a href="map.html">Map</a></li>
               <li><a href="more.html">More</a></li>
-    </ul>
-  </div>
+  </ul></div>
 </div>
 </nav>
 <div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search pods" hidden>
   <div class="search-dialog-overlay" onclick="seedNavCloseSearch()"></div>
   <div class="search-dialog-inner">
-    <div class="search-dialog-header">
-      <input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)">
-      <button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button>
-    </div>
+    <div class="search-dialog-header"><input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)"><button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button></div>
     <div id="search-dialog-count" class="search-dialog-count"></div>
     <div id="search-dialog-results" class="search-dialog-results"></div>
   </div>
@@ -141,6 +83,8 @@ document.addEventListener("DOMContentLoaded",function(){var p=document.getElemen
 <div class="bib-entry"><span class="bib-text">Chalmers, D. The Hard Problem of Consciousness (1995). The problem that may dissolve rather than be solved.</span> <a href="047-ai-feeling.html" class="bib-tag">47</a></div>
 <hr class="index-tag-rule"><div id="darwin" class="index-tag-name">darwin</div>
 <div class="bib-entry"><span class="bib-text">Darwin, C. On the Origin of Species. John Murray, 1859.</span> <a href="009-randomness.html" class="bib-tag">9</a></div>
+<hr class="index-tag-rule"><div id="deacon" class="index-tag-name">deacon</div>
+<div class="bib-entry"><span class="bib-text">Terrence Deacon, Incomplete Nature: How Mind Emerged from Matter, W.W. Norton, 2012.</span> <a href="077-intention.html" class="bib-tag">77</a></div>
 <hr class="index-tag-rule"><div id="dennett" class="index-tag-name">dennett (2)</div>
 <div class="bib-entry"><span class="bib-text">Dennett, D. Consciousness Explained (1991). Multiple drafts and the narrative construction of the self.</span> <a href="048-flashes.html" class="bib-tag">48</a></div>
 <div class="bib-entry"><span class="bib-text">Dennett, D. Intuition Pumps and Other Tools for Thinking (2013).</span> <a href="021-just.html" class="bib-tag">21</a></div>
@@ -200,9 +144,10 @@ document.addEventListener("DOMContentLoaded",function(){var p=document.getElemen
 <div class="bib-entry"><span class="bib-text">Kant, I. Critique of Pure Reason. 1781. The foundational text on the thing-in-itself and the limits of human knowledge.</span> <a href="002-events.html" class="bib-tag">2</a></div>
 <hr class="index-tag-rule"><div id="katie" class="index-tag-name">katie</div>
 <div class="bib-entry"><span class="bib-text">Katie, Byron. *Loving What Is: Four Questions That Can Change Your Life*. Harmony Books, 2002. &quot;The Work&quot; as a method for questioning interpretive narratives.</span> <a href="023-stories.html" class="bib-tag">23</a></div>
-<hr class="index-tag-rule"><div id="kauffman" class="index-tag-name">kauffman (2)</div>
+<hr class="index-tag-rule"><div id="kauffman" class="index-tag-name">kauffman (3)</div>
 <div class="bib-entry"><span class="bib-text">Kauffman, S. At Home in the Universe. Oxford University Press, 1995. More accessible version of the same ideas.</span> <a href="009-randomness.html" class="bib-tag">9</a></div>
 <div class="bib-entry"><span class="bib-text">Kauffman, S. The Origins of Order. Oxford University Press, 1993. Autocatalytic sets and order for free.</span> <a href="009-randomness.html" class="bib-tag">9</a></div>
+<div class="bib-entry"><span class="bib-text">Stuart Kauffman, At Home in the Universe: The Search for the Laws of Self-Organization and Complexity, Oxford University Press, 1995.</span> <a href="077-intention.html" class="bib-tag">77</a></div>
 <hr class="index-tag-rule"><div id="kirkpatrick" class="index-tag-name">kirkpatrick</div>
 <div class="bib-entry"><span class="bib-text">Kirkpatrick, S., Gelatt, C.D., Vecchi, M.P. Optimization by Simulated Annealing. Science, 220(4598), 1983.</span> <a href="009-randomness.html" class="bib-tag">9</a></div>
 <hr class="index-tag-rule"><div id="koestler" class="index-tag-name">koestler (4)</div>
@@ -226,6 +171,8 @@ document.addEventListener("DOMContentLoaded",function(){var p=document.getElemen
 <div class="bib-entry"><span class="bib-text">Mandelbrot, Benoit — fractal geometry, the boundary between order and chaos.</span> <a href="033-edge.html" class="bib-tag">33</a></div>
 <div class="bib-entry"><span class="bib-text">Mandelbrot, Benoit — infinite complexity from a single iterative rule.</span> <a href="034-onerule.html" class="bib-tag">34</a></div>
 <div class="bib-entry"><span class="bib-text">Mandelbrot, Benoît — The Fractal Geometry of Nature. Freeman, 1982. The boundary between convergence and escape as infinitely complex attractor.</span> <a href="038-consonance-map.html" class="bib-tag">38</a></div>
+<hr class="index-tag-rule"><div id="marder" class="index-tag-name">marder</div>
+<div class="bib-entry"><span class="bib-text">Michael Marder, Plant-Thinking: A Philosophy of Vegetal Life, Columbia University Press, 2013.</span> <a href="077-intention.html" class="bib-tag">77</a></div>
 <hr class="index-tag-rule"><div id="maturana" class="index-tag-name">maturana (5)</div>
 <div class="bib-entry"><span class="bib-text">Maturana, H. and Varela, F. Autopoiesis and Cognition (1980). The founding text.</span> <a href="012-autopoiesis.html" class="bib-tag">12</a></div>
 <div class="bib-entry"><span class="bib-text">Maturana, H. and Varela, F. Autopoiesis and Cognition. Reidel, 1980.</span> <a href="009-randomness.html" class="bib-tag">9</a></div>
@@ -236,8 +183,9 @@ document.addEventListener("DOMContentLoaded",function(){var p=document.getElemen
 <div class="bib-entry"><span class="bib-text">Maxwell, J.C. A Treatise on Electricity and Magnetism. Oxford, 1873. The foundational text of classical electromagnetism.</span> <a href="008-fields.html" class="bib-tag">8</a></div>
 <hr class="index-tag-rule"><div id="mollon" class="index-tag-name">mollon</div>
 <div class="bib-entry"><span class="bib-text">Mollon, J.D. — the uses and origins of primate colour vision. Journal of Experimental Biology, 1989. The fruit and co-evolution hypothesis.</span> <a href="041-colorwheel.html" class="bib-tag">41</a></div>
-<hr class="index-tag-rule"><div id="nagel" class="index-tag-name">nagel</div>
+<hr class="index-tag-rule"><div id="nagel" class="index-tag-name">nagel (2)</div>
 <div class="bib-entry"><span class="bib-text">Nagel, T. What Is It Like to Be a Bat? Philosophical Review, 1974. The classic paper establishing that subjective experience cannot be fully captured from an objective viewpoint.</span> <a href="003-inside.html" class="bib-tag">3</a></div>
+<div class="bib-entry"><span class="bib-text">Thomas Nagel, Mind and Cosmos: Why the Materialist Neo-Darwinian Conception of Nature Is Almost Certainly False, Oxford University Press, 2012.</span> <a href="077-intention.html" class="bib-tag">77</a></div>
 <hr class="index-tag-rule"><div id="newcomb" class="index-tag-name">newcomb</div>
 <div class="bib-entry"><span class="bib-text">Newcomb, Simon (1881) — noticed Benford's pattern fifty years earlier, ignored.</span> <a href="035-simplestnumbers.html" class="bib-tag">35</a></div>
 <hr class="index-tag-rule"><div id="olsson" class="index-tag-name">olsson</div>
@@ -277,7 +225,8 @@ document.addEventListener("DOMContentLoaded",function(){var p=document.getElemen
 <hr class="index-tag-rule"><div id="susskind" class="index-tag-name">susskind (2)</div>
 <div class="bib-entry"><span class="bib-text">Susskind, L. The World as a Hologram (1995). 't Hooft, G. Dimensional reduction in quantum gravity (1993).</span> <a href="068-bubbles.html" class="bib-tag">68</a></div>
 <div class="bib-entry"><span class="bib-text">Susskind, L. The World as a Hologram (1995). Van Raamsdonk, M. Building up spacetime with quantum entanglement (2010).</span> <a href="051-spacetime.html" class="bib-tag">51</a></div>
-<hr class="index-tag-rule"><div id="teilhard" class="index-tag-name">teilhard (3)</div>
+<hr class="index-tag-rule"><div id="teilhard" class="index-tag-name">teilhard (4)</div>
+<div class="bib-entry"><span class="bib-text">Pierre Teilhard de Chardin, The Phenomenon of Man, Harper &amp; Row, 1959.</span> <a href="077-intention.html" class="bib-tag">77</a></div>
 <div class="bib-entry"><span class="bib-text">Teilhard de Chardin, P. The Phenomenon of Man (1955). Cosmic evolution and the Omega Point.</span> <a href="059-galaxyevolve.html" class="bib-tag">59</a></div>
 <div class="bib-entry"><span class="bib-text">Teilhard de Chardin, Pierre — Omega Point, noosphere, cosmic evolution toward consciousness.</span> <a href="032-skyfossil.html" class="bib-tag">32</a></div>
 <div class="bib-entry"><span class="bib-text">Teilhard de Chardin, Pierre — The Phenomenon of Man, the Omega Point, the noosphere.</span> <a href="036-universenoticing.html" class="bib-tag">36</a></div>
@@ -335,7 +284,6 @@ document.addEventListener("DOMContentLoaded",function(){var p=document.getElemen
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">Rev 1 · 2026-04-03 · 11:18</span>
+  <span class="page-end-version" aria-hidden="true">Rev 1 · 2026-04-09 · 16:46</span>
 </div>
-</body>
-</html>
+</body></html>

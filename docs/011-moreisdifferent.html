@@ -9,132 +9,63 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;600&family=DM+Mono:wght@300;400&display=swap">
 <link rel="icon" href="logo.svg">
 <link rel="stylesheet" href="site.css">
-<script>
-window.__pods__={"000":"000-map","001":"001-caloric","002":"002-events","003":"003-inside","004":"004-self","005":"005-freewill","006":"006-output","007":"007-vacuum","008":"008-fields","009":"009-randomness","010":"010-largenumbers","011":"011-moreisdifferent","012":"012-autopoiesis","013":"013-enactment","014":"014-cities","015":"015-aliens","016":"016-neuralnetwork","017":"017-pastpresent","018":"018-magnetization","019":"019-funerals","020":"020-penrose","021":"021-just","022":"022-locked","023":"023-stories","024":"024-ghostmachine","025":"025-widechannel","026":"026-twotruths","027":"027-usedtothink","028":"028-network","029":"029-lighttime","030":"030-interference","031":"031-surfaceinside","032":"032-skyfossil","033":"033-edge","034":"034-onerule","035":"035-simplestnumbers","036":"036-universenoticing","037":"037-assembly","038":"038-consonance-map","040":"040-stability","041":"041-colorwheel","042":"042-eyethinks","044":"044-ai-retina","045":"045-baldwin","046":"046-thinkfast","047":"047-ai-feeling","048":"048-flashes","049":"049-strangeloop","050":"050-orthogonal","051":"051-spacetime","052":"052-dichotomy","053":"053-dimensions","054":"054-bornharmonic","056":"056-mandelneural","057":"057-superfarey","058":"058-galacticnets","059":"059-galaxyevolve","060":"060-worldtests","061":"061-babyuniverse","062":"062-branchingdice","063":"063-mandelcrystals","064":"064-choicedimension","065":"065-feel-do","066":"066-cosmicattractor","067":"067-monads-holons","068":"068-bubbles","069":"069-love","070":"070-harmony","071":"071-beauty","072":"072-temperature","073":"073-moral-caution","074":"074-grasshopper","075":"075-gossamer","076":"076-fivewindows"};
-window._seedNavSearchIndex=null;
-window._seedNavSearchIndexPromise=null;
-function _seedNavLoadIndex(){if(window._seedNavSearchIndex)return Promise.resolve(window._seedNavSearchIndex);if(!window._seedNavSearchIndexPromise){window._seedNavSearchIndexPromise=fetch('search-index.json').then(function(r){return r.json();}).then(function(d){window._seedNavSearchIndex=d;return d;});}return window._seedNavSearchIndexPromise;}
-function seedNavGo(){
-  var inp=document.getElementById('nav-goto-num');
-  if(!inp)return;
-  var v=inp.value.trim().replace(/^0+/,'');
-  if(!v)return;
-  var pad=v.padStart(3,'0');
-  var fn=window.__pods__[pad]||window.__pods__[v];
-  if(!fn){var k=Object.keys(window.__pods__).find(function(k){return parseInt(k,10)===parseInt(v,10)});if(k)fn=window.__pods__[k];}
-  if(fn)window.location.href=fn+'.html';
-}
-window.seedNavOpenSearch=function(){var n=document.querySelector("nav");if(n&&n.classList.contains("nav-hamburger-open"))window.seedNavToggleMenu();var d=document.getElementById("search-dialog");var i=document.getElementById("search-dialog-input");if(d)d.removeAttribute("hidden");if(i){i.value="";i.focus();}_seedNavLoadIndex();window.seedNavRunSearch("");};
-window.seedNavCloseSearch=function(){var d=document.getElementById("search-dialog");if(d)d.setAttribute("hidden","");};
-window._seedNavSnippet=function(content,q){if(!content||!q)return"";var c=content.toLowerCase();var i=c.indexOf(q);if(i<0)return"";var len=100;var start=Math.max(0,i-len);var end=Math.min(content.length,i+q.length+len);var s=content.substring(start,end).replace(/\s+/g," ").trim();if(start>0)s="\u2026 "+s;if(end<content.length)s=s+" \u2026";return s;};
-window.seedNavRunSearch=function(q){
-  q=(q||"").toLowerCase().trim();
-  var el=document.getElementById("search-dialog-results");
-  var countEl=document.getElementById("search-dialog-count");
-  if(!el)return;
-  if(!q){el.innerHTML="";if(countEl)countEl.textContent="";return;}
-  _seedNavLoadIndex().then(function(index){
-    var nm=[],cm=[];
-    for(var j=0;j<index.length;j++){var it=index[j];if((it.title||"").toLowerCase().indexOf(q)>=0)nm.push(it);else if((it.content||"").toLowerCase().indexOf(q)>=0)cm.push(it);}
-    var slugs={};
-    nm.forEach(function(it){slugs[it.slug]=1;});cm.forEach(function(it){slugs[it.slug]=1;});
-    var n=Object.keys(slugs).length;
-    if(countEl)countEl.textContent=n===1?"1 found":n+" found";
-    var h="";
-    if(nm.length){h+='<div class="search-section"><div class="search-section-title">Name</div><ul class="search-result-list">';nm.forEach(function(it){var d=document.createElement("div");d.textContent=it.num+". "+it.title;h+='<li><a href="'+it.slug+'.html">'+d.innerHTML+'</a></li>';});h+="</ul></div>";}
-    if(cm.length){h+='<div class="search-section"><div class="search-section-title">Content</div><ul class="search-result-list">';cm.forEach(function(it){var titleDiv=document.createElement("div");titleDiv.textContent=it.num+". "+it.title;var snip=window._seedNavSnippet(it.content,q);var snipDiv=document.createElement("div");snipDiv.textContent=snip;h+='<li><a href="'+it.slug+'.html">'+titleDiv.innerHTML+'<br><span class="search-result-snippet">'+snipDiv.innerHTML+'</span></a></li>';});h+="</ul></div>";}
-    if(!h&&q)h='<p class="search-no-results">No pods match.</p>';
-    el.innerHTML=h;
-  });
-};
-window.seedNavToggleMenu=function(){var n=document.querySelector("nav");var b=document.querySelector(".nav-hamburger-btn");var p=document.getElementById("nav-hamburger-panel");if(!n||!b)return;var open=n.classList.contains("nav-hamburger-open");n.classList.toggle("nav-hamburger-open",!open);b.setAttribute("aria-expanded",!open?"true":"false");if(p)p.style.display=open?"none":"flex";};
-window.seedNavShowVersion=function(show){var el=document.querySelector(".page-end-version");if(el)el.classList.toggle("page-end-version-visible",!!show);};
-window.seedNavToggleVersion=function(){var el=document.querySelector(".page-end-version");if(el)el.classList.toggle("page-end-version-visible");};
-document.addEventListener("keydown",function(e){if(e.key==="Escape"){var n=document.querySelector("nav");if(n&&n.classList.contains("nav-hamburger-open"))window.seedNavToggleMenu();else window.seedNavCloseSearch();}});
-document.addEventListener("DOMContentLoaded",function(){var p=document.getElementById("nav-hamburger-panel");if(p){p.style.display="none";var list=p.querySelector(".nav-hamburger-list");if(list)list.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){if(document.querySelector("nav").classList.contains("nav-hamburger-open"))window.seedNavToggleMenu();});});}});
-</script>
+<script>window.__pods__={"000":"000-map","001":"001-caloric","002":"002-events","003":"003-inside","004":"004-self","005":"005-freewill","006":"006-output","007":"007-vacuum","008":"008-fields","009":"009-randomness","010":"010-largenumbers","011":"011-moreisdifferent","012":"012-autopoiesis","013":"013-enactment","014":"014-cities","015":"015-aliens","016":"016-neuralnetwork","017":"017-pastpresent","018":"018-magnetization","019":"019-funerals","020":"020-penrose","021":"021-just","022":"022-locked","023":"023-stories","024":"024-ghostmachine","025":"025-widechannel","026":"026-twotruths","027":"027-usedtothink","028":"028-network","029":"029-lighttime","030":"030-interference","031":"031-surfaceinside","032":"032-skyfossil","033":"033-edge","034":"034-onerule","035":"035-simplestnumbers","036":"036-universenoticing","037":"037-assembly","038":"038-consonance-map","040":"040-stability","041":"041-colorwheel","042":"042-eyethinks","044":"044-ai-retina","045":"045-baldwin","046":"046-thinkfast","047":"047-ai-feeling","048":"048-flashes","049":"049-strangeloop","050":"050-orthogonal","051":"051-spacetime","052":"052-dichotomy","053":"053-dimensions","054":"054-bornharmonic","056":"056-mandelneural","057":"057-superfarey","058":"058-galacticnets","059":"059-galaxyevolve","060":"060-worldtests","061":"061-babyuniverse","062":"062-branchingdice","063":"063-mandelcrystals","064":"064-choicedimension","065":"065-feel-do","066":"066-cosmicattractor","067":"067-monads-holons","068":"068-bubbles","069":"069-love","070":"070-harmony","071":"071-beauty","072":"072-temperature","073":"073-moral-caution","074":"074-grasshopper","075":"075-gossamer","076":"076-fivewindows","077":"077-intention"};</script>
+<script src="nav.js"></script>
 </head>
 <body>
 <nav style="position:sticky;top:0;z-index:100;">
 <div class="nav-row">
-<div class="nav-brand">
-<a href="index.html" class="nav-logo">
-<img src="logo.svg" alt="" class="nav-logo-icon">
-<span class="nav-logo-text">Gossamer</span>
-</a>
-</div>
+<div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">Untitled</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
   <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search pods" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap">
-    <label for="nav-goto-num" class="sr-only">Goto pod</label>
-    <input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}">
-    <button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button>
-  </li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
             <li class="nav-link-item nav-item-dropdown nav-lists-dropdown">
             <a href="list.html" class="nav-btn">Lists</a>
             <button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-label="Lists menu"></button>
-            <ul class="nav-dropdown">
-              <li><a href="list.html">All the Seeds</a></li>
+            <ul class="nav-dropdown"><li><a href="list.html">All the Seeds</a></li>
               <li><a href="bibliography.html">Bibliography</a></li>
               <li><a href="glossary.html">Glossary</a></li>
               <li><a href="map.html">Map</a></li>
-              <li><a href="more.html">More</a></li>
-            </ul>
+              <li><a href="more.html">More</a></li></ul>
           </li>
 </ul><button type="button" class="nav-hamburger-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav-hamburger-panel" onclick="seedNavToggleMenu();return false">&#9776;</button></div>
 </div>
-  <div class="section-tabs">
-    <div class="section-tabs-inner">
-      <span class="section-tabs-prev"><a href="010-largenumbers.html">&lt;&lt;</a></span>
-      <div class="section-tabs-center">
-        <a href="#surface" class="section-tab">Surface</a>
+  <div class="section-tabs"><div class="section-tabs-inner">
+    <span class="section-tabs-prev"><a href="010-largenumbers.html">&lt;&lt;</a></span>
+    <div class="section-tabs-center"><a href="#surface" class="section-tab">Surface</a>
       <a href="#depth" class="section-tab">Depth</a>
       <a href="#provenance" class="section-tab">Provenance</a>
       <a href="#script" class="section-tab">Script</a>
-      <a href="#images" class="section-tab">Images</a>
-      </div>
-      <span class="section-tabs-next"><a href="012-autopoiesis.html">&gt;&gt;</a></span>
-    </div>
-  </div>
+      <a href="#images" class="section-tab">Images</a></div>
+    <span class="section-tabs-next"><a href="012-autopoiesis.html">&gt;&gt;</a></span>
+  </div></div>
 <div class="nav-hamburger-panel" id="nav-hamburger-panel" role="menu" aria-hidden="true">
   <div class="nav-hamburger-overlay" onclick="seedNavToggleMenu()"></div>
-  <div class="nav-hamburger-inner">
-    <ul class="nav-hamburger-list">
-      <li><a href="about.html">About</a></li>
-      <li><a href="list.html">All the Seeds</a></li>
+  <div class="nav-hamburger-inner"><ul class="nav-hamburger-list">
+    <li><a href="about.html">About</a></li>
+    <li><a href="list.html">All the Seeds</a></li>
               <li><a href="bibliography.html">Bibliography</a></li>
               <li><a href="glossary.html">Glossary</a></li>
               <li><a href="map.html">Map</a></li>
               <li><a href="more.html">More</a></li>
-    </ul>
-  </div>
+  </ul></div>
 </div>
 </nav>
 <div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search pods" hidden>
   <div class="search-dialog-overlay" onclick="seedNavCloseSearch()"></div>
   <div class="search-dialog-inner">
-    <div class="search-dialog-header">
-      <input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)">
-      <button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button>
-    </div>
+    <div class="search-dialog-header"><input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)"><button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button></div>
     <div id="search-dialog-count" class="search-dialog-count"></div>
     <div id="search-dialog-results" class="search-dialog-results"></div>
   </div>
 </div>
 <div class="wrap">
-  <div class="meta-row">
-    <a href="index.html#consciousness" class="tag">consciousness</a><span class="mono small dim"> · </span><span class="mono small warm">Pod 11</span><span class="mono small dim"> · rough</span>
-  </div>
-  <div class="seedpod-header fade cat-colored cat-consciousness">
-    <h1>More Is Different</h1>
-    <p class="premise">Nothing was added. The numbers just got large enough.</p>
-  </div>
-  <section id="surface" class="pod-section">
-  <h2 class="section-heading">Surface</h2>
-  <div class="prose"><p>There is a colony of ants living somewhere near you. Hundreds of thousands of them, maybe millions. Each one knows almost nothing. It can follow a scent trail. It can respond to its immediate neighbors. That is more or less the complete list of what any individual ant can do.</p>
+  <div class="meta-row"><a href="index.html#consciousness" class="tag">consciousness</a><span class="mono small dim"> · </span><span class="mono small warm">Pod 11</span><span class="mono small dim"> · rough</span></div>
+  <div class="seedpod-header fade cat-colored cat-consciousness"><h1>More Is Different</h1><p class="premise">Nothing was added. The numbers just got large enough.</p></div>
+  <section id="surface" class="pod-section"><h2 class="section-heading">Surface</h2><div class="prose"><p>There is a colony of ants living somewhere near you. Hundreds of thousands of them, maybe millions. Each one knows almost nothing. It can follow a scent trail. It can respond to its immediate neighbors. That is more or less the complete list of what any individual ant can do.</p>
 <figure class="directive-image directive-image--left"><img src="images/011-moreisdifferent.jpg" alt=""><figcaption>Superconductivity: emergent behaviour from sheer quantity</figcaption></figure>
 <p>And yet the colony — as a whole — does things no ant decided. It maintains a steady internal temperature. It farms fungus. It wages war with tactical sophistication. It has a character: some colonies are aggressive, some cautious, some remarkably adaptable. The philosopher Douglas Hofstadter gave the name Aunt Hillary to one particular colony’s personality. Aunt Hillary has opinions. Aunt Hillary has moods. No ant has ever met Aunt Hillary. No ant is Aunt Hillary. And yet there she is.</p>
 <p>Where did she come from?</p>
@@ -154,11 +85,8 @@ document.addEventListener("DOMContentLoaded",function(){var p=document.getElemen
 <p>A neural network’s weight matrix is a vast grid of numbers — each one small, each one meaningless alone. As the matrix grows in dimensionality, something happens that isn’t just more storage. The concepts and relationships the system can hold expand exponentially — blurry, distributed across billions of numbers, belonging to no single weight. Nobody put understanding there. The weights just got numerous enough, and the interactions between them rich enough, that something crossed a threshold.</p>
 <p>We have been here before. The ant knew nothing about Aunt Hillary. We knew something about what we were building — but not everything. More, again, turned out to be different.</p>
 <div class="cta">&quot;Next time you laugh at something, try to find the exact word that made it funny. Notice that you can't. The laugh was never in any one place. It was in the count.&quot;</div>
-</div>
-</section>
-<section id="depth" class="pod-section">
-  <h2 class="section-heading">Depth</h2>
-  <div class="prose"><p>In 1972 the physicist Philip Anderson published a short paper called “More Is Different.” He was arguing against an assumption so embedded in science it rarely gets stated: that if you understand the lower level, you understand the higher one. That chemistry is just applied physics. That biology is just applied chemistry. That psychology is just applied biology.</p>
+</div></section>
+<section id="depth" class="pod-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>In 1972 the physicist Philip Anderson published a short paper called “More Is Different.” He was arguing against an assumption so embedded in science it rarely gets stated: that if you understand the lower level, you understand the higher one. That chemistry is just applied physics. That biology is just applied chemistry. That psychology is just applied biology.</p>
 <p>Anderson said: no. Each level of complexity has properties that cannot be derived from the level below. They are not violations of lower-level laws — nothing supernatural is happening. But they are genuinely new. Superconductivity cannot be predicted from the behavior of individual electrons. Wetness is not a property of any water molecule. The lower level is necessary but not sufficient. More, at each threshold, becomes different.</p>
 <p>This was a physicist making a philosopher’s argument, and it landed hard in complexity science, biology, and eventually AI.</p>
 <hr>
@@ -171,39 +99,19 @@ document.addEventListener("DOMContentLoaded",function(){var p=document.getElemen
 <hr>
 <p>The weight matrix of a large neural network is the contemporary instance of Anderson’s claim. As dimensionality increases, the space of representable concepts and relationships expands not linearly but exponentially — each added dimension multiplying the richness of what the system can hold, blurrily distributed across billions of weights belonging to no single parameter. Nobody located understanding there. The understanding — if that is what it is — is Aunt Hillary: emergent, real, nowhere in particular.</p>
 <p>A related but distinct phenomenon — what happens when formal complexity generates self-reference rather than emergence — is the territory of <a href="010-largenumbers.html">Our Intuitions About Large Numbers Are Completely Unreliable</a>. The architecture behind both, the nested vocabulary by which each level’s stable outputs become the primitive units of the next level up, is <a href="037-assembly.html">The Architecture of Levels</a>.</p>
-</div>
-</section>
-<section id="provenance" class="pod-section">
-    <h3 class="section-heading ref-heading">Further reading</h3>
-  <div class="prose ref-list"><p class="ref-entry"><a href="bibliography.html#hofstadter">Hofstadter,</a> D. Gödel, Escher, Bach. Basic Books, 1979. Aunt Hillary and the ant colony; strange loops and emergent levels.</p>
+</div></section>
+<section id="provenance" class="pod-section"><h3 class="section-heading ref-heading">Further reading</h3><div class="prose ref-list"><p class="ref-entry"><a href="bibliography.html#hofstadter">Hofstadter,</a> D. Gödel, Escher, Bach. Basic Books, 1979. Aunt Hillary and the ant colony; strange loops and emergent levels.</p>
 <p class="ref-entry"><a href="bibliography.html#anderson">Anderson,</a> P.W. More Is Different. Science, 177(4047), 1972. Four pages. Still radical.</p>
 <p class="ref-entry"><a href="bibliography.html#koestler">Koestler,</a> A. The Act of Creation. Hutchinson, 1964. Bisociation as the common structure of humor, discovery, and art.</p>
 <p class="ref-entry"><a href="bibliography.html#koestler">Koestler,</a> A. The Ghost in the Machine. Hutchinson, 1967. Holons and hierarchical organization. See also @link(024).</p>
 <p class="ref-entry"><a href="bibliography.html#whitehead">Whitehead,</a> A.N. Process and Reality. Macmillan, 1929. Societies of actual occasions as the basis of enduring entities.</p></div>
-      <div class="related-section">
-    <h3 class="section-heading related-label">Related pods</h3>
-    <div class="related-grid">  <a href="002-events.html" class="related-card cat-colored cat-physics">
-    <div class="related-title">2. Reality Is Events, Not Things</div>
-  </a>
-  <a href="009-randomness.html" class="related-card cat-colored cat-biology">
-    <div class="related-title">9. Structure Is What Randomness Does</div>
-  </a>
-  <a href="010-largenumbers.html" class="related-card related-card-prelim cat-colored cat-knowledge">
-    <div class="related-title">10. Our Intuitions About Large Numbers Are Completely Unreliable</div>
-  </a>
-  <a href="014-cities.html" class="related-card related-card-prelim cat-colored cat-biology">
-    <div class="related-title">14. Cities Have an Inside Too</div>
-  </a>
-  <a href="037-assembly.html" class="related-card related-card-prelim cat-colored cat-mathematics">
-    <div class="related-title">37. The Architecture of Levels</div>
-  </a>
-      </div>
-    <div class="inbound-refs"><span class="inbound-label">14 inbound references</span><span class="inbound-links"><a href="000-map.html" class="inbound-link cat-colored cat-knowledge" title="A Map of the Territory">0</a><a href="009-randomness.html" class="inbound-link cat-colored cat-biology" title="Structure Is What Randomness Does">9</a><a href="010-largenumbers.html" class="inbound-link cat-colored cat-knowledge" title="Our Intuitions About Large Numbers Are Completely Unreliable">10</a><a href="012-autopoiesis.html" class="inbound-link cat-colored cat-biology" title="The Cell That Makes Itself">12</a><a href="014-cities.html" class="inbound-link cat-colored cat-biology" title="Cities Have an Inside Too">14</a><a href="016-neuralnetwork.html" class="inbound-link cat-colored cat-ai-minds" title="The Network Is a Field Having Occasions">16</a><a href="018-magnetization.html" class="inbound-link cat-colored cat-knowledge" title="Ideas Magnetize Through a Group Like Iron">18</a><a href="019-funerals.html" class="inbound-link cat-colored cat-knowledge" title="Science Advances One Funeral at a Time">19</a><a href="034-onerule.html" class="inbound-link cat-colored cat-mathematics" title="One Rule Is Enough">34</a><a href="037-assembly.html" class="inbound-link cat-colored cat-mathematics" title="The Architecture of Levels">37</a><a href="045-baldwin.html" class="inbound-link cat-colored cat-biology" title="How Learning Becomes Hardwired: The Baldwin Effect">45</a><a href="046-thinkfast.html" class="inbound-link cat-colored cat-ai-minds" title="Thought as Evolution in Milliseconds">46</a><a href="056-mandelneural.html" class="inbound-link cat-colored cat-ai-minds" title="Neural Networks as High-Dimensional Mandelbrot Sets">56</a><a href="067-monads-holons.html" class="inbound-link cat-colored cat-physics" title="Leibniz as the Unlikely Ancestor of the Holographic Principle">67</a></span></div>
-  </div>
-</section>
-<section id="script" class="pod-section">
-  <h2 class="section-heading">Script</h2>
-  <div class="prose"><p>Note to composer: Gershwin’s Rhapsody in Blue is the tonal reference — pastoral opening, then building to urban stride, then settling back.</p>
+    <div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="002-events.html" class="related-card cat-colored cat-physics"><div class="related-title">2. Reality Is Events, Not Things</div></a>
+<a href="009-randomness.html" class="related-card cat-colored cat-biology"><div class="related-title">9. Structure Is What Randomness Does</div></a>
+<a href="010-largenumbers.html" class="related-card related-card-prelim cat-colored cat-knowledge"><div class="related-title">10. Our Intuitions About Large Numbers Are Completely Unreliable</div></a>
+<a href="014-cities.html" class="related-card related-card-prelim cat-colored cat-biology"><div class="related-title">14. Cities Have an Inside Too</div></a>
+<a href="037-assembly.html" class="related-card related-card-prelim cat-colored cat-mathematics"><div class="related-title">37. The Architecture of Levels</div></a></div>
+<div class="inbound-refs"><span class="inbound-label">14 inbound references</span><span class="inbound-links"><a href="000-map.html" class="inbound-link cat-colored cat-knowledge" title="A Map of the Territory">0</a><a href="009-randomness.html" class="inbound-link cat-colored cat-biology" title="Structure Is What Randomness Does">9</a><a href="010-largenumbers.html" class="inbound-link cat-colored cat-knowledge" title="Our Intuitions About Large Numbers Are Completely Unreliable">10</a><a href="012-autopoiesis.html" class="inbound-link cat-colored cat-biology" title="The Cell That Makes Itself">12</a><a href="014-cities.html" class="inbound-link cat-colored cat-biology" title="Cities Have an Inside Too">14</a><a href="016-neuralnetwork.html" class="inbound-link cat-colored cat-ai-minds" title="The Network Is a Field Having Occasions">16</a><a href="018-magnetization.html" class="inbound-link cat-colored cat-knowledge" title="Ideas Magnetize Through a Group Like Iron">18</a><a href="019-funerals.html" class="inbound-link cat-colored cat-knowledge" title="Science Advances One Funeral at a Time">19</a><a href="034-onerule.html" class="inbound-link cat-colored cat-mathematics" title="One Rule Is Enough">34</a><a href="037-assembly.html" class="inbound-link cat-colored cat-mathematics" title="The Architecture of Levels">37</a><a href="045-baldwin.html" class="inbound-link cat-colored cat-biology" title="How Learning Becomes Hardwired: The Baldwin Effect">45</a><a href="046-thinkfast.html" class="inbound-link cat-colored cat-ai-minds" title="Thought as Evolution in Milliseconds">46</a><a href="056-mandelneural.html" class="inbound-link cat-colored cat-ai-minds" title="Neural Networks as High-Dimensional Mandelbrot Sets">56</a><a href="067-monads-holons.html" class="inbound-link cat-colored cat-physics" title="Leibniz as the Unlikely Ancestor of the Holographic Principle">67</a></span></div></div></section>
+<section id="script" class="pod-section"><h2 class="section-heading">Script</h2><div class="prose"><p>Note to composer: Gershwin’s Rhapsody in Blue is the tonal reference — pastoral opening, then building to urban stride, then settling back.</p>
 <ol>
 <li><p>A child on a hillside, following a single ant along the ground. Camera at ant level. Near silence.</p>
 </li>
@@ -224,16 +132,12 @@ document.addEventListener("DOMContentLoaded",function(){var p=document.getElemen
 <li><p>Pull back to a single ant crossing bare ground. Knowing nothing. Silence.</p>
 </li>
 </ol>
-</div>
-</section>
-<section id="images" class="pod-section">
-  <h2 class="section-heading">Images</h2>
-  <div class="prose"><p>Primary illustration: The split shot as a static image. Bottom half: a cross-section of an ant hill — tunnels, chambers, ants moving with purpose, rendered with scientific precision but warm in color. Top half: an aerial view of a city grid — streets, intersections, people and cars. The layouts mirror each other almost exactly. No caption. The image is the argument.</p>
+</div></section>
+<section id="images" class="pod-section"><h2 class="section-heading">Images</h2><div class="prose"><p>Primary illustration: The split shot as a static image. Bottom half: a cross-section of an ant hill — tunnels, chambers, ants moving with purpose, rendered with scientific precision but warm in color. Top half: an aerial view of a city grid — streets, intersections, people and cars. The layouts mirror each other almost exactly. No caption. The image is the argument.</p>
 <p>Shareable graphic: A 2x2 matrix. Top left: a single ant. Bottom left: a single person. Top right: an ant hill. Bottom right: a city. Caption: More is different. The casual reader sees a size comparison. The reader who gets it sees that both rows are the same story.</p>
 <p>Video thumbnail: A child’s face close to an ant hill, one eye level with the mound, a city visible and slightly out of focus in the background. The child is looking at something. The audience wants to know what.</p>
 <p>NOTE: Aunt Hillary’s face emerging from the hill is the emotional climax of the script but too specific and too alive to work as a static illustration. Leave it to the film.</p>
-</div>
-</section>
+</div></section>
 </div>
 <div class="page-end" id="page-end-version" data-page-version="1">
   <button class="page-end-logo" aria-label="Show page info"
@@ -242,7 +146,6 @@ document.addEventListener("DOMContentLoaded",function(){var p=document.getElemen
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">Rev 1 · 2026-04-03 · 11:23</span>
+  <span class="page-end-version" aria-hidden="true">Rev 1 · 2026-04-09 · 16:46</span>
 </div>
-</body>
-</html>
+</body></html>

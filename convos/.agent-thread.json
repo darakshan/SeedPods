@@ -1,0 +1,42 @@
+[
+  {
+    "content" : "​",
+    "isHidden" : false,
+    "role" : "user"
+  },
+  {
+    "content" : "Hey Darakshan — good to see you. What's on your mind today?",
+    "isHidden" : false,
+    "role" : "assistant"
+  },
+  {
+    "content" : "can you see your context?  you couldn’t before",
+    "isHidden" : false,
+    "role" : "user"
+  },
+  {
+    "content" : "Yes! I can see everything now — the full system prompt with the archive index, the codex summary, the directory listing, the pod reference, and the edit protocol. All of it came through.\n\nWhat would you like to work on?",
+    "isHidden" : false,
+    "role" : "assistant"
+  },
+  {
+    "content" : "but do you see where you were looking for pods missing @image directives?",
+    "isHidden" : false,
+    "role" : "user"
+  },
+  {
+    "content" : "No, I don't see that conversation. My context starts fresh each time — I have the system prompt with the archive overview and instructions, but no memory of our previous conversation where we were looking for pods missing `@image` directives.\n\nWant to pick that up again? I could grep for pods that have an `@section(images)` section but no `@image(` directive inside it, or we could approach it another way.",
+    "isHidden" : false,
+    "role" : "assistant"
+  },
+  {
+    "content" : "that’s my point. it’s a bug.  the app shows me the context but not you.",
+    "isHidden" : false,
+    "role" : "user"
+  },
+  {
+    "content" : "Ah, got it — so the app is displaying the conversation history to you, but it's not actually being sent to me in the prompt. I'm only receiving the system context (archive, directory, instructions) but not the prior turns.\n\nThat's a useful bug to catch. The context window looks populated on your end, but I'm starting cold each time.\n\nAnything I can help with while you're tracking that down?",
+    "isHidden" : false,
+    "role" : "assistant"
+  }
+]

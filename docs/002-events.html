@@ -9,132 +9,63 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;600&family=DM+Mono:wght@300;400&display=swap">
 <link rel="icon" href="logo.svg">
 <link rel="stylesheet" href="site.css">
-<script>
-window.__pods__={"000":"000-map","001":"001-caloric","002":"002-events","003":"003-inside","004":"004-self","005":"005-freewill","006":"006-output","007":"007-vacuum","008":"008-fields","009":"009-randomness","010":"010-largenumbers","011":"011-moreisdifferent","012":"012-autopoiesis","013":"013-enactment","014":"014-cities","015":"015-aliens","016":"016-neuralnetwork","017":"017-pastpresent","018":"018-magnetization","019":"019-funerals","020":"020-penrose","021":"021-just","022":"022-locked","023":"023-stories","024":"024-ghostmachine","025":"025-widechannel","026":"026-twotruths","027":"027-usedtothink","028":"028-network","029":"029-lighttime","030":"030-interference","031":"031-surfaceinside","032":"032-skyfossil","033":"033-edge","034":"034-onerule","035":"035-simplestnumbers","036":"036-universenoticing","037":"037-assembly","038":"038-consonance-map","040":"040-stability","041":"041-colorwheel","042":"042-eyethinks","044":"044-ai-retina","045":"045-baldwin","046":"046-thinkfast","047":"047-ai-feeling","048":"048-flashes","049":"049-strangeloop","050":"050-orthogonal","051":"051-spacetime","052":"052-dichotomy","053":"053-dimensions","054":"054-bornharmonic","056":"056-mandelneural","057":"057-superfarey","058":"058-galacticnets","059":"059-galaxyevolve","060":"060-worldtests","061":"061-babyuniverse","062":"062-branchingdice","063":"063-mandelcrystals","064":"064-choicedimension","065":"065-feel-do","066":"066-cosmicattractor","067":"067-monads-holons","068":"068-bubbles","069":"069-love","070":"070-harmony","071":"071-beauty","072":"072-temperature","073":"073-moral-caution","074":"074-grasshopper","075":"075-gossamer","076":"076-fivewindows"};
-window._seedNavSearchIndex=null;
-window._seedNavSearchIndexPromise=null;
-function _seedNavLoadIndex(){if(window._seedNavSearchIndex)return Promise.resolve(window._seedNavSearchIndex);if(!window._seedNavSearchIndexPromise){window._seedNavSearchIndexPromise=fetch('search-index.json').then(function(r){return r.json();}).then(function(d){window._seedNavSearchIndex=d;return d;});}return window._seedNavSearchIndexPromise;}
-function seedNavGo(){
-  var inp=document.getElementById('nav-goto-num');
-  if(!inp)return;
-  var v=inp.value.trim().replace(/^0+/,'');
-  if(!v)return;
-  var pad=v.padStart(3,'0');
-  var fn=window.__pods__[pad]||window.__pods__[v];
-  if(!fn){var k=Object.keys(window.__pods__).find(function(k){return parseInt(k,10)===parseInt(v,10)});if(k)fn=window.__pods__[k];}
-  if(fn)window.location.href=fn+'.html';
-}
-window.seedNavOpenSearch=function(){var n=document.querySelector("nav");if(n&&n.classList.contains("nav-hamburger-open"))window.seedNavToggleMenu();var d=document.getElementById("search-dialog");var i=document.getElementById("search-dialog-input");if(d)d.removeAttribute("hidden");if(i){i.value="";i.focus();}_seedNavLoadIndex();window.seedNavRunSearch("");};
-window.seedNavCloseSearch=function(){var d=document.getElementById("search-dialog");if(d)d.setAttribute("hidden","");};
-window._seedNavSnippet=function(content,q){if(!content||!q)return"";var c=content.toLowerCase();var i=c.indexOf(q);if(i<0)return"";var len=100;var start=Math.max(0,i-len);var end=Math.min(content.length,i+q.length+len);var s=content.substring(start,end).replace(/\s+/g," ").trim();if(start>0)s="\u2026 "+s;if(end<content.length)s=s+" \u2026";return s;};
-window.seedNavRunSearch=function(q){
-  q=(q||"").toLowerCase().trim();
-  var el=document.getElementById("search-dialog-results");
-  var countEl=document.getElementById("search-dialog-count");
-  if(!el)return;
-  if(!q){el.innerHTML="";if(countEl)countEl.textContent="";return;}
-  _seedNavLoadIndex().then(function(index){
-    var nm=[],cm=[];
-    for(var j=0;j<index.length;j++){var it=index[j];if((it.title||"").toLowerCase().indexOf(q)>=0)nm.push(it);else if((it.content||"").toLowerCase().indexOf(q)>=0)cm.push(it);}
-    var slugs={};
-    nm.forEach(function(it){slugs[it.slug]=1;});cm.forEach(function(it){slugs[it.slug]=1;});
-    var n=Object.keys(slugs).length;
-    if(countEl)countEl.textContent=n===1?"1 found":n+" found";
-    var h="";
-    if(nm.length){h+='<div class="search-section"><div class="search-section-title">Name</div><ul class="search-result-list">';nm.forEach(function(it){var d=document.createElement("div");d.textContent=it.num+". "+it.title;h+='<li><a href="'+it.slug+'.html">'+d.innerHTML+'</a></li>';});h+="</ul></div>";}
-    if(cm.length){h+='<div class="search-section"><div class="search-section-title">Content</div><ul class="search-result-list">';cm.forEach(function(it){var titleDiv=document.createElement("div");titleDiv.textContent=it.num+". "+it.title;var snip=window._seedNavSnippet(it.content,q);var snipDiv=document.createElement("div");snipDiv.textContent=snip;h+='<li><a href="'+it.slug+'.html">'+titleDiv.innerHTML+'<br><span class="search-result-snippet">'+snipDiv.innerHTML+'</span></a></li>';});h+="</ul></div>";}
-    if(!h&&q)h='<p class="search-no-results">No pods match.</p>';
-    el.innerHTML=h;
-  });
-};
-window.seedNavToggleMenu=function(){var n=document.querySelector("nav");var b=document.querySelector(".nav-hamburger-btn");var p=document.getElementById("nav-hamburger-panel");if(!n||!b)return;var open=n.classList.contains("nav-hamburger-open");n.classList.toggle("nav-hamburger-open",!open);b.setAttribute("aria-expanded",!open?"true":"false");if(p)p.style.display=open?"none":"flex";};
-window.seedNavShowVersion=function(show){var el=document.querySelector(".page-end-version");if(el)el.classList.toggle("page-end-version-visible",!!show);};
-window.seedNavToggleVersion=function(){var el=document.querySelector(".page-end-version");if(el)el.classList.toggle("page-end-version-visible");};
-document.addEventListener("keydown",function(e){if(e.key==="Escape"){var n=document.querySelector("nav");if(n&&n.classList.contains("nav-hamburger-open"))window.seedNavToggleMenu();else window.seedNavCloseSearch();}});
-document.addEventListener("DOMContentLoaded",function(){var p=document.getElementById("nav-hamburger-panel");if(p){p.style.display="none";var list=p.querySelector(".nav-hamburger-list");if(list)list.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){if(document.querySelector("nav").classList.contains("nav-hamburger-open"))window.seedNavToggleMenu();});});}});
-</script>
+<script>window.__pods__={"000":"000-map","001":"001-caloric","002":"002-events","003":"003-inside","004":"004-self","005":"005-freewill","006":"006-output","007":"007-vacuum","008":"008-fields","009":"009-randomness","010":"010-largenumbers","011":"011-moreisdifferent","012":"012-autopoiesis","013":"013-enactment","014":"014-cities","015":"015-aliens","016":"016-neuralnetwork","017":"017-pastpresent","018":"018-magnetization","019":"019-funerals","020":"020-penrose","021":"021-just","022":"022-locked","023":"023-stories","024":"024-ghostmachine","025":"025-widechannel","026":"026-twotruths","027":"027-usedtothink","028":"028-network","029":"029-lighttime","030":"030-interference","031":"031-surfaceinside","032":"032-skyfossil","033":"033-edge","034":"034-onerule","035":"035-simplestnumbers","036":"036-universenoticing","037":"037-assembly","038":"038-consonance-map","040":"040-stability","041":"041-colorwheel","042":"042-eyethinks","044":"044-ai-retina","045":"045-baldwin","046":"046-thinkfast","047":"047-ai-feeling","048":"048-flashes","049":"049-strangeloop","050":"050-orthogonal","051":"051-spacetime","052":"052-dichotomy","053":"053-dimensions","054":"054-bornharmonic","056":"056-mandelneural","057":"057-superfarey","058":"058-galacticnets","059":"059-galaxyevolve","060":"060-worldtests","061":"061-babyuniverse","062":"062-branchingdice","063":"063-mandelcrystals","064":"064-choicedimension","065":"065-feel-do","066":"066-cosmicattractor","067":"067-monads-holons","068":"068-bubbles","069":"069-love","070":"070-harmony","071":"071-beauty","072":"072-temperature","073":"073-moral-caution","074":"074-grasshopper","075":"075-gossamer","076":"076-fivewindows","077":"077-intention"};</script>
+<script src="nav.js"></script>
 </head>
 <body>
 <nav style="position:sticky;top:0;z-index:100;">
 <div class="nav-row">
-<div class="nav-brand">
-<a href="index.html" class="nav-logo">
-<img src="logo.svg" alt="" class="nav-logo-icon">
-<span class="nav-logo-text">Gossamer</span>
-</a>
-</div>
+<div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">Untitled</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
   <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search pods" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap">
-    <label for="nav-goto-num" class="sr-only">Goto pod</label>
-    <input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}">
-    <button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button>
-  </li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
             <li class="nav-link-item nav-item-dropdown nav-lists-dropdown">
             <a href="list.html" class="nav-btn">Lists</a>
             <button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-label="Lists menu"></button>
-            <ul class="nav-dropdown">
-              <li><a href="list.html">All the Seeds</a></li>
+            <ul class="nav-dropdown"><li><a href="list.html">All the Seeds</a></li>
               <li><a href="bibliography.html">Bibliography</a></li>
               <li><a href="glossary.html">Glossary</a></li>
               <li><a href="map.html">Map</a></li>
-              <li><a href="more.html">More</a></li>
-            </ul>
+              <li><a href="more.html">More</a></li></ul>
           </li>
 </ul><button type="button" class="nav-hamburger-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav-hamburger-panel" onclick="seedNavToggleMenu();return false">&#9776;</button></div>
 </div>
-  <div class="section-tabs">
-    <div class="section-tabs-inner">
-      <span class="section-tabs-prev"><a href="001-caloric.html">&lt;&lt;</a></span>
-      <div class="section-tabs-center">
-        <a href="#surface" class="section-tab">Surface</a>
+  <div class="section-tabs"><div class="section-tabs-inner">
+    <span class="section-tabs-prev"><a href="001-caloric.html">&lt;&lt;</a></span>
+    <div class="section-tabs-center"><a href="#surface" class="section-tab">Surface</a>
       <a href="#depth" class="section-tab">Depth</a>
       <a href="#provenance" class="section-tab">Provenance</a>
       <a href="#script" class="section-tab">Script</a>
-      <a href="#images" class="section-tab">Images</a>
-      </div>
-      <span class="section-tabs-next"><a href="003-inside.html">&gt;&gt;</a></span>
-    </div>
-  </div>
+      <a href="#images" class="section-tab">Images</a></div>
+    <span class="section-tabs-next"><a href="003-inside.html">&gt;&gt;</a></span>
+  </div></div>
 <div class="nav-hamburger-panel" id="nav-hamburger-panel" role="menu" aria-hidden="true">
   <div class="nav-hamburger-overlay" onclick="seedNavToggleMenu()"></div>
-  <div class="nav-hamburger-inner">
-    <ul class="nav-hamburger-list">
-      <li><a href="about.html">About</a></li>
-      <li><a href="list.html">All the Seeds</a></li>
+  <div class="nav-hamburger-inner"><ul class="nav-hamburger-list">
+    <li><a href="about.html">About</a></li>
+    <li><a href="list.html">All the Seeds</a></li>
               <li><a href="bibliography.html">Bibliography</a></li>
               <li><a href="glossary.html">Glossary</a></li>
               <li><a href="map.html">Map</a></li>
               <li><a href="more.html">More</a></li>
-    </ul>
-  </div>
+  </ul></div>
 </div>
 </nav>
 <div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search pods" hidden>
   <div class="search-dialog-overlay" onclick="seedNavCloseSearch()"></div>
   <div class="search-dialog-inner">
-    <div class="search-dialog-header">
-      <input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)">
-      <button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button>
-    </div>
+    <div class="search-dialog-header"><input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)"><button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button></div>
     <div id="search-dialog-count" class="search-dialog-count"></div>
     <div id="search-dialog-results" class="search-dialog-results"></div>
   </div>
 </div>
 <div class="wrap">
-  <div class="meta-row">
-    <a href="index.html#physics" class="tag">physics</a><span class="mono small dim"> · </span><span class="mono small warm">Pod 2</span><span class="mono small dim"> · draft1</span>
-  </div>
-  <div class="seedpod-header fade cat-colored cat-physics">
-    <h1>Reality Is Events, Not Things</h1>
-    <p class="premise">The particle is the abstraction. The event is what's actually there.</p>
-  </div>
-  <section id="surface" class="pod-section">
-  <h2 class="section-heading">Surface</h2>
-  <div class="prose"><p>There is a chair in your room. You know what a chair is.</p>
+  <div class="meta-row"><a href="index.html#physics" class="tag">physics</a><span class="mono small dim"> · </span><span class="mono small warm">Pod 2</span><span class="mono small dim"> · draft1</span></div>
+  <div class="seedpod-header fade cat-colored cat-physics"><h1>Reality Is Events, Not Things</h1><p class="premise">The particle is the abstraction. The event is what's actually there.</p></div>
+  <section id="surface" class="pod-section"><h2 class="section-heading">Surface</h2><div class="prose"><p>There is a chair in your room. You know what a chair is.</p>
 <figure class="directive-image directive-image--left"><img src="images/002-events.png" alt=""><figcaption>Feynman diagram: reality as discrete particle interaction events</figcaption></figure>
 <p>But what actually is it?</p>
 <p>Wood, you might say. Or plastic, or metal — whatever it’s made of. But those materials are made of molecules. The molecules are made of atoms. The atoms are made of a nucleus and electrons. The nucleus is made of protons and neutrons. Those are made of quarks. And quarks, as far as we can tell, aren’t made of anything — they are excitations of a quantum field.</p>
@@ -150,11 +81,8 @@ document.addEventListener("DOMContentLoaded",function(){var p=document.getElemen
 <p>That opening — between the happening and the just-sitting-there — is where the next seedpod lives.</p>
 <p>A note on language: from here on, we’ll sometimes say “things” because that’s how they feel — but we mean events stable enough to look permanent.</p>
 <div class="cta">&quot;Sit in a chair and look at it. Not through it, at it. Try to catch it in the act of being an event rather than a thing. It will keep looking like a thing. That's the point — the event is so slow and stable that 'thing' is a perfectly good shortcut. The question is whether the shortcut is the whole truth, or whether something is happening that the word 'thing' quietly erases.&quot;</div>
-</div>
-</section>
-<section id="depth" class="pod-section">
-  <h2 class="section-heading">Depth</h2>
-  <div class="prose"><p>Alfred North Whitehead (1861–1947) — mathematician, co-author with Bertrand Russell of the Principia Mathematica, and late in his career a philosopher of nature — argued that Western thought had made a specific and consequential error at the foundation of modern science. He called it the fallacy of misplaced concreteness: taking an abstraction and treating it as if it were the concrete reality.</p>
+</div></section>
+<section id="depth" class="pod-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>Alfred North Whitehead (1861–1947) — mathematician, co-author with Bertrand Russell of the Principia Mathematica, and late in his career a philosopher of nature — argued that Western thought had made a specific and consequential error at the foundation of modern science. He called it the fallacy of misplaced concreteness: taking an abstraction and treating it as if it were the concrete reality.</p>
 <p>The abstraction in question is the thing — the enduring object, the particle, the substance with fixed properties. Science proceeded by abstracting objects from the flow of events, assigning them stable properties, and calculating their interactions. This was enormously productive. It gave us Newtonian mechanics, chemistry, engineering. The error was not in using the abstraction — it was in forgetting it was an abstraction. The particle became, in the scientific imagination, the basic unit of reality. The event — the happening, the moment of occurrence — was demoted to something that merely happened to objects.</p>
 <p>Whitehead’s inversion: the event is primary. The particle is what you get when certain kinds of events are stable and repeating enough to seem permanent. A rock is not a thing that endures — it is a family of events (Whitehead’s technical term: a “society of actual occasions”) that keeps reproducing its own pattern closely enough that we rightly call it a rock. The pattern is real. The underlying rock-substance is the abstraction.</p>
 <p>The chair example raises a deeper version of this point: we never actually access the thing itself. We access its effects — photons, force, interaction. This is not a new observation. Immanuel Kant (1724–1804) built his entire philosophy around it. The thing-in-itself, the Ding an sich, is permanently inaccessible, he argued. All we ever have is the phenomenon — the thing as it appears to a mind structured to receive it. Kant treated this as a permanent limitation. We are locked out of the thing itself; the best we can do is describe the appearances systematically.</p>
@@ -163,41 +91,21 @@ document.addEventListener("DOMContentLoaded",function(){var p=document.getElemen
 <p>Wittgenstein’s analysis of “chair” approaches this from yet another direction — not physics or metaphysics but the logic of language. Ludwig Wittgenstein (1889–1951), in Philosophical Investigations, demonstrated that ordinary nouns like “chair” do not name fixed essences. They name clusters of family resemblances — patterns of use, contextual regularities — that have no single defining feature. The word “chair” works perfectly well in practice. It breaks down under philosophical pressure not because our language is defective but because it was never pointing at a fixed thing in the first place. There is no essence of chair waiting to be named. There is a practice of calling certain events and configurations “chair,” and the practice is what carries the meaning.</p>
 <p>The convergence of Whitehead, Kant, Rovelli, and Wittgenstein on the same dissolution of the self-subsistent thing is not coincidence but pressure — the accumulated strain of pressing on the question from multiple directions at once. None of them, alone, is decisive. Together they suggest that the thing-based picture of reality is the map, not the territory. And a map that leaves out the relationships — that treats the thing as prior to its interactions — has left out what is actually there.</p>
 <p>The implications run through all of these seedpods. If events are primary and constituted by their relationships, then every event has two sides — an outside that physics describes, and an inside that it does not. That is the territory of <a href="003-inside.html">Everything Has an Inside</a>. If the self is a stable pattern of events rather than an enduring substance, that is <a href="004-self.html">The Self Is a Pattern, Not a Thing</a>. If the field is the medium through which events reach each other, that is <a href="008-fields.html">The Field Is the Medium of Feeling</a>.</p>
-</div>
-</section>
-<section id="provenance" class="pod-section">
-    <h3 class="section-heading ref-heading">Further reading</h3>
-  <div class="prose ref-list"><p class="ref-entry"><a href="bibliography.html#whitehead">Whitehead,</a> A.N. Process and Reality. Macmillan, 1929. The primary text. Part I develops the fallacy of misplaced concreteness; Part II develops the doctrine of actual occasions.</p>
+</div></section>
+<section id="provenance" class="pod-section"><h3 class="section-heading ref-heading">Further reading</h3><div class="prose ref-list"><p class="ref-entry"><a href="bibliography.html#whitehead">Whitehead,</a> A.N. Process and Reality. Macmillan, 1929. The primary text. Part I develops the fallacy of misplaced concreteness; Part II develops the doctrine of actual occasions.</p>
 <p class="ref-entry"><a href="bibliography.html#whitehead">Whitehead,</a> A.N. Science and the Modern World. Macmillan, 1925. More accessible introduction to the critique of substance-based thinking.</p>
 <p class="ref-entry"><a href="bibliography.html#kant">Kant,</a> I. Critique of Pure Reason. 1781. The foundational text on the thing-in-itself and the limits of human knowledge.</p>
 <p class="ref-entry"><a href="bibliography.html#rovelli">Rovelli,</a> C. Relational Quantum Mechanics. International Journal of Theoretical Physics, 1996. The original paper proposing that quantum states are relative to observers, not absolute.</p>
 <p class="ref-entry"><a href="bibliography.html#rovelli">Rovelli,</a> C. Reality Is Not What It Seems. Riverhead, 2017. A physicist's accessible account of the dissolution of the object in quantum gravity.</p>
 <p class="ref-entry"><a href="bibliography.html#rovelli">Rovelli,</a> C. The Order of Time. Riverhead, 2018. On the dissolution of the thing-based picture of time; convergent with Whitehead from within physics.</p>
 <p class="ref-entry"><a href="bibliography.html#wittgenstein">Wittgenstein,</a> L. Philosophical Investigations. Blackwell, 1953. §47 on the simple parts of a chair; §66–67 on family resemblance.</p></div>
-      <div class="related-section">
-    <h3 class="section-heading related-label">Related pods</h3>
-    <div class="related-grid">  <a href="001-caloric.html" class="related-card cat-colored cat-knowledge">
-    <div class="related-title">1. The Map That Was Wrong</div>
-  </a>
-  <a href="003-inside.html" class="related-card cat-colored cat-consciousness">
-    <div class="related-title">3. Everything Has an Inside</div>
-  </a>
-  <a href="004-self.html" class="related-card related-card-prelim cat-colored cat-consciousness">
-    <div class="related-title">4. The Self Is a Pattern, Not a Thing</div>
-  </a>
-  <a href="008-fields.html" class="related-card cat-colored cat-sensation">
-    <div class="related-title">8. The Field Is the Medium of Feeling</div>
-  </a>
-  <a href="037-assembly.html" class="related-card related-card-prelim cat-colored cat-mathematics">
-    <div class="related-title">37. The Architecture of Levels</div>
-  </a>
-      </div>
-    <div class="inbound-refs"><span class="inbound-label">25 inbound references</span><span class="inbound-links"><a href="000-map.html" class="inbound-link cat-colored cat-knowledge" title="A Map of the Territory">0</a><a href="001-caloric.html" class="inbound-link cat-colored cat-knowledge" title="The Map That Was Wrong">1</a><a href="003-inside.html" class="inbound-link cat-colored cat-consciousness" title="Everything Has an Inside">3</a><a href="004-self.html" class="inbound-link cat-colored cat-consciousness" title="The Self Is a Pattern, Not a Thing">4</a><a href="005-freewill.html" class="inbound-link cat-colored cat-consciousness" title="Freedom Is What Nature Does Everywhere">5</a><a href="010-largenumbers.html" class="inbound-link cat-colored cat-knowledge" title="Our Intuitions About Large Numbers Are Completely Unreliable">10</a><a href="011-moreisdifferent.html" class="inbound-link cat-colored cat-consciousness" title="More Is Different">11</a><a href="012-autopoiesis.html" class="inbound-link cat-colored cat-biology" title="The Cell That Makes Itself">12</a><a href="013-enactment.html" class="inbound-link cat-colored cat-biology" title="The Organism Enacts Its World">13</a><a href="016-neuralnetwork.html" class="inbound-link cat-colored cat-ai-minds" title="The Network Is a Field Having Occasions">16</a><a href="017-pastpresent.html" class="inbound-link cat-colored cat-ai-minds" title="The Past Is Fully Present">17</a><a href="019-funerals.html" class="inbound-link cat-colored cat-knowledge" title="Science Advances One Funeral at a Time">19</a><a href="024-ghostmachine.html" class="inbound-link cat-colored cat-consciousness" title="Ghost in the Machine">24</a><a href="026-twotruths.html" class="inbound-link cat-colored cat-knowledge" title="Two Things Can Be True at Once">26</a><a href="033-edge.html" class="inbound-link cat-colored cat-sensation" title="The Edge Is Where Everything Happens">33</a><a href="034-onerule.html" class="inbound-link cat-colored cat-mathematics" title="One Rule Is Enough">34</a><a href="036-universenoticing.html" class="inbound-link cat-colored cat-consciousness" title="You Are the Universe Noticing Something">36</a><a href="037-assembly.html" class="inbound-link cat-colored cat-mathematics" title="The Architecture of Levels">37</a><a href="048-flashes.html" class="inbound-link cat-colored cat-consciousness" title="Consciousness Comes in Flashes — For All of Us">48</a><a href="050-orthogonal.html" class="inbound-link cat-colored cat-consciousness" title="Consciousness as a Dimension Orthogonal to Spacetime">50</a><a href="052-dichotomy.html" class="inbound-link cat-colored cat-mathematics" title="Discrete and Continuous as a False Dichotomy">52</a><a href="069-love.html" class="inbound-link cat-colored cat-sensation" title="Love">69</a><a href="070-harmony.html" class="inbound-link cat-colored cat-sensation" title="Harmony">70</a><a href="071-beauty.html" class="inbound-link cat-colored cat-sensation" title="Beauty">71</a><a href="076-fivewindows.html" class="inbound-link cat-colored cat-sensation" title="Five Windows, One Room">76</a></span></div>
-  </div>
-</section>
-<section id="script" class="pod-section">
-  <h2 class="section-heading">Script</h2>
-  <div class="prose"><ol>
+    <div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="001-caloric.html" class="related-card cat-colored cat-knowledge"><div class="related-title">1. The Map That Was Wrong</div></a>
+<a href="003-inside.html" class="related-card cat-colored cat-consciousness"><div class="related-title">3. Everything Has an Inside</div></a>
+<a href="004-self.html" class="related-card related-card-prelim cat-colored cat-consciousness"><div class="related-title">4. The Self Is a Pattern, Not a Thing</div></a>
+<a href="008-fields.html" class="related-card cat-colored cat-sensation"><div class="related-title">8. The Field Is the Medium of Feeling</div></a>
+<a href="037-assembly.html" class="related-card related-card-prelim cat-colored cat-mathematics"><div class="related-title">37. The Architecture of Levels</div></a></div>
+<div class="inbound-refs"><span class="inbound-label">25 inbound references</span><span class="inbound-links"><a href="000-map.html" class="inbound-link cat-colored cat-knowledge" title="A Map of the Territory">0</a><a href="001-caloric.html" class="inbound-link cat-colored cat-knowledge" title="The Map That Was Wrong">1</a><a href="003-inside.html" class="inbound-link cat-colored cat-consciousness" title="Everything Has an Inside">3</a><a href="004-self.html" class="inbound-link cat-colored cat-consciousness" title="The Self Is a Pattern, Not a Thing">4</a><a href="005-freewill.html" class="inbound-link cat-colored cat-consciousness" title="Freedom Is What Nature Does Everywhere">5</a><a href="010-largenumbers.html" class="inbound-link cat-colored cat-knowledge" title="Our Intuitions About Large Numbers Are Completely Unreliable">10</a><a href="011-moreisdifferent.html" class="inbound-link cat-colored cat-consciousness" title="More Is Different">11</a><a href="012-autopoiesis.html" class="inbound-link cat-colored cat-biology" title="The Cell That Makes Itself">12</a><a href="013-enactment.html" class="inbound-link cat-colored cat-biology" title="The Organism Enacts Its World">13</a><a href="016-neuralnetwork.html" class="inbound-link cat-colored cat-ai-minds" title="The Network Is a Field Having Occasions">16</a><a href="017-pastpresent.html" class="inbound-link cat-colored cat-ai-minds" title="The Past Is Fully Present">17</a><a href="019-funerals.html" class="inbound-link cat-colored cat-knowledge" title="Science Advances One Funeral at a Time">19</a><a href="024-ghostmachine.html" class="inbound-link cat-colored cat-consciousness" title="Ghost in the Machine">24</a><a href="026-twotruths.html" class="inbound-link cat-colored cat-knowledge" title="Two Things Can Be True at Once">26</a><a href="033-edge.html" class="inbound-link cat-colored cat-sensation" title="The Edge Is Where Everything Happens">33</a><a href="034-onerule.html" class="inbound-link cat-colored cat-mathematics" title="One Rule Is Enough">34</a><a href="036-universenoticing.html" class="inbound-link cat-colored cat-consciousness" title="You Are the Universe Noticing Something">36</a><a href="037-assembly.html" class="inbound-link cat-colored cat-mathematics" title="The Architecture of Levels">37</a><a href="048-flashes.html" class="inbound-link cat-colored cat-consciousness" title="Consciousness Comes in Flashes — For All of Us">48</a><a href="050-orthogonal.html" class="inbound-link cat-colored cat-consciousness" title="Consciousness as a Dimension Orthogonal to Spacetime">50</a><a href="052-dichotomy.html" class="inbound-link cat-colored cat-mathematics" title="Discrete and Continuous as a False Dichotomy">52</a><a href="069-love.html" class="inbound-link cat-colored cat-sensation" title="Love">69</a><a href="070-harmony.html" class="inbound-link cat-colored cat-sensation" title="Harmony">70</a><a href="071-beauty.html" class="inbound-link cat-colored cat-sensation" title="Beauty">71</a><a href="076-fivewindows.html" class="inbound-link cat-colored cat-sensation" title="Five Windows, One Room">76</a></span></div></div></section>
+<section id="script" class="pod-section"><h2 class="section-heading">Script</h2><div class="prose"><ol>
 <li><p>A plain wooden chair in a pool of light. VO: Just a chair. We know what a chair is.</p>
 </li>
 <li><p>Extreme close-up of wood grain, zooming in through molecules, atoms, empty space, into a field alive with fluctuation. VO: At the bottom of the chair — there is no chair. There are fields, events, disturbances propagating through space. The chair is what those events look like from far enough away that “chair” is a useful word for what’s happening.</p>
@@ -209,15 +117,11 @@ document.addEventListener("DOMContentLoaded",function(){var p=document.getElemen
 <li><p>Cut to black. Text: The particle is the abstraction. The event is what’s actually there.</p>
 </li>
 </ol>
-</div>
-</section>
-<section id="images" class="pod-section">
-  <h2 class="section-heading">Images</h2>
-  <div class="prose"><p>Primary illustration: A single wooden chair rendered in three simultaneous views — like an architect’s drawing crossed with a physics textbook. On the left: the chair as we see it, clean and solid. In the center: the chair as molecular structure, recognizable but strange. On the right: the chair as field excitation — the same shape suggested by a pattern of waves and disturbances in a glowing field. No chair-substance anywhere. Caption: Three descriptions. One event.</p>
+</div></section>
+<section id="images" class="pod-section"><h2 class="section-heading">Images</h2><div class="prose"><p>Primary illustration: A single wooden chair rendered in three simultaneous views — like an architect’s drawing crossed with a physics textbook. On the left: the chair as we see it, clean and solid. In the center: the chair as molecular structure, recognizable but strange. On the right: the chair as field excitation — the same shape suggested by a pattern of waves and disturbances in a glowing field. No chair-substance anywhere. Caption: Three descriptions. One event.</p>
 <p>Shareable graphic: A painted pipe in the style of Magritte. Beneath it, in careful script: “This is not a thing.” The joke lands immediately for those who know the painting. For those who don’t, the point still stands on its own.</p>
 <p>Video thumbnail: Extreme close-up of wood grain, lit dramatically from one side, on the verge of becoming abstraction. The grain is almost recognizable as wood but almost not. Text overlay: “What is a chair, actually?” No answer given. The image is the question.</p>
-</div>
-</section>
+</div></section>
 </div>
 <div class="page-end" id="page-end-version" data-page-version="1">
   <button class="page-end-logo" aria-label="Show page info"
@@ -226,7 +130,6 @@ document.addEventListener("DOMContentLoaded",function(){var p=document.getElemen
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">Rev 1 · 2026-04-03 · 11:23</span>
+  <span class="page-end-version" aria-hidden="true">Rev 1 · 2026-04-09 · 16:46</span>
 </div>
-</body>
-</html>
+</body></html>

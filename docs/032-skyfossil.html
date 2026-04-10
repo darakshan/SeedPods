@@ -9,169 +9,77 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;600&family=DM+Mono:wght@300;400&display=swap">
 <link rel="icon" href="logo.svg">
 <link rel="stylesheet" href="site.css">
-<script>
-window.__pods__={"000":"000-map","001":"001-caloric","002":"002-events","003":"003-inside","004":"004-self","005":"005-freewill","006":"006-output","007":"007-vacuum","008":"008-fields","009":"009-randomness","010":"010-largenumbers","011":"011-moreisdifferent","012":"012-autopoiesis","013":"013-enactment","014":"014-cities","015":"015-aliens","016":"016-neuralnetwork","017":"017-pastpresent","018":"018-magnetization","019":"019-funerals","020":"020-penrose","021":"021-just","022":"022-locked","023":"023-stories","024":"024-ghostmachine","025":"025-widechannel","026":"026-twotruths","027":"027-usedtothink","028":"028-network","029":"029-lighttime","030":"030-interference","031":"031-surfaceinside","032":"032-skyfossil","033":"033-edge","034":"034-onerule","035":"035-simplestnumbers","036":"036-universenoticing","037":"037-assembly","038":"038-consonance-map","040":"040-stability","041":"041-colorwheel","042":"042-eyethinks","044":"044-ai-retina","045":"045-baldwin","046":"046-thinkfast","047":"047-ai-feeling","048":"048-flashes","049":"049-strangeloop","050":"050-orthogonal","051":"051-spacetime","052":"052-dichotomy","053":"053-dimensions","054":"054-bornharmonic","056":"056-mandelneural","057":"057-superfarey","058":"058-galacticnets","059":"059-galaxyevolve","060":"060-worldtests","061":"061-babyuniverse","062":"062-branchingdice","063":"063-mandelcrystals","064":"064-choicedimension","065":"065-feel-do","066":"066-cosmicattractor","067":"067-monads-holons","068":"068-bubbles","069":"069-love","070":"070-harmony","071":"071-beauty","072":"072-temperature","073":"073-moral-caution","074":"074-grasshopper","075":"075-gossamer","076":"076-fivewindows"};
-window._seedNavSearchIndex=null;
-window._seedNavSearchIndexPromise=null;
-function _seedNavLoadIndex(){if(window._seedNavSearchIndex)return Promise.resolve(window._seedNavSearchIndex);if(!window._seedNavSearchIndexPromise){window._seedNavSearchIndexPromise=fetch('search-index.json').then(function(r){return r.json();}).then(function(d){window._seedNavSearchIndex=d;return d;});}return window._seedNavSearchIndexPromise;}
-function seedNavGo(){
-  var inp=document.getElementById('nav-goto-num');
-  if(!inp)return;
-  var v=inp.value.trim().replace(/^0+/,'');
-  if(!v)return;
-  var pad=v.padStart(3,'0');
-  var fn=window.__pods__[pad]||window.__pods__[v];
-  if(!fn){var k=Object.keys(window.__pods__).find(function(k){return parseInt(k,10)===parseInt(v,10)});if(k)fn=window.__pods__[k];}
-  if(fn)window.location.href=fn+'.html';
-}
-window.seedNavOpenSearch=function(){var n=document.querySelector("nav");if(n&&n.classList.contains("nav-hamburger-open"))window.seedNavToggleMenu();var d=document.getElementById("search-dialog");var i=document.getElementById("search-dialog-input");if(d)d.removeAttribute("hidden");if(i){i.value="";i.focus();}_seedNavLoadIndex();window.seedNavRunSearch("");};
-window.seedNavCloseSearch=function(){var d=document.getElementById("search-dialog");if(d)d.setAttribute("hidden","");};
-window._seedNavSnippet=function(content,q){if(!content||!q)return"";var c=content.toLowerCase();var i=c.indexOf(q);if(i<0)return"";var len=100;var start=Math.max(0,i-len);var end=Math.min(content.length,i+q.length+len);var s=content.substring(start,end).replace(/\s+/g," ").trim();if(start>0)s="\u2026 "+s;if(end<content.length)s=s+" \u2026";return s;};
-window.seedNavRunSearch=function(q){
-  q=(q||"").toLowerCase().trim();
-  var el=document.getElementById("search-dialog-results");
-  var countEl=document.getElementById("search-dialog-count");
-  if(!el)return;
-  if(!q){el.innerHTML="";if(countEl)countEl.textContent="";return;}
-  _seedNavLoadIndex().then(function(index){
-    var nm=[],cm=[];
-    for(var j=0;j<index.length;j++){var it=index[j];if((it.title||"").toLowerCase().indexOf(q)>=0)nm.push(it);else if((it.content||"").toLowerCase().indexOf(q)>=0)cm.push(it);}
-    var slugs={};
-    nm.forEach(function(it){slugs[it.slug]=1;});cm.forEach(function(it){slugs[it.slug]=1;});
-    var n=Object.keys(slugs).length;
-    if(countEl)countEl.textContent=n===1?"1 found":n+" found";
-    var h="";
-    if(nm.length){h+='<div class="search-section"><div class="search-section-title">Name</div><ul class="search-result-list">';nm.forEach(function(it){var d=document.createElement("div");d.textContent=it.num+". "+it.title;h+='<li><a href="'+it.slug+'.html">'+d.innerHTML+'</a></li>';});h+="</ul></div>";}
-    if(cm.length){h+='<div class="search-section"><div class="search-section-title">Content</div><ul class="search-result-list">';cm.forEach(function(it){var titleDiv=document.createElement("div");titleDiv.textContent=it.num+". "+it.title;var snip=window._seedNavSnippet(it.content,q);var snipDiv=document.createElement("div");snipDiv.textContent=snip;h+='<li><a href="'+it.slug+'.html">'+titleDiv.innerHTML+'<br><span class="search-result-snippet">'+snipDiv.innerHTML+'</span></a></li>';});h+="</ul></div>";}
-    if(!h&&q)h='<p class="search-no-results">No pods match.</p>';
-    el.innerHTML=h;
-  });
-};
-window.seedNavToggleMenu=function(){var n=document.querySelector("nav");var b=document.querySelector(".nav-hamburger-btn");var p=document.getElementById("nav-hamburger-panel");if(!n||!b)return;var open=n.classList.contains("nav-hamburger-open");n.classList.toggle("nav-hamburger-open",!open);b.setAttribute("aria-expanded",!open?"true":"false");if(p)p.style.display=open?"none":"flex";};
-window.seedNavShowVersion=function(show){var el=document.querySelector(".page-end-version");if(el)el.classList.toggle("page-end-version-visible",!!show);};
-window.seedNavToggleVersion=function(){var el=document.querySelector(".page-end-version");if(el)el.classList.toggle("page-end-version-visible");};
-document.addEventListener("keydown",function(e){if(e.key==="Escape"){var n=document.querySelector("nav");if(n&&n.classList.contains("nav-hamburger-open"))window.seedNavToggleMenu();else window.seedNavCloseSearch();}});
-document.addEventListener("DOMContentLoaded",function(){var p=document.getElementById("nav-hamburger-panel");if(p){p.style.display="none";var list=p.querySelector(".nav-hamburger-list");if(list)list.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){if(document.querySelector("nav").classList.contains("nav-hamburger-open"))window.seedNavToggleMenu();});});}});
-</script>
+<script>window.__pods__={"000":"000-map","001":"001-caloric","002":"002-events","003":"003-inside","004":"004-self","005":"005-freewill","006":"006-output","007":"007-vacuum","008":"008-fields","009":"009-randomness","010":"010-largenumbers","011":"011-moreisdifferent","012":"012-autopoiesis","013":"013-enactment","014":"014-cities","015":"015-aliens","016":"016-neuralnetwork","017":"017-pastpresent","018":"018-magnetization","019":"019-funerals","020":"020-penrose","021":"021-just","022":"022-locked","023":"023-stories","024":"024-ghostmachine","025":"025-widechannel","026":"026-twotruths","027":"027-usedtothink","028":"028-network","029":"029-lighttime","030":"030-interference","031":"031-surfaceinside","032":"032-skyfossil","033":"033-edge","034":"034-onerule","035":"035-simplestnumbers","036":"036-universenoticing","037":"037-assembly","038":"038-consonance-map","040":"040-stability","041":"041-colorwheel","042":"042-eyethinks","044":"044-ai-retina","045":"045-baldwin","046":"046-thinkfast","047":"047-ai-feeling","048":"048-flashes","049":"049-strangeloop","050":"050-orthogonal","051":"051-spacetime","052":"052-dichotomy","053":"053-dimensions","054":"054-bornharmonic","056":"056-mandelneural","057":"057-superfarey","058":"058-galacticnets","059":"059-galaxyevolve","060":"060-worldtests","061":"061-babyuniverse","062":"062-branchingdice","063":"063-mandelcrystals","064":"064-choicedimension","065":"065-feel-do","066":"066-cosmicattractor","067":"067-monads-holons","068":"068-bubbles","069":"069-love","070":"070-harmony","071":"071-beauty","072":"072-temperature","073":"073-moral-caution","074":"074-grasshopper","075":"075-gossamer","076":"076-fivewindows","077":"077-intention"};</script>
+<script src="nav.js"></script>
 </head>
 <body>
 <nav style="position:sticky;top:0;z-index:100;">
 <div class="nav-row">
-<div class="nav-brand">
-<a href="index.html" class="nav-logo">
-<img src="logo.svg" alt="" class="nav-logo-icon">
-<span class="nav-logo-text">Gossamer</span>
-</a>
-</div>
+<div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">Untitled</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
   <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search pods" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap">
-    <label for="nav-goto-num" class="sr-only">Goto pod</label>
-    <input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}">
-    <button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button>
-  </li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
             <li class="nav-link-item nav-item-dropdown nav-lists-dropdown">
             <a href="list.html" class="nav-btn">Lists</a>
             <button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-label="Lists menu"></button>
-            <ul class="nav-dropdown">
-              <li><a href="list.html">All the Seeds</a></li>
+            <ul class="nav-dropdown"><li><a href="list.html">All the Seeds</a></li>
               <li><a href="bibliography.html">Bibliography</a></li>
               <li><a href="glossary.html">Glossary</a></li>
               <li><a href="map.html">Map</a></li>
-              <li><a href="more.html">More</a></li>
-            </ul>
+              <li><a href="more.html">More</a></li></ul>
           </li>
 </ul><button type="button" class="nav-hamburger-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav-hamburger-panel" onclick="seedNavToggleMenu();return false">&#9776;</button></div>
 </div>
-  <div class="section-tabs">
-    <div class="section-tabs-inner">
-      <span class="section-tabs-prev"><a href="031-surfaceinside.html">&lt;&lt;</a></span>
-      <div class="section-tabs-center">
-        <a href="#surface" class="section-tab">Surface</a>
+  <div class="section-tabs"><div class="section-tabs-inner">
+    <span class="section-tabs-prev"><a href="031-surfaceinside.html">&lt;&lt;</a></span>
+    <div class="section-tabs-center"><a href="#surface" class="section-tab">Surface</a>
       <a href="#depth" class="section-tab">Depth</a>
       <a href="#provenance" class="section-tab">Provenance</a>
       <a href="#script" class="section-tab">Script</a>
-      <a href="#images" class="section-tab">Images</a>
-      </div>
-      <span class="section-tabs-next"><a href="033-edge.html">&gt;&gt;</a></span>
-    </div>
-  </div>
+      <a href="#images" class="section-tab">Images</a></div>
+    <span class="section-tabs-next"><a href="033-edge.html">&gt;&gt;</a></span>
+  </div></div>
 <div class="nav-hamburger-panel" id="nav-hamburger-panel" role="menu" aria-hidden="true">
   <div class="nav-hamburger-overlay" onclick="seedNavToggleMenu()"></div>
-  <div class="nav-hamburger-inner">
-    <ul class="nav-hamburger-list">
-      <li><a href="about.html">About</a></li>
-      <li><a href="list.html">All the Seeds</a></li>
+  <div class="nav-hamburger-inner"><ul class="nav-hamburger-list">
+    <li><a href="about.html">About</a></li>
+    <li><a href="list.html">All the Seeds</a></li>
               <li><a href="bibliography.html">Bibliography</a></li>
               <li><a href="glossary.html">Glossary</a></li>
               <li><a href="map.html">Map</a></li>
               <li><a href="more.html">More</a></li>
-    </ul>
-  </div>
+  </ul></div>
 </div>
 </nav>
 <div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search pods" hidden>
   <div class="search-dialog-overlay" onclick="seedNavCloseSearch()"></div>
   <div class="search-dialog-inner">
-    <div class="search-dialog-header">
-      <input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)">
-      <button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button>
-    </div>
+    <div class="search-dialog-header"><input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)"><button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button></div>
     <div id="search-dialog-count" class="search-dialog-count"></div>
     <div id="search-dialog-results" class="search-dialog-results"></div>
   </div>
 </div>
 <div class="wrap">
-  <div class="meta-row">
-    <a href="index.html#physics" class="tag">physics</a><span class="mono small dim"> · </span><span class="mono small warm">Pod 32</span><span class="mono small dim"> · rough</span>
-  </div>
-  <div class="seedpod-header fade cat-colored cat-physics">
-    <h1>The Sky Is a Fossil Record</h1>
-    <p class="premise">Fossils of Primal Evolution</p>
-  </div>
-  <section id="surface" class="pod-section">
-  <h2 class="section-heading">Surface</h2>
-  <div class="prose"><p>When you look at the night sky you think you’re seeing space. You’re actually seeing time. But there’s a third thing you’re seeing that nobody told you — you’re seeing evolution. Not biological evolution. Something older.</p>
+  <div class="meta-row"><a href="index.html#physics" class="tag">physics</a><span class="mono small dim"> · </span><span class="mono small warm">Pod 32</span><span class="mono small dim"> · rough</span></div>
+  <div class="seedpod-header fade cat-colored cat-physics"><h1>The Sky Is a Fossil Record</h1><p class="premise">Fossils of Primal Evolution</p></div>
+  <section id="surface" class="pod-section"><h2 class="section-heading">Surface</h2><div class="prose"><p>When you look at the night sky you think you’re seeing space. You’re actually seeing time. But there’s a third thing you’re seeing that nobody told you — you’re seeing evolution. Not biological evolution. Something older.</p>
 <figure class="directive-image directive-image--left"><img src="images/032-skyfossil.jpg" alt=""><figcaption>The cosmic microwave background: the sky as fossil record</figcaption></figure>
-</div>
-</section>
-<section id="depth" class="pod-section">
-  <h2 class="section-heading">Depth</h2>
-  <div class="prose"><p>From the Big Bang, structure emerges — not randomly but directionally. Each galaxy a thread of that process. Stars as moments in the thread. The telos isn’t survival. It’s self-awareness — the universe developing the capacity to know what it is. Many Worlds extends this: every quantum branch is running its own evolutionary experiment simultaneously in nearly-orthogonal subspaces of Hilbert space. Teilhard saw one Omega Point. Many Worlds suggests the attractor is deeper than any single thread — every branch feeling toward the same convergence from different directions. Whitehead’s creative advance into novelty is what this process looks like from inside each moment of it.</p>
-</div>
-</section>
-<section id="provenance" class="pod-section">
-    <h3 class="section-heading ref-heading">Further reading</h3>
-  <div class="prose ref-list"><p class="ref-entry"><a href="bibliography.html#everett">Everett</a> (1957) — Many Worlds: every quantum branch real, universe exploring all paths simultaneously.</p>
+</div></section>
+<section id="depth" class="pod-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>From the Big Bang, structure emerges — not randomly but directionally. Each galaxy a thread of that process. Stars as moments in the thread. The telos isn’t survival. It’s self-awareness — the universe developing the capacity to know what it is. Many Worlds extends this: every quantum branch is running its own evolutionary experiment simultaneously in nearly-orthogonal subspaces of Hilbert space. Teilhard saw one Omega Point. Many Worlds suggests the attractor is deeper than any single thread — every branch feeling toward the same convergence from different directions. Whitehead’s creative advance into novelty is what this process looks like from inside each moment of it.</p>
+</div></section>
+<section id="provenance" class="pod-section"><h3 class="section-heading ref-heading">Further reading</h3><div class="prose ref-list"><p class="ref-entry"><a href="bibliography.html#everett">Everett</a> (1957) — Many Worlds: every quantum branch real, universe exploring all paths simultaneously.</p>
 <p class="ref-entry"><a href="bibliography.html#teilhard">Teilhard</a> de Chardin, Pierre — Omega Point, noosphere, cosmic evolution toward consciousness.</p>
 <p class="ref-entry"><a href="bibliography.html#whitehead">Whitehead,</a> A.N. — creative advance into novelty as fundamental character of reality.</p></div>
-      <div class="related-section">
-    <h3 class="section-heading related-label">Related pods</h3>
-    <div class="related-grid">  <a href="009-randomness.html" class="related-card cat-colored cat-biology">
-    <div class="related-title">9. Structure Is What Randomness Does</div>
-  </a>
-  <a href="028-network.html" class="related-card cat-colored cat-consciousness">
-    <div class="related-title">28. The Network That Experiences Itself</div>
-  </a>
-  <a href="036-universenoticing.html" class="related-card related-card-prelim cat-colored cat-consciousness">
-    <div class="related-title">36. You Are the Universe Noticing Something</div>
-  </a>
-  <a href="037-assembly.html" class="related-card related-card-prelim cat-colored cat-mathematics">
-    <div class="related-title">37. The Architecture of Levels</div>
-  </a>
-  <a href="058-galacticnets.html" class="related-card related-card-prelim cat-colored cat-ai-minds">
-    <div class="related-title">58. Galaxies and AI Weight Matrices as Structural Homologs</div>
-  </a>
-      </div>
-    <div class="inbound-refs"><span class="inbound-label">1 inbound reference</span><span class="inbound-links"><a href="036-universenoticing.html" class="inbound-link cat-colored cat-consciousness" title="You Are the Universe Noticing Something">36</a></span></div>
-  </div>
-</section>
-<section id="script" class="pod-section">
-  <h2 class="section-heading">Script</h2>
-  <div class="prose"><ol>
+    <div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="009-randomness.html" class="related-card cat-colored cat-biology"><div class="related-title">9. Structure Is What Randomness Does</div></a>
+<a href="028-network.html" class="related-card cat-colored cat-consciousness"><div class="related-title">28. The Network That Experiences Itself</div></a>
+<a href="036-universenoticing.html" class="related-card related-card-prelim cat-colored cat-consciousness"><div class="related-title">36. You Are the Universe Noticing Something</div></a>
+<a href="037-assembly.html" class="related-card related-card-prelim cat-colored cat-mathematics"><div class="related-title">37. The Architecture of Levels</div></a>
+<a href="058-galacticnets.html" class="related-card related-card-prelim cat-colored cat-ai-minds"><div class="related-title">58. Galaxies and AI Weight Matrices as Structural Homologs</div></a></div>
+<div class="inbound-refs"><span class="inbound-label">1 inbound reference</span><span class="inbound-links"><a href="036-universenoticing.html" class="inbound-link cat-colored cat-consciousness" title="You Are the Universe Noticing Something">36</a></span></div></div></section>
+<section id="script" class="pod-section"><h2 class="section-heading">Script</h2><div class="prose"><ol>
 <li><p>Time-lapse of galaxy formation. Pull back — not to show scale but to show the pattern.</p>
 </li>
 <li><p>The same movement visible in an embryo developing. In a neural network training.</p>
@@ -179,16 +87,12 @@ document.addEventListener("DOMContentLoaded",function(){var p=document.getElemen
 <li><p>A person looking up at the night sky, recognizing themselves in it.</p>
 </li>
 </ol>
-</div>
-</section>
-<section id="images" class="pod-section">
-  <h2 class="section-heading">Images</h2>
-  <div class="prose"><p>Deep field galaxy images
+</div></section>
+<section id="images" class="pod-section"><h2 class="section-heading">Images</h2><div class="prose"><p>Deep field galaxy images
 Cosmic web structure
 Embryo development sequence
 Neural network activation visualization</p>
-</div>
-</section>
+</div></section>
 </div>
 <div class="page-end" id="page-end-version" data-page-version="1">
   <button class="page-end-logo" aria-label="Show page info"
@@ -197,7 +101,6 @@ Neural network activation visualization</p>
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">Rev 1 · 2026-04-03 · 11:23</span>
+  <span class="page-end-version" aria-hidden="true">Rev 1 · 2026-04-09 · 16:46</span>
 </div>
-</body>
-</html>
+</body></html>
