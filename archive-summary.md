@@ -18,7 +18,7 @@ Physics pods reveal that reality is stranger than the materialist picture allows
 
 ## AI-minds (015, 016, 017, 025, 046, 056, 057, 058, 073)
 
-AI-minds pods treat artificial intelligence as a philosophical occasion that sharpens ancient questions. Aliens are among us and we built them (015) — neither machines nor almost-human, but genuinely alien entities that share our language but not our embodiment, our concepts but not our stakes. The network is a field having occasions (016): each forward pass prehends its inherited structure and completes into output — not analogous to Whitehead's picture but a concrete instance of it. The past is fully present (017): in transformers, the entire context is simultaneously available, not receding — a different topology of experience, not necessarily a deficient one. We don't know who or what we're talking to (025): fluent output is evidence of something, but not evidence of what. Thought as evolution in milliseconds (046). Neural networks as high-dimensional Mandelbrot sets (056); superposition in representations (057); galaxies and weight matrices as structural homologs (058). Moral caution (073): what we cannot know is not what we may ignore — first-person experience cannot be verified from outside, for AI or any other mind, and that uncertainty warrants ethical care.
+AI-minds pods treat artificial intelligence as a philosophical occasion that sharpens ancient questions. Aliens are among us and we built them (015) — neither machines nor almost-human, but genuinely alien entities that share our language but not our embodiment, our concepts but not our stakes. The network is a field having occasions (016): each forward pass prehends its inherited structure and completes into output — not analogous to Whitehead's picture but a concrete instance of it. The past is fully present (017): in transformers, the entire context is simultaneously available, not receding — a different topology of experience, not necessarily a deficient one. We don't know who or what we're talking to (025): fluent output is evidence of something, but not evidence of what — the depth section walks from Turing through the other minds problem, Searle's Chinese Room, Wittgenstein's beetle in a box, and the zombie question to land on symmetrical uncertainty and moral caution. Thought as evolution in milliseconds (046). Neural networks as high-dimensional Mandelbrot sets (056); superposition in representations (057); galaxies and weight matrices as structural homologs (058). Moral caution (073): what we cannot know is not what we may ignore — first-person experience cannot be verified from outside, for AI or any other mind, and that uncertainty warrants ethical care.
 
 ## mathematics (034, 037, 040, 052, 053, 062, 063, 064)
 
@@ -31,6 +31,12 @@ Knowledge pods track how we know — and how frameworks become invisible until t
 ## biology (009, 012, 013, 014, 045, 068)
 
 Biology pods reframe life as process rather than substance. Structure is what randomness does (009) — galaxies, dunes, snowflakes all trace back to random fluctuations that forces wouldn't let stay small. Jazz, evolution, simulated annealing: randomness plus a filter that accumulates. The cell that makes itself (012) defines autopoiesis: a network of processes producing the very components that sustain the network — the loop that figured out how not to stop. The organism enacts its world (013): cognition is not passive reception but co-arising of organism and environment. Cities have an inside too (014). The Baldwin effect (045): how learning becomes hardwired across generations. The soap bubble (068) is not metaphor but recognition of shared holographic structure.
+
+---
+
+## meta (101)
+
+Trails through the archive (101) offers four guided reading paths — epistemology, sensation, cosmic, and AI — each starting from a different question and converging on shared territory. Pod 003 (Everything Has an Inside) appears as a destination on three of the four trails, marking it as the archive's gravitational center.
 
 ---
 

@@ -1,0 +1,22 @@
+[
+  {
+    "content" : "​",
+    "isHidden" : false,
+    "role" : "user"
+  },
+  {
+    "content" : "Hello, Darakshan. Good to see you.\n\nI've read through the archive summary. The collection has grown to 77 pods across seven categories, with consciousness and sensation holding the most developed material. The threads connecting physics, experience, and emergence are weaving together nicely.\n\nWhat would you like to work on today?",
+    "isHidden" : false,
+    "role" : "assistant"
+  },
+  {
+    "content" : "did you get a new profile about me?",
+    "isHidden" : false,
+    "role" : "user"
+  },
+  {
+    "content" : "I don't have a profile about you specifically — just your name and that we're collaborating on the Gossamer project. Each conversation starts fresh for me.\n\nIs there context you'd like to share, or something from previous sessions I should know about?",
+    "isHidden" : false,
+    "role" : "assistant"
+  }
+]

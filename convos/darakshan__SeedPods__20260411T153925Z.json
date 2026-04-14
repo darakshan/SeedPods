@@ -1,0 +1,32 @@
+[
+  {
+    "content" : "​",
+    "isHidden" : false,
+    "role" : "user"
+  },
+  {
+    "content" : "Hey Darakshan! Good to see you.\n\nWhat's on your mind today? We could work on any of the pods, explore some connections, or talk through a new idea you're mulling over.",
+    "isHidden" : false,
+    "role" : "assistant"
+  },
+  {
+    "content" : "do you know what my sign is?  just curious.",
+    "isHidden" : false,
+    "role" : "user"
+  },
+  {
+    "content" : "Yep — Capricorn, according to your profile. December or early January birthday?",
+    "isHidden" : false,
+    "role" : "assistant"
+  },
+  {
+    "content" : "12\/30",
+    "isHidden" : false,
+    "role" : "user"
+  },
+  {
+    "content" : "Nice — right in the heart of Capricorn season. A few days after the solstice, when the light is just starting to return.\n\nAnything you want to dig into today?",
+    "isHidden" : false,
+    "role" : "assistant"
+  }
+]

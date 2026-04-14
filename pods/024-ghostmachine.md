@@ -1,5 +1,5 @@
 @title Ghost in the Machine
-@subtitle TBD
+@subtitle The ghost was real. It just wasn't anywhere.
 @status proto
 @date 2026-03-14
 @category consciousness
