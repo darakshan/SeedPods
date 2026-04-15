@@ -5,7 +5,7 @@
 @term quantum: TBD
 @related 005, 009, 058, 062, 064
 
-Everett's Many Worlds interpretation@ref(everett, "Everett, H. Relative state formulation of quantum mechanics (1957). DeWitt, B. The many-universes interpretation (1970).") says every quantum branch is real. The universe does not choose between possibilities — it explores all of them simultaneously, in nearly-orthogonal subspaces of Hilbert space.
+Everett's Many Worlds interpretation@ref(everett, "Everett, H. Relative state formulation of quantum mechanics (1957).")@ref(dewitt, "DeWitt, B. The many-universes interpretation (1970).") says every quantum branch is real. The universe does not choose between possibilities — it explores all of them simultaneously, in nearly-orthogonal subspaces of Hilbert space.
 
 Combined with the galactic evolution picture, this becomes something remarkable. Each branch of the universal wavefunction is running its own evolutionary experiment. The branching is not the universe losing coherence — it is the universe expanding its search across possibility space. Every quantum measurement is a bifurcation point, every branch a new thread of the cosmic evolutionary process.
 

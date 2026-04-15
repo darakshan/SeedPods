@@ -14,7 +14,7 @@ Second, God is the lure — the initial aim that each occasion feels as a pull t
 
 In the language of dynamical systems: God is both the initial condition of the iteration and the attractor the iteration is feeling toward. The universe is not wandering. It is being drawn. Not forced — drawn. The difference matters enormously.
 
-Teilhard's Omega Point is this attractor made cosmic — the state toward which the entire evolutionary process converges. Whitehead gives the mechanism (the lure operating at every occasion). Teilhard gives the destination@ref(whitehead, "Whitehead, A.N. Process and Reality (1929). God as ground of possibility and lure. Teilhard de Chardin, P. The Phenomenon of Man (1955). Omega Point."). Together they describe a universe that is going somewhere, and knows it, at every scale.
+Teilhard's Omega Point is this attractor made cosmic — the state toward which the entire evolutionary process converges. Whitehead gives the mechanism (the lure operating at every occasion). Teilhard gives the destination@ref(whitehead, "Whitehead, A.N. Process and Reality (1929). God as ground of possibility and lure.")@ref(teilhard, "Teilhard de Chardin, P. The Phenomenon of Man (1955). Omega Point."). Together they describe a universe that is going somewhere, and knows it, at every scale.
 
 @term Initial aim: Whitehead's lure — the pull each occasion feels toward the best possibility available; not compulsion but attraction.
 @term Eternal objects: The realm of possibility that God holds available; occasions select from it in their self-determination.

@@ -11,7 +11,7 @@
 Mandelbrot-like fractal structure has been found in physical systems — not as visual coincidence but as a consequence of the same iterative mathematics running in physical substrates. 
 @image(063-mandelcrystals,A snowflake: Mandelbrot structure in physical crystals,Wikimedia Commons)
 
-Quasicrystals and Penrose tilings@ref(shechtman, "Shechtman, D. et al. Metallic phase with long-range order (1984). Quasicrystals. Penrose, R. Pentaplexity (1974). Tilings.") show self-similar structure governed by the golden ratio — which sits at a specific location in the Farey sequence and Stern-Brocot tree, the same location that determines key features of the Mandelbrot boundary geometry.
+Quasicrystals and Penrose tilings@ref(shechtman, "Shechtman, D. et al. Metallic phase with long-range order (1984). Quasicrystals.")@ref(penrose-3, "Penrose, R. Pentaplexity (1974). Tilings.") show self-similar structure governed by the golden ratio — which sits at a specific location in the Farey sequence and Stern-Brocot tree, the same location that determines key features of the Mandelbrot boundary geometry.
 
 Magnetic domain boundaries in certain ferromagnetic materials form fractal walls that closely mirror Mandelbrot geometry. The physics is iterated nearest-neighbor interactions — each atom responding to its neighbors by a local rule, and the global boundary structure emerging from that iteration without being planned.
 

@@ -15,7 +15,7 @@ Branching is a different kind of algebra — a tree algebra rather than a field 
 
 If the choice dimension is a tree algebra fibered over the four dimensions of spacetime — meaning at every point in spacetime there hangs a finite branching tree of possible next steps, with branching numbers determined by local Farey structure and probabilities given by harmonic measure — then you have a coherent mathematical object. Not a five-dimensional number system, but a four-dimensional spacetime with a tree-valued fifth coordinate.
 
-This may be the right mathematical structure for what the Many Worlds interpretation@ref(everett, "Everett, H. Relative state formulation (1957). Douady, A. and Hubbard, J. On the dynamics of polynomial-like maps (1985).") is actually describing.
+This may be the right mathematical structure for what the Many Worlds interpretation@ref(everett, "Everett, H. Relative state formulation (1957).")@ref(douady, "Douady, A. and Hubbard, J. On the dynamics of polynomial-like maps (1985).") is actually describing.
 
 @term Tree algebra: Algebra of branching trees with grafting rather than multiplication; candidate for a "choice" dimension.
 @term Harmonic measure: Probability on the tree from uniform 1/n at each n-fold branch; links to Born rule and consonance.

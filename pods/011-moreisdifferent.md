@@ -59,7 +59,7 @@ This was a physicist making a philosopher's argument, and it landed hard in comp
 
 ---
 
-Arthur Koestler had arrived at a structurally identical conclusion from the opposite direction — through psychology, biology, and the history of science — and given it a precise name. In The Ghost in the Machine (1967)@ref(koestler, "Koestler, A. The Ghost in the Machine. Hutchinson, 1967. Holons and hierarchical organization. See also @link(024).") he introduced the concept of the holon: any entity that is simultaneously a whole in its own right and a part of a larger whole. An ant is a whole organism and a part of a colony. A word is a complete unit and a part of a sentence. A neuron is a cell and a part of a brain. A city block is a neighborhood and a part of a city.
+Arthur Koestler had arrived at a structurally identical conclusion from the opposite direction — through psychology, biology, and the history of science — and given it a precise name. In The Ghost in the Machine (1967)@ref(koestler-2, "Koestler, A. The Ghost in the Machine. Hutchinson, 1967. Holons and hierarchical organization. See also @link(024).") he introduced the concept of the holon: any entity that is simultaneously a whole in its own right and a part of a larger whole. An ant is a whole organism and a part of a colony. A word is a complete unit and a part of a sentence. A neuron is a cell and a part of a brain. A city block is a neighborhood and a part of a city.
 
 Reality, in Koestler's picture, is not a hierarchy of parts assembling into wholes. It is a nested structure of holons, each level having properties the levels below it do not. Aunt Hillary is a holon. So is the joke, considered as a complete act of meaning that is also part of a conversation.
 
