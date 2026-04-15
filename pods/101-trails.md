@@ -9,25 +9,25 @@
 
 There is no single right order to read these pods. But some readers prefer to be led rather than explore. Here are four trails through the archive, each starting from a different question and converging on shared territory.
 
-# The Epistemology Trail
+### The Epistemology Trail
 
 *How do we know what we know — and what are we getting wrong right now?*
 
 @link(001) → @link(027) → @link(021) → @link(002) → @link(007) → @link(008) → @link(003) → @link(011) → @link(009) → @link(012) → @link(034) → @link(006) → @link(022) → @link(025) → @link(016) → @link(073)
 
-# The Sensation Trail
+### The Sensation Trail
 
 *What does direct experience tell us about the structure of reality?*
 
 @link(008) → @link(030) → @link(038) → @link(041) → @link(035) → @link(033) → @link(034) → @link(003) → @link(069)
 
-# The Cosmic Trail
+### The Cosmic Trail
 
 *What is the universe, and where do we fit in it?*
 
 @link(002) → @link(007) → @link(029) → @link(028) → @link(032) → @link(036) → @link(009) → @link(011) → @link(003)
 
-# The AI Trail
+### The AI Trail
 
 *The urgent contemporary question: what have we built, and what do we owe it?*
 

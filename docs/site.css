@@ -93,6 +93,8 @@ h2{font-size:1.6rem;font-weight:300;margin-bottom:1rem}
 .prose p+p{margin-top:1.3rem}
 .prose hr,.page-body hr{border:none;border-top:1px solid var(--line);margin:1.2rem 0;padding:0;display:block;overflow:hidden;clear:both}
 .prose hr+*,.page-body hr+*{margin-top:0!important}
+.prose ul{margin-left:1.5rem;margin-bottom:1.2rem;list-style:disc}
+.prose ul li{margin-bottom:.4rem}
 .prose em{font-style:italic}
 .page-body code,.prose code{font-family:'DM Mono',monospace;font-size:.88em}
 .page-body pre,.prose pre{font-family:'DM Mono',monospace;font-size:.85rem;line-height:1.5}
@@ -265,6 +267,7 @@ td a:hover{color:var(--accent)}
 .page-body{padding:1.5rem 0}
 .page-body p{font-size:1.1rem;line-height:1.8;margin-bottom:1.2rem}
 .page-body h2{font-size:1.4rem;font-weight:400;color:var(--accent);margin:2.5rem 0 .8rem}
+.page-body h3,.prose h3,.pod-section h3{font-family:'DM Mono',monospace;font-size:1.1rem;letter-spacing:.06em;text-transform:none;color:var(--ink);font-weight:400;margin:3rem 0 .8rem}
 .page-body ul{margin-left:1.5rem;margin-bottom:1.2rem}
 .page-body li{font-size:1.05rem;line-height:1.7;margin-bottom:.4rem}
 /* Index (home page from home.md: h4=notice, h1=title, h2=tagline, p=purpose, h3=about heading) */

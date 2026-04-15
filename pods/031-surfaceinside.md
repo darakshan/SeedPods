@@ -1,19 +1,34 @@
 @title The Surface Is the Inside 
 @subtitle The Bubble
-@status rough
-@date 2026-03-14
+@status prelim
+@date 2026-04-14
 @category physics
-@term holographic: TBD
-@term boundary: TBD
-@term interiority: TBD
-@related 003, 004, 008, 014, 068
+@term holographic: The principle that all information in a volume of space is encoded on its boundary surface, not distributed through the interior. Discovered by Bekenstein and developed through Hawking's work on black holes.
+@term boundary: The surface between inside and outside. In physics, where information lives. In Sufi metaphysics (barzakh), a mediating realm of its own.
+@term interiority: Whitehead's sense of "inside" — not spatial but experiential. What an event is from within.
+@term barzakh: In Sufi metaphysics, especially Ibn Arabi, the isthmus or intermediate realm that separates and connects different states of existence. The boundary where the invisible becomes visible.
+@related 003, 012, 033, 068
 
 @section(surface)
 A child stops everything for a soap bubble. There's something revelatory about it — not just beautiful. As if it's showing us something we already knew. It is. 
 @image(031-surfaceinside,Soap bubble: the surface is the inside,Wikimedia Commons)
 
 @section(depth)
-The holographic principle — Bekenstein@ref(bekenstein, "Bekenstein (1972) — information content proportional to surface area, not volume."), Hawking.@ref(hawking, "Hawking, Stephen — black hole thermodynamics, boundary entropy.") All the information in a volume is encoded on its boundary. The interior is a projection of the surface. This isn't metaphor. It's physics. And it means interiority isn't hidden behind the surface — it's what the surface does. At every scale: cell membrane, skull, galactic boundary. Whitehead's@ref(whitehead, "Whitehead, A.N. — 'the within of things,' prehension as interiority at every scale.") phrase fits exactly: the within of things is the boundary of things.
+A soap bubble is pure surface. There is nothing inside it but air — the same air that's outside. No hidden interior, no depth to excavate. And yet a child stops for it. Not only because it's pretty. Because it's showing her something: a thing that is entirely boundary, entirely edge, and entirely complete. The soap bubble is not a metaphor for this insight. It is an instance of it (see @link(068)).
+
+The Mandelbrot set's@ref(mandelbrot, "Mandelbrot, Benoit. The Fractal Geometry of Nature. W.H. Freeman, 1982. The boundary as the locus of infinite complexity.") complexity lives not in its interior — which is uniform, shapeless, dull — but on its boundary (see @link(033)). Zoom into the edge and you find more edge, forever. The interior is simple. The boundary is where everything happens. The bubble is all boundary. So, it turns out, is everything else that matters.
+
+When you dig into the depth of something and expose it to explore it, it becomes surface. Peel back the skin of a cell and the molecular machinery underneath is now what you're looking at — it's the new surface. Crack open that machinery and the protein folding is the new surface. There is always another layer, not because depth is infinite but because surface is what experience does with whatever it touches. Depth is surface you haven't turned over yet.
+
+Physics arrived at the same insight from a completely different direction. The holographic principle — discovered by Bekenstein@ref(bekenstein, "Bekenstein, Jacob. 'Black Holes and Entropy.' Physical Review D, 1973. The original argument that a black hole's information content is proportional to surface area, not volume.") and developed through Hawking's@ref(hawking, "Hawking, Stephen. 'Particle Creation by Black Holes.' Communications in Mathematical Physics, 1975.") work on black hole thermodynamics — shows that all the information in a volume of space is encoded on its boundary. The interior is a projection of the surface. This is not metaphor. It is physics. We used to think the cell membrane was featureless wrapping. Now we know it intermediates an enormous variety of communication mechanisms — recognizing requests, broadcasting state, mediating the cell's relationship with everything outside it (see @link(012)). The membrane is not packaging. It is the cell's principal organ of expression.@ref(thompson, "Thompson, Evan. Mind in Life: Biology, Phenomenology, and the Sciences of Mind. Harvard University Press, 2007. The cell membrane as cognitive boundary mediating identity and communication.")
+
+The Sufis knew something about boundaries. In Ibn Arabi's metaphysics, the *barzakh* is the isthmus — the intermediate realm that separates and connects different states of existence.@ref(ibnarabi, "Ibn Arabi. The Bezels of Wisdom (Fusus al-Hikam), 13th century. The barzakh as cosmological principle.") Not a wall between inside and outside but a mediating realm of its own, where the invisible becomes visible, where interiority expresses itself outward. The holographic principle in the language of physics. The bubble in the language of mysticism.
+
+Physically, there are three things: interior, exterior, and the surface that is their boundary. Whitehead@ref(whitehead, "Whitehead, A.N. Process and Reality. Macmillan, 1929.") showed that everything has an experiential inside — an interiority that is not spatial but felt (see @link(003)). But if "inside" means experiential rather than spatial, what is the boundary? Perhaps it is communication. When one human communicates with another, the interior gets encoded, transmitted, and decoded. Not different in essence from a dolphin's communication, or a cell's, or a galaxy's exchange of light — only more familiar. The boundary of a Whiteheadian interior is how interiority makes itself available to other interiorities. The barzakh at every scale.
+
+But if the three physical terms — interior, surface, exterior — shift when interiority becomes experiential, what are the new three terms? Interior experience, its expression on the boundary, and the world that encounters it from outside? Or something else entirely?
+
+The bubble holds the question open. It has no spatial inside at all. And yet it is entirely complete. This is something to meditate on. Not to measure.
 
 @section(script)
 1. A child's face. A soap bubble drifting past. She's not thinking about physics. But her stillness is recognition.

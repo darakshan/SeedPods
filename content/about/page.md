@@ -8,7 +8,7 @@ A deep purpose of this project is intuition repair — our own as much as anyone
 
 Many of the ideas here will be well known to certain experts but might be surprises to you. Occasionally there will be a few fresh ideas, maybe original, often speculative, perhaps highly controversial, likely wrong. Mostly though, it’s about the connections between ideas.  We hope you will find them surprising, fascinating, and enjoyable. 
 
-This website is under construction.  It contains TBDs, Warnings, incompletene sections, and no doubt errors and hallucinations.  @link(about/Caveat lector).
+This website is under construction.  It contains TBDs, Warnings, incompletene sections, and no doubt errors and hallucinations.  @link(about/Caveat lector). SeedPods is a work in progress and I'd love your feedback — reach me at darakshan@glenmuse.com.
 
 Some day, inshallah, some or all of these seedpods will turned into a book, or a movie, or a series of articles, or who knows what, in a linear progression. Time will tell.
 
