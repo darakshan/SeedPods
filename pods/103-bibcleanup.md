@@ -1,31 +1,21 @@
 @title Bibliography Cleanup
 @subtitle Disambiguate duplicate keywords and fix broken refs across the archive.
 @status proto
-@date 2026-04-15
+@date 2026-04-16
 @category zzz-debug
 @related 102
 
 ## To Do
 
-(all items completed)
+(all items completed — multi-device test 3)
 
 ## Fixes
 
 (all items completed)
 
-## Future (separate task)
+## Future
 
-Combined refs (single @ref citing two authors/works) that should eventually be split into separate entries:
-- Pod 050: Whitehead + Teilhard in one ref
-- Pod 051: Susskind + Van Raamsdonk in one ref
-- Pod 054: Everett + Douady & Hubbard in one ref
-- Pod 058: Whitehead + Teilhard in one ref
-- Pod 060: Everett + DeWitt in one ref
-- Pod 063: Shechtman + Penrose in one ref
-- Pod 064: Everett + Douady & Hubbard in one ref
-- Pod 065: Chalmers + Dennett in one ref
-- Pod 066: Whitehead + Teilhard in one ref
-- Pod 067: Leibniz + Maldacena in one ref
+- [ ] Normalize informal Whitehead citations in pods 032, 034, 036 to match canonical form
 
 ## Completed
 

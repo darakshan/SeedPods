@@ -7,7 +7,7 @@
 @term boundary: The surface between inside and outside. In physics, where information lives. In Sufi metaphysics (barzakh), a mediating realm of its own.
 @term interiority: Whitehead's sense of "inside" — not spatial but experiential. What an event is from within.
 @term barzakh: In Sufi metaphysics, especially Ibn Arabi, the isthmus or intermediate realm that separates and connects different states of existence. The boundary where the invisible becomes visible.
-@related 003, 012, 033, 068
+@related 003, 012, 033, 068, 078
 
 @section(surface)
 A child stops everything for a soap bubble. There's something revelatory about it — not just beautiful. As if it's showing us something we already knew. It is. 
@@ -24,9 +24,11 @@ Physics arrived at the same insight from a completely different direction. The h
 
 The Sufis knew something about boundaries. In Ibn Arabi's metaphysics, the *barzakh* is the isthmus — the intermediate realm that separates and connects different states of existence.@ref(ibnarabi, "Ibn Arabi. The Bezels of Wisdom (Fusus al-Hikam), 13th century. The barzakh as cosmological principle.") Not a wall between inside and outside but a mediating realm of its own, where the invisible becomes visible, where interiority expresses itself outward. The holographic principle in the language of physics. The bubble in the language of mysticism.
 
-Physically, there are three things: interior, exterior, and the surface that is their boundary. Whitehead@ref(whitehead, "Whitehead, A.N. Process and Reality. Macmillan, 1929.") showed that everything has an experiential inside — an interiority that is not spatial but felt (see @link(003)). But if "inside" means experiential rather than spatial, what is the boundary? Perhaps it is communication. When one human communicates with another, the interior gets encoded, transmitted, and decoded. Not different in essence from a dolphin's communication, or a cell's, or a galaxy's exchange of light — only more familiar. The boundary of a Whiteheadian interior is how interiority makes itself available to other interiorities. The barzakh at every scale.
+Physically, there are three things: interior, exterior, and the surface that is their boundary. Everything this pod has discussed so far is about that surface — the exterior boundary. Whitehead@ref(whitehead, "Whitehead, A.N. Process and Reality. Macmillan, 1929.") showed that everything has an experiential inside — an interiority that is not spatial but felt (see @link(003)). But "inside" now means something different from the air inside a bubble. It means what the bubble is from within. And if this experiential interiority is real, what kind of boundary could it have?
 
-But if the three physical terms — interior, surface, exterior — shift when interiority becomes experiential, what are the new three terms? Interior experience, its expression on the boundary, and the world that encounters it from outside? Or something else entirely?
+Not a surface. The boundary of an experiential inside is communication. When one interiority makes itself available to another — encoding, transmitting, decoding across a shared medium — that act of making-available is the boundary itself. Not something that happens at a boundary, but the boundary between two interiorities. A dolphin's call, a cell's signaling, a galaxy's exchange of light, a human conversation — each is a boundary between insides. The exterior boundary is the barzakh between a thing and its world. The interior boundary is the barzakh between one interiority and another. @note(The interior boundary — and its fractal, layered structure — is developed in @link(078).)
+
+And unlike the exterior boundary, this one is not a surface at all. It is structured, layered, and — as it turns out — fractal.
 
 The bubble holds the question open. It has no spatial inside at all. And yet it is entirely complete. This is something to meditate on. Not to measure.
 
