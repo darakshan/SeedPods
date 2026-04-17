@@ -6,6 +6,9 @@
 @term experience: TBD
 @related 001, 002, 008, 031, 069
 
+@section(argument)
+If you walk down the scale from human to insect to atom, at some point you say "obviously nothing is home" — but you cannot say where or why, and Whitehead argued that the question is malformed because experience was never absent, only scaled beyond recognition.
+
 @section(surface)
 Here is what everyone knows: matter is dark inside. 
 @image(003-inside,A geode opened: the inside revealed,Wikimedia Commons)

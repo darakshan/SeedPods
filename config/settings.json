@@ -76,6 +76,14 @@
   "section_head" : "All seeds",
   "sections" : [
     {
+      "displayName" : "Argument",
+      "max" : 150,
+      "min" : 30,
+      "name" : "argument",
+      "optional" : true,
+      "orderSpecific" : true
+    },
+    {
       "displayName" : "Surface",
       "max" : 700,
       "min" : 400,
@@ -124,6 +132,6 @@
   "surface_max_words" : 700,
   "surface_min_words" : 400,
   "title" : "SeedPods",
-  "version" : 10,
+  "version" : 11,
   "view_all" : "View all {n} seeds →"
 }

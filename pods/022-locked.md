@@ -18,6 +18,9 @@
 @term facilitated communication (FC): a technique in which a facilitator supports a nonspeaking person's hand or arm while they type or point to letters. Widely used with nonspeaking autistic individuals. Scientifically contested: controlled studies have repeatedly shown that in many cases the facilitator, not the person, is the source of the communication — often unconsciously. The controversy does not settle the question of what nonspeaking individuals understand or experience; it only complicates the question of how to reliably access it.
 @related 001, 016, 021, 025, 073
 
+@section(argument)
+We often mistake the narrowness of the channel for the poverty of the source — a silent output does not prove an absent interior, and the error is catastrophic for whoever is on the other side of the assumption, still present, still waiting.
+
 @section(surface)
 In 1983, a young Belgian man named Rom Houben was in a car crash. He was 20 years old — an engineering student, a martial arts enthusiast. The crash left him paralyzed, and doctors diagnosed him as being in a vegetative state. Unconscious. Absent. Gone inside.
 
@@ -68,7 +71,7 @@ But that is exactly the same move. Looking at the channel — this time a wide o
 
 This is not a claim that LLMs are conscious. It is a claim that the argument from output — in either direction — was never valid. (See @link(001) for the paradigm we may be living inside. See @link(006) for the specific case of prediction as output. See @link(016) for the Whiteheadian reading of what a neural network actually is.)
 
-Editor's note: This seedpod argues in one direction only — that a narrow or absent channel does not justify concluding an absent source. It does not argue the reverse: that a wide or fluent channel confirms a rich source. That question, particularly as it applies to large language models, may warrant its own seedpod. The relationship between output fluency and interior experience in AI systems remains genuinely open.
+This seedpod argues in one direction only — that a narrow or absent channel does not justify concluding an absent source. The reverse question — whether a wide or fluent channel confirms a rich source — is taken up in @link(025).
 
 The channel is not the capacity. Widening the channel doesn't create the source. It finds it.
 

@@ -10,6 +10,9 @@
 @term symmetry-breaking: TBD
 @related 005, 007, 011, 018, 034
 
+@section(argument)
+A perfectly uniform universe would have stayed featureless forever; it is the random fluctuation, amplified by a force that won't let small differences stay small, that built galaxies, dunes, snowflakes, and eyes.
+
 @section(surface)
 Look up on a clear night, away from city lights. What you're seeing is not decoration. It is the consequence of a mistake. 
 @image(009-randomness,Structure from randomness: a lightning branch,Wikimedia Commons)

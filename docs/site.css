@@ -138,7 +138,10 @@ td a:hover{color:var(--accent)}
 .bib-text{font-style:italic}
 .bib-entry .bib-tag{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.08em;margin-right:.35rem}
 .bib-entry .bib-tag:hover{color:var(--link)}
-.bib-row,.bib-row-author{display:flex;gap:.75rem;align-items:baseline;padding:.45rem 0;border-bottom:1px solid var(--line);font-size:.95rem;line-height:1.5}
+.bib-row{display:flex;gap:.75rem;align-items:baseline;padding:.45rem 0;border-bottom:1px solid var(--line);font-size:.95rem;line-height:1.5;flex-wrap:wrap}
+.bib-row-author{display:flex;gap:.25rem .5rem;align-items:baseline;padding:.45rem 0;border-bottom:1px solid var(--line);font-size:.95rem;line-height:1.8;flex-wrap:wrap}
+.bib-row-author .bib-cite{flex-basis:100%;margin-bottom:.15rem}
+.bib-row-author .bib-backref{white-space:nowrap}
 .bib-ref-num{flex-shrink:0;min-width:2rem;font-family:'DM Mono',monospace;font-size:.75rem;color:var(--warm)}
 .bib-cite{flex:1;min-width:0}
 .bib-backref{flex-shrink:0;font-family:'DM Mono',monospace;font-size:.75rem;color:var(--warm);white-space:nowrap}

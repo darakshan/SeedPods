@@ -5,6 +5,9 @@
 @category consciousness
 @related 022, 037, 003, 031, 011
 
+@section(argument)
+The boundary between two interiorities is not a surface but an act — communication itself — and it descends through fractal layers of translation, stack meeting stack through stack, so that the mystery is not that it sometimes fails but that across so many transductions anything gets through at all.
+
 We always think of a boundary as a surface between two touching things — the skin of an apple, the membrane of a cell, the edge where one physical object ends and the world begins. This is the exterior boundary: inside separated from outside. It is spatial, tangible, and well understood (see @link(031) for how physics arrived at the holographic principle through this kind of boundary).
 
 But "inside" has a second meaning. Not the spatial interior of a thing — the air inside a bubble, the pulp inside the apple — but the experiential interiority of a thing. What it is like, from within, to be that thing (see @link(003)). Whitehead argued that this interiority is real at every scale, not just in brains. If he is right, then interiority has its own boundary — and it cannot be a surface.
