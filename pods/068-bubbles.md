@@ -7,6 +7,9 @@
 @term interiority: TBD
 @related 051, 067, 031, 003, 037
 
+@section(argument)
+A child stops for a soap bubble not from puzzlement but from recognition — the bubble is pure surface with no hidden interior, which is the holographic principle made visible, and the child is seeing the structure of her own existence without knowing it.
+
 Children stop for soap bubbles. Adults do too, if they are honest. The response is disproportionate to what a soap bubble is — a thin film of soapy water, lasting seconds. The attraction runs deeper than aesthetics. 
 @image(068-bubbles,A soap bubble: recognition, not metaphor,Wikimedia Commons)
 

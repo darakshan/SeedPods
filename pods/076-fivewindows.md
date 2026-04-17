@@ -5,6 +5,9 @@
 @category sensation
 @related 002, 003, 013, 015, 029
 
+@section(argument)
+Every sense is vibration in space and time, yet red doesn't sound like anything and middle C has no flavor — the physics converges while experience diverges, and that gap between unified substrate and irreducibly distinct qualities is the hard problem at its sharpest.
+
 The physics is almost embarrassingly unified. Light is electromagnetic vibration. Sound is pressure waves — air molecules oscillating back and forth. Smell and taste are molecular shapes binding to receptors, but those bonds vibrate too, and the receptors respond to timing patterns. Touch is mechanical vibration of skin. Temperature is the average kinetic energy of molecules — which is to say, how hard they're vibrating. Even proprioception, your sense of where your body is, relies on cells that fire in rhythmic patterns when stretched.
 
 Vibration in time. Pattern in space. Location. That's the common substrate of every sense.

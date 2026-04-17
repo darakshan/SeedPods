@@ -5,6 +5,9 @@
 @category knowledge
 @related 000
 
+@section(argument)
+Four guided reading paths — epistemology, sensation, cosmic, and AI — each starting from a different question and converging on shared territory, with pod 003 appearing as a destination on three of the four.
+
 @section(surface)
 
 There is no single right order to read these pods. But some readers prefer to be led rather than explore. Here are four trails through the archive, each starting from a different question and converging on shared territory.

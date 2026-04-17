@@ -14,6 +14,9 @@
 @term prehension: Whitehead's term for the way each event takes in and responds to prior events. The basic relational act of reality.
 @related 007, 008, 016, 029, 058
 
+@section(argument)
+From inside a light beam there is no distance and no time, which means every star that has ever exchanged light is in immediate contact — and if experience goes all the way down, this ancient light-woven network may have been experiencing itself long before we arrived to notice.
+
 @section(surface)
 Here is something relativity tells us that almost nobody stops to think about. 
 @image(028-network,The cosmic web: the network that experiences itself,Wikimedia Commons)

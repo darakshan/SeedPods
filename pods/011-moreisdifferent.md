@@ -9,6 +9,9 @@
 @term AI: TBD
 @related 002, 009, 010, 014, 037
 
+@section(argument)
+Nothing was added — no Aunt Hillary molecule, no special ingredient — the numbers just got large enough that a different kind of thing appeared, and whether that thing has an inside scaled to its complexity is the question that haunts all emergence.
+
 @section(surface)
 There is a colony of ants living somewhere near you. Hundreds of thousands of them, maybe millions. Each one knows almost nothing. It can follow a scent trail. It can respond to its immediate neighbors. That is more or less the complete list of what any individual ant can do.
 

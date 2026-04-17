@@ -5,6 +5,9 @@
 @category consciousness
 @related 001, 013, 015, 027, 041
 
+@section(argument)
+We never access reality directly, only the story we tell about it — and the deeper the level of narrative, from dramatic arc to perceptual label to conceptual metaphor, the less it feels like story and the more it feels like the given.
+
 @section(depth)
 
 Muriel Rukeyser wrote that "the universe is made of stories, not of atoms." @ref(rukeyser, 'Rukeyser, Muriel. *The Speed of Darkness*. Random House, 1968.') How right she was.

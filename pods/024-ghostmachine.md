@@ -9,6 +9,9 @@
 @term holon: Koestler's term for a whole that is also a part of a larger whole; each level has genuine interiority.
 @related 002, 012, 021, 037, 067
 
+@section(argument)
+Ryle diagnosed the ghost as a category mistake, Koestler named what was lost when materialism expelled it, and Whitehead dissolved the problem entirely — the ghost was never separate from the machine because the machine, all the way down, has an inside.
+
 NOTE: This depth sketch was developed in session 2026-03-14. The seedpod needs a full Surface, Script, and Images before it can advance beyond prelim.
 
 

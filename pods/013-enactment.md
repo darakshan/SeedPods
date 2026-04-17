@@ -7,6 +7,9 @@
 @term perception: TBD
 @related 002, 003, 004, 042, 046
 
+@section(argument)
+Cognition is not the processing of representations inside a passive receiver but the enactment of a world — organism and environment co-arising through active engagement, so that even a bacterium swimming toward a chemical gradient is not following a rule but making a world in which that gradient matters.
+
 Evan Thompson's@ref(thompson, "Thompson, E. Mind in Life (2007).") enactivism, building on Maturana and Varela@ref(maturana-2, "Maturana, H. and Varela, F. The Tree of Knowledge (1987)."): cognition is not the processing of representations of an external world inside a passive receiver. It is the enactment of a world — the organism and its environment co-arising through active engagement. 
 @image(013-enactment,Organism enacting its world through active engagement,Wikimedia Commons) A bacterium swimming toward a chemical gradient is not merely following a rule. It is enacting a world in which that gradient is meaningful. This is prehension at the scale of the organism — the Whiteheadian pattern in biological language.
 

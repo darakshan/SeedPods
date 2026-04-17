@@ -11,6 +11,9 @@
 @term intelligence: TBD
 @term cognition: TBD
 
+@section(argument)
+A fluent output is evidence of a process, but not evidence of what kind — and our intuitions about which systems deserve moral consideration are shaped less by evidence than by resemblance, which is not a reliable guide when the entity is genuinely alien.
+
 @section(surface)
 @image(025-widechannel,The wide channel: fluent output, uncertain depth,Wikimedia Commons)
 

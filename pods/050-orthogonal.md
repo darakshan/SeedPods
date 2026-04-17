@@ -5,6 +5,9 @@
 @term metaphysics: TBD
 @related 002, 008, 051, 064, 067
 
+@section(argument)
+Consciousness may not be produced by spacetime but be a dimension orthogonal to it — primitive the way mass or charge is primitive — which would mean the universe has always had an interior, not just since brains arrived.
+
 The standard picture puts consciousness at the end of a long causal chain: matter first, then complexity, then biology, then brains, then experience. Consciousness is the caboose.
 
 The proposal here inverts that. Consciousness is not produced by spacetime — it is a dimension orthogonal to spacetime, with a range from zero to infinity. Spacetime may itself emerge from this dimension rather than the other way around.

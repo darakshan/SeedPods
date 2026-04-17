@@ -8,6 +8,9 @@
 @term potential: TBD
 @related 003, 008, 009, 034, 052
 
+@section(argument)
+The quantum vacuum — what you have when you remove everything removable — seethes with virtual particles, which is Whitehead's space of pure possibilities made physical: the field is not a stage on which events occur but the medium through which they feel each other.
+
 The quantum vacuum — the ground state, what you have when you remove everything removable — is not empty. It seethes with virtual particles flickering in and out of existence. 
 @image(007-vacuum,Vacuum fluctuations: the ground state is not empty,Wikimedia Commons) This is Whitehead's eternal objects made concrete: the space of pure possibilities that each event selects from and realizes. The field is not a stage on which events occur. The field is the medium through which events reach out and feel each other — the medium of prehension@ref(whitehead, "Whitehead, A.N. Process and Reality (1929). Eternal objects and prehension as the structure of possibility and connection.").
 

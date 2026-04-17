@@ -10,6 +10,9 @@
 @term electromagnetism: TBD
 @related 003, 007, 016, 017, 029
 
+@section(argument)
+Your nervous system does not merely use the electromagnetic field — it is a structure within it, the same field that carries light, and Whitehead arrived from pure philosophy at the same picture Maxwell found in mathematics: a continuous medium through which events feel each other.
+
 @section(surface)
 You've been using light as a metaphor your whole life. 
 @image(008-fields,The electromagnetic field made visible in iron filings,Wikimedia Commons)

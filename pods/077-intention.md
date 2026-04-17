@@ -5,6 +5,9 @@
 @category consciousness
 @related 012, 002, 016, 009, 001
 
+@section(argument)
+The universe demonstrably gives rise to systems with intrinsic intention, which means intention is not outside physics but a recurring feature of sufficiently complex self-maintaining systems — and the question is whether the universe that keeps producing structures that care might itself be the kind of system whose dynamics favor what we call caring.
+
 @section(depth)
 The universe demonstrably gives rise to systems with intrinsic intention — human beings being the most familiar example. This establishes something important: intention is not outside physics, but a phenomenon that emerges within it. Terrence Deacon's *Incomplete Nature* offers the most rigorous contemporary account of how this happens: constraints propagate through thermodynamic and semiotic levels until "aboutness" — genuine reference to something absent — becomes possible. @ref(deacon, "Terrence Deacon, Incomplete Nature: How Mind Emerged from Matter, W.W. Norton, 2012.")
 

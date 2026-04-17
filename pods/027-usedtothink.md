@@ -19,6 +19,9 @@
 @term quantum field: in modern physics, the fundamental layer of reality. Particles are excitations of underlying fields. The quantum vacuum seethes with potential.
 @related 003, 012, 015, 024, 047
 
+@section(argument)
+"We used to think X — now we know Y" marks genuine progress while quietly discarding whatever the old framework was correctly pointing at, so that the phenomenon is lost along with the mechanism, unnamed and unexamined.
+
 @section(surface)
 There is a phrase you have heard a thousand times. In documentaries. In science podcasts. In textbooks. In the confident voice of someone explaining something to you. 
 @image(027-usedtothink,The old map we used to think was right,Wikimedia Commons)

@@ -9,6 +9,9 @@
 @term self: TBD
 @related 002, 008, 012, 031, 037
 
+@section(argument)
+Hume looked for the self and found only a bundle of perceptions; the Buddhist looked and found anatta; Whitehead found a society of occasions stable enough to appear permanent — three traditions arriving independently at the same dissolution of the substantial self.
+
 @image(004-self,The self as wave pattern — not a fixed point,Wikimedia Commons)
 
 @term Actual occasion: Whitehead's fundamental unit of reality — an event that prehends its past, integrates, and perishes into the next.

@@ -9,6 +9,9 @@
 @term consciousness: TBD
 @term light: TBD
 
+@section(argument)
+Physicists describe light and mystics describe love, and they keep reaching for the same words — attraction, radiance, union, the dissolution of distance — not because one is borrowing from the other but because they may be describing the outside and inside of the same phenomenon.
+
 @section(surface)
 Physicists describe light: electromagnetic radiation, photons crossing space at the maximum speed the universe allows. From a photon's perspective, there is no journey — departure and arrival are the same moment (@link(029)). No distance. No separation.
 

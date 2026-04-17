@@ -9,6 +9,9 @@
 @term temperature (AI): A parameter in generative AI systems controlling how broadly the model samples from its probability distribution. Higher temperature produces more varied, less predictable output — a mechanical approximation of wandering whose relationship to genuine play remains an open question.
 @term will-suspension: The state in which goal-directed effort is genuinely set aside, not redirected. Proposed here as the distinguishing feature of play, and as the mode that directed exploration cannot substitute for.
 
+@section(argument)
+The fable taught us that play is what you do instead of working, but the grasshopper was doing something the ant structurally cannot — operating in the frame-free, will-suspended mode where certain things happen that directed effort will never reach.
+
 @section(surface)
 You probably learned Aesop's fable the same way most of us did. The ant works all summer storing food. The grasshopper sings and plays. Winter comes. The grasshopper suffers. The moral is clear: stop playing, start working. Play is what you do when you should be doing something else.
 

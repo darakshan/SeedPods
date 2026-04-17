@@ -9,6 +9,9 @@
 @term barzakh: In Sufi metaphysics, especially Ibn Arabi, the isthmus or intermediate realm that separates and connects different states of existence. The boundary where the invisible becomes visible.
 @related 003, 012, 033, 068, 078
 
+@section(argument)
+A soap bubble is pure surface with nothing inside it but air — and yet it is entirely complete, which is the holographic principle in miniature: all the information in a volume lives on its boundary, and depth is just surface you haven't turned over yet.
+
 @section(surface)
 A child stops everything for a soap bubble. There's something revelatory about it — not just beautiful. As if it's showing us something we already knew. It is. 
 @image(031-surfaceinside,Soap bubble: the surface is the inside,Wikimedia Commons)
