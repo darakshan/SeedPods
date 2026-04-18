@@ -8,6 +8,10 @@
 @term generalization: TBD
 @related 009, 011, 034, 038, 053
 
+@section(argument)
+Training a neural network is computing a Mandelbrot set in hundreds of thousands of dimensions — weight space is the complex plane, the loss landscape is the iteration, and the best models sit on the boundary between convergence and escape, which is not metaphor but structural homology.
+
+@section(proto)
 Training a neural network is, in a precise sense, computing a Mandelbrot set in a space of hundreds of thousands of dimensions.
 
 The weight space is the high-dimensional analog of the complex plane. The loss landscape is the iteration — each training step applies the rule, adjusts the weights, and checks whether the system is converging or diverging. The trained network is a point that didn't escape — a stable attractor in weight space.

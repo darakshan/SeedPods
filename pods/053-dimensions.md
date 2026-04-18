@@ -10,6 +10,7 @@
 @section(argument)
 Replace the arbitrary tolerance in high-dimensional near-orthogonality with a principled one drawn from the Farey sequence, and a formula emerges — V(d,n) ~ (n²/π²)^d — that connects musical consonance, neural network superposition capacity, and quantum branching under one expression.
 
+@section(proto)
 If you have a space with d actual dimensions, how many nearly-orthogonal directions can you fit in it? The answer matters because nearly-orthogonal directions can carry independent information without crosstalk — like independent channels. 
 @image(053-dimensions,High-dimensional geometry: virtual dimensions,Wikimedia Commons)
 

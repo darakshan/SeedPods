@@ -9,6 +9,7 @@
 @section(argument)
 Whitehead's God is both the ground of possibility — holding all unrealized potentials available for occasions to select from — and the lure each occasion feels toward greater complexity, which in the language of dynamical systems makes God both the initial condition and the attractor.
 
+@section(proto)
 Whitehead's God is not the God of theism — not a person who intervenes in history or answers prayers. God in Whitehead's system plays two roles in the metaphysics of process.
 
 First, God is the ground of possibility — the one who holds all unrealized potentials available for actual occasions to select from. Without this role, there is no account of where possibilities come from. An occasion can only actualize what is genuinely available to it. God makes possibilities available.

@@ -12,6 +12,7 @@
 @section(argument)
 The number Gödel constructed was just a number, arrived at by routine steps, but its accumulation produced something that transcended what the system could say about itself — the same pattern by which chemistry becomes life and quantity becomes quality.
 
+@section(proto)
 Gödel's incompleteness proof@ref(godel, "Gödel, K. On Formally Undecidable Propositions (1931). Douglas Hofstadter, Gödel Escher Bach (1979) for the accessible treatment.") involved constructing an enormous number, arrived at through entirely routine recursive operations, which encoded a statement about itself. The number was just a number. The operations were just operations. 
 @image(010-largenumbers,The Mandelbrot set: self-reference built from simple recursion,Wikimedia Commons) But their accumulation produced something that transcended what the system could say about itself. This is the pattern of emergence: when events accumulate and nest across enough iterations, something qualitatively new appears that was not visible in the parts. The threshold where arithmetic becomes self-referential is one example. The threshold where chemistry becomes life is another.
 

@@ -10,6 +10,7 @@
 @section(argument)
 A neural network stores far more concepts than it has dimensions by packing them as nearly-orthogonal directions — more important concepts getting cleaner representations, less important ones compressed deeper — which is the same hierarchy that appears in the Farey sequence, in Benford's law, and in music.
 
+@section(proto)
 A neural network with d dimensions in its residual stream can represent far more than d independent concepts. This is called superposition and it has been studied carefully in the mechanistic interpretability literature@ref(olsson, "Olsson, E. et al. Superposition, memorization, and double descent (2022). Or similar interpretability work on superposition."). 
 @image(057-superfarey,Superposition in high-dimensional neural representations,Wikimedia Commons)
 

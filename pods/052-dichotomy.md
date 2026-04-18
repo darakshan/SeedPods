@@ -10,6 +10,7 @@
 @section(argument)
 The electron is neither particle nor wave but an excitation of a quantum field — the field is continuous, the excitation is discrete, both descriptions are correct — and consciousness may work the same way, with Whitehead's discrete occasions as excitations of a continuous experiential field.
 
+@section(proto)
 Physics already resolved this, and the resolution is worth stating cleanly because it keeps coming up in philosophy of mind.
 
 The question "is consciousness discrete or continuous" seems to demand an answer. Whitehead said discrete — the universe advances in quantum steps of experience, each occasion arising, achieving its synthesis, and perishing. Pure panpsychists tend to say continuous — experience is a field, not a sequence of events.

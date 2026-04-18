@@ -5,6 +5,7 @@
 @section(argument)
 Temperature bridges physics, perception, and now AI — from caloric's intuitive flow to superconductivity's frictionless relation to the generative model's temperature dial that engineers had to build in deliberately because pure optimization had crowded out surprise.
 
+@section(proto)
 Temperature is another phenomenon that bridges physics, biology, and lived experience — and now AI. It manifests across all three: in the physical world, in human perception, in the computational.
 
 The idea of heat as flow goes back to caloric (see @link(1)) — and yet we still live inside the metaphor. Brains overheat. Economies run hot or freeze. We speak of burning out, of frying, of being on fire.

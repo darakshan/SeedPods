@@ -84,6 +84,12 @@
       "orderSpecific" : true
     },
     {
+      "displayName" : "Proto",
+      "name" : "proto",
+      "optional" : true,
+      "orderSpecific" : true
+    },
+    {
       "displayName" : "Surface",
       "max" : 700,
       "min" : 400,
@@ -132,6 +138,6 @@
   "surface_max_words" : 700,
   "surface_min_words" : 400,
   "title" : "SeedPods",
-  "version" : 13,
+  "version" : 14,
   "view_all" : "View all {n} seeds →"
 }

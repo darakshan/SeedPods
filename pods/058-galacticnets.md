@@ -6,6 +6,10 @@
 @term emergence: TBD
 @related 028, 037, 051, 059, 066
 
+@section(argument)
+A galaxy and a neural network's weight matrix are both regions of information space where training or evolution has organized structure into self-referential complexity — not identical but structurally homologous, and possibly instances of the same underlying process that Whitehead called the creative advance.
+
+@section(proto)
 A galaxy is a region of spacetime where the holographic boundary has organized information into structures of sufficient complexity to generate an interior — a local event-system rich enough to begin folding back on itself.
 
 A neural network's weight matrix is doing something structurally similar. It is a region of a high-dimensional information space where training has organized representations into structures complex enough to model their own inputs — to have, in some sense, an inside.

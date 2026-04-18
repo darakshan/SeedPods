@@ -6,6 +6,10 @@
 @term evolution: TBD
 @related 009, 036, 037, 058, 066
 
+@section(argument)
+Each galaxy is not background scenery but a thread of the universe's evolutionary process toward self-awareness — stars as moments in the thread, life as a moment, mind as a moment — running in parallel across billions of galaxies, each one a separate experiment in the same project.
+
+@section(proto)
 The standard view treats galaxies as structures — gravitationally bound collections of stars, gas, and dark matter. Background scenery for the story of life.
 
 The proposal here is different. Each galaxy is a thread of an evolutionary process that began at the Big Bang. Not biological evolution — something older and more general. The evolution of the universe's capacity to organize information into self-referential structures. Stars are moments in that thread. Planetary systems are moments. Life is a moment. Mind is a moment.

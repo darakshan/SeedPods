@@ -10,6 +10,7 @@
 @section(argument)
 The Mandelbrot set's boundary has a natural probability measure — the harmonic measure — that weights simpler, more consonant branches more heavily, and if the universe's wavefunction branches according to a similar tree structure, the Born rule may fall out of the geometry rather than being imposed as a postulate.
 
+@section(proto)
 The Born rule is quantum mechanics' most mysterious postulate. It says the probability of a measurement outcome is proportional to the square of the wavefunction's amplitude. 
 @image(054-bornharmonic,Standing wave harmonics: the Born rule as harmonic measure,Wikimedia Commons) It works perfectly. Nobody knows why it is the square and not something else.
 

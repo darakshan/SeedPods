@@ -10,6 +10,7 @@
 @section(argument)
 The choice dimension doesn't need to multiply — it only needs to branch, and a tree algebra fibered over spacetime, with branching numbers fixed by local Farey structure and probabilities given by harmonic measure, may be the right mathematical object for what Many Worlds is actually describing.
 
+@section(proto)
 The proposal to add "choice" as a fifth dimension — alongside space, time — runs into a mathematical obstacle. The Mandelbrot set depends on the algebraic structure of complex multiplication. To generalize to five dimensions you need a five-dimensional number system with coherent multiplication. Such systems are severely constrained — quaternions work, octonions work, but five dimensions has no clean analog.
 
 Unless the choice dimension doesn't need to multiply. It only needs to branch.
