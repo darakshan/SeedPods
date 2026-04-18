@@ -8,6 +8,9 @@
 @term wabi-sabi: TBD
 @related 002, 003, 009, 034, 040
 
+@section(argument)
+Beauty is in the eye of the beholder and in the mathematics of the thing beheld — the golden ratio keeps appearing in living forms, wabi-sabi finds beauty in imperfection and transience, and both are beautiful because what the eye finds beautiful is a record of the structures that have mattered.
+
 Beauty is in the eye of the beholder — and also in the mathematics of the thing beheld. 
 @image(071-beauty,The golden ratio in nature: beauty and mathematics,Wikimedia Commons)
 

@@ -7,6 +7,9 @@
 @term process: TBD
 @related 002, 008, 009, 032, 058
 
+@section(argument)
+Whitehead gives the mechanism — experience all the way down, accumulating — and Teilhard gives the vector — a direction that isn't random — so that you are not in the universe observing it but the universe at a particular moment of its self-discovery.
+
 @section(surface)
 When you have a thought, something is happening that took fourteen billion years to arrange. Not as background. Not as coincidence. As the point. The universe is not a machine that accidentally produced minds. It is a process that was always heading somewhere. You are what it looks like when it arrives. 
 @image(036-universenoticing, "The Hubble deep field: you are the universe noticing something", "Wikimedia Commons")

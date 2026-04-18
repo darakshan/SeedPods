@@ -1,0 +1,21 @@
+{
+  "messages" : [
+    {
+      "author" : {
+        "displayName" : "Agent",
+        "id" : "agent:SeedPods",
+        "kind" : "agent"
+      },
+      "content" : "Anthropic API error 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"messages: at least one message is required\"},\"request_id\":\"req_011CaAUoWp7TeV6BLWxor45m\"}",
+      "createdAt" : "2026-04-18T02:53:03Z",
+      "displaySegments" : [
+        {
+          "content" : "Anthropic API error 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"messages: at least one message is required\"},\"request_id\":\"req_011CaAUoWp7TeV6BLWxor45m\"}",
+          "type" : "text"
+        }
+      ],
+      "id" : "595C502C-DFD7-4625-B724-CBCFD747CE90"
+    }
+  ],
+  "version" : 1
+}

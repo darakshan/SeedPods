@@ -5,6 +5,9 @@
 @category knowledge
 @related 078, 017, 021, 003, 015
 
+@section(argument)
+A pronoun is an arrow that needs a shared world to land in — it carries almost no descriptive content, which is precisely why it reveals the infrastructure that reference requires, from the royal "we" as ontological honesty to the Sufi "Hu" as contemplative instrument to the unsettled "you" we aim at a language model.
+
 Pronouns are the lightest possible payload in a communication stack. Precisely because they carry almost no descriptive content, they reveal the infrastructure that reference requires. A pronoun is an arrow that needs a shared world to land in. Grammar across languages encodes distinctions of presence, relation, and referential density that English has largely flattened — and those distinctions are not ornamental. They are reports on what actually populates the field of address.
 
 # Seeds to develop

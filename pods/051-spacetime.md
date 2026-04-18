@@ -6,6 +6,9 @@
 @term emergence: TBD
 @related 008, 037, 050, 058, 068
 
+@section(argument)
+Spacetime geometry may be constituted by quantum entanglement — sever the entanglement and the spacetime tears — which means asking where consciousness is in spacetime may be malformed, because both may be emergent from something more fundamental that has physical and experiential aspects simultaneously.
+
 Physicists have been circling this for thirty years without quite landing. The holographic principle — that the information content of a region is proportional to its boundary area, not its volume — suggests that three-dimensional space is not fundamental. It is a projection of a two-dimensional information structure.
 
 Van Raamsdonk pushed further: spacetime geometry may be *constituted* by quantum entanglement@ref(susskind, "Susskind, L. The World as a Hologram (1995). Van Raamsdonk, M. Building up spacetime with quantum entanglement (2010)."). Sever the entanglement between two regions and the spacetime connecting them literally tears. Geometry is not the container of physics. It is a consequence of the information relationships between parts of a quantum system.

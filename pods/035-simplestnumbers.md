@@ -11,6 +11,9 @@
 @term virtual-dimension-formula: TBD
 @related 009, 010, 034, 057, 062
 
+@section(argument)
+The universe counts simply first — the Farey sequence orders fractions by complexity, Benford's law finds the same hierarchy in empirical data, and every culture that ever made music independently discovered the simplest ratios before anything else.
+
 @section(surface)
 @image(035-simplestnumbers, "Benford's law: simpler numbers appear first in natural data", "Wikimedia Commons")
 There are infinitely many numbers between 0 and 1. But they're not all equally there. Some are more fundamental than others. The fraction 1/2 is more there than 47/93. Music knew this before mathematics did. And so did accounting.

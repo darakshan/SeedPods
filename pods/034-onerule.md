@@ -7,6 +7,9 @@
 @term mandelbrot-set: TBD
 @related 002, 007, 009, 003, 011
 
+@section(argument)
+The Mandelbrot set's infinite complexity was never added — it accumulated through iteration of a single formula, the same intuition behind Wheeler's one-electron universe and Whitehead's occasions each grasping the previous.
+
 @section(surface)
 The Mandelbrot set is computed one point at a time. One rule. Applied again and again. The infinite complexity of its boundary — all those bulbs, all that branching, the self-similarity at every scale — was never added. It accumulated. The universe may work the same way. 
 @image(034-onerule,A music automaton: one rule, endlessly unfolding,Wikimedia Commons)

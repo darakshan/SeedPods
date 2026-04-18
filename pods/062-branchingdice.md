@@ -7,6 +7,9 @@
 @term farey-sequence: TBD
 @related 005, 009, 038, 054, 060
 
+@section(argument)
+The branching at each Mandelbrot bifurcation is not arbitrary but fixed by local algebra — always a finite whole number equal to the bulb's period — and assigning uniform probability to each branch produces a natural measure that weights simpler branches more heavily, which is exactly what the ear already knows.
+
 At every bifurcation point in the Mandelbrot set, the branching is not arbitrary. The number of branches is exactly the period of the bulb the point belongs to — a period-3 bulb sprouts 3-branching lightning bolts, period-5 sprouts 5, and so on. 
 @image(062-branchingdice,Branching numbers as finite dice at each Mandelbrot node,Wikimedia Commons) The branching number is determined by the local algebraic structure. It is always a finite whole number.
 

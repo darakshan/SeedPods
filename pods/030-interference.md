@@ -11,6 +11,9 @@
 @term double-slit: TBD
 @related 007, 009, 016, 029, 054
 
+@section(argument)
+The ear detecting consonance and the screen detecting the double-slit pattern are both reading the same kind of structure from the same kind of process — and the brain, with millions of neurons continuously disturbing the electromagnetic field, may be producing the same phenomenon at yet another scale.
+
 Interference is the mechanism by which two waves meeting in the same medium reinforce or cancel depending on their phase relationship. In music this produces consonance and dissonance — the reason certain intervals feel stable and others tense is that their interference patterns are periodic and regular, or not. 
 @image(030-interference,The double-slit interference pattern,Wikimedia Commons) In the double slit experiment it produces the banded pattern on the screen that proves light is a wave phenomenon. In the brain, millions of neurons continuously disturbing the electromagnetic field produce overlapping interference patterns whose structure may be what we call thought.
 

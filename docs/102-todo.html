@@ -61,35 +61,26 @@
 <div class="wrap">
   <div class="meta-row"><a href="index.html#zzz-debug" class="tag">zzz-debug</a><span class="mono small dim"> · </span><span class="mono small warm">Pod 102</span><span class="mono small dim"> · proto</span></div>
   <div class="seedpod-header fade cat-colored cat-zzz-debug"><h1>To-Do List</h1><p class="premise">Ideas, questions, and tasks awaiting their pods.</p></div>
-  <section id="_prolog" class="pod-section pod-prolog"><div class="prose"><ul>
-<li><p>Map of valence &amp; arousal 3.4</p>
+  <section id="_prolog" class="pod-section pod-prolog"><div class="prose"><h2>How to create an argument section</h2>
+<ol>
+<li><p><strong>One sentence</strong> — not a tagline, not a paragraph. A somewhat long sentence is fine, but not artificially long.</p>
 </li>
-<li><p>Everything has an inside and outside and a structure. The outside is a surface and a structure and so is the inside. Or maybe this is 2 orthogonal poles: inside–outside and surface–structure.</p>
+<li><p><strong>Captures the pod’s arc</strong> — not its topic but its reasoning movement. What does it <em>do</em>, not what is it <em>about</em>.</p>
 </li>
-<li><p>AI is a mirror</p>
+<li><p><strong>Placed as <code>@section(argument)</code></strong> — first section in the pod, before <code>@section(surface)</code> or before the proto body text.</p>
 </li>
-<li><p>Be nice to your AI — extend <a href="073-moral-caution.html">What We Cannot Know Is Not What We May Ignore</a>. Other reasons.</p>
+<li><p><strong>Dense enough to stand alone</strong> — a reader seeing only the argument should understand the pod’s essential claim.</p>
 </li>
-<li><p>This is a memoir.</p>
+<li><p><strong>Defined in <code>config/settings.json</code></strong> — already added, with min 30 / max 150 words, optional.</p>
 </li>
-<li><p>Dipping into the river.</p>
-</li>
-<li><p>The ratchet effect in evolution, engineering, science</p>
-</li>
-<li><p>How does this obscure physics and philosophy stuff change our everyday thinking about our life?</p>
-</li>
-<li><p>Science versus speculation versus fantasy. How our interior model of reality affects our behavior and our feelings. Why it’s OK to speculate and even good as long as you can be aware of its probability (expectation)… and at the same time keep an open mind!</p>
-</li>
-<li><p><strong>@asidedirective</strong> — Inline aside for content that matters but shouldn’t interrupt flow. Syntax: <code>@aside(text)</code>. Semantically distinct from <code>@ref</code> (which points to sources) and <code>@note</code> (which is editorial and stripped from output). The aside is reader-facing content whose placement is left to the renderer — margin note, footnote, collapsible inline, etc. First use case: disambiguating “inside” (spatial vs. experiential) without breaking prose. See pod 078.</p>
-</li>
-<li><p><strong>Bibliography backref wrapper</strong> — Wrap backref links in <code>&lt;span class=&quot;bib-backrefs&quot;&gt;</code> so CSS can constrain them to a proper right-hand column. Current HTML puts bare <code>&lt;a&gt;</code> elements as siblings of <code>.bib-cite</code>, making two-column layout impossible with CSS alone.</p>
-</li>
-<li><p><strong>Pending-changes badge and AI commit message</strong> — Show the number of uncommitted changes in the app nav bar, visible across all modes (chat, browse, split, feedback, settings). Invisible at zero. Also set the iOS app icon badge to the same count — visible on the home screen without opening the app. Tapping the badge asks “Commit N changes?” On yes, the server passes the list of changed files to the AI, which writes a one-line commit message. If “require edit approval” is on, the user sees and approves the message like any edit. If approval is off, it commits automatically. Same machinery as existing edits — no new UI patterns, no background processes. Just the badge, a confirmation, and the edit channel.</p>
-</li>
-</ul>
+</ol>
+<p>Example from pod 001:</p>
+<blockquote>
+<p>Every era has a framework so obvious it feels like seeing rather than thinking — caloric, the ether, the assumption that matter is dark inside — and the pattern by which such frameworks dissolve is specific, repeatable, and happening now.</p>
+</blockquote>
 </div></section>
 <section id="provenance" class="pod-section"><div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="073-moral-caution.html" class="related-card cat-colored cat-ai-minds nav-push"><div class="related-title">73. What We Cannot Know Is Not What We May Ignore</div></a></div>
-<div class="inbound-refs"><span class="inbound-label">1 inbound reference</span><span class="inbound-links"><a href="104-bugs.html" class="inbound-link nav-push cat-colored cat-zzz-debug" title="Bugs">104</a></span></div></div></section>
+<div class="inbound-refs"><span class="inbound-label">0 inbound references</span><span class="inbound-links"></span></div></div></section>
 </div>
 <div class="page-end" id="page-end-version" data-page-version="1">
   <button class="page-end-logo" aria-label="Show page info"
@@ -98,6 +89,6 @@
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">Rev 1 · Edited 2026-04-17 07:12</span>
+  <span class="page-end-version" aria-hidden="true">Rev 1 · Edited 2026-04-17 16:40</span>
 </div>
 </body></html>

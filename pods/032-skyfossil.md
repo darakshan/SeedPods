@@ -9,6 +9,9 @@
 @term omega-point: TBD
 @related 009, 028, 036, 037, 058
 
+@section(argument)
+When you look at the night sky you are seeing not space but time, and not just time but evolution — each galaxy a thread of the universe's directed process toward self-awareness, running in parallel across billions of branches.
+
 @section(surface)
 When you look at the night sky you think you're seeing space. You're actually seeing time. But there's a third thing you're seeing that nobody told you — you're seeing evolution. Not biological evolution. Something older. 
 @image(032-skyfossil,The cosmic microwave background: the sky as fossil record,Wikimedia Commons)

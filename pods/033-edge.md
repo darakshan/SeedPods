@@ -11,6 +11,9 @@
 @term crystals: Mandelbrot-like structure found in magnetic domain boundaries and quasicrystals, same iterative mathematics running in physical substrate.
 @related 002, 005, 007, 009, 056
 
+@section(argument)
+The Mandelbrot set's interior is uniform and its exterior escapes to infinity, but the boundary between them is infinitely complex and self-similar at every scale — governed by the same Farey mathematics that governs musical consonance, and possibly what consciousness feels like from inside.
+
 @section(surface)
 The Mandelbrot set has an inside and an outside. The inside is stable — points that keep returning. The outside escapes to infinity. The boundary between them is infinitely complex, self-similar at every scale, and inexhaustible. That boundary is where everything interesting happens. Including you. 
 @image(033-edge,The Mandelbrot boundary: the edge where everything happens,Wikimedia Commons)

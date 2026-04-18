@@ -35,7 +35,8 @@
 </div>
   <div class="section-tabs"><div class="section-tabs-inner">
     <span class="section-tabs-prev" id="pod-nav-prev"></span>
-    <div class="section-tabs-center"><a href="#provenance" class="section-tab">Provenance</a></div>
+    <div class="section-tabs-center"><a href="#argument" class="section-tab">Argument</a>
+      <a href="#provenance" class="section-tab">Provenance</a></div>
     <span class="section-tabs-next" id="pod-nav-next"></span>
   </div></div>
 <div class="nav-hamburger-panel" id="nav-hamburger-panel" role="menu" aria-hidden="true">
@@ -61,7 +62,8 @@
 <div class="wrap">
   <div class="meta-row"><a href="index.html#AI-minds" class="tag">AI-minds</a><span class="mono small dim"> · </span><span class="mono small warm">Pod 57</span><span class="mono small dim"> · proto</span></div>
   <div class="seedpod-header fade cat-colored cat-ai-minds"><h1>Superposition in Neural Network Representations</h1></div>
-  <section id="_prolog" class="pod-section pod-prolog"><div class="prose"><p>A neural network with d dimensions in its residual stream can represent far more than d independent concepts. This is called superposition and it has been studied carefully in the mechanistic interpretability literature<sup class="footnote-ref" id="ref-057-superfarey-1"><a href="bibliography.html#ref-057-superfarey-1">1</a></sup>.</p>
+  <section id="argument" class="pod-section"><h2 class="section-heading">Argument</h2><div class="prose"><p>A neural network stores far more concepts than it has dimensions by packing them as nearly-orthogonal directions — more important concepts getting cleaner representations, less important ones compressed deeper — which is the same hierarchy that appears in the Farey sequence, in Benford’s law, and in music.</p>
+<p>A neural network with d dimensions in its residual stream can represent far more than d independent concepts. This is called superposition and it has been studied carefully in the mechanistic interpretability literature<sup class="footnote-ref" id="ref-057-superfarey-1"><a href="bibliography.html#ref-057-superfarey-1">1</a></sup>.</p>
 <figure class="directive-image directive-image--left"><img src="images/057-superfarey.jpg" alt=""><figcaption>Superposition in high-dimensional neural representations</figcaption></figure>
 <p>The mechanism: concepts are stored as nearly-orthogonal directions in the representation space. True orthogonality would allow exactly d independent concepts. Near-orthogonality — with small but nonzero interference — allows exponentially more. The network tolerates a small amount of crosstalk in exchange for vastly expanded capacity.</p>
 <p>This is directly related to the virtual dimensions formula. The network is implicitly choosing a Farey depth — a threshold of acceptable interference — and packing in as many concepts as that threshold allows. More important concepts get cleaner, more orthogonal representations. Less important ones are stored in the noisier, more compressed directions deeper in the tree.</p>
@@ -81,6 +83,6 @@
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">Rev 1 · Edited 2026-04-09 16:46</span>
+  <span class="page-end-version" aria-hidden="true">Rev 1 · Edited 2026-04-17 20:49</span>
 </div>
 </body></html>

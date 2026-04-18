@@ -6,6 +6,9 @@
 @term monads: TBD
 @related 003, 011, 037, 058, 068
 
+@section(argument)
+Leibniz proposed windowless monads each containing a complete representation of the universe from its own perspective — dismissed as baroque fantasy for three centuries until Maldacena showed that a lower-dimensional boundary theory can encode an entire higher-dimensional interior, which is strikingly close to what the monads were doing all along.
+
 Leibniz@ref(leibniz, "Leibniz, G.W. Monadology (1714).")@ref(maldacena, "Maldacena, J. The large N limit of superconformal field theories (1998). AdS/CFT.") proposed that reality is composed of monads — indivisible, windowless units of experience. Each monad has no direct causal contact with any other. Each monad contains within itself a complete representation of the entire universe, from its own perspective. The universe is not a collection of interacting objects. It is a collection of perspectives, each one containing all the others.
 
 This was dismissed as baroque metaphysical fantasy for three centuries.

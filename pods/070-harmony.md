@@ -8,6 +8,9 @@
 @term harmony: TBD
 @related 002, 009, 029, 034, 040
 
+@section(argument)
+The circle of fifths doesn't close — stack twelve perfect fifths and you overshoot the octave — so equal temperament distributes the error, trading perfection for closure, while just intonation maps the pure ratios on an infinite two-dimensional lattice navigated by ear.
+
 @image(070-harmony,Lissajous figure: harmonic frequency ratios made visible,Wikimedia Commons)
 
 Pythagoras (c. 570–495 BCE) heard the ratios in the hammers. But the circle of fifths doesn't close — stack twelve perfect fifths and you don't return to where you started. The irrational intrudes. The curse of the irrational.

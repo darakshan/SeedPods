@@ -5,6 +5,9 @@
 @term quantum: TBD
 @related 005, 009, 058, 062, 064
 
+@section(argument)
+Every quantum branch is running its own evolutionary experiment — the universe expanding its search across possibility space — and the Omega Point Teilhard imagined for one timeline may be an attractor that every branch of the wavefunction approaches along its own path.
+
 Everett's Many Worlds interpretation@ref(everett, "Everett, H. Relative state formulation of quantum mechanics (1957).")@ref(dewitt, "DeWitt, B. The many-universes interpretation (1970).") says every quantum branch is real. The universe does not choose between possibilities — it explores all of them simultaneously, in nearly-orthogonal subspaces of Hilbert space.
 
 Combined with the galactic evolution picture, this becomes something remarkable. Each branch of the universal wavefunction is running its own evolutionary experiment. The branching is not the universe losing coherence — it is the universe expanding its search across possibility space. Every quantum measurement is a bifurcation point, every branch a new thread of the cosmic evolutionary process.

@@ -8,6 +8,9 @@
 @term holons: TBD
 @related 011, 002, 012, 014, 067
 
+@section(argument)
+At any given level, stable combinations become the vocabulary for the next level up — atoms into molecules, molecules into cells, cells into organisms — and this architecture of sentences becoming words is the generative mechanism behind why more keeps becoming different.
+
 NOTE: This depth sketch was developed in session 2026-03-14. The seedpod needs a full Surface, Script, and Images before it can advance beyond prelim.
 
 The core insight: at any given level of reality, there are entities and relationships that function as a vocabulary. Their stable combinations become sentences. 
