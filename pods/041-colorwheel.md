@@ -15,7 +15,7 @@
 @term subtractive color mixing: mixing pigments, where each pigment absorbs certain wavelengths. The primary colors at this level are closer to cyan, magenta, and yellow. The painter's intuition of red, yellow, blue is an approximation of this layer combined with the opponent channel layer above it.
 @related 013, 016, 026, 029, 045
 
-@section(argument)
+@argument
 The visible spectrum is a line, but the mind closes it into a circle by inventing colors — purple, magenta — that correspond to no wavelength, and this closure happens before the brain is even informed, in retinal tissue that is embryologically brain.
 
 @section(depth)

@@ -7,7 +7,7 @@
 @term farey-sequence: TBD
 @related 005, 009, 038, 054, 060
 
-@section(argument)
+@argument
 The branching at each Mandelbrot bifurcation is not arbitrary but fixed by local algebra — always a finite whole number equal to the bulb's period — and assigning uniform probability to each branch produces a natural measure that weights simpler branches more heavily, which is exactly what the ear already knows.
 
 @section(proto)

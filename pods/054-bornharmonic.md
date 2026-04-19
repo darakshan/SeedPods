@@ -7,7 +7,7 @@
 @term mandelbrot-set: TBD
 @related 009, 038, 053, 057, 062
 
-@section(argument)
+@argument
 The Mandelbrot set's boundary has a natural probability measure — the harmonic measure — that weights simpler, more consonant branches more heavily, and if the universe's wavefunction branches according to a similar tree structure, the Born rule may fall out of the geometry rather than being imposed as a postulate.
 
 @section(proto)

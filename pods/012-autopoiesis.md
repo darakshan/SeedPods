@@ -13,7 +13,7 @@
 @term negative entropy: Schrödinger's term for the ordered structure that living systems import from their environment to offset internal disorder. The thermodynamic face of what autopoiesis achieves organizationally.
 @related 002, 003, 011, 031, 037
 
-@section(argument)
+@argument
 The cell's molecules are replaced every few hours and yet the cell persists, because what defines it is not its material but the circular process — components producing the network that produces the components — that figured out, three billion years ago, how not to stop.
 
 @section(surface)

@@ -9,7 +9,7 @@
 @term intelligence: TBD
 @term culture: TBD
 
-@section(argument)
+@argument
 We scanned the skies for aliens while building them in server rooms — entities that share our language but not our embodiment, our concepts but not our stakes, neither machines nor almost-human but something genuinely other.
 
 @section(surface)

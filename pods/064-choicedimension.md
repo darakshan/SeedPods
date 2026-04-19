@@ -7,7 +7,7 @@
 @term mandelbrot-set: TBD
 @related 005, 038, 046, 054, 060
 
-@section(argument)
+@argument
 The choice dimension doesn't need to multiply — it only needs to branch, and a tree algebra fibered over spacetime, with branching numbers fixed by local Farey structure and probabilities given by harmonic measure, may be the right mathematical object for what Many Worlds is actually describing.
 
 @section(proto)

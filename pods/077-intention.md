@@ -5,7 +5,7 @@
 @category consciousness
 @related 012, 002, 016, 009, 001
 
-@section(argument)
+@argument
 The universe demonstrably gives rise to systems with intrinsic intention, which means intention is not outside physics but a recurring feature of sufficiently complex self-maintaining systems — and the question is whether the universe that keeps producing structures that care might itself be the kind of system whose dynamics favor what we call caring.
 
 @section(depth)

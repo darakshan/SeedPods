@@ -8,7 +8,7 @@
 @term Precautionary ethics: an approach that establishes obligations in advance of proof, when the risk of being wrong about harm is too large and the cost of caution is not. Distinct from attributing consciousness or rights.
 @term Other minds problem: the philosophical problem that first-person experience is not publicly verifiable — you cannot confirm from the outside that any other system has an interior. Applies to humans as much as to AI.
 
-@section(argument)
+@argument
 First-person experience cannot be verified from outside — for AI or any other mind — and that epistemic limit is not a reason to withhold moral caution but precisely the condition under which caution is required.
 
 You cannot verify that any person other than you has a first-person experience. You can observe behavior, measure physiology, listen to reports — and all of it remains external. The most you can say is that the evidence is consistent with an inside. That has always been enough to warrant moral caution. Nobody treats "I cannot prove you are conscious" as grounds for permissibility.

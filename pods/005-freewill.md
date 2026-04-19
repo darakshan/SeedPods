@@ -9,7 +9,7 @@
 @term creativity: TBD
 @related 002, 009, 034, 046, 064
 
-@section(argument)
+@argument
 Free will is not the exception to physics but its most fundamental feature — Whitehead's creative advance, the irreducible self-determination at the heart of each event, present not only in minds but at every scale where possibility resolves into actuality.
 
 @section(proto)

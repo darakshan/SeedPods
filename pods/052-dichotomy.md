@@ -7,7 +7,7 @@
 @term discrete-continuous: TBD
 @related 002, 004, 007, 008, 048
 
-@section(argument)
+@argument
 The electron is neither particle nor wave but an excitation of a quantum field — the field is continuous, the excitation is discrete, both descriptions are correct — and consciousness may work the same way, with Whitehead's discrete occasions as excitations of a continuous experiential field.
 
 @section(proto)

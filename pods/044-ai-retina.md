@@ -8,7 +8,7 @@
 @term evolution: TBD
 @related 009, 016, 037, 045, 046
 
-@section(argument)
+@argument
 Deep neural networks trained on natural images with no instruction about color spontaneously develop the same opponent channels and edge detectors that evolution spent millions of years finding — because both were responding to the same mathematical pressure in the statistics of a sunlit world.
 
 @section(proto)

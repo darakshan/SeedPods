@@ -8,7 +8,7 @@
 @term holons: TBD
 @related 011, 002, 012, 014, 067
 
-@section(argument)
+@argument
 At any given level, stable combinations become the vocabulary for the next level up — atoms into molecules, molecules into cells, cells into organisms — and this architecture of sentences becoming words is the generative mechanism behind why more keeps becoming different.
 
 @section(proto)

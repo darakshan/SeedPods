@@ -6,7 +6,7 @@
 @term self-reference: TBD
 @related 009, 010, 028, 036, 058
 
-@section(argument)
+@argument
 When a person looks at a map of the cosmic microwave background, the fluctuations on the screen are the ancestors of the neural patterns doing the looking — the universe observing its own origin, which is not poetry but a literal description of the causal chain.
 
 @section(proto)

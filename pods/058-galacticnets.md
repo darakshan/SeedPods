@@ -6,7 +6,7 @@
 @term emergence: TBD
 @related 028, 037, 051, 059, 066
 
-@section(argument)
+@argument
 A galaxy and a neural network's weight matrix are both regions of information space where training or evolution has organized structure into self-referential complexity — not identical but structurally homologous, and possibly instances of the same underlying process that Whitehead called the creative advance.
 
 @section(proto)

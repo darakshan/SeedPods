@@ -9,7 +9,7 @@
 
 1. **One sentence** — not a tagline, not a paragraph. A somewhat long sentence is fine, but not artificially long.
 2. **Captures the pod's arc** — not its topic but its reasoning movement. What does it *do*, not what is it *about*.
-3. **Placed as `@section(argument)`** — first section in the pod, before `@section(surface)` or before the proto body text.
+3. **Placed as `@argument`** — first section in the pod, before `@section(surface)` or before the proto body text.
 4. **Dense enough to stand alone** — a reader seeing only the argument should understand the pod's essential claim.
 5. **Defined in `config/settings.json`** — already added, with min 30 / max 150 words, optional.
 

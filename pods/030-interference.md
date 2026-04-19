@@ -11,7 +11,7 @@
 @term double-slit: TBD
 @related 007, 009, 016, 029, 054
 
-@section(argument)
+@argument
 The ear detecting consonance and the screen detecting the double-slit pattern are both reading the same kind of structure from the same kind of process — and the brain, with millions of neurons continuously disturbing the electromagnetic field, may be producing the same phenomenon at yet another scale.
 
 @section(proto)

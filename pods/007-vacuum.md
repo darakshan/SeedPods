@@ -8,7 +8,7 @@
 @term potential: TBD
 @related 003, 008, 009, 034, 052
 
-@section(argument)
+@argument
 The quantum vacuum — what you have when you remove everything removable — seethes with virtual particles, which is Whitehead's space of pure possibilities made physical: the field is not a stage on which events occur but the medium through which they feel each other.
 
 @section(proto)

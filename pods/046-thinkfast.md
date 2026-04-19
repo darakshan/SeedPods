@@ -7,7 +7,7 @@
 @term predictive-processing: TBD
 @related 005, 009, 011, 037, 045
 
-@section(argument)
+@argument
 The same process that shaped species over geological time may be shaping thoughts over the duration of a heartbeat — candidate interpretations competing within the neural substrate, the fitter achieving representation, meaning emerging from selection rather than instruction.
 
 @section(proto)

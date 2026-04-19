@@ -7,7 +7,7 @@
 @term process-philosophy: TBD
 @related 001, 003, 004, 008, 037
 
-@section(argument)
+@argument
 The chair dissolves into molecules, atoms, fields, interactions — and at no point do you arrive at the thing itself, only at its effects on something else, which is what Whitehead, Kant, Rovelli, and Wittgenstein all found when they pressed from four different directions on the idea of a self-subsistent object.
 
 @section(surface)

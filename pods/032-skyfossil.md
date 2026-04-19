@@ -9,7 +9,7 @@
 @term omega-point: TBD
 @related 009, 028, 036, 037, 058
 
-@section(argument)
+@argument
 When you look at the night sky you are seeing not space but time, and not just time but evolution — each galaxy a thread of the universe's directed process toward self-awareness, running in parallel across billions of branches.
 
 @section(surface)

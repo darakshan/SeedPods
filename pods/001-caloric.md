@@ -12,7 +12,7 @@
 @term The hard problem of consciousness: philosopher David Chalmers' term for the question of why physical processes give rise to subjective experience at all. From Facing Up to the Problem of Consciousness, Journal of Consciousness Studies (1995).
 @term Science advances one funeral at a time: attributed to Max Planck. A version appears in his Scientific Autobiography (1949): "A new scientific truth does not triumph by convincing its opponents and making them see the light, but rather because its opponents eventually die and a new generation grows up that is familiar with it."
 
-@section(argument)
+@argument
 Every era has a framework so obvious it feels like seeing rather than thinking — caloric, the ether, the assumption that matter is dark inside — and the pattern by which such frameworks dissolve is specific, repeatable, and happening now.
 
 @section(surface)

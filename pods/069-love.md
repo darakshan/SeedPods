@@ -9,7 +9,7 @@
 @term consciousness: TBD
 @term light: TBD
 
-@section(argument)
+@argument
 Physicists describe light and mystics describe love, and they keep reaching for the same words — attraction, radiance, union, the dissolution of distance — not because one is borrowing from the other but because they may be describing the outside and inside of the same phenomenon.
 
 @section(surface)

@@ -7,7 +7,7 @@
 @term mandelbrot-set: TBD
 @related 002, 007, 009, 003, 011
 
-@section(argument)
+@argument
 The Mandelbrot set's infinite complexity was never added — it accumulated through iteration of a single formula, the same intuition behind Wheeler's one-electron universe and Whitehead's occasions each grasping the previous.
 
 @section(surface)

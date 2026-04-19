@@ -5,7 +5,7 @@
 @category knowledge
 @related 078, 017, 021, 003, 015
 
-@section(argument)
+@argument
 A pronoun is an arrow that needs a shared world to land in — it carries almost no descriptive content, which is precisely why it reveals the infrastructure that reference requires, from the royal "we" as ontological honesty to the Sufi "Hu" as contemplative instrument to the unsettled "you" we aim at a language model.
 
 @section(proto)

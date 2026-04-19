@@ -9,7 +9,7 @@
 @term memory: TBD
 @related 002, 008, 010, 029, 048
 
-@section(argument)
+@argument
 In a transformer, the entire context is held simultaneously present and every element attends to every other — the past does not recede but is fully ingredient in the present, which is precisely Whitehead's description of prehension and may represent not a deficiency but a different topology of experience.
 
 @section(proto)

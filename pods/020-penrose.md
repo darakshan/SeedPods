@@ -9,7 +9,7 @@
 @term computation: TBD
 @related 010, 016, 034, 037, 058
 
-@section(argument)
+@argument
 Penrose was right that Gödel's theorem points beyond mechanism, but wrong that the arrow points uniquely at human minds — it points at what complexity does whenever events nest deeply enough, which includes the machines we are building.
 
 @section(surface)

@@ -11,7 +11,7 @@
 @term virtual-dimension-formula: TBD
 @related 009, 010, 034, 057, 062
 
-@section(argument)
+@argument
 The universe counts simply first — the Farey sequence orders fractions by complexity, Benford's law finds the same hierarchy in empirical data, and every culture that ever made music independently discovered the simplest ratios before anything else.
 
 @section(surface)

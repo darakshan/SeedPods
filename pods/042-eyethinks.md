@@ -8,7 +8,7 @@
 @term perception: TBD
 @related 003, 013, 016, 037, 045
 
-@section(argument)
+@argument
 The retina — which is embryologically brain tissue that migrated into the eye — recombines three raw cone signals into opponent channels before any signal leaves the eye, so that the world has already been interpreted one synapse past the photoreceptors.
 
 @section(proto)

@@ -8,7 +8,7 @@
 @term Necker cube: A line drawing of a cube that spontaneously flips between two orientations. Both are genuinely present in the drawing; the limitation is in perception, not in the object.
 @related 002, 020, 041, 052, 069
 
-@section(argument)
+@argument
 When two claims seem contradictory and both are well-grounded, the contradiction usually lives not in reality but in a framework too small to hold both — and the resolution is not to pick a side but to find the larger frame where both become aspects of the same truth.
 
 @section(surface)

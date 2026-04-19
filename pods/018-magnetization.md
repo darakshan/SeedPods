@@ -9,7 +9,7 @@
 @term phase transition: a change in the state of a system — liquid to solid, disordered to ordered, uncommitted to aligned. Requires the medium to be in the right condition (cooled, supersaturated, primed) and seeds to initiate the shift.
 @term magnetic domain: a region within a ferromagnetic material where atomic spins are aligned. Domains grow by recruiting neighbors at their boundaries until the whole material is magnetized.
 
-@section(argument)
+@argument
 You don't need to convert everyone — you need to seed the right clusters in a medium that's ready to shift, because local alignment propagates through neighbors until figure and ground flip and the remaining disorder is what's surrounded.
 
 @section(surface)

@@ -9,7 +9,7 @@
 @term scientific-revolutions: TBD
 @related 002, 009, 011, 015, 045
 
-@section(argument)
+@argument
 A new scientific truth does not triumph by convincing its opponents but by outlasting them — the old map's holders never convert, they retire and die, and the next generation simply grows up inside the new one.
 
 @section(proto)

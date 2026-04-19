@@ -7,7 +7,7 @@
 @term interiority: TBD
 @related 051, 067, 031, 003, 037
 
-@section(argument)
+@argument
 A child stops for a soap bubble not from puzzlement but from recognition — the bubble is pure surface with no hidden interior, which is the holographic principle made visible, and the child is seeing the structure of her own existence without knowing it.
 
 @section(proto)

@@ -6,7 +6,7 @@
 @term caloric: TBD
 @related 001, 015, 016, 046, 072
 
-@section(argument)
+@argument
 The hard boundary between genuine experience and its functional analog may be our generation's caloric — not a deep metaphysical fact but an artifact of having had, until recently, only one example of mind to reason from.
 
 @section(proto)

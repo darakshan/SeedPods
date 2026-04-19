@@ -2,7 +2,7 @@
 @status proto
 @date 2026-03-17
 
-@section(argument)
+@argument
 Temperature bridges physics, perception, and now AI — from caloric's intuitive flow to superconductivity's frictionless relation to the generative model's temperature dial that engineers had to build in deliberately because pure optimization had crowded out surprise.
 
 @section(proto)

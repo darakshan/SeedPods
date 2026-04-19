@@ -14,7 +14,7 @@
 @term consonance score: a measure of how harmonious a musical interval sounds, based on the simplicity of its frequency ratio. Simpler ratios — smaller integers — score higher.
 @related 010, 034, 053, 056, 062
 
-@section(argument)
+@argument
 Draw every musical interval on a circle, score each by the simplicity of its ratio, and what appears is not a chart but the Mandelbrot set — bulb positions matching Farey fractions, consonance ranking matching bulb size — because both are maps of stability under iteration.
 
 @section(depth)

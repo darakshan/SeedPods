@@ -8,7 +8,7 @@
 @term cognition: TBD
 @related 016, 021, 025, 037, 045
 
-@section(argument)
+@argument
 A thermostat predicts and Mozart predicted, and the word covers both, which means it explains neither — "just" is almost always a confession that someone has described the output and mistaken it for the process.
 
 @section(surface)

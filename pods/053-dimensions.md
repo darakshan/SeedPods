@@ -7,7 +7,7 @@
 @term many-worlds: TBD
 @related 057, 060, 038, 054, 056
 
-@section(argument)
+@argument
 Replace the arbitrary tolerance in high-dimensional near-orthogonality with a principled one drawn from the Farey sequence, and a formula emerges — V(d,n) ~ (n²/π²)^d — that connects musical consonance, neural network superposition capacity, and quantum branching under one expression.
 
 @section(proto)

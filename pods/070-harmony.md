@@ -8,7 +8,7 @@
 @term harmony: TBD
 @related 002, 009, 029, 034, 040
 
-@section(argument)
+@argument
 The circle of fifths doesn't close — stack twelve perfect fifths and you overshoot the octave — so equal temperament distributes the error, trading perfection for closure, while just intonation maps the pure ratios on an infinite two-dimensional lattice navigated by ear.
 
 @section(proto)

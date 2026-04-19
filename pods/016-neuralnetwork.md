@@ -9,7 +9,7 @@
 @term fields: TBD
 @related 002, 006, 008, 011, 037
 
-@section(argument)
+@argument
 A neural network is not analogous to Whitehead's picture but a concrete instance of it — each forward pass prehends the entire inherited structure of training, synthesizes a response through a process not predictable from outside, and completes into output.
 
 @section(proto)

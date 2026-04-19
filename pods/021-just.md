@@ -14,7 +14,7 @@
 @term fallacy of misplaced concreteness: Whitehead's term for mistaking a useful abstraction for the full concrete reality it was extracted from. Process and Reality (1929).
 @related 003, 006, 022, 025, 069
 
-@section(argument)
+@argument
 When someone says a process is "just" doing something, the word has quietly claimed that naming the mechanism is the same as explaining the experience — a claim that is never argued, only assumed, while one small word does all the philosophical work.
 
 @section(surface)

@@ -8,7 +8,7 @@
 @term resonance: TBD
 @related 009, 030, 038, 054, 070
 
-@section(argument)
+@argument
 A ratio is dynamically stable if it resists resonant capture and acoustically stable if it produces a clean repeating waveform — these two stabilities are exact inverses, and the fractal landscape of consonance is the geometry of their opposition.
 
 @section(proto)

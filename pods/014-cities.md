@@ -8,7 +8,7 @@
 @term collective-experience: TBD
 @related 003, 011, 015, 018, 037
 
-@section(argument)
+@argument
 A city has moods, memories encoded in architecture, and responses not reducible to its inhabitants — a society of occasions organized into patterns with their own stability, their own characteristic responses, and something that might be called a perspective.
 
 @section(proto)

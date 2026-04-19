@@ -5,7 +5,7 @@
 @term metaphysics: TBD
 @related 002, 008, 051, 064, 067
 
-@section(argument)
+@argument
 Consciousness may not be produced by spacetime but be a dimension orthogonal to it — primitive the way mass or charge is primitive — which would mean the universe has always had an interior, not just since brains arrived.
 
 @section(proto)

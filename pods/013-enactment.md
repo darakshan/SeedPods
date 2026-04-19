@@ -7,7 +7,7 @@
 @term perception: TBD
 @related 002, 003, 004, 042, 046
 
-@section(argument)
+@argument
 Cognition is not the processing of representations inside a passive receiver but the enactment of a world — organism and environment co-arising through active engagement, so that even a bacterium swimming toward a chemical gradient is not following a rule but making a world in which that gradient matters.
 
 @section(proto)

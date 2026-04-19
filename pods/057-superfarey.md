@@ -7,7 +7,7 @@
 @term interpretability: TBD
 @related 010, 034, 035, 038, 053
 
-@section(argument)
+@argument
 A neural network stores far more concepts than it has dimensions by packing them as nearly-orthogonal directions — more important concepts getting cleaner representations, less important ones compressed deeper — which is the same hierarchy that appears in the Farey sequence, in Benford's law, and in music.
 
 @section(proto)

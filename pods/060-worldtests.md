@@ -5,7 +5,7 @@
 @term quantum: TBD
 @related 005, 009, 058, 062, 064
 
-@section(argument)
+@argument
 Every quantum branch is running its own evolutionary experiment — the universe expanding its search across possibility space — and the Omega Point Teilhard imagined for one timeline may be an attractor that every branch of the wavefunction approaches along its own path.
 
 @section(proto)

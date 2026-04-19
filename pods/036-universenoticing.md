@@ -7,7 +7,7 @@
 @term process: TBD
 @related 002, 008, 009, 032, 058
 
-@section(argument)
+@argument
 Whitehead gives the mechanism — experience all the way down, accumulating — and Teilhard gives the vector — a direction that isn't random — so that you are not in the universe observing it but the universe at a particular moment of its self-discovery.
 
 @section(surface)

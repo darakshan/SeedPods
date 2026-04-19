@@ -5,7 +5,7 @@
 @category consciousness
 @related 001, 013, 015, 027, 041
 
-@section(argument)
+@argument
 We never access reality directly, only the story we tell about it — and the deeper the level of narrative, from dramatic arc to perceptual label to conceptual metaphor, the less it feels like story and the more it feels like the given.
 
 @section(depth)

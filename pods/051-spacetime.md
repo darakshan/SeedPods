@@ -6,7 +6,7 @@
 @term emergence: TBD
 @related 008, 037, 050, 058, 068
 
-@section(argument)
+@argument
 Spacetime geometry may be constituted by quantum entanglement — sever the entanglement and the spacetime tears — which means asking where consciousness is in spacetime may be malformed, because both may be emergent from something more fundamental that has physical and experiential aspects simultaneously.
 
 @section(proto)

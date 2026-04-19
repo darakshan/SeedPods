@@ -9,7 +9,7 @@
 @term complexity: TBD
 @related 002, 009, 011, 020, 034
 
-@section(argument)
+@argument
 The number Gödel constructed was just a number, arrived at by routine steps, but its accumulation produced something that transcended what the system could say about itself — the same pattern by which chemistry becomes life and quantity becomes quality.
 
 @section(proto)

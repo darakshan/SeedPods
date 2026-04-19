@@ -5,7 +5,7 @@
 @category knowledge
 @related 000
 
-@section(argument)
+@argument
 Nine guided reading paths through the same landscape — every idea pod in the archive appears on at least one trail, with pod 003 as the gravitational center where multiple trails converge.
 
 @section(surface)

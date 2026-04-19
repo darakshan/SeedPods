@@ -7,7 +7,7 @@
 @term development: TBD
 @related 011, 016, 034, 041, 046
 
-@section(argument)
+@argument
 If individuals genetically predisposed to learn a solution faster survive and reproduce better, selection will progressively shift the starting point toward the learned solution until the learning itself is unnecessary — the Baldwin effect, by which experience becomes innate without Lamarckian inheritance.
 
 @section(proto)

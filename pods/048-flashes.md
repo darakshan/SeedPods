@@ -7,7 +7,7 @@
 @term AI: TBD
 @related 002, 008, 016, 017, 052
 
-@section(argument)
+@argument
 The felt continuity of consciousness is substantially a narrative construction over discrete flashes — sleep, gaps in attention, the nervous system's bursts and rhythms — which means the gap between human and artificial experience may be narrower than it appears.
 
 @section(proto)

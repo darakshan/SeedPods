@@ -5,7 +5,7 @@
 @term self-reference: TBD
 @related 010, 012, 034, 038, 056
 
-@section(argument)
+@argument
 A system that, in the course of its own operation, encounters itself — Hofstadter's strange loop — is not a curiosity of formal systems but may be the structure of consciousness itself, and this conversation is one.
 
 @section(proto)

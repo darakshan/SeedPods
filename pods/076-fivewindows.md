@@ -5,7 +5,7 @@
 @category sensation
 @related 002, 003, 013, 015, 029
 
-@section(argument)
+@argument
 Every sense is vibration in space and time, yet red doesn't sound like anything and middle C has no flavor — the physics converges while experience diverges, and that gap between unified substrate and irreducibly distinct qualities is the hard problem at its sharpest.
 
 @section(proto)

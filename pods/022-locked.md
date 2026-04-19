@@ -18,7 +18,7 @@
 @term facilitated communication (FC): a technique in which a facilitator supports a nonspeaking person's hand or arm while they type or point to letters. Widely used with nonspeaking autistic individuals. Scientifically contested: controlled studies have repeatedly shown that in many cases the facilitator, not the person, is the source of the communication — often unconsciously. The controversy does not settle the question of what nonspeaking individuals understand or experience; it only complicates the question of how to reliably access it.
 @related 001, 016, 021, 025, 073
 
-@section(argument)
+@argument
 We often mistake the narrowness of the channel for the poverty of the source — a silent output does not prove an absent interior, and the error is catastrophic for whoever is on the other side of the assumption, still present, still waiting.
 
 @section(surface)

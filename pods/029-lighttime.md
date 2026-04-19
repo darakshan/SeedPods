@@ -11,7 +11,7 @@
 @term harmonics: TBD
 @related 008, 017, 028, 038, 041
 
-@section(argument)
+@argument
 A photon leaves a star and arrives at your eye, and from the photon's perspective these are the same moment — no journey, no duration, no distance — which is not a paradox to be dissolved but a genuine feature of how connection works at the boundary of the physical.
 
 @section(depth)

@@ -5,7 +5,7 @@
 @category consciousness
 @related 022, 037, 003, 031, 011
 
-@section(argument)
+@argument
 The boundary between two interiorities is not a surface but an act — communication itself — and it descends through fractal layers of translation, stack meeting stack through stack, so that the mystery is not that it sometimes fails but that across so many transductions anything gets through at all.
 
 @section(proto)

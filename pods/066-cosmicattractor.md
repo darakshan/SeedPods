@@ -6,7 +6,7 @@
 @term attractor: TBD
 @related 009, 034, 058, 059, 060
 
-@section(argument)
+@argument
 Whitehead's God is both the ground of possibility — holding all unrealized potentials available for occasions to select from — and the lure each occasion feels toward greater complexity, which in the language of dynamical systems makes God both the initial condition and the attractor.
 
 @section(proto)

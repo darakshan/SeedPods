@@ -9,7 +9,7 @@
 @term AI: TBD
 @related 002, 009, 010, 014, 037
 
-@section(argument)
+@argument
 Nothing was added — no Aunt Hillary molecule, no special ingredient — the numbers just got large enough that a different kind of thing appeared, and whether that thing has an inside scaled to its complexity is the question that haunts all emergence.
 
 @section(surface)
