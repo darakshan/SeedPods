@@ -3,7 +3,7 @@
 @subtitle Light is what Love looks like. Love is what Light feels like.  -- David Deida
 @version 2
 @date 2026-03-27
-@category sensation
+@category feeling
 @related 002, 003, 029, 036, 066
 @term love: TBD
 @term consciousness: TBD

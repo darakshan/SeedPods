@@ -1,7 +1,7 @@
 @title Opponent Processing: The Eye Thinks Before the Brain Does
 @status proto
 @date 2026-03-15
-@category sensation
+@category feeling
 @term vision: TBD
 @term retina: TBD
 @term opponent-processing: TBD

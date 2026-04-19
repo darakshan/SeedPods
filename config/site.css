@@ -283,6 +283,10 @@ td a:hover{color:var(--accent)}
 .page-body h3,.prose h3,.pod-section h3{font-family:'DM Mono',monospace;font-size:1.1rem;letter-spacing:.06em;text-transform:none;color:var(--ink);font-weight:400;margin:3rem 0 .8rem}
 .page-body ul{margin-left:1.5rem;margin-bottom:1.2rem}
 .page-body li{font-size:1.05rem;line-height:1.7;margin-bottom:.4rem}
+/* Trails page: compact lists */
+.trails-list ol,.trails-list ul{margin-left:2.5rem;margin-bottom:1rem;list-style:none;padding-left:0}
+.page-body .trails-list li{font-size:.95rem;line-height:1.3;margin-bottom:0;padding:0}
+.page-body .trails-list li p{margin:0;padding:0;line-height:1.3}
 /* Index (home page from home.md: h4=notice, h1=title, h2=tagline, p=purpose, h3=about heading) */
 .page-body.home-page{padding:2rem 0 2rem}
 .page-body.home-page > h3:first-child{margin-top:0}

@@ -1,7 +1,7 @@
 @title Harmony
 @status proto
 @date 2026-03-17
-@category sensation
+@category feeling
 @term music: TBD
 @term mathematics: TBD
 @term consonance: TBD

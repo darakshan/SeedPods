@@ -2,7 +2,7 @@
 @subtitle Physics and Whitehead converged on the same discovery from opposite directions.
 @status draft1
 @date 2026-03-12
-@category sensation
+@category feeling
 @term physics: TBD
 @term fields: TBD
 @term quantum-mechanics: TBD

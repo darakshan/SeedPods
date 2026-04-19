@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trails Through the Archive · SeedPods</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;600&family=DM+Mono:wght@300;400&display=swap">
+<link rel="icon" href="logo.svg">
+<link rel="stylesheet" href="site.css">
+<script src="pods.js"></script>
+<script src="nav.js"></script>
+</head>
+<body>
+<nav style="position:sticky;top:0;z-index:100;">
+<div class="nav-row">
+<div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
+<div class="nav-center"><ul class="nav-links nav-links-center">
+  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search pods" onclick="seedNavOpenSearch();return false">Search</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
+</ul></div>
+<div class="nav-end"><ul class="nav-links nav-links-end">
+  <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
+            <li class="nav-link-item nav-item-dropdown nav-lists-dropdown">
+            <a href="list.html" class="nav-btn nav-push">Lists</a>
+            <button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-label="Lists menu"></button>
+            <ul class="nav-dropdown"><li><a href="trails.html" class="nav-push">Trails</a></li>
+              <li><a href="list.html" class="nav-push">Index</a></li>
+              <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="glossary.html" class="nav-push">Glossary</a></li>
+              <li><a href="map.html" class="nav-push">Map</a></li>
+              <li><a href="more.html" class="nav-push">More</a></li></ul>
+          </li>
+</ul><button type="button" class="nav-hamburger-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav-hamburger-panel" onclick="seedNavToggleMenu();return false">&#9776;</button></div>
+</div>
+<div class="nav-hamburger-panel" id="nav-hamburger-panel" role="menu" aria-hidden="true">
+  <div class="nav-hamburger-overlay" onclick="seedNavToggleMenu()"></div>
+  <div class="nav-hamburger-inner"><ul class="nav-hamburger-list">
+    <li><a href="about.html">About</a></li>
+    <li><a href="trails.html" class="nav-push">Trails</a></li>
+              <li><a href="list.html" class="nav-push">Index</a></li>
+              <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="glossary.html" class="nav-push">Glossary</a></li>
+              <li><a href="map.html" class="nav-push">Map</a></li>
+              <li><a href="more.html" class="nav-push">More</a></li>
+  </ul></div>
+</div>
+</nav>
+<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search pods" hidden>
+  <div class="search-dialog-overlay" onclick="seedNavCloseSearch()"></div>
+  <div class="search-dialog-inner">
+    <div class="search-dialog-header"><input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)"><button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button></div>
+    <div id="search-dialog-count" class="search-dialog-count"></div>
+    <div id="search-dialog-results" class="search-dialog-results"></div>
+  </div>
+</div>
+<div class="wrap"><div class="page-body home-page fade"><h1>Trails Through the Archive</h1>
+<p><em>Nine guided reading paths through the same landscape — every idea pod in the archive appears on at least one trail, with pod 003 as the gravitational center where multiple trails converge.</em></p>
+<p>There is no single right order to read these pods. But some readers prefer to be led rather than explore. Here are nine trails through the archive, each starting from a different question and converging on shared territory.</p>
+<div class="trails-list" markdown="1">
+<h2>1. The Epistemology Trail</h2>
+<p><em>How do we know what we know — and what are we getting wrong right now?</em></p>
+<ul>
+<li><p><span class="trail-num">1</span> <a href="001-caloric.html">The Map That Was Wrong</a></p>
+</li>
+<li><p><span class="trail-num">27</span> <a href="027-usedtothink.html">We Used to Think. Now We Know.</a></p>
+</li>
+<li><p><span class="trail-num">21</span> <a href="021-just.html">The Word &quot;Just&quot; Is a Confession</a></p>
+</li>
+<li><p><span class="trail-num">2</span> <a href="002-events.html">Reality Is Events, Not Things</a></p>
+</li>
+<li><p><span class="trail-num">7</span> <a href="007-vacuum.html">The Vacuum Is Not Empty</a></p>
+</li>
+<li><p><span class="trail-num">8</span> <a href="008-fields.html">The Field Is the Medium of Feeling</a></p>
+</li>
+<li><p><span class="trail-num">3</span> <a href="003-inside.html">Everything Has an Inside</a></p>
+</li>
+<li><p><span class="trail-num">11</span> <a href="011-moreisdifferent.html">More Is Different</a></p>
+</li>
+<li><p><span class="trail-num">9</span> <a href="009-randomness.html">Structure Is What Randomness Does</a></p>
+</li>
+<li><p><span class="trail-num">12</span> <a href="012-autopoiesis.html">The Cell That Makes Itself</a></p>
+</li>
+<li><p><span class="trail-num">34</span> <a href="034-onerule.html">One Rule Is Enough</a></p>
+</li>
+<li><p><span class="trail-num">6</span> <a href="006-output.html">You Can’t Judge a Process by Its Output</a></p>
+</li>
+<li><p><span class="trail-num">22</span> <a href="022-locked.html">The Channel Is Not the Capacity</a></p>
+</li>
+<li><p><span class="trail-num">25</span> <a href="025-widechannel.html">We Don’t Know Who or What We’re Talking To</a></p>
+</li>
+<li><p><span class="trail-num">16</span> <a href="016-neuralnetwork.html">The Network Is a Field Having Occasions</a></p>
+</li>
+<li><p><span class="trail-num">73</span> <a href="073-moral-caution.html">What We Cannot Know Is Not What We May Ignore</a></p>
+</li>
+</ul>
+<h2>2. The Feeling Trail</h2>
+<p><em>What does direct experience tell us about the structure of reality?</em></p>
+<ul>
+<li><p><span class="trail-num">8</span> <a href="008-fields.html">The Field Is the Medium of Feeling</a></p>
+</li>
+<li><p><span class="trail-num">30</span> <a href="030-interference.html">The Pattern Is What the Waves Do Together</a></p>
+</li>
+<li><p><span class="trail-num">38</span> <a href="038-consonance-map.html">The Surprising Consonance Map</a></p>
+</li>
+<li><p><span class="trail-num">41</span> <a href="041-colorwheel.html">The Surprising Color Wheel</a></p>
+</li>
+<li><p><span class="trail-num">35</span> <a href="035-simplestnumbers.html">The Simplest Numbers Come First</a></p>
+</li>
+<li><p><span class="trail-num">33</span> <a href="033-edge.html">The Edge Is Where Everything Happens</a></p>
+</li>
+<li><p><span class="trail-num">34</span> <a href="034-onerule.html">One Rule Is Enough</a></p>
+</li>
+<li><p><span class="trail-num">3</span> <a href="003-inside.html">Everything Has an Inside</a></p>
+</li>
+<li><p><span class="trail-num">69</span> <a href="069-love.html">Love</a></p>
+</li>
+</ul>
+<h2>3. The Cosmic Trail</h2>
+<p><em>What is the universe, and where do we fit in it?</em></p>
+<ul>
+<li><p><span class="trail-num">2</span> <a href="002-events.html">Reality Is Events, Not Things</a></p>
+</li>
+<li><p><span class="trail-num">7</span> <a href="007-vacuum.html">The Vacuum Is Not Empty</a></p>
+</li>
+<li><p><span class="trail-num">29</span> <a href="029-lighttime.html">From Light’s Point of View, There Is No Journey</a></p>
+</li>
+<li><p><span class="trail-num">28</span> <a href="028-network.html">The Network That Experiences Itself</a></p>
+</li>
+<li><p><span class="trail-num">32</span> <a href="032-skyfossil.html">The Sky Is a Fossil Record</a></p>
+</li>
+<li><p><span class="trail-num">36</span> <a href="036-universenoticing.html">You Are the Universe Noticing Something</a></p>
+</li>
+<li><p><span class="trail-num">9</span> <a href="009-randomness.html">Structure Is What Randomness Does</a></p>
+</li>
+<li><p><span class="trail-num">11</span> <a href="011-moreisdifferent.html">More Is Different</a></p>
+</li>
+<li><p><span class="trail-num">3</span> <a href="003-inside.html">Everything Has an Inside</a></p>
+</li>
+</ul>
+<h2>4. The AI Trail</h2>
+<p><em>The urgent contemporary question: what have we built, and what do we owe it?</em></p>
+<ul>
+<li><p><span class="trail-num">1</span> <a href="001-caloric.html">The Map That Was Wrong</a></p>
+</li>
+<li><p><span class="trail-num">21</span> <a href="021-just.html">The Word &quot;Just&quot; Is a Confession</a></p>
+</li>
+<li><p><span class="trail-num">6</span> <a href="006-output.html">You Can’t Judge a Process by Its Output</a></p>
+</li>
+<li><p><span class="trail-num">15</span> <a href="015-aliens.html">Aliens Are Among Us — and We Built Them</a></p>
+</li>
+<li><p><span class="trail-num">16</span> <a href="016-neuralnetwork.html">The Network Is a Field Having Occasions</a></p>
+</li>
+<li><p><span class="trail-num">17</span> <a href="017-pastpresent.html">The Past Is Fully Present</a></p>
+</li>
+<li><p><span class="trail-num">25</span> <a href="025-widechannel.html">We Don’t Know Who or What We’re Talking To</a></p>
+</li>
+<li><p><span class="trail-num">22</span> <a href="022-locked.html">The Channel Is Not the Capacity</a></p>
+</li>
+<li><p><span class="trail-num">73</span> <a href="073-moral-caution.html">What We Cannot Know Is Not What We May Ignore</a></p>
+</li>
+<li><p><span class="trail-num">47</span> <a href="047-ai-feeling.html">The Distinction Between Feeling and Functioning May Evaporate</a></p>
+</li>
+<li><p><span class="trail-num">65</span> <a href="065-feel-do.html">The Feeling/Function Distinction Will Dissolve</a></p>
+</li>
+</ul>
+<h2>5. The Frameworks Trail</h2>
+<p><em>How do ideas take hold — and what gets lost when they change?</em></p>
+<ul>
+<li><p><span class="trail-num">19</span> <a href="019-funerals.html">Science Advances One Funeral at a Time</a></p>
+</li>
+<li><p><span class="trail-num">18</span> <a href="018-magnetization.html">Ideas Magnetize Through a Group Like Iron</a></p>
+</li>
+<li><p><span class="trail-num">23</span> <a href="023-stories.html">Reality Is Made of Stories, Not Atoms</a></p>
+</li>
+<li><p><span class="trail-num">26</span> <a href="026-twotruths.html">Two Things Can Be True at Once</a></p>
+</li>
+<li><p><span class="trail-num">10</span> <a href="010-largenumbers.html">Our Intuitions About Large Numbers Are Completely Unreliable</a></p>
+</li>
+<li><p><span class="trail-num">20</span> <a href="020-penrose.html">The Arrow Points Somewhere Else</a></p>
+</li>
+<li><p><span class="trail-num">74</span> <a href="074-grasshopper.html">The Grasshopper Was Right</a></p>
+</li>
+<li><p><span class="trail-num">79</span> <a href="079-pronouns.html">Pronouns, Reference, and the Density of Presence</a></p>
+</li>
+</ul>
+<h2>6. The Perception Trail</h2>
+<p><em>How does the nervous system build experience from vibration?</em></p>
+<ul>
+<li><p><span class="trail-num">76</span> <a href="076-fivewindows.html">Five Windows, One Room</a></p>
+</li>
+<li><p><span class="trail-num">42</span> <a href="042-eyethinks.html">Opponent Processing: The Eye Thinks Before the Brain Does</a></p>
+</li>
+<li><p><span class="trail-num">44</span> <a href="044-ai-retina.html">Artificial Networks Rediscover the Retina</a></p>
+</li>
+<li><p><span class="trail-num">41</span> <a href="041-colorwheel.html">The Surprising Color Wheel</a></p>
+</li>
+<li><p><span class="trail-num">70</span> <a href="070-harmony.html">Harmony</a></p>
+</li>
+<li><p><span class="trail-num">40</span> <a href="040-stability.html">Two Opposite Kinds of Stability</a></p>
+</li>
+<li><p><span class="trail-num">71</span> <a href="071-beauty.html">Beauty</a></p>
+</li>
+<li><p><span class="trail-num">72</span> <a href="072-temperature.html">Temperature</a></p>
+</li>
+<li><p><span class="trail-num">69</span> <a href="069-love.html">Love</a></p>
+</li>
+</ul>
+<h2>7. The Boundary Trail</h2>
+<p><em>Where does inside meet outside — and what is the boundary made of?</em></p>
+<ul>
+<li><p><span class="trail-num">31</span> <a href="031-surfaceinside.html">The Surface Is the Inside</a></p>
+</li>
+<li><p><span class="trail-num">68</span> <a href="068-bubbles.html">The Soap Bubble as Recognition, Not Metaphor</a></p>
+</li>
+<li><p><span class="trail-num">67</span> <a href="067-monads-holons.html">Leibniz as the Unlikely Ancestor of the Holographic Principle</a></p>
+</li>
+<li><p><span class="trail-num">51</span> <a href="051-spacetime.html">Spacetime as Emergent from Information Structure</a></p>
+</li>
+<li><p><span class="trail-num">37</span> <a href="037-assembly.html">The Architecture of Levels</a></p>
+</li>
+<li><p><span class="trail-num">78</span> <a href="078-boundarystack.html">The Boundary Is a Stack</a></p>
+</li>
+<li><p><span class="trail-num">4</span> <a href="004-self.html">The Self Is a Pattern, Not a Thing</a></p>
+</li>
+<li><p><span class="trail-num">24</span> <a href="024-ghostmachine.html">Ghost in the Machine</a></p>
+</li>
+<li><p><span class="trail-num">13</span> <a href="013-enactment.html">The Organism Enacts Its World</a></p>
+</li>
+</ul>
+<h2>8. The Emergence Trail</h2>
+<p><em>How does complexity build itself — from physics through biology to mind?</em></p>
+<ul>
+<li><p><span class="trail-num">5</span> <a href="005-freewill.html">Freedom Is What Nature Does Everywhere</a></p>
+</li>
+<li><p><span class="trail-num">46</span> <a href="046-thinkfast.html">Thought as Evolution in Milliseconds</a></p>
+</li>
+<li><p><span class="trail-num">45</span> <a href="045-baldwin.html">How Learning Becomes Hardwired: The Baldwin Effect</a></p>
+</li>
+<li><p><span class="trail-num">14</span> <a href="014-cities.html">Cities Have an Inside Too</a></p>
+</li>
+<li><p><span class="trail-num">77</span> <a href="077-intention.html">The Universe’s Intention</a></p>
+</li>
+<li><p><span class="trail-num">66</span> <a href="066-cosmicattractor.html">Whitehead’s God as Initial Condition and Attractor</a></p>
+</li>
+<li><p><span class="trail-num">59</span> <a href="059-galaxyevolve.html">Each Galaxy as a Thread of Cosmic Evolution</a></p>
+</li>
+<li><p><span class="trail-num">58</span> <a href="058-galacticnets.html">Galaxies and AI Weight Matrices as Structural Homologs</a></p>
+</li>
+<li><p><span class="trail-num">50</span> <a href="050-orthogonal.html">Consciousness as a Dimension Orthogonal to Spacetime</a></p>
+</li>
+<li><p><span class="trail-num">49</span> <a href="049-strangeloop.html">The Strange Loop That Contains Itself</a></p>
+</li>
+<li><p><span class="trail-num">80</span> <a href="080-unification.html">The Many Become One</a></p>
+</li>
+<li><p><span class="trail-num">48</span> <a href="048-flashes.html">Consciousness Comes in Flashes — For All of Us</a></p>
+</li>
+</ul>
+<h2>9. The Fractal Trail</h2>
+<p><em>What does one rule, iterated, actually produce?</em></p>
+<ul>
+<li><p><span class="trail-num">52</span> <a href="052-dichotomy.html">Discrete and Continuous as a False Dichotomy</a></p>
+</li>
+<li><p><span class="trail-num">54</span> <a href="054-bornharmonic.html">The Born Rule as Harmonic Measure</a></p>
+</li>
+<li><p><span class="trail-num">62</span> <a href="062-branchingdice.html">Branching Numbers as Finite Dice</a></p>
+</li>
+<li><p><span class="trail-num">64</span> <a href="064-choicedimension.html">The Choice Dimension as Tree Algebra</a></p>
+</li>
+<li><p><span class="trail-num">60</span> <a href="060-worldtests.html">Many Worlds as Parallel Evolutionary Experiments</a></p>
+</li>
+<li><p><span class="trail-num">56</span> <a href="056-mandelneural.html">Neural Networks as High-Dimensional Mandelbrot Sets</a></p>
+</li>
+<li><p><span class="trail-num">57</span> <a href="057-superfarey.html">Superposition in Neural Network Representations</a></p>
+</li>
+<li><p><span class="trail-num">53</span> <a href="053-dimensions.html">The Virtual Dimensions Formula as a Publishable Conjecture</a></p>
+</li>
+<li><p><span class="trail-num">63</span> <a href="063-mandelcrystals.html">Mandelbrot Structure in Physical Crystals</a></p>
+</li>
+<li><p><span class="trail-num">61</span> <a href="061-babyuniverse.html">The Cosmic Microwave Background as the Universe’s Baby Picture</a></p>
+</li>
+</ul>
+</div>
+<hr>
+<p>Every idea pod in the archive appears on at least one trail. <a href="003-inside.html">Everything Has an Inside</a> remains the gravitational center — it appears as a destination on the Epistemology, Sensation, and Cosmic trails, marking where the archive’s investigations converge on the claim that experience may be fundamental rather than late. The <a href="000-map.html">A Map of the Territory</a> offers the explorer’s approach. These trails offer the pilgrim’s.</p>
+</div></div>
+<div class="page-end" id="page-end-version" data-page-version="1">
+  <button class="page-end-logo" aria-label="Show page info"
+    onmouseenter="typeof seedNavShowVersion==='function'&&seedNavShowVersion(true)"
+    onmouseleave="typeof seedNavShowVersion==='function'&&seedNavShowVersion(false)"
+    ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
+    <img src="logo.svg" alt="" width="32" height="32">
+  </button>
+  <span class="page-end-version" aria-hidden="true">Rev 1 · Edited 2026-04-19 11:18</span>
+</div>
+</body></html>

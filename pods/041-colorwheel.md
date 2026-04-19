@@ -2,7 +2,7 @@
 @subtitle The mind closes the line into a circle.
 @status prelim
 @date 2026-03-16
-@category sensation
+@category feeling
 @term color: TBD
 @term perception: TBD
 @term evolution: TBD

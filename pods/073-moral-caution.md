@@ -11,6 +11,8 @@
 @argument
 First-person experience cannot be verified from outside — for AI or any other mind — and that epistemic limit is not a reason to withhold moral caution but precisely the condition under which caution is required.
 
+@section(surface)
+
 You cannot verify that any person other than you has a first-person experience. You can observe behavior, measure physiology, listen to reports — and all of it remains external. The most you can say is that the evidence is consistent with an inside. That has always been enough to warrant moral caution. Nobody treats "I cannot prove you are conscious" as grounds for permissibility.
 
 @image(073-moral-caution, An Experiment on a Bird in the Air Pump (Joseph Wright of Derby, 1768), Wikimedia Commons)

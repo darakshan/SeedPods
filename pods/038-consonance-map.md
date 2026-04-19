@@ -2,7 +2,7 @@
 @subtitle Draw the intervals. Recognize the shape.
 @status prelim
 @date 2026-03-16
-@category sensation
+@category feeling
 @term consonance: TBD
 @term mandelbrot: TBD
 @term farey: TBD

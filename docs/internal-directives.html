@@ -25,7 +25,8 @@
             <li class="nav-link-item nav-item-dropdown nav-lists-dropdown">
             <a href="list.html" class="nav-btn nav-push">Lists</a>
             <button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-label="Lists menu"></button>
-            <ul class="nav-dropdown"><li><a href="list.html" class="nav-push">All the Seeds</a></li>
+            <ul class="nav-dropdown"><li><a href="trails.html" class="nav-push">Trails</a></li>
+              <li><a href="list.html" class="nav-push">Index</a></li>
               <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
               <li><a href="glossary.html" class="nav-push">Glossary</a></li>
               <li><a href="map.html" class="nav-push">Map</a></li>
@@ -37,7 +38,8 @@
   <div class="nav-hamburger-overlay" onclick="seedNavToggleMenu()"></div>
   <div class="nav-hamburger-inner"><ul class="nav-hamburger-list">
     <li><a href="about.html">About</a></li>
-    <li><a href="list.html" class="nav-push">All the Seeds</a></li>
+    <li><a href="trails.html" class="nav-push">Trails</a></li>
+              <li><a href="list.html" class="nav-push">Index</a></li>
               <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
               <li><a href="glossary.html" class="nav-push">Glossary</a></li>
               <li><a href="map.html" class="nav-push">Map</a></li>
@@ -66,6 +68,10 @@
 <li><p><strong>@bibliography</strong> — <code>.md</code> only</p>
 </li>
 <li><p><strong>@exercise(text)</strong></p>
+</li>
+<li><p><strong>@footnote(text)</strong></p>
+</li>
+<li><p><strong>@footnotes</strong> — <code>.md</code> only</p>
 </li>
 <li><p><strong>@glossary</strong> — <code>.md</code> only</p>
 </li>
@@ -202,6 +208,61 @@
 <li><p><strong>Example</strong>: <code>@image(harmonic-clock)</code> or <code>@image(mandelbrot-boundary, Mandelbrot Set, Wikipedia)</code>.</p>
 </li>
 </ul>
+<h2>@footnote(text)</h2>
+<ul>
+<li><p><strong>Syntax</strong>: <code>@footnote(text)</code> — inline, embedded directly in the source text at the point of relevance. Parentheses in the footnote text must be balanced (same rule as <code>@note</code> and <code>@exercise</code>).</p>
+</li>
+<li><p><strong>Effect</strong>: The build extracts the footnote from the text flow and replaces it with a superscript number (auto-numbered sequentially by order of appearance within the pod). The footnote text is collected and rendered at the bottom of the pod page in a “Footnotes” section, numbered to match.</p>
+</li>
+<li><p><strong>Marker style</strong>: Footnotes render as superscript <strong>numbers</strong> (1, 2, 3…). Bibliography references (<code>@ref</code>) render as superscript <strong>letters</strong> (a, b, c…). The two marker styles are visually distinct so the reader knows at a glance whether a superscript links to the footnotes list at the bottom of the pod or to the bibliography page. This distinction holds during and after the transition period as existing <code>@ref</code> superscripts are gradually wrapped in <code>@footnote</code> directives.</p>
+</li>
+<li><p><strong>Content</strong>: The footnote text is free-form and supports inline Markdown (<code>*emphasis*</code>, <code>**bold**</code>, <code>`code`</code>, <code>[links](url)</code>). It may also contain:</p>
+<ul>
+<li><p><code>@ref(tag)</code> or <code>@ref(tag, &quot;citation&quot;)</code> — bibliography references, resolved and linked as usual.</p>
+</li>
+<li><p><code>@link(locator)</code> or <code>@link(locator, text)</code> — cross-references to other pods.</p>
+</li>
+<li><p><code>@footnote(text)</code> — a nested footnote. The inner footnote gets its own sequential number and renders as a separate entry in the footnotes list. (Nesting is syntactically legal but should be used sparingly — or reserved for pods about self-reference.)</p>
+</li>
+</ul>
+</li>
+<li><p><strong>No identifier</strong>: Footnotes have no tag or key. They are positional — each belongs to exactly one location in exactly one pod. They cannot be referenced from elsewhere. This distinguishes them from <code>@ref</code>, which uses a shared tag that can appear across many pods.</p>
+</li>
+<li><p><strong>Relationship to <code>@ref</code></strong>: A footnote is <em>about</em> a source or an aside; a <code>@ref</code> is <em>the citation itself</em>. A footnote may contain zero, one, or several <code>@ref</code> directives. A <code>@ref</code> never contains a footnote.</p>
+</li>
+<li><p><strong>Collection page</strong>: The <code>@footnotes</code> directive (<code>.md</code> only) generates a collected footnotes page listing all footnotes from all pods, grouped by pod, for cross-archive browsing.</p>
+</li>
+<li><p><strong>Where</strong>: SeedPod section text (Surface, Depth, etc.) and <code>.md</code> content files. The <code>@footnotes</code> collection directive is <code>.md</code> only.</p>
+</li>
+</ul>
+<p><strong>Example</strong> (inline in pod text):</p>
+<pre><code>James stated it in 1890@footnote(Chapter 6 of the *Principles*,
+'The Mind-Stuff Theory,' where James argues that twelve feelings
+don't add up to a thirteenth. He considered this fatal to
+panpsychism, though he returned to something close in
+@ref(james-2) fourteen years later.) and the problem has
+resisted solution ever since.
+</code></pre>
+<p>This renders as:</p>
+<blockquote>
+<p>James stated it in 1890¹ and the problem has resisted solution ever since.</p>
+</blockquote>
+<p>with footnote 1 at the bottom:</p>
+<blockquote>
+<ol>
+<li><p>Chapter 6 of the <em>Principles</em>, ‘The Mind-Stuff Theory,’ where James argues that twelve feelings don’t add up to a thirteenth. He considered this fatal to panpsychism, though he returned to something close in <em>The Varieties of Religious Experience</em> fourteen years later.</p>
+</li>
+</ol>
+</blockquote>
+<h2>@footnotes</h2>
+<ul>
+<li><p><strong>Syntax</strong>: <code>@footnotes</code> (no arguments).</p>
+</li>
+<li><p><strong>Effect</strong>: Replaced by a collected footnotes page listing all footnotes from all pods, grouped by pod title, with links back to the footnote location in each pod. Analogous to <code>@glossary</code> and <code>@bibliography</code> for their respective directive types.</p>
+</li>
+<li><p><strong>Where</strong>: <code>.md</code> files only.</p>
+</li>
+</ul>
 <h2>@exercise(text)</h2>
 <ul>
 <li><p><strong>Syntax</strong>: <code>@exercise(Try this: ...)</code> — parentheses must balance if the text contains <code>)</code>.</p>
@@ -228,6 +289,6 @@
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">Rev 1 · Edited 2026-04-09 16:46</span>
+  <span class="page-end-version" aria-hidden="true">Rev 1 · Edited 2026-04-19 09:10</span>
 </div>
 </body></html>

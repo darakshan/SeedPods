@@ -9,17 +9,19 @@ All directives work in both contexts unless marked **`.md` only**. The table bel
 
 1. **&#64;bibliography** — `.md` only
 2. **&#64;exercise(text)**  
-3. **&#64;glossary** — `.md` only  
-4. **&#64;image(file, caption, credit)**  
-5. **&#64;include(path)** — `.md` only  
-6. **&#64;index** — `.md` only  
-7. **&#64;link(locator)** or **&#64;link(locator, text)**  
-8. **&#64;map** — `.md` only  
-9. **&#64;pods** — `.md` only  
-10. **&#64;samples** or **&#64;samples(n)** — `.md` only  
-11. **&#64;setting(key)**  
-12. **&#64;timestamp**  
-13. **&#64;warn(message)**
+3. **&#64;footnote(text)**  
+4. **&#64;footnotes** — `.md` only  
+5. **&#64;glossary** — `.md` only  
+6. **&#64;image(file, caption, credit)**  
+7. **&#64;include(path)** — `.md` only  
+8. **&#64;index** — `.md` only  
+9. **&#64;link(locator)** or **&#64;link(locator, text)**  
+10. **&#64;map** — `.md` only  
+11. **&#64;pods** — `.md` only  
+12. **&#64;samples** or **&#64;samples(n)** — `.md` only  
+13. **&#64;setting(key)**  
+14. **&#64;timestamp**  
+15. **&#64;warn(message)**
 
 ---
 
@@ -93,6 +95,45 @@ All directives work in both contexts unless marked **`.md` only**. The table bel
 - **Effect**: The directive is replaced by a figure: the image is copied from `content/images/` to the site output (e.g. `docs/images/`). The image is shown at 50% column width, floated left, with text wrapping. If caption or credit are given, a `<figcaption>` is added (credit in `<cite>`).
 - **File**: Basename only (no path). The build looks for `content/images/file` with extension `.jpg`, `.jpeg`, `.png`, `.webp`, or `.gif` and copies it to the site's `images/` directory. If no file is found, a warning is emitted and the directive is left unchanged.
 - **Example**: `@image(harmonic-clock)` or `@image(mandelbrot-boundary, Mandelbrot Set, Wikipedia)`.
+
+## &#64;footnote(text)
+
+- **Syntax**: `@footnote(text)` — inline, embedded directly in the source text at the point of relevance. Parentheses in the footnote text must be balanced (same rule as `@note` and `@exercise`).
+- **Effect**: The build extracts the footnote from the text flow and replaces it with a superscript number (auto-numbered sequentially by order of appearance within the pod). The footnote text is collected and rendered at the bottom of the pod page in a "Footnotes" section, numbered to match.
+- **Marker style**: Footnotes render as superscript **numbers** (1, 2, 3…). Bibliography references (`@ref`) render as superscript **letters** (a, b, c…). The two marker styles are visually distinct so the reader knows at a glance whether a superscript links to the footnotes list at the bottom of the pod or to the bibliography page. This distinction holds during and after the transition period as existing `@ref` superscripts are gradually wrapped in `@footnote` directives.
+- **Content**: The footnote text is free-form and supports inline Markdown (`*emphasis*`, `**bold**`, `` `code` ``, `[links](url)`). It may also contain:
+  - `@ref(tag)` or `@ref(tag, "citation")` — bibliography references, resolved and linked as usual.
+  - `@link(locator)` or `@link(locator, text)` — cross-references to other pods.
+  - `@footnote(text)` — a nested footnote. The inner footnote gets its own sequential number and renders as a separate entry in the footnotes list. (Nesting is syntactically legal but should be used sparingly — or reserved for pods about self-reference.)
+- **No identifier**: Footnotes have no tag or key. They are positional — each belongs to exactly one location in exactly one pod. They cannot be referenced from elsewhere. This distinguishes them from `@ref`, which uses a shared tag that can appear across many pods.
+- **Relationship to `@ref`**: A footnote is *about* a source or an aside; a `@ref` is *the citation itself*. A footnote may contain zero, one, or several `@ref` directives. A `@ref` never contains a footnote.
+- **Collection page**: The `@footnotes` directive (`.md` only) generates a collected footnotes page listing all footnotes from all pods, grouped by pod, for cross-archive browsing.
+- **Where**: SeedPod section text (Surface, Depth, etc.) and `.md` content files. The `@footnotes` collection directive is `.md` only.
+
+**Example** (inline in pod text):
+
+```
+James stated it in 1890@footnote(Chapter 6 of the *Principles*,
+'The Mind-Stuff Theory,' where James argues that twelve feelings
+don't add up to a thirteenth. He considered this fatal to
+panpsychism, though he returned to something close in
+@ref(james-2) fourteen years later.) and the problem has
+resisted solution ever since.
+```
+
+This renders as:
+
+> James stated it in 1890¹ and the problem has resisted solution ever since.
+
+with footnote 1 at the bottom:
+
+> 1. Chapter 6 of the *Principles*, 'The Mind-Stuff Theory,' where James argues that twelve feelings don't add up to a thirteenth. He considered this fatal to panpsychism, though he returned to something close in *The Varieties of Religious Experience* fourteen years later.
+
+## &#64;footnotes
+
+- **Syntax**: `@footnotes` (no arguments).
+- **Effect**: Replaced by a collected footnotes page listing all footnotes from all pods, grouped by pod title, with links back to the footnote location in each pod. Analogous to `@glossary` and `@bibliography` for their respective directive types.
+- **Where**: `.md` files only.
 
 ## &#64;exercise(text)
 

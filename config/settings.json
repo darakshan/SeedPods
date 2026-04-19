@@ -31,7 +31,7 @@
       "hex" : "#BDE0FE"
     },
     {
-      "category" : "sensation",
+      "category" : "feeling",
       "color_name" : "magenta",
       "hex" : "#F9C6F0"
     },
@@ -49,8 +49,12 @@
   },
   "list_menu" : [
     {
+      "link" : "trails",
+      "name" : "Trails"
+    },
+    {
       "link" : "list",
-      "name" : "All the Seeds"
+      "name" : "Index"
     },
     {
       "link" : "bibliography",
@@ -71,7 +75,7 @@
   ],
   "menu_title" : "Lists",
   "min_related_in_degree" : 2,
-  "nav" : "about, list",
+  "nav" : "about, trails, list",
   "repo_link" : "Full repository →",
   "section_head" : "All seeds",
   "sections" : [
@@ -138,6 +142,6 @@
   "surface_max_words" : 700,
   "surface_min_words" : 400,
   "title" : "SeedPods",
-  "version" : 16,
+  "version" : 17,
   "view_all" : "View all {n} seeds →"
 }

@@ -1,7 +1,7 @@
 @title Beauty
 @status proto
 @date 2026-03-17
-@category sensation
+@category feeling
 @term beauty: TBD
 @term mathematics: TBD
 @term perception: TBD

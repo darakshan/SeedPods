@@ -2,7 +2,7 @@
 @subtitle Farey, Benford, and the Shape of Infinity
 @status rough
 @date 2026-03-14
-@category sensation
+@category feeling
 @term farey-sequence: TBD
 @term benfords-law: TBD
 @term consonance: TBD

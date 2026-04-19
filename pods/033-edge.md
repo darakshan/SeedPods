@@ -1,8 +1,7 @@
 @title The Edge Is Where Everything Happens
-@subtitle The Mandelbrot Boundary
 @status rough
 @date 2026-03-14
-@category sensation
+@category feeling
 @term mandelbrot-set: TBD
 @term fractal: TBD
 @term farey-sequence: TBD

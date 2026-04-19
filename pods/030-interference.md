@@ -2,7 +2,7 @@
 @subtitle Harmony, the double slit, and thought may all be the same phenomenon at different scales.
 @status proto
 @date 2026-03-12
-@category sensation
+@category feeling
 @term physics: TBD
 @term music: TBD
 @term consciousness: TBD

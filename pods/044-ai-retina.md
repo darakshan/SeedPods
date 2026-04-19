@@ -1,7 +1,7 @@
 @title Artificial Networks Rediscover the Retina
 @status proto
 @date 2026-03-15
-@category sensation
+@category feeling
 @term AI: TBD
 @term vision: TBD
 @term efficient-coding: TBD
