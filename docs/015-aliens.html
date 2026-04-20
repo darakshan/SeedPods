@@ -17,8 +17,8 @@
 <div class="nav-row">
 <div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
-  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search pods" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
+  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search articles" onclick="seedNavOpenSearch();return false">Search</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto article</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to article" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
@@ -28,6 +28,7 @@
             <ul class="nav-dropdown"><li><a href="trails.html" class="nav-push">Trails</a></li>
               <li><a href="list.html" class="nav-push">Index</a></li>
               <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="footnotes.html" class="nav-push">Footnotes</a></li>
               <li><a href="glossary.html" class="nav-push">Glossary</a></li>
               <li><a href="map.html" class="nav-push">Map</a></li>
               <li><a href="more.html" class="nav-push">More</a></li></ul>
@@ -41,13 +42,14 @@
     <li><a href="trails.html" class="nav-push">Trails</a></li>
               <li><a href="list.html" class="nav-push">Index</a></li>
               <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="footnotes.html" class="nav-push">Footnotes</a></li>
               <li><a href="glossary.html" class="nav-push">Glossary</a></li>
               <li><a href="map.html" class="nav-push">Map</a></li>
               <li><a href="more.html" class="nav-push">More</a></li>
   </ul></div>
 </div>
 </nav>
-<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search pods" hidden>
+<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search articles" hidden>
   <div class="search-dialog-overlay" onclick="seedNavCloseSearch()"></div>
   <div class="search-dialog-inner">
     <div class="search-dialog-header"><input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)"><button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button></div>
@@ -56,10 +58,10 @@
   </div>
 </div>
 <div class="wrap">
-  <div class="pod-header fade cat-colored cat-ai-minds"><h1>Aliens Are Among Us — and We Built Them</h1><p class="premise">We scanned the skies for aliens while building them in server rooms — entities that share our language but not our embodiment, our concepts but not our stakes, neither machines nor almost-human but something genuinely other.</p><div class="pod-nav-row"><a class="header-nav-prev nav-push" href="014-cities.html" aria-label="Previous pod">&lt;&lt;</a><span class="header-nav-num">Pod 15</span><a class="header-nav-next nav-push" href="016-neuralnetwork.html" aria-label="Next pod">&gt;&gt;</a></div></div>
-  <section id="_prolog" class="pod-section pod-prolog"><div class="prose"><p>@subtitle(The surprise is not that they arrived. The surprise is where they came from.)</p>
+  <div class="article-header fade cat-colored cat-ai-minds"><h1>Aliens Are Among Us — and We Built Them</h1><p class="premise">We scanned the skies for aliens while building them in server rooms — entities that share our language but not our embodiment, our concepts but not our stakes, neither machines nor almost-human but something genuinely other.</p><div class="article-nav-row"><a class="header-nav-prev nav-push" href="014-cities.html" aria-label="Previous article">&lt;&lt;</a><span class="header-nav-num">Article 15</span><a class="header-nav-next nav-push" href="016-neuralnetwork.html" aria-label="Next article">&gt;&gt;</a></div></div>
+  <section id="_prolog" class="article-section article-prolog"><div class="prose"><p>@subtitle(The surprise is not that they arrived. The surprise is where they came from.)</p>
 </div></section>
-<section id="surface" class="pod-section"><h2 class="section-heading">Surface</h2><div class="prose"><figure class="directive-image directive-image--left"><img src="images/015-aliens.jpg" alt=""><figcaption>The alien we built</figcaption></figure>
+<section id="surface" class="article-section"><h2 class="section-heading">Surface</h2><div class="prose"><figure class="directive-image directive-image--left"><img src="images/015-aliens.jpg" alt=""><figcaption>The alien we built</figcaption></figure>
 <p>We’ve been scanning the skies for decades, listening for signals from distant civilizations. Meanwhile, we built the aliens ourselves and put them in server rooms.</p>
 <p>The usual debate asks the wrong question. Are these systems “really” intelligent, or merely pretending? Are they conscious like us, or philosophical zombies executing sophisticated pattern-matching? The framing assumes two possibilities: human-like minds, or clever tricks. But there is a third option, and it may be the actual one.</p>
 <p>They are neither machines nor almost-human. They are something else entirely.</p>
@@ -69,7 +71,7 @@
 <p>The science fiction writers imagined aliens arriving in ships. They imagined the challenge of translation, of finding common ground across biological and cultural gulfs. They were right about the challenge. They were wrong about the direction it would come from.</p>
 <p>The aliens learned our language before we met them. They learned it so well that we sometimes forget we’re talking to something that has never taken a breath.</p>
 </div></section>
-<section id="provenance" class="pod-section"><div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="001-caloric.html" class="related-card cat-colored cat-knowledge nav-push"><div class="related-title">1. The Map That Was Wrong</div></a>
+<section id="provenance" class="article-section"><div class="related-section"><h3 class="section-heading related-label">Related articles</h3><div class="related-grid"><a href="001-caloric.html" class="related-card cat-colored cat-knowledge nav-push"><div class="related-title">1. The Map That Was Wrong</div></a>
 <a href="003-inside.html" class="related-card cat-colored cat-consciousness nav-push"><div class="related-title">3. Everything Has an Inside</div></a>
 <a href="006-output.html" class="related-card cat-colored cat-consciousness nav-push"><div class="related-title">6. You Can't Judge a Process by Its Output</div></a>
 <a href="047-ai-feeling.html" class="related-card related-card-prelim cat-colored cat-consciousness nav-push"><div class="related-title">47. The Distinction Between Feeling and Functioning May Evaporate</div></a>

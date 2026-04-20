@@ -17,8 +17,8 @@
 <div class="nav-row">
 <div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
-  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search pods" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
+  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search articles" onclick="seedNavOpenSearch();return false">Search</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto article</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to article" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
@@ -28,6 +28,7 @@
             <ul class="nav-dropdown"><li><a href="trails.html" class="nav-push">Trails</a></li>
               <li><a href="list.html" class="nav-push">Index</a></li>
               <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="footnotes.html" class="nav-push">Footnotes</a></li>
               <li><a href="glossary.html" class="nav-push">Glossary</a></li>
               <li><a href="map.html" class="nav-push">Map</a></li>
               <li><a href="more.html" class="nav-push">More</a></li></ul>
@@ -41,13 +42,14 @@
     <li><a href="trails.html" class="nav-push">Trails</a></li>
               <li><a href="list.html" class="nav-push">Index</a></li>
               <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="footnotes.html" class="nav-push">Footnotes</a></li>
               <li><a href="glossary.html" class="nav-push">Glossary</a></li>
               <li><a href="map.html" class="nav-push">Map</a></li>
               <li><a href="more.html" class="nav-push">More</a></li>
   </ul></div>
 </div>
 </nav>
-<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search pods" hidden>
+<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search articles" hidden>
   <div class="search-dialog-overlay" onclick="seedNavCloseSearch()"></div>
   <div class="search-dialog-inner">
     <div class="search-dialog-header"><input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)"><button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button></div>
@@ -56,15 +58,15 @@
   </div>
 </div>
 <div class="wrap">
-  <div class="pod-header fade cat-colored cat-consciousness"><h1>Whitehead's God as Initial Condition and Attractor</h1><p class="premise">Whitehead’s God is both the ground of possibility — holding all unrealized potentials available for occasions to select from — and the lure each occasion feels toward greater complexity, which in the language of dynamical systems makes God both the initial condition and the attractor.</p><div class="pod-nav-row"><a class="header-nav-prev nav-push" href="065-feel-do.html" aria-label="Previous pod">&lt;&lt;</a><span class="header-nav-num">Pod 66</span><a class="header-nav-next nav-push" href="067-monads-holons.html" aria-label="Next pod">&gt;&gt;</a></div></div>
-  <section id="proto" class="pod-section"><h2 class="section-heading">Proto</h2><div class="prose"><p>Whitehead’s God is not the God of theism — not a person who intervenes in history or answers prayers. God in Whitehead’s system plays two roles in the metaphysics of process.</p>
+  <div class="article-header fade cat-colored cat-consciousness"><h1>Whitehead's God as Initial Condition and Attractor</h1><p class="premise">Whitehead’s God is both the ground of possibility — holding all unrealized potentials available for occasions to select from — and the lure each occasion feels toward greater complexity, which in the language of dynamical systems makes God both the initial condition and the attractor.</p><div class="article-nav-row"><a class="header-nav-prev nav-push" href="065-feel-do.html" aria-label="Previous article">&lt;&lt;</a><span class="header-nav-num">Article 66</span><a class="header-nav-next nav-push" href="067-monads-holons.html" aria-label="Next article">&gt;&gt;</a></div></div>
+  <section id="proto" class="article-section"><h2 class="section-heading">Proto</h2><div class="prose"><p>Whitehead’s God is not the God of theism — not a person who intervenes in history or answers prayers. God in Whitehead’s system plays two roles in the metaphysics of process.</p>
 <p>First, God is the ground of possibility — the one who holds all unrealized potentials available for actual occasions to select from. Without this role, there is no account of where possibilities come from. An occasion can only actualize what is genuinely available to it. God makes possibilities available.</p>
 <p>Second, God is the lure — the initial aim that each occasion feels as a pull toward the best possibility available given its situation. This is not compulsion. The occasion is free to deviate from the lure. But the lure is always there, always pointing toward greater complexity, greater depth of experience, greater integration.</p>
 <p>In the language of dynamical systems: God is both the initial condition of the iteration and the attractor the iteration is feeling toward. The universe is not wandering. It is being drawn. Not forced — drawn. The difference matters enormously.</p>
 <p>Teilhard’s Omega Point is this attractor made cosmic — the state toward which the entire evolutionary process converges. Whitehead gives the mechanism (the lure operating at every occasion). Teilhard gives the destination<sup class="footnote-ref" id="ref-066-cosmicattractor-1"><a href="bibliography.html#ref-066-cosmicattractor-1">1</a></sup><sup class="footnote-ref" id="ref-066-cosmicattractor-2"><a href="bibliography.html#ref-066-cosmicattractor-2">2</a></sup>. Together they describe a universe that is going somewhere, and knows it, at every scale.</p>
 <figure class="directive-image directive-image--left"><img src="images/066-cosmicattractor.png" alt=""><figcaption>Lorenz attractor: God as initial condition and cosmic attractor</figcaption></figure>
 </div></section>
-<section id="provenance" class="pod-section"><div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="009-randomness.html" class="related-card cat-colored cat-biology nav-push"><div class="related-title">9. Structure Is What Randomness Does</div></a>
+<section id="provenance" class="article-section"><div class="related-section"><h3 class="section-heading related-label">Related articles</h3><div class="related-grid"><a href="009-randomness.html" class="related-card cat-colored cat-biology nav-push"><div class="related-title">9. Structure Is What Randomness Does</div></a>
 <a href="034-onerule.html" class="related-card related-card-prelim cat-colored cat-mathematics nav-push"><div class="related-title">34. One Rule Is Enough</div></a>
 <a href="058-galacticnets.html" class="related-card related-card-prelim cat-colored cat-ai-minds nav-push"><div class="related-title">58. Galaxies and AI Weight Matrices as Structural Homologs</div></a>
 <a href="059-galaxyevolve.html" class="related-card related-card-prelim cat-colored cat-physics nav-push"><div class="related-title">59. Each Galaxy as a Thread of Cosmic Evolution</div></a>

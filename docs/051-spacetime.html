@@ -17,8 +17,8 @@
 <div class="nav-row">
 <div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
-  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search pods" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
+  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search articles" onclick="seedNavOpenSearch();return false">Search</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto article</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to article" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
@@ -28,6 +28,7 @@
             <ul class="nav-dropdown"><li><a href="trails.html" class="nav-push">Trails</a></li>
               <li><a href="list.html" class="nav-push">Index</a></li>
               <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="footnotes.html" class="nav-push">Footnotes</a></li>
               <li><a href="glossary.html" class="nav-push">Glossary</a></li>
               <li><a href="map.html" class="nav-push">Map</a></li>
               <li><a href="more.html" class="nav-push">More</a></li></ul>
@@ -41,13 +42,14 @@
     <li><a href="trails.html" class="nav-push">Trails</a></li>
               <li><a href="list.html" class="nav-push">Index</a></li>
               <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="footnotes.html" class="nav-push">Footnotes</a></li>
               <li><a href="glossary.html" class="nav-push">Glossary</a></li>
               <li><a href="map.html" class="nav-push">Map</a></li>
               <li><a href="more.html" class="nav-push">More</a></li>
   </ul></div>
 </div>
 </nav>
-<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search pods" hidden>
+<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search articles" hidden>
   <div class="search-dialog-overlay" onclick="seedNavCloseSearch()"></div>
   <div class="search-dialog-inner">
     <div class="search-dialog-header"><input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)"><button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button></div>
@@ -56,14 +58,14 @@
   </div>
 </div>
 <div class="wrap">
-  <div class="pod-header fade cat-colored cat-physics"><h1>Spacetime as Emergent from Information Structure</h1><p class="premise">Spacetime geometry may be constituted by quantum entanglement — sever the entanglement and the spacetime tears — which means asking where consciousness is in spacetime may be malformed, because both may be emergent from something more fundamental that has physical and experiential aspects simultaneously.</p><div class="pod-nav-row"><a class="header-nav-prev nav-push" href="050-orthogonal.html" aria-label="Previous pod">&lt;&lt;</a><span class="header-nav-num">Pod 51</span><a class="header-nav-next nav-push" href="052-dichotomy.html" aria-label="Next pod">&gt;&gt;</a></div></div>
-  <section id="proto" class="pod-section"><h2 class="section-heading">Proto</h2><div class="prose"><p>Physicists have been circling this for thirty years without quite landing. The holographic principle — that the information content of a region is proportional to its boundary area, not its volume — suggests that three-dimensional space is not fundamental. It is a projection of a two-dimensional information structure.</p>
+  <div class="article-header fade cat-colored cat-physics"><h1>Spacetime as Emergent from Information Structure</h1><p class="premise">Spacetime geometry may be constituted by quantum entanglement — sever the entanglement and the spacetime tears — which means asking where consciousness is in spacetime may be malformed, because both may be emergent from something more fundamental that has physical and experiential aspects simultaneously.</p><div class="article-nav-row"><a class="header-nav-prev nav-push" href="050-orthogonal.html" aria-label="Previous article">&lt;&lt;</a><span class="header-nav-num">Article 51</span><a class="header-nav-next nav-push" href="052-dichotomy.html" aria-label="Next article">&gt;&gt;</a></div></div>
+  <section id="proto" class="article-section"><h2 class="section-heading">Proto</h2><div class="prose"><p>Physicists have been circling this for thirty years without quite landing. The holographic principle — that the information content of a region is proportional to its boundary area, not its volume — suggests that three-dimensional space is not fundamental. It is a projection of a two-dimensional information structure.</p>
 <p>Van Raamsdonk pushed further: spacetime geometry may be <em>constituted</em> by quantum entanglement<sup class="footnote-ref" id="ref-051-spacetime-1"><a href="bibliography.html#ref-051-spacetime-1">1</a></sup>. Sever the entanglement between two regions and the spacetime connecting them literally tears. Geometry is not the container of physics. It is a consequence of the information relationships between parts of a quantum system.</p>
 <p>If this is right, then the question “where is consciousness in spacetime” is malformed — like asking where the stock market is in the periodic table. Consciousness and spacetime may both be emergent from something more fundamental, something that has both physical and experiential aspects simultaneously.</p>
 <p>The holographic boundary is the more fundamental thing. The three-dimensional interior — including all the spacetime we navigate — is what the boundary looks like from inside.</p>
 <figure class="directive-image directive-image--left"><img src="images/051-spacetime.png" alt=""><figcaption>CNOT quantum gate: spacetime as emergent information structure</figcaption></figure>
 </div></section>
-<section id="provenance" class="pod-section"><div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="008-fields.html" class="related-card cat-colored cat-feeling nav-push"><div class="related-title">8. The Field Is the Medium of Feeling</div></a>
+<section id="provenance" class="article-section"><div class="related-section"><h3 class="section-heading related-label">Related articles</h3><div class="related-grid"><a href="008-fields.html" class="related-card cat-colored cat-feeling nav-push"><div class="related-title">8. The Field Is the Medium of Feeling</div></a>
 <a href="037-assembly.html" class="related-card related-card-prelim cat-colored cat-mathematics nav-push"><div class="related-title">37. The Architecture of Levels</div></a>
 <a href="050-orthogonal.html" class="related-card related-card-prelim cat-colored cat-consciousness nav-push"><div class="related-title">50. Consciousness as a Dimension Orthogonal to Spacetime</div></a>
 <a href="058-galacticnets.html" class="related-card related-card-prelim cat-colored cat-ai-minds nav-push"><div class="related-title">58. Galaxies and AI Weight Matrices as Structural Homologs</div></a>

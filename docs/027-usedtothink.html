@@ -17,8 +17,8 @@
 <div class="nav-row">
 <div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
-  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search pods" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
+  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search articles" onclick="seedNavOpenSearch();return false">Search</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto article</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to article" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
@@ -28,6 +28,7 @@
             <ul class="nav-dropdown"><li><a href="trails.html" class="nav-push">Trails</a></li>
               <li><a href="list.html" class="nav-push">Index</a></li>
               <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="footnotes.html" class="nav-push">Footnotes</a></li>
               <li><a href="glossary.html" class="nav-push">Glossary</a></li>
               <li><a href="map.html" class="nav-push">Map</a></li>
               <li><a href="more.html" class="nav-push">More</a></li></ul>
@@ -41,13 +42,14 @@
     <li><a href="trails.html" class="nav-push">Trails</a></li>
               <li><a href="list.html" class="nav-push">Index</a></li>
               <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="footnotes.html" class="nav-push">Footnotes</a></li>
               <li><a href="glossary.html" class="nav-push">Glossary</a></li>
               <li><a href="map.html" class="nav-push">Map</a></li>
               <li><a href="more.html" class="nav-push">More</a></li>
   </ul></div>
 </div>
 </nav>
-<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search pods" hidden>
+<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search articles" hidden>
   <div class="search-dialog-overlay" onclick="seedNavCloseSearch()"></div>
   <div class="search-dialog-inner">
     <div class="search-dialog-header"><input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)"><button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button></div>
@@ -56,10 +58,10 @@
   </div>
 </div>
 <div class="wrap">
-  <div class="pod-header fade cat-colored cat-knowledge"><h1>We Used to Think. Now We Know.</h1><p class="premise">“We used to think X — now we know Y” marks genuine progress while quietly discarding whatever the old framework was correctly pointing at, so that the phenomenon is lost along with the mechanism, unnamed and unexamined.</p><div class="pod-nav-row"><a class="header-nav-prev nav-push" href="026-twotruths.html" aria-label="Previous pod">&lt;&lt;</a><span class="header-nav-num">Pod 27</span><a class="header-nav-next nav-push" href="028-network.html" aria-label="Next pod">&gt;&gt;</a></div></div>
-  <section id="_prolog" class="pod-section pod-prolog"><div class="prose"><p>@subtitle(The phrase that flatters the present and buries the past — and will be used against us.)</p>
+  <div class="article-header fade cat-colored cat-knowledge"><h1>We Used to Think. Now We Know.</h1><p class="premise">“We used to think X — now we know Y” marks genuine progress while quietly discarding whatever the old framework was correctly pointing at, so that the phenomenon is lost along with the mechanism, unnamed and unexamined.</p><div class="article-nav-row"><a class="header-nav-prev nav-push" href="026-twotruths.html" aria-label="Previous article">&lt;&lt;</a><span class="header-nav-num">Article 27</span><a class="header-nav-next nav-push" href="028-network.html" aria-label="Next article">&gt;&gt;</a></div></div>
+  <section id="_prolog" class="article-section article-prolog"><div class="prose"><p>@subtitle(The phrase that flatters the present and buries the past — and will be used against us.)</p>
 </div></section>
-<section id="surface" class="pod-section"><h2 class="section-heading">Surface</h2><div class="prose"><p>There is a phrase you have heard a thousand times. In documentaries. In science podcasts. In textbooks. In the confident voice of someone explaining something to you.</p>
+<section id="surface" class="article-section"><h2 class="section-heading">Surface</h2><div class="prose"><p>There is a phrase you have heard a thousand times. In documentaries. In science podcasts. In textbooks. In the confident voice of someone explaining something to you.</p>
 <figure class="directive-image directive-image--left"><img src="images/027-usedtothink.jpg" alt=""><figcaption>The old map we used to think was right</figcaption></figure>
 <p>“We used to think X. Now we know Y.”</p>
 <p>It feels good. It feels like honesty. Look how far we’ve come. Look how much smarter we are now than we were then. The people who believed X — bless them, they did their best, but they were wrong, and we are not.</p>
@@ -78,7 +80,7 @@
 <p>“Now we know” closed that door. It may have closed it too quickly.</p>
 <div class="cta">Next time you hear &quot;we used to think / now we know,&quot; ask two questions. First: what exactly did we gain? Second: what did we throw away along with the error — and is it still out there, waiting for a better name?</div>
 </div></section>
-<section id="depth" class="pod-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>“We used to think X, now we know Y” is one of the most common moves in popular science writing and documentary narration. It feels like progress. It feels like honesty — look how far we’ve come. But it does three things simultaneously, and only the first is straightforwardly good.</p>
+<section id="depth" class="article-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>“We used to think X, now we know Y” is one of the most common moves in popular science writing and documentary narration. It feels like progress. It feels like honesty — look how far we’ve come. But it does three things simultaneously, and only the first is straightforwardly good.</p>
 <p>First, it marks genuine progress. The frameworks that get replaced were genuinely superseded. Caloric theory made predictions that kinetic theory made better. The geocentric model was displaced by one with greater explanatory and predictive power. The progress is real.</p>
 <p>Second, it caricatures the past. The people who believed caloric theory were not naive. Caloric was a triumph of 18th-century science — mathematically precise, experimentally grounded, enormously productive. Antoine Lavoisier<sup class="footnote-ref" id="ref-027-usedtothink-1"><a href="bibliography.html#ref-027-usedtothink-1">1</a></sup> built it into the foundations of modern chemistry. It served the scientific community well for decades. When anomalies appeared, the caloric theorists patched the theory rather than abandoning it — which was not stubbornness but good scientific practice. It took James Joule’s<sup class="footnote-ref" id="ref-027-usedtothink-2"><a href="bibliography.html#ref-027-usedtothink-2">2</a></sup> precise measurement of the mechanical equivalent of heat in the 1840s to finally close the case. Abandoning a productive framework for a single anomaly is actually bad methodology. The word “just” is never spoken in the “we used to think” retelling, but it is always implied: they just believed in a substance that wasn’t there. This is the move <a href="021-just.html">The Word &quot;Just&quot; Is a Confession</a> tracks — describing a position by its failure and treating the description as complete.</p>
 <p>Third — and this is the hidden cost — it discards the phenomenon along with the mechanism. When a framework is dismissed, everything associated with it tends to go together: the wrong explanation and whatever the wrong explanation was reaching for. The loss is rarely noticed because the new framework, in its confidence, doesn’t look back.</p>
@@ -89,13 +91,13 @@
 <p>The phrase is not wrong. It marks real progress. But it honors the distance traveled while erasing the distance remaining. It clears the board. And sometimes, on the board it clears, there was something worth keeping.</p>
 <p>See <a href="001-caloric.html">The Map That Was Wrong</a> for the caloric pattern. See <a href="019-funerals.html">Science Advances One Funeral at a Time</a> for how frameworks get replaced. See <a href="021-just.html">The Word &quot;Just&quot; Is a Confession</a> for how single words perform large philosophical work quietly. See <a href="003-inside.html">Everything Has an Inside</a> for the animist intuition reconsidered. See <a href="012-autopoiesis.html">The Cell That Makes Itself</a> for what vitalism was pointing at.</p>
 </div></section>
-<section id="provenance" class="pod-section"><div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="003-inside.html" class="related-card cat-colored cat-consciousness nav-push"><div class="related-title">3. Everything Has an Inside</div></a>
+<section id="provenance" class="article-section"><div class="related-section"><h3 class="section-heading related-label">Related articles</h3><div class="related-grid"><a href="003-inside.html" class="related-card cat-colored cat-consciousness nav-push"><div class="related-title">3. Everything Has an Inside</div></a>
 <a href="012-autopoiesis.html" class="related-card cat-colored cat-biology nav-push"><div class="related-title">12. The Cell That Makes Itself</div></a>
 <a href="015-aliens.html" class="related-card related-card-prelim cat-colored cat-ai-minds nav-push"><div class="related-title">15. Aliens Are Among Us — and We Built Them</div></a>
 <a href="024-ghostmachine.html" class="related-card related-card-prelim cat-colored cat-consciousness nav-push"><div class="related-title">24. Ghost in the Machine</div></a>
 <a href="047-ai-feeling.html" class="related-card related-card-prelim cat-colored cat-consciousness nav-push"><div class="related-title">47. The Distinction Between Feeling and Functioning May Evaporate</div></a></div>
 <div class="inbound-refs"><span class="inbound-label">1 inbound reference</span><span class="inbound-links"><a href="023-stories.html" class="inbound-link nav-push cat-colored cat-consciousness" title="Reality Is Made of Stories, Not Atoms">23</a></span></div></div></section>
-<section id="script" class="pod-section"><h2 class="section-heading">Script</h2><div class="prose"><p>Note to director: No narration. No score until the final scene — ambient sound only throughout: desert wind, courtyard birds, workshop clatter, server hum, fire. Each scene is the same action: a framework erased, a new one written in its place. Same confidence. Same satisfaction. Different century. Let the repetition accumulate.</p>
+<section id="script" class="article-section"><h2 class="section-heading">Script</h2><div class="prose"><p>Note to director: No narration. No score until the final scene — ambient sound only throughout: desert wind, courtyard birds, workshop clatter, server hum, fire. Each scene is the same action: a framework erased, a new one written in its place. Same confidence. Same satisfaction. Different century. Let the repetition accumulate.</p>
 <ol>
 <li><p>Desert, ancient times. A figure — Moses, or someone like him — stops walking. A bush is burning but not burning down. A voice from the fire: Take off your shoes. He removes his sandals. Stands barefoot on the hot rock. He is not afraid. He is paying attention. Hold on his face. Open. Listening.</p>
 </li>
@@ -111,7 +113,7 @@
 </li>
 </ol>
 </div></section>
-<section id="images" class="pod-section"><h2 class="section-heading">Images</h2><div class="prose"><p>Primary illustration: Five panels in a horizontal strip, identical composition in each. A surface — a burning desert bush, a wax tablet, a chalkboard, a battered chalkboard, a burning server rack. In each panel the same gesture: the previous answer crossed out or erased, something new taking its place. The figures are secondary — what matters is the surface and the gesture. In the fifth panel the fire has returned. Caption: We kept erasing. The fire kept burning.</p>
+<section id="images" class="article-section"><h2 class="section-heading">Images</h2><div class="prose"><p>Primary illustration: Five panels in a horizontal strip, identical composition in each. A surface — a burning desert bush, a wax tablet, a chalkboard, a battered chalkboard, a burning server rack. In each panel the same gesture: the previous answer crossed out or erased, something new taking its place. The figures are secondary — what matters is the surface and the gesture. In the fifth panel the fire has returned. Caption: We kept erasing. The fire kept burning.</p>
 <p>Shareable graphic: Black background. Five lines descending, each the answer that replaced the one above:</p>
 <p>The fire speaks.
 Fire is an element.

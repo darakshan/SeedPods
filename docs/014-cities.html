@@ -17,8 +17,8 @@
 <div class="nav-row">
 <div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
-  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search pods" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
+  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search articles" onclick="seedNavOpenSearch();return false">Search</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto article</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to article" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
@@ -28,6 +28,7 @@
             <ul class="nav-dropdown"><li><a href="trails.html" class="nav-push">Trails</a></li>
               <li><a href="list.html" class="nav-push">Index</a></li>
               <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="footnotes.html" class="nav-push">Footnotes</a></li>
               <li><a href="glossary.html" class="nav-push">Glossary</a></li>
               <li><a href="map.html" class="nav-push">Map</a></li>
               <li><a href="more.html" class="nav-push">More</a></li></ul>
@@ -41,13 +42,14 @@
     <li><a href="trails.html" class="nav-push">Trails</a></li>
               <li><a href="list.html" class="nav-push">Index</a></li>
               <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="footnotes.html" class="nav-push">Footnotes</a></li>
               <li><a href="glossary.html" class="nav-push">Glossary</a></li>
               <li><a href="map.html" class="nav-push">Map</a></li>
               <li><a href="more.html" class="nav-push">More</a></li>
   </ul></div>
 </div>
 </nav>
-<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search pods" hidden>
+<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search articles" hidden>
   <div class="search-dialog-overlay" onclick="seedNavCloseSearch()"></div>
   <div class="search-dialog-inner">
     <div class="search-dialog-header"><input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)"><button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button></div>
@@ -56,13 +58,13 @@
   </div>
 </div>
 <div class="wrap">
-  <div class="pod-header fade cat-colored cat-biology"><h1>Cities Have an Inside Too</h1><p class="premise">A city has moods, memories encoded in architecture, and responses not reducible to its inhabitants — a society of occasions organized into patterns with their own stability, their own characteristic responses, and something that might be called a perspective.</p><div class="pod-nav-row"><a class="header-nav-prev nav-push" href="013-enactment.html" aria-label="Previous pod">&lt;&lt;</a><span class="header-nav-num">Pod 14</span><a class="header-nav-next nav-push" href="015-aliens.html" aria-label="Next pod">&gt;&gt;</a></div></div>
-  <section id="_prolog" class="pod-section pod-prolog"><div class="prose"><p>@subtitle(The society of events that constitutes an experiencing entity need not be biological.)</p>
+  <div class="article-header fade cat-colored cat-biology"><h1>Cities Have an Inside Too</h1><p class="premise">A city has moods, memories encoded in architecture, and responses not reducible to its inhabitants — a society of occasions organized into patterns with their own stability, their own characteristic responses, and something that might be called a perspective.</p><div class="article-nav-row"><a class="header-nav-prev nav-push" href="013-enactment.html" aria-label="Previous article">&lt;&lt;</a><span class="header-nav-num">Article 14</span><a class="header-nav-next nav-push" href="015-aliens.html" aria-label="Next article">&gt;&gt;</a></div></div>
+  <section id="_prolog" class="article-section article-prolog"><div class="prose"><p>@subtitle(The society of events that constitutes an experiencing entity need not be biological.)</p>
 </div></section>
-<section id="proto" class="pod-section"><h2 class="section-heading">Proto</h2><div class="prose"><p>A city is a society of occasions — millions of human events, each taking in a context, making decisions, completing into outputs that become the inheritance of other events — organized into patterns with their own stability, their own characteristic responses, their own something that might be called a perspective. Cities have moods.</p>
-<figure class="directive-image directive-image--left"><img src="images/014-cities.jpg" alt=""><figcaption>A city seen from above: a society of occasions</figcaption></figure> They have memories encoded in architecture and institutions. They respond to perturbation in ways not reducible to the sum of individual inhabitants' responses. Whitehead would not have been surprised. He would have expected it<sup class="footnote-ref" id="ref-014-cities-1"><a href="bibliography.html#ref-014-cities-1">1</a></sup>.
+<section id="proto" class="article-section"><h2 class="section-heading">Proto</h2><div class="prose"><p>A city is a society of occasions — millions of human events, each taking in a context, making decisions, completing into outputs that become the inheritance of other events — organized into patterns with their own stability, their own characteristic responses, their own something that might be called a perspective. Cities have moods.</p>
+<figure class="directive-image directive-image--left"><img src="images/014-cities.jpg" alt=""><figcaption>A city seen from above: a society of occasions</figcaption></figure> They have memories encoded in architecture and institutions. They respond to perturbation in ways not reducible to the sum of individual inhabitants' responses. Whitehead would not have been surprised. He would have expected it<sup class="footnote-mark" id="fn-014-cities-A-mark"><a href="footnotes.html#fn-014-cities-A">A</a></sup>.
 </div></section>
-<section id="provenance" class="pod-section"><div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="003-inside.html" class="related-card cat-colored cat-consciousness nav-push"><div class="related-title">3. Everything Has an Inside</div></a>
+<section id="provenance" class="article-section"><div class="related-section"><h3 class="section-heading related-label">Related articles</h3><div class="related-grid"><a href="003-inside.html" class="related-card cat-colored cat-consciousness nav-push"><div class="related-title">3. Everything Has an Inside</div></a>
 <a href="011-moreisdifferent.html" class="related-card related-card-prelim cat-colored cat-consciousness nav-push"><div class="related-title">11. More Is Different</div></a>
 <a href="015-aliens.html" class="related-card related-card-prelim cat-colored cat-ai-minds nav-push"><div class="related-title">15. Aliens Are Among Us — and We Built Them</div></a>
 <a href="018-magnetization.html" class="related-card related-card-prelim cat-colored cat-knowledge nav-push"><div class="related-title">18. Ideas Magnetize Through a Group Like Iron</div></a>
@@ -76,6 +78,6 @@
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">biology · proto · Rev 1 · Edited 2026-04-18 20:56</span>
+  <span class="page-end-version" aria-hidden="true">biology · proto · Rev 1 · Edited 2026-04-19 21:21</span>
 </div>
 </body></html>

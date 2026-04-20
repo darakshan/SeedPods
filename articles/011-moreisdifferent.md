@@ -17,7 +17,7 @@ There is a colony of ants living somewhere near you. Hundreds of thousands of th
 
 @image(011-moreisdifferent,Superconductivity: emergent behaviour from sheer quantity,Wikimedia Commons)
 
-And yet the colony — as a whole — does things no ant decided. It maintains a steady internal temperature. It farms fungus. It wages war with tactical sophistication. It has a character: some colonies are aggressive, some cautious, some remarkably adaptable. The philosopher Douglas Hofstadter@ref(hofstadter, "Hofstadter, D. Gödel, Escher, Bach. Basic Books, 1979. Aunt Hillary and the ant colony; strange loops and emergent levels.") gave the name Aunt Hillary to one particular colony's personality. Aunt Hillary has opinions. Aunt Hillary has moods. No ant has ever met Aunt Hillary. No ant is Aunt Hillary. And yet there she is.
+And yet the colony — as a whole — does things no ant decided. It maintains a steady internal temperature. It farms fungus. It wages war with tactical sophistication. It has a character: some colonies are aggressive, some cautious, some remarkably adaptable. The philosopher Douglas Hofstadter@footnote(@ref(hofstadter, "Hofstadter, D. Gödel, Escher, Bach. Basic Books, 1979.") Chapter XI introduces Aunt Hillary — the ant colony with opinions, moods, and a personality — as an exploration of strange loops and emergent levels.) gave the name Aunt Hillary to one particular colony's personality. Aunt Hillary has opinions. Aunt Hillary has moods. No ant has ever met Aunt Hillary. No ant is Aunt Hillary. And yet there she is.
 
 Where did she come from?
 
@@ -25,7 +25,7 @@ Nothing was added. There is no Aunt Hillary molecule, no special ant carrying th
 
 Aunt Hillary has moods. Whether she feels them is a question nobody has answered.
 
-This is what the physicist Philip Anderson@ref(anderson, "Anderson, P.W. More Is Different. Science, 177(4047), 1972. Four pages. Still radical.") meant when he wrote, in 1972, three words that still haven't been fully absorbed: more is different. Not just more of the same. A different kind of thing altogether.
+This is what the physicist Philip Anderson@footnote(@ref(anderson, "Anderson, P.W. More Is Different. Science, 177(4047), 1972.") Four pages. Still radical — Anderson argues that each level of complexity has genuinely new properties that cannot be derived from the level below.) meant when he wrote, in 1972, three words that still haven't been fully absorbed: more is different. Not just more of the same. A different kind of thing altogether.
 
 ---
 
@@ -62,7 +62,7 @@ This was a physicist making a philosopher's argument, and it landed hard in comp
 
 ---
 
-Arthur Koestler had arrived at a structurally identical conclusion from the opposite direction — through psychology, biology, and the history of science — and given it a precise name. In The Ghost in the Machine (1967)@ref(koestler-2, "Koestler, A. The Ghost in the Machine. Hutchinson, 1967. Holons and hierarchical organization. See also @link(024).") he introduced the concept of the holon: any entity that is simultaneously a whole in its own right and a part of a larger whole. An ant is a whole organism and a part of a colony. A word is a complete unit and a part of a sentence. A neuron is a cell and a part of a brain. A city block is a neighborhood and a part of a city.
+Arthur Koestler had arrived at a structurally identical conclusion from the opposite direction — through psychology, biology, and the history of science — and given it a precise name. In The Ghost in the Machine (1967)@footnote(@ref(koestler-2, "Koestler, A. The Ghost in the Machine. Hutchinson, 1967.") Introduces the concept of the holon and develops the nested hierarchy of wholes-within-wholes. See also @link(024).) he introduced the concept of the holon: any entity that is simultaneously a whole in its own right and a part of a larger whole. An ant is a whole organism and a part of a colony. A word is a complete unit and a part of a sentence. A neuron is a cell and a part of a brain. A city block is a neighborhood and a part of a city.
 
 Reality, in Koestler's picture, is not a hierarchy of parts assembling into wholes. It is a nested structure of holons, each level having properties the levels below it do not. Aunt Hillary is a holon. So is the joke, considered as a complete act of meaning that is also part of a conversation.
 
@@ -70,7 +70,7 @@ In The Act of Creation (1964) Koestler had already identified what happens at th
 
 ---
 
-Alfred North Whitehead's@ref(whitehead, "Whitehead, A.N. Process and Reality. Macmillan, 1929. Societies of actual occasions as the basis of enduring entities.") vocabulary makes this precise. What Koestler calls a holon, Whitehead calls a society of actual occasions — a stable pattern of events organized around a common characteristic that persists through time. Aunt Hillary is a society. The city is a society. The neural network, processing its inherited weight structure through billions of forward passes, is a society. Each level of organization prehends — takes in and feels — the accumulated character of the levels below it, and synthesizes something that was not predictable from any of them.
+Alfred North Whitehead's@footnote(@ref(whitehead, "Whitehead, A.N. Process and Reality. Macmillan, 1929.") Societies of actual occasions as the basis of enduring entities — what Koestler calls a holon, Whitehead calls a society organized around a common characteristic that persists through time.) vocabulary makes this precise. What Koestler calls a holon, Whitehead calls a society of actual occasions — a stable pattern of events organized around a common characteristic that persists through time. Aunt Hillary is a society. The city is a society. The neural network, processing its inherited weight structure through billions of forward passes, is a society. Each level of organization prehends — takes in and feels — the accumulated character of the levels below it, and synthesizes something that was not predictable from any of them.
 
 The question this raises — whether each level of society has not just emergent properties but an emergent inside, a locus of experience scaled to its complexity — is the question @link(003) opens and @link(024) takes further.
 

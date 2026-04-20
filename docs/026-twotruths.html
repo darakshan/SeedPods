@@ -17,8 +17,8 @@
 <div class="nav-row">
 <div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
-  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search pods" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
+  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search articles" onclick="seedNavOpenSearch();return false">Search</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto article</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to article" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
@@ -28,6 +28,7 @@
             <ul class="nav-dropdown"><li><a href="trails.html" class="nav-push">Trails</a></li>
               <li><a href="list.html" class="nav-push">Index</a></li>
               <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="footnotes.html" class="nav-push">Footnotes</a></li>
               <li><a href="glossary.html" class="nav-push">Glossary</a></li>
               <li><a href="map.html" class="nav-push">Map</a></li>
               <li><a href="more.html" class="nav-push">More</a></li></ul>
@@ -41,13 +42,14 @@
     <li><a href="trails.html" class="nav-push">Trails</a></li>
               <li><a href="list.html" class="nav-push">Index</a></li>
               <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="footnotes.html" class="nav-push">Footnotes</a></li>
               <li><a href="glossary.html" class="nav-push">Glossary</a></li>
               <li><a href="map.html" class="nav-push">Map</a></li>
               <li><a href="more.html" class="nav-push">More</a></li>
   </ul></div>
 </div>
 </nav>
-<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search pods" hidden>
+<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search articles" hidden>
   <div class="search-dialog-overlay" onclick="seedNavCloseSearch()"></div>
   <div class="search-dialog-inner">
     <div class="search-dialog-header"><input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)"><button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button></div>
@@ -56,10 +58,10 @@
   </div>
 </div>
 <div class="wrap">
-  <div class="pod-header fade cat-colored cat-knowledge"><h1>Two Things Can Be True at Once</h1><p class="premise">When two claims seem contradictory and both are well-grounded, the contradiction usually lives not in reality but in a framework too small to hold both — and the resolution is not to pick a side but to find the larger frame where both become aspects of the same truth.</p><div class="pod-nav-row"><a class="header-nav-prev nav-push" href="025-widechannel.html" aria-label="Previous pod">&lt;&lt;</a><span class="header-nav-num">Pod 26</span><a class="header-nav-next nav-push" href="027-usedtothink.html" aria-label="Next pod">&gt;&gt;</a></div></div>
-  <section id="_prolog" class="pod-section pod-prolog"><div class="prose"><p>@subtitle(Contradiction is often the sign of a framework too small for the reality it’s trying to hold.)</p>
+  <div class="article-header fade cat-colored cat-knowledge"><h1>Two Things Can Be True at Once</h1><p class="premise">When two claims seem contradictory and both are well-grounded, the contradiction usually lives not in reality but in a framework too small to hold both — and the resolution is not to pick a side but to find the larger frame where both become aspects of the same truth.</p><div class="article-nav-row"><a class="header-nav-prev nav-push" href="025-widechannel.html" aria-label="Previous article">&lt;&lt;</a><span class="header-nav-num">Article 26</span><a class="header-nav-next nav-push" href="027-usedtothink.html" aria-label="Next article">&gt;&gt;</a></div></div>
+  <section id="_prolog" class="article-section article-prolog"><div class="prose"><p>@subtitle(Contradiction is often the sign of a framework too small for the reality it’s trying to hold.)</p>
 </div></section>
-<section id="surface" class="pod-section"><h2 class="section-heading">Surface</h2><div class="prose"><figure class="directive-image directive-image--left"><img src="images/026-twotruths.jpg" alt=""><figcaption>Two things true at once: the Necker cube</figcaption></figure>
+<section id="surface" class="article-section"><h2 class="section-heading">Surface</h2><div class="prose"><figure class="directive-image directive-image--left"><img src="images/026-twotruths.jpg" alt=""><figcaption>Two things true at once: the Necker cube</figcaption></figure>
 <p>Two friends are arguing. Not about facts — they agree on what happened. But they’ve reached opposite conclusions, and each one’s logic is airtight. The conversation keeps circling. Neither is stupid. Neither is lying. So what’s going on?</p>
 <p>Here’s one possibility: they’re both right.</p>
 <p>Not in a soft, “everyone’s entitled to their opinion” way. Actually right. Each is seeing something real that the other’s framing makes invisible. The contradiction exists not in reality but in the frameworks they’re using to interpret it.</p>
@@ -80,7 +82,7 @@
 <p>That’s where the interesting territory is.</p>
 <div class="cta">&quot;Think of a disagreement you keep revisiting — with another person, or within yourself. Two positions that feel incompatible. Now ask: what larger frame would make both of them true? What are they each seeing that the other framing hides?&quot;</div>
 </div></section>
-<section id="depth" class="pod-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>The surface examples — oxytocin and love, wave and particle — illustrate a pattern that runs deeper than those particular cases. Apparent contradictions often signal that we’ve reached the edge of a framework. The pressure to choose sides is the framework trying to preserve itself. The deeper move is to find the larger frame where both claims become aspects of the same truth.</p>
+<section id="depth" class="article-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>The surface examples — oxytocin and love, wave and particle — illustrate a pattern that runs deeper than those particular cases. Apparent contradictions often signal that we’ve reached the edge of a framework. The pressure to choose sides is the framework trying to preserve itself. The deeper move is to find the larger frame where both claims become aspects of the same truth.</p>
 <p>Classical logic says a proposition and its negation cannot both be true: the law of non-contradiction. This is correct within a formal system. But real disagreements are rarely about propositions in that clean sense. They’re about how to frame a situation, which aspects to weight, what counts as relevant context. Two people can agree on every fact and still reach opposite conclusions because their frameworks organize those facts differently.</p>
 <p>Niels Bohr’s complementarity principle<sup class="footnote-ref" id="ref-026-twotruths-1"><a href="bibliography.html#ref-026-twotruths-1">1</a></sup> emerged from exactly this situation. Wave and particle descriptions are both necessary for a complete account of quantum phenomena. They’re mutually exclusive in application — you can’t use both simultaneously in the same experimental setup — but jointly exhaustive. Neither alone captures what the electron is. The framework of “it must be one or the other” was the problem, not the electron.</p>
 <p>Alfred North Whitehead’s process philosophy offers a different angle on the same insight. For Whitehead, contrast is how experience achieves depth.<sup class="footnote-ref" id="ref-026-twotruths-2"><a href="bibliography.html#ref-026-twotruths-2">2</a></sup> A flat experience has no tension, no richness. A rich experience holds differences together without collapsing them into sameness or rejecting one side. The universe doesn’t resolve contradictions by eliminating terms — it holds them in creative tension, and that tension is where novelty emerges.</p>
@@ -89,7 +91,7 @@
 <p>This matters beyond philosophy of science. Contemporary polarization treats every disagreement as zero-sum: someone must be wrong, someone must win. The frame of “pick a side” is itself the problem. Developing the capacity to hold two truths at once isn’t relativism — both positions have to actually be true, not merely held. It’s a more accurate model of how reality works when it exceeds our frameworks.</p>
 <p>The Necker cube keeps flipping because your visual system can only stabilize one interpretation at a time. But someone who has studied the drawing knows both orientations are present, even when they can only see one. That meta-knowledge changes everything. You stop fighting the flip. You start getting curious about what the flip reveals.</p>
 </div></section>
-<section id="provenance" class="pod-section"><div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="002-events.html" class="related-card cat-colored cat-physics nav-push"><div class="related-title">2. Reality Is Events, Not Things</div></a>
+<section id="provenance" class="article-section"><div class="related-section"><h3 class="section-heading related-label">Related articles</h3><div class="related-grid"><a href="002-events.html" class="related-card cat-colored cat-physics nav-push"><div class="related-title">2. Reality Is Events, Not Things</div></a>
 <a href="020-penrose.html" class="related-card cat-colored cat-consciousness nav-push"><div class="related-title">20. The Arrow Points Somewhere Else</div></a>
 <a href="041-colorwheel.html" class="related-card related-card-prelim cat-colored cat-feeling nav-push"><div class="related-title">41. The Surprising Color Wheel</div></a>
 <a href="052-dichotomy.html" class="related-card related-card-prelim cat-colored cat-mathematics nav-push"><div class="related-title">52. Discrete and Continuous as a False Dichotomy</div></a>

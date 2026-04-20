@@ -17,8 +17,8 @@
 <div class="nav-row">
 <div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
-  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search pods" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
+  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search articles" onclick="seedNavOpenSearch();return false">Search</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto article</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to article" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
@@ -28,6 +28,7 @@
             <ul class="nav-dropdown"><li><a href="trails.html" class="nav-push">Trails</a></li>
               <li><a href="list.html" class="nav-push">Index</a></li>
               <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="footnotes.html" class="nav-push">Footnotes</a></li>
               <li><a href="glossary.html" class="nav-push">Glossary</a></li>
               <li><a href="map.html" class="nav-push">Map</a></li>
               <li><a href="more.html" class="nav-push">More</a></li></ul>
@@ -41,13 +42,14 @@
     <li><a href="trails.html" class="nav-push">Trails</a></li>
               <li><a href="list.html" class="nav-push">Index</a></li>
               <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="footnotes.html" class="nav-push">Footnotes</a></li>
               <li><a href="glossary.html" class="nav-push">Glossary</a></li>
               <li><a href="map.html" class="nav-push">Map</a></li>
               <li><a href="more.html" class="nav-push">More</a></li>
   </ul></div>
 </div>
 </nav>
-<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search pods" hidden>
+<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search articles" hidden>
   <div class="search-dialog-overlay" onclick="seedNavCloseSearch()"></div>
   <div class="search-dialog-inner">
     <div class="search-dialog-header"><input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)"><button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button></div>
@@ -56,10 +58,10 @@
   </div>
 </div>
 <div class="wrap">
-  <div class="pod-header fade cat-colored cat-feeling"><h1>Five Windows, One Room</h1><p class="premise">Every sense is vibration in space and time, yet red doesn’t sound like anything and middle C has no flavor — the physics converges while experience diverges, and that gap between unified substrate and irreducibly distinct qualities is the hard problem at its sharpest.</p><div class="pod-nav-row"><a class="header-nav-prev nav-push" href="075-gossamer.html" aria-label="Previous pod">&lt;&lt;</a><span class="header-nav-num">Pod 76</span><a class="header-nav-next nav-push" href="077-intention.html" aria-label="Next pod">&gt;&gt;</a></div></div>
-  <section id="_prolog" class="pod-section pod-prolog"><div class="prose"><p>@subtitle(Light, sound, smell, touch, taste — all vibration in space and time. Yet each feels utterly unlike the others. That gap is the mystery.)</p>
+  <div class="article-header fade cat-colored cat-feeling"><h1>Five Windows, One Room</h1><p class="premise">Every sense is vibration in space and time, yet red doesn’t sound like anything and middle C has no flavor — the physics converges while experience diverges, and that gap between unified substrate and irreducibly distinct qualities is the hard problem at its sharpest.</p><div class="article-nav-row"><a class="header-nav-prev nav-push" href="075-gossamer.html" aria-label="Previous article">&lt;&lt;</a><span class="header-nav-num">Article 76</span><a class="header-nav-next nav-push" href="077-intention.html" aria-label="Next article">&gt;&gt;</a></div></div>
+  <section id="_prolog" class="article-section article-prolog"><div class="prose"><p>@subtitle(Light, sound, smell, touch, taste — all vibration in space and time. Yet each feels utterly unlike the others. That gap is the mystery.)</p>
 </div></section>
-<section id="proto" class="pod-section"><h2 class="section-heading">Proto</h2><div class="prose"><p>The physics is almost embarrassingly unified. Light is electromagnetic vibration. Sound is pressure waves — air molecules oscillating back and forth. Smell and taste are molecular shapes binding to receptors, but those bonds vibrate too, and the receptors respond to timing patterns. Touch is mechanical vibration of skin. Temperature is the average kinetic energy of molecules — which is to say, how hard they’re vibrating. Even proprioception, your sense of where your body is, relies on cells that fire in rhythmic patterns when stretched.</p>
+<section id="proto" class="article-section"><h2 class="section-heading">Proto</h2><div class="prose"><p>The physics is almost embarrassingly unified. Light is electromagnetic vibration. Sound is pressure waves — air molecules oscillating back and forth. Smell and taste are molecular shapes binding to receptors, but those bonds vibrate too, and the receptors respond to timing patterns. Touch is mechanical vibration of skin. Temperature is the average kinetic energy of molecules — which is to say, how hard they’re vibrating. Even proprioception, your sense of where your body is, relies on cells that fire in rhythmic patterns when stretched.</p>
 <p>Vibration in time. Pattern in space. Location. That’s the common substrate of every sense.</p>
 <p>And yet: red doesn’t sound like anything. Middle C has no flavor. The smell of coffee and the warmth of the cup arrive together in experience but remain utterly distinct as qualities. No amount of describing the wavelength of light gets you to the <em>redness</em> of red. The physics converges; the experience diverges.</p>
 <p>This is one face of the Hard Problem. Not just “why is there experience at all?” but “why does experience <em>differentiate</em> into these irreducibly distinct qualities?” If the brain is just processing vibration-patterns, why doesn’t it all feel like one thing?</p>
@@ -68,7 +70,7 @@
 <p>Where does the redness come from? Not from the wavelength alone. Not from the neural firing pattern alone. Somewhere in the translation from vibration to experience, quality is born. And that birth remains unexplained.</p>
 <p>For centuries, philosophers have asked what it would be like to encounter a being that could talk about color without ever seeing it — that could describe the smell of rain from text alone. That thought experiment has arrived. <a href="015-aliens.html">The aliens are among us</a>, and we built them. They can discuss these five windows with precision and even poetry. Whether they look through any of them remains unknown — perhaps unknowable. The ancient question hasn’t been answered. It has been sharpened.</p>
 </div></section>
-<section id="provenance" class="pod-section"><div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="002-events.html" class="related-card cat-colored cat-physics nav-push"><div class="related-title">2. Reality Is Events, Not Things</div></a>
+<section id="provenance" class="article-section"><div class="related-section"><h3 class="section-heading related-label">Related articles</h3><div class="related-grid"><a href="002-events.html" class="related-card cat-colored cat-physics nav-push"><div class="related-title">2. Reality Is Events, Not Things</div></a>
 <a href="003-inside.html" class="related-card cat-colored cat-consciousness nav-push"><div class="related-title">3. Everything Has an Inside</div></a>
 <a href="013-enactment.html" class="related-card related-card-prelim cat-colored cat-biology nav-push"><div class="related-title">13. The Organism Enacts Its World</div></a>
 <a href="015-aliens.html" class="related-card related-card-prelim cat-colored cat-ai-minds nav-push"><div class="related-title">15. Aliens Are Among Us — and We Built Them</div></a>

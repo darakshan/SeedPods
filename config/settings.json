@@ -61,6 +61,10 @@
       "name" : "Bibliography"
     },
     {
+      "link" : "footnotes",
+      "name" : "Footnotes"
+    },
+    {
       "link" : "glossary",
       "name" : "Glossary"
     },
@@ -142,6 +146,6 @@
   "surface_max_words" : 700,
   "surface_min_words" : 400,
   "title" : "SeedPods",
-  "version" : 17,
+  "version" : 18,
   "view_all" : "View all {n} seeds →"
 }

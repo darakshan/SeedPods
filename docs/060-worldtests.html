@@ -17,8 +17,8 @@
 <div class="nav-row">
 <div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
-  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search pods" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
+  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search articles" onclick="seedNavOpenSearch();return false">Search</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto article</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to article" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
@@ -28,6 +28,7 @@
             <ul class="nav-dropdown"><li><a href="trails.html" class="nav-push">Trails</a></li>
               <li><a href="list.html" class="nav-push">Index</a></li>
               <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="footnotes.html" class="nav-push">Footnotes</a></li>
               <li><a href="glossary.html" class="nav-push">Glossary</a></li>
               <li><a href="map.html" class="nav-push">Map</a></li>
               <li><a href="more.html" class="nav-push">More</a></li></ul>
@@ -41,13 +42,14 @@
     <li><a href="trails.html" class="nav-push">Trails</a></li>
               <li><a href="list.html" class="nav-push">Index</a></li>
               <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="footnotes.html" class="nav-push">Footnotes</a></li>
               <li><a href="glossary.html" class="nav-push">Glossary</a></li>
               <li><a href="map.html" class="nav-push">Map</a></li>
               <li><a href="more.html" class="nav-push">More</a></li>
   </ul></div>
 </div>
 </nav>
-<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search pods" hidden>
+<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search articles" hidden>
   <div class="search-dialog-overlay" onclick="seedNavCloseSearch()"></div>
   <div class="search-dialog-inner">
     <div class="search-dialog-header"><input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)"><button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button></div>
@@ -56,13 +58,13 @@
   </div>
 </div>
 <div class="wrap">
-  <div class="pod-header fade cat-colored cat-physics"><h1>Many Worlds as Parallel Evolutionary Experiments</h1><p class="premise">Every quantum branch is running its own evolutionary experiment — the universe expanding its search across possibility space — and the Omega Point Teilhard imagined for one timeline may be an attractor that every branch of the wavefunction approaches along its own path.</p><div class="pod-nav-row"><a class="header-nav-prev nav-push" href="059-galaxyevolve.html" aria-label="Previous pod">&lt;&lt;</a><span class="header-nav-num">Pod 60</span><a class="header-nav-next nav-push" href="061-babyuniverse.html" aria-label="Next pod">&gt;&gt;</a></div></div>
-  <section id="proto" class="pod-section"><h2 class="section-heading">Proto</h2><div class="prose"><p>Everett’s Many Worlds interpretation<sup class="footnote-ref" id="ref-060-worldtests-1"><a href="bibliography.html#ref-060-worldtests-1">1</a></sup><sup class="footnote-ref" id="ref-060-worldtests-2"><a href="bibliography.html#ref-060-worldtests-2">2</a></sup> says every quantum branch is real. The universe does not choose between possibilities — it explores all of them simultaneously, in nearly-orthogonal subspaces of Hilbert space.</p>
+  <div class="article-header fade cat-colored cat-physics"><h1>Many Worlds as Parallel Evolutionary Experiments</h1><p class="premise">Every quantum branch is running its own evolutionary experiment — the universe expanding its search across possibility space — and the Omega Point Teilhard imagined for one timeline may be an attractor that every branch of the wavefunction approaches along its own path.</p><div class="article-nav-row"><a class="header-nav-prev nav-push" href="059-galaxyevolve.html" aria-label="Previous article">&lt;&lt;</a><span class="header-nav-num">Article 60</span><a class="header-nav-next nav-push" href="061-babyuniverse.html" aria-label="Next article">&gt;&gt;</a></div></div>
+  <section id="proto" class="article-section"><h2 class="section-heading">Proto</h2><div class="prose"><p>Everett’s Many Worlds interpretation<sup class="footnote-ref" id="ref-060-worldtests-1"><a href="bibliography.html#ref-060-worldtests-1">1</a></sup><sup class="footnote-ref" id="ref-060-worldtests-2"><a href="bibliography.html#ref-060-worldtests-2">2</a></sup> says every quantum branch is real. The universe does not choose between possibilities — it explores all of them simultaneously, in nearly-orthogonal subspaces of Hilbert space.</p>
 <p>Combined with the galactic evolution picture, this becomes something remarkable. Each branch of the universal wavefunction is running its own evolutionary experiment. The branching is not the universe losing coherence — it is the universe expanding its search across possibility space. Every quantum measurement is a bifurcation point, every branch a new thread of the cosmic evolutionary process.</p>
 <p>Teilhard imagined one Omega Point — a single convergence at the end of cosmic history. Many Worlds suggests the attractor is deeper than any single thread. Every branch may be feeling toward the same convergence from a different direction. The Omega Point is not a location in one timeline. It is a feature of the structure of possibility space itself — an attractor that every branch of the wavefunction approaches along its own path.</p>
 <figure class="directive-image directive-image--left"><img src="images/060-worldtests.png" alt=""><figcaption>Many worlds: parallel quantum branches as evolutionary experiments</figcaption></figure>
 </div></section>
-<section id="provenance" class="pod-section"><div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="005-freewill.html" class="related-card related-card-prelim cat-colored cat-consciousness nav-push"><div class="related-title">5. Freedom Is What Nature Does Everywhere</div></a>
+<section id="provenance" class="article-section"><div class="related-section"><h3 class="section-heading related-label">Related articles</h3><div class="related-grid"><a href="005-freewill.html" class="related-card related-card-prelim cat-colored cat-consciousness nav-push"><div class="related-title">5. Freedom Is What Nature Does Everywhere</div></a>
 <a href="009-randomness.html" class="related-card cat-colored cat-biology nav-push"><div class="related-title">9. Structure Is What Randomness Does</div></a>
 <a href="058-galacticnets.html" class="related-card related-card-prelim cat-colored cat-ai-minds nav-push"><div class="related-title">58. Galaxies and AI Weight Matrices as Structural Homologs</div></a>
 <a href="062-branchingdice.html" class="related-card related-card-prelim cat-colored cat-mathematics nav-push"><div class="related-title">62. Branching Numbers as Finite Dice</div></a>

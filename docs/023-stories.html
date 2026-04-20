@@ -17,8 +17,8 @@
 <div class="nav-row">
 <div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
-  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search pods" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
+  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search articles" onclick="seedNavOpenSearch();return false">Search</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto article</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to article" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
@@ -28,6 +28,7 @@
             <ul class="nav-dropdown"><li><a href="trails.html" class="nav-push">Trails</a></li>
               <li><a href="list.html" class="nav-push">Index</a></li>
               <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="footnotes.html" class="nav-push">Footnotes</a></li>
               <li><a href="glossary.html" class="nav-push">Glossary</a></li>
               <li><a href="map.html" class="nav-push">Map</a></li>
               <li><a href="more.html" class="nav-push">More</a></li></ul>
@@ -41,13 +42,14 @@
     <li><a href="trails.html" class="nav-push">Trails</a></li>
               <li><a href="list.html" class="nav-push">Index</a></li>
               <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="footnotes.html" class="nav-push">Footnotes</a></li>
               <li><a href="glossary.html" class="nav-push">Glossary</a></li>
               <li><a href="map.html" class="nav-push">Map</a></li>
               <li><a href="more.html" class="nav-push">More</a></li>
   </ul></div>
 </div>
 </nav>
-<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search pods" hidden>
+<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search articles" hidden>
   <div class="search-dialog-overlay" onclick="seedNavCloseSearch()"></div>
   <div class="search-dialog-inner">
     <div class="search-dialog-header"><input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)"><button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button></div>
@@ -56,10 +58,10 @@
   </div>
 </div>
 <div class="wrap">
-  <div class="pod-header fade cat-colored cat-consciousness"><h1>Reality Is Made of Stories, Not Atoms</h1><p class="premise">We never access reality directly, only the story we tell about it — and the deeper the level of narrative, from dramatic arc to perceptual label to conceptual metaphor, the less it feels like story and the more it feels like the given.</p><div class="pod-nav-row"><a class="header-nav-prev nav-push" href="022-locked.html" aria-label="Previous pod">&lt;&lt;</a><span class="header-nav-num">Pod 23</span><a class="header-nav-next nav-push" href="024-ghostmachine.html" aria-label="Next pod">&gt;&gt;</a></div></div>
-  <section id="_prolog" class="pod-section pod-prolog"><div class="prose"><p>@subtitle(The story we agree upon becomes the world we live in.)</p>
+  <div class="article-header fade cat-colored cat-consciousness"><h1>Reality Is Made of Stories, Not Atoms</h1><p class="premise">We never access reality directly, only the story we tell about it — and the deeper the level of narrative, from dramatic arc to perceptual label to conceptual metaphor, the less it feels like story and the more it feels like the given.</p><div class="article-nav-row"><a class="header-nav-prev nav-push" href="022-locked.html" aria-label="Previous article">&lt;&lt;</a><span class="header-nav-num">Article 23</span><a class="header-nav-next nav-push" href="024-ghostmachine.html" aria-label="Next article">&gt;&gt;</a></div></div>
+  <section id="_prolog" class="article-section article-prolog"><div class="prose"><p>@subtitle(The story we agree upon becomes the world we live in.)</p>
 </div></section>
-<section id="depth" class="pod-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>Muriel Rukeyser wrote that “the universe is made of stories, not of atoms.” <sup class="footnote-ref" id="ref-023-stories-1"><a href="bibliography.html#ref-023-stories-1">1</a></sup> How right she was.</p>
+<section id="depth" class="article-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>Muriel Rukeyser wrote that “the universe is made of stories, not of atoms.” <sup class="footnote-ref" id="ref-023-stories-1"><a href="bibliography.html#ref-023-stories-1">1</a></sup> How right she was.</p>
 <figure class="directive-image directive-image--left"><img src="images/023-stories.jpg" alt=""><figcaption>Cave paintings: reality made of stories</figcaption></figure>
 <p>The naive view holds that reality exists independently and we build models of it. But we never access the reality directly, only the model. The objectivity we prize is itself a structural feature of the model, not a window through which we glimpse something outside it. Kant saw this: the categories of space, time, causation are not discovered in the world but brought to it. What he didn’t emphasize is that these structuring operations are, in a meaningful sense, narrative. They impose sequence, relation, protagonist.</p>
 <p>We can distinguish at least three levels of story, though these are our own categories for noticing how deep the narrative goes, not established divisions in the literature.</p>
@@ -74,7 +76,7 @@
 <p>What then? One cannot step outside narrative to perceive without framing. But one can develop a second-order awareness: I am telling a story. This holds for individual perception, interpersonal interpretation, and collective reality. The world we share is, at bottom, the narrative we have agreed to tell together. <em>Consensus reality is negotiated fiction that forgot it was negotiated.</em></p>
 <p>The atoms are indifferent to our agreements. But we are not, because the story we converge on becomes the world we inhabit and the selves we become.</p>
 </div></section>
-<section id="provenance" class="pod-section"><div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="001-caloric.html" class="related-card cat-colored cat-knowledge nav-push"><div class="related-title">1. The Map That Was Wrong</div></a>
+<section id="provenance" class="article-section"><div class="related-section"><h3 class="section-heading related-label">Related articles</h3><div class="related-grid"><a href="001-caloric.html" class="related-card cat-colored cat-knowledge nav-push"><div class="related-title">1. The Map That Was Wrong</div></a>
 <a href="013-enactment.html" class="related-card related-card-prelim cat-colored cat-biology nav-push"><div class="related-title">13. The Organism Enacts Its World</div></a>
 <a href="015-aliens.html" class="related-card related-card-prelim cat-colored cat-ai-minds nav-push"><div class="related-title">15. Aliens Are Among Us — and We Built Them</div></a>
 <a href="027-usedtothink.html" class="related-card cat-colored cat-knowledge nav-push"><div class="related-title">27. We Used to Think. Now We Know.</div></a>

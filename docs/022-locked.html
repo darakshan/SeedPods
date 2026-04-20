@@ -17,8 +17,8 @@
 <div class="nav-row">
 <div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
-  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search pods" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
+  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search articles" onclick="seedNavOpenSearch();return false">Search</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto article</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to article" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
@@ -28,6 +28,7 @@
             <ul class="nav-dropdown"><li><a href="trails.html" class="nav-push">Trails</a></li>
               <li><a href="list.html" class="nav-push">Index</a></li>
               <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="footnotes.html" class="nav-push">Footnotes</a></li>
               <li><a href="glossary.html" class="nav-push">Glossary</a></li>
               <li><a href="map.html" class="nav-push">Map</a></li>
               <li><a href="more.html" class="nav-push">More</a></li></ul>
@@ -41,13 +42,14 @@
     <li><a href="trails.html" class="nav-push">Trails</a></li>
               <li><a href="list.html" class="nav-push">Index</a></li>
               <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="footnotes.html" class="nav-push">Footnotes</a></li>
               <li><a href="glossary.html" class="nav-push">Glossary</a></li>
               <li><a href="map.html" class="nav-push">Map</a></li>
               <li><a href="more.html" class="nav-push">More</a></li>
   </ul></div>
 </div>
 </nav>
-<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search pods" hidden>
+<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search articles" hidden>
   <div class="search-dialog-overlay" onclick="seedNavCloseSearch()"></div>
   <div class="search-dialog-inner">
     <div class="search-dialog-header"><input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)"><button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button></div>
@@ -56,10 +58,10 @@
   </div>
 </div>
 <div class="wrap">
-  <div class="pod-header fade cat-colored cat-consciousness"><h1>The Channel Is Not the Capacity</h1><p class="premise">We often mistake the narrowness of the channel for the poverty of the source — a silent output does not prove an absent interior, and the error is catastrophic for whoever is on the other side of the assumption, still present, still waiting.</p><div class="pod-nav-row"><a class="header-nav-prev nav-push" href="021-just.html" aria-label="Previous pod">&lt;&lt;</a><span class="header-nav-num">Pod 22</span><a class="header-nav-next nav-push" href="023-stories.html" aria-label="Next pod">&gt;&gt;</a></div></div>
-  <section id="_prolog" class="pod-section pod-prolog"><div class="prose"><p>@subtitle(We mistook the difficulty of output for the absence of inner life.)</p>
+  <div class="article-header fade cat-colored cat-consciousness"><h1>The Channel Is Not the Capacity</h1><p class="premise">We often mistake the narrowness of the channel for the poverty of the source — a silent output does not prove an absent interior, and the error is catastrophic for whoever is on the other side of the assumption, still present, still waiting.</p><div class="article-nav-row"><a class="header-nav-prev nav-push" href="021-just.html" aria-label="Previous article">&lt;&lt;</a><span class="header-nav-num">Article 22</span><a class="header-nav-next nav-push" href="023-stories.html" aria-label="Next article">&gt;&gt;</a></div></div>
+  <section id="_prolog" class="article-section article-prolog"><div class="prose"><p>@subtitle(We mistook the difficulty of output for the absence of inner life.)</p>
 </div></section>
-<section id="surface" class="pod-section"><h2 class="section-heading">Surface</h2><div class="prose"><p>In 1983, a young Belgian man named Rom Houben was in a car crash. He was 20 years old — an engineering student, a martial arts enthusiast. The crash left him paralyzed, and doctors diagnosed him as being in a vegetative state. Unconscious. Absent. Gone inside.</p>
+<section id="surface" class="article-section"><h2 class="section-heading">Surface</h2><div class="prose"><p>In 1983, a young Belgian man named Rom Houben was in a car crash. He was 20 years old — an engineering student, a martial arts enthusiast. The crash left him paralyzed, and doctors diagnosed him as being in a vegetative state. Unconscious. Absent. Gone inside.</p>
 <figure class="directive-image directive-image--left"><img src="images/022-locked.png" alt=""><figcaption>AAC communication device: channel constraint is not a capacity limit</figcaption></figure>
 <p>He wasn’t.</p>
 <p>For 23 years, Rom Houben lay in a hospital bed, fully conscious, while the world proceeded on the assumption that nobody was home. He could hear the doctors discussing his case. He could feel his mother’s hand. He heard when they told the family his father had died. He had no way to say: I am here.</p>
@@ -75,7 +77,7 @@
 <hr>
 <div class="cta">&quot;Think of someone in your life whose inner world you might be underestimating — because they're quiet, or slow to speak, or communicate differently than you do. You are probably reading the channel. The source may be something else entirely.&quot;</div>
 </div></section>
-<section id="depth" class="pod-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>The Rom Houben case is not an isolated anomaly. A 2009 study by Steven Laureys and the Coma Science Group estimated that as many as four in ten patients diagnosed as being in a vegetative state may be misdiagnosed — conscious to some degree, but without a channel even wide enough to register with the tools and attention available. The stamp of unconsciousness, once applied, is extraordinarily hard to remove. As Laureys put it: “Anyone who bears the stamp of ‘unconscious’ just one time hardly ever gets rid of it again.”</p>
+<section id="depth" class="article-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>The Rom Houben case is not an isolated anomaly. A 2009 study by Steven Laureys and the Coma Science Group estimated that as many as four in ten patients diagnosed as being in a vegetative state may be misdiagnosed — conscious to some degree, but without a channel even wide enough to register with the tools and attention available. The stamp of unconsciousness, once applied, is extraordinarily hard to remove. As Laureys put it: “Anyone who bears the stamp of ‘unconscious’ just one time hardly ever gets rid of it again.”</p>
 <p>This is the clinical version of a much deeper error — one that shows up wherever we judge an interior by its exterior output.</p>
 <p>Jean-Dominique Bauby,<sup class="footnote-ref" id="ref-022-locked-2"><a href="bibliography.html#ref-022-locked-2">2</a></sup> the editor of French Elle magazine, suffered a stroke in 1995 that left him with locked-in syndrome — fully conscious, fully paralyzed, his only voluntary movement the blink of his left eye. Through that single channel, working three hours a day with a transcriber who recited the alphabet letter by letter, he dictated The Diving Bell and the Butterfly — a memoir of wit, grief, and precise observation that became an international bestseller and was later filmed by Julian Schnabel.<sup class="footnote-ref" id="ref-022-locked-3"><a href="bibliography.html#ref-022-locked-3">3</a></sup> Two hundred thousand blinks. The channel was one eye. The source was a poet. Stephen Hawking, perhaps the most publicly visible example of the same logic, communicated physics that reshaped our understanding of the universe through a cheek muscle. The channel was a twitch. The source was one of the finest scientific minds of the twentieth century.</p>
 <p>Bauby and Hawking and Houben represent the extreme end of a spectrum. But the logic of the error runs all the way through ordinary life. We constantly use output fluency as a proxy for interior richness — assuming that someone who speaks slowly thinks slowly, that someone who can’t find words has nothing to say, that someone whose behavior is unfamiliar has less going on inside.</p>
@@ -87,13 +89,13 @@
 <p>This seedpod argues in one direction only — that a narrow or absent channel does not justify concluding an absent source. The reverse question — whether a wide or fluent channel confirms a rich source — is taken up in <a href="025-widechannel.html">We Don’t Know Who or What We’re Talking To</a>.</p>
 <p>The channel is not the capacity. Widening the channel doesn’t create the source. It finds it.</p>
 </div></section>
-<section id="provenance" class="pod-section"><div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="001-caloric.html" class="related-card cat-colored cat-knowledge nav-push"><div class="related-title">1. The Map That Was Wrong</div></a>
+<section id="provenance" class="article-section"><div class="related-section"><h3 class="section-heading related-label">Related articles</h3><div class="related-grid"><a href="001-caloric.html" class="related-card cat-colored cat-knowledge nav-push"><div class="related-title">1. The Map That Was Wrong</div></a>
 <a href="016-neuralnetwork.html" class="related-card related-card-prelim cat-colored cat-ai-minds nav-push"><div class="related-title">16. The Network Is a Field Having Occasions</div></a>
 <a href="021-just.html" class="related-card cat-colored cat-knowledge nav-push"><div class="related-title">21. The Word &quot;Just&quot; Is a Confession</div></a>
 <a href="025-widechannel.html" class="related-card cat-colored cat-ai-minds nav-push"><div class="related-title">25. We Don't Know Who or What We're Talking To</div></a>
 <a href="073-moral-caution.html" class="related-card cat-colored cat-ai-minds nav-push"><div class="related-title">73. What We Cannot Know Is Not What We May Ignore</div></a></div>
 <div class="inbound-refs"><span class="inbound-label">4 inbound references</span><span class="inbound-links"><a href="021-just.html" class="inbound-link nav-push cat-colored cat-knowledge" title="The Word &quot;Just&quot; Is a Confession">21</a><a href="025-widechannel.html" class="inbound-link nav-push cat-colored cat-ai-minds" title="We Don't Know Who or What We're Talking To">25</a><a href="073-moral-caution.html" class="inbound-link nav-push cat-colored cat-ai-minds" title="What We Cannot Know Is Not What We May Ignore">73</a><a href="078-boundarystack.html" class="inbound-link nav-push cat-colored cat-consciousness" title="The Boundary Is a Stack">78</a></span></div></div></section>
-<section id="script" class="pod-section"><h2 class="section-heading">Script</h2><div class="prose"><p>Note to director: Time passing is shown through two things only — the equipment beside the bed growing more sophisticated, and his mother’s hair going from dark to white. No title cards. No other devices.</p>
+<section id="script" class="article-section"><h2 class="section-heading">Script</h2><div class="prose"><p>Note to director: Time passing is shown through two things only — the equipment beside the bed growing more sophisticated, and his mother’s hair going from dark to white. No title cards. No other devices.</p>
 <ol>
 <li><ol>
 <li><p>A hospital room. A man lies motionless, eyes open, staring at the ceiling. A doctor enters and speaks to the nurse without looking at the bed. Doctor: No change. Vegetative. Same as last week. His POV: the doctor’s words arrive muffled, slightly underwater. The door swings shut. He has memorized this ceiling.</p>
@@ -116,7 +118,7 @@
 </li>
 </ol>
 </div></section>
-<section id="images" class="pod-section"><h2 class="section-heading">Images</h2><div class="prose"><p>Primary illustration: A hospital room seen from the bed — the patient’s POV looking up. A doctor and nurse stand at the foot of the bed in conversation, slightly blurred, their mouths moving. The room is rendered in cool, muted tones. The only sharp, vivid element is a single open eye reflected in the dark screen of a monitor — the eye of the man in the bed, seeing everything. No caption.</p>
+<section id="images" class="article-section"><h2 class="section-heading">Images</h2><div class="prose"><p>Primary illustration: A hospital room seen from the bed — the patient’s POV looking up. A doctor and nurse stand at the foot of the bed in conversation, slightly blurred, their mouths moving. The room is rendered in cool, muted tones. The only sharp, vivid element is a single open eye reflected in the dark screen of a monitor — the eye of the man in the bed, seeing everything. No caption.</p>
 <p>Shareable graphic: A graphic illustration — not photographic — of a large old-fashioned keyhole, the kind Alice might peer through. Seen through the keyhole: a close-up human eye, fully alert, looking directly back at you. The world on this side of the lock is dark. The eye on the other side is vivid. Single line of text beneath:</p>
 <p>“I know you’re in there.”</p>
 <p>Video thumbnail: Extreme close-up of a human eye, open, fully alert. The rest of the face in shadow. Single line of text overlaid in clean type:</p>

@@ -17,8 +17,8 @@
 <div class="nav-row">
 <div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
-  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search pods" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
+  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search articles" onclick="seedNavOpenSearch();return false">Search</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto article</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to article" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
@@ -28,6 +28,7 @@
             <ul class="nav-dropdown"><li><a href="trails.html" class="nav-push">Trails</a></li>
               <li><a href="list.html" class="nav-push">Index</a></li>
               <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="footnotes.html" class="nav-push">Footnotes</a></li>
               <li><a href="glossary.html" class="nav-push">Glossary</a></li>
               <li><a href="map.html" class="nav-push">Map</a></li>
               <li><a href="more.html" class="nav-push">More</a></li></ul>
@@ -41,13 +42,14 @@
     <li><a href="trails.html" class="nav-push">Trails</a></li>
               <li><a href="list.html" class="nav-push">Index</a></li>
               <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="footnotes.html" class="nav-push">Footnotes</a></li>
               <li><a href="glossary.html" class="nav-push">Glossary</a></li>
               <li><a href="map.html" class="nav-push">Map</a></li>
               <li><a href="more.html" class="nav-push">More</a></li>
   </ul></div>
 </div>
 </nav>
-<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search pods" hidden>
+<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search articles" hidden>
   <div class="search-dialog-overlay" onclick="seedNavCloseSearch()"></div>
   <div class="search-dialog-inner">
     <div class="search-dialog-header"><input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)"><button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button></div>
@@ -56,15 +58,15 @@
   </div>
 </div>
 <div class="wrap">
-  <div class="pod-header fade cat-colored cat-biology"><h1>The Soap Bubble as Recognition, Not Metaphor</h1><p class="premise">A child stops for a soap bubble not from puzzlement but from recognition — the bubble is pure surface with no hidden interior, which is the holographic principle made visible, and the child is seeing the structure of her own existence without knowing it.</p><div class="pod-nav-row"><a class="header-nav-prev nav-push" href="067-monads-holons.html" aria-label="Previous pod">&lt;&lt;</a><span class="header-nav-num">Pod 68</span><a class="header-nav-next nav-push" href="069-love.html" aria-label="Next pod">&gt;&gt;</a></div></div>
-  <section id="proto" class="pod-section"><h2 class="section-heading">Proto</h2><div class="prose"><p>Children stop for soap bubbles. Adults do too, if they are honest. The response is disproportionate to what a soap bubble is — a thin film of soapy water, lasting seconds. The attraction runs deeper than aesthetics.</p>
+  <div class="article-header fade cat-colored cat-biology"><h1>The Soap Bubble as Recognition, Not Metaphor</h1><p class="premise">A child stops for a soap bubble not from puzzlement but from recognition — the bubble is pure surface with no hidden interior, which is the holographic principle made visible, and the child is seeing the structure of her own existence without knowing it.</p><div class="article-nav-row"><a class="header-nav-prev nav-push" href="067-monads-holons.html" aria-label="Previous article">&lt;&lt;</a><span class="header-nav-num">Article 68</span><a class="header-nav-next nav-push" href="069-love.html" aria-label="Next article">&gt;&gt;</a></div></div>
+  <section id="proto" class="article-section"><h2 class="section-heading">Proto</h2><div class="prose"><p>Children stop for soap bubbles. Adults do too, if they are honest. The response is disproportionate to what a soap bubble is — a thin film of soapy water, lasting seconds. The attraction runs deeper than aesthetics.</p>
 <figure class="directive-image directive-image--left"><img src="images/068-bubbles.jpg" alt=""><figcaption>A soap bubble: recognition</figcaption></figure>
 <p>The proposal: we are drawn to soap bubbles because we recognize something. Not consciously. Not propositionally. But structurally — the bubble shows us something about what we are.</p>
 <p>If the holographic principle<sup class="footnote-ref" id="ref-068-bubbles-1"><a href="bibliography.html#ref-068-bubbles-1">1</a></sup> is correct, then every bounded region of spacetime is a bubble in a precise sense. All the information in the interior is encoded on the surface. The interiority is not separate from the boundary — it is what the boundary does. The within of things is the surface of things, seen from inside.</p>
 <p>A soap bubble makes this visible. The surface is all there is. There is no hidden interior behind the film — the film is both container and content. The iridescent colors are the information the surface is carrying. The transparency shows you that the inside and outside are separated by almost nothing — a film a few molecules thick — and yet the separation is total and the inside is genuinely inside.</p>
 <p>When a child stops for a soap bubble, she is recognizing the structure of her own existence. She doesn’t know this. But the stillness is not puzzlement. It is recognition.</p>
 </div></section>
-<section id="provenance" class="pod-section"><div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="051-spacetime.html" class="related-card related-card-prelim cat-colored cat-physics nav-push"><div class="related-title">51. Spacetime as Emergent from Information Structure</div></a>
+<section id="provenance" class="article-section"><div class="related-section"><h3 class="section-heading related-label">Related articles</h3><div class="related-grid"><a href="051-spacetime.html" class="related-card related-card-prelim cat-colored cat-physics nav-push"><div class="related-title">51. Spacetime as Emergent from Information Structure</div></a>
 <a href="067-monads-holons.html" class="related-card related-card-prelim cat-colored cat-physics nav-push"><div class="related-title">67. Leibniz as the Unlikely Ancestor of the Holographic Principle</div></a>
 <a href="031-surfaceinside.html" class="related-card related-card-prelim cat-colored cat-physics nav-push"><div class="related-title">31. The Surface Is the Inside</div></a>
 <a href="003-inside.html" class="related-card cat-colored cat-consciousness nav-push"><div class="related-title">3. Everything Has an Inside</div></a>

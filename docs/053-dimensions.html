@@ -17,8 +17,8 @@
 <div class="nav-row">
 <div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
-  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search pods" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
+  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search articles" onclick="seedNavOpenSearch();return false">Search</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto article</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to article" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
@@ -28,6 +28,7 @@
             <ul class="nav-dropdown"><li><a href="trails.html" class="nav-push">Trails</a></li>
               <li><a href="list.html" class="nav-push">Index</a></li>
               <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="footnotes.html" class="nav-push">Footnotes</a></li>
               <li><a href="glossary.html" class="nav-push">Glossary</a></li>
               <li><a href="map.html" class="nav-push">Map</a></li>
               <li><a href="more.html" class="nav-push">More</a></li></ul>
@@ -41,13 +42,14 @@
     <li><a href="trails.html" class="nav-push">Trails</a></li>
               <li><a href="list.html" class="nav-push">Index</a></li>
               <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="footnotes.html" class="nav-push">Footnotes</a></li>
               <li><a href="glossary.html" class="nav-push">Glossary</a></li>
               <li><a href="map.html" class="nav-push">Map</a></li>
               <li><a href="more.html" class="nav-push">More</a></li>
   </ul></div>
 </div>
 </nav>
-<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search pods" hidden>
+<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search articles" hidden>
   <div class="search-dialog-overlay" onclick="seedNavCloseSearch()"></div>
   <div class="search-dialog-inner">
     <div class="search-dialog-header"><input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)"><button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button></div>
@@ -56,8 +58,8 @@
   </div>
 </div>
 <div class="wrap">
-  <div class="pod-header fade cat-colored cat-mathematics"><h1>The Virtual Dimensions Formula as a Publishable Conjecture</h1><p class="premise">Replace the arbitrary tolerance in high-dimensional near-orthogonality with a principled one drawn from the Farey sequence, and a formula emerges — V(d,n) ~ (n²/π²)^d — that connects musical consonance, neural network superposition capacity, and quantum branching under one expression.</p><div class="pod-nav-row"><a class="header-nav-prev nav-push" href="052-dichotomy.html" aria-label="Previous pod">&lt;&lt;</a><span class="header-nav-num">Pod 53</span><a class="header-nav-next nav-push" href="054-bornharmonic.html" aria-label="Next pod">&gt;&gt;</a></div></div>
-  <section id="proto" class="pod-section"><h2 class="section-heading">Proto</h2><div class="prose"><p>If you have a space with d actual dimensions, how many nearly-orthogonal directions can you fit in it? The answer matters because nearly-orthogonal directions can carry independent information without crosstalk — like independent channels.</p>
+  <div class="article-header fade cat-colored cat-mathematics"><h1>The Virtual Dimensions Formula as a Publishable Conjecture</h1><p class="premise">Replace the arbitrary tolerance in high-dimensional near-orthogonality with a principled one drawn from the Farey sequence, and a formula emerges — V(d,n) ~ (n²/π²)^d — that connects musical consonance, neural network superposition capacity, and quantum branching under one expression.</p><div class="article-nav-row"><a class="header-nav-prev nav-push" href="052-dichotomy.html" aria-label="Previous article">&lt;&lt;</a><span class="header-nav-num">Article 53</span><a class="header-nav-next nav-push" href="054-bornharmonic.html" aria-label="Next article">&gt;&gt;</a></div></div>
+  <section id="proto" class="article-section"><h2 class="section-heading">Proto</h2><div class="prose"><p>If you have a space with d actual dimensions, how many nearly-orthogonal directions can you fit in it? The answer matters because nearly-orthogonal directions can carry independent information without crosstalk — like independent channels.</p>
 <figure class="directive-image directive-image--left"><img src="images/053-dimensions.jpg" alt=""><figcaption>High-dimensional geometry: virtual dimensions</figcaption></figure>
 <p>Standard mathematics (Johnson-Lindenstrauss<sup class="footnote-ref" id="ref-053-dimensions-1"><a href="bibliography.html#ref-053-dimensions-1">1</a></sup>) already shows the answer is exponential in d. But the threshold for “nearly orthogonal” is arbitrary — you pick a tolerance ε and proceed.</p>
 <p>The conjecture: replace the arbitrary tolerance with a principled one drawn from the Farey sequence. The Farey sequence orders all rational numbers between 0 and 1 by complexity — simplest fractions first. It provides a natural hierarchy of distinguishability, exactly as the ear uses it to decide which musical intervals are consonant. The octave (1/2) and fifth (1/3) are shallow in the tree. Dissonant intervals are deep.</p>
@@ -66,7 +68,7 @@
 <p>Where d is actual dimensions, n is Farey depth (your consonance threshold), and n²/π² is the count of Farey fractions at depth n — with π entering naturally from the circular structure of the rationals, not by assumption.</p>
 <p>Applications: neural network superposition capacity, Many Worlds branch distinguishability, and potentially the information capacity of physical space itself. The formula connects musical consonance, high-dimensional geometry, and quantum branching under one expression. That connection has not been made explicitly in the literature.</p>
 </div></section>
-<section id="provenance" class="pod-section"><div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="057-superfarey.html" class="related-card related-card-prelim cat-colored cat-ai-minds nav-push"><div class="related-title">57. Superposition in Neural Network Representations</div></a>
+<section id="provenance" class="article-section"><div class="related-section"><h3 class="section-heading related-label">Related articles</h3><div class="related-grid"><a href="057-superfarey.html" class="related-card related-card-prelim cat-colored cat-ai-minds nav-push"><div class="related-title">57. Superposition in Neural Network Representations</div></a>
 <a href="060-worldtests.html" class="related-card related-card-prelim cat-colored cat-physics nav-push"><div class="related-title">60. Many Worlds as Parallel Evolutionary Experiments</div></a>
 <a href="038-consonance-map.html" class="related-card related-card-prelim cat-colored cat-feeling nav-push"><div class="related-title">38. The Surprising Consonance Map</div></a>
 <a href="054-bornharmonic.html" class="related-card related-card-prelim cat-colored cat-physics nav-push"><div class="related-title">54. The Born Rule as Harmonic Measure</div></a>

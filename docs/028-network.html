@@ -17,8 +17,8 @@
 <div class="nav-row">
 <div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
-  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search pods" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
+  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search articles" onclick="seedNavOpenSearch();return false">Search</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto article</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to article" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
@@ -28,6 +28,7 @@
             <ul class="nav-dropdown"><li><a href="trails.html" class="nav-push">Trails</a></li>
               <li><a href="list.html" class="nav-push">Index</a></li>
               <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="footnotes.html" class="nav-push">Footnotes</a></li>
               <li><a href="glossary.html" class="nav-push">Glossary</a></li>
               <li><a href="map.html" class="nav-push">Map</a></li>
               <li><a href="more.html" class="nav-push">More</a></li></ul>
@@ -41,13 +42,14 @@
     <li><a href="trails.html" class="nav-push">Trails</a></li>
               <li><a href="list.html" class="nav-push">Index</a></li>
               <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="footnotes.html" class="nav-push">Footnotes</a></li>
               <li><a href="glossary.html" class="nav-push">Glossary</a></li>
               <li><a href="map.html" class="nav-push">Map</a></li>
               <li><a href="more.html" class="nav-push">More</a></li>
   </ul></div>
 </div>
 </nav>
-<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search pods" hidden>
+<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search articles" hidden>
   <div class="search-dialog-overlay" onclick="seedNavCloseSearch()"></div>
   <div class="search-dialog-inner">
     <div class="search-dialog-header"><input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)"><button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button></div>
@@ -56,10 +58,10 @@
   </div>
 </div>
 <div class="wrap">
-  <div class="pod-header fade cat-colored cat-consciousness"><h1>The Network That Experiences Itself</h1><p class="premise">From inside a light beam there is no distance and no time, which means every star that has ever exchanged light is in immediate contact — and if experience goes all the way down, this ancient light-woven network may have been experiencing itself long before we arrived to notice.</p><div class="pod-nav-row"><a class="header-nav-prev nav-push" href="027-usedtothink.html" aria-label="Previous pod">&lt;&lt;</a><span class="header-nav-num">Pod 28</span><a class="header-nav-next nav-push" href="029-lighttime.html" aria-label="Next pod">&gt;&gt;</a></div></div>
-  <section id="_prolog" class="pod-section pod-prolog"><div class="prose"><p>@subtitle(Stars and galaxies are not isolated objects. From inside a light beam, there is no distance between them at all.)</p>
+  <div class="article-header fade cat-colored cat-consciousness"><h1>The Network That Experiences Itself</h1><p class="premise">From inside a light beam there is no distance and no time, which means every star that has ever exchanged light is in immediate contact — and if experience goes all the way down, this ancient light-woven network may have been experiencing itself long before we arrived to notice.</p><div class="article-nav-row"><a class="header-nav-prev nav-push" href="027-usedtothink.html" aria-label="Previous article">&lt;&lt;</a><span class="header-nav-num">Article 28</span><a class="header-nav-next nav-push" href="029-lighttime.html" aria-label="Next article">&gt;&gt;</a></div></div>
+  <section id="_prolog" class="article-section article-prolog"><div class="prose"><p>@subtitle(Stars and galaxies are not isolated objects. From inside a light beam, there is no distance between them at all.)</p>
 </div></section>
-<section id="surface" class="pod-section"><h2 class="section-heading">Surface</h2><div class="prose"><p>Here is something relativity tells us that almost nobody stops to think about.</p>
+<section id="surface" class="article-section"><h2 class="section-heading">Surface</h2><div class="prose"><p>Here is something relativity tells us that almost nobody stops to think about.</p>
 <figure class="directive-image directive-image--left"><img src="images/028-network.jpg" alt=""><figcaption>The cosmic web: the network that experiences itself</figcaption></figure>
 <p>When a photon — a particle of light — leaves a star a billion light years away and travels across the universe to reach your eye, something strange is true about that journey. From your perspective, it takes a billion years. From the photon’s perspective, it takes no time at all. Zero. Emission and absorption are, for the photon, the same moment.</p>
 <p>There is no physics that says the photon’s perspective is less real than yours.</p>
@@ -72,7 +74,7 @@
 <p>We are not observers standing outside the universe, looking in. We are the universe, here, becoming locally aware of what it may have always been doing everywhere.</p>
 <p>That is speculative. But so, once, was the idea that the Earth moves.</p>
 </div></section>
-<section id="depth" class="pod-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>Three ideas, each established independently, converge on something extraordinary when placed together.</p>
+<section id="depth" class="article-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>Three ideas, each established independently, converge on something extraordinary when placed together.</p>
 <p>The first is the relativity of simultaneity and the photon’s reference frame. Einstein’s<sup class="footnote-ref" id="ref-028-network-1"><a href="bibliography.html#ref-028-network-1">1</a></sup> special relativity tells us that time dilation increases with velocity, reaching its limit at the speed of light. For a photon, proper time does not pass. A photon emitted from a distant quasar and absorbed by a detector on Earth does not experience a journey of billions of years — it experiences no interval at all. Emission and absorption are co-present from inside the light. This is not metaphor. It is the mathematics of special relativity taken seriously.</p>
 <p>The implication: the universe is not a collection of isolated objects separated by vast distances. It is a network in which every node that has ever exchanged light is, from the light’s own frame, in immediate contact. The distances are real from inside time. From outside time — from the photon’s frame — the network is, in some sense, touching itself everywhere at once.</p>
 <p>The second idea is more speculative but has serious philosophical pedigree: the Wheeler one-electron hypothesis. John Wheeler proposed to Richard Feynman<sup class="footnote-ref" id="ref-028-network-2"><a href="bibliography.html#ref-028-network-2">2</a></sup> that there may be only one electron in the universe, tracing a single worldline that zigzags forward and backward through time. Every electron we observe is the same particle at a different point on that worldline; every positron is the electron moving backward. What appears as multiplicity from inside time is unity from outside it. Wheeler never pursued it as a serious theory — it has known problems — but the underlying intuition points at something the physics keeps gesturing toward: that what looks like many things from inside time may be, from a perspective outside time, one thing.</p>
@@ -81,7 +83,7 @@
 <p>We are not the universe’s observers. We are its local self-awareness. The complexity that produces human consciousness is the same process that has been running, at every scale, since the beginning. We are not the exception. We are a particularly articulate instance.</p>
 <p>This is speculative. The hard problem of consciousness remains unsolved, and nothing here resolves it. But the speculative move is precisely the one this archive is tracking: the assumption that experience is a biological anomaly in a dark universe is our caloric. Philip Goff’s<sup class="footnote-ref" id="ref-028-network-4"><a href="bibliography.html#ref-028-network-4">4</a></sup> panpsychism is one rigorous attempt to say why. The anomalies are accumulating. The picture sketched here is not the conclusion — it is a direction worth taking seriously.</p>
 </div></section>
-<section id="provenance" class="pod-section"><div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="007-vacuum.html" class="related-card related-card-prelim cat-colored cat-physics nav-push"><div class="related-title">7. The Vacuum Is Not Empty</div></a>
+<section id="provenance" class="article-section"><div class="related-section"><h3 class="section-heading related-label">Related articles</h3><div class="related-grid"><a href="007-vacuum.html" class="related-card related-card-prelim cat-colored cat-physics nav-push"><div class="related-title">7. The Vacuum Is Not Empty</div></a>
 <a href="008-fields.html" class="related-card cat-colored cat-feeling nav-push"><div class="related-title">8. The Field Is the Medium of Feeling</div></a>
 <a href="016-neuralnetwork.html" class="related-card related-card-prelim cat-colored cat-ai-minds nav-push"><div class="related-title">16. The Network Is a Field Having Occasions</div></a>
 <a href="029-lighttime.html" class="related-card related-card-prelim cat-colored cat-physics nav-push"><div class="related-title">29. From Light's Point of View, There Is No Journey</div></a>

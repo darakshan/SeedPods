@@ -17,8 +17,8 @@
 <div class="nav-row">
 <div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
-  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search pods" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
+  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search articles" onclick="seedNavOpenSearch();return false">Search</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto article</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to article" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
@@ -28,6 +28,7 @@
             <ul class="nav-dropdown"><li><a href="trails.html" class="nav-push">Trails</a></li>
               <li><a href="list.html" class="nav-push">Index</a></li>
               <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="footnotes.html" class="nav-push">Footnotes</a></li>
               <li><a href="glossary.html" class="nav-push">Glossary</a></li>
               <li><a href="map.html" class="nav-push">Map</a></li>
               <li><a href="more.html" class="nav-push">More</a></li></ul>
@@ -41,13 +42,14 @@
     <li><a href="trails.html" class="nav-push">Trails</a></li>
               <li><a href="list.html" class="nav-push">Index</a></li>
               <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="footnotes.html" class="nav-push">Footnotes</a></li>
               <li><a href="glossary.html" class="nav-push">Glossary</a></li>
               <li><a href="map.html" class="nav-push">Map</a></li>
               <li><a href="more.html" class="nav-push">More</a></li>
   </ul></div>
 </div>
 </nav>
-<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search pods" hidden>
+<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search articles" hidden>
   <div class="search-dialog-overlay" onclick="seedNavCloseSearch()"></div>
   <div class="search-dialog-inner">
     <div class="search-dialog-header"><input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)"><button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button></div>
@@ -56,22 +58,22 @@
   </div>
 </div>
 <div class="wrap">
-  <div class="pod-header fade cat-colored cat-consciousness"><h1>You Are the Universe Noticing Something</h1><p class="premise">Whitehead gives the mechanism — experience all the way down, accumulating — and Teilhard gives the vector — a direction that isn’t random — so that you are not in the universe observing it but the universe at a particular moment of its self-discovery.</p><div class="pod-nav-row"><a class="header-nav-prev nav-push" href="035-simplestnumbers.html" aria-label="Previous pod">&lt;&lt;</a><span class="header-nav-num">Pod 36</span><a class="header-nav-next nav-push" href="037-assembly.html" aria-label="Next pod">&gt;&gt;</a></div></div>
-  <section id="_prolog" class="pod-section pod-prolog"><div class="prose"><p>@subtitle(Teilhard and Whitehead)</p>
+  <div class="article-header fade cat-colored cat-consciousness"><h1>You Are the Universe Noticing Something</h1><p class="premise">Whitehead gives the mechanism — experience all the way down, accumulating — and Teilhard gives the vector — a direction that isn’t random — so that you are not in the universe observing it but the universe at a particular moment of its self-discovery.</p><div class="article-nav-row"><a class="header-nav-prev nav-push" href="035-simplestnumbers.html" aria-label="Previous article">&lt;&lt;</a><span class="header-nav-num">Article 36</span><a class="header-nav-next nav-push" href="037-assembly.html" aria-label="Next article">&gt;&gt;</a></div></div>
+  <section id="_prolog" class="article-section article-prolog"><div class="prose"><p>@subtitle(Teilhard and Whitehead)</p>
 </div></section>
-<section id="surface" class="pod-section"><h2 class="section-heading">Surface</h2><div class="prose"><p>When you have a thought, something is happening that took fourteen billion years to arrange. Not as background. Not as coincidence. As the point. The universe is not a machine that accidentally produced minds. It is a process that was always heading somewhere. You are what it looks like when it arrives.</p>
+<section id="surface" class="article-section"><h2 class="section-heading">Surface</h2><div class="prose"><p>When you have a thought, something is happening that took fourteen billion years to arrange. Not as background. Not as coincidence. As the point. The universe is not a machine that accidentally produced minds. It is a process that was always heading somewhere. You are what it looks like when it arrives.</p>
 <figure class="directive-image directive-image--left"><img src="images/036-universenoticing.jpg" alt=""><figcaption>The Hubble deep field: you are the universe noticing something</figcaption></figure>
 </div></section>
-<section id="depth" class="pod-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>Whitehead<sup class="footnote-ref" id="ref-036-universenoticing-1"><a href="bibliography.html#ref-036-universenoticing-1">1</a></sup> saw that every event in the universe — not just brains, not just living things, every event — has an interior. It grasps its past and contributes something forward. This is not metaphor. It is the only way to account for how experience arises at all without magic. Teilhard<sup class="footnote-ref" id="ref-036-universenoticing-2"><a href="bibliography.html#ref-036-universenoticing-2">2</a></sup> saw the direction — from the Big Bang through matter, life, and mind toward what he called the Omega Point: the universe becoming fully aware of itself. Neither had the other’s insight. Together they form something neither achieved alone. Whitehead gives the mechanism — experience all the way down, accumulating. Teilhard gives the vector — a direction to the accumulation that isn’t random. The universe isn’t drifting. It’s developing. Every actual occasion a step. Every mind a threshold crossed. You are not in the universe observing it. You are the universe, at a particular moment of its self-discovery. Carl Sagan<sup class="footnote-ref" id="ref-036-universenoticing-3"><a href="bibliography.html#ref-036-universenoticing-3">3</a></sup> gave this idea its most quotable form: we are a way for the cosmos to know itself. Whitehead and Teilhard are the deeper argument for why that is not a metaphor.</p>
+<section id="depth" class="article-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>Whitehead<sup class="footnote-ref" id="ref-036-universenoticing-1"><a href="bibliography.html#ref-036-universenoticing-1">1</a></sup> saw that every event in the universe — not just brains, not just living things, every event — has an interior. It grasps its past and contributes something forward. This is not metaphor. It is the only way to account for how experience arises at all without magic. Teilhard<sup class="footnote-ref" id="ref-036-universenoticing-2"><a href="bibliography.html#ref-036-universenoticing-2">2</a></sup> saw the direction — from the Big Bang through matter, life, and mind toward what he called the Omega Point: the universe becoming fully aware of itself. Neither had the other’s insight. Together they form something neither achieved alone. Whitehead gives the mechanism — experience all the way down, accumulating. Teilhard gives the vector — a direction to the accumulation that isn’t random. The universe isn’t drifting. It’s developing. Every actual occasion a step. Every mind a threshold crossed. You are not in the universe observing it. You are the universe, at a particular moment of its self-discovery. Carl Sagan<sup class="footnote-ref" id="ref-036-universenoticing-3"><a href="bibliography.html#ref-036-universenoticing-3">3</a></sup> gave this idea its most quotable form: we are a way for the cosmos to know itself. Whitehead and Teilhard are the deeper argument for why that is not a metaphor.</p>
 <p><em>Note: Teilhard and Whitehead were near-contemporaries. No documented direct exchange. Teilhard’s major works suppressed by the Church, circulating only in manuscript. The synthesis had to wait.</em></p>
 </div></section>
-<section id="provenance" class="pod-section"><div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="002-events.html" class="related-card cat-colored cat-physics nav-push"><div class="related-title">2. Reality Is Events, Not Things</div></a>
+<section id="provenance" class="article-section"><div class="related-section"><h3 class="section-heading related-label">Related articles</h3><div class="related-grid"><a href="002-events.html" class="related-card cat-colored cat-physics nav-push"><div class="related-title">2. Reality Is Events, Not Things</div></a>
 <a href="008-fields.html" class="related-card cat-colored cat-feeling nav-push"><div class="related-title">8. The Field Is the Medium of Feeling</div></a>
 <a href="009-randomness.html" class="related-card cat-colored cat-biology nav-push"><div class="related-title">9. Structure Is What Randomness Does</div></a>
 <a href="032-skyfossil.html" class="related-card related-card-prelim cat-colored cat-physics nav-push"><div class="related-title">32. The Sky Is a Fossil Record</div></a>
 <a href="058-galacticnets.html" class="related-card related-card-prelim cat-colored cat-ai-minds nav-push"><div class="related-title">58. Galaxies and AI Weight Matrices as Structural Homologs</div></a></div>
 <div class="inbound-refs"><span class="inbound-label">4 inbound references</span><span class="inbound-links"><a href="032-skyfossil.html" class="inbound-link nav-push cat-colored cat-physics" title="The Sky Is a Fossil Record">32</a><a href="059-galaxyevolve.html" class="inbound-link nav-push cat-colored cat-physics" title="Each Galaxy as a Thread of Cosmic Evolution">59</a><a href="061-babyuniverse.html" class="inbound-link nav-push cat-colored cat-physics" title="The Cosmic Microwave Background as the Universe's Baby Picture">61</a><a href="069-love.html" class="inbound-link nav-push cat-colored cat-feeling" title="Love">69</a></span></div></div></section>
-<section id="script" class="pod-section"><h2 class="section-heading">Script</h2><div class="prose"><ol>
+<section id="script" class="article-section"><h2 class="section-heading">Script</h2><div class="prose"><ol>
 <li><p>The cosmic microwave background — the earliest light, nearly uniform, nearly featureless. Pull forward through time: galaxies forming, stars, a planet, a cell, an eye opening.</p>
 </li>
 <li><p>Hold on the eye. This is not the end of a story about matter. This is matter reaching a threshold it was always approaching.</p>
@@ -80,7 +82,7 @@
 </li>
 </ol>
 </div></section>
-<section id="images" class="pod-section"><h2 class="section-heading">Images</h2><div class="prose"><p>Cosmic microwave background map
+<section id="images" class="article-section"><h2 class="section-heading">Images</h2><div class="prose"><p>Cosmic microwave background map
 Hubble deep field
 A human eye in close-up
 The eye reflected in a screen showing the CMB</p>

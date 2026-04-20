@@ -17,8 +17,8 @@
 <div class="nav-row">
 <div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
-  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search pods" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
+  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search articles" onclick="seedNavOpenSearch();return false">Search</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto article</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to article" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
@@ -28,6 +28,7 @@
             <ul class="nav-dropdown"><li><a href="trails.html" class="nav-push">Trails</a></li>
               <li><a href="list.html" class="nav-push">Index</a></li>
               <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="footnotes.html" class="nav-push">Footnotes</a></li>
               <li><a href="glossary.html" class="nav-push">Glossary</a></li>
               <li><a href="map.html" class="nav-push">Map</a></li>
               <li><a href="more.html" class="nav-push">More</a></li></ul>
@@ -41,13 +42,14 @@
     <li><a href="trails.html" class="nav-push">Trails</a></li>
               <li><a href="list.html" class="nav-push">Index</a></li>
               <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="footnotes.html" class="nav-push">Footnotes</a></li>
               <li><a href="glossary.html" class="nav-push">Glossary</a></li>
               <li><a href="map.html" class="nav-push">Map</a></li>
               <li><a href="more.html" class="nav-push">More</a></li>
   </ul></div>
 </div>
 </nav>
-<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search pods" hidden>
+<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search articles" hidden>
   <div class="search-dialog-overlay" onclick="seedNavCloseSearch()"></div>
   <div class="search-dialog-inner">
     <div class="search-dialog-header"><input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)"><button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button></div>
@@ -56,11 +58,11 @@
   </div>
 </div>
 <div class="wrap">
-  <div class="pod-header fade cat-colored cat-feeling"><h1>Opponent Processing: The Eye Thinks Before the Brain Does</h1><p class="premise">The retina — which is embryologically brain tissue that migrated into the eye — recombines three raw cone signals into opponent channels before any signal leaves the eye, so that the world has already been interpreted one synapse past the photoreceptors.</p><div class="pod-nav-row"><a class="header-nav-prev nav-push" href="041-colorwheel.html" aria-label="Previous pod">&lt;&lt;</a><span class="header-nav-num">Pod 42</span><a class="header-nav-next nav-push" href="044-ai-retina.html" aria-label="Next pod">&gt;&gt;</a></div></div>
-  <section id="proto" class="pod-section"><h2 class="section-heading">Proto</h2><div class="prose"><p>The retina performs a surprising computation before any signal leaves the eye. Photoreceptors — three cone types tuned to roughly red, green, and blue — feed into a second layer of bipolar cells and then into retinal ganglion cells, just one synapse later. At this stage the three raw cone signals are recombined into opponent channels: red versus green, blue versus yellow (yellow being the sum of red and green), and light versus dark<sup class="footnote-ref" id="ref-042-eyethinks-1"><a href="bibliography.html#ref-042-eyethinks-1">1</a></sup>. This transformation happens entirely within the retina, which is itself embryologically brain tissue — an outgrowth of the developing brain that migrated into the eye. By the time visual information reaches the optic nerve, the world has already been decomposed into these three axes. The eye does not merely sense. It interprets.</p>
+  <div class="article-header fade cat-colored cat-feeling"><h1>Opponent Processing: The Eye Thinks Before the Brain Does</h1><p class="premise">The retina — which is embryologically brain tissue that migrated into the eye — recombines three raw cone signals into opponent channels before any signal leaves the eye, so that the world has already been interpreted one synapse past the photoreceptors.</p><div class="article-nav-row"><a class="header-nav-prev nav-push" href="041-colorwheel.html" aria-label="Previous article">&lt;&lt;</a><span class="header-nav-num">Article 42</span><a class="header-nav-next nav-push" href="044-ai-retina.html" aria-label="Next article">&gt;&gt;</a></div></div>
+  <section id="proto" class="article-section"><h2 class="section-heading">Proto</h2><div class="prose"><p>The retina performs a surprising computation before any signal leaves the eye. Photoreceptors — three cone types tuned to roughly red, green, and blue — feed into a second layer of bipolar cells and then into retinal ganglion cells, just one synapse later. At this stage the three raw cone signals are recombined into opponent channels: red versus green, blue versus yellow (yellow being the sum of red and green), and light versus dark<sup class="footnote-ref" id="ref-042-eyethinks-1"><a href="bibliography.html#ref-042-eyethinks-1">1</a></sup>. This transformation happens entirely within the retina, which is itself embryologically brain tissue — an outgrowth of the developing brain that migrated into the eye. By the time visual information reaches the optic nerve, the world has already been decomposed into these three axes. The eye does not merely sense. It interprets.</p>
 <figure class="directive-image directive-image--left"><img src="images/042-eyethinks.png" alt=""><figcaption>Center-surround receptive field: the retina thinks before the brain</figcaption></figure>
 </div></section>
-<section id="provenance" class="pod-section"><div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="003-inside.html" class="related-card cat-colored cat-consciousness nav-push"><div class="related-title">3. Everything Has an Inside</div></a>
+<section id="provenance" class="article-section"><div class="related-section"><h3 class="section-heading related-label">Related articles</h3><div class="related-grid"><a href="003-inside.html" class="related-card cat-colored cat-consciousness nav-push"><div class="related-title">3. Everything Has an Inside</div></a>
 <a href="013-enactment.html" class="related-card related-card-prelim cat-colored cat-biology nav-push"><div class="related-title">13. The Organism Enacts Its World</div></a>
 <a href="016-neuralnetwork.html" class="related-card related-card-prelim cat-colored cat-ai-minds nav-push"><div class="related-title">16. The Network Is a Field Having Occasions</div></a>
 <a href="037-assembly.html" class="related-card related-card-prelim cat-colored cat-mathematics nav-push"><div class="related-title">37. The Architecture of Levels</div></a>

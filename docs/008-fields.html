@@ -17,8 +17,8 @@
 <div class="nav-row">
 <div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
-  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search pods" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
+  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search articles" onclick="seedNavOpenSearch();return false">Search</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto article</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to article" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
@@ -28,6 +28,7 @@
             <ul class="nav-dropdown"><li><a href="trails.html" class="nav-push">Trails</a></li>
               <li><a href="list.html" class="nav-push">Index</a></li>
               <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="footnotes.html" class="nav-push">Footnotes</a></li>
               <li><a href="glossary.html" class="nav-push">Glossary</a></li>
               <li><a href="map.html" class="nav-push">Map</a></li>
               <li><a href="more.html" class="nav-push">More</a></li></ul>
@@ -41,13 +42,14 @@
     <li><a href="trails.html" class="nav-push">Trails</a></li>
               <li><a href="list.html" class="nav-push">Index</a></li>
               <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="footnotes.html" class="nav-push">Footnotes</a></li>
               <li><a href="glossary.html" class="nav-push">Glossary</a></li>
               <li><a href="map.html" class="nav-push">Map</a></li>
               <li><a href="more.html" class="nav-push">More</a></li>
   </ul></div>
 </div>
 </nav>
-<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search pods" hidden>
+<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search articles" hidden>
   <div class="search-dialog-overlay" onclick="seedNavCloseSearch()"></div>
   <div class="search-dialog-inner">
     <div class="search-dialog-header"><input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)"><button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button></div>
@@ -56,10 +58,10 @@
   </div>
 </div>
 <div class="wrap">
-  <div class="pod-header fade cat-colored cat-feeling"><h1>The Field Is the Medium of Feeling</h1><p class="premise">Your nervous system does not merely use the electromagnetic field — it is a structure within it, the same field that carries light, and Whitehead arrived from pure philosophy at the same picture Maxwell found in mathematics: a continuous medium through which events feel each other.</p><div class="pod-nav-row"><a class="header-nav-prev nav-push" href="007-vacuum.html" aria-label="Previous pod">&lt;&lt;</a><span class="header-nav-num">Pod 8</span><a class="header-nav-next nav-push" href="009-randomness.html" aria-label="Next pod">&gt;&gt;</a></div></div>
-  <section id="_prolog" class="pod-section pod-prolog"><div class="prose"><p>@subtitle(Physics and Whitehead converged on the same discovery from opposite directions.)</p>
+  <div class="article-header fade cat-colored cat-feeling"><h1>The Field Is the Medium of Feeling</h1><p class="premise">Your nervous system does not merely use the electromagnetic field — it is a structure within it, the same field that carries light, and Whitehead arrived from pure philosophy at the same picture Maxwell found in mathematics: a continuous medium through which events feel each other.</p><div class="article-nav-row"><a class="header-nav-prev nav-push" href="007-vacuum.html" aria-label="Previous article">&lt;&lt;</a><span class="header-nav-num">Article 8</span><a class="header-nav-next nav-push" href="009-randomness.html" aria-label="Next article">&gt;&gt;</a></div></div>
+  <section id="_prolog" class="article-section article-prolog"><div class="prose"><p>@subtitle(Physics and Whitehead converged on the same discovery from opposite directions.)</p>
 </div></section>
-<section id="surface" class="pod-section"><h2 class="section-heading">Surface</h2><div class="prose"><p>You’ve been using light as a metaphor your whole life.</p>
+<section id="surface" class="article-section"><h2 class="section-heading">Surface</h2><div class="prose"><p>You’ve been using light as a metaphor your whole life.</p>
 <figure class="directive-image directive-image--left"><img src="images/008-fields.jpg" alt=""><figcaption>The electromagnetic field made visible in iron filings</figcaption></figure>
 <p>Shine some light on it. I’m in the dark. Suddenly it all became clear. Consciousness is the light; ignorance is the darkness; attention is the beam of a flashlight.</p>
 <p>It’s a good metaphor. But here’s something strange: when you look closely at what light actually is, the metaphor starts to feel less like poetry and more like physics.</p>
@@ -72,20 +74,20 @@
 <p>What if “medium of feeling” isn’t a metaphor at all — just an accurate description of what a field is, observed from the inside?</p>
 <div class="cta">Next time you're in a room and you turn on a light, remember that the light reaching your eye and the signal traveling down your optic nerve are both disturbances in the same kind of field. The light didn't stop being physics when it became vision. Something continuous happened. What you call &quot;seeing&quot; is the field completing a circuit — from the source, through space, into the structure that notices.</div>
 </div></section>
-<section id="depth" class="pod-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>James Clerk Maxwell’s<sup class="footnote-ref" id="ref-008-fields-1"><a href="bibliography.html#ref-008-fields-1">1</a></sup> unification of electricity and magnetism in 1865 revealed that light, electricity, and magnetism are all aspects of a single field — but the deeper surprise is what connects that field to radiation. A stationary charge is quiet. A charge moving at constant velocity adds a magnetic component but still doesn’t radiate. Only a charge that accelerates — that changes its velocity — shakes the field, and that shake propagates outward as light. A star emits light because its atoms are in violent thermal motion, constantly accelerating and decelerating in collision. The light is not separate from the field; it is the field in motion, triggered by the event of acceleration.</p>
+<section id="depth" class="article-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>James Clerk Maxwell’s<sup class="footnote-mark" id="fn-008-fields-A-mark"><a href="footnotes.html#fn-008-fields-A">A</a></sup> unification of electricity and magnetism in 1865 revealed that light, electricity, and magnetism are all aspects of a single field — but the deeper surprise is what connects that field to radiation. A stationary charge is quiet. A charge moving at constant velocity adds a magnetic component but still doesn’t radiate. Only a charge that accelerates — that changes its velocity — shakes the field, and that shake propagates outward as light. A star emits light because its atoms are in violent thermal motion, constantly accelerating and decelerating in collision. The light is not separate from the field; it is the field in motion, triggered by the event of acceleration.</p>
 <p>This matters for consciousness because the nervous system is not merely influenced by the electromagnetic field — it is a structure within it. Neural signals are electrochemical events: charge moving, accelerating, propagating. Every firing neuron is, in the precise physical sense, an antenna — disturbing the field, contributing to a pattern that extends beyond the neuron itself. The field doesn’t stop at the skull.</p>
-<p>Alfred North Whitehead<sup class="footnote-ref" id="ref-008-fields-2"><a href="bibliography.html#ref-008-fields-2">2</a></sup> arrived at a structurally identical picture from pure philosophical argument, with no knowledge of neuroscience. His claim: every actual occasion — every event in nature — reaches out and takes in what surrounds it before it can become itself. He called this reaching prehension. The field, in Whitehead’s picture, is not a passive container but the medium through which occasions feel each other. He arrived at that conclusion without knowing Maxwell’s equations described exactly such a medium.</p>
+<p>Alfred North Whitehead<sup class="footnote-mark" id="fn-008-fields-B-mark"><a href="footnotes.html#fn-008-fields-B">B</a></sup> arrived at a structurally identical picture from pure philosophical argument, with no knowledge of neuroscience. His claim: every actual occasion — every event in nature — reaches out and takes in what surrounds it before it can become itself. He called this reaching prehension. The field, in Whitehead’s picture, is not a passive container but the medium through which occasions feel each other. He arrived at that conclusion without knowing Maxwell’s equations described exactly such a medium.</p>
 <p>The convergence is the point. Two entirely different lines of inquiry — one tracing the mathematics of electromagnetism, one tracing the logic of what it means for anything to happen at all — arrived at the same structure: a continuous medium, primary over the particles and events that arise within it, through which those events are connected not just causally but, Whitehead would say, experientially.</p>
 <p><a href="008-fields.html">The Field Is the Medium of Feeling</a> doesn’t assert that the field is conscious. That question lives in <a href="003-inside.html">Everything Has an Inside</a>. What it asserts is more modest and stranger: that the boundary we assumed between the physical medium and the experiencing subject was never as clear as we thought. If prehension is real — if reaching and feeling go all the way down — then the field was never merely a medium. It was always the inside of what physics describes from the outside. That is a different investigation than the one we thought we were conducting.</p>
-<p>Richard Feynman’s Lectures on Physics<sup class="footnote-ref" id="ref-008-fields-3"><a href="bibliography.html#ref-008-fields-3">3</a></sup> remain the clearest physical account of what electromagnetism actually says about the world.</p>
+<p>Richard Feynman’s Lectures on Physics<sup class="footnote-mark" id="fn-008-fields-C-mark"><a href="footnotes.html#fn-008-fields-C">C</a></sup> remain the clearest physical account of what electromagnetism actually says about the world.</p>
 </div></section>
-<section id="provenance" class="pod-section"><div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="003-inside.html" class="related-card cat-colored cat-consciousness nav-push"><div class="related-title">3. Everything Has an Inside</div></a>
+<section id="provenance" class="article-section"><div class="related-section"><h3 class="section-heading related-label">Related articles</h3><div class="related-grid"><a href="003-inside.html" class="related-card cat-colored cat-consciousness nav-push"><div class="related-title">3. Everything Has an Inside</div></a>
 <a href="007-vacuum.html" class="related-card related-card-prelim cat-colored cat-physics nav-push"><div class="related-title">7. The Vacuum Is Not Empty</div></a>
 <a href="016-neuralnetwork.html" class="related-card related-card-prelim cat-colored cat-ai-minds nav-push"><div class="related-title">16. The Network Is a Field Having Occasions</div></a>
 <a href="017-pastpresent.html" class="related-card related-card-prelim cat-colored cat-ai-minds nav-push"><div class="related-title">17. The Past Is Fully Present</div></a>
 <a href="029-lighttime.html" class="related-card related-card-prelim cat-colored cat-physics nav-push"><div class="related-title">29. From Light's Point of View, There Is No Journey</div></a></div>
 <div class="inbound-refs"><span class="inbound-label">14 inbound references</span><span class="inbound-links"><a href="000-map.html" class="inbound-link nav-push cat-colored cat-knowledge" title="A Map of the Territory">0</a><a href="002-events.html" class="inbound-link nav-push cat-colored cat-physics" title="Reality Is Events, Not Things">2</a><a href="003-inside.html" class="inbound-link nav-push cat-colored cat-consciousness" title="Everything Has an Inside">3</a><a href="004-self.html" class="inbound-link nav-push cat-colored cat-consciousness" title="The Self Is a Pattern, Not a Thing">4</a><a href="007-vacuum.html" class="inbound-link nav-push cat-colored cat-physics" title="The Vacuum Is Not Empty">7</a><a href="016-neuralnetwork.html" class="inbound-link nav-push cat-colored cat-ai-minds" title="The Network Is a Field Having Occasions">16</a><a href="017-pastpresent.html" class="inbound-link nav-push cat-colored cat-ai-minds" title="The Past Is Fully Present">17</a><a href="028-network.html" class="inbound-link nav-push cat-colored cat-consciousness" title="The Network That Experiences Itself">28</a><a href="029-lighttime.html" class="inbound-link nav-push cat-colored cat-physics" title="From Light's Point of View, There Is No Journey">29</a><a href="036-universenoticing.html" class="inbound-link nav-push cat-colored cat-consciousness" title="You Are the Universe Noticing Something">36</a><a href="048-flashes.html" class="inbound-link nav-push cat-colored cat-consciousness" title="Consciousness Comes in Flashes — For All of Us">48</a><a href="050-orthogonal.html" class="inbound-link nav-push cat-colored cat-consciousness" title="Consciousness as a Dimension Orthogonal to Spacetime">50</a><a href="051-spacetime.html" class="inbound-link nav-push cat-colored cat-physics" title="Spacetime as Emergent from Information Structure">51</a><a href="052-dichotomy.html" class="inbound-link nav-push cat-colored cat-mathematics" title="Discrete and Continuous as a False Dichotomy">52</a></span></div></div></section>
-<section id="script" class="pod-section"><h2 class="section-heading">Script</h2><div class="prose"><ol>
+<section id="script" class="article-section"><h2 class="section-heading">Script</h2><div class="prose"><ol>
 <li><p>A summer night. A child on a porch, pressing her face against a screen door. A rhythmic, unidentifiable sound from inside — dim room beyond. Her body already receiving before she can resolve what it is.</p>
 </li>
 <li><p>She retrieves her flashlight and shines it through the screen door. The mesh diffracts the beam — an interference pattern spreads across the far wall.</p>
@@ -96,7 +98,7 @@
 </li>
 </ol>
 </div></section>
-<section id="images" class="pod-section"><h2 class="section-heading">Images</h2><div class="prose"><p>Primary illustration: A screen door at night, seen from outside. Through the mesh, warm interior light and the suggestion of a figure in a rocking chair. The mesh itself is rendered with enough detail to show its grid structure — the diffraction grating that the drama will activate. The outside is dark blue; the inside is amber. The threshold is the image.</p>
+<section id="images" class="article-section"><h2 class="section-heading">Images</h2><div class="prose"><p>Primary illustration: A screen door at night, seen from outside. Through the mesh, warm interior light and the suggestion of a figure in a rocking chair. The mesh itself is rendered with enough detail to show its grid structure — the diffraction grating that the drama will activate. The outside is dark blue; the inside is amber. The threshold is the image.</p>
 <p>Shareable graphic: Black background. A grid of light and dark bands — a diffraction pattern. Single line of text: “The light didn’t stop being physics when it became seeing.” Clean type, no other elements.</p>
 <p>Video thumbnail: A child’s face close to a screen door at night, one eye visible through the mesh, the interior light catching it. Looking in. The eye is the whole story.</p>
 </div></section>
@@ -108,6 +110,6 @@
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">feeling · draft1 · Rev 1 · Edited 2026-04-19 11:18</span>
+  <span class="page-end-version" aria-hidden="true">feeling · draft1 · Rev 1 · Edited 2026-04-19 21:06</span>
 </div>
 </body></html>

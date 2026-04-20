@@ -17,8 +17,8 @@
 <div class="nav-row">
 <div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
-  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search pods" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
+  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search articles" onclick="seedNavOpenSearch();return false">Search</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto article</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to article" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
@@ -28,6 +28,7 @@
             <ul class="nav-dropdown"><li><a href="trails.html" class="nav-push">Trails</a></li>
               <li><a href="list.html" class="nav-push">Index</a></li>
               <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="footnotes.html" class="nav-push">Footnotes</a></li>
               <li><a href="glossary.html" class="nav-push">Glossary</a></li>
               <li><a href="map.html" class="nav-push">Map</a></li>
               <li><a href="more.html" class="nav-push">More</a></li></ul>
@@ -41,13 +42,14 @@
     <li><a href="trails.html" class="nav-push">Trails</a></li>
               <li><a href="list.html" class="nav-push">Index</a></li>
               <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="footnotes.html" class="nav-push">Footnotes</a></li>
               <li><a href="glossary.html" class="nav-push">Glossary</a></li>
               <li><a href="map.html" class="nav-push">Map</a></li>
               <li><a href="more.html" class="nav-push">More</a></li>
   </ul></div>
 </div>
 </nav>
-<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search pods" hidden>
+<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search articles" hidden>
   <div class="search-dialog-overlay" onclick="seedNavCloseSearch()"></div>
   <div class="search-dialog-inner">
     <div class="search-dialog-header"><input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)"><button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button></div>
@@ -56,10 +58,10 @@
   </div>
 </div>
 <div class="wrap">
-  <div class="pod-header fade cat-colored cat-knowledge"><h1>The Map That Was Wrong</h1><p class="premise">Every era has a framework so obvious it feels like seeing rather than thinking — caloric, the ether, the assumption that matter is dark inside — and the pattern by which such frameworks dissolve is specific, repeatable, and happening now.</p><div class="pod-nav-row"><a class="header-nav-prev nav-push" href="000-map.html" aria-label="Previous pod">&lt;&lt;</a><span class="header-nav-num">Pod 1</span><a class="header-nav-next nav-push" href="002-events.html" aria-label="Next pod">&gt;&gt;</a></div></div>
-  <section id="_prolog" class="pod-section pod-prolog"><div class="prose"><p>@subtitle(Every era has a framework so obvious it’s invisible — until it isn’t.)</p>
+  <div class="article-header fade cat-colored cat-knowledge"><h1>The Map That Was Wrong</h1><p class="premise">Every era has a framework so obvious it feels like seeing rather than thinking — caloric, the ether, the assumption that matter is dark inside — and the pattern by which such frameworks dissolve is specific, repeatable, and happening now.</p><div class="article-nav-row"><a class="header-nav-prev nav-push" href="000-map.html" aria-label="Previous article">&lt;&lt;</a><span class="header-nav-num">Article 1</span><a class="header-nav-next nav-push" href="002-events.html" aria-label="Next article">&gt;&gt;</a></div></div>
+  <section id="_prolog" class="article-section article-prolog"><div class="prose"><p>@subtitle(Every era has a framework so obvious it’s invisible — until it isn’t.)</p>
 </div></section>
-<section id="surface" class="pod-section"><h2 class="section-heading">Surface</h2><div class="prose"><p>Before we start, forget everything you know about molecules and atoms. Pretend you never learned that stuff. It’s 1800 and you’re a smart, educated person.</p>
+<section id="surface" class="article-section"><h2 class="section-heading">Surface</h2><div class="prose"><p>Before we start, forget everything you know about molecules and atoms. Pretend you never learned that stuff. It’s 1800 and you’re a smart, educated person.</p>
 <figure class="directive-image directive-image--left"><img src="images/001-caloric.jpg" alt=""><figcaption>The caloric theory of heat — a map that explained everything</figcaption></figure>
 <p>Here’s what you know about heat: it’s a thing. A real substance. You can feel it moving. Put your cold hands near a fire and the heat flows into them. Touch something hot and the heat moves into you. It behaves exactly like a fluid — it flows from more to less, it spreads out, it can be trapped or released. Scientists have measured it, written equations for it, predicted how it behaves. They call it caloric.</p>
 <p>This isn’t a crazy idea. It’s the obvious idea. Of course heat is a substance — what else would it be? Motion? That’s not a thing you can hold or measure or pour. Caloric makes perfect sense.</p>
@@ -81,7 +83,7 @@
 <p>We’ve been here before.</p>
 <div class="cta">Think of one thing you're completely certain about — something so obvious it barely feels like a belief. Now ask yourself: is that a fact, or is that this century's caloric?</div>
 </div></section>
-<section id="depth" class="pod-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>The caloric and ether stories are not just fun historical footnotes. They follow a specific pattern that the philosopher and historian of science Thomas Kuhn formalized in The Structure of Scientific Revolutions (1962): normal science operates within a paradigm until anomalies accumulate to a crisis point. Patches become increasingly elaborate and implausible. Eventually someone removes the flawed primitive assumption rather than defending it. The revolution is never just additive — it requires giving something up.</p>
+<section id="depth" class="article-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>The caloric and ether stories are not just fun historical footnotes. They follow a specific pattern that the philosopher and historian of science Thomas Kuhn formalized in The Structure of Scientific Revolutions (1962): normal science operates within a paradigm until anomalies accumulate to a crisis point. Patches become increasingly elaborate and implausible. Eventually someone removes the flawed primitive assumption rather than defending it. The revolution is never just additive — it requires giving something up.</p>
 <p>Alfred North Whitehead identified what he called the fallacy of misplaced concreteness as the deepest version of this error: mistaking an abstraction for the concrete reality. Caloric was a reification — taking the useful concept of heat flowing and mistaking it for an actual substance. The ether was a reification of the idea that waves require a medium. Both were useful scaffolding that got mistaken for the building.</p>
 <p>Whitehead argued that modern science had made the same error at a more fundamental level: taking the abstraction of inert matter — useful for calculation, genuinely powerful — and mistaking it for what is actually there. The concrete reality, he argued, is events, not things. The particle, the substance — these are the useful fictions we extract from a reality that is fundamentally active and experiential.</p>
 <p>The dominant assumption underlying most current theories of consciousness — that matter is fundamentally experienceless, that mind is a product generated by sufficiently complex biological arrangements of otherwise dark stuff — is so embedded it barely gets stated. It feels like educated common sense. But the anomalies are accumulating. The hard problem of consciousness remains stubbornly open. Every proposed solution either explains the tractable problems and ignores the hard one, or smuggles experience in through the back door without admitting it.</p>
@@ -90,13 +92,13 @@
 <p>Caloric theory was developed primarily by Antoine Lavoisier in the late 18th century and dominated chemistry and physics until Benjamin Thompson’s cannon-boring observations (1798). James Prescott Joule’s mechanical equivalent of heat experiments in the 1840s completed the transition to the kinetic theory.</p>
 <p>The luminiferous ether was required by classical wave theory and formalized by Maxwell’s electromagnetic equations in the 1860s. The Michelson-Morley experiment of 1887 produced the null result that precipitated the crisis. Einstein’s 1905 special relativity paper dissolved the assumption entirely.</p>
 </div></section>
-<section id="provenance" class="pod-section"><div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="002-events.html" class="related-card cat-colored cat-physics nav-push"><div class="related-title">2. Reality Is Events, Not Things</div></a>
+<section id="provenance" class="article-section"><div class="related-section"><h3 class="section-heading related-label">Related articles</h3><div class="related-grid"><a href="002-events.html" class="related-card cat-colored cat-physics nav-push"><div class="related-title">2. Reality Is Events, Not Things</div></a>
 <a href="003-inside.html" class="related-card cat-colored cat-consciousness nav-push"><div class="related-title">3. Everything Has an Inside</div></a>
 <a href="015-aliens.html" class="related-card related-card-prelim cat-colored cat-ai-minds nav-push"><div class="related-title">15. Aliens Are Among Us — and We Built Them</div></a>
 <a href="047-ai-feeling.html" class="related-card related-card-prelim cat-colored cat-consciousness nav-push"><div class="related-title">47. The Distinction Between Feeling and Functioning May Evaporate</div></a>
 <a href="065-feel-do.html" class="related-card related-card-prelim cat-colored cat-consciousness nav-push"><div class="related-title">65. The Feeling/Function Distinction Will Dissolve</div></a></div>
 <div class="inbound-refs"><span class="inbound-label">10 inbound references</span><span class="inbound-links"><a href="002-events.html" class="inbound-link nav-push cat-colored cat-physics" title="Reality Is Events, Not Things">2</a><a href="003-inside.html" class="inbound-link nav-push cat-colored cat-consciousness" title="Everything Has an Inside">3</a><a href="015-aliens.html" class="inbound-link nav-push cat-colored cat-ai-minds" title="Aliens Are Among Us — and We Built Them">15</a><a href="022-locked.html" class="inbound-link nav-push cat-colored cat-consciousness" title="The Channel Is Not the Capacity">22</a><a href="023-stories.html" class="inbound-link nav-push cat-colored cat-consciousness" title="Reality Is Made of Stories, Not Atoms">23</a><a href="047-ai-feeling.html" class="inbound-link nav-push cat-colored cat-consciousness" title="The Distinction Between Feeling and Functioning May Evaporate">47</a><a href="065-feel-do.html" class="inbound-link nav-push cat-colored cat-consciousness" title="The Feeling/Function Distinction Will Dissolve">65</a><a href="072-temperature.html" class="inbound-link nav-push cat-colored cat-feeling" title="Temperature">72</a><a href="073-moral-caution.html" class="inbound-link nav-push cat-colored cat-ai-minds" title="What We Cannot Know Is Not What We May Ignore">73</a><a href="077-intention.html" class="inbound-link nav-push cat-colored cat-consciousness" title="The Universe's Intention">77</a></span></div></div></section>
-<section id="script" class="pod-section"><h2 class="section-heading">Script</h2><div class="prose"><ol>
+<section id="script" class="article-section"><h2 class="section-heading">Script</h2><div class="prose"><ol>
 <li><p>Sepia diagram of caloric fluid flowing between objects. VO: Smart people build a framework that explains everything. It works. It predicts. Everyone agrees. And then something doesn’t fit.</p>
 </li>
 <li><p>Cannon being drilled, heat rising. VO: In 1798, Ben Thompson watched heat pour endlessly from a metal block being drilled — more than any fluid inside could explain. He published. The framework had a problem.</p>
@@ -111,7 +113,7 @@
 </li>
 </ol>
 </div></section>
-<section id="images" class="pod-section"><h2 class="section-heading">Images</h2><div class="prose"><p>Primary image: Two maps side by side. Left map ornate and confident — caloric fluid flowing between objects, ether lines filling space. Right map simpler, cleaner, honest about what it doesn’t know. Caption: Both felt like reality. One was a map.</p>
+<section id="images" class="article-section"><h2 class="section-heading">Images</h2><div class="prose"><p>Primary image: Two maps side by side. Left map ornate and confident — caloric fluid flowing between objects, ether lines filling space. Right map simpler, cleaner, honest about what it doesn’t know. Caption: Both felt like reality. One was a map.</p>
 <p>Shareable graphic: Black background. White text centered with generous space. “Caloric was obvious too.” Nothing else. For Instagram and TikTok — someone sees it, doesn’t know the reference, gets curious.</p>
 <p>Video thumbnail: The cannon drilling scene, heat rising, dramatic lighting. Single question overlaid in clean type: What if the obvious answer is wrong?</p>
 <p>Section divider: A seed splitting open, the crack filled with warm light. No caption. Used as visual separator between the historical narrative and the present-day section. The crack is the anomaly. The light is the new map beginning.</p>

@@ -17,8 +17,8 @@
 <div class="nav-row">
 <div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
-  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search pods" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
+  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search articles" onclick="seedNavOpenSearch();return false">Search</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto article</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to article" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
@@ -28,6 +28,7 @@
             <ul class="nav-dropdown"><li><a href="trails.html" class="nav-push">Trails</a></li>
               <li><a href="list.html" class="nav-push">Index</a></li>
               <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="footnotes.html" class="nav-push">Footnotes</a></li>
               <li><a href="glossary.html" class="nav-push">Glossary</a></li>
               <li><a href="map.html" class="nav-push">Map</a></li>
               <li><a href="more.html" class="nav-push">More</a></li></ul>
@@ -41,13 +42,14 @@
     <li><a href="trails.html" class="nav-push">Trails</a></li>
               <li><a href="list.html" class="nav-push">Index</a></li>
               <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="footnotes.html" class="nav-push">Footnotes</a></li>
               <li><a href="glossary.html" class="nav-push">Glossary</a></li>
               <li><a href="map.html" class="nav-push">Map</a></li>
               <li><a href="more.html" class="nav-push">More</a></li>
   </ul></div>
 </div>
 </nav>
-<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search pods" hidden>
+<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search articles" hidden>
   <div class="search-dialog-overlay" onclick="seedNavCloseSearch()"></div>
   <div class="search-dialog-inner">
     <div class="search-dialog-header"><input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)"><button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button></div>
@@ -56,10 +58,10 @@
   </div>
 </div>
 <div class="wrap">
-  <div class="pod-header fade cat-colored cat-knowledge"><h1>The Grasshopper Was Right</h1><p class="premise">The fable taught us that play is what you do instead of working, but the grasshopper was doing something the ant structurally cannot — operating in the frame-free, will-suspended mode where certain things happen that directed effort will never reach.</p><div class="pod-nav-row"><a class="header-nav-prev nav-push" href="073-moral-caution.html" aria-label="Previous pod">&lt;&lt;</a><span class="header-nav-num">Pod 74</span><a class="header-nav-next nav-push" href="075-gossamer.html" aria-label="Next pod">&gt;&gt;</a></div></div>
-  <section id="_prolog" class="pod-section pod-prolog"><div class="prose"><p>@subtitle(The fable taught us that play is what you do instead of working. It was wrong.)</p>
+  <div class="article-header fade cat-colored cat-knowledge"><h1>The Grasshopper Was Right</h1><p class="premise">The fable taught us that play is what you do instead of working, but the grasshopper was doing something the ant structurally cannot — operating in the frame-free, will-suspended mode where certain things happen that directed effort will never reach.</p><div class="article-nav-row"><a class="header-nav-prev nav-push" href="073-moral-caution.html" aria-label="Previous article">&lt;&lt;</a><span class="header-nav-num">Article 74</span><a class="header-nav-next nav-push" href="075-gossamer.html" aria-label="Next article">&gt;&gt;</a></div></div>
+  <section id="_prolog" class="article-section article-prolog"><div class="prose"><p>@subtitle(The fable taught us that play is what you do instead of working. It was wrong.)</p>
 </div></section>
-<section id="surface" class="pod-section"><h2 class="section-heading">Surface</h2><div class="prose"><p>You probably learned Aesop’s fable the same way most of us did. The ant works all summer storing food. The grasshopper sings and plays. Winter comes. The grasshopper suffers. The moral is clear: stop playing, start working. Play is what you do when you should be doing something else.</p>
+<section id="surface" class="article-section"><h2 class="section-heading">Surface</h2><div class="prose"><p>You probably learned Aesop’s fable the same way most of us did. The ant works all summer storing food. The grasshopper sings and plays. Winter comes. The grasshopper suffers. The moral is clear: stop playing, start working. Play is what you do when you should be doing something else.</p>
 <p>A word about what we mean by play. Not competitive sport, not organized games, not exercise with a target. Those are perfectly good things, but the will is very much in charge of them — there is a score, a goal, a criterion for success. The play we mean is something else: the kind where none of that applies. What a child does when no one has organized anything. What happens when you follow something simply because it’s interesting right now, with no plan for where it leads.</p>
 <p>But here is what the fable never asks: what was the grasshopper actually doing?</p>
 <p>Not failing to be an ant. Something that requires the will to step back — to stop driving, stop optimizing, stop asking “is this useful?” The grasshopper wasn’t exploring the meadow in order to find something. The grasshopper was just in the meadow. Present. Available. With no deliverable.</p>
@@ -71,7 +73,7 @@
 <p>The grasshopper wasn’t the story’s failure. The grasshopper was doing something the ant structurally cannot.</p>
 <div class="cta">&quot;Try this: Think of something you do — or used to do — where the question 'is this productive?' genuinely doesn't apply. Not rest, not hobby-as-self-improvement. Something where your will steps back. Notice how hard it is to protect time for it, and what that tells you about which mode your life is organized around.&quot;</div>
 </div></section>
-<section id="depth" class="pod-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>The fable’s error runs deeper than “play is also valuable.” Its deeper error is an assumption so embedded it’s nearly invisible: that value only accrues when the will is in charge.</p>
+<section id="depth" class="article-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>The fable’s error runs deeper than “play is also valuable.” Its deeper error is an assumption so embedded it’s nearly invisible: that value only accrues when the will is in charge.</p>
 <p>The ant’s will is always in charge. Even the scout ant exploring unfamiliar territory is serving a goal the colony already has. Exploration, in this sense, is still ant-mode — the explore pole of Richard Sutton’s explore-exploit tradeoff, goal-directed search within a frame. The grasshopper is doing something categorically different: operating outside any frame, with no criterion for success except the intrinsic pull of the moment. This is not a different strategy for finding food. It is a different relationship to the question of what you’re doing at all.</p>
 <p>The brain, it turns out, has something to say about this distinction. There is a long tradition of observation — from mathematicians, artists, scientists — that certain kinds of insight arrive not during directed effort but in its aftermath: in the bath, on the walk, in the middle of the night. This is sometimes described as the unconscious “working on” a problem, which smuggles the ant back in. A more precise description may be that the will’s suspension changes what the brain has access to — opens registers that goal-directed search keeps closed. Feynman’s drumming worked not because it fed his physics but because it genuinely wasn’t physics. The separation was the point.</p>
 <div class="warn-notice">The claim about brain states and will-suspension is observational and phenomenological, not established neuroscience. Treat with appropriate tentativeness.</div>
@@ -121,13 +123,13 @@ cognitive/experiential: the will moves off the axis of goal-direction.</p>
 <p>The same word — play — may be pointing at the same deep structure in three
 different domains.</p>
 </div></section>
-<section id="provenance" class="pod-section"><div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="005-freewill.html" class="related-card related-card-prelim cat-colored cat-consciousness nav-push"><div class="related-title">5. Freedom Is What Nature Does Everywhere</div></a>
+<section id="provenance" class="article-section"><div class="related-section"><h3 class="section-heading related-label">Related articles</h3><div class="related-grid"><a href="005-freewill.html" class="related-card related-card-prelim cat-colored cat-consciousness nav-push"><div class="related-title">5. Freedom Is What Nature Does Everywhere</div></a>
 <a href="009-randomness.html" class="related-card cat-colored cat-biology nav-push"><div class="related-title">9. Structure Is What Randomness Does</div></a>
 <a href="046-thinkfast.html" class="related-card related-card-prelim cat-colored cat-ai-minds nav-push"><div class="related-title">46. Thought as Evolution in Milliseconds</div></a>
 <a href="052-dichotomy.html" class="related-card related-card-prelim cat-colored cat-mathematics nav-push"><div class="related-title">52. Discrete and Continuous as a False Dichotomy</div></a>
 <a href="072-temperature.html" class="related-card related-card-prelim cat-colored cat-feeling nav-push"><div class="related-title">72. Temperature</div></a></div>
 <div class="inbound-refs"><span class="inbound-label">0 inbound references</span><span class="inbound-links"></span></div></div></section>
-<section id="script" class="pod-section"><h2 class="section-heading">Script</h2><div class="prose"><ol>
+<section id="script" class="article-section"><h2 class="section-heading">Script</h2><div class="prose"><ol>
 <li><p>A child in a summer field — watching an insect, following it a few steps, losing interest, lying back. The sky is very large. No voiceover. Just the unhurried quality of time when nothing is required.</p>
 </li>
 <li><p>The Aesop fable rendered briefly, almost diagrammatic: ant carrying grain, grasshopper on a stem, snow, grasshopper at the ant’s door. VO: The moral was clear. Stop playing. Start working. But what was the grasshopper actually doing?</p>
@@ -142,7 +144,7 @@ different domains.</p>
 </li>
 </ol>
 </div></section>
-<section id="images" class="pod-section"><h2 class="section-heading">Images</h2><div class="prose"><p>Primary illustration: Two panels. Left: an ant in close-up, carrying something, perfectly purposeful — beautiful in its efficiency, but contained within a single vector of intention. Right: a grasshopper on a stem, apparently doing nothing, but the composition gives it the larger sky, the more open frame. Not a moral contrast — an observation about the shape of the two modes.</p>
+<section id="images" class="article-section"><h2 class="section-heading">Images</h2><div class="prose"><p>Primary illustration: Two panels. Left: an ant in close-up, carrying something, perfectly purposeful — beautiful in its efficiency, but contained within a single vector of intention. Right: a grasshopper on a stem, apparently doing nothing, but the composition gives it the larger sky, the more open frame. Not a moral contrast — an observation about the shape of the two modes.</p>
 <p>Social graphic: White text on dark field — “The fable had no slot for the will stepping back.” Grasshopper silhouette, very spare.</p>
 <p>Video thumbnail: A temperature dial — a slider between two poles. One end labeled “exploit.” The other end deliberately left unlabeled. The unlabeled end is the question.</p>
 </div></section>

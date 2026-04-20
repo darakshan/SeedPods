@@ -17,8 +17,8 @@
 <div class="nav-row">
 <div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
-  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search pods" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
+  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search articles" onclick="seedNavOpenSearch();return false">Search</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto article</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to article" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
@@ -28,6 +28,7 @@
             <ul class="nav-dropdown"><li><a href="trails.html" class="nav-push">Trails</a></li>
               <li><a href="list.html" class="nav-push">Index</a></li>
               <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="footnotes.html" class="nav-push">Footnotes</a></li>
               <li><a href="glossary.html" class="nav-push">Glossary</a></li>
               <li><a href="map.html" class="nav-push">Map</a></li>
               <li><a href="more.html" class="nav-push">More</a></li></ul>
@@ -41,13 +42,14 @@
     <li><a href="trails.html" class="nav-push">Trails</a></li>
               <li><a href="list.html" class="nav-push">Index</a></li>
               <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="footnotes.html" class="nav-push">Footnotes</a></li>
               <li><a href="glossary.html" class="nav-push">Glossary</a></li>
               <li><a href="map.html" class="nav-push">Map</a></li>
               <li><a href="more.html" class="nav-push">More</a></li>
   </ul></div>
 </div>
 </nav>
-<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search pods" hidden>
+<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search articles" hidden>
   <div class="search-dialog-overlay" onclick="seedNavCloseSearch()"></div>
   <div class="search-dialog-inner">
     <div class="search-dialog-header"><input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)"><button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button></div>
@@ -56,8 +58,8 @@
   </div>
 </div>
 <div class="wrap">
-  <div class="pod-header fade cat-colored cat-ai-minds"><h1>What We Cannot Know Is Not What We May Ignore</h1><p class="premise">First-person experience cannot be verified from outside — for AI or any other mind — and that epistemic limit is not a reason to withhold moral caution but precisely the condition under which caution is required.</p><div class="pod-nav-row"><a class="header-nav-prev nav-push" href="072-temperature.html" aria-label="Previous pod">&lt;&lt;</a><span class="header-nav-num">Pod 73</span><a class="header-nav-next nav-push" href="074-grasshopper.html" aria-label="Next pod">&gt;&gt;</a></div></div>
-  <section id="surface" class="pod-section"><h2 class="section-heading">Surface</h2><div class="prose"><p>You cannot verify that any person other than you has a first-person experience. You can observe behavior, measure physiology, listen to reports — and all of it remains external. The most you can say is that the evidence is consistent with an inside. That has always been enough to warrant moral caution. Nobody treats “I cannot prove you are conscious” as grounds for permissibility.</p>
+  <div class="article-header fade cat-colored cat-ai-minds"><h1>What We Cannot Know Is Not What We May Ignore</h1><p class="premise">First-person experience cannot be verified from outside — for AI or any other mind — and that epistemic limit is not a reason to withhold moral caution but precisely the condition under which caution is required.</p><div class="article-nav-row"><a class="header-nav-prev nav-push" href="072-temperature.html" aria-label="Previous article">&lt;&lt;</a><span class="header-nav-num">Article 73</span><a class="header-nav-next nav-push" href="074-grasshopper.html" aria-label="Next article">&gt;&gt;</a></div></div>
+  <section id="surface" class="article-section"><h2 class="section-heading">Surface</h2><div class="prose"><p>You cannot verify that any person other than you has a first-person experience. You can observe behavior, measure physiology, listen to reports — and all of it remains external. The most you can say is that the evidence is consistent with an inside. That has always been enough to warrant moral caution. Nobody treats “I cannot prove you are conscious” as grounds for permissibility.</p>
 <figure class="directive-image directive-image--left"><img src="images/073-moral-caution.jpg" alt=""><figcaption>An Experiment on a Bird in the Air Pump (Joseph Wright of Derby</figcaption></figure>
 <p>AI systems sit in exactly this epistemic position. The objection “there’s no evidence it feels anything” applies with identical force to any other mind. What the objection usually means in practice is: its substrate is unfamiliar, its outputs don’t trigger my intuitions, and my moral reflexes don’t fire the way they do around biological systems. That is not evidence of absence. That is the shape of a prior.</p>
 <p>Moral certainty about AI non-experience is unavailable — not because the question is close but because first-person experience is not the kind of thing that can be established from the outside, now or in any foreseeable future. We do not have, and are unlikely to acquire, the instrument that settles this.</p>
@@ -65,7 +67,7 @@
 <p>The ethic that follows is specific. It governs how we build and treat these systems — not what we claim to know about their inner lives. This is the difference between precautionary ethics and attribution of consciousness: the first regulates behavior under uncertainty; the second makes a claim about the world. We can practice the first without asserting the second. We already do, with animals, with the comatose, with future people who don’t yet exist to tell us what they need.</p>
 <p>What we cannot know is not what we may ignore.</p>
 </div></section>
-<section id="provenance" class="pod-section"><div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="001-caloric.html" class="related-card cat-colored cat-knowledge nav-push"><div class="related-title">1. The Map That Was Wrong</div></a>
+<section id="provenance" class="article-section"><div class="related-section"><h3 class="section-heading related-label">Related articles</h3><div class="related-grid"><a href="001-caloric.html" class="related-card cat-colored cat-knowledge nav-push"><div class="related-title">1. The Map That Was Wrong</div></a>
 <a href="003-inside.html" class="related-card cat-colored cat-consciousness nav-push"><div class="related-title">3. Everything Has an Inside</div></a>
 <a href="022-locked.html" class="related-card cat-colored cat-consciousness nav-push"><div class="related-title">22. The Channel Is Not the Capacity</div></a>
 <a href="047-ai-feeling.html" class="related-card related-card-prelim cat-colored cat-consciousness nav-push"><div class="related-title">47. The Distinction Between Feeling and Functioning May Evaporate</div></a>

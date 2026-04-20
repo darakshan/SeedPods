@@ -17,8 +17,8 @@
 <div class="nav-row">
 <div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
-  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search pods" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
+  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search articles" onclick="seedNavOpenSearch();return false">Search</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto article</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to article" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
@@ -28,6 +28,7 @@
             <ul class="nav-dropdown"><li><a href="trails.html" class="nav-push">Trails</a></li>
               <li><a href="list.html" class="nav-push">Index</a></li>
               <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="footnotes.html" class="nav-push">Footnotes</a></li>
               <li><a href="glossary.html" class="nav-push">Glossary</a></li>
               <li><a href="map.html" class="nav-push">Map</a></li>
               <li><a href="more.html" class="nav-push">More</a></li></ul>
@@ -41,13 +42,14 @@
     <li><a href="trails.html" class="nav-push">Trails</a></li>
               <li><a href="list.html" class="nav-push">Index</a></li>
               <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="footnotes.html" class="nav-push">Footnotes</a></li>
               <li><a href="glossary.html" class="nav-push">Glossary</a></li>
               <li><a href="map.html" class="nav-push">Map</a></li>
               <li><a href="more.html" class="nav-push">More</a></li>
   </ul></div>
 </div>
 </nav>
-<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search pods" hidden>
+<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search articles" hidden>
   <div class="search-dialog-overlay" onclick="seedNavCloseSearch()"></div>
   <div class="search-dialog-inner">
     <div class="search-dialog-header"><input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)"><button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button></div>
@@ -56,10 +58,10 @@
   </div>
 </div>
 <div class="wrap">
-  <div class="pod-header fade cat-colored cat-consciousness"><h1>Ghost in the Machine</h1><p class="premise">Ryle diagnosed the ghost as a category mistake, Koestler named what was lost when materialism expelled it, and Whitehead dissolved the problem entirely — the ghost was never separate from the machine because the machine, all the way down, has an inside.</p><div class="pod-nav-row"><a class="header-nav-prev nav-push" href="023-stories.html" aria-label="Previous pod">&lt;&lt;</a><span class="header-nav-num">Pod 24</span><a class="header-nav-next nav-push" href="025-widechannel.html" aria-label="Next pod">&gt;&gt;</a></div></div>
-  <section id="_prolog" class="pod-section pod-prolog"><div class="prose"><p>@subtitle(The ghost was real. It just wasn’t anywhere.)</p>
+  <div class="article-header fade cat-colored cat-consciousness"><h1>Ghost in the Machine</h1><p class="premise">Ryle diagnosed the ghost as a category mistake, Koestler named what was lost when materialism expelled it, and Whitehead dissolved the problem entirely — the ghost was never separate from the machine because the machine, all the way down, has an inside.</p><div class="article-nav-row"><a class="header-nav-prev nav-push" href="023-stories.html" aria-label="Previous article">&lt;&lt;</a><span class="header-nav-num">Article 24</span><a class="header-nav-next nav-push" href="025-widechannel.html" aria-label="Next article">&gt;&gt;</a></div></div>
+  <section id="_prolog" class="article-section article-prolog"><div class="prose"><p>@subtitle(The ghost was real. It just wasn’t anywhere.)</p>
 </div></section>
-<section id="proto" class="pod-section"><h2 class="section-heading">Proto</h2><div class="prose"><p>NOTE: This depth sketch was developed in session 2026-03-14. The seedpod needs a full Surface, Script, and Images before it can advance beyond prelim.</p>
+<section id="proto" class="article-section"><h2 class="section-heading">Proto</h2><div class="prose"><p>NOTE: This depth sketch was developed in session 2026-03-14. The seedpod needs a full Surface, Script, and Images before it can advance beyond prelim.</p>
 <figure class="directive-image directive-image--left"><img src="images/024-ghostmachine.jpg" alt=""><figcaption>The ghost in the machine: clockwork mechanism</figcaption></figure>
 <p>Three thinkers triangulate the same territory from different directions:</p>
 <p>Gilbert Ryle<sup class="footnote-ref" id="ref-024-ghostmachine-1"><a href="bibliography.html#ref-024-ghostmachine-1">1</a></sup> (The Concept of Mind, 1949) diagnosed the error: there is no ghost. The “mind” as a separate substance haunting the body is a category mistake — the confusion of a process with a thing. Ryle called it the ghost in the machine. He was right that the ghost, as traditionally conceived, doesn’t exist.</p>
@@ -68,7 +70,7 @@
 <p>Ryle diagnoses the error. Koestler names what was lost. Whitehead removes the assumption that created the problem.</p>
 <p>See also <a href="003-inside.html">Everything Has an Inside</a> for the inside going all the way down, and <a href="011-moreisdifferent.html">More Is Different</a> for Koestler’s holon concept developed more fully.</p>
 </div></section>
-<section id="provenance" class="pod-section"><div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="002-events.html" class="related-card cat-colored cat-physics nav-push"><div class="related-title">2. Reality Is Events, Not Things</div></a>
+<section id="provenance" class="article-section"><div class="related-section"><h3 class="section-heading related-label">Related articles</h3><div class="related-grid"><a href="002-events.html" class="related-card cat-colored cat-physics nav-push"><div class="related-title">2. Reality Is Events, Not Things</div></a>
 <a href="012-autopoiesis.html" class="related-card cat-colored cat-biology nav-push"><div class="related-title">12. The Cell That Makes Itself</div></a>
 <a href="021-just.html" class="related-card cat-colored cat-knowledge nav-push"><div class="related-title">21. The Word &quot;Just&quot; Is a Confession</div></a>
 <a href="037-assembly.html" class="related-card related-card-prelim cat-colored cat-mathematics nav-push"><div class="related-title">37. The Architecture of Levels</div></a>

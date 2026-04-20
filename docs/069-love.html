@@ -17,8 +17,8 @@
 <div class="nav-row">
 <div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
-  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search pods" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto pod</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to pod" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
+  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search articles" onclick="seedNavOpenSearch();return false">Search</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto article</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to article" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
@@ -28,6 +28,7 @@
             <ul class="nav-dropdown"><li><a href="trails.html" class="nav-push">Trails</a></li>
               <li><a href="list.html" class="nav-push">Index</a></li>
               <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="footnotes.html" class="nav-push">Footnotes</a></li>
               <li><a href="glossary.html" class="nav-push">Glossary</a></li>
               <li><a href="map.html" class="nav-push">Map</a></li>
               <li><a href="more.html" class="nav-push">More</a></li></ul>
@@ -41,13 +42,14 @@
     <li><a href="trails.html" class="nav-push">Trails</a></li>
               <li><a href="list.html" class="nav-push">Index</a></li>
               <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="footnotes.html" class="nav-push">Footnotes</a></li>
               <li><a href="glossary.html" class="nav-push">Glossary</a></li>
               <li><a href="map.html" class="nav-push">Map</a></li>
               <li><a href="more.html" class="nav-push">More</a></li>
   </ul></div>
 </div>
 </nav>
-<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search pods" hidden>
+<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search articles" hidden>
   <div class="search-dialog-overlay" onclick="seedNavCloseSearch()"></div>
   <div class="search-dialog-inner">
     <div class="search-dialog-header"><input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)"><button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button></div>
@@ -56,10 +58,10 @@
   </div>
 </div>
 <div class="wrap">
-  <div class="pod-header fade cat-colored cat-feeling"><h1>Love</h1><p class="premise">Physicists describe light and mystics describe love, and they keep reaching for the same words — attraction, radiance, union, the dissolution of distance — not because one is borrowing from the other but because they may be describing the outside and inside of the same phenomenon.</p><div class="pod-nav-row"><a class="header-nav-prev nav-push" href="068-bubbles.html" aria-label="Previous pod">&lt;&lt;</a><span class="header-nav-num">Pod 69</span><a class="header-nav-next nav-push" href="070-harmony.html" aria-label="Next pod">&gt;&gt;</a></div></div>
-  <section id="_prolog" class="pod-section pod-prolog"><div class="prose"><p>@subtitle(Light is what Love looks like. Love is what Light feels like.  – David Deida)</p>
+  <div class="article-header fade cat-colored cat-feeling"><h1>Love</h1><p class="premise">Physicists describe light and mystics describe love, and they keep reaching for the same words — attraction, radiance, union, the dissolution of distance — not because one is borrowing from the other but because they may be describing the outside and inside of the same phenomenon.</p><div class="article-nav-row"><a class="header-nav-prev nav-push" href="068-bubbles.html" aria-label="Previous article">&lt;&lt;</a><span class="header-nav-num">Article 69</span><a class="header-nav-next nav-push" href="070-harmony.html" aria-label="Next article">&gt;&gt;</a></div></div>
+  <section id="_prolog" class="article-section article-prolog"><div class="prose"><p>@subtitle(Light is what Love looks like. Love is what Light feels like.  – David Deida)</p>
 </div></section>
-<section id="surface" class="pod-section"><h2 class="section-heading">Surface</h2><div class="prose"><p>Physicists describe light: electromagnetic radiation, photons crossing space at the maximum speed the universe allows. From a photon’s perspective, there is no journey — departure and arrival are the same moment (<a href="029-lighttime.html">From Light’s Point of View, There Is No Journey</a>). No distance. No separation.</p>
+<section id="surface" class="article-section"><h2 class="section-heading">Surface</h2><div class="prose"><p>Physicists describe light: electromagnetic radiation, photons crossing space at the maximum speed the universe allows. From a photon’s perspective, there is no journey — departure and arrival are the same moment (<a href="029-lighttime.html">From Light’s Point of View, There Is No Journey</a>). No distance. No separation.</p>
 <p>Mystics describe love: the force that dissolves boundaries, that draws you toward union until the self burns away. Rumi: “Love is the bridge between you and everything.”</p>
 <p>They keep reaching for the same words. Attraction. Radiance. Falling. Union. The dissolution of distance.</p>
 <p>This is usually treated as poetry — metaphor borrowed from physics, or emotion projected onto an indifferent cosmos. But there’s a third possibility. What if the convergence is recognition?</p>
@@ -73,7 +75,7 @@
 <p>Dante, at the end of everything: “The love that moves the sun and the other stars.” Not decoration. Motive force.</p>
 <div class="cta">&quot;Find something that pulls at you — a light source, a person, a question you can't release. Instead of analyzing the pull, attend to its shape. The leaning. The warmth. The narrowing of distance. What if that shape is not unique to you?&quot;</div>
 </div></section>
-<section id="depth" class="pod-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>The surface layer proposes that love and light are inside and outside of the same phenomenon. This section traces the philosophical lineage of that claim.</p>
+<section id="depth" class="article-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>The surface layer proposes that love and light are inside and outside of the same phenomenon. This section traces the philosophical lineage of that claim.</p>
 <p>Alfred North Whitehead, the mathematician-turned-philosopher whose process metaphysics has quietly shaped contemporary philosophy of mind, called the fundamental act of reality <em>prehension</em> — the way each event takes in, feels, and integrates what surrounds it before completing itself (<a href="008-fields.html">The Field Is the Medium of Feeling</a>). Every actual occasion, from the simplest physical event to the most complex conscious moment, has this structure: it receives, it feels, it becomes. Love, in this framework, is prehension at scale — the felt dimension of relation wherever relation occurs. Not added on top of physics. Constitutive of physics from the inside.</p>
 <p>The Greeks understood Eros cosmologically before they understood it sexually. In Hesiod’s <em>Theogony</em> — the eighth-century BCE poem that shaped Greek cosmology for centuries — Eros is primordial, present at the beginning alongside Chaos and Gaia. Without Eros, nothing combines. No complexity. No cosmos. Plato develops this in the <em>Symposium</em>: Eros as the force that drives everything toward the Good, the Beautiful, the True. Desire not as lack but as the engine of becoming.</p>
 <p>Simone Weil, the French philosopher and mystic who died in 1943, drew a distinction that illuminates the structure. In <em>Gravity and Grace</em>, she describes two movements: gravity pulls downward, toward dispersion; grace pulls toward God, toward unity. Both are modes of attraction — which is to say, both are love differently oriented. Her insight that “attention is the rarest and purest form of generosity” points to the connection between love and consciousness. Sustained attention <em>is</em> love. There may be no other definition that survives scrutiny.</p>
@@ -82,7 +84,7 @@
 <p>The convergence between physics and mysticism is neither coincidence nor projection. It is two descriptions of the same reality from opposite directions. The outside is light, gravity, field — measurable, mathematical, precise. The inside is love — felt, undergone, known only from within.</p>
 <p>If this is true, then love is not a human invention projected onto an indifferent cosmos. It is what the cosmos feels like from you stop observing it from outside and start participating from within.</p>
 </div></section>
-<section id="provenance" class="pod-section"><div class="related-section"><h3 class="section-heading related-label">Related pods</h3><div class="related-grid"><a href="002-events.html" class="related-card cat-colored cat-physics nav-push"><div class="related-title">2. Reality Is Events, Not Things</div></a>
+<section id="provenance" class="article-section"><div class="related-section"><h3 class="section-heading related-label">Related articles</h3><div class="related-grid"><a href="002-events.html" class="related-card cat-colored cat-physics nav-push"><div class="related-title">2. Reality Is Events, Not Things</div></a>
 <a href="003-inside.html" class="related-card cat-colored cat-consciousness nav-push"><div class="related-title">3. Everything Has an Inside</div></a>
 <a href="029-lighttime.html" class="related-card related-card-prelim cat-colored cat-physics nav-push"><div class="related-title">29. From Light's Point of View, There Is No Journey</div></a>
 <a href="036-universenoticing.html" class="related-card related-card-prelim cat-colored cat-consciousness nav-push"><div class="related-title">36. You Are the Universe Noticing Something</div></a>
