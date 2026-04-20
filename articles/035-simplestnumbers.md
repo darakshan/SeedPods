@@ -1,5 +1,5 @@
 @title The Simplest Numbers Come First
-@subtitle Farey, Benford, and the Shape of Infinity
+Farey, Benford, and the Shape of Infinity
 @status rough
 @date 2026-03-14
 @category feeling

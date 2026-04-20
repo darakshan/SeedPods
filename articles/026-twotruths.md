@@ -1,5 +1,5 @@
 @title Two Things Can Be True at Once
-@subtitle Contradiction is often the sign of a framework too small for the reality it's trying to hold.
+Contradiction is often the sign of a framework too small for the reality it's trying to hold.
 @status partial
 @date 2026-03-12
 @category knowledge

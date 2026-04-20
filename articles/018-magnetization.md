@@ -1,5 +1,5 @@
 @title Ideas Magnetize Through a Group Like Iron
-@subtitle Only a seed group of influencers is necessary. Then the field does the rest.
+Only a seed group of influencers is necessary. Then the field does the rest.
 @status proto
 @date 2026-03-28
 @category knowledge

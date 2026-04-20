@@ -1,5 +1,5 @@
 @title Aliens Are Among Us — and We Built Them
-@subtitle The surprise is not that they arrived. The surprise is where they came from.
+The surprise is not that they arrived. The surprise is where they came from.
 @status rough
 @date 2026-03-23
 @category AI-minds

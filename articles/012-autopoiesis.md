@@ -1,5 +1,5 @@
 @title The Cell That Makes Itself
-@subtitle Life is defined not by what it's made of, but by the circular process that keeps making it.
+Life is defined not by what it's made of, but by the circular process that keeps making it.
 @status draft1
 @date 2026-03-11
 @category biology
@@ -51,7 +51,7 @@ As far as we know, the loop has closed only once — in the chemistry of life on
 
 Whitehead@footnote(@ref(whitehead, "Whitehead, A.N. Process and Reality. Macmillan, 1929.") The metaphysical framework — society of occasions as the counterpart of autopoietic organization. A living cell in Whiteheadian terms is a society of occasions organized with enough coherence and closure to constitute a persistent center of activity.) arrived at a related insight from a completely different direction. In his process philosophy, the fundamental units of reality are events rather than things (@link(002)) — occasions that arise, integrate what came before, and perish into the next occasion. A living cell, in Whiteheadian terms, is a society of such occasions organized with enough coherence and closure to constitute a persistent center of activity. The autopoietic loop is what that coherence looks like in biology.
 
-The connection to @link(003) runs deeper still. For Whitehead, every actual occasion has an inside. Autopoiesis gives us the first clear structural candidate for what having an inside means at the biological level. The cell's boundary is not merely physical — it is the boundary between what the process takes in and transforms and what it does not. That selective engagement — this matters, that doesn't — is the minimum version of what, at greater scales of complexity, becomes sensation, perception, and eventually thought.
+The connection to @link(003) runs deeper still. For Whitehead, every actual occasion has an inside. Autopoiesis gives us the first clear structural candidate for what having an inside means at the biological level. The cell's boundary is not merely physical — it is the boundary between what the process takes in and transforms and what it does not. That selective engagement — this matters, that doesn't — is the minimum version of what, at greater scales of complexity, becomes feeling, perception, and eventually thought.
 
 Nothing was added to produce this (@link(011)). The loop did not require a new ingredient — only accumulation crossing a threshold. But once closed, everything changes character. A linear system gives you proportional returns — more input, more output, until it runs dry. A closed loop is a different regime entirely. Think of a microphone too close to its speaker: the room is quiet, then suddenly the sound is feeding back into itself and the noise is unbearable, and nothing entered the room except the moment of closure. An autopoietic system acts to replenish its own substrates — it is oriented toward its own continuation in a way no open reaction can be. That reorientation is not a small difference. It is the difference that creates life.
 

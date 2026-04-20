@@ -1,5 +1,5 @@
 @title Our Intuitions About Large Numbers Are Completely Unreliable
-@subtitle The number Gödel constructed was just a number — arrived at by routine steps. And it broke the system.
+The number Gödel constructed was just a number — arrived at by routine steps. And it broke the system.
 @status proto
 @date 2026-03-11
 @category knowledge

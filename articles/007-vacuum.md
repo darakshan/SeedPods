@@ -1,5 +1,5 @@
 @title The Vacuum Is Not Empty
-@subtitle The quantum field seethes with potential. The event is what the field does.
+The quantum field seethes with potential. The event is what the field does.
 @status proto
 @date 2026-03-11
 @category physics

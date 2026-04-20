@@ -1,5 +1,5 @@
 @title The Surprising Consonance Map
-@subtitle Draw the intervals. Recognize the shape.
+Draw the intervals. Recognize the shape.
 @status prelim
 @date 2026-03-16
 @category feeling

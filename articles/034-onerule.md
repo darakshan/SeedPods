@@ -1,5 +1,5 @@
 @title One Rule Is Enough
-@subtitle The Single Iterating Point
+The Single Iterating Point
 @status rough
 @date 2026-03-14
 @category mathematics

@@ -1,5 +1,5 @@
 @title Gossamer App Test
-@subtitle A framework for collections of linked ideas
+A framework for collections of linked ideas
 @status proto
 @version 14
 @date 2026-03-27

@@ -1,5 +1,5 @@
 @title The Past Is Fully Present
-@subtitle In a transformer network, time is almost geometric — the entire context simultaneously available, not receding.
+In a transformer network, time is almost geometric — the entire context simultaneously available, not receding.
 @status proto
 @date 2026-03-11
 @category AI-minds

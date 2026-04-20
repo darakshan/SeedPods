@@ -146,6 +146,6 @@
   "surface_max_words" : 700,
   "surface_min_words" : 400,
   "title" : "SeedPods",
-  "version" : 18,
+  "version" : 19,
   "view_all" : "View all {n} seeds →"
 }

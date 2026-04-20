@@ -1,5 +1,5 @@
 @title The Arrow Points Somewhere Else
-@subtitle Penrose was right that Gödel matters. He was wrong about where the arrow points.
+Penrose was right that Gödel matters. He was wrong about where the arrow points.
 @status partial
 @date 2026-03-11
 @category consciousness

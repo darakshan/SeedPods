@@ -1,5 +1,5 @@
 @title We Don't Know Who or What We're Talking To
-@subtitle A fluent output is evidence of something — but not evidence of what.
+A fluent output is evidence of something — but not evidence of what.
 @status partial
 @date 2026-04-13
 @category AI-minds

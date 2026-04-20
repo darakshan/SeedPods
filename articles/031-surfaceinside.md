@@ -1,5 +1,5 @@
 @title The Surface Is the Inside 
-@subtitle The Bubble
+The Bubble
 @status prelim
 @date 2026-04-14
 @category physics

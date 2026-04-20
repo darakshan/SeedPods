@@ -1,5 +1,5 @@
 @title Reality Is Made of Stories, Not Atoms
-@subtitle The story we agree upon becomes the world we live in.
+The story we agree upon becomes the world we live in.
 @status partial
 @date 2026-03-28
 @category consciousness
@@ -18,7 +18,7 @@ The naive view holds that reality exists independently and we build models of it
 
 We can distinguish at least three levels of story, though these are our own categories for noticing how deep the narrative goes, not established divisions in the literature.
 
-**Level 1: Perceptual.** Perception itself is already saturated with narrative. The infant sees light; the child sees "stars," which carry with them an entire cosmology (distance, fire, physics, maybe angels). The label fuses with the sensation and becomes phenomenologically indistinguishable from raw perception. This is not a bug. The organism that paused to separate signal from interpretation was outcompeted by the one that acted on the fused product.
+**Level 1: Perceptual.** Perception itself is already saturated with narrative. The infant sees light; the child sees "stars," which carry with them an entire cosmology (distance, fire, physics, maybe angels). The label fuses with the feeling and becomes phenomenologically indistinguishable from raw perception. This is not a bug. The organism that paused to separate signal from interpretation was outcompeted by the one that acted on the fused product.
 
 Below Level 1, George Lakoff and Mark Johnson's work on conceptual metaphor suggests the structuring goes even deeper. @ref(lakoff, "Lakoff, George, and Mark Johnson. *Metaphors We Live By*. University of Chicago Press, 1980. The foundational argument that conceptual thought is structured by metaphor.") The concepts we reason *with* are metaphorical: understanding is grasping, knowing is seeing, argument is war, time is a moving object. These are not stylistic choices but the cognitive architecture itself. We do not merely describe experience in metaphor; we constitute it metaphorically. The story precedes the telling.
 

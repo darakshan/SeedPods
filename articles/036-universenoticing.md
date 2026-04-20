@@ -1,5 +1,5 @@
 @title You Are the Universe Noticing Something
-@subtitle Teilhard and Whitehead
+Teilhard and Whitehead
 @status rough
 @date 2026-03-14
 @category consciousness

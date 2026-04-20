@@ -1,5 +1,5 @@
 @title The Sky Is a Fossil Record
-@subtitle Fossils of Primal Evolution
+Fossils of Primal Evolution
 @status rough
 @date 2026-03-14
 @category physics

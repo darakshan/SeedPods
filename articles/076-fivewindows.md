@@ -1,5 +1,5 @@
 @title Five Windows, One Room
-@subtitle Light, sound, smell, touch, taste — all vibration in space and time. Yet each feels utterly unlike the others. That gap is the mystery.
+Light, sound, smell, touch, taste — all vibration in space and time. Yet each feels utterly unlike the others. That gap is the mystery.
 @status proto
 @date 2026-03-28
 @category feeling
@@ -17,7 +17,7 @@ And yet: red doesn't sound like anything. Middle C has no flavor. The smell of c
 
 This is one face of the Hard Problem. Not just "why is there experience at all?" but "why does experience *differentiate* into these irreducibly distinct qualities?" If the brain is just processing vibration-patterns, why doesn't it all feel like one thing?
 
-There's another layer: within each sense, some sensations feel *pure* and others feel *composite*. Red, blue, yellow, green — you can't describe any of them as a mixture of the others. But orange feels like red-yellow; purple feels like red-blue; brown is just dark, desaturated orange — there's no "pure brown." In hearing, octaves and perfect fifths feel like natural resting points. F# feels like it's between things. The simplest frequency ratios produce the cleanest sensations. @link(035, The simplest numbers come first) — and the nervous system seems to know it.
+There's another layer: within each sense, some feelings feel *pure* and others feel *composite*. Red, blue, yellow, green — you can't describe any of them as a mixture of the others. But orange feels like red-yellow; purple feels like red-blue; brown is just dark, desaturated orange — there's no "pure brown." In hearing, octaves and perfect fifths feel like natural resting points. F# feels like it's between things. The simplest frequency ratios produce the cleanest feelings. @link(035, The simplest numbers come first) — and the nervous system seems to know it.
 
 Five windows. Each one offers a view that nothing else can provide. Yet they all open onto one room — a single coherent world, experienced by a single someone. The unity at the level of physics (all vibration) and the unity at the level of experience (one world) sandwich a profound mystery: the differentiation in between.
 

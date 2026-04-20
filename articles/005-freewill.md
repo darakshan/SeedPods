@@ -1,5 +1,5 @@
 @title Freedom Is What Nature Does Everywhere
-@subtitle Free will is not the exception to physics. It is physics, at its most complex and self-aware.
+Free will is not the exception to physics. It is physics, at its most complex and self-aware.
 @status proto
 @date 2026-03-11
 @category consciousness

@@ -1,5 +1,5 @@
 @title To-Do List
-@subtitle Ideas, questions, and tasks awaiting their pods.
+Ideas, questions, and tasks awaiting their pods.
 @status proto
 @date 2026-04-17
 @category zzz-debug

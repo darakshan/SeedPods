@@ -1,5 +1,5 @@
 @title The Channel Is Not the Capacity
-@subtitle We mistook the difficulty of output for the absence of inner life.
+We mistook the difficulty of output for the absence of inner life.
 @status draft1
 @date 2026-03-11
 @category consciousness

@@ -1,5 +1,5 @@
 @title The Field Is the Medium of Feeling
-@subtitle Physics and Whitehead converged on the same discovery from opposite directions.
+Physics and Whitehead converged on the same discovery from opposite directions.
 @status draft1
 @date 2026-03-12
 @category feeling
@@ -25,7 +25,7 @@ In the 1860s, James Clerk Maxwell noticed something remarkable. Electric fields 
 
 Now here's the part that should stop you.
 
-Your nervous system runs on electricity. Every sensation, every thought, every moment of attention is an electrical event — a pattern of charge moving through your neurons. Which means your nervous system doesn't just use the electromagnetic field. Your nervous system is a structure in the electromagnetic field. The same field that carries light.
+Your nervous system runs on electricity. Every feeling, every thought, every moment of attention is an electrical event — a pattern of charge moving through your neurons. Which means your nervous system doesn't just use the electromagnetic field. Your nervous system is a structure in the electromagnetic field. The same field that carries light.
 
 So when you said consciousness is like light — you may have been more right than you knew. Not because light is a good image for awareness, but because awareness and light are both things the electromagnetic field does.
 

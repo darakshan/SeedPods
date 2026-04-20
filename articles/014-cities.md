@@ -1,5 +1,5 @@
 @title Cities Have an Inside Too
-@subtitle The society of events that constitutes an experiencing entity need not be biological.
+The society of events that constitutes an experiencing entity need not be biological.
 @status proto
 @date 2026-03-11
 @category biology

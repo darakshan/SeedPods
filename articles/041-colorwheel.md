@@ -1,5 +1,5 @@
 @title The Surprising Color Wheel
-@subtitle The mind closes the line into a circle.
+The mind closes the line into a circle.
 @status prelim
 @date 2026-03-16
 @category feeling

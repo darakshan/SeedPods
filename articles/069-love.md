@@ -1,6 +1,6 @@
 @title Love
 @status draft1
-@subtitle Light is what Love looks like. Love is what Light feels like.  -- David Deida
+Light is what Love looks like. Love is what Light feels like.  -- David Deida
 @version 2
 @date 2026-03-27
 @category feeling

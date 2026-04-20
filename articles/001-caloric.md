@@ -1,5 +1,5 @@
 @title The Map That Was Wrong
-@subtitle Every era has a framework so obvious it's invisible — until it isn't.
+Every era has a framework so obvious it's invisible — until it isn't.
 @status draft1
 @date 2026-03-25
 @category knowledge

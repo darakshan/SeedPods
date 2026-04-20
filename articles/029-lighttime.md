@@ -1,5 +1,5 @@
 @title From Light's Point of View, There Is No Journey
-@subtitle A photon leaves a star and arrives at your eye. From the photon's perspective, these are the same moment.
+A photon leaves a star and arrives at your eye. From the photon's perspective, these are the same moment.
 @status proto
 @date 2026-03-16
 @category physics

@@ -1,5 +1,5 @@
 @title More Is Different
-@subtitle Nothing was added. The numbers just got large enough.
+Nothing was added. The numbers just got large enough.
 @status rough
 @date 2026-03-14
 @category consciousness

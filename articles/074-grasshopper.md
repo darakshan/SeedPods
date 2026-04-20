@@ -1,5 +1,5 @@
 @title The Grasshopper Was Right
-@subtitle The fable taught us that play is what you do instead of working. It was wrong.
+The fable taught us that play is what you do instead of working. It was wrong.
 @status draft1
 @date 2026-03-19
 @category knowledge

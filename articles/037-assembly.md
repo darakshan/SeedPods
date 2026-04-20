@@ -1,5 +1,5 @@
 @title The Architecture of Levels
-@subtitle TBD
+TBD
 @status proto
 @date 2026-03-14
 @category mathematics

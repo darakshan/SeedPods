@@ -1,5 +1,5 @@
 @title Everything Has an Inside
-@subtitle Not just brains. Not just animals. Experience may go all the way down.
+Not just brains. Not just animals. Experience may go all the way down.
 @status draft1
 @date 2026-03-13
 @category consciousness

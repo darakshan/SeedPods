@@ -1,5 +1,5 @@
 @title Science Advances One Funeral at a Time
-@subtitle The map doesn't get replaced. The people holding the old map get replaced.
+The map doesn't get replaced. The people holding the old map get replaced.
 @status proto
 @date 2026-03-11
 @category knowledge
