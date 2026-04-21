@@ -1,12 +1,13 @@
 @title Opponent Processing: The Eye Thinks Before the Brain Does
 @status proto
-@date 2026-03-15
+@pub-time 2026-03-15T00:00Z
 @category feeling
 @term vision: TBD
 @term retina: TBD
 @term opponent-processing: TBD
 @term perception: TBD
 @related 003, 013, 016, 037, 045
+@edit-time 2026-04-20T17:38Z
 
 @argument
 The retina — which is embryologically brain tissue that migrated into the eye — recombines three raw cone signals into opponent channels before any signal leaves the eye, so that the world has already been interpreted one synapse past the photoreceptors.

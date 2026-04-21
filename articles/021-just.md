@@ -1,7 +1,8 @@
 @title The Word "Just" Is a Confession
+@edit-time 2026-04-21T03:45Z
 When someone says a process is "just" doing something, they've described the output and mistaken it for an explanation.
 @status draft1
-@date 2026-03-11
+@pub-time 2026-03-11T00:00Z
 @category knowledge
 @term language: TBD
 @term rhetoric: TBD

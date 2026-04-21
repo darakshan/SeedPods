@@ -1,9 +1,10 @@
 @title Consciousness as a Dimension Orthogonal to Spacetime
 @status proto
-@date 2026-03-15
+@pub-time 2026-03-15T00:00Z
 @category consciousness
 @term metaphysics: TBD
 @related 002, 008, 051, 064, 067
+@edit-time 2026-04-20T17:38Z
 
 @argument
 Consciousness may not be produced by spacetime but be a dimension orthogonal to it — primitive the way mass or charge is primitive — which would mean the universe has always had an interior, not just since brains arrived.

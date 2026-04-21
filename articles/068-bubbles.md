@@ -1,11 +1,12 @@
 @title The Soap Bubble as Recognition, Not Metaphor
 @status proto
-@date 2026-03-15
+@pub-time 2026-03-15T00:00Z
 @category biology
 @term recognition: TBD
 @term boundary: TBD
 @term interiority: TBD
 @related 051, 067, 031, 003, 037
+@edit-time 2026-04-20T17:38Z
 
 @argument
 A child stops for a soap bubble not from puzzlement but from recognition — the bubble is pure surface with no hidden interior, which is the holographic principle made visible, and the child is seeing the structure of her own existence without knowing it.

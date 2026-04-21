@@ -1,12 +1,13 @@
 @title Artificial Networks Rediscover the Retina
 @status proto
-@date 2026-03-15
+@pub-time 2026-03-15T00:00Z
 @category feeling
 @term AI: TBD
 @term vision: TBD
 @term efficient-coding: TBD
 @term evolution: TBD
 @related 009, 016, 037, 045, 046
+@edit-time 2026-04-20T17:38Z
 
 @argument
 Deep neural networks trained on natural images with no instruction about color spontaneously develop the same opponent channels and edge detectors that evolution spent millions of years finding — because both were responding to the same mathematical pressure in the statistics of a sunlit world.

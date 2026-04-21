@@ -1,9 +1,10 @@
 @title Many Worlds as Parallel Evolutionary Experiments
 @status proto
-@date 2026-03-15
+@pub-time 2026-03-15T00:00Z
 @category physics
 @term quantum: TBD
 @related 005, 009, 058, 062, 064
+@edit-time 2026-04-20T17:38Z
 
 @argument
 Every quantum branch is running its own evolutionary experiment — the universe expanding its search across possibility space — and the Omega Point Teilhard imagined for one timeline may be an attractor that every branch of the wavefunction approaches along its own path.

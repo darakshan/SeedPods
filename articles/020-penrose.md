@@ -1,7 +1,8 @@
 @title The Arrow Points Somewhere Else
+@edit-time 2026-04-21T03:45Z
 Penrose was right that Gödel matters. He was wrong about where the arrow points.
 @status partial
-@date 2026-03-11
+@pub-time 2026-03-11T00:00Z
 @category consciousness
 @term godel-numbers: TBD
 @term AI: TBD

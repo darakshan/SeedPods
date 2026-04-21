@@ -1,11 +1,12 @@
 @title How Learning Becomes Hardwired: The Baldwin Effect
 @status proto
-@date 2026-03-15
+@pub-time 2026-03-15T00:00Z
 @category biology
 @term evolution: TBD
 @term learning: TBD
 @term development: TBD
 @related 011, 016, 034, 041, 046
+@edit-time 2026-04-20T17:38Z
 
 @argument
 If individuals genetically predisposed to learn a solution faster survive and reproduce better, selection will progressively shift the starting point toward the learned solution until the learning itself is unnecessary — the Baldwin effect, by which experience becomes innate without Lamarckian inheritance.

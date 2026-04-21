@@ -1,7 +1,8 @@
 @title Our Intuitions About Large Numbers Are Completely Unreliable
+@edit-time 2026-04-21T03:45Z
 The number Gödel constructed was just a number — arrived at by routine steps. And it broke the system.
 @status proto
-@date 2026-03-11
+@pub-time 2026-03-11T00:00Z
 @category knowledge
 @term mathematics: TBD
 @term godel-numbers: TBD

@@ -1,11 +1,12 @@
 @title Branching Numbers as Finite Dice
 @status proto
-@date 2026-03-15
+@pub-time 2026-03-15T00:00Z
 @category mathematics
 @term mandelbrot-set: TBD
 @term probability: TBD
 @term farey-sequence: TBD
 @related 005, 009, 038, 054, 060
+@edit-time 2026-04-20T17:38Z
 
 @argument
 The branching at each Mandelbrot bifurcation is not arbitrary but fixed by local algebra — always a finite whole number equal to the bulb's period — and assigning uniform probability to each branch produces a natural measure that weights simpler branches more heavily, which is exactly what the ear already knows.

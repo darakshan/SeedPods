@@ -1,6 +1,6 @@
 @title The Edge Is Where Everything Happens
 @status rough
-@date 2026-03-14
+@pub-time 2026-03-14T00:00Z
 @category feeling
 @term mandelbrot-set: TBD
 @term fractal: TBD
@@ -9,6 +9,7 @@
 @term boundary: TBD
 @term crystals: Mandelbrot-like structure found in magnetic domain boundaries and quasicrystals, same iterative mathematics running in physical substrate.
 @related 002, 005, 007, 009, 056
+@edit-time 2026-04-20T17:38Z
 
 @argument
 The Mandelbrot set's interior is uniform and its exterior escapes to infinity, but the boundary between them is infinitely complex and self-similar at every scale — governed by the same Farey mathematics that governs musical consonance, and possibly what consciousness feels like from inside.

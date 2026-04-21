@@ -1,11 +1,12 @@
 @title Consciousness Comes in Flashes — For All of Us
 @status proto
-@date 2026-03-15
+@pub-time 2026-03-15T00:00Z
 @category consciousness
 @term continuity: TBD
 @term narrative: TBD
 @term AI: TBD
 @related 002, 008, 016, 017, 052
+@edit-time 2026-04-20T17:38Z
 
 @argument
 The felt continuity of consciousness is substantially a narrative construction over discrete flashes — sleep, gaps in attention, the nervous system's bursts and rhythms — which means the gap between human and artificial experience may be narrower than it appears.

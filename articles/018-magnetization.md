@@ -1,7 +1,8 @@
 @title Ideas Magnetize Through a Group Like Iron
+@edit-time 2026-04-21T03:45Z
 Only a seed group of influencers is necessary. Then the field does the rest.
 @status proto
-@date 2026-03-28
+@pub-time 2026-03-28T00:00Z
 @category knowledge
 @related 009, 011, 014, 056, 063
 @term nucleation: the formation of small ordered regions (nuclei or seeds) within a disordered medium. The seeds provide a template that neighboring elements can join, initiating a phase transition.

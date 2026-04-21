@@ -1,12 +1,13 @@
 @title Neural Networks as High-Dimensional Mandelbrot Sets
 @status proto
-@date 2026-03-15
+@pub-time 2026-03-15T00:00Z
 @category AI-minds
 @term neural-networks: TBD
 @term mandelbrot-set: TBD
 @term training: TBD
 @term generalization: TBD
 @related 009, 011, 034, 038, 053
+@edit-time 2026-04-20T17:38Z
 
 @argument
 Training a neural network is computing a Mandelbrot set in hundreds of thousands of dimensions — weight space is the complex plane, the loss landscape is the iteration, and the best models sit on the boundary between convergence and escape, which is not metaphor but structural homology.

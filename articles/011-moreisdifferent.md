@@ -1,7 +1,8 @@
 @title More Is Different
+@edit-time 2026-04-21T03:45Z
 Nothing was added. The numbers just got large enough.
 @status rough
-@date 2026-03-14
+@pub-time 2026-03-14T00:00Z
 @category consciousness
 @term emergence: TBD
 @term complexity: TBD

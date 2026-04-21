@@ -1,12 +1,13 @@
 @title Two Opposite Kinds of Stability
 @status proto
-@date 2026-03-15
+@pub-time 2026-03-15T00:00Z
 @category mathematics
 @term dynamics: TBD
 @term consonance: TBD
 @term golden-ratio: TBD
 @term resonance: TBD
 @related 009, 030, 038, 054, 070
+@edit-time 2026-04-20T17:38Z
 
 @argument
 A ratio is dynamically stable if it resists resonant capture and acoustically stable if it produces a clean repeating waveform — these two stabilities are exact inverses, and the fractal landscape of consonance is the geometry of their opposition.

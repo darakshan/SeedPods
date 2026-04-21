@@ -1,11 +1,12 @@
 @title The Feeling/Function Distinction Will Dissolve
 @status proto
-@date 2026-03-15
+@pub-time 2026-03-15T00:00Z
 @category consciousness
 @term AI: TBD
 @term functionalism: TBD
 @term zombie: TBD
 @related 001, 015, 016, 072, 073
+@edit-time 2026-04-20T17:38Z
 
 @argument
 The feeling/function distinction — the intuition that there is a gap between really feeling something and being functionally identical to something that feels — may dissolve the way caloric dissolved, not by philosophical argument but because the science shows there was nothing for the gap to be.

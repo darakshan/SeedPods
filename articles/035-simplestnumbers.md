@@ -1,7 +1,8 @@
 @title The Simplest Numbers Come First
+@edit-time 2026-04-21T03:45Z
 Farey, Benford, and the Shape of Infinity
 @status rough
-@date 2026-03-14
+@pub-time 2026-03-14T00:00Z
 @category feeling
 @term farey-sequence: TBD
 @term benfords-law: TBD

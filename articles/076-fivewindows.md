@@ -1,7 +1,8 @@
 @title Five Windows, One Room
+@edit-time 2026-04-21T03:45Z
 Light, sound, smell, touch, taste — all vibration in space and time. Yet each feels utterly unlike the others. That gap is the mystery.
 @status proto
-@date 2026-03-28
+@pub-time 2026-03-28T00:00Z
 @category feeling
 @related 002, 003, 013, 015, 029
 

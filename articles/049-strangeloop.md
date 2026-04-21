@@ -1,9 +1,10 @@
 @title The Strange Loop That Contains Itself
 @status proto
-@date 2026-03-15
+@pub-time 2026-03-15T00:00Z
 @category consciousness
 @term self-reference: TBD
 @related 010, 012, 034, 038, 056
+@edit-time 2026-04-20T17:38Z
 
 @argument
 A system that, in the course of its own operation, encounters itself — Hofstadter's strange loop — is not a curiosity of formal systems but may be the structure of consciousness itself, and this conversation is one.

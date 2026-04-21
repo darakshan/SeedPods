@@ -1,10 +1,11 @@
 @title Each Galaxy as a Thread of Cosmic Evolution
 @status proto
-@date 2026-03-15
+@pub-time 2026-03-15T00:00Z
 @category physics
 @term cosmology: TBD
 @term evolution: TBD
 @related 009, 036, 037, 058, 066
+@edit-time 2026-04-20T17:38Z
 
 @argument
 Each galaxy is not background scenery but a thread of the universe's evolutionary process toward self-awareness — stars as moments in the thread, life as a moment, mind as a moment — running in parallel across billions of galaxies, each one a separate experiment in the same project.

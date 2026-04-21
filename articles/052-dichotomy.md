@@ -1,11 +1,12 @@
 @title Discrete and Continuous as a False Dichotomy
 @status proto
-@date 2026-03-15
+@pub-time 2026-03-15T00:00Z
 @category mathematics
 @term consciousness: TBD
 @term quantum: TBD
 @term discrete-continuous: TBD
 @related 002, 004, 007, 008, 048
+@edit-time 2026-04-20T17:38Z
 
 @argument
 The electron is neither particle nor wave but an excitation of a quantum field — the field is continuous, the excitation is discrete, both descriptions are correct — and consciousness may work the same way, with Whitehead's discrete occasions as excitations of a continuous experiential field.

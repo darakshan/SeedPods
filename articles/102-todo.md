@@ -1,7 +1,8 @@
 @title To-Do List
+@edit-time 2026-04-21T03:45Z
 Ideas, questions, and tasks awaiting their pods.
 @status proto
-@date 2026-04-17
+@pub-time 2026-04-17T00:00Z
 @category zzz-debug
 @related 073
 

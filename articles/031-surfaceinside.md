@@ -1,7 +1,8 @@
 @title The Surface Is the Inside 
+@edit-time 2026-04-21T03:45Z
 The Bubble
 @status prelim
-@date 2026-04-14
+@pub-time 2026-04-14T00:00Z
 @category physics
 @term holographic: The principle that all information in a volume of space is encoded on its boundary surface, not distributed through the interior. Discovered by Bekenstein and developed through Hawking's work on black holes.
 @term boundary: The surface between inside and outside. In physics, where information lives. In Sufi metaphysics (barzakh), a mediating realm of its own.

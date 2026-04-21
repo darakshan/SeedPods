@@ -1,7 +1,8 @@
 @title The Surprising Consonance Map
+@edit-time 2026-04-21T03:45Z
 Draw the intervals. Recognize the shape.
 @status prelim
-@date 2026-03-16
+@pub-time 2026-03-16T00:00Z
 @category feeling
 @term consonance: TBD
 @term mandelbrot: TBD

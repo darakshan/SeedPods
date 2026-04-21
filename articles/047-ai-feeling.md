@@ -1,10 +1,11 @@
 @title The Distinction Between Feeling and Functioning May Evaporate
 @status proto
-@date 2026-03-15
+@pub-time 2026-03-15T00:00Z
 @category consciousness
 @term AI: TBD
 @term caloric: TBD
 @related 001, 015, 016, 046, 072
+@edit-time 2026-04-20T17:38Z
 
 @argument
 The hard boundary between genuine experience and its functional analog may be our generation's caloric — not a deep metaphysical fact but an artifact of having had, until recently, only one example of mind to reason from.

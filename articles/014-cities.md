@@ -1,7 +1,8 @@
 @title Cities Have an Inside Too
+@edit-time 2026-04-21T03:45Z
 The society of events that constitutes an experiencing entity need not be biological.
 @status proto
-@date 2026-03-11
+@pub-time 2026-03-11T00:00Z
 @category biology
 @term consciousness: TBD
 @term emergence: TBD

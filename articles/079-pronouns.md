@@ -1,7 +1,8 @@
 @title Pronouns, Reference, and the Density of Presence
+@edit-time 2026-04-21T03:45Z
 Pronouns are the lightest possible payload in a communication stack. Precisely because they carry almost no descriptive content, they reveal the infrastructure that reference requires.
 @status proto
-@date 2026-04-16
+@pub-time 2026-04-16T00:00Z
 @category knowledge
 @related 078, 017, 021, 003, 015
 

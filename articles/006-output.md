@@ -1,7 +1,8 @@
 @title You Can't Judge a Process by Its Output
+@edit-time 2026-04-21T03:45Z
 A thermostat predicts. Mozart predicted. The simplicity of the output tells you nothing.
 @status draft1
-@date 2026-03-11
+@pub-time 2026-03-11T00:00Z
 @category consciousness
 @term AI: TBD
 @term intelligence: TBD

@@ -1,7 +1,8 @@
 @title The Channel Is Not the Capacity
+@edit-time 2026-04-21T03:45Z
 We mistook the difficulty of output for the absence of inner life.
 @status draft1
-@date 2026-03-11
+@pub-time 2026-03-11T00:00Z
 @category consciousness
 @term neurodiversity: TBD
 @term expression: TBD

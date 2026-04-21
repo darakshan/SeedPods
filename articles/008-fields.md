@@ -1,7 +1,8 @@
 @title The Field Is the Medium of Feeling
+@edit-time 2026-04-21T03:45Z
 Physics and Whitehead converged on the same discovery from opposite directions.
 @status draft1
-@date 2026-03-12
+@pub-time 2026-03-12T00:00Z
 @category feeling
 @term physics: TBD
 @term fields: TBD

@@ -1,7 +1,8 @@
 @title The Cell That Makes Itself
+@edit-time 2026-04-21T03:45Z
 Life is defined not by what it's made of, but by the circular process that keeps making it.
 @status draft1
-@date 2026-03-11
+@pub-time 2026-03-11T00:00Z
 @category biology
 @term life: TBD
 @term cells: TBD

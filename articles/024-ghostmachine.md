@@ -1,7 +1,8 @@
 @title Ghost in the Machine
+@edit-time 2026-04-21T03:45Z
 The ghost was real. It just wasn't anywhere.
 @status proto
-@date 2026-03-14
+@pub-time 2026-03-14T00:00Z
 @category consciousness
 @term materialism: TBD
 @term mind-body: TBD

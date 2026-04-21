@@ -1,7 +1,8 @@
 @title Science Advances One Funeral at a Time
+@edit-time 2026-04-21T03:45Z
 The map doesn't get replaced. The people holding the old map get replaced.
 @status proto
-@date 2026-03-11
+@pub-time 2026-03-11T00:00Z
 @category knowledge
 @term paradigm-shift: TBD
 @term history-of-science: TBD

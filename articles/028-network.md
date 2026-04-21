@@ -1,7 +1,8 @@
 @title The Network That Experiences Itself
+@edit-time 2026-04-21T03:45Z
 Stars and galaxies are not isolated objects. From inside a light beam, there is no distance between them at all.
 @status partial
-@date 2026-03-12
+@pub-time 2026-03-12T00:00Z
 @category consciousness
 @term cosmology: TBD
 @term physics: TBD

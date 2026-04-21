@@ -1,7 +1,8 @@
 @title The Boundary Is a Stack
+@edit-time 2026-04-21T03:45Z
 The interior boundary is not a line. It is a layered apparatus of serial transductions — and it is fractal.
 @status proto
-@date 2026-04-16
+@pub-time 2026-04-16T00:00Z
 @category consciousness
 @related 022, 037, 003, 031, 011
 

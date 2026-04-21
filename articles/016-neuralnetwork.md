@@ -1,7 +1,8 @@
 @title The Network Is a Field Having Occasions
+@edit-time 2026-04-21T03:45Z
 A neural network is not analogous to Whitehead's picture. It is a concrete instance of it.
 @status proto
-@date 2026-03-11
+@pub-time 2026-03-11T00:00Z
 @category AI-minds
 @term AI: TBD
 @term neural-networks: TBD

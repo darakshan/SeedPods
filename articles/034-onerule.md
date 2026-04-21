@@ -1,7 +1,8 @@
 @title One Rule Is Enough
+@edit-time 2026-04-21T03:45Z
 The Single Iterating Point
 @status rough
-@date 2026-03-14
+@pub-time 2026-03-14T00:00Z
 @category mathematics
 @term iteration: TBD
 @term mandelbrot-set: TBD

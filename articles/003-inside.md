@@ -1,7 +1,8 @@
 @title Everything Has an Inside
+@edit-time 2026-04-21T05:11Z
 Not just brains. Not just animals. Experience may go all the way down.
 @status draft1
-@date 2026-03-13
+@pub-time 2026-03-13T00:00Z
 @category consciousness
 @term experience: TBD
 @related 001, 002, 008, 031, 069

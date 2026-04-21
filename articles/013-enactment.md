@@ -1,7 +1,8 @@
 @title The Organism Enacts Its World
+@edit-time 2026-04-21T03:45Z
 Cognition is not passive reception. The organism and its environment co-arise.
 @status proto
-@date 2026-03-11
+@pub-time 2026-03-11T00:00Z
 @category biology
 @term cognition: TBD
 @term perception: TBD

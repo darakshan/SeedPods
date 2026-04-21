@@ -1,10 +1,11 @@
 @title Spacetime as Emergent from Information Structure
 @status proto
-@date 2026-03-15
+@pub-time 2026-03-15T00:00Z
 @category physics
 @term entanglement: TBD
 @term emergence: TBD
 @related 008, 037, 050, 058, 068
+@edit-time 2026-04-20T17:38Z
 
 @argument
 Spacetime geometry may be constituted by quantum entanglement — sever the entanglement and the spacetime tears — which means asking where consciousness is in spacetime may be malformed, because both may be emergent from something more fundamental that has physical and experiential aspects simultaneously.

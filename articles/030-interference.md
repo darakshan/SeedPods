@@ -1,7 +1,8 @@
 @title The Pattern Is What the Waves Do Together
+@edit-time 2026-04-21T03:45Z
 Harmony, the double slit, and thought may all be the same phenomenon at different scales.
 @status proto
-@date 2026-03-12
+@pub-time 2026-03-12T00:00Z
 @category feeling
 @term physics: TBD
 @term music: TBD

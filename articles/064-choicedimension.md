@@ -1,11 +1,12 @@
 @title The Choice Dimension as Tree Algebra
 @status proto
-@date 2026-03-15
+@pub-time 2026-03-15T00:00Z
 @category mathematics
 @term many-worlds: TBD
 @term choice: TBD
 @term mandelbrot-set: TBD
 @related 005, 038, 046, 054, 060
+@edit-time 2026-04-20T17:38Z
 
 @argument
 The choice dimension doesn't need to multiply — it only needs to branch, and a tree algebra fibered over spacetime, with branching numbers fixed by local Farey structure and probabilities given by harmonic measure, may be the right mathematical object for what Many Worlds is actually describing.

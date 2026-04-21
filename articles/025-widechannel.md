@@ -1,7 +1,8 @@
 @title We Don't Know Who or What We're Talking To
+@edit-time 2026-04-21T03:45Z
 A fluent output is evidence of something — but not evidence of what.
 @status partial
-@date 2026-04-13
+@pub-time 2026-04-13T00:00Z
 @category AI-minds
 @related 003, 006, 016, 021, 022, 073
 @term AI: TBD

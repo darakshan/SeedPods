@@ -1,7 +1,8 @@
 @title Reality Is Events, Not Things
+@edit-time 2026-04-21T03:45Z
 The particle is the abstraction. The event is what's actually there.
 @status draft1
-@date 2026-03-13
+@pub-time 2026-03-13T00:00Z
 @category physics
 @term ontology: TBD
 @term process-philosophy: TBD

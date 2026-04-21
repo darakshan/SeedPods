@@ -1,12 +1,13 @@
 @title Harmony
 @status proto
-@date 2026-03-17
+@pub-time 2026-03-17T00:00Z
 @category feeling
 @term music: TBD
 @term mathematics: TBD
 @term consonance: TBD
 @term harmony: TBD
 @related 002, 009, 029, 034, 040
+@edit-time 2026-04-20T17:38Z
 
 @argument
 The circle of fifths doesn't close — stack twelve perfect fifths and you overshoot the octave — so equal temperament distributes the error, trading perfection for closure, while just intonation maps the pure ratios on an infinite two-dimensional lattice navigated by ear.

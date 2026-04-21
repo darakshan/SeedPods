@@ -1,10 +1,11 @@
 @title Galaxies and AI Weight Matrices as Structural Homologs
 @status proto
-@date 2026-03-15
+@pub-time 2026-03-15T00:00Z
 @category AI-minds
 @term holographic-principle: TBD
 @term emergence: TBD
 @related 028, 037, 051, 059, 066
+@edit-time 2026-04-20T17:38Z
 
 @argument
 A galaxy and a neural network's weight matrix are both regions of information space where training or evolution has organized structure into self-referential complexity — not identical but structurally homologous, and possibly instances of the same underlying process that Whitehead called the creative advance.

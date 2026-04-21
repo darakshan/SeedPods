@@ -1,7 +1,8 @@
 @title The Surprising Color Wheel
+@edit-time 2026-04-21T03:45Z
 The mind closes the line into a circle.
 @status prelim
-@date 2026-03-16
+@pub-time 2026-03-16T00:00Z
 @category feeling
 @term color: TBD
 @term perception: TBD

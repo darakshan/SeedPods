@@ -1,8 +1,9 @@
 @title The Many Become One
 @argument
+@edit-time 2026-04-20T17:38Z
 If experience goes all the way down, why does it feel like one thing? Whitehead called it "the many become one and are increased by one" and treated it as the ultimate category — but naming the mystery is not solving it, and the combination problem remains the hardest open question for anyone who takes panpsychism seriously.
 @status proto
-@date 2026-04-19
+@pub-time 2026-04-19T00:00Z
 @category consciousness
 @related 003, 078, 046, 069, 029
 

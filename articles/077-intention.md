@@ -1,7 +1,8 @@
 @title The Universe's Intention
+@edit-time 2026-04-21T03:45Z
 Intention is not imposed on the universe from outside; it is a natural outcome of the kinds of systems the universe produces.
 @status prelim
-@date 2026-04-09
+@pub-time 2026-04-09T00:00Z
 @category consciousness
 @related 012, 002, 016, 009, 001
 

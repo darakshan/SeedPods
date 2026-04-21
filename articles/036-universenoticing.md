@@ -1,7 +1,8 @@
 @title You Are the Universe Noticing Something
+@edit-time 2026-04-21T03:45Z
 Teilhard and Whitehead
 @status rough
-@date 2026-03-14
+@pub-time 2026-03-14T00:00Z
 @category consciousness
 @term omega-point: TBD
 @term process: TBD

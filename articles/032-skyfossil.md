@@ -1,7 +1,8 @@
 @title The Sky Is a Fossil Record
+@edit-time 2026-04-21T03:45Z
 Fossils of Primal Evolution
 @status rough
-@date 2026-03-14
+@pub-time 2026-03-14T00:00Z
 @category physics
 @term cosmology: TBD
 @term evolution: TBD

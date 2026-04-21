@@ -1,11 +1,12 @@
 @title Thought as Evolution in Milliseconds
 @status proto
-@date 2026-03-15
+@pub-time 2026-03-15T00:00Z
 @category AI-minds
 @term thought: TBD
 @term selection: TBD
 @term predictive-processing: TBD
 @related 005, 009, 011, 037, 045
+@edit-time 2026-04-20T17:38Z
 
 @argument
 The same process that shaped species over geological time may be shaping thoughts over the duration of a heartbeat — candidate interpretations competing within the neural substrate, the fitter achieving representation, meaning emerging from selection rather than instruction.

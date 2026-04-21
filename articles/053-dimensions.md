@@ -1,11 +1,12 @@
 @title The Virtual Dimensions Formula as a Publishable Conjecture
 @status proto
-@date 2026-03-15
+@pub-time 2026-03-15T00:00Z
 @category mathematics
 @term farey-sequence: TBD
 @term neural-networks: TBD
 @term many-worlds: TBD
 @related 057, 060, 038, 054, 056
+@edit-time 2026-04-20T17:38Z
 
 @argument
 Replace the arbitrary tolerance in high-dimensional near-orthogonality with a principled one drawn from the Farey sequence, and a formula emerges — V(d,n) ~ (n²/π²)^d — that connects musical consonance, neural network superposition capacity, and quantum branching under one expression.

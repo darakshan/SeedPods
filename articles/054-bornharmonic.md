@@ -1,11 +1,12 @@
 @title The Born Rule as Harmonic Measure
 @status proto
-@date 2026-03-15
+@pub-time 2026-03-15T00:00Z
 @category physics
 @term quantum-mechanics: TBD
 @term many-worlds: TBD
 @term mandelbrot-set: TBD
 @related 009, 038, 053, 057, 062
+@edit-time 2026-04-20T17:38Z
 
 @argument
 The Mandelbrot set's boundary has a natural probability measure — the harmonic measure — that weights simpler, more consonant branches more heavily, and if the universe's wavefunction branches according to a similar tree structure, the Born rule may fall out of the geometry rather than being imposed as a postulate.

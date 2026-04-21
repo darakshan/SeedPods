@@ -1,7 +1,8 @@
 @title The Grasshopper Was Right
+@edit-time 2026-04-21T03:45Z
 The fable taught us that play is what you do instead of working. It was wrong.
 @status draft1
-@date 2026-03-19
+@pub-time 2026-03-19T00:00Z
 @category knowledge
 @related 005, 009, 046, 052, 072
 @term play: As used in this seedpod: the frame-free, will-suspended mode of activity in which no external criterion of success applies. Distinguished from competitive games and organized sport (where the will is fully engaged), from exploration (goal-directed search within a frame), and from rest (recovery in service of further work).

@@ -1,7 +1,8 @@
 @title The Self Is a Pattern, Not a Thing
+@edit-time 2026-04-21T03:45Z
 The mystic's insight and the philosopher's proof arrive at the same place.
 @status prelim
-@date 2026-04-14
+@pub-time 2026-04-14T00:00Z
 @category consciousness
 @term buddhism: TBD
 @term mysticism: TBD

@@ -1,7 +1,8 @@
 @title We Used to Think. Now We Know.
+@edit-time 2026-04-21T03:45Z
 The phrase that flatters the present and buries the past — and will be used against us.
 @status draft1
-@date 2026-03-12
+@pub-time 2026-03-12T00:00Z
 @category knowledge
 @term history-of-science: TBD
 @term epistemology: TBD

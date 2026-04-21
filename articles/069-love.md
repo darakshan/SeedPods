@@ -1,8 +1,9 @@
 @title Love
 @status draft1
+@edit-time 2026-04-21T03:45Z
 Light is what Love looks like. Love is what Light feels like.  -- David Deida
 @version 2
-@date 2026-03-27
+@pub-time 2026-03-27T00:00Z
 @category feeling
 @related 002, 003, 029, 036, 066
 @term love: TBD

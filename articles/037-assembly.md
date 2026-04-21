@@ -1,7 +1,8 @@
 @title The Architecture of Levels
+@edit-time 2026-04-21T03:45Z
 TBD
 @status proto
-@date 2026-03-14
+@pub-time 2026-03-14T00:00Z
 @category mathematics
 @term emergence: TBD
 @term hierarchy: TBD

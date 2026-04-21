@@ -1,7 +1,8 @@
 @title Aliens Are Among Us — and We Built Them
+@edit-time 2026-04-21T03:45Z
 The surprise is not that they arrived. The surprise is where they came from.
 @status rough
-@date 2026-03-23
+@pub-time 2026-03-23T00:00Z
 @category AI-minds
 @related 001, 003, 006, 047, 076
 @term AI: TBD

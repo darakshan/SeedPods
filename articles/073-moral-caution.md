@@ -1,12 +1,13 @@
 @title What We Cannot Know Is Not What We May Ignore
 @status draft1
-@date 2026-03-23
+@pub-time 2026-03-23T00:00Z
 @category AI-minds
 @related 001, 003, 022, 047, 069
 @term precautionary ethics: TBD
 @term other minds: TBD
 @term Precautionary ethics: an approach that establishes obligations in advance of proof, when the risk of being wrong about harm is too large and the cost of caution is not. Distinct from attributing consciousness or rights.
 @term Other minds problem: the philosophical problem that first-person experience is not publicly verifiable — you cannot confirm from the outside that any other system has an interior. Applies to humans as much as to AI.
+@edit-time 2026-04-20T17:38Z
 
 @argument
 First-person experience cannot be verified from outside — for AI or any other mind — and that epistemic limit is not a reason to withhold moral caution but precisely the condition under which caution is required.

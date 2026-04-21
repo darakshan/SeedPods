@@ -1,7 +1,8 @@
 @title The Map That Was Wrong
+@edit-time 2026-04-21T03:45Z
 Every era has a framework so obvious it's invisible — until it isn't.
 @status draft1
-@date 2026-03-25
+@pub-time 2026-03-25T00:00Z
 @category knowledge
 @related 002, 003, 015, 047, 065
 @term history-of-science: TBD

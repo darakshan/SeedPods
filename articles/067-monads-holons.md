@@ -1,10 +1,11 @@
 @title Leibniz as the Unlikely Ancestor of the Holographic Principle
 @status proto
-@date 2026-03-15
+@pub-time 2026-03-15T00:00Z
 @category physics
 @term holographic-principle: TBD
 @term monads: TBD
 @related 003, 011, 037, 058, 068
+@edit-time 2026-04-20T17:38Z
 
 @argument
 Leibniz proposed windowless monads each containing a complete representation of the universe from its own perspective — dismissed as baroque fantasy for three centuries until Maldacena showed that a lower-dimensional boundary theory can encode an entire higher-dimensional interior, which is strikingly close to what the monads were doing all along.

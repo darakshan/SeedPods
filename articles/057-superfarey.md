@@ -1,11 +1,12 @@
 @title Superposition in Neural Network Representations
 @status proto
-@date 2026-03-15
+@pub-time 2026-03-15T00:00Z
 @category AI-minds
 @term neural-networks: TBD
 @term farey-sequence: TBD
 @term interpretability: TBD
 @related 010, 034, 035, 038, 053
+@edit-time 2026-04-20T17:38Z
 
 @argument
 A neural network stores far more concepts than it has dimensions by packing them as nearly-orthogonal directions — more important concepts getting cleaner representations, less important ones compressed deeper — which is the same hierarchy that appears in the Farey sequence, in Benford's law, and in music.

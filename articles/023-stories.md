@@ -1,7 +1,8 @@
 @title Reality Is Made of Stories, Not Atoms
+@edit-time 2026-04-21T03:45Z
 The story we agree upon becomes the world we live in.
 @status partial
-@date 2026-03-28
+@pub-time 2026-03-28T00:00Z
 @category consciousness
 @related 001, 013, 015, 027, 041
 

@@ -1,12 +1,13 @@
 @title Mandelbrot Structure in Physical Crystals
 @status proto
-@date 2026-03-15
+@pub-time 2026-03-15T00:00Z
 @category mathematics
 @term physics: TBD
 @term fractals: TBD
 @term quasicrystals: TBD
 @term mandelbrot-set: TBD
 @related 007, 018, 033, 038, 056
+@edit-time 2026-04-20T17:38Z
 
 @argument
 Quasicrystals, magnetic domain walls, and charge density waves all produce Mandelbrot-like fractal structure — not by computing a formula but by obeying local iterative rules, because that structure is what local iteration produces at its boundaries regardless of substrate.

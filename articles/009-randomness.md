@@ -1,7 +1,8 @@
 @title Structure Is What Randomness Does
+@edit-time 2026-04-21T03:45Z
 Galaxies, cells, brains — all tracing back to a random fluctuation in a nearly uniform early universe.
 @status draft1
-@date 2026-03-13
+@pub-time 2026-03-13T00:00Z
 @category biology
 @term physics: TBD
 @term emergence: TBD
