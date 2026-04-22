@@ -1,9 +1,0 @@
-Interesting — the depth section is there, but several edits didn't apply correctly. The file is missing:
-
-1. **The surface layer entirely** — my surface edit didn't land
-2. **The provenance section** — refs didn't land
-3. **Updated metadata** — status still shows `proto`, subtitle unchanged, related still has 030 instead of 072, tags not updated
-
-The depth section did make it in, but it appears *before* the brief, which is wrong layer order.
-
-Let me re-propose the missing pieces:
