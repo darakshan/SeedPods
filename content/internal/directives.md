@@ -5,7 +5,8 @@
 - **`.md` files** under `content/` (home, nav file/dir pages, internal, and any referenced docs). Pipeline: **&#64;include** first, then other directives, then Markdown → HTML.
 - **SeedPod layer text** (Surface, Depth, Provenance, etc. in `content/pods/*.md`). Directives are expanded when building seedpod HTML. Layer text also supports full Markdown styling (bold, italic, headings, lists, code, tables, etc.).
 
-All directives work in both contexts unless marked **`.md` only**. The table below lists all directives:
+All directives work in both contexts unless marked **`.md` only**.
+The table below lists all directives:
 
 1. **&#64;bibliography** — `.md` only
 2. **&#64;exercise(text)**  

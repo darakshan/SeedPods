@@ -1,6 +1,8 @@
 # How build.py Creates the Website
 
-`src/build.py` is the site generator for SeedPods. It reads from `content/` and `config/`, and writes HTML (and assets) into a single output directory. That directory is the web root: the build writes `index.html` and all other pages there.
+`src/build.py` is the site generator for SeedPods.
+It reads from `content/` and `config/`, and writes HTML (and assets) into a single output directory.
+That directory is the web root: the build writes `index.html` and all other pages there.
 
 Run the build with:
 
@@ -10,7 +12,9 @@ just build
 
 Do not run `python3 src/build.py` directly; use the justfile so the venv (with the `markdown` package) is used.
 
-**Where to edit styles and assets:** The build **creates the site directory from scratch** and copies two assets from `config/`. Edit **`config/site.css`** (and `config/logo.svg` if needed) — **not** files under the site directory. Files under the site directory are build output and will be overwritten; changes there will be lost on the next build.
+**Where to edit styles and assets:** The build **creates the site directory from scratch** and copies two assets from `config/`.
+Edit **`config/site.css`** (and `config/logo.svg` if needed) — **not** files under the site directory.
+Files under the site directory are build output and will be overwritten; changes there will be lost on the next build.
 
 ---
 
@@ -27,7 +31,8 @@ Do not run `python3 src/build.py` directly; use the justfile so the venv (with t
 
 Required files for a full build include: `content/home.md`, `content/internal/page.md`, and for each nav token either `content/<token>.md` or `content/<token>/page.md`. `config/status.txt` is also required.
 
-For config and nav: @link(settings.md, settings). For @ directives in Markdown and seedpod files: @link(directives.md, directives).
+For config and nav: @link(settings.md, settings).
+For @ directives in Markdown and seedpod files: @link(directives.md, directives).
 
 ---
 
@@ -39,12 +44,20 @@ Prototype .md files (e.g. in `content/more/`) can be turned into seedpod .md fil
 just import content/more/primordia.md content/more/seed-speculations.md
 ```
 
-By default the command runs in **preview** mode: it parses each file, assigns the next seedpod number and a shortname (from the title), and prints `number-shortname  Title` for each proto-seedpod. It does not write files. Use **`--apply`** to actually write each seedpod to `content/pods/`:
+By default the command runs in **preview** mode: it parses each file, assigns the next seedpod number and a shortname (from the title), and prints `number-shortname Title` for each proto-seedpod.
+It does not write files.
+Use **`--apply`** to actually write each seedpod to `content/pods/`:
 
 ```bash
 just import --apply content/more/primordia.md content/more/seed-speculations.md
 ```
 
-Imported seedpods have `#status proto` and a single body (no `#brief` directive). Each proto-seedpod in the source file must include a `#shortname` line (e.g. `#shortname harmonic-barchart`); if one is missing, import reports it and skips that seedpod without writing a file. The parser accepts optional numbering (e.g. `## 1. Title`) and category headings (e.g. `## Physics & Mathematics`); categories are skipped. File-level `#ref` and `#term` in the prototype are added to each generated seedpod. After importing, run `just build` to regenerate the site. Imported files are written as `.md`.
+Imported seedpods have `#status proto` and a single body (no `#brief` directive).
+Each proto-seedpod in the source file must include a `#shortname` line (e.g. `#shortname harmonic-barchart`); if one is missing, import reports it and skips that seedpod without writing a file.
+The parser accepts optional numbering (e.g. `## 1.
+Title`) and category headings (e.g. `## Physics & Mathematics`); categories are skipped.
+File-level `#ref` and `#term` in the prototype are added to each generated seedpod.
+After importing, run `just build` to regenerate the site.
+Imported files are written as `.md`.
 
 **Full format for import files:** @link(import-format.md, import-format) — use it when creating or editing .md files meant for `just import` (e.g. new files like primordia or seed_speculations).

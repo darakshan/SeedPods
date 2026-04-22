@@ -2,7 +2,8 @@
 
 The list of all seedpods and their revision numbers is available at **./list.html** (relative to the site root).
 
-The build gets the site root URL and output path from **config/settings.txt** (`site_base` and `site_dir`). Given the site root URL, a seedpod number, and its shortname, you can form the canonical URL for that seedpod’s page.
+The build gets the site root URL and output path from **config/settings.txt** (`site_base` and `site_dir`).
+Given the site root URL, a seedpod number, and its shortname, you can form the canonical URL for that seedpod’s page.
 
 **Rule:** the page filename is `{number}-{shortname}.html`, where the number is **zero-padded to 3 digits**.
 
@@ -23,5 +24,4 @@ The build gets the site root URL and output path from **config/settings.txt** (`
 In code: zero-pad the number to 3 digits, then concatenate `root` (with no trailing slash), `/`, `number`, `-`, `shortname`, and `.html`.
 
 ### Note
-Claude is known to have a very slow cache, so fetching a page this way may not give the most recent version. 
-
+Claude is known to have a very slow cache, so fetching a page this way may not give the most recent version.

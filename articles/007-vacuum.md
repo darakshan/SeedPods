@@ -1,6 +1,7 @@
 @title The Vacuum Is Not Empty
 @edit-time 2026-04-21T03:45Z
-The quantum field seethes with potential. The event is what the field does.
+The quantum field seethes with potential.
+The event is what the field does.
 @status proto
 @pub-time 2026-03-11T00:00Z
 @category physics
@@ -13,7 +14,8 @@ The quantum field seethes with potential. The event is what the field does.
 The quantum vacuum — what you have when you remove everything removable — seethes with virtual particles, which is Whitehead's space of pure possibilities made physical: the field is not a stage on which events occur but the medium through which they feel each other.
 
 @section(proto)
-The quantum vacuum — the ground state, what you have when you remove everything removable — is not empty. It seethes with virtual particles flickering in and out of existence. 
+The quantum vacuum — the ground state, what you have when you remove everything removable — is not empty.
+It seethes with virtual particles flickering in and out of existence.
 @image(007-vacuum,Vacuum fluctuations: the ground state is not empty,Wikimedia Commons) This is Whitehead's eternal objects made concrete: the space of pure possibilities that each event selects from and realizes. The field is not a stage on which events occur. The field is the medium through which events reach out and feel each other — the medium of prehension@footnote(@ref(whitehead, "Whitehead, A.N. Process and Reality. Macmillan, 1929.") Part III on eternal objects and prehension — Whitehead's account of how pure possibility becomes the structure of connection between occasions, which the quantum vacuum makes physical.).
 
 @term Eternal objects: Whitehead's pure possibilities that occasions select from and realize; the quantum vacuum's virtual states are a physical analogue.

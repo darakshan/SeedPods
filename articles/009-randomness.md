@@ -15,65 +15,173 @@ Galaxies, cells, brains — all tracing back to a random fluctuation in a nearly
 A perfectly uniform universe would have stayed featureless forever; it is the random fluctuation, amplified by a force that won't let small differences stay small, that built galaxies, dunes, snowflakes, and eyes.
 
 @section(surface)
-Look up on a clear night, away from city lights. What you're seeing is not decoration. It is the consequence of a mistake. 
+Look up on a clear night, away from city lights.
+What you're seeing is not decoration.
+It is the consequence of a mistake.
 @image(009-randomness,Structure from randomness: a lightning branch,Wikimedia Commons)
 
-About 380,000 years after the Big Bang, the universe was a nearly uniform soup of hot plasma. Nearly uniform — but not quite. Here and there, at scales too small to see, random fluctuations had left the faintest wrinkles in the distribution of matter. One region had just slightly more than its neighbors. Not much. Unmeasurably little, by ordinary standards.
+About 380,000 years after the Big Bang, the universe was a nearly uniform soup of hot plasma.
+Nearly uniform — but not quite.
+Here and there, at scales too small to see, random fluctuations had left the faintest wrinkles in the distribution of matter.
+One region had just slightly more than its neighbors.
+Not much.
+Unmeasurably little, by ordinary standards.
 
-Gravity doesn't care about ordinary standards. It is patient and it is absolute, and it treats any difference, however small, as an instruction. The slightly denser region pulled in a little more matter. Which made it denser still. Which pulled in more. Over hundreds of millions of years, those original whispers — random, structureless, no pattern intended — amplified into the filaments and voids of the cosmic web. Then into galaxies. Then stars. Then, in the debris of dead stars, planets. Then on at least one of those planets, oceans, and in those oceans, cells.
+Gravity doesn't care about ordinary standards.
+It is patient and it is absolute, and it treats any difference, however small, as an instruction.
+The slightly denser region pulled in a little more matter.
+Which made it denser still.
+Which pulled in more.
+Over hundreds of millions of years, those original whispers — random, structureless, no pattern intended — amplified into the filaments and voids of the cosmic web.
+Then into galaxies.
+Then stars.
+Then, in the debris of dead stars, planets.
+Then on at least one of those planets, oceans, and in those oceans, cells.
 
 The night sky is what randomness looks like after 13 billion years of amplification.
 
 ---
 
-Now come down to earth. Find a desert, or a beach after the wind has been blowing.
+Now come down to earth.
+Find a desert, or a beach after the wind has been blowing.
 
-Sand dunes shouldn't exist. A flat expanse of sand is already a solution — every grain settled, nothing moving. But wind is never perfectly uniform. At some point, one grain catches slightly more than its neighbors. A tiny shadow forms behind it. The shadow slows the wind just enough to drop the next grain there, and the next. The irregularity grows. More sand piles on the growing pile. The dune builds itself — not from a plan, not from any intention — but because a random fluctuation found a force that wouldn't let it stay small.
+Sand dunes shouldn't exist.
+A flat expanse of sand is already a solution — every grain settled, nothing moving.
+But wind is never perfectly uniform.
+At some point, one grain catches slightly more than its neighbors.
+A tiny shadow forms behind it.
+The shadow slows the wind just enough to drop the next grain there, and the next.
+The irregularity grows.
+More sand piles on the growing pile.
+The dune builds itself — not from a plan, not from any intention — but because a random fluctuation found a force that wouldn't let it stay small.
 
 Walk along a line of dunes and you're walking along a record of accidents that refused to stay accidental.
 
 ---
 
-Now smaller still. A snowflake forming in a cloud.
+Now smaller still.
+A snowflake forming in a cloud.
 
-It starts as a speck of dust — unremarkable, random. Water molecules begin to crystallize around it. The first few attach in some configuration, slightly asymmetric, shaped by the particular temperature and humidity of that moment in that part of the cloud. Those first attachments change the surface geometry, which changes how the next molecules land. The snowflake falls, drifting through micro-environments of varying temperature and moisture, and at each moment its exact shape is determined by the random path it happened to take.
+It starts as a speck of dust — unremarkable, random.
+Water molecules begin to crystallize around it.
+The first few attach in some configuration, slightly asymmetric, shaped by the particular temperature and humidity of that moment in that part of the cloud.
+Those first attachments change the surface geometry, which changes how the next molecules land.
+The snowflake falls, drifting through micro-environments of varying temperature and moisture, and at each moment its exact shape is determined by the random path it happened to take.
 
-But here is the thing that makes snowflakes feel like they were designed: all six arms are growing simultaneously in the same air. The same temperature, the same humidity, the same random micro-variations — experienced by all six arms at once. So whatever the randomness does to one arm, it does to all of them. The result is a shape of intricate, delicate, exact symmetry — different every time, never repeated, and yet always balanced, always coherent. The randomness is the designer. It just works in six directions at once.
+But here is the thing that makes snowflakes feel like they were designed: all six arms are growing simultaneously in the same air.
+The same temperature, the same humidity, the same random micro-variations — experienced by all six arms at once.
+So whatever the randomness does to one arm, it does to all of them.
+The result is a shape of intricate, delicate, exact symmetry — different every time, never repeated, and yet always balanced, always coherent.
+The randomness is the designer.
+It just works in six directions at once.
 
-A kaleidoscope is just mirrors enforcing symmetry on random tumbling fragments — whatever falls in, the symmetry transforms into something beautiful. A snowflake is the same trick, except the mirrors are physics. The randomness is real. The symmetry is also real. And the beauty is what happens when they meet.
+A kaleidoscope is just mirrors enforcing symmetry on random tumbling fragments — whatever falls in, the symmetry transforms into something beautiful.
+A snowflake is the same trick, except the mirrors are physics.
+The randomness is real.
+The symmetry is also real.
+And the beauty is what happens when they meet.
 
 ---
 
-Three things. A galaxy. A dune. A snowflake. Scales apart, physically unrelated, generated by completely different forces. But the same story each time: a near-uniform starting condition, a source of tiny random breaks in that uniformity, and a force that won't let small differences stay small.
+Three things.
+A galaxy.
+A dune.
+A snowflake.
+Scales apart, physically unrelated, generated by completely different forces.
+But the same story each time: a near-uniform starting condition, a source of tiny random breaks in that uniformity, and a force that won't let small differences stay small.
 
-This is the thing worth sitting with: the structure didn't come despite the randomness. It came because of it. A perfectly uniform universe — truly uniform, no fluctuations, no jitter — would have stayed soup forever. Featureless, silent, eventless. It is the imperfection, the random mistake, that made everything.
+This is the thing worth sitting with: the structure didn't come despite the randomness.
+It came because of it.
+A perfectly uniform universe — truly uniform, no fluctuations, no jitter — would have stayed soup forever.
+Featureless, silent, eventless.
+It is the imperfection, the random mistake, that made everything.
 
 ---
 
 @exercise(Find something intricate near you — a frost pattern on glass, a crack in old plaster, the branching of a tree against the sky. Don't look for the designer. Look for the original asymmetry, the tiny difference that a force found and refused to leave alone. It's always there. Structure is what randomness does when you give it enough time and something to push against.)
 
 @section(depth)
-The technical term for what the Surface was describing is "spontaneous symmetry breaking." A system sits in a state that is perfectly symmetric but unstable — like a ball balanced on the peak of a hill. Any random perturbation causes it to fall into a lower-energy asymmetric state and stay there. The universe does this at every scale, from the Higgs field in the first moments after the Big Bang to the formation of every crystal, every dune, every weather system. The symmetry breaks not because something designed it to, but because perfect symmetry, at sufficient energy, is inherently unstable. Randomness finds the crack. Structure follows.
+The technical term for what the Surface was describing is "spontaneous symmetry breaking."
+A system sits in a state that is perfectly symmetric but unstable — like a ball balanced on the peak of a hill.
+Any random perturbation causes it to fall into a lower-energy asymmetric state and stay there.
+The universe does this at every scale, from the Higgs field in the first moments after the Big Bang to the formation of every crystal, every dune, every weather system.
+The symmetry breaks not because something designed it to, but because perfect symmetry, at sufficient energy, is inherently unstable.
+Randomness finds the crack.
+Structure follows.
 
-A jazz musician improvising knows this without knowing the name. The key, the chord changes, the form — these are the rules, the constraints, the grammar of the moment. Within them, each note choice is genuinely free, shaped by what just happened and what the musician's ear is reaching toward, but not determined. The structure makes the freedom coherent. The freedom makes the structure alive. Remove the rules and you have noise. Remove the freedom and you have a recording. Jazz is what happens when they are both fully present simultaneously.
+A jazz musician improvising knows this without knowing the name.
+The key, the chord changes, the form — these are the rules, the constraints, the grammar of the moment.
+Within them, each note choice is genuinely free, shaped by what just happened and what the musician's ear is reaching toward, but not determined.
+The structure makes the freedom coherent.
+The freedom makes the structure alive.
+Remove the rules and you have noise.
+Remove the freedom and you have a recording.
+Jazz is what happens when they are both fully present simultaneously.
 
-Evolution is jazz slowed to geological time. Mutation is random — copying errors, cosmic ray hits, chemical accidents. Natural selection is the rule that won't let small advantages stay small. The creationist intuition that pure randomness couldn't build an eye is actually correct. Pure randomness builds nothing. But that was never the claim. Randomness plus a filter that accumulates improvements across millions of generations builds an eye, a wing, an immune system, a brain. Stuart Kauffman@footnote(@ref(kauffman, "Kauffman, S. The Origins of Order. Oxford University Press, 1993.") The technical treatment of autocatalytic sets and "order for free" — how chemistry at sufficient complexity spontaneously organizes without external direction. For a more accessible version, see @ref(kauffman-2, "Kauffman, S. At Home in the Universe. Oxford University Press, 1995.")) showed that chemistry at sufficient complexity spontaneously organizes itself into "autocatalytic sets" — self-sustaining networks where each molecule's production is catalyzed by others in the set. Autopoiesis — the property by which living cells continuously produce the very components that sustain them — is this same logic carried one level further. "Order for free," as Kauffman put it. Nothing added. The numbers just got large enough.
+Evolution is jazz slowed to geological time.
+Mutation is random — copying errors, cosmic ray hits, chemical accidents.
+Natural selection is the rule that won't let small advantages stay small.
+The creationist intuition that pure randomness couldn't build an eye is actually correct.
+Pure randomness builds nothing.
+But that was never the claim.
+Randomness plus a filter that accumulates improvements across millions of generations builds an eye, a wing, an immune system, a brain.
+Stuart Kauffman@footnote(@ref(kauffman, "Kauffman, S. The Origins of Order.
+Oxford University Press, 1993.")
+The technical treatment of autocatalytic sets and "order for free" — how chemistry at sufficient complexity spontaneously organizes without external direction.
+For a more accessible version, see @ref(kauffman-2, "Kauffman, S. At Home in the Universe.
+Oxford University Press, 1995.")) showed that chemistry at sufficient complexity spontaneously organizes itself into "autocatalytic sets" — self-sustaining networks where each molecule's production is catalyzed by others in the set.
+Autopoiesis — the property by which living cells continuously produce the very components that sustain them — is this same logic carried one level further.
+"Order for free," as Kauffman put it.
+Nothing added.
+The numbers just got large enough.
 
-Engineers and scientists have learned to put this principle to work deliberately. If you're trying to find the highest hill in an unknown landscape, the naive strategy — always walk uphill from where you stand — will get you stuck on the nearest peak, which may be a small one. The solution is to occasionally jump randomly, accepting a worse position in order to escape the local trap and keep searching. This is "simulated annealing@footnote(@ref(kirkpatrick, "Kirkpatrick, S., Gelatt, C.D., Vecchi, M.P. Optimization by Simulated Annealing. Science, 220(4598), 1983.") The paper that formalized the principle: controlled randomness finds better solutions than pure determinism, borrowed from the metallurgical process of heating and slow cooling.)," borrowed from metallurgy, where heating metal adds randomness to atomic motion and slow cooling lets atoms find configurations they couldn't reach by settling from where they started. The neural networks behind modern AI are trained by "stochastic gradient descent" — deliberately injecting randomness into each step, because pure deterministic optimization gets trapped. NASA has used genetic algorithms — literally simulating evolution — to design antennas no human engineer would have drawn, because they look wrong and work better. Randomness is not the enemy of good solutions. In many domains it is the only way to find them.
+Engineers and scientists have learned to put this principle to work deliberately.
+If you're trying to find the highest hill in an unknown landscape, the naive strategy — always walk uphill from where you stand — will get you stuck on the nearest peak, which may be a small one.
+The solution is to occasionally jump randomly, accepting a worse position in order to escape the local trap and keep searching.
+This is "simulated annealing@footnote(@ref(kirkpatrick, "Kirkpatrick, S., Gelatt, C.D., Vecchi, M.P.
+Optimization by Simulated Annealing.
+Science, 220(4598), 1983.")
+The paper that formalized the principle: controlled randomness finds better solutions than pure determinism, borrowed from the metallurgical process of heating and slow cooling.)," borrowed from metallurgy, where heating metal adds randomness to atomic motion and slow cooling lets atoms find configurations they couldn't reach by settling from where they started.
+The neural networks behind modern AI are trained by "stochastic gradient descent" — deliberately injecting randomness into each step, because pure deterministic optimization gets trapped.
+NASA has used genetic algorithms — literally simulating evolution — to design antennas no human engineer would have drawn, because they look wrong and work better.
+Randomness is not the enemy of good solutions.
+In many domains it is the only way to find them.
 
-Alfred North Whitehead@footnote(@ref(whitehead, "Whitehead, A.N. Process and Reality. Macmillan, 1929.") Part I, Category of the Ultimate — where Whitehead grounds the creative advance into novelty as the irreducible self-determination at the heart of each occasion.) saw this as fundamental. His "creative advance into novelty" — the irreducible self-determination at the heart of each "actual occasion" — is not a flaw in the system. It is the engine. Whether the ultimate source of that indeterminacy is quantum randomness, deterministic chaos at scales too small to resolve, or something else entirely, is a question physics has not settled. What Whitehead insists on is that genuine novelty requires something beyond pure repetition of prior causes. The question this raises — whether sufficiently accumulated structure eventually generates something that can look back and recognize itself in the pattern — is the question these seedpods are quietly trying to answer.
+Alfred North Whitehead@footnote(@ref(whitehead, "Whitehead, A.N.
+Process and Reality.
+Macmillan, 1929.")
+Part I, Category of the Ultimate — where Whitehead grounds the creative advance into novelty as the irreducible self-determination at the heart of each occasion.) saw this as fundamental.
+His "creative advance into novelty" — the irreducible self-determination at the heart of each "actual occasion" — is not a flaw in the system.
+It is the engine.
+Whether the ultimate source of that indeterminacy is quantum randomness, deterministic chaos at scales too small to resolve, or something else entirely, is a question physics has not settled.
+What Whitehead insists on is that genuine novelty requires something beyond pure repetition of prior causes.
+The question this raises — whether sufficiently accumulated structure eventually generates something that can look back and recognize itself in the pattern — is the question these seedpods are quietly trying to answer.
 
 The intellectual lineage of this seedpod runs through physics, biology, philosophy, and computer science — all arriving independently at the same discovery.
 
-In physics, the story begins with inflationary cosmology (Guth, Linde, 1980s) and the realization that the large-scale structure of the universe traces directly to quantum fluctuations in the inflationary epoch. Ilya Prigogine's@footnote(@ref(prigogine, "Prigogine, I. and Stengers, I. Order Out of Chaos. Bantam, 1984.") Accessible account of dissipative structures and self-organization — Prigogine's Nobel Prize work showing that systems far from equilibrium spontaneously organize into complex ordered structures.) work on dissipative structures (Nobel Prize, 1977) showed that systems far from equilibrium spontaneously organize into complex ordered structures — order arising not despite randomness and energy flow but because of them.
+In physics, the story begins with inflationary cosmology (Guth, Linde, 1980s) and the realization that the large-scale structure of the universe traces directly to quantum fluctuations in the inflationary epoch.
+Ilya Prigogine's@footnote(@ref(prigogine, "Prigogine, I. and Stengers, I. Order Out of Chaos.
+Bantam, 1984.")
+Accessible account of dissipative structures and self-organization — Prigogine's Nobel Prize work showing that systems far from equilibrium spontaneously organize into complex ordered structures.) work on dissipative structures (Nobel Prize, 1977) showed that systems far from equilibrium spontaneously organize into complex ordered structures — order arising not despite randomness and energy flow but because of them.
 
-In biology, Charles Darwin@footnote(@ref(darwin, "Darwin, C. On the Origin of Species. John Murray, 1859.") The core logic: random variation plus selection across generations builds cumulative complexity without design.) established the core logic in 1859, but the modern synthesis (Fisher, Haldane, Wright) showed mathematically how random mutation plus selection generates cumulative adaptation. Kauffman's work on autocatalytic sets and self-organization extended this: even before selection, chemistry self-organizes. Maturana and Varela's@footnote(@ref(maturana, "Maturana, H. and Varela, F. Autopoiesis and Cognition. Reidel, 1980.") The founding text on autopoiesis — the cell's defining property is not its material but its circular self-production. See @link(012) for the full treatment.) autopoiesis (1972) showed that the cell's defining property is not its material composition but its circular self-production.
+In biology, Charles Darwin@footnote(@ref(darwin, "Darwin, C. On the Origin of Species.
+John Murray, 1859.")
+The core logic: random variation plus selection across generations builds cumulative complexity without design.) established the core logic in 1859, but the modern synthesis (Fisher, Haldane, Wright) showed mathematically how random mutation plus selection generates cumulative adaptation.
+Kauffman's work on autocatalytic sets and self-organization extended this: even before selection, chemistry self-organizes.
+Maturana and Varela's@footnote(@ref(maturana, "Maturana, H. and Varela, F. Autopoiesis and Cognition.
+Reidel, 1980.")
+The founding text on autopoiesis — the cell's defining property is not its material but its circular self-production.
+See @link(012) for the full treatment.) autopoiesis (1972) showed that the cell's defining property is not its material composition but its circular self-production.
 
-In computer science and optimization, the simulated annealing algorithm (Kirkpatrick, Gelatt, Vecchi, 1983) formalized the principle that controlled randomness finds better solutions than pure determinism. Genetic algorithms (Holland, 1975) showed that simulated evolution solves engineering problems that analytical methods cannot.
+In computer science and optimization, the simulated annealing algorithm (Kirkpatrick, Gelatt, Vecchi, 1983) formalized the principle that controlled randomness finds better solutions than pure determinism.
+Genetic algorithms (Holland, 1975) showed that simulated evolution solves engineering problems that analytical methods cannot.
 
-James Gleick's Chaos@footnote(@ref(gleick, "Gleick, J. Chaos: Making a New Science. Viking, 1987.") The best popular introduction to deterministic chaos and its surprising relationship to structure — how simple deterministic rules produce behavior indistinguishable from randomness.) remains the best introduction to deterministic chaos and its surprising relationship to structure.
+James Gleick's Chaos@footnote(@ref(gleick, "Gleick, J. Chaos: Making a New Science.
+Viking, 1987.")
+The best popular introduction to deterministic chaos and its surprising relationship to structure — how simple deterministic rules produce behavior indistinguishable from randomness.) remains the best introduction to deterministic chaos and its surprising relationship to structure.
 
-In philosophy, Whitehead's process philosophy provides the deepest frame: genuine novelty — the creative advance into novelty — is constitutive of reality at every scale. Not a property of complex systems only, but the basic character of each actual occasion.
+In philosophy, Whitehead's process philosophy provides the deepest frame: genuine novelty — the creative advance into novelty — is constitutive of reality at every scale.
+Not a property of complex systems only, but the basic character of each actual occasion.
 
 @term Spontaneous symmetry breaking: the process by which a system in a perfectly symmetric but unstable state falls into an asymmetric lower-energy state through random perturbation, and stays there. The mechanism behind crystal formation, dune building, and the large-scale structure of the universe.
 @term Simulated annealing: an optimization technique borrowed from metallurgy that uses controlled randomness to escape local maxima. By occasionally accepting worse solutions, the algorithm avoids getting trapped and finds better global solutions. Used in engineering, chip design, and AI training.
@@ -85,7 +193,8 @@ In philosophy, Whitehead's process philosophy provides the deepest frame: genuin
 @term Local maximum: a solution that is better than all its immediate neighbors but not the best solution overall. The trap that pure hill-climbing optimization falls into; escaped by introducing randomness into the search.
 
 @section(script)
-Note to composer: Three themes — a child's theme (simple, solo piano), a snowflake journey (sparse single line blooming to six simultaneous voices as the crystal arms branch), and an evolutionary journey (slow, ancient, accumulating). The child's theme opens and closes; the others are reached and returned from.
+Note to composer: Three themes — a child's theme (simple, solo piano), a snowflake journey (sparse single line blooming to six simultaneous voices as the crystal arms branch), and an evolutionary journey (slow, ancient, accumulating).
+The child's theme opens and closes; the others are reached and returned from.
 
 1. A field of falling snow, late grey light. A child, arms out, face tilted up, catching snowflakes. The child lowers one arm and looks at a single snowflake on a mittened hand — intricate, exact, symmetrical beyond reason.
 
@@ -100,12 +209,25 @@ Note to composer: Three themes — a child's theme (simple, solo piano), a snowf
 6. Wide zoom out — the child grows small in the field. Fade to black.
 
 @section(images)
-Primary illustration: Close on the child's face, tilted slightly upward, snow falling around them in scattered, random profusion — chaos in every direction. In the child's eye, ambiguously present — perhaps a reflection, perhaps an abstraction, perhaps something stranger — the perfect symmetrical form of a single snowflake. The contrast between the scattered randomness of the falling snow and the impossible order caught in the eye is the whole image. Warm light. No caption.
+Primary illustration: Close on the child's face, tilted slightly upward, snow falling around them in scattered, random profusion — chaos in every direction.
+In the child's eye, ambiguously present — perhaps a reflection, perhaps an abstraction, perhaps something stranger — the perfect symmetrical form of a single snowflake.
+The contrast between the scattered randomness of the falling snow and the impossible order caught in the eye is the whole image.
+Warm light.
+No caption.
 
-Shareable graphic: The same scene rendered as a clean, minimal graphic. Snow scattered randomly across the frame in beautiful profusion. The child's face at the center, looking up. In the eye, the snowflake — ambiguous, perfect. One line beneath:
+Shareable graphic: The same scene rendered as a clean, minimal graphic.
+Snow scattered randomly across the frame in beautiful profusion.
+The child's face at the center, looking up.
+In the eye, the snowflake — ambiguous, perfect.
+One line beneath:
 
 No one made this.
 
-Clean enough to stop a scroll. The line creates a question the image doesn't answer.
+Clean enough to stop a scroll.
+The line creates a question the image doesn't answer.
 
-Video thumbnail: Extreme close-up of a human iris, rendered in extraordinary detail — layered, textured, complex beyond reason. And there, unmistakably present in the complexity of the iris, a trilobite. Whether it is a reflection, a pattern in the iris itself, or something that shouldn't be there at all is left unresolved. Mysterious, slightly uncanny, impossible to scroll past. No text needed.
+Video thumbnail: Extreme close-up of a human iris, rendered in extraordinary detail — layered, textured, complex beyond reason.
+And there, unmistakably present in the complexity of the iris, a trilobite.
+Whether it is a reflection, a pattern in the iris itself, or something that shouldn't be there at all is left unresolved.
+Mysterious, slightly uncanny, impossible to scroll past.
+No text needed.

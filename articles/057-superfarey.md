@@ -12,14 +12,26 @@
 A neural network stores far more concepts than it has dimensions by packing them as nearly-orthogonal directions — more important concepts getting cleaner representations, less important ones compressed deeper — which is the same hierarchy that appears in the Farey sequence, in Benford's law, and in music.
 
 @section(proto)
-A neural network with d dimensions in its residual stream can represent far more than d independent concepts. This is called superposition and it has been studied carefully in the mechanistic interpretability literature@ref(olsson, "Olsson, E. et al. Superposition, memorization, and double descent (2022). Or similar interpretability work on superposition."). 
+A neural network with d dimensions in its residual stream can represent far more than d independent concepts.
+This is called superposition and it has been studied carefully in the mechanistic interpretability literature@ref(olsson, "Olsson, E. et al. Superposition, memorization, and double descent (2022).
+Or similar interpretability work on superposition.").
 @image(057-superfarey,Superposition in high-dimensional neural representations,Wikimedia Commons)
 
-The mechanism: concepts are stored as nearly-orthogonal directions in the representation space. True orthogonality would allow exactly d independent concepts. Near-orthogonality — with small but nonzero interference — allows exponentially more. The network tolerates a small amount of crosstalk in exchange for vastly expanded capacity.
+The mechanism: concepts are stored as nearly-orthogonal directions in the representation space.
+True orthogonality would allow exactly d independent concepts.
+Near-orthogonality — with small but nonzero interference — allows exponentially more.
+The network tolerates a small amount of crosstalk in exchange for vastly expanded capacity.
 
-This is directly related to the virtual dimensions formula. The network is implicitly choosing a Farey depth — a threshold of acceptable interference — and packing in as many concepts as that threshold allows. More important concepts get cleaner, more orthogonal representations. Less important ones are stored in the noisier, more compressed directions deeper in the tree.
+This is directly related to the virtual dimensions formula.
+The network is implicitly choosing a Farey depth — a threshold of acceptable interference — and packing in as many concepts as that threshold allows.
+More important concepts get cleaner, more orthogonal representations.
+Less important ones are stored in the noisier, more compressed directions deeper in the tree.
 
-The implication: a sufficiently large neural network is not just storing information. It is organizing information according to a natural hierarchy of importance — simpler, more fundamental concepts first, complex and specialized ones deeper. This is the same hierarchy that appears in music, in Benford's Law, and in the Farey sequence. The network didn't learn this hierarchy. It fell out of the geometry.
+The implication: a sufficiently large neural network is not just storing information.
+It is organizing information according to a natural hierarchy of importance — simpler, more fundamental concepts first, complex and specialized ones deeper.
+This is the same hierarchy that appears in music, in Benford's Law, and in the Farey sequence.
+The network didn't learn this hierarchy.
+It fell out of the geometry.
 
 @term Superposition: Storing more than d concepts in d dimensions by using nearly-orthogonal directions; studied in mechanistic interpretability.
 @term Farey depth: Threshold of acceptable interference; determines how many concepts fit at each level of the hierarchy.

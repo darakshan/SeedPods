@@ -1,6 +1,9 @@
 # Format of Importable SeedPod Files
 
-Use this when creating or editing **import source files** — Markdown files that become multiple proto seedpods via `just import`. Examples: `content/more/primordia.md`, `content/more/seed-speculations.md`. The build does not read these files; the import script does. The output is `.md` seedpods in `content/pods/`, which then follow the grammar in @link(grammar.md, grammar).
+Use this when creating or editing **import source files** — Markdown files that become multiple proto seedpods via `just import`.
+Examples: `content/more/primordia.md`, `content/more/seed-speculations.md`.
+The build does not read these files; the import script does.
+The output is `.md` seedpods in `content/pods/`, which then follow the grammar in @link(grammar.md, grammar).
 
 ---
 
@@ -11,7 +14,8 @@ Use this when creating or editing **import source files** — Markdown files tha
 3. **Apply**: `just import --apply content/more/yourfile.md` — writes `NNN-shortname.md` into `content/pods/`.
 4. **Build**: `just build` — regenerates the site from the new seedpods.
 
-Imported seedpods get `#status proto`, today’s date, and a single body (no layer headers). Number and shortname are derived from the output filename only; the written .md files do not contain `#number` or `#shortname`.
+Imported seedpods get `#status proto`, today’s date, and a single body (no layer headers).
+Number and shortname are derived from the output filename only; the written .md files do not contain `#number` or `#shortname`.
 
 ---
 
@@ -54,7 +58,8 @@ These are recognized and removed from the body (or collected) before the rest is
 | `#term Term` | Allowed; definition is empty. |
 | `#links` or `#links ...` | **Stripped.** Not written to the seedpod. Use if you want to reserve a line for future links. |
 
-All other lines (including normal `##`/`###` in the middle of prose) go into the body. The parser only treats the **first line** of the block as the title/category; after that, `#` starts special lines only when they match the patterns above.
+All other lines (including normal `##`/`###` in the middle of prose) go into the body.
+The parser only treats the **first line** of the block as the title/category; after that, `#` starts special lines only when they match the patterns above.
 
 ---
 
@@ -72,7 +77,8 @@ For each block that has a `#shortname`:
   - Then all **file-level** `#term` lines (from any block in the file).
   - Then all **file-level** `#ref` lines.
 
-So: `#ref` and `#term` in the import file are **global to the file** and get added to every generated seedpod. To have refs/terms only on one seedpod, add them by hand to that seedpod’s .txt after import, or split into separate import files.
+So: `#ref` and `#term` in the import file are **global to the file** and get added to every generated seedpod.
+To have refs/terms only on one seedpod, add them by hand to that seedpod’s .txt after import, or split into separate import files.
 
 ---
 
@@ -98,7 +104,9 @@ Another block. #ref Author, Book, Year.
 #term Idea: A notion worth defining.
 ```
 
-Two blocks with shortnames → two seedpods. The `#ref` and `#term` will appear on both. Category-only blocks (`## Some Category`) can sit between `---` and the next `###`/`## N.` block and are skipped.
+Two blocks with shortnames → two seedpods.
+The `#ref` and `#term` will appear on both.
+Category-only blocks (`## Some Category`) can sit between `---` and the next `###`/`## N.` block and are skipped.
 
 ---
 
@@ -111,4 +119,5 @@ Two blocks with shortnames → two seedpods. The `#ref` and `#term` will appear 
 5. **Body**: normal prose; `#ref` / `#term` are file-level and go on every seedpod; `#links` is stripped.
 6. **After writing**: run `just import content/more/<name>.md` to preview, then `just import --apply content/more/<name>.md` to write; then `just build`.
 
-For the exact grammar of the **output** .md files (metadata, layers, #ref/#term in seedpods), see @link(grammar.md, grammar). For the import command and build order, see @link(build.md, build).
+For the exact grammar of the **output** .md files (metadata, layers, #ref/#term in seedpods), see @link(grammar.md, grammar).
+For the import command and build order, see @link(build.md, build).

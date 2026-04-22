@@ -11,13 +11,22 @@
 Leibniz proposed windowless monads each containing a complete representation of the universe from its own perspective — dismissed as baroque fantasy for three centuries until Maldacena showed that a lower-dimensional boundary theory can encode an entire higher-dimensional interior, which is strikingly close to what the monads were doing all along.
 
 @section(proto)
-Leibniz@ref(leibniz, "Leibniz, G.W. Monadology (1714).")@ref(maldacena, "Maldacena, J. The large N limit of superconformal field theories (1998). AdS/CFT.") proposed that reality is composed of monads — indivisible, windowless units of experience. Each monad has no direct causal contact with any other. Each monad contains within itself a complete representation of the entire universe, from its own perspective. The universe is not a collection of interacting objects. It is a collection of perspectives, each one containing all the others.
+Leibniz@ref(leibniz, "Leibniz, G.W.
+Monadology (1714).")@ref(maldacena, "Maldacena, J. The large N limit of superconformal field theories (1998).
+AdS/CFT.") proposed that reality is composed of monads — indivisible, windowless units of experience.
+Each monad has no direct causal contact with any other.
+Each monad contains within itself a complete representation of the entire universe, from its own perspective.
+The universe is not a collection of interacting objects.
+It is a collection of perspectives, each one containing all the others.
 
 This was dismissed as baroque metaphysical fantasy for three centuries.
 
-Then Maldacena showed that a lower-dimensional boundary theory can contain complete information about a higher-dimensional interior. Every point on the boundary encodes the entire interior from its perspective. The boundary is a collection of perspectives, each containing all the others.
+Then Maldacena showed that a lower-dimensional boundary theory can contain complete information about a higher-dimensional interior.
+Every point on the boundary encodes the entire interior from its perspective.
+The boundary is a collection of perspectives, each containing all the others.
 
-Leibniz was not right about the details. But the structure — interiority as fundamental, each part containing the whole from its perspective, no direct contact between parts but perfect correlation through a pre-established harmony (which in modern terms is the consistency of the holographic encoding) — is strikingly close to what the AdS/CFT correspondence actually says.
+Leibniz was not right about the details.
+But the structure — interiority as fundamental, each part containing the whole from its perspective, no direct contact between parts but perfect correlation through a pre-established harmony (which in modern terms is the consistency of the holographic encoding) — is strikingly close to what the AdS/CFT correspondence actually says.
 
 The holographic principle may be the physics of what Leibniz was gesturing at philosophically.
 

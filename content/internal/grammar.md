@@ -1,6 +1,7 @@
 ## Grammar of a SeedPod
 
-The build script parses seedpod files strictly. Follow this grammar so new or revised seedpods work without manual processing.
+The build script parses seedpod files strictly.
+Follow this grammar so new or revised seedpods work without manual processing.
 
 ###File
 
@@ -56,7 +57,8 @@ The build script parses seedpod files strictly. Follow this grammar so new or re
 
 ###Minimal valid seedpod (template)
 
-The following lines need "#" before each one. It is not included here because it has a different meaning for MarkDown, even inside triple quotes.
+The following lines need "#" before each one.
+It is not included here because it has a different meaning for MarkDown, even inside triple quotes.
 
 ```
 title: Example Title
@@ -72,11 +74,13 @@ script: TBD
 images: TBD
 ```
 
-Save as `pods/999-example.md`. The number (999) and shortname (example) come from the filename only.
+Save as `pods/999-example.md`.
+The number (999) and shortname (example) come from the filename only.
 
 ### Primary categories (#category)
 
-Every seedpod must have **exactly one** primary category in `#category`. The seven primary categories are:
+Every seedpod must have **exactly one** primary category in `#category`.
+The seven primary categories are:
 
 | Category   | Use when the seedpod's main hook is… |
 |------------|-------------------------------------|

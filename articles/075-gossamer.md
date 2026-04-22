@@ -7,7 +7,9 @@ A framework for collections of linked ideas
 @category zzz-debug
 @tags meta, framework, software, collections
 
-Gossamer is an iOS/macOS app for building and exploring collections of linked ideas, with an AI collaborator to help think things through. SeedPods is one such collection. Yours might be something else entirely.
+Gossamer is an iOS/macOS app for building and exploring collections of linked ideas, with an AI collaborator to help think things through.
+SeedPods is one such collection.
+Yours might be something else entirely.
 
 ## What a Collection Is
 
@@ -21,7 +23,9 @@ Each pod has metadata fields (#title, #subtitle, #status, #date, #category, #tag
 
 ## The AI Collaborator
 
-Claude has access to the full archive index, can read any file on request, and can propose edits via structured edit blocks. Edits are applied silently — Claude proposes, the user accepts, the file is written. Claude receives no confirmation; it learns the edit succeeded when the user sends their next message.
+Claude has access to the full archive index, can read any file on request, and can propose edits via structured edit blocks.
+Edits are applied silently — Claude proposes, the user accepts, the file is written.
+Claude receives no confirmation; it learns the edit succeeded when the user sends their next message.
 
 ## To-Do
 
@@ -40,4 +44,5 @@ Claude has access to the full archive index, can read any file on request, and c
 - [ ] Document the edit protocol for AI collaborators
 - [ ] Create example collections (recipe collection? research notes? worldbuilding?)
 
-Gossamer emerged from the SeedPods project in March 2026. Christopher Alexander's "A Pattern Language" is the structural ancestor.
+Gossamer emerged from the SeedPods project in March 2026.
+Christopher Alexander's "A Pattern Language" is the structural ancestor.

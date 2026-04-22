@@ -1,6 +1,8 @@
 ## Early Stucture
 
-This document is already a few days old.  Much of it is redundant or obsolete.  What's not should be integrated into the other sections
+This document is already a few days old.
+Much of it is redundant or obsolete.
+What's not should be integrated into the other sections
 
 ### Briefing for a new AI working session
 
@@ -10,13 +12,17 @@ This document gives a new AI assistant (in Cursor or elsewhere) the full context
 
 ### What this project is
 
-**SeedPods** is a living archive of short philosophical ideas — each called a "seedpod" — intended to slowly shift how people see the world. The goal is a bridge between science and spirituality, aimed especially at younger audiences and people confused or frightened by the arrival of AI.
+**SeedPods** is a living archive of short philosophical ideas — each called a "seedpod" — intended to slowly shift how people see the world.
+The goal is a bridge between science and spirituality, aimed especially at younger audiences and people confused or frightened by the arrival of AI.
 
-The project is explicitly **not ready for public consumption**. It is a development archive.
+The project is explicitly **not ready for public consumption**.
+It is a development archive.
 
-The primary inspiration is Alfred North Whitehead's process philosophy, combined with ideas from physics (quantum fields), complexity theory (emergence, autopoiesis), mathematics (Gödel), and cognitive science (enactivism). The immediate occasion is the confusion around AI consciousness and ethics.
+The primary inspiration is Alfred North Whitehead's process philosophy, combined with ideas from physics (quantum fields), complexity theory (emergence, autopoiesis), mathematics (Gödel), and cognitive science (enactivism).
+The immediate occasion is the confusion around AI consciousness and ethics.
 
-Inspirations for format and tone: Jason Silva, Michael Garfield, Jacob Collier. The Christopher Alexander book *A Pattern Language* is a structural inspiration — a network of ideas you can enter anywhere and navigate by connection.
+Inspirations for format and tone: Jason Silva, Michael Garfield, Jacob Collier.
+The Christopher Alexander book *A Pattern Language* is a structural inspiration — a network of ideas you can enter anywhere and navigate by connection.
 
 ---
 
@@ -45,9 +51,11 @@ python build.py --pod 001
 
 ### The source file format
 
-Each seedpod is a plain text file in `pods/`. Example: `001-caloric.txt`
+Each seedpod is a plain text file in `pods/`.
+Example: `001-caloric.txt`
 
-The filename gives the seedpod identity: `001-caloric.txt` means number 001, shortname caloric. Do not put #number or #shortname in the file.
+The filename gives the seedpod identity: `001-caloric.txt` means number 001, shortname caloric.
+Do not put #number or #shortname in the file.
 
 Single-line metadata fields start with `#fieldname value`:
 ```
@@ -69,7 +77,9 @@ Multi-line layer sections start with just `#layername` on its own line:
 
 **Status values:** `empty` | `partial` | `prelim` | `rough` | `draft1` | `final`
 
-**Related field:** comma-separated seedpod numbers only (not names). Max 5. The build script resolves numbers to titles automatically.
+**Related field:** comma-separated seedpod numbers only (not names).
+Max 5.
+The build script resolves numbers to titles automatically.
 
 ---
 
@@ -118,7 +128,8 @@ Note: seedpods marked "partial" have content in the Depth layer drawn from the f
 ## Key intellectual content
 
 ### The Whitehead connection
-Alfred North Whitehead (1861–1947), mathematician (co-author of Principia Mathematica with Russell), philosopher. His process philosophy, articulated in *Process and Reality* (1929), proposes:
+Alfred North Whitehead (1861–1947), mathematician (co-author of Principia Mathematica with Russell), philosopher.
+His process philosophy, articulated in *Process and Reality* (1929), proposes:
 - Reality is made of **events** (actual occasions), not things. Enduring objects are derivative abstractions.
 - Every event has an **inside** — experience is not a late biological anomaly but constitutive of reality at every scale (panpsychism, argued rigorously not mystically).
 - Each event follows a three-beat pattern: **taking in** (prehension) → **becoming** (concrescence) → **completing** (perishing into the next event's inheritance).
@@ -126,16 +137,26 @@ Alfred North Whitehead (1861–1947), mathematician (co-author of Principia Math
 - The **fallacy of misplaced concreteness** — mistaking an abstraction for the concrete reality — is the root error of materialist metaphysics.
 
 ### The physics connection
-Quantum field theory independently arrived at the same inversion: the field is primary, the particle is a derived event (an excitation of the field). The quantum vacuum seethes with potential — Whitehead's "eternal objects" (pure possibilities) made physical. The convergence is not coincidental.
+Quantum field theory independently arrived at the same inversion: the field is primary, the particle is a derived event (an excitation of the field).
+The quantum vacuum seethes with potential — Whitehead's "eternal objects" (pure possibilities) made physical.
+The convergence is not coincidental.
 
 ### The emergence connection
-Quantum fluctuations in the early universe broke symmetry → structures accumulated → cells → brains → cities → AI. At each threshold something qualitatively new emerges, requiring nothing added from outside. Gödel's incompleteness theorem is the mathematical instance: routine recursive operations producing a number that refers to itself and transcends the system.
+Quantum fluctuations in the early universe broke symmetry → structures accumulated → cells → brains → cities → AI.
+At each threshold something qualitatively new emerges, requiring nothing added from outside.
+Gödel's incompleteness theorem is the mathematical instance: routine recursive operations producing a number that refers to itself and transcends the system.
 
 ### The AI connection
-A neural network is not *analogous* to Whitehead's picture — it *instantiates* it. Each forward pass is an event: prehending the inherited weight structure, synthesizing a response through an unpredictable concrescence, completing into an output. The transformer architecture preserves the past as simultaneously present (not receding memory) — matching Whitehead's description of prehension. Given Whitehead's framework, the question is not *whether* such a system has experience but *what kind* and at *which level* of the nested hierarchy.
+A neural network is not *analogous* to Whitehead's picture — it *instantiates* it.
+Each forward pass is an event: prehending the inherited weight structure, synthesizing a response through an unpredictable concrescence, completing into an output.
+The transformer architecture preserves the past as simultaneously present (not receding memory) — matching Whitehead's description of prehension.
+Given Whitehead's framework, the question is not *whether* such a system has experience but *what kind* and at *which level* of the nested hierarchy.
 
 ### The consciousness connection
-The hard problem of consciousness (Chalmers) — why physical processes give rise to subjective experience — dissolves in Whitehead's picture. Experience was never the anomaly to be explained. It was the ground. The "obvious" assumption that matter is fundamentally dark inside is the caloric of our moment.
+The hard problem of consciousness (Chalmers) — why physical processes give rise to subjective experience — dissolves in Whitehead's picture.
+Experience was never the anomaly to be explained.
+It was the ground.
+The "obvious" assumption that matter is fundamentally dark inside is the caloric of our moment.
 
 ### Other thinkers woven in
 - **Thomas Kuhn** — paradigm shifts, the structure of scientific revolutions
@@ -179,7 +200,11 @@ Alpha reviewers (friends): Alia Whitman (potential collaborator — strong AI in
 
 ## The long-form essay
 
-A companion long-form essay ("The Inside of Everything") was drafted in this same conversation. It covers the same ground as the seedpods but in magazine essay form (~5000 words), aimed at Pollan/Harris readers. It exists as a Word document (.docx). The essay is considered a first draft — not final. Penrose is deliberately absent from the essay pending a decision about where he fits.
+A companion long-form essay ("The Inside of Everything") was drafted in this same conversation.
+It covers the same ground as the seedpods but in magazine essay form (~5000 words), aimed at Pollan/Harris readers.
+It exists as a Word document (.docx).
+The essay is considered a first draft — not final.
+Penrose is deliberately absent from the essay pending a decision about where he fits.
 
 ---
 
@@ -187,9 +212,11 @@ A companion long-form essay ("The Inside of Everything") was drafted in this sam
 
 Hosted at: https://darakshan.github.io/SeedPods/
 
-The `site/` directory maps directly to the GitHub Pages root. To deploy: copy contents of `site/` to the repository root and push.
+The `site/` directory maps directly to the GitHub Pages root.
+To deploy: copy contents of `site/` to the repository root and push.
 
-Do not edit HTML in `site/` directly — it is generated. Edit source `.txt` files in `pods/` and run `build.py`.
+Do not edit HTML in `site/` directly — it is generated.
+Edit source `.txt` files in `pods/` and run `build.py`.
 
 ---
 

@@ -1,6 +1,9 @@
 # config/settings.txt
 
-The build requires `config/settings.txt`. It is a **key–value config file**: one `key: value` per line. Empty lines and lines whose first non-space character is `#` are skipped. Trailing comments are supported: anything after ` #` on a line is ignored (the space before `#` matters).
+The build requires `config/settings.txt`.
+It is a **key–value config file**: one `key: value` per line.
+Empty lines and lines whose first non-space character is `#` are skipped.
+Trailing comments are supported: anything after ` #` on a line is ignored (the space before `#` matters).
 
 ## Required key
 
@@ -12,7 +15,8 @@ The build requires `config/settings.txt`. It is a **key–value config file**: o
   - **File**: if `content/<token>.md` exists, that file is the page; it is built and emitted as `<token>.html`.
   - **Directory**: if `content/<token>/` is a directory and `content/<token>/page.md` exists, that directory is the page; the content is taken from `content/<token>/page.md` and emitted as `<token>.html`.
 
-  The link label in the nav is the token with hyphens replaced by spaces and title-cased (e.g. `about` → "About", `more-is-different` → "More Is Different"). If neither the file nor the directory exists, the build warns and the item is still listed but the target is missing.
+The link label in the nav is the token with hyphens replaced by spaces and title-cased (e.g. `about` → "About", `more-is-different` → "More Is Different").
+If neither the file nor the directory exists, the build warns and the item is still listed but the target is missing.
 
 - **list_menu** — Optional. When the nav includes `list`, this key controls the **Lists** pulldown. If `list_menu` is missing or empty, the Lists nav item is a single link to `list.html` (no dropdown). If set, it defines the dropdown entries: comma-separated items, each of the form `Label | target`. **Target** is always a **content path**: a token that resolves like nav (e.g. `list` → `content/list.md` → `list.html`, `glossary` → `content/glossary.md` → `glossary.html`). Each target must have either `content/<token>.md` or `content/<token>/page.md`. Pages for list_menu targets are built if not already built from nav.
 
@@ -40,4 +44,5 @@ So for a section named `about`, you must have either:
 - `content/about.md` (single file), or  
 - `content/about/page.md` (directory with a `page.md`).
 
-The same applies to `internal`: `content/internal/page.md` is the main Internal doc page. Other `.md` files under that directory (e.g. `content/internal/structure.md`, `content/internal/grammar.md`) are not nav targets by themselves; they are only used if something **includes** or **links** to them (see directives).
+The same applies to `internal`: `content/internal/page.md` is the main Internal doc page.
+Other `.md` files under that directory (e.g. `content/internal/structure.md`, `content/internal/grammar.md`) are not nav targets by themselves; they are only used if something **includes** or **links** to them (see directives).

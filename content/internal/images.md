@@ -4,7 +4,8 @@ Images are placed in `content/images/` and referenced in seedpod files with the 
 
 ## Naming
 
-Files are named `{NNN}-{slug}.jpg`, matching the seedpod number and slug. Example: `073-moral-caution.jpg`.
+Files are named `{NNN}-{slug}.jpg`, matching the seedpod number and slug.
+Example: `073-moral-caution.jpg`.
 
 ## Specs
 
@@ -28,4 +29,6 @@ Files are named `{NNN}-{slug}.jpg`, matching the seedpod number and slug. Exampl
 
 ## Directive syntax
 
-`&#64;image(file, caption, credit)` — only the filename (no extension, no path) is required. Caption and credit are optional but expected for all seedpods. The build copies the image to `docs/images/` and wraps it in a `<figure>` floated left at 50% column width.
+`&#64;image(file, caption, credit)` — only the filename (no extension, no path) is required.
+Caption and credit are optional but expected for all seedpods.
+The build copies the image to `docs/images/` and wraps it in a `<figure>` floated left at 50% column width.

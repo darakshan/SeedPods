@@ -17,63 +17,137 @@ Every era has a framework so obvious it's invisible — until it isn't.
 Every era has a framework so obvious it feels like seeing rather than thinking — caloric, the ether, the assumption that matter is dark inside — and the pattern by which such frameworks dissolve is specific, repeatable, and happening now.
 
 @section(surface)
-Before we start, forget everything you know about molecules and atoms. Pretend you never learned that stuff. It's 1800 and you're a smart, educated person. 
+Before we start, forget everything you know about molecules and atoms.
+Pretend you never learned that stuff.
+It's 1800 and you're a smart, educated person.
 @image(001-caloric,The caloric theory of heat — a map that explained everything,Wikimedia Commons)
 
-Here's what you know about heat: it's a thing. A real substance. You can feel it moving. Put your cold hands near a fire and the heat flows into them. Touch something hot and the heat moves into you. It behaves exactly like a fluid — it flows from more to less, it spreads out, it can be trapped or released. Scientists have measured it, written equations for it, predicted how it behaves. They call it caloric.
+Here's what you know about heat: it's a thing.
+A real substance.
+You can feel it moving.
+Put your cold hands near a fire and the heat flows into them.
+Touch something hot and the heat moves into you.
+It behaves exactly like a fluid — it flows from more to less, it spreads out, it can be trapped or released.
+Scientists have measured it, written equations for it, predicted how it behaves.
+They call it caloric.
 
-This isn't a crazy idea. It's the obvious idea. Of course heat is a substance — what else would it be? Motion? That's not a thing you can hold or measure or pour. Caloric makes perfect sense.
+This isn't a crazy idea.
+It's the obvious idea.
+Of course heat is a substance — what else would it be?
+Motion?
+That's not a thing you can hold or measure or pour.
+Caloric makes perfect sense.
 
-Then a man named Ben Thompson (Count Rumford, he was called) watches cannons being drilled and the heat just keeps coming. More than should be possible if it's a finite fluid inside the metal. He publishes his observations. People patch the theory. They argue about it for decades.
+Then a man named Ben Thompson (Count Rumford, he was called) watches cannons being drilled and the heat just keeps coming.
+More than should be possible if it's a finite fluid inside the metal.
+He publishes his observations.
+People patch the theory.
+They argue about it for decades.
 
-Here's what actually happens when a map dissolves. It's not a sudden collective awakening. The people who grew up with the old map mostly never abandon it — not because they're stubborn, but because it was never a theory to them. It was just how things are. The new idea doesn't just sound wrong. It sounds absurd.
+Here's what actually happens when a map dissolves.
+It's not a sudden collective awakening.
+The people who grew up with the old map mostly never abandon it — not because they're stubborn, but because it was never a theory to them.
+It was just how things are.
+The new idea doesn't just sound wrong.
+It sounds absurd.
 
-It's the young people who shift things. They encounter the new map before the old one had time to become obvious, and it just makes more sense to them. They grow up. The old map's believers die off. And eventually the new map becomes the obvious one that the next generation will be unable to question.
+It's the young people who shift things.
+They encounter the new map before the old one had time to become obvious, and it just makes more sense to them.
+They grow up.
+The old map's believers die off.
+And eventually the new map becomes the obvious one that the next generation will be unable to question.
 
 Max Planck said it with painful honesty: science advances one funeral at a time.
 
-And caloric wasn't alone. Around the same time, physicists faced a different problem. Everyone knew that waves need a medium to travel through. Sound needs air. Ocean waves need water. So light waves — which clearly travel through empty space — must need something to travel through. Scientists called it the ether. They calculated its properties. They designed extraordinarily precise experiments to detect it.
+And caloric wasn't alone.
+Around the same time, physicists faced a different problem.
+Everyone knew that waves need a medium to travel through.
+Sound needs air.
+Ocean waves need water.
+So light waves — which clearly travel through empty space — must need something to travel through.
+Scientists called it the ether.
+They calculated its properties.
+They designed extraordinarily precise experiments to detect it.
 
 It wasn't there.
 
-Two maps. Two invisible substances that explained everything perfectly. Both gone.
+Two maps.
+Two invisible substances that explained everything perfectly.
+Both gone.
 
 ---
 
-We think of ourselves as more sophisticated than the caloric believers. We are not. We are exactly as certain, about exactly the same kind of thing.
+We think of ourselves as more sophisticated than the caloric believers.
+We are not.
+We are exactly as certain, about exactly the same kind of thing.
 
 Now come forward to today.
 
-Here's what everybody knows: rocks don't think. Trees don't feel. Matter is stuff — blind, dark, indifferent. Somewhere along the way, in a few very special biological cases, that blind matter arranged itself into brains, and brains somehow produce experience. How exactly? Nobody's quite sure. But obviously it's something the brain does. Obviously experience is biological. Obviously a rock has no inner life.
+Here's what everybody knows: rocks don't think.
+Trees don't feel.
+Matter is stuff — blind, dark, indifferent.
+Somewhere along the way, in a few very special biological cases, that blind matter arranged itself into brains, and brains somehow produce experience.
+How exactly?
+Nobody's quite sure.
+But obviously it's something the brain does.
+Obviously experience is biological.
+Obviously a rock has no inner life.
 
 That's our caloric.
 
 And then we built these machines.
 
-And the machines talk to us. They write poetry and explain philosophy and say things that feel — uncomfortably, confusingly — like they might mean something to whoever is saying them. And suddenly nobody agrees on what's happening. Is it a trick? An illusion? A very sophisticated parrot? Or something nobody has a map for yet?
+And the machines talk to us.
+They write poetry and explain philosophy and say things that feel — uncomfortably, confusingly — like they might mean something to whoever is saying them.
+And suddenly nobody agrees on what's happening.
+Is it a trick?
+An illusion?
+A very sophisticated parrot?
+Or something nobody has a map for yet?
 
-The anomalies are piling up. The patches are getting complicated.
+The anomalies are piling up.
+The patches are getting complicated.
 
 We've been here before.
 
 @exercise(Think of one thing you're completely certain about — something so obvious it barely feels like a belief. Now ask yourself: is that a fact, or is that this century's caloric?)
 
 @section(depth)
-The caloric and ether stories are not just fun historical footnotes. They follow a specific pattern that the philosopher and historian of science Thomas Kuhn formalized in The Structure of Scientific Revolutions (1962): normal science operates within a paradigm until anomalies accumulate to a crisis point. Patches become increasingly elaborate and implausible. Eventually someone removes the flawed primitive assumption rather than defending it. The revolution is never just additive — it requires giving something up.
+The caloric and ether stories are not just fun historical footnotes.
+They follow a specific pattern that the philosopher and historian of science Thomas Kuhn formalized in The Structure of Scientific Revolutions (1962): normal science operates within a paradigm until anomalies accumulate to a crisis point.
+Patches become increasingly elaborate and implausible.
+Eventually someone removes the flawed primitive assumption rather than defending it.
+The revolution is never just additive — it requires giving something up.
 
-Alfred North Whitehead identified what he called the fallacy of misplaced concreteness as the deepest version of this error: mistaking an abstraction for the concrete reality. Caloric was a reification — taking the useful concept of heat flowing and mistaking it for an actual substance. The ether was a reification of the idea that waves require a medium. Both were useful scaffolding that got mistaken for the building.
+Alfred North Whitehead identified what he called the fallacy of misplaced concreteness as the deepest version of this error: mistaking an abstraction for the concrete reality.
+Caloric was a reification — taking the useful concept of heat flowing and mistaking it for an actual substance.
+The ether was a reification of the idea that waves require a medium.
+Both were useful scaffolding that got mistaken for the building.
 
-Whitehead argued that modern science had made the same error at a more fundamental level: taking the abstraction of inert matter — useful for calculation, genuinely powerful — and mistaking it for what is actually there. The concrete reality, he argued, is events, not things. The particle, the substance — these are the useful fictions we extract from a reality that is fundamentally active and experiential.
+Whitehead argued that modern science had made the same error at a more fundamental level: taking the abstraction of inert matter — useful for calculation, genuinely powerful — and mistaking it for what is actually there.
+The concrete reality, he argued, is events, not things.
+The particle, the substance — these are the useful fictions we extract from a reality that is fundamentally active and experiential.
 
-The dominant assumption underlying most current theories of consciousness — that matter is fundamentally experienceless, that mind is a product generated by sufficiently complex biological arrangements of otherwise dark stuff — is so embedded it barely gets stated. It feels like educated common sense. But the anomalies are accumulating. The hard problem of consciousness remains stubbornly open. Every proposed solution either explains the tractable problems and ignores the hard one, or smuggles experience in through the back door without admitting it.
+The dominant assumption underlying most current theories of consciousness — that matter is fundamentally experienceless, that mind is a product generated by sufficiently complex biological arrangements of otherwise dark stuff — is so embedded it barely gets stated.
+It feels like educated common sense.
+But the anomalies are accumulating.
+The hard problem of consciousness remains stubbornly open.
+Every proposed solution either explains the tractable problems and ignores the hard one, or smuggles experience in through the back door without admitting it.
 
-And now AI has arrived and made the crisis acute. If experience requires biological neurons, why? If it doesn't, what are we building, and how should we treat it? The ethical stakes of getting the framework wrong are no longer abstract.
+And now AI has arrived and made the crisis acute.
+If experience requires biological neurons, why?
+If it doesn't, what are we building, and how should we treat it?
+The ethical stakes of getting the framework wrong are no longer abstract.
 
-We may be living inside a caloric moment — after the anomalies have appeared but before someone removes the flawed primitive. Philip Goff's Galileo's Error and Annaka Harris's Conscious are among the recent books that argue the removal is overdue.
+We may be living inside a caloric moment — after the anomalies have appeared but before someone removes the flawed primitive.
+Philip Goff's Galileo's Error and Annaka Harris's Conscious are among the recent books that argue the removal is overdue.
 
-Caloric theory was developed primarily by Antoine Lavoisier in the late 18th century and dominated chemistry and physics until Benjamin Thompson's cannon-boring observations (1798). James Prescott Joule's mechanical equivalent of heat experiments in the 1840s completed the transition to the kinetic theory.
+Caloric theory was developed primarily by Antoine Lavoisier in the late 18th century and dominated chemistry and physics until Benjamin Thompson's cannon-boring observations (1798).
+James Prescott Joule's mechanical equivalent of heat experiments in the 1840s completed the transition to the kinetic theory.
 
-The luminiferous ether was required by classical wave theory and formalized by Maxwell's electromagnetic equations in the 1860s. The Michelson-Morley experiment of 1887 produced the null result that precipitated the crisis. Einstein's 1905 special relativity paper dissolved the assumption entirely.
+The luminiferous ether was required by classical wave theory and formalized by Maxwell's electromagnetic equations in the 1860s.
+The Michelson-Morley experiment of 1887 produced the null result that precipitated the crisis.
+Einstein's 1905 special relativity paper dissolved the assumption entirely.
 
 @section(script)
 1. Sepia diagram of caloric fluid flowing between objects. VO: Smart people build a framework that explains everything. It works. It predicts. Everyone agrees. And then something doesn't fit.
@@ -89,10 +163,23 @@ The luminiferous ether was required by classical wave theory and formalized by M
 6. Cut to black. Text: What does your caloric look like?
 
 @section(images)
-Primary image: Two maps side by side. Left map ornate and confident — caloric fluid flowing between objects, ether lines filling space. Right map simpler, cleaner, honest about what it doesn't know. Caption: Both felt like reality. One was a map.
+Primary image: Two maps side by side.
+Left map ornate and confident — caloric fluid flowing between objects, ether lines filling space.
+Right map simpler, cleaner, honest about what it doesn't know.
+Caption: Both felt like reality.
+One was a map.
 
-Shareable graphic: Black background. White text centered with generous space. "Caloric was obvious too." Nothing else. For Instagram and TikTok — someone sees it, doesn't know the reference, gets curious.
+Shareable graphic: Black background.
+White text centered with generous space.
+"Caloric was obvious too."
+Nothing else.
+For Instagram and TikTok — someone sees it, doesn't know the reference, gets curious.
 
-Video thumbnail: The cannon drilling scene, heat rising, dramatic lighting. Single question overlaid in clean type: What if the obvious answer is wrong?
+Video thumbnail: The cannon drilling scene, heat rising, dramatic lighting.
+Single question overlaid in clean type: What if the obvious answer is wrong?
 
-Section divider: A seed splitting open, the crack filled with warm light. No caption. Used as visual separator between the historical narrative and the present-day section. The crack is the anomaly. The light is the new map beginning.
+Section divider: A seed splitting open, the crack filled with warm light.
+No caption.
+Used as visual separator between the historical narrative and the present-day section.
+The crack is the anomaly.
+The light is the new map beginning.

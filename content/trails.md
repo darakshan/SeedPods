@@ -2,7 +2,9 @@
 
 *Nine guided reading paths through the same landscape — every idea pod in the archive appears on at least one trail, with pod 003 as the gravitational center where multiple trails converge.*
 
-There is no single right order to read these pods. But some readers prefer to be led rather than explore. Here are nine trails through the archive, each starting from a different question and converging on shared territory.
+There is no single right order to read these pods.
+But some readers prefer to be led rather than explore.
+Here are nine trails through the archive, each starting from a different question and converging on shared territory.
 
 <div class="trails-list" markdown="1">
 
@@ -148,4 +150,6 @@ There is no single right order to read these pods. But some readers prefer to be
 
 ---
 
-Every idea pod in the archive appears on at least one trail. @link(003) remains the gravitational center — it appears as a destination on the Epistemology, Sensation, and Cosmic trails, marking where the archive's investigations converge on the claim that experience may be fundamental rather than late. The @link(000) offers the explorer's approach. These trails offer the pilgrim's.
+Every idea pod in the archive appears on at least one trail. @link(003) remains the gravitational center — it appears as a destination on the Epistemology, Sensation, and Cosmic trails, marking where the archive's investigations converge on the claim that experience may be fundamental rather than late.
+The @link(000) offers the explorer's approach.
+These trails offer the pilgrim's.
