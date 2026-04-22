@@ -32,11 +32,7 @@ Knowledge pods track how we know — and how frameworks become invisible until t
 
 Biology pods reframe life as process rather than substance. Structure is what randomness does (009) — galaxies, dunes, snowflakes all trace back to random fluctuations that forces wouldn't let stay small. Jazz, evolution, simulated annealing: randomness plus a filter that accumulates. The cell that makes itself (012) defines autopoiesis: a network of processes producing the very components that sustain the network — the loop that figured out how not to stop. The organism enacts its world (013): cognition is not passive reception but co-arising of organism and environment. Cities have an inside too (014). The Baldwin effect (045): how learning becomes hardwired across generations. The soap bubble (068) is not metaphor but recognition of shared holographic structure.
 
----
 
-## meta (101)
-
-Trails through the archive (101) offers four guided reading paths — epistemology, sensation, cosmic, and AI — each starting from a different question and converging on shared territory. Pod 003 (Everything Has an Inside) appears as a destination on three of the four trails, marking it as the archive's gravitational center.
 
 ---
 
