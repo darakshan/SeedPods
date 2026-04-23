@@ -1,6 +1,6 @@
 @title The Many Become One
 @argument
-@edit-time 2026-04-20T17:38Z
+@edit-time 2026-04-23T16:54Z
 If experience goes all the way down, why does it feel like one thing?
 Whitehead called it "the many become one and are increased by one" and treated it as the ultimate category — but naming the mystery is not solving it, and the combination problem remains the hardest open question for anyone who takes panpsychism seriously.
 @status proto
@@ -11,6 +11,9 @@ Whitehead called it "the many become one and are increased by one" and treated i
 Whitehead placed it at the very foundation of his metaphysics: "The many become one and are increased by one."
 Every actual occasion prehends — grasps, feels — prior occasions and synthesizes them into a new unity.
 He called this the "Category of the Ultimate," the rhythm of the universe itself.
+
+@image(080-unification,Two drops becoming one — the boundary dissolves,Wikimedia Commons)
+
 But Whitehead was describing, not explaining.
 He told us *that* the many become one.
 He did not tell us *how*.

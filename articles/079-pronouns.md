@@ -1,5 +1,5 @@
 @title Pronouns, Reference, and the Density of Presence
-@edit-time 2026-04-21T03:45Z
+@edit-time 2026-04-23T16:54Z
 Pronouns are the lightest possible payload in a communication stack.
 Precisely because they carry almost no descriptive content, they reveal the infrastructure that reference requires.
 @status proto
@@ -14,6 +14,9 @@ A pronoun is an arrow that needs a shared world to land in — it carries almost
 Pronouns are the lightest possible payload in a communication stack.
 Precisely because they carry almost no descriptive content, they reveal the infrastructure that reference requires.
 A pronoun is an arrow that needs a shared world to land in.
+
+@image(079-pronouns,The manicule — an arrow that needs a shared world to land in,Wikimedia Commons)
+
 Grammar across languages encodes distinctions of presence, relation, and referential density that English has largely flattened — and those distinctions are not ornamental.
 They are reports on what actually populates the field of address.
 

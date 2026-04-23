@@ -1,5 +1,5 @@
 @title The Boundary Is a Stack
-@edit-time 2026-04-21T03:45Z
+@edit-time 2026-04-23T16:54Z
 The interior boundary is not a line.
 It is a layered apparatus of serial transductions — and it is fractal.
 @status proto
@@ -14,6 +14,8 @@ The boundary between two interiorities is not a surface but an act — communica
 We always think of a boundary as a surface between two touching things — the skin of an apple, the membrane of a cell, the edge where one physical object ends and the world begins.
 This is the exterior boundary: inside separated from outside.
 It is spatial, tangible, and well understood (see @link(031) for how physics arrived at the holographic principle through this kind of boundary).
+
+@image(078-boundarystack,The cell membrane — a boundary that is itself a structure,Wikimedia Commons)
 
 But "inside" has a second meaning.
 Not the spatial interior of a thing — the air inside a bubble, the pulp inside the apple — but the experiential interiority of a thing.

@@ -1,5 +1,5 @@
 @title The Grasshopper Was Right
-@edit-time 2026-04-21T03:45Z
+@edit-time 2026-04-23T16:54Z
 The fable taught us that play is what you do instead of working.
 It was wrong.
 @status draft1
@@ -22,6 +22,8 @@ Winter comes.
 The grasshopper suffers.
 The moral is clear: stop playing, start working.
 Play is what you do when you should be doing something else.
+
+@image(074-grasshopper,The Ant and the Grasshopper — Milo Winter 1919,Wikimedia Commons)
 
 A word about what we mean by play.
 Not competitive sport, not organized games, not exercise with a target.

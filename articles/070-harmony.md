@@ -6,7 +6,7 @@
 @term equal temperament: A tuning system that closes the circle of fifths by distributing the Pythagorean comma equally across all twelve steps, trading intervallic purity for the freedom to modulate.
 @term Tonnetz: A two-dimensional lattice of pitch relationships organized by thirds and fifths, first described by Euler (1739) and later formalized by Hugo Riemann.
 @related 035, 037, 038, 071, 072
-@edit-time 2026-04-23T04:57Z
+@edit-time 2026-04-23T16:54Z
 
 @argument
 Harmony is the experience of elements fitting together — in sound, in color, in a room full of people — and it works the same way everywhere: a sense of home, the tension of departure, the resolution of return, all governed by ratios simple enough that every culture finds them independently, and all made possible by an imperfection the Pythagoreans thought would destroy them.
