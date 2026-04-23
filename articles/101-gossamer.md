@@ -1,8 +1,7 @@
 @title Gossamer App Test
-@edit-time 2026-04-21T05:11Z
+@edit-time 2026-04-23T16:37Z
 A framework for collections of linked ideas
 @status proto
-@version 14
 @pub-time 2026-03-27T00:00Z
 @category zzz-debug
 @tags meta, framework, software, collections
