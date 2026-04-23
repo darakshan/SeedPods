@@ -3,3 +3,4 @@ conflicts/
 .gossamer-site-clean
 .*-incoming-*
 .*-old-*
+.DS_Store
