@@ -58,7 +58,10 @@
   </div>
 </div>
 <div class="wrap"><div class="page-body home-page fade"><h1>config/settings.txt</h1>
-<p>The build requires <code>config/settings.txt</code>. It is a <strong>key–value config file</strong>: one <code>key: value</code> per line. Empty lines and lines whose first non-space character is <code>#</code> are skipped. Trailing comments are supported: anything after <code> #</code> on a line is ignored (the space before <code>#</code> matters).</p>
+<p>The build requires <code>config/settings.txt</code>.
+It is a <strong>key–value config file</strong>: one <code>key: value</code> per line.
+Empty lines and lines whose first non-space character is <code>#</code> are skipped.
+Trailing comments are supported: anything after <code> #</code> on a line is ignored (the space before <code>#</code> matters).</p>
 <h2>Required key</h2>
 <ul>
 <li><p><strong>site_dir</strong> — Directory under the repo root where the site is written (e.g. <code>docs</code>). Must be set; the build exits if it is missing. The build reads this from <code>config/settings.txt</code>; that directory is the web root when served; all generated HTML and copied assets live there.</p>
@@ -73,8 +76,11 @@
 <li><p><strong>Directory</strong>: if <code>content/&lt;token&gt;/</code> is a directory and <code>content/&lt;token&gt;/page.md</code> exists, that directory is the page; the content is taken from <code>content/&lt;token&gt;/page.md</code> and emitted as <code>&lt;token&gt;.html</code>.</p>
 </li>
 </ul>
-<p>The link label in the nav is the token with hyphens replaced by spaces and title-cased (e.g. <code>about</code> → “About”, <code>more-is-different</code> → “More Is Different”). If neither the file nor the directory exists, the build warns and the item is still listed but the target is missing.</p>
 </li>
+</ul>
+<p>The link label in the nav is the token with hyphens replaced by spaces and title-cased (e.g. <code>about</code> → “About”, <code>more-is-different</code> → “More Is Different”).
+If neither the file nor the directory exists, the build warns and the item is still listed but the target is missing.</p>
+<ul>
 <li><p><strong>list_menu</strong> — Optional. When the nav includes <code>list</code>, this key controls the <strong>Lists</strong> pulldown. If <code>list_menu</code> is missing or empty, the Lists nav item is a single link to <code>list.html</code> (no dropdown). If set, it defines the dropdown entries: comma-separated items, each of the form <code>Label | target</code>. <strong>Target</strong> is always a <strong>content path</strong>: a token that resolves like nav (e.g. <code>list</code> → <code>content/list.md</code> → <code>list.html</code>, <code>glossary</code> → <code>content/glossary.md</code> → <code>glossary.html</code>). Each target must have either <code>content/&lt;token&gt;.md</code> or <code>content/&lt;token&gt;/page.md</code>. Pages for list_menu targets are built if not already built from nav.</p>
 <p>Example: <code>list_menu: Pods | list, Index | tags, Bibliography | bibliography, Glossary | glossary, Map | map</code></p>
 </li>
@@ -108,7 +114,8 @@
 <li><p><code>content/about/page.md</code> (directory with a <code>page.md</code>).</p>
 </li>
 </ul>
-<p>The same applies to <code>internal</code>: <code>content/internal/page.md</code> is the main Internal doc page. Other <code>.md</code> files under that directory (e.g. <code>content/internal/structure.md</code>, <code>content/internal/grammar.md</code>) are not nav targets by themselves; they are only used if something <strong>includes</strong> or <strong>links</strong> to them (see directives).</p>
+<p>The same applies to <code>internal</code>: <code>content/internal/page.md</code> is the main Internal doc page.
+Other <code>.md</code> files under that directory (e.g. <code>content/internal/structure.md</code>, <code>content/internal/grammar.md</code>) are not nav targets by themselves; they are only used if something <strong>includes</strong> or <strong>links</strong> to them (see directives).</p>
 </div></div>
 <div class="page-end" id="page-end-version" data-page-version="1">
   <button class="page-end-logo" aria-label="Show page info"
@@ -117,6 +124,6 @@
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">Rev 1 · Edited 2026-04-19 03:06</span>
+  <span class="page-end-version" aria-hidden="true">Rev 1 · Edited 2026-04-22 17:28</span>
 </div>
 </body></html>

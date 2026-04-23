@@ -58,7 +58,10 @@
   </div>
 </div>
 <div class="wrap"><div class="page-body home-page fade"><h1>Format of Importable SeedPod Files</h1>
-<p>Use this when creating or editing <strong>import source files</strong> — Markdown files that become multiple proto seedpods via <code>just import</code>. Examples: <code>content/more/primordia.md</code>, <code>content/more/seed-speculations.md</code>. The build does not read these files; the import script does. The output is <code>.md</code> seedpods in <code>content/pods/</code>, which then follow the grammar in <a href="internal-grammar.html">grammar</a>.</p>
+<p>Use this when creating or editing <strong>import source files</strong> — Markdown files that become multiple proto seedpods via <code>just import</code>.
+Examples: <code>content/more/primordia.md</code>, <code>content/more/seed-speculations.md</code>.
+The build does not read these files; the import script does.
+The output is <code>.md</code> seedpods in <code>content/pods/</code>, which then follow the grammar in <a href="internal-grammar.html">grammar</a>.</p>
 <hr>
 <h2>Purpose and workflow</h2>
 <ol>
@@ -71,7 +74,8 @@
 <li><p><strong>Build</strong>: <code>just build</code> — regenerates the site from the new seedpods.</p>
 </li>
 </ol>
-<p>Imported seedpods get <code>#status proto</code>, today’s date, and a single body (no layer headers). Number and shortname are derived from the output filename only; the written .md files do not contain <code>#number</code> or <code>#shortname</code>.</p>
+<p>Imported seedpods get <code>#status proto</code>, today’s date, and a single body (no layer headers).
+Number and shortname are derived from the output filename only; the written .md files do not contain <code>#number</code> or <code>#shortname</code>.</p>
 <hr>
 <h2>File structure</h2>
 <ul>
@@ -125,7 +129,8 @@
 <tr><td><code>#links</code> or <code>#links ...</code></td><td><strong>Stripped.</strong> Not written to the seedpod. Use if you want to reserve a line for future links.</td></tr>
 </tbody>
 </table>
-<p>All other lines (including normal <code>##</code>/<code>###</code> in the middle of prose) go into the body. The parser only treats the <strong>first line</strong> of the block as the title/category; after that, <code>#</code> starts special lines only when they match the patterns above.</p>
+<p>All other lines (including normal <code>##</code>/<code>###</code> in the middle of prose) go into the body.
+The parser only treats the <strong>first line</strong> of the block as the title/category; after that, <code>#</code> starts special lines only when they match the patterns above.</p>
 <hr>
 <h2>What the import script writes</h2>
 <p>For each block that has a <code>#shortname</code>:</p>
@@ -151,7 +156,8 @@
 </ul>
 </li>
 </ul>
-<p>So: <code>#ref</code> and <code>#term</code> in the import file are <strong>global to the file</strong> and get added to every generated seedpod. To have refs/terms only on one seedpod, add them by hand to that seedpod’s .txt after import, or split into separate import files.</p>
+<p>So: <code>#ref</code> and <code>#term</code> in the import file are <strong>global to the file</strong> and get added to every generated seedpod.
+To have refs/terms only on one seedpod, add them by hand to that seedpod’s .txt after import, or split into separate import files.</p>
 <hr>
 <h2>Minimal example</h2>
 <pre><code class="language-markdown"># My Import File
@@ -172,7 +178,9 @@ A few sentences of body. No layer headers.
 Another block. #ref Author, Book, Year.
 #term Idea: A notion worth defining.
 </code></pre>
-<p>Two blocks with shortnames → two seedpods. The <code>#ref</code> and <code>#term</code> will appear on both. Category-only blocks (<code>## Some Category</code>) can sit between <code>---</code> and the next <code>###</code>/<code>## N.</code> block and are skipped.</p>
+<p>Two blocks with shortnames → two seedpods.
+The <code>#ref</code> and <code>#term</code> will appear on both.
+Category-only blocks (<code>## Some Category</code>) can sit between <code>---</code> and the next <code>###</code>/<code>## N.</code> block and are skipped.</p>
 <hr>
 <h2>Checklist for an AI (or human) creating an import file</h2>
 <ol>
@@ -189,7 +197,8 @@ Another block. #ref Author, Book, Year.
 <li><p><strong>After writing</strong>: run <code>just import content/more/&lt;name&gt;.md</code> to preview, then <code>just import --apply content/more/&lt;name&gt;.md</code> to write; then <code>just build</code>.</p>
 </li>
 </ol>
-<p>For the exact grammar of the <strong>output</strong> .md files (metadata, layers, #ref/#term in seedpods), see <a href="internal-grammar.html">grammar</a>. For the import command and build order, see <a href="internal-build.html">build</a>.</p>
+<p>For the exact grammar of the <strong>output</strong> .md files (metadata, layers, #ref/#term in seedpods), see <a href="internal-grammar.html">grammar</a>.
+For the import command and build order, see <a href="internal-build.html">build</a>.</p>
 </div></div>
 <div class="page-end" id="page-end-version" data-page-version="1">
   <button class="page-end-logo" aria-label="Show page info"
@@ -198,6 +207,6 @@ Another block. #ref Author, Book, Year.
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">Rev 1 · Edited 2026-04-19 03:06</span>
+  <span class="page-end-version" aria-hidden="true">Rev 1 · Edited 2026-04-22 17:28</span>
 </div>
 </body></html>
