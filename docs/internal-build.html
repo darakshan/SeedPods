@@ -58,12 +58,16 @@
   </div>
 </div>
 <div class="wrap"><div class="page-body home-page fade"><h1>How build.py Creates the Website</h1>
-<p><code>src/build.py</code> is the site generator for SeedPods. It reads from <code>content/</code> and <code>config/</code>, and writes HTML (and assets) into a single output directory. That directory is the web root: the build writes <code>index.html</code> and all other pages there.</p>
+<p><code>src/build.py</code> is the site generator for SeedPods.
+It reads from <code>content/</code> and <code>config/</code>, and writes HTML (and assets) into a single output directory.
+That directory is the web root: the build writes <code>index.html</code> and all other pages there.</p>
 <p>Run the build with:</p>
 <pre><code class="language-bash">just build
 </code></pre>
 <p>Do not run <code>python3 src/build.py</code> directly; use the justfile so the venv (with the <code>markdown</code> package) is used.</p>
-<p><strong>Where to edit styles and assets:</strong> The build <strong>creates the site directory from scratch</strong> and copies two assets from <code>config/</code>. Edit <strong><code>config/site.css</code></strong> (and <code>config/logo.svg</code> if needed) — <strong>not</strong> files under the site directory. Files under the site directory are build output and will be overwritten; changes there will be lost on the next build.</p>
+<p><strong>Where to edit styles and assets:</strong> The build <strong>creates the site directory from scratch</strong> and copies two assets from <code>config/</code>.
+Edit <strong><code>config/site.css</code></strong> (and <code>config/logo.svg</code> if needed) — <strong>not</strong> files under the site directory.
+Files under the site directory are build output and will be overwritten; changes there will be lost on the next build.</p>
 <hr>
 <h2>Build order and outputs</h2>
 <ol>
@@ -89,174 +93,412 @@
 </div>, <div class="bib-sort-section">
 <p class="repo-sort-wrap"><label for="bib-sort">Sort: </label><select id="bib-sort" class="repo-sort" aria-label="Sort references"><option value="keyword" selected>By author</option><option value="appearance">By appearance</option></select></p>
 <div id="bib-by-appearance" class="bib-entries-root" style="display:none">
-<div class="bib-row" id="ref-fn-002-events-1-1"><a class="bib-ref-num nav-push" href="002-events.html#fn-002-events-1-mark">2-1</a><span class="bib-keyword">whitehead</span><span class="bib-cite">Whitehead, A.N. Process and Reality. Macmillan, 1929. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-fn-002-events-1-2"><a class="bib-ref-num nav-push" href="002-events.html#fn-002-events-1-mark">2-1</a><span class="bib-keyword">whitehead-smw</span><span class="bib-cite">Whitehead, A.N. Science and the Modern World. Macmillan, 1925.</span></div>
-<div class="bib-row" id="ref-fn-002-events-2-1"><a class="bib-ref-num nav-push" href="002-events.html#fn-002-events-2-mark">2-2</a><span class="bib-keyword">kant-1</span><span class="bib-cite">Kant, I. Critique of Pure Reason. 1781.</span></div>
-<div class="bib-row" id="ref-fn-002-events-3-1"><a class="bib-ref-num nav-push" href="002-events.html#fn-002-events-3-mark">2-3</a><span class="bib-keyword">rovelli-1</span><span class="bib-cite">Rovelli, C. Relational Quantum Mechanics. International Journal of Theoretical Physics, 1996.</span></div>
-<div class="bib-row" id="ref-fn-002-events-3-2"><a class="bib-ref-num nav-push" href="002-events.html#fn-002-events-3-mark">2-3</a><span class="bib-keyword">rovelli-2</span><span class="bib-cite">Rovelli, C. Reality Is Not What It Seems. Riverhead, 2017.</span></div>
-<div class="bib-row" id="ref-fn-002-events-3-3"><a class="bib-ref-num nav-push" href="002-events.html#fn-002-events-3-mark">2-3</a><span class="bib-keyword">rovelli-3</span><span class="bib-cite">Rovelli, C. The Order of Time. Riverhead, 2018.</span></div>
-<div class="bib-row" id="ref-fn-002-events-4-1"><a class="bib-ref-num nav-push" href="002-events.html#fn-002-events-4-mark">2-4</a><span class="bib-keyword">wittgenstein-1</span><span class="bib-cite">Wittgenstein, L. Philosophical Investigations. Blackwell, 1953.</span></div>
-<div class="bib-row" id="ref-fn-003-inside-1-1"><a class="bib-ref-num nav-push" href="003-inside.html#fn-003-inside-1-mark">3-1</a><span class="bib-keyword">whitehead</span><span class="bib-cite">Whitehead, A.N. Process and Reality. Macmillan, 1929. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-fn-003-inside-1-2"><a class="bib-ref-num nav-push" href="003-inside.html#fn-003-inside-1-mark">3-1</a><span class="bib-keyword">whitehead-2</span><span class="bib-cite">Whitehead, A.N. Adventures of Ideas. Macmillan, 1933.</span></div>
-<div class="bib-row" id="ref-fn-003-inside-2-1"><a class="bib-ref-num nav-push" href="003-inside.html#fn-003-inside-2-mark">3-2</a><span class="bib-keyword">goff</span><span class="bib-cite">Goff, P. Galileo's Error. Pantheon, 2019. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-fn-003-inside-2-2"><a class="bib-ref-num nav-push" href="003-inside.html#fn-003-inside-2-mark">3-2</a><span class="bib-keyword">goff-2</span><span class="bib-cite">Goff, P., Seager, W., Allen-Hermanson, S. Panpsychism. Stanford Encyclopedia of Philosophy, 2022.</span></div>
-<div class="bib-row" id="ref-fn-003-inside-3-1"><a class="bib-ref-num nav-push" href="003-inside.html#fn-003-inside-3-mark">3-3</a><span class="bib-keyword">chalmers</span><span class="bib-cite">Chalmers, D. The Conscious Mind. Oxford, 1996. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-fn-003-inside-4-1"><a class="bib-ref-num nav-push" href="003-inside.html#fn-003-inside-4-mark">3-4</a><span class="bib-keyword">nagel</span><span class="bib-cite">Nagel, T. What Is It Like to Be a Bat? Philosophical Review, 1974. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-fn-004-self-1-1"><a class="bib-ref-num nav-push" href="004-self.html#fn-004-self-1-mark">4-1</a><span class="bib-keyword">hume</span><span class="bib-cite">Hume, David. A Treatise of Human Nature. 1739.</span></div>
-<div class="bib-row" id="ref-fn-004-self-2-1"><a class="bib-ref-num nav-push" href="004-self.html#fn-004-self-2-mark">4-2</a><span class="bib-keyword">whitehead</span><span class="bib-cite">Whitehead, A.N. Process and Reality. Macmillan, 1929. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-fn-004-self-3-1"><a class="bib-ref-num nav-push" href="004-self.html#fn-004-self-3-mark">4-3</a><span class="bib-keyword">rahula</span><span class="bib-cite">Rahula, Walpola. What the Buddha Taught. 1959.</span></div>
-<div class="bib-row" id="ref-fn-004-self-4-1"><a class="bib-ref-num nav-push" href="004-self.html#fn-004-self-4-mark">4-4</a><span class="bib-keyword">parfit</span><span class="bib-cite">Parfit, Derek. Reasons and Persons. Oxford University Press, 1984.</span></div>
-<div class="bib-row" id="ref-fn-005-freewill-1-1"><a class="bib-ref-num nav-push" href="005-freewill.html#fn-005-freewill-1-mark">5-1</a><span class="bib-keyword">whitehead</span><span class="bib-cite">Whitehead, A.N. Process and Reality. Macmillan, 1929. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-fn-006-output-1-1"><a class="bib-ref-num nav-push" href="006-output.html#fn-006-output-1-mark">6-1</a><span class="bib-keyword">whitehead</span><span class="bib-cite">Whitehead, A.N. Process and Reality. Macmillan, 1929. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-fn-006-output-2-1"><a class="bib-ref-num nav-push" href="006-output.html#fn-006-output-2-mark">6-2</a><span class="bib-keyword">turing</span><span class="bib-cite">Turing, A. Computing Machinery and Intelligence. Mind, 1950. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-fn-006-output-3-1"><a class="bib-ref-num nav-push" href="006-output.html#fn-006-output-3-mark">6-3</a><span class="bib-keyword">thompson</span><span class="bib-cite">Thompson, E. Mind in Life. Harvard University Press, 2007. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-fn-002-events-1-1"><a class="bib-ref-num nav-push" href="002-events.html#fn-002-events-1-mark">2-1</a><span class="bib-keyword">whitehead</span><span class="bib-cite">Whitehead, A.N.
+Process and Reality.
+Macmillan, 1929. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-fn-002-events-1-2"><a class="bib-ref-num nav-push" href="002-events.html#fn-002-events-1-mark">2-1</a><span class="bib-keyword">whitehead-smw</span><span class="bib-cite">Whitehead, A.N.
+Science and the Modern World.
+Macmillan, 1925.</span></div>
+<div class="bib-row" id="ref-fn-002-events-2-1"><a class="bib-ref-num nav-push" href="002-events.html#fn-002-events-2-mark">2-2</a><span class="bib-keyword">kant-1</span><span class="bib-cite">Kant, I. Critique of Pure Reason.
+1781.</span></div>
+<div class="bib-row" id="ref-fn-002-events-3-1"><a class="bib-ref-num nav-push" href="002-events.html#fn-002-events-3-mark">2-3</a><span class="bib-keyword">rovelli-1</span><span class="bib-cite">Rovelli, C. Relational Quantum Mechanics.
+International Journal of Theoretical Physics, 1996.</span></div>
+<div class="bib-row" id="ref-fn-002-events-3-2"><a class="bib-ref-num nav-push" href="002-events.html#fn-002-events-3-mark">2-3</a><span class="bib-keyword">rovelli-2</span><span class="bib-cite">Rovelli, C. Reality Is Not What It Seems.
+Riverhead, 2017.</span></div>
+<div class="bib-row" id="ref-fn-002-events-3-3"><a class="bib-ref-num nav-push" href="002-events.html#fn-002-events-3-mark">2-3</a><span class="bib-keyword">rovelli-3</span><span class="bib-cite">Rovelli, C. The Order of Time.
+Riverhead, 2018.</span></div>
+<div class="bib-row" id="ref-fn-002-events-4-1"><a class="bib-ref-num nav-push" href="002-events.html#fn-002-events-4-mark">2-4</a><span class="bib-keyword">wittgenstein-1</span><span class="bib-cite">Wittgenstein, L. Philosophical Investigations.
+Blackwell, 1953.</span></div>
+<div class="bib-row" id="ref-fn-003-inside-1-1"><a class="bib-ref-num nav-push" href="003-inside.html#fn-003-inside-1-mark">3-1</a><span class="bib-keyword">whitehead</span><span class="bib-cite">Whitehead, A.N.
+Process and Reality.
+Macmillan, 1929. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-fn-003-inside-1-2"><a class="bib-ref-num nav-push" href="003-inside.html#fn-003-inside-1-mark">3-1</a><span class="bib-keyword">whitehead-2</span><span class="bib-cite">Whitehead, A.N.
+Adventures of Ideas.
+Macmillan, 1933.</span></div>
+<div class="bib-row" id="ref-fn-003-inside-2-1"><a class="bib-ref-num nav-push" href="003-inside.html#fn-003-inside-2-mark">3-2</a><span class="bib-keyword">goff</span><span class="bib-cite">Goff, P. Galileo's Error.
+Pantheon, 2019. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-fn-003-inside-2-2"><a class="bib-ref-num nav-push" href="003-inside.html#fn-003-inside-2-mark">3-2</a><span class="bib-keyword">goff-2</span><span class="bib-cite">Goff, P., Seager, W., Allen-Hermanson, S. Panpsychism.
+Stanford Encyclopedia of Philosophy, 2022.</span></div>
+<div class="bib-row" id="ref-fn-003-inside-3-1"><a class="bib-ref-num nav-push" href="003-inside.html#fn-003-inside-3-mark">3-3</a><span class="bib-keyword">chalmers</span><span class="bib-cite">Chalmers, D. The Conscious Mind.
+Oxford, 1996. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-fn-003-inside-4-1"><a class="bib-ref-num nav-push" href="003-inside.html#fn-003-inside-4-mark">3-4</a><span class="bib-keyword">nagel</span><span class="bib-cite">Nagel, T. What Is It Like to Be a Bat?
+Philosophical Review, 1974. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-fn-004-self-1-1"><a class="bib-ref-num nav-push" href="004-self.html#fn-004-self-1-mark">4-1</a><span class="bib-keyword">hume</span><span class="bib-cite">Hume, David.
+A Treatise of Human Nature.
+1739.</span></div>
+<div class="bib-row" id="ref-fn-004-self-2-1"><a class="bib-ref-num nav-push" href="004-self.html#fn-004-self-2-mark">4-2</a><span class="bib-keyword">whitehead</span><span class="bib-cite">Whitehead, A.N.
+Process and Reality.
+Macmillan, 1929. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-fn-004-self-3-1"><a class="bib-ref-num nav-push" href="004-self.html#fn-004-self-3-mark">4-3</a><span class="bib-keyword">rahula</span><span class="bib-cite">Rahula, Walpola.
+What the Buddha Taught.
+1959.</span></div>
+<div class="bib-row" id="ref-fn-004-self-4-1"><a class="bib-ref-num nav-push" href="004-self.html#fn-004-self-4-mark">4-4</a><span class="bib-keyword">parfit</span><span class="bib-cite">Parfit, Derek.
+Reasons and Persons.
+Oxford University Press, 1984.</span></div>
+<div class="bib-row" id="ref-fn-005-freewill-1-1"><a class="bib-ref-num nav-push" href="005-freewill.html#fn-005-freewill-1-mark">5-1</a><span class="bib-keyword">whitehead</span><span class="bib-cite">Whitehead, A.N.
+Process and Reality.
+Macmillan, 1929. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-fn-006-output-1-1"><a class="bib-ref-num nav-push" href="006-output.html#fn-006-output-1-mark">6-1</a><span class="bib-keyword">whitehead</span><span class="bib-cite">Whitehead, A.N.
+Process and Reality.
+Macmillan, 1929. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-fn-006-output-2-1"><a class="bib-ref-num nav-push" href="006-output.html#fn-006-output-2-mark">6-2</a><span class="bib-keyword">turing</span><span class="bib-cite">Turing, A. Computing Machinery and Intelligence.
+Mind, 1950. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-fn-006-output-3-1"><a class="bib-ref-num nav-push" href="006-output.html#fn-006-output-3-mark">6-3</a><span class="bib-keyword">thompson</span><span class="bib-cite">Thompson, E. Mind in Life.
+Harvard University Press, 2007. <span class="bib-check">Check</span></span></div>
 <div class="bib-row" id="ref-fn-007-vacuum-1-1"><a class="bib-ref-num nav-push" href="007-vacuum.html#fn-007-vacuum-1-mark">7-1</a><span class="bib-keyword">whitehead</span><span class="bib-cite">Whitehead, A.N. Process and Reality. Macmillan, 1929. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-fn-008-fields-1-1"><a class="bib-ref-num nav-push" href="008-fields.html#fn-008-fields-1-mark">8-1</a><span class="bib-keyword">maxwell</span><span class="bib-cite">Maxwell, J.C. A Treatise on Electricity and Magnetism. Oxford, 1873.</span></div>
-<div class="bib-row" id="ref-fn-008-fields-2-1"><a class="bib-ref-num nav-push" href="008-fields.html#fn-008-fields-2-mark">8-2</a><span class="bib-keyword">whitehead</span><span class="bib-cite">Whitehead, A.N. Process and Reality. Macmillan, 1929. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-fn-008-fields-3-1"><a class="bib-ref-num nav-push" href="008-fields.html#fn-008-fields-3-mark">8-3</a><span class="bib-keyword">feynman</span><span class="bib-cite">Feynman, R. The Feynman Lectures on Physics, Vol. 2. Addison-Wesley, 1964. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-fn-009-randomness-1-1"><a class="bib-ref-num nav-push" href="009-randomness.html#fn-009-randomness-1-mark">9-1</a><span class="bib-keyword">kauffman</span><span class="bib-cite">Kauffman, S. The Origins of Order. Oxford University Press, 1993. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-fn-009-randomness-1-2"><a class="bib-ref-num nav-push" href="009-randomness.html#fn-009-randomness-1-mark">9-1</a><span class="bib-keyword">kauffman-2</span><span class="bib-cite">Kauffman, S. At Home in the Universe. Oxford University Press, 1995.</span></div>
-<div class="bib-row" id="ref-fn-009-randomness-2-1"><a class="bib-ref-num nav-push" href="009-randomness.html#fn-009-randomness-2-mark">9-2</a><span class="bib-keyword">kirkpatrick</span><span class="bib-cite">Kirkpatrick, S., Gelatt, C.D., Vecchi, M.P. Optimization by Simulated Annealing. Science, 220(4598), 1983.</span></div>
-<div class="bib-row" id="ref-fn-009-randomness-3-1"><a class="bib-ref-num nav-push" href="009-randomness.html#fn-009-randomness-3-mark">9-3</a><span class="bib-keyword">whitehead</span><span class="bib-cite">Whitehead, A.N. Process and Reality. Macmillan, 1929. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-fn-009-randomness-4-1"><a class="bib-ref-num nav-push" href="009-randomness.html#fn-009-randomness-4-mark">9-4</a><span class="bib-keyword">prigogine</span><span class="bib-cite">Prigogine, I. and Stengers, I. Order Out of Chaos. Bantam, 1984.</span></div>
-<div class="bib-row" id="ref-fn-009-randomness-5-1"><a class="bib-ref-num nav-push" href="009-randomness.html#fn-009-randomness-5-mark">9-5</a><span class="bib-keyword">darwin</span><span class="bib-cite">Darwin, C. On the Origin of Species. John Murray, 1859.</span></div>
-<div class="bib-row" id="ref-fn-009-randomness-6-1"><a class="bib-ref-num nav-push" href="009-randomness.html#fn-009-randomness-6-mark">9-6</a><span class="bib-keyword">maturana</span><span class="bib-cite">Maturana, H. and Varela, F. Autopoiesis and Cognition. Reidel, 1980. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-fn-009-randomness-7-1"><a class="bib-ref-num nav-push" href="009-randomness.html#fn-009-randomness-7-mark">9-7</a><span class="bib-keyword">gleick</span><span class="bib-cite">Gleick, J. Chaos: Making a New Science. Viking, 1987.</span></div>
-<div class="bib-row" id="ref-fn-010-largenumbers-1-1"><a class="bib-ref-num nav-push" href="010-largenumbers.html#fn-010-largenumbers-1-mark">10-1</a><span class="bib-keyword">godel</span><span class="bib-cite">Gödel, K. On Formally Undecidable Propositions of Principia Mathematica and Related Systems. 1931. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-fn-010-largenumbers-1-2"><a class="bib-ref-num nav-push" href="010-largenumbers.html#fn-010-largenumbers-1-mark">10-1</a><span class="bib-keyword">hofstadter</span><span class="bib-cite">Hofstadter, D. Gödel, Escher, Bach: An Eternal Golden Braid. Basic Books, 1979. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-fn-011-moreisdifferent-1-1"><a class="bib-ref-num nav-push" href="011-moreisdifferent.html#fn-011-moreisdifferent-1-mark">11-1</a><span class="bib-keyword">hofstadter</span><span class="bib-cite">Hofstadter, D. Gödel, Escher, Bach. Basic Books, 1979. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-fn-011-moreisdifferent-1-1"><a class="bib-ref-num nav-push" href="011-moreisdifferent.html#fn-011-moreisdifferent-1-mark">11-1</a><span class="bib-keyword">koestler-2</span><span class="bib-cite">Koestler, A. The Ghost in the Machine. Hutchinson, 1967.</span></div>
-<div class="bib-row" id="ref-fn-011-moreisdifferent-2-1"><a class="bib-ref-num nav-push" href="011-moreisdifferent.html#fn-011-moreisdifferent-2-mark">11-2</a><span class="bib-keyword">anderson</span><span class="bib-cite">Anderson, P.W. More Is Different. Science, 177(4047), 1972.</span></div>
-<div class="bib-row" id="ref-fn-011-moreisdifferent-2-1"><a class="bib-ref-num nav-push" href="011-moreisdifferent.html#fn-011-moreisdifferent-2-mark">11-2</a><span class="bib-keyword">whitehead</span><span class="bib-cite">Whitehead, A.N. Process and Reality. Macmillan, 1929. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-011-moreisdifferent-3"><a class="bib-ref-num nav-push" href="011-moreisdifferent.html#ref-011-moreisdifferent-3">11-3</a><span class="bib-keyword">koestler</span><span class="bib-cite">Koestler, A. The Act of Creation. Hutchinson, 1964. Bisociation as the common structure of humor, discovery, and art. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-fn-012-autopoiesis-1-1"><a class="bib-ref-num nav-push" href="012-autopoiesis.html#fn-012-autopoiesis-1-mark">12-1</a><span class="bib-keyword">maturana</span><span class="bib-cite">Maturana, H. and Varela, F. Autopoiesis and Cognition. Reidel, 1980. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-fn-012-autopoiesis-1-2"><a class="bib-ref-num nav-push" href="012-autopoiesis.html#fn-012-autopoiesis-1-mark">12-1</a><span class="bib-keyword">maturana-2</span><span class="bib-cite">Maturana, H. and Varela, F. The Tree of Knowledge. Shambhala, 1987.</span></div>
-<div class="bib-row" id="ref-fn-012-autopoiesis-2-1"><a class="bib-ref-num nav-push" href="012-autopoiesis.html#fn-012-autopoiesis-2-mark">12-2</a><span class="bib-keyword">whitehead</span><span class="bib-cite">Whitehead, A.N. Process and Reality. Macmillan, 1929. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-fn-012-autopoiesis-3-1"><a class="bib-ref-num nav-push" href="012-autopoiesis.html#fn-012-autopoiesis-3-mark">12-3</a><span class="bib-keyword">schrodinger</span><span class="bib-cite">Schrödinger, E. What is Life? Cambridge University Press, 1944.</span></div>
-<div class="bib-row" id="ref-fn-012-autopoiesis-4-1"><a class="bib-ref-num nav-push" href="012-autopoiesis.html#fn-012-autopoiesis-4-mark">12-4</a><span class="bib-keyword">thompson</span><span class="bib-cite">Thompson, E. Mind in Life. Harvard University Press, 2007. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-fn-012-autopoiesis-5-1"><a class="bib-ref-num nav-push" href="012-autopoiesis.html#fn-012-autopoiesis-5-mark">12-5</a><span class="bib-keyword">varela</span><span class="bib-cite">Varela, F., Thompson, E., Rosch, E. The Embodied Mind. MIT Press, 1991.</span></div>
-<div class="bib-row" id="ref-fn-012-autopoiesis-6-1"><a class="bib-ref-num nav-push" href="012-autopoiesis.html#fn-012-autopoiesis-6-mark">12-6</a><span class="bib-keyword">prigogine</span><span class="bib-cite">Prigogine, I. and Stengers, I. Order Out of Chaos. Bantam, 1984.</span></div>
-<div class="bib-row" id="ref-fn-013-enactment-1-1"><a class="bib-ref-num nav-push" href="013-enactment.html#fn-013-enactment-1-mark">13-1</a><span class="bib-keyword">thompson</span><span class="bib-cite">Thompson, E. Mind in Life. Harvard University Press, 2007. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-fn-013-enactment-2-1"><a class="bib-ref-num nav-push" href="013-enactment.html#fn-013-enactment-2-mark">13-2</a><span class="bib-keyword">maturana-2</span><span class="bib-cite">Maturana, H. and Varela, F. The Tree of Knowledge. Shambhala, 1987.</span></div>
+<div class="bib-row" id="ref-fn-008-fields-1-1"><a class="bib-ref-num nav-push" href="008-fields.html#fn-008-fields-1-mark">8-1</a><span class="bib-keyword">maxwell</span><span class="bib-cite">Maxwell, J.C.
+A Treatise on Electricity and Magnetism.
+Oxford, 1873.</span></div>
+<div class="bib-row" id="ref-fn-008-fields-2-1"><a class="bib-ref-num nav-push" href="008-fields.html#fn-008-fields-2-mark">8-2</a><span class="bib-keyword">whitehead</span><span class="bib-cite">Whitehead, A.N.
+Process and Reality.
+Macmillan, 1929. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-fn-008-fields-3-1"><a class="bib-ref-num nav-push" href="008-fields.html#fn-008-fields-3-mark">8-3</a><span class="bib-keyword">feynman</span><span class="bib-cite">Feynman, R. The Feynman Lectures on Physics, Vol. 2.
+Addison-Wesley, 1964. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-fn-009-randomness-1-1"><a class="bib-ref-num nav-push" href="009-randomness.html#fn-009-randomness-1-mark">9-1</a><span class="bib-keyword">kauffman</span><span class="bib-cite">Kauffman, S. The Origins of Order.
+Oxford University Press, 1993. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-fn-009-randomness-1-2"><a class="bib-ref-num nav-push" href="009-randomness.html#fn-009-randomness-1-mark">9-1</a><span class="bib-keyword">kauffman-2</span><span class="bib-cite">Kauffman, S. At Home in the Universe.
+Oxford University Press, 1995.</span></div>
+<div class="bib-row" id="ref-fn-009-randomness-2-1"><a class="bib-ref-num nav-push" href="009-randomness.html#fn-009-randomness-2-mark">9-2</a><span class="bib-keyword">kirkpatrick</span><span class="bib-cite">Kirkpatrick, S., Gelatt, C.D., Vecchi, M.P.
+Optimization by Simulated Annealing.
+Science, 220(4598), 1983.</span></div>
+<div class="bib-row" id="ref-fn-009-randomness-3-1"><a class="bib-ref-num nav-push" href="009-randomness.html#fn-009-randomness-3-mark">9-3</a><span class="bib-keyword">whitehead</span><span class="bib-cite">Whitehead, A.N.
+Process and Reality.
+Macmillan, 1929. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-fn-009-randomness-4-1"><a class="bib-ref-num nav-push" href="009-randomness.html#fn-009-randomness-4-mark">9-4</a><span class="bib-keyword">prigogine</span><span class="bib-cite">Prigogine, I. and Stengers, I. Order Out of Chaos.
+Bantam, 1984.</span></div>
+<div class="bib-row" id="ref-fn-009-randomness-5-1"><a class="bib-ref-num nav-push" href="009-randomness.html#fn-009-randomness-5-mark">9-5</a><span class="bib-keyword">darwin</span><span class="bib-cite">Darwin, C. On the Origin of Species.
+John Murray, 1859.</span></div>
+<div class="bib-row" id="ref-fn-009-randomness-6-1"><a class="bib-ref-num nav-push" href="009-randomness.html#fn-009-randomness-6-mark">9-6</a><span class="bib-keyword">maturana</span><span class="bib-cite">Maturana, H. and Varela, F. Autopoiesis and Cognition.
+Reidel, 1980. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-fn-009-randomness-7-1"><a class="bib-ref-num nav-push" href="009-randomness.html#fn-009-randomness-7-mark">9-7</a><span class="bib-keyword">gleick</span><span class="bib-cite">Gleick, J. Chaos: Making a New Science.
+Viking, 1987.</span></div>
+<div class="bib-row" id="ref-fn-010-largenumbers-1-1"><a class="bib-ref-num nav-push" href="010-largenumbers.html#fn-010-largenumbers-1-mark">10-1</a><span class="bib-keyword">godel</span><span class="bib-cite">Gödel, K. On Formally Undecidable Propositions of Principia Mathematica and Related Systems.
+1931. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-fn-010-largenumbers-1-2"><a class="bib-ref-num nav-push" href="010-largenumbers.html#fn-010-largenumbers-1-mark">10-1</a><span class="bib-keyword">hofstadter</span><span class="bib-cite">Hofstadter, D. Gödel, Escher, Bach: An Eternal Golden Braid.
+Basic Books, 1979. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-fn-011-moreisdifferent-1-1"><a class="bib-ref-num nav-push" href="011-moreisdifferent.html#fn-011-moreisdifferent-1-mark">11-1</a><span class="bib-keyword">hofstadter</span><span class="bib-cite">Hofstadter, D. Gödel, Escher, Bach.
+Basic Books, 1979. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-fn-011-moreisdifferent-1-1"><a class="bib-ref-num nav-push" href="011-moreisdifferent.html#fn-011-moreisdifferent-1-mark">11-1</a><span class="bib-keyword">koestler-2</span><span class="bib-cite">Koestler, A. The Ghost in the Machine.
+Hutchinson, 1967.</span></div>
+<div class="bib-row" id="ref-fn-011-moreisdifferent-2-1"><a class="bib-ref-num nav-push" href="011-moreisdifferent.html#fn-011-moreisdifferent-2-mark">11-2</a><span class="bib-keyword">anderson</span><span class="bib-cite">Anderson, P.W.
+More Is Different.
+Science, 177(4047), 1972.</span></div>
+<div class="bib-row" id="ref-fn-011-moreisdifferent-2-1"><a class="bib-ref-num nav-push" href="011-moreisdifferent.html#fn-011-moreisdifferent-2-mark">11-2</a><span class="bib-keyword">whitehead</span><span class="bib-cite">Whitehead, A.N.
+Process and Reality.
+Macmillan, 1929. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-011-moreisdifferent-3"><a class="bib-ref-num nav-push" href="011-moreisdifferent.html#ref-011-moreisdifferent-3">11-3</a><span class="bib-keyword">koestler</span><span class="bib-cite">Koestler, A. The Act of Creation.
+Hutchinson, 1964.
+Bisociation as the common structure of humor, discovery, and art. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-fn-012-autopoiesis-1-1"><a class="bib-ref-num nav-push" href="012-autopoiesis.html#fn-012-autopoiesis-1-mark">12-1</a><span class="bib-keyword">maturana</span><span class="bib-cite">Maturana, H. and Varela, F. Autopoiesis and Cognition.
+Reidel, 1980. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-fn-012-autopoiesis-1-2"><a class="bib-ref-num nav-push" href="012-autopoiesis.html#fn-012-autopoiesis-1-mark">12-1</a><span class="bib-keyword">maturana-2</span><span class="bib-cite">Maturana, H. and Varela, F. The Tree of Knowledge.
+Shambhala, 1987.</span></div>
+<div class="bib-row" id="ref-fn-012-autopoiesis-2-1"><a class="bib-ref-num nav-push" href="012-autopoiesis.html#fn-012-autopoiesis-2-mark">12-2</a><span class="bib-keyword">whitehead</span><span class="bib-cite">Whitehead, A.N.
+Process and Reality.
+Macmillan, 1929. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-fn-012-autopoiesis-3-1"><a class="bib-ref-num nav-push" href="012-autopoiesis.html#fn-012-autopoiesis-3-mark">12-3</a><span class="bib-keyword">schrodinger</span><span class="bib-cite">Schrödinger, E. What is Life?
+Cambridge University Press, 1944.</span></div>
+<div class="bib-row" id="ref-fn-012-autopoiesis-4-1"><a class="bib-ref-num nav-push" href="012-autopoiesis.html#fn-012-autopoiesis-4-mark">12-4</a><span class="bib-keyword">thompson</span><span class="bib-cite">Thompson, E. Mind in Life.
+Harvard University Press, 2007. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-fn-012-autopoiesis-5-1"><a class="bib-ref-num nav-push" href="012-autopoiesis.html#fn-012-autopoiesis-5-mark">12-5</a><span class="bib-keyword">varela</span><span class="bib-cite">Varela, F., Thompson, E., Rosch, E. The Embodied Mind.
+MIT Press, 1991.</span></div>
+<div class="bib-row" id="ref-fn-012-autopoiesis-6-1"><a class="bib-ref-num nav-push" href="012-autopoiesis.html#fn-012-autopoiesis-6-mark">12-6</a><span class="bib-keyword">prigogine</span><span class="bib-cite">Prigogine, I. and Stengers, I. Order Out of Chaos.
+Bantam, 1984.</span></div>
+<div class="bib-row" id="ref-fn-013-enactment-1-1"><a class="bib-ref-num nav-push" href="013-enactment.html#fn-013-enactment-1-mark">13-1</a><span class="bib-keyword">thompson</span><span class="bib-cite">Thompson, E. Mind in Life.
+Harvard University Press, 2007. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-fn-013-enactment-2-1"><a class="bib-ref-num nav-push" href="013-enactment.html#fn-013-enactment-2-mark">13-2</a><span class="bib-keyword">maturana-2</span><span class="bib-cite">Maturana, H. and Varela, F. The Tree of Knowledge.
+Shambhala, 1987.</span></div>
 <div class="bib-row" id="ref-fn-014-cities-1-1"><a class="bib-ref-num nav-push" href="014-cities.html#fn-014-cities-1-mark">14-1</a><span class="bib-keyword">whitehead</span><span class="bib-cite">Whitehead, A.N. Process and Reality. Macmillan, 1929. <span class="bib-check">Check</span></span></div>
 <div class="bib-row" id="ref-fn-016-neuralnetwork-1-1"><a class="bib-ref-num nav-push" href="016-neuralnetwork.html#fn-016-neuralnetwork-1-mark">16-1</a><span class="bib-keyword">whitehead</span><span class="bib-cite">Whitehead, A.N. Process and Reality. Macmillan, 1929. <span class="bib-check">Check</span></span></div>
 <div class="bib-row" id="ref-fn-017-pastpresent-1-1"><a class="bib-ref-num nav-push" href="017-pastpresent.html#fn-017-pastpresent-1-mark">17-1</a><span class="bib-keyword">whitehead</span><span class="bib-cite">Whitehead, A.N. Process and Reality. Macmillan, 1929. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-fn-019-funerals-1-1"><a class="bib-ref-num nav-push" href="019-funerals.html#fn-019-funerals-1-mark">19-1</a><span class="bib-keyword">kuhn</span><span class="bib-cite">Kuhn, T.S. The Structure of Scientific Revolutions. University of Chicago Press, 1962. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-fn-019-funerals-1-1"><a class="bib-ref-num nav-push" href="019-funerals.html#fn-019-funerals-1-mark">19-1</a><span class="bib-keyword">kuhn</span><span class="bib-cite">Kuhn, T.S.
+The Structure of Scientific Revolutions.
+University of Chicago Press, 1962. <span class="bib-check">Check</span></span></div>
 <div class="bib-row" id="ref-fn-019-funerals-2-1"><a class="bib-ref-num nav-push" href="019-funerals.html#fn-019-funerals-2-mark">19-2</a><span class="bib-keyword">planck</span><span class="bib-cite">Planck, M. Scientific Autobiography. Philosophical Library, 1949. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-fn-020-penrose-1-1"><a class="bib-ref-num nav-push" href="020-penrose.html#fn-020-penrose-1-mark">20-1</a><span class="bib-keyword">penrose</span><span class="bib-cite">Penrose, R. The Emperor's New Mind. Oxford University Press, 1989.</span></div>
-<div class="bib-row" id="ref-fn-020-penrose-1-2"><a class="bib-ref-num nav-push" href="020-penrose.html#fn-020-penrose-1-mark">20-1</a><span class="bib-keyword">penrose-2</span><span class="bib-cite">Penrose, R. Shadows of the Mind. Oxford University Press, 1994.</span></div>
-<div class="bib-row" id="ref-fn-020-penrose-2-1"><a class="bib-ref-num nav-push" href="020-penrose.html#fn-020-penrose-2-mark">20-2</a><span class="bib-keyword">godel</span><span class="bib-cite">Gödel, K. On Formally Undecidable Propositions of Principia Mathematica and Related Systems. 1931. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-fn-020-penrose-3-1"><a class="bib-ref-num nav-push" href="020-penrose.html#fn-020-penrose-3-mark">20-3</a><span class="bib-keyword">hameroff</span><span class="bib-cite">Hameroff, S. and Penrose, R. Orchestrated Reduction of Quantum Coherence in Brain Microtubules. Mathematics and Computers in Simulation, 1996.</span></div>
-<div class="bib-row" id="ref-fn-020-penrose-4-1"><a class="bib-ref-num nav-push" href="020-penrose.html#fn-020-penrose-4-mark">20-4</a><span class="bib-keyword">hofstadter</span><span class="bib-cite">Hofstadter, D. Gödel, Escher, Bach. Basic Books, 1979. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-fn-020-penrose-1-1"><a class="bib-ref-num nav-push" href="020-penrose.html#fn-020-penrose-1-mark">20-1</a><span class="bib-keyword">penrose</span><span class="bib-cite">Penrose, R. The Emperor's New Mind.
+Oxford University Press, 1989.</span></div>
+<div class="bib-row" id="ref-fn-020-penrose-1-2"><a class="bib-ref-num nav-push" href="020-penrose.html#fn-020-penrose-1-mark">20-1</a><span class="bib-keyword">penrose-2</span><span class="bib-cite">Penrose, R. Shadows of the Mind.
+Oxford University Press, 1994.</span></div>
+<div class="bib-row" id="ref-fn-020-penrose-2-1"><a class="bib-ref-num nav-push" href="020-penrose.html#fn-020-penrose-2-mark">20-2</a><span class="bib-keyword">godel</span><span class="bib-cite">Gödel, K. On Formally Undecidable Propositions of Principia Mathematica and Related Systems.
+1931. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-fn-020-penrose-3-1"><a class="bib-ref-num nav-push" href="020-penrose.html#fn-020-penrose-3-mark">20-3</a><span class="bib-keyword">hameroff</span><span class="bib-cite">Hameroff, S. and Penrose, R. Orchestrated Reduction of Quantum Coherence in Brain Microtubules.
+Mathematics and Computers in Simulation, 1996.</span></div>
+<div class="bib-row" id="ref-fn-020-penrose-4-1"><a class="bib-ref-num nav-push" href="020-penrose.html#fn-020-penrose-4-mark">20-4</a><span class="bib-keyword">hofstadter</span><span class="bib-cite">Hofstadter, D. Gödel, Escher, Bach.
+Basic Books, 1979. <span class="bib-check">Check</span></span></div>
 <div class="bib-row" id="ref-021-just-1"><a class="bib-ref-num nav-push" href="021-just.html#ref-021-just-1">21-1</a><span class="bib-keyword">ryle</span><span class="bib-cite">Ryle, G. The Concept of Mind (1949). <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-021-just-2"><a class="bib-ref-num nav-push" href="021-just.html#ref-021-just-2">21-2</a><span class="bib-keyword">whitehead</span><span class="bib-cite">Whitehead, A.N. Process and Reality (1929). <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-021-just-2"><a class="bib-ref-num nav-push" href="021-just.html#ref-021-just-2">21-2</a><span class="bib-keyword">whitehead</span><span class="bib-cite">Whitehead, A.N.
+Process and Reality (1929). <span class="bib-check">Check</span></span></div>
 <div class="bib-row" id="ref-021-just-3"><a class="bib-ref-num nav-push" href="021-just.html#ref-021-just-3">21-3</a><span class="bib-keyword">dennett</span><span class="bib-cite">Dennett, D. Intuition Pumps and Other Tools for Thinking (2013). <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-022-locked-1"><a class="bib-ref-num nav-push" href="022-locked.html#ref-022-locked-1">22-1</a><span class="bib-keyword">laureys</span><span class="bib-cite">Laureys, S. et al. Unresponsive wakefulness syndrome: a new name for the vegetative state or apallic syndrome. BMC Medicine, 2010.</span></div>
-<div class="bib-row" id="ref-022-locked-1"><a class="bib-ref-num nav-push" href="022-locked.html#ref-022-locked-1">22-1</a><span class="bib-keyword">bauby</span><span class="bib-cite">Bauby, J-D. The Diving Bell and the Butterfly. Knopf, 1997. The primary text. Essential.</span></div>
-<div class="bib-row" id="ref-022-locked-2"><a class="bib-ref-num nav-push" href="022-locked.html#ref-022-locked-2">22-2</a><span class="bib-keyword">schnabel</span><span class="bib-cite">Schnabel, J. (dir.) The Diving Bell and the Butterfly. Film, 2007.</span></div>
-<div class="bib-row" id="ref-022-locked-3"><a class="bib-ref-num nav-push" href="022-locked.html#ref-022-locked-3">22-3</a><span class="bib-keyword">dickens</span><span class="bib-cite">Dickens, K. The Telepathy Tapes. Podcast, Season 1, 2024.</span></div>
-<div class="bib-row" id="ref-022-locked-4"><a class="bib-ref-num nav-push" href="022-locked.html#ref-022-locked-4">22-4</a><span class="bib-keyword">vyse</span><span class="bib-cite">Vyse, S. The Telepathy Tapes: A Skeptical Analysis. Skeptical Inquirer, 2025.</span></div>
-<div class="bib-row" id="ref-022-locked-5"><a class="bib-ref-num nav-push" href="022-locked.html#ref-022-locked-5">22-5</a><span class="bib-keyword">ryle</span><span class="bib-cite">Ryle, G. The Concept of Mind. Hutchinson, 1949. Source of the category mistake. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-023-stories-1"><a class="bib-ref-num nav-push" href="023-stories.html#ref-023-stories-1">23-1</a><span class="bib-keyword">rukeyser</span><span class="bib-cite">Rukeyser, Muriel. *The Speed of Darkness*. Random House, 1968.</span></div>
-<div class="bib-row" id="ref-023-stories-2"><a class="bib-ref-num nav-push" href="023-stories.html#ref-023-stories-2">23-2</a><span class="bib-keyword">lakoff</span><span class="bib-cite">Lakoff, George, and Mark Johnson. *Metaphors We Live By*. University of Chicago Press, 1980. The foundational argument that conceptual thought is structured by metaphor.</span></div>
-<div class="bib-row" id="ref-023-stories-3"><a class="bib-ref-num nav-push" href="023-stories.html#ref-023-stories-3">23-3</a><span class="bib-keyword">kahneman</span><span class="bib-cite">Kahneman, Daniel. *Thinking, Fast and Slow*. Farrar, Straus and Giroux, 2011. System 1 as the automatic, story-generating mode of cognition; WYSIATI as the illusion of completeness.</span></div>
-<div class="bib-row" id="ref-023-stories-4"><a class="bib-ref-num nav-push" href="023-stories.html#ref-023-stories-4">23-4</a><span class="bib-keyword">campbell</span><span class="bib-cite">Campbell, Joseph. *The Hero with a Thousand Faces*. Pantheon Books, 1949. The monomyth structure we project onto experience.</span></div>
-<div class="bib-row" id="ref-023-stories-5"><a class="bib-ref-num nav-push" href="023-stories.html#ref-023-stories-5">23-5</a><span class="bib-keyword">kuhn</span><span class="bib-cite">Kuhn, T.S. The Structure of Scientific Revolutions. University of Chicago Press, 1962. Paradigm shifts as changes in the story science agrees to tell. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-023-stories-6"><a class="bib-ref-num nav-push" href="023-stories.html#ref-023-stories-6">23-6</a><span class="bib-keyword">goffman</span><span class="bib-cite">Goffman, Erving. *The Presentation of Self in Everyday Life*. Anchor Books, 1959. Social interaction as theatrical performance; identity as enacted rather than expressed.</span></div>
-<div class="bib-row" id="ref-023-stories-7"><a class="bib-ref-num nav-push" href="023-stories.html#ref-023-stories-7">23-7</a><span class="bib-keyword">katie</span><span class="bib-cite">Katie, Byron. *Loving What Is: Four Questions That Can Change Your Life*. Harmony Books, 2002. &quot;The Work&quot; as a method for questioning interpretive narratives.</span></div>
-<div class="bib-row" id="ref-024-ghostmachine-1"><a class="bib-ref-num nav-push" href="024-ghostmachine.html#ref-024-ghostmachine-1">24-1</a><span class="bib-keyword">ryle</span><span class="bib-cite">Ryle, G. The Concept of Mind (1949). The ghost-in-the-machine diagnosis and category mistakes. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-024-ghostmachine-2"><a class="bib-ref-num nav-push" href="024-ghostmachine.html#ref-024-ghostmachine-2">24-2</a><span class="bib-keyword">koestler</span><span class="bib-cite">Koestler, A. The Ghost in the Machine (1967). What was lost when the ghost was expelled; holons and hierarchy. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-024-ghostmachine-3"><a class="bib-ref-num nav-push" href="024-ghostmachine.html#ref-024-ghostmachine-3">24-3</a><span class="bib-keyword">whitehead</span><span class="bib-cite">Whitehead, A.N. Process and Reality (1929). Experience as the interior dimension of process, not a separate substance. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-025-widechannel-1"><a class="bib-ref-num nav-push" href="025-widechannel.html#ref-025-widechannel-1">25-1</a><span class="bib-keyword">turing</span><span class="bib-cite">Turing, Alan. 'Computing Machinery and Intelligence.' Mind, 1950. The original proposal for the imitation game. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-025-widechannel-2"><a class="bib-ref-num nav-push" href="025-widechannel.html#ref-025-widechannel-2">25-2</a><span class="bib-keyword">searle</span><span class="bib-cite">Searle, John. 'Minds, Brains, and Programs.' Behavioral and Brain Sciences, 1980. The Chinese Room argument.</span></div>
-<div class="bib-row" id="ref-025-widechannel-3"><a class="bib-ref-num nav-push" href="025-widechannel.html#ref-025-widechannel-3">25-3</a><span class="bib-keyword">wittgenstein</span><span class="bib-cite">Wittgenstein, Ludwig. Philosophical Investigations. 1953. See especially §293, the beetle-in-a-box passage.</span></div>
-<div class="bib-row" id="ref-025-widechannel-4"><a class="bib-ref-num nav-push" href="025-widechannel.html#ref-025-widechannel-4">25-4</a><span class="bib-keyword">kearns</span><span class="bib-cite">Kearns, Mike. 'Could Daniel Dennett Be a Zombie?' PhilArchive.</span></div>
-<div class="bib-row" id="ref-025-widechannel-5"><a class="bib-ref-num nav-push" href="025-widechannel.html#ref-025-widechannel-5">25-5</a><span class="bib-keyword">whitehead</span><span class="bib-cite">Whitehead, A.N. Process and Reality. Macmillan, 1929. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-026-twotruths-1"><a class="bib-ref-num nav-push" href="026-twotruths.html#ref-026-twotruths-1">26-1</a><span class="bib-keyword">bohr</span><span class="bib-cite">Bohr, N. 'The Quantum Postulate and the Recent Development of Atomic Theory.' Nature, 1928. The original statement of complementarity.</span></div>
-<div class="bib-row" id="ref-026-twotruths-2"><a class="bib-ref-num nav-push" href="026-twotruths.html#ref-026-twotruths-2">26-2</a><span class="bib-keyword">whitehead</span><span class="bib-cite">Whitehead, A.N. Process and Reality (1929). See especially Part II on 'contrast' as a category of existence. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-026-twotruths-3"><a class="bib-ref-num nav-push" href="026-twotruths.html#ref-026-twotruths-3">26-3</a><span class="bib-keyword">godel</span><span class="bib-cite">Gödel, K. 'On Formally Undecidable Propositions of Principia Mathematica and Related Systems.' 1931. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-027-usedtothink-1"><a class="bib-ref-num nav-push" href="027-usedtothink.html#ref-027-usedtothink-1">27-1</a><span class="bib-keyword">lavoisier</span><span class="bib-cite">Lavoisier, A. Elements of Chemistry. 1789. The work that formalized caloric theory — a reminder that the theory was scientifically serious.</span></div>
-<div class="bib-row" id="ref-027-usedtothink-2"><a class="bib-ref-num nav-push" href="027-usedtothink.html#ref-027-usedtothink-2">27-2</a><span class="bib-keyword">joule</span><span class="bib-cite">Joule, J.P. On the Mechanical Equivalent of Heat. Philosophical Transactions of the Royal Society, 1850. The experimental work that displaced caloric theory.</span></div>
-<div class="bib-row" id="ref-027-usedtothink-3"><a class="bib-ref-num nav-push" href="027-usedtothink.html#ref-027-usedtothink-3">27-3</a><span class="bib-keyword">whitehead</span><span class="bib-cite">Whitehead, A.N. Process and Reality. Macmillan, 1929. The primary source for the claim that experience is constitutive of reality at every scale. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-027-usedtothink-4"><a class="bib-ref-num nav-push" href="027-usedtothink.html#ref-027-usedtothink-4">27-4</a><span class="bib-keyword">goff</span><span class="bib-cite">Goff, P. Galileo's Error. Pantheon, 2019. Reconstructs panpsychism in contemporary analytic idiom; the rehabilitation of the animist intuition in respectable philosophical form. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-027-usedtothink-5"><a class="bib-ref-num nav-push" href="027-usedtothink.html#ref-027-usedtothink-5">27-5</a><span class="bib-keyword">maturana</span><span class="bib-cite">Maturana, H. and Varela, F. Autopoiesis and Cognition. Reidel, 1980. The biological basis for the claim that living organization is qualitatively distinct — the phenomenon the vitalists were pointing at. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-027-usedtothink-6"><a class="bib-ref-num nav-push" href="027-usedtothink.html#ref-027-usedtothink-6">27-6</a><span class="bib-keyword">kuhn</span><span class="bib-cite">Kuhn, T.S. The Structure of Scientific Revolutions. University of Chicago Press, 1962. The foundational text on paradigms and scientific revolutions. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-027-usedtothink-7"><a class="bib-ref-num nav-push" href="027-usedtothink.html#ref-027-usedtothink-7">27-7</a><span class="bib-keyword">butterfield</span><span class="bib-cite">Butterfield, H. The Whig Interpretation of History. Bell, 1931. Named the tendency to read history as progress toward the present.</span></div>
-<div class="bib-row" id="ref-028-network-1"><a class="bib-ref-num nav-push" href="028-network.html#ref-028-network-1">28-1</a><span class="bib-keyword">einstein</span><span class="bib-cite">Einstein, A. On the Electrodynamics of Moving Bodies. Annalen der Physik, 1905. The special relativity paper whose implications include the photon's reference frame.</span></div>
-<div class="bib-row" id="ref-028-network-2"><a class="bib-ref-num nav-push" href="028-network.html#ref-028-network-2">28-2</a><span class="bib-keyword">feynman</span><span class="bib-cite">Feynman, R. The Development of the Space-Time View of Quantum Electrodynamics. Nobel Lecture, 1965. Contains Feynman's account of Wheeler's one-electron proposal. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-028-network-3"><a class="bib-ref-num nav-push" href="028-network.html#ref-028-network-3">28-3</a><span class="bib-keyword">whitehead</span><span class="bib-cite">Whitehead, A.N. Process and Reality. Macmillan, 1929. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-028-network-4"><a class="bib-ref-num nav-push" href="028-network.html#ref-028-network-4">28-4</a><span class="bib-keyword">goff</span><span class="bib-cite">Goff, P. Galileo's Error. Pantheon, 2019. Contemporary panpsychism; the philosophical framework that makes the cosmological speculation here coherent. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-031-surfaceinside-1"><a class="bib-ref-num nav-push" href="031-surfaceinside.html#ref-031-surfaceinside-1">31-1</a><span class="bib-keyword">mandelbrot</span><span class="bib-cite">Mandelbrot, Benoit. The Fractal Geometry of Nature. W.H. Freeman, 1982. The boundary as the locus of infinite complexity. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-031-surfaceinside-2"><a class="bib-ref-num nav-push" href="031-surfaceinside.html#ref-031-surfaceinside-2">31-2</a><span class="bib-keyword">bekenstein</span><span class="bib-cite">Bekenstein, Jacob. 'Black Holes and Entropy.' Physical Review D, 1973. The original argument that a black hole's information content is proportional to surface area, not volume.</span></div>
-<div class="bib-row" id="ref-031-surfaceinside-3"><a class="bib-ref-num nav-push" href="031-surfaceinside.html#ref-031-surfaceinside-3">31-3</a><span class="bib-keyword">hawking</span><span class="bib-cite">Hawking, Stephen. 'Particle Creation by Black Holes.' Communications in Mathematical Physics, 1975.</span></div>
-<div class="bib-row" id="ref-031-surfaceinside-4"><a class="bib-ref-num nav-push" href="031-surfaceinside.html#ref-031-surfaceinside-4">31-4</a><span class="bib-keyword">thompson</span><span class="bib-cite">Thompson, Evan. Mind in Life: Biology, Phenomenology, and the Sciences of Mind. Harvard University Press, 2007. The cell membrane as cognitive boundary mediating identity and communication. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-031-surfaceinside-5"><a class="bib-ref-num nav-push" href="031-surfaceinside.html#ref-031-surfaceinside-5">31-5</a><span class="bib-keyword">ibnarabi</span><span class="bib-cite">Ibn Arabi. The Bezels of Wisdom (Fusus al-Hikam), 13th century. The barzakh as cosmological principle.</span></div>
-<div class="bib-row" id="ref-031-surfaceinside-6"><a class="bib-ref-num nav-push" href="031-surfaceinside.html#ref-031-surfaceinside-6">31-6</a><span class="bib-keyword">whitehead</span><span class="bib-cite">Whitehead, A.N. Process and Reality. Macmillan, 1929. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-032-skyfossil-1"><a class="bib-ref-num nav-push" href="032-skyfossil.html#ref-032-skyfossil-1">32-1</a><span class="bib-keyword">everett</span><span class="bib-cite">Everett, H. 'Relative State Formulation of Quantum Mechanics.' Reviews of Modern Physics, 1957. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-032-skyfossil-2"><a class="bib-ref-num nav-push" href="032-skyfossil.html#ref-032-skyfossil-2">32-2</a><span class="bib-keyword">teilhard</span><span class="bib-cite">Teilhard de Chardin de Chardin, Pierre. The Phenomenon of Man. Harper &amp; Row, 1959. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-032-skyfossil-3"><a class="bib-ref-num nav-push" href="032-skyfossil.html#ref-032-skyfossil-3">32-3</a><span class="bib-keyword">whitehead</span><span class="bib-cite">Whitehead, A.N. Process and Reality. Macmillan, 1929. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-022-locked-1"><a class="bib-ref-num nav-push" href="022-locked.html#ref-022-locked-1">22-1</a><span class="bib-keyword">laureys</span><span class="bib-cite">Laureys, S. et al. Unresponsive wakefulness syndrome: a new name for the vegetative state or apallic syndrome.
+BMC Medicine, 2010.</span></div>
+<div class="bib-row" id="ref-022-locked-1"><a class="bib-ref-num nav-push" href="022-locked.html#ref-022-locked-1">22-1</a><span class="bib-keyword">bauby</span><span class="bib-cite">Bauby, J-D.
+The Diving Bell and the Butterfly.
+Knopf, 1997.
+The primary text.
+Essential.</span></div>
+<div class="bib-row" id="ref-022-locked-2"><a class="bib-ref-num nav-push" href="022-locked.html#ref-022-locked-2">22-2</a><span class="bib-keyword">schnabel</span><span class="bib-cite">Schnabel, J. (dir.)
+The Diving Bell and the Butterfly.
+Film, 2007.</span></div>
+<div class="bib-row" id="ref-022-locked-3"><a class="bib-ref-num nav-push" href="022-locked.html#ref-022-locked-3">22-3</a><span class="bib-keyword">dickens</span><span class="bib-cite">Dickens, K. The Telepathy Tapes.
+Podcast, Season 1, 2024.</span></div>
+<div class="bib-row" id="ref-022-locked-4"><a class="bib-ref-num nav-push" href="022-locked.html#ref-022-locked-4">22-4</a><span class="bib-keyword">vyse</span><span class="bib-cite">Vyse, S. The Telepathy Tapes: A Skeptical Analysis.
+Skeptical Inquirer, 2025.</span></div>
+<div class="bib-row" id="ref-022-locked-5"><a class="bib-ref-num nav-push" href="022-locked.html#ref-022-locked-5">22-5</a><span class="bib-keyword">ryle</span><span class="bib-cite">Ryle, G. The Concept of Mind.
+Hutchinson, 1949.
+Source of the category mistake. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-023-stories-1"><a class="bib-ref-num nav-push" href="023-stories.html#ref-023-stories-1">23-1</a><span class="bib-keyword">rukeyser</span><span class="bib-cite">Rukeyser, Muriel. *The Speed of Darkness*.
+Random House, 1968.</span></div>
+<div class="bib-row" id="ref-023-stories-2"><a class="bib-ref-num nav-push" href="023-stories.html#ref-023-stories-2">23-2</a><span class="bib-keyword">lakoff</span><span class="bib-cite">Lakoff, George, and Mark Johnson. *Metaphors We Live By*.
+University of Chicago Press, 1980.
+The foundational argument that conceptual thought is structured by metaphor.</span></div>
+<div class="bib-row" id="ref-023-stories-3"><a class="bib-ref-num nav-push" href="023-stories.html#ref-023-stories-3">23-3</a><span class="bib-keyword">kahneman</span><span class="bib-cite">Kahneman, Daniel. *Thinking, Fast and Slow*.
+Farrar, Straus and Giroux, 2011.
+System 1 as the automatic, story-generating mode of cognition; WYSIATI as the illusion of completeness.</span></div>
+<div class="bib-row" id="ref-023-stories-4"><a class="bib-ref-num nav-push" href="023-stories.html#ref-023-stories-4">23-4</a><span class="bib-keyword">campbell</span><span class="bib-cite">Campbell, Joseph. *The Hero with a Thousand Faces*.
+Pantheon Books, 1949.
+The monomyth structure we project onto experience.</span></div>
+<div class="bib-row" id="ref-023-stories-5"><a class="bib-ref-num nav-push" href="023-stories.html#ref-023-stories-5">23-5</a><span class="bib-keyword">kuhn</span><span class="bib-cite">Kuhn, T.S.
+The Structure of Scientific Revolutions.
+University of Chicago Press, 1962.
+Paradigm shifts as changes in the story science agrees to tell. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-023-stories-6"><a class="bib-ref-num nav-push" href="023-stories.html#ref-023-stories-6">23-6</a><span class="bib-keyword">goffman</span><span class="bib-cite">Goffman, Erving. *The Presentation of Self in Everyday Life*.
+Anchor Books, 1959.
+Social interaction as theatrical performance; identity as enacted rather than expressed.</span></div>
+<div class="bib-row" id="ref-023-stories-7"><a class="bib-ref-num nav-push" href="023-stories.html#ref-023-stories-7">23-7</a><span class="bib-keyword">katie</span><span class="bib-cite">Katie, Byron. *Loving What Is: Four Questions That Can Change Your Life*.
+Harmony Books, 2002.
+&quot;The Work&quot; as a method for questioning interpretive narratives.</span></div>
+<div class="bib-row" id="ref-024-ghostmachine-1"><a class="bib-ref-num nav-push" href="024-ghostmachine.html#ref-024-ghostmachine-1">24-1</a><span class="bib-keyword">ryle</span><span class="bib-cite">Ryle, G. The Concept of Mind (1949).
+The ghost-in-the-machine diagnosis and category mistakes. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-024-ghostmachine-2"><a class="bib-ref-num nav-push" href="024-ghostmachine.html#ref-024-ghostmachine-2">24-2</a><span class="bib-keyword">koestler</span><span class="bib-cite">Koestler, A. The Ghost in the Machine (1967).
+What was lost when the ghost was expelled; holons and hierarchy. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-024-ghostmachine-3"><a class="bib-ref-num nav-push" href="024-ghostmachine.html#ref-024-ghostmachine-3">24-3</a><span class="bib-keyword">whitehead</span><span class="bib-cite">Whitehead, A.N.
+Process and Reality (1929).
+Experience as the interior dimension of process, not a separate substance. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-025-widechannel-1"><a class="bib-ref-num nav-push" href="025-widechannel.html#ref-025-widechannel-1">25-1</a><span class="bib-keyword">turing</span><span class="bib-cite">Turing, Alan.
+'Computing Machinery and Intelligence.'
+Mind, 1950.
+The original proposal for the imitation game. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-025-widechannel-2"><a class="bib-ref-num nav-push" href="025-widechannel.html#ref-025-widechannel-2">25-2</a><span class="bib-keyword">searle</span><span class="bib-cite">Searle, John.
+'Minds, Brains, and Programs.'
+Behavioral and Brain Sciences, 1980.
+The Chinese Room argument.</span></div>
+<div class="bib-row" id="ref-025-widechannel-3"><a class="bib-ref-num nav-push" href="025-widechannel.html#ref-025-widechannel-3">25-3</a><span class="bib-keyword">wittgenstein</span><span class="bib-cite">Wittgenstein, Ludwig.
+Philosophical Investigations.
+1953.
+See especially §293, the beetle-in-a-box passage.</span></div>
+<div class="bib-row" id="ref-025-widechannel-4"><a class="bib-ref-num nav-push" href="025-widechannel.html#ref-025-widechannel-4">25-4</a><span class="bib-keyword">kearns</span><span class="bib-cite">Kearns, Mike.
+'Could Daniel Dennett Be a Zombie?'
+PhilArchive.</span></div>
+<div class="bib-row" id="ref-025-widechannel-5"><a class="bib-ref-num nav-push" href="025-widechannel.html#ref-025-widechannel-5">25-5</a><span class="bib-keyword">whitehead</span><span class="bib-cite">Whitehead, A.N.
+Process and Reality.
+Macmillan, 1929. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-026-twotruths-1"><a class="bib-ref-num nav-push" href="026-twotruths.html#ref-026-twotruths-1">26-1</a><span class="bib-keyword">bohr</span><span class="bib-cite">Bohr, N. 'The Quantum Postulate and the Recent Development of Atomic Theory.'
+Nature, 1928.
+The original statement of complementarity.</span></div>
+<div class="bib-row" id="ref-026-twotruths-2"><a class="bib-ref-num nav-push" href="026-twotruths.html#ref-026-twotruths-2">26-2</a><span class="bib-keyword">whitehead</span><span class="bib-cite">Whitehead, A.N.
+Process and Reality (1929).
+See especially Part II on 'contrast' as a category of existence. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-026-twotruths-3"><a class="bib-ref-num nav-push" href="026-twotruths.html#ref-026-twotruths-3">26-3</a><span class="bib-keyword">godel</span><span class="bib-cite">Gödel, K. 'On Formally Undecidable Propositions of Principia Mathematica and Related Systems.'
+1931. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-027-usedtothink-1"><a class="bib-ref-num nav-push" href="027-usedtothink.html#ref-027-usedtothink-1">27-1</a><span class="bib-keyword">lavoisier</span><span class="bib-cite">Lavoisier, A. Elements of Chemistry.
+1789.
+The work that formalized caloric theory — a reminder that the theory was scientifically serious.</span></div>
+<div class="bib-row" id="ref-027-usedtothink-2"><a class="bib-ref-num nav-push" href="027-usedtothink.html#ref-027-usedtothink-2">27-2</a><span class="bib-keyword">joule</span><span class="bib-cite">Joule, J.P.
+On the Mechanical Equivalent of Heat.
+Philosophical Transactions of the Royal Society, 1850.
+The experimental work that displaced caloric theory.</span></div>
+<div class="bib-row" id="ref-027-usedtothink-3"><a class="bib-ref-num nav-push" href="027-usedtothink.html#ref-027-usedtothink-3">27-3</a><span class="bib-keyword">whitehead</span><span class="bib-cite">Whitehead, A.N.
+Process and Reality.
+Macmillan, 1929.
+The primary source for the claim that experience is constitutive of reality at every scale. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-027-usedtothink-4"><a class="bib-ref-num nav-push" href="027-usedtothink.html#ref-027-usedtothink-4">27-4</a><span class="bib-keyword">goff</span><span class="bib-cite">Goff, P. Galileo's Error.
+Pantheon, 2019.
+Reconstructs panpsychism in contemporary analytic idiom; the rehabilitation of the animist intuition in respectable philosophical form. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-027-usedtothink-5"><a class="bib-ref-num nav-push" href="027-usedtothink.html#ref-027-usedtothink-5">27-5</a><span class="bib-keyword">maturana</span><span class="bib-cite">Maturana, H. and Varela, F. Autopoiesis and Cognition.
+Reidel, 1980.
+The biological basis for the claim that living organization is qualitatively distinct — the phenomenon the vitalists were pointing at. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-027-usedtothink-6"><a class="bib-ref-num nav-push" href="027-usedtothink.html#ref-027-usedtothink-6">27-6</a><span class="bib-keyword">kuhn</span><span class="bib-cite">Kuhn, T.S.
+The Structure of Scientific Revolutions.
+University of Chicago Press, 1962.
+The foundational text on paradigms and scientific revolutions. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-027-usedtothink-7"><a class="bib-ref-num nav-push" href="027-usedtothink.html#ref-027-usedtothink-7">27-7</a><span class="bib-keyword">butterfield</span><span class="bib-cite">Butterfield, H. The Whig Interpretation of History.
+Bell, 1931.
+Named the tendency to read history as progress toward the present.</span></div>
+<div class="bib-row" id="ref-028-network-1"><a class="bib-ref-num nav-push" href="028-network.html#ref-028-network-1">28-1</a><span class="bib-keyword">einstein</span><span class="bib-cite">Einstein, A. On the Electrodynamics of Moving Bodies.
+Annalen der Physik, 1905.
+The special relativity paper whose implications include the photon's reference frame.</span></div>
+<div class="bib-row" id="ref-028-network-2"><a class="bib-ref-num nav-push" href="028-network.html#ref-028-network-2">28-2</a><span class="bib-keyword">feynman</span><span class="bib-cite">Feynman, R. The Development of the Space-Time View of Quantum Electrodynamics.
+Nobel Lecture, 1965.
+Contains Feynman's account of Wheeler's one-electron proposal. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-028-network-3"><a class="bib-ref-num nav-push" href="028-network.html#ref-028-network-3">28-3</a><span class="bib-keyword">whitehead</span><span class="bib-cite">Whitehead, A.N.
+Process and Reality.
+Macmillan, 1929. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-028-network-4"><a class="bib-ref-num nav-push" href="028-network.html#ref-028-network-4">28-4</a><span class="bib-keyword">goff</span><span class="bib-cite">Goff, P. Galileo's Error.
+Pantheon, 2019.
+Contemporary panpsychism; the philosophical framework that makes the cosmological speculation here coherent. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-031-surfaceinside-1"><a class="bib-ref-num nav-push" href="031-surfaceinside.html#ref-031-surfaceinside-1">31-1</a><span class="bib-keyword">mandelbrot</span><span class="bib-cite">Mandelbrot, Benoit.
+The Fractal Geometry of Nature.
+W.H.
+Freeman, 1982.
+The boundary as the locus of infinite complexity. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-031-surfaceinside-2"><a class="bib-ref-num nav-push" href="031-surfaceinside.html#ref-031-surfaceinside-2">31-2</a><span class="bib-keyword">bekenstein</span><span class="bib-cite">Bekenstein, Jacob.
+'Black Holes and Entropy.'
+Physical Review D, 1973.
+The original argument that a black hole's information content is proportional to surface area, not volume.</span></div>
+<div class="bib-row" id="ref-031-surfaceinside-3"><a class="bib-ref-num nav-push" href="031-surfaceinside.html#ref-031-surfaceinside-3">31-3</a><span class="bib-keyword">hawking</span><span class="bib-cite">Hawking, Stephen.
+'Particle Creation by Black Holes.'
+Communications in Mathematical Physics, 1975.</span></div>
+<div class="bib-row" id="ref-031-surfaceinside-4"><a class="bib-ref-num nav-push" href="031-surfaceinside.html#ref-031-surfaceinside-4">31-4</a><span class="bib-keyword">thompson</span><span class="bib-cite">Thompson, Evan.
+Mind in Life: Biology, Phenomenology, and the Sciences of Mind.
+Harvard University Press, 2007.
+The cell membrane as cognitive boundary mediating identity and communication. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-031-surfaceinside-5"><a class="bib-ref-num nav-push" href="031-surfaceinside.html#ref-031-surfaceinside-5">31-5</a><span class="bib-keyword">ibnarabi</span><span class="bib-cite">Ibn Arabi.
+The Bezels of Wisdom (Fusus al-Hikam), 13th century.
+The barzakh as cosmological principle.</span></div>
+<div class="bib-row" id="ref-031-surfaceinside-6"><a class="bib-ref-num nav-push" href="031-surfaceinside.html#ref-031-surfaceinside-6">31-6</a><span class="bib-keyword">whitehead</span><span class="bib-cite">Whitehead, A.N.
+Process and Reality.
+Macmillan, 1929. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-032-skyfossil-1"><a class="bib-ref-num nav-push" href="032-skyfossil.html#ref-032-skyfossil-1">32-1</a><span class="bib-keyword">everett</span><span class="bib-cite">Everett, H. 'Relative State Formulation of Quantum Mechanics.'
+Reviews of Modern Physics, 1957. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-032-skyfossil-2"><a class="bib-ref-num nav-push" href="032-skyfossil.html#ref-032-skyfossil-2">32-2</a><span class="bib-keyword">teilhard</span><span class="bib-cite">Teilhard de Chardin de Chardin, Pierre.
+The Phenomenon of Man.
+Harper &amp; Row, 1959. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-032-skyfossil-3"><a class="bib-ref-num nav-push" href="032-skyfossil.html#ref-032-skyfossil-3">32-3</a><span class="bib-keyword">whitehead</span><span class="bib-cite">Whitehead, A.N.
+Process and Reality.
+Macmillan, 1929. <span class="bib-check">Check</span></span></div>
 <div class="bib-row" id="ref-033-edge-1"><a class="bib-ref-num nav-push" href="033-edge.html#ref-033-edge-1">33-1</a><span class="bib-keyword">mandelbrot</span><span class="bib-cite">Mandelbrot, Benoit — fractal geometry, the boundary between order and chaos. <span class="bib-check">Check</span></span></div>
 <div class="bib-row" id="ref-033-edge-2"><a class="bib-ref-num nav-push" href="033-edge.html#ref-033-edge-2">33-2</a><span class="bib-keyword">farey</span><span class="bib-cite">Farey sequence — rational numbers ordered by denominator size, governing bulb positions. <span class="bib-check">Check</span></span></div>
 <div class="bib-row" id="ref-033-edge-3"><a class="bib-ref-num nav-push" href="033-edge.html#ref-033-edge-3">33-3</a><span class="bib-keyword">pythagoras</span><span class="bib-cite">Pythagoras — consonance as simple integer ratios, now understood as stability under iteration. <span class="bib-check">Check</span></span></div>
 <div class="bib-row" id="ref-033-edge-4"><a class="bib-ref-num nav-push" href="033-edge.html#ref-033-edge-4">33-4</a><span class="bib-keyword">everett</span><span class="bib-cite">Everett (1957) — bifurcations at the boundary as world-splits. <span class="bib-check">Check</span></span></div>
 <div class="bib-row" id="ref-033-edge-5"><a class="bib-ref-num nav-push" href="033-edge.html#ref-033-edge-5">33-5</a><span class="bib-keyword">stern-brocot</span><span class="bib-cite">Stern-Brocot tree — the complete ordered tree of rational numbers, mediating consonance and bulb structure.</span></div>
 <div class="bib-row" id="ref-034-onerule-1"><a class="bib-ref-num nav-push" href="034-onerule.html#ref-034-onerule-1">34-1</a><span class="bib-keyword">wheeler</span><span class="bib-cite">Wheeler, John — one-electron universe, proposed by Feynman, entertained seriously; and 'it from bit': the universe as information processing.</span></div>
-<div class="bib-row" id="ref-034-onerule-2"><a class="bib-ref-num nav-push" href="034-onerule.html#ref-034-onerule-2">34-2</a><span class="bib-keyword">whitehead</span><span class="bib-cite">Whitehead, A.N. Process and Reality. Macmillan, 1929. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-034-onerule-3"><a class="bib-ref-num nav-push" href="034-onerule.html#ref-034-onerule-3">34-3</a><span class="bib-keyword">mandelbrot</span><span class="bib-cite">Mandelbrot, Benoit. The Fractal Geometry of Nature. W.H. Freeman, 1982. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-034-onerule-2"><a class="bib-ref-num nav-push" href="034-onerule.html#ref-034-onerule-2">34-2</a><span class="bib-keyword">whitehead</span><span class="bib-cite">Whitehead, A.N.
+Process and Reality.
+Macmillan, 1929. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-034-onerule-3"><a class="bib-ref-num nav-push" href="034-onerule.html#ref-034-onerule-3">34-3</a><span class="bib-keyword">mandelbrot</span><span class="bib-cite">Mandelbrot, Benoit.
+The Fractal Geometry of Nature.
+W.H.
+Freeman, 1982. <span class="bib-check">Check</span></span></div>
 <div class="bib-row" id="ref-034-onerule-4"><a class="bib-ref-num nav-push" href="034-onerule.html#ref-034-onerule-4">34-4</a><span class="bib-keyword">wolfram</span><span class="bib-cite">Wolfram, Stephen — A New Kind of Science: simple rules generating irreducible complexity.</span></div>
 <div class="bib-row" id="ref-035-simplestnumbers-1"><a class="bib-ref-num nav-push" href="035-simplestnumbers.html#ref-035-simplestnumbers-1">35-1</a><span class="bib-keyword">farey</span><span class="bib-cite">Farey, John (1816) — sequence of rationals ordered by denominator size. <span class="bib-check">Check</span></span></div>
 <div class="bib-row" id="ref-035-simplestnumbers-2"><a class="bib-ref-num nav-push" href="035-simplestnumbers.html#ref-035-simplestnumbers-2">35-2</a><span class="bib-keyword">benford</span><span class="bib-cite">Benford, Frank (1938) — leading digit law in real world numerical data.</span></div>
 <div class="bib-row" id="ref-035-simplestnumbers-3"><a class="bib-ref-num nav-push" href="035-simplestnumbers.html#ref-035-simplestnumbers-3">35-3</a><span class="bib-keyword">newcomb</span><span class="bib-cite">Newcomb, Simon (1881) — noticed Benford's pattern fifty years earlier, ignored.</span></div>
-<div class="bib-row" id="ref-036-universenoticing-1"><a class="bib-ref-num nav-push" href="036-universenoticing.html#ref-036-universenoticing-1">36-1</a><span class="bib-keyword">whitehead</span><span class="bib-cite">Whitehead, A.N. Process and Reality. Macmillan, 1929. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-036-universenoticing-2"><a class="bib-ref-num nav-push" href="036-universenoticing.html#ref-036-universenoticing-2">36-2</a><span class="bib-keyword">teilhard</span><span class="bib-cite">Teilhard de Chardin, Pierre. The Phenomenon of Man. Harper &amp; Row, 1959. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-036-universenoticing-1"><a class="bib-ref-num nav-push" href="036-universenoticing.html#ref-036-universenoticing-1">36-1</a><span class="bib-keyword">whitehead</span><span class="bib-cite">Whitehead, A.N.
+Process and Reality.
+Macmillan, 1929. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-036-universenoticing-2"><a class="bib-ref-num nav-push" href="036-universenoticing.html#ref-036-universenoticing-2">36-2</a><span class="bib-keyword">teilhard</span><span class="bib-cite">Teilhard de Chardin, Pierre.
+The Phenomenon of Man.
+Harper &amp; Row, 1959. <span class="bib-check">Check</span></span></div>
 <div class="bib-row" id="ref-036-universenoticing-3"><a class="bib-ref-num nav-push" href="036-universenoticing.html#ref-036-universenoticing-3">36-3</a><span class="bib-keyword">sagan</span><span class="bib-cite">Sagan, Carl — 'we are a way for the cosmos to know itself' — the surface version of this idea.</span></div>
-<div class="bib-row" id="ref-037-assembly-1"><a class="bib-ref-num nav-push" href="037-assembly.html#ref-037-assembly-1">37-1</a><span class="bib-keyword">koestler</span><span class="bib-cite">Koestler, A. The Ghost in the Machine (1967). Holons and the hierarchy of whole/part. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-037-assembly-2"><a class="bib-ref-num nav-push" href="037-assembly.html#ref-037-assembly-2">37-2</a><span class="bib-keyword">walker</span><span class="bib-cite">Walker, S.I. et al. Assembly theory (Nature 2023). Assembly index and the signature of life.</span></div>
+<div class="bib-row" id="ref-037-assembly-1"><a class="bib-ref-num nav-push" href="037-assembly.html#ref-037-assembly-1">37-1</a><span class="bib-keyword">koestler</span><span class="bib-cite">Koestler, A. The Ghost in the Machine (1967).
+Holons and the hierarchy of whole/part. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-037-assembly-2"><a class="bib-ref-num nav-push" href="037-assembly.html#ref-037-assembly-2">37-2</a><span class="bib-keyword">walker</span><span class="bib-cite">Walker, S.I. et al. Assembly theory (Nature 2023).
+Assembly index and the signature of life.</span></div>
 <div class="bib-row" id="ref-038-consonance-map-1"><a class="bib-ref-num nav-push" href="038-consonance-map.html#ref-038-consonance-map-1">38-1</a><span class="bib-keyword">pythagoras</span><span class="bib-cite">Pythagoras — consonance as simple integer ratios, discovered through string length experiments on the monochord. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-038-consonance-map-2"><a class="bib-ref-num nav-push" href="038-consonance-map.html#ref-038-consonance-map-2">38-2</a><span class="bib-keyword">mandelbrot</span><span class="bib-cite">Mandelbrot, Benoît — The Fractal Geometry of Nature. Freeman, 1982. The boundary between convergence and escape as infinitely complex attractor. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-038-consonance-map-2"><a class="bib-ref-num nav-push" href="038-consonance-map.html#ref-038-consonance-map-2">38-2</a><span class="bib-keyword">mandelbrot</span><span class="bib-cite">Mandelbrot, Benoît — The Fractal Geometry of Nature.
+Freeman, 1982.
+The boundary between convergence and escape as infinitely complex attractor. <span class="bib-check">Check</span></span></div>
 <div class="bib-row" id="ref-038-consonance-map-3"><a class="bib-ref-num nav-push" href="038-consonance-map.html#ref-038-consonance-map-3">38-3</a><span class="bib-keyword">farey</span><span class="bib-cite">Farey, John (1816) — sequence of rationals ordered by denominator size; the Farey gap property. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-040-stability-1"><a class="bib-ref-num nav-push" href="040-stability.html#ref-040-stability-1">40-1</a><span class="bib-keyword">arnold</span><span class="bib-cite">Arnold, V.I. Small Denominators (1961). KAM theory and the stability of quasiperiodic motion.</span></div>
-<div class="bib-row" id="ref-041-colorwheel-1"><a class="bib-ref-num nav-push" href="041-colorwheel.html#ref-041-colorwheel-1">41-1</a><span class="bib-keyword">hering</span><span class="bib-cite">Hering, Ewald — opponent process theory of color vision, 1892. The original proposal that color experience is organized around opposing pairs.</span></div>
-<div class="bib-row" id="ref-041-colorwheel-2"><a class="bib-ref-num nav-push" href="041-colorwheel.html#ref-041-colorwheel-2">41-2</a><span class="bib-keyword">mollon</span><span class="bib-cite">Mollon, J.D. — the uses and origins of primate colour vision. Journal of Experimental Biology, 1989. The fruit and co-evolution hypothesis.</span></div>
-<div class="bib-row" id="ref-042-eyethinks-1"><a class="bib-ref-num nav-push" href="042-eyethinks.html#ref-042-eyethinks-1">42-1</a><span class="bib-keyword">hurvich</span><span class="bib-cite">Hurvich, L. and Jameson, D. An opponent-process theory of color vision (1957). Foundational account of opponent coding.</span></div>
-<div class="bib-row" id="ref-044-ai-retina-1"><a class="bib-ref-num nav-push" href="044-ai-retina.html#ref-044-ai-retina-1">44-1</a><span class="bib-keyword">barlow</span><span class="bib-cite">Barlow, H. Redundancy reduction revisited (2001). Efficient coding and the structure of natural signals.</span></div>
-<div class="bib-row" id="ref-045-baldwin-1"><a class="bib-ref-num nav-push" href="045-baldwin.html#ref-045-baldwin-1">45-1</a><span class="bib-keyword">baldwin</span><span class="bib-cite">Baldwin, J.M. A new factor in evolution (1896). The original proposal. Simpson, G.G. The Baldwin effect (1953). Modern synthesis treatment.</span></div>
-<div class="bib-row" id="ref-046-thinkfast-1"><a class="bib-ref-num nav-push" href="046-thinkfast.html#ref-046-thinkfast-1">46-1</a><span class="bib-keyword">edelman</span><span class="bib-cite">Edelman, G. Neural Darwinism (1987). Selectionist theory of brain function. Friston, K. The free-energy principle (2010). Predictive processing.</span></div>
-<div class="bib-row" id="ref-047-ai-feeling-1"><a class="bib-ref-num nav-push" href="047-ai-feeling.html#ref-047-ai-feeling-1">47-1</a><span class="bib-keyword">chalmers</span><span class="bib-cite">Chalmers, D. The Hard Problem of Consciousness (1995). The problem that may dissolve rather than be solved. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-048-flashes-1"><a class="bib-ref-num nav-push" href="048-flashes.html#ref-048-flashes-1">48-1</a><span class="bib-keyword">dennett</span><span class="bib-cite">Dennett, D. Consciousness Explained (1991). Multiple drafts and the narrative construction of the self. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-049-strangeloop-1"><a class="bib-ref-num nav-push" href="049-strangeloop.html#ref-049-strangeloop-1">49-1</a><span class="bib-keyword">hofstadter</span><span class="bib-cite">Hofstadter, D. Gödel, Escher, Bach (1979). Strange loops, self-reference, and the structure of mind. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-050-orthogonal-1"><a class="bib-ref-num nav-push" href="050-orthogonal.html#ref-050-orthogonal-1">50-1</a><span class="bib-keyword">whitehead</span><span class="bib-cite">Whitehead, A.N. Process and Reality (1929). Prehension and the interiority of occasions. Teilhard de Chardin, P. The Phenomenon of Man (1955). The within of things. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-051-spacetime-1"><a class="bib-ref-num nav-push" href="051-spacetime.html#ref-051-spacetime-1">51-1</a><span class="bib-keyword">susskind</span><span class="bib-cite">Susskind, L. The World as a Hologram (1995). Van Raamsdonk, M. Building up spacetime with quantum entanglement (2010). <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-052-dichotomy-1"><a class="bib-ref-num nav-push" href="052-dichotomy.html#ref-052-dichotomy-1">52-1</a><span class="bib-keyword">whitehead</span><span class="bib-cite">Whitehead, A.N. Process and Reality (1929). Occasions and societies. Quantum field theory: e.g. Peskin &amp; Schroeder (1995). <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-053-dimensions-1"><a class="bib-ref-num nav-push" href="053-dimensions.html#ref-053-dimensions-1">53-1</a><span class="bib-keyword">johnson</span><span class="bib-cite">Johnson, W. and Lindenstrauss, J. Extensions of Lipschitz maps (1984). The classical dimension-reduction lemma.</span></div>
-<div class="bib-row" id="ref-054-bornharmonic-1"><a class="bib-ref-num nav-push" href="054-bornharmonic.html#ref-054-bornharmonic-1">54-1</a><span class="bib-keyword">everett</span><span class="bib-cite">Everett, H. Relative state formulation of quantum mechanics (1957). Many Worlds. Douady, A. and Hubbard, J. On the dynamics of polynomial-like maps (1985). Harmonic measure on Julia sets. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-057-superfarey-1"><a class="bib-ref-num nav-push" href="057-superfarey.html#ref-057-superfarey-1">57-1</a><span class="bib-keyword">olsson</span><span class="bib-cite">Olsson, E. et al. Superposition, memorization, and double descent (2022). Or similar interpretability work on superposition.</span></div>
-<div class="bib-row" id="ref-058-galacticnets-1"><a class="bib-ref-num nav-push" href="058-galacticnets.html#ref-058-galacticnets-1">58-1</a><span class="bib-keyword">whitehead</span><span class="bib-cite">Whitehead, A.N. Process and Reality (1929). Creative advance. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-058-galacticnets-2"><a class="bib-ref-num nav-push" href="058-galacticnets.html#ref-058-galacticnets-2">58-2</a><span class="bib-keyword">teilhard</span><span class="bib-cite">Teilhard de Chardin, P. The Phenomenon of Man (1955). Cosmic direction. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-059-galaxyevolve-1"><a class="bib-ref-num nav-push" href="059-galaxyevolve.html#ref-059-galaxyevolve-1">59-1</a><span class="bib-keyword">teilhard</span><span class="bib-cite">Teilhard de Chardin, P. The Phenomenon of Man (1955). Cosmic evolution and the Omega Point. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-040-stability-1"><a class="bib-ref-num nav-push" href="040-stability.html#ref-040-stability-1">40-1</a><span class="bib-keyword">arnold</span><span class="bib-cite">Arnold, V.I.
+Small Denominators (1961).
+KAM theory and the stability of quasiperiodic motion.</span></div>
+<div class="bib-row" id="ref-041-colorwheel-1"><a class="bib-ref-num nav-push" href="041-colorwheel.html#ref-041-colorwheel-1">41-1</a><span class="bib-keyword">hering</span><span class="bib-cite">Hering, Ewald — opponent process theory of color vision, 1892.
+The original proposal that color experience is organized around opposing pairs.</span></div>
+<div class="bib-row" id="ref-041-colorwheel-2"><a class="bib-ref-num nav-push" href="041-colorwheel.html#ref-041-colorwheel-2">41-2</a><span class="bib-keyword">mollon</span><span class="bib-cite">Mollon, J.D.
+— the uses and origins of primate colour vision.
+Journal of Experimental Biology, 1989.
+The fruit and co-evolution hypothesis.</span></div>
+<div class="bib-row" id="ref-042-eyethinks-1"><a class="bib-ref-num nav-push" href="042-eyethinks.html#ref-042-eyethinks-1">42-1</a><span class="bib-keyword">hurvich</span><span class="bib-cite">Hurvich, L. and Jameson, D. An opponent-process theory of color vision (1957).
+Foundational account of opponent coding.</span></div>
+<div class="bib-row" id="ref-044-ai-retina-1"><a class="bib-ref-num nav-push" href="044-ai-retina.html#ref-044-ai-retina-1">44-1</a><span class="bib-keyword">barlow</span><span class="bib-cite">Barlow, H. Redundancy reduction revisited (2001).
+Efficient coding and the structure of natural signals.</span></div>
+<div class="bib-row" id="ref-045-baldwin-1"><a class="bib-ref-num nav-push" href="045-baldwin.html#ref-045-baldwin-1">45-1</a><span class="bib-keyword">baldwin</span><span class="bib-cite">Baldwin, J.M.
+A new factor in evolution (1896).
+The original proposal.
+Simpson, G.G.
+The Baldwin effect (1953).
+Modern synthesis treatment.</span></div>
+<div class="bib-row" id="ref-046-thinkfast-1"><a class="bib-ref-num nav-push" href="046-thinkfast.html#ref-046-thinkfast-1">46-1</a><span class="bib-keyword">edelman</span><span class="bib-cite">Edelman, G. Neural Darwinism (1987).
+Selectionist theory of brain function.
+Friston, K. The free-energy principle (2010).
+Predictive processing.</span></div>
+<div class="bib-row" id="ref-047-ai-feeling-1"><a class="bib-ref-num nav-push" href="047-ai-feeling.html#ref-047-ai-feeling-1">47-1</a><span class="bib-keyword">chalmers</span><span class="bib-cite">Chalmers, D. The Hard Problem of Consciousness (1995).
+The problem that may dissolve rather than be solved. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-048-flashes-1"><a class="bib-ref-num nav-push" href="048-flashes.html#ref-048-flashes-1">48-1</a><span class="bib-keyword">dennett</span><span class="bib-cite">Dennett, D. Consciousness Explained (1991).
+Multiple drafts and the narrative construction of the self. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-049-strangeloop-1"><a class="bib-ref-num nav-push" href="049-strangeloop.html#ref-049-strangeloop-1">49-1</a><span class="bib-keyword">hofstadter</span><span class="bib-cite">Hofstadter, D. Gödel, Escher, Bach (1979).
+Strange loops, self-reference, and the structure of mind. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-050-orthogonal-1"><a class="bib-ref-num nav-push" href="050-orthogonal.html#ref-050-orthogonal-1">50-1</a><span class="bib-keyword">whitehead</span><span class="bib-cite">Whitehead, A.N.
+Process and Reality (1929).
+Prehension and the interiority of occasions.
+Teilhard de Chardin, P. The Phenomenon of Man (1955).
+The within of things. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-051-spacetime-1"><a class="bib-ref-num nav-push" href="051-spacetime.html#ref-051-spacetime-1">51-1</a><span class="bib-keyword">susskind</span><span class="bib-cite">Susskind, L. The World as a Hologram (1995).
+Van Raamsdonk, M. Building up spacetime with quantum entanglement (2010). <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-052-dichotomy-1"><a class="bib-ref-num nav-push" href="052-dichotomy.html#ref-052-dichotomy-1">52-1</a><span class="bib-keyword">whitehead</span><span class="bib-cite">Whitehead, A.N.
+Process and Reality (1929).
+Occasions and societies.
+Quantum field theory: e.g. Peskin &amp; Schroeder (1995). <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-053-dimensions-1"><a class="bib-ref-num nav-push" href="053-dimensions.html#ref-053-dimensions-1">53-1</a><span class="bib-keyword">johnson</span><span class="bib-cite">Johnson, W. and Lindenstrauss, J. Extensions of Lipschitz maps (1984).
+The classical dimension-reduction lemma.</span></div>
+<div class="bib-row" id="ref-054-bornharmonic-1"><a class="bib-ref-num nav-push" href="054-bornharmonic.html#ref-054-bornharmonic-1">54-1</a><span class="bib-keyword">everett</span><span class="bib-cite">Everett, H. Relative state formulation of quantum mechanics (1957).
+Many Worlds.
+Douady, A. and Hubbard, J. On the dynamics of polynomial-like maps (1985).
+Harmonic measure on Julia sets. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-057-superfarey-1"><a class="bib-ref-num nav-push" href="057-superfarey.html#ref-057-superfarey-1">57-1</a><span class="bib-keyword">olsson</span><span class="bib-cite">Olsson, E. et al. Superposition, memorization, and double descent (2022).
+Or similar interpretability work on superposition.</span></div>
+<div class="bib-row" id="ref-058-galacticnets-1"><a class="bib-ref-num nav-push" href="058-galacticnets.html#ref-058-galacticnets-1">58-1</a><span class="bib-keyword">whitehead</span><span class="bib-cite">Whitehead, A.N.
+Process and Reality (1929).
+Creative advance. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-058-galacticnets-2"><a class="bib-ref-num nav-push" href="058-galacticnets.html#ref-058-galacticnets-2">58-2</a><span class="bib-keyword">teilhard</span><span class="bib-cite">Teilhard de Chardin, P. The Phenomenon of Man (1955).
+Cosmic direction. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-059-galaxyevolve-1"><a class="bib-ref-num nav-push" href="059-galaxyevolve.html#ref-059-galaxyevolve-1">59-1</a><span class="bib-keyword">teilhard</span><span class="bib-cite">Teilhard de Chardin, P. The Phenomenon of Man (1955).
+Cosmic evolution and the Omega Point. <span class="bib-check">Check</span></span></div>
 <div class="bib-row" id="ref-060-worldtests-1"><a class="bib-ref-num nav-push" href="060-worldtests.html#ref-060-worldtests-1">60-1</a><span class="bib-keyword">everett</span><span class="bib-cite">Everett, H. Relative state formulation of quantum mechanics (1957). <span class="bib-check">Check</span></span></div>
 <div class="bib-row" id="ref-060-worldtests-2"><a class="bib-ref-num nav-push" href="060-worldtests.html#ref-060-worldtests-2">60-2</a><span class="bib-keyword">dewitt</span><span class="bib-cite">DeWitt, B. The many-universes interpretation (1970).</span></div>
-<div class="bib-row" id="ref-061-babyuniverse-1"><a class="bib-ref-num nav-push" href="061-babyuniverse.html#ref-061-babyuniverse-1">61-1</a><span class="bib-keyword">planck</span><span class="bib-cite">Planck Collaboration. Planck 2018 results (2018). The CMB and the seeds of structure. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-062-branchingdice-1"><a class="bib-ref-num nav-push" href="062-branchingdice.html#ref-062-branchingdice-1">62-1</a><span class="bib-keyword">douady</span><span class="bib-cite">Douady, A. and Hubbard, J. On the dynamics of polynomial-like maps (1985). Harmonic measure and the boundary. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-063-mandelcrystals-1"><a class="bib-ref-num nav-push" href="063-mandelcrystals.html#ref-063-mandelcrystals-1">63-1</a><span class="bib-keyword">shechtman</span><span class="bib-cite">Shechtman, D. et al. Metallic phase with long-range order (1984). Quasicrystals.</span></div>
-<div class="bib-row" id="ref-063-mandelcrystals-2"><a class="bib-ref-num nav-push" href="063-mandelcrystals.html#ref-063-mandelcrystals-2">63-2</a><span class="bib-keyword">penrose-3</span><span class="bib-cite">Penrose, R. Pentaplexity (1974). Tilings.</span></div>
+<div class="bib-row" id="ref-061-babyuniverse-1"><a class="bib-ref-num nav-push" href="061-babyuniverse.html#ref-061-babyuniverse-1">61-1</a><span class="bib-keyword">planck</span><span class="bib-cite">Planck Collaboration.
+Planck 2018 results (2018).
+The CMB and the seeds of structure. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-062-branchingdice-1"><a class="bib-ref-num nav-push" href="062-branchingdice.html#ref-062-branchingdice-1">62-1</a><span class="bib-keyword">douady</span><span class="bib-cite">Douady, A. and Hubbard, J. On the dynamics of polynomial-like maps (1985).
+Harmonic measure and the boundary. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-063-mandelcrystals-1"><a class="bib-ref-num nav-push" href="063-mandelcrystals.html#ref-063-mandelcrystals-1">63-1</a><span class="bib-keyword">shechtman</span><span class="bib-cite">Shechtman, D. et al. Metallic phase with long-range order (1984).
+Quasicrystals.</span></div>
+<div class="bib-row" id="ref-063-mandelcrystals-2"><a class="bib-ref-num nav-push" href="063-mandelcrystals.html#ref-063-mandelcrystals-2">63-2</a><span class="bib-keyword">penrose-3</span><span class="bib-cite">Penrose, R. Pentaplexity (1974).
+Tilings.</span></div>
 <div class="bib-row" id="ref-064-choicedimension-1"><a class="bib-ref-num nav-push" href="064-choicedimension.html#ref-064-choicedimension-1">64-1</a><span class="bib-keyword">everett</span><span class="bib-cite">Everett, H. Relative state formulation (1957). <span class="bib-check">Check</span></span></div>
 <div class="bib-row" id="ref-064-choicedimension-2"><a class="bib-ref-num nav-push" href="064-choicedimension.html#ref-064-choicedimension-2">64-2</a><span class="bib-keyword">douady</span><span class="bib-cite">Douady, A. and Hubbard, J. On the dynamics of polynomial-like maps (1985). <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-065-feel-do-1"><a class="bib-ref-num nav-push" href="065-feel-do.html#ref-065-feel-do-1">65-1</a><span class="bib-keyword">chalmers-2</span><span class="bib-cite">Chalmers, D. The Conscious Mind (1996). Zombies and the hard problem.</span></div>
-<div class="bib-row" id="ref-065-feel-do-2"><a class="bib-ref-num nav-push" href="065-feel-do.html#ref-065-feel-do-2">65-2</a><span class="bib-keyword">dennett-2</span><span class="bib-cite">Dennett, D. Consciousness Explained (1991). Dissolution of the distinction.</span></div>
-<div class="bib-row" id="ref-066-cosmicattractor-1"><a class="bib-ref-num nav-push" href="066-cosmicattractor.html#ref-066-cosmicattractor-1">66-1</a><span class="bib-keyword">whitehead</span><span class="bib-cite">Whitehead, A.N. Process and Reality (1929). God as ground of possibility and lure. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-066-cosmicattractor-2"><a class="bib-ref-num nav-push" href="066-cosmicattractor.html#ref-066-cosmicattractor-2">66-2</a><span class="bib-keyword">teilhard</span><span class="bib-cite">Teilhard de Chardin, P. The Phenomenon of Man (1955). Omega Point. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-067-monads-holons-1"><a class="bib-ref-num nav-push" href="067-monads-holons.html#ref-067-monads-holons-1">67-1</a><span class="bib-keyword">leibniz</span><span class="bib-cite">Leibniz, G.W. Monadology (1714).</span></div>
-<div class="bib-row" id="ref-067-monads-holons-2"><a class="bib-ref-num nav-push" href="067-monads-holons.html#ref-067-monads-holons-2">67-2</a><span class="bib-keyword">maldacena</span><span class="bib-cite">Maldacena, J. The large N limit of superconformal field theories (1998). AdS/CFT.</span></div>
-<div class="bib-row" id="ref-068-bubbles-1"><a class="bib-ref-num nav-push" href="068-bubbles.html#ref-068-bubbles-1">68-1</a><span class="bib-keyword">susskind</span><span class="bib-cite">Susskind, L. The World as a Hologram (1995). 't Hooft, G. Dimensional reduction in quantum gravity (1993). <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-077-intention-1"><a class="bib-ref-num nav-push" href="077-intention.html#ref-077-intention-1">77-1</a><span class="bib-keyword">deacon</span><span class="bib-cite">Terrence Deacon, Incomplete Nature: How Mind Emerged from Matter, W.W. Norton, 2012.</span></div>
+<div class="bib-row" id="ref-065-feel-do-1"><a class="bib-ref-num nav-push" href="065-feel-do.html#ref-065-feel-do-1">65-1</a><span class="bib-keyword">chalmers-2</span><span class="bib-cite">Chalmers, D. The Conscious Mind (1996).
+Zombies and the hard problem.</span></div>
+<div class="bib-row" id="ref-065-feel-do-2"><a class="bib-ref-num nav-push" href="065-feel-do.html#ref-065-feel-do-2">65-2</a><span class="bib-keyword">dennett-2</span><span class="bib-cite">Dennett, D. Consciousness Explained (1991).
+Dissolution of the distinction.</span></div>
+<div class="bib-row" id="ref-066-cosmicattractor-1"><a class="bib-ref-num nav-push" href="066-cosmicattractor.html#ref-066-cosmicattractor-1">66-1</a><span class="bib-keyword">whitehead</span><span class="bib-cite">Whitehead, A.N.
+Process and Reality (1929).
+God as ground of possibility and lure. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-066-cosmicattractor-2"><a class="bib-ref-num nav-push" href="066-cosmicattractor.html#ref-066-cosmicattractor-2">66-2</a><span class="bib-keyword">teilhard</span><span class="bib-cite">Teilhard de Chardin, P. The Phenomenon of Man (1955).
+Omega Point. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-067-monads-holons-1"><a class="bib-ref-num nav-push" href="067-monads-holons.html#ref-067-monads-holons-1">67-1</a><span class="bib-keyword">leibniz</span><span class="bib-cite">Leibniz, G.W.
+Monadology (1714).</span></div>
+<div class="bib-row" id="ref-067-monads-holons-2"><a class="bib-ref-num nav-push" href="067-monads-holons.html#ref-067-monads-holons-2">67-2</a><span class="bib-keyword">maldacena</span><span class="bib-cite">Maldacena, J. The large N limit of superconformal field theories (1998).
+AdS/CFT.</span></div>
+<div class="bib-row" id="ref-068-bubbles-1"><a class="bib-ref-num nav-push" href="068-bubbles.html#ref-068-bubbles-1">68-1</a><span class="bib-keyword">susskind</span><span class="bib-cite">Susskind, L. The World as a Hologram (1995).
+'t Hooft, G. Dimensional reduction in quantum gravity (1993). <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-077-intention-1"><a class="bib-ref-num nav-push" href="077-intention.html#ref-077-intention-1">77-1</a><span class="bib-keyword">deacon</span><span class="bib-cite">Terrence Deacon, Incomplete Nature: How Mind Emerged from Matter, W.W.
+Norton, 2012.</span></div>
 <div class="bib-row" id="ref-077-intention-2"><a class="bib-ref-num nav-push" href="077-intention.html#ref-077-intention-2">77-2</a><span class="bib-keyword">kauffman</span><span class="bib-cite">Stuart Kauffman, At Home in the Universe: The Search for the Laws of Self-Organization and Complexity, Oxford University Press, 1995. <span class="bib-check">Check</span></span></div>
 <div class="bib-row" id="ref-077-intention-3"><a class="bib-ref-num nav-push" href="077-intention.html#ref-077-intention-3">77-3</a><span class="bib-keyword">nagel</span><span class="bib-cite">Thomas Nagel, Mind and Cosmos: Why the Materialist Neo-Darwinian Conception of Nature Is Almost Certainly False, Oxford University Press, 2012. <span class="bib-check">Check</span></span></div>
 <div class="bib-row" id="ref-077-intention-4"><a class="bib-ref-num nav-push" href="077-intention.html#ref-077-intention-4">77-4</a><span class="bib-keyword">marder</span><span class="bib-cite">Michael Marder, Plant-Thinking: A Philosophy of Vegetal Life, Columbia University Press, 2013.</span></div>
 <div class="bib-row" id="ref-077-intention-5"><a class="bib-ref-num nav-push" href="077-intention.html#ref-077-intention-5">77-5</a><span class="bib-keyword">teilhard</span><span class="bib-cite">Pierre Teilhard de Chardin, The Phenomenon of Man, Harper &amp; Row, 1959. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-078-boundarystack-1"><a class="bib-ref-num nav-push" href="078-boundarystack.html#ref-078-boundarystack-1">78-1</a><span class="bib-keyword">osi</span><span class="bib-cite">ISO/IEC 7498-1. Information technology — Open Systems Interconnection — Basic Reference Model. 1994.</span></div>
-<div class="bib-row" id="ref-078-boundarystack-2"><a class="bib-ref-num nav-push" href="078-boundarystack.html#ref-078-boundarystack-2">78-2</a><span class="bib-keyword">koestler</span><span class="bib-cite">Koestler, A. The Ghost in the Machine. Hutchinson, 1967. Holons and the hierarchy of whole/part. <span class="bib-check">Check</span></span></div>
-<div class="bib-row" id="ref-078-boundarystack-3"><a class="bib-ref-num nav-push" href="078-boundarystack.html#ref-078-boundarystack-3">78-3</a><span class="bib-keyword">mandelbrot</span><span class="bib-cite">Mandelbrot, Benoit. The Fractal Geometry of Nature. W.H. Freeman, 1982. The boundary as the locus of infinite complexity. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-078-boundarystack-1"><a class="bib-ref-num nav-push" href="078-boundarystack.html#ref-078-boundarystack-1">78-1</a><span class="bib-keyword">osi</span><span class="bib-cite">ISO/IEC 7498-1.
+Information technology — Open Systems Interconnection — Basic Reference Model.
+1994.</span></div>
+<div class="bib-row" id="ref-078-boundarystack-2"><a class="bib-ref-num nav-push" href="078-boundarystack.html#ref-078-boundarystack-2">78-2</a><span class="bib-keyword">koestler</span><span class="bib-cite">Koestler, A. The Ghost in the Machine.
+Hutchinson, 1967.
+Holons and the hierarchy of whole/part. <span class="bib-check">Check</span></span></div>
+<div class="bib-row" id="ref-078-boundarystack-3"><a class="bib-ref-num nav-push" href="078-boundarystack.html#ref-078-boundarystack-3">78-3</a><span class="bib-keyword">mandelbrot</span><span class="bib-cite">Mandelbrot, Benoit.
+The Fractal Geometry of Nature.
+W.H.
+Freeman, 1982.
+The boundary as the locus of infinite complexity. <span class="bib-check">Check</span></span></div>
 <div class="bib-row" id="ref-078-boundarystack-4"><a class="bib-ref-num nav-push" href="078-boundarystack.html#ref-078-boundarystack-4">78-4</a><span class="bib-keyword">whitehead</span><span class="bib-cite">Whitehead, A.N. Process and Reality. Macmillan, 1929. <span class="bib-check">Check</span></span></div>
 <div class="bib-row" id="ref-080-unification-1"><a class="bib-ref-num nav-push" href="080-unification.html#ref-080-unification-1">80-1</a><span class="bib-keyword">james-1</span><span class="bib-cite">William James. The Principles of Psychology, Chapter 6: 'The Mind-Stuff Theory.' Henry Holt and Company, 1890.</span></div>
 <div class="bib-row" id="ref-080-unification-2"><a class="bib-ref-num nav-push" href="080-unification.html#ref-080-unification-2">80-2</a><span class="bib-keyword">bergson-1</span><span class="bib-cite">Henri Bergson. Matter and Memory. Zone Books, 1896/1991.</span></div>
@@ -271,108 +513,240 @@
 <div id="bib-by-author" class="bib-entries-root">
 <div class="bib-row-author"><span class="bib-cite">Aldous Huxley. The Doors of Perception. Chatto &amp; Windus, 1954.</span> <a class="bib-backref nav-push" href="080-unification.html#ref-080-unification-4">80-4</a></div>
 <div class="bib-row-author"><span class="bib-cite">Alfred North Whitehead. Process and Reality: An Essay in Cosmology. Macmillan, 1929.</span> <a class="bib-backref nav-push" href="080-unification.html#ref-080-unification-8">80-8</a></div>
-<div class="bib-row-author"><span class="bib-cite">Anderson, P.W. More Is Different. Science, 177(4047), 1972.</span> <a class="bib-backref nav-push" href="011-moreisdifferent.html#fn-011-moreisdifferent-2-mark">11-2</a></div>
-<div class="bib-row-author"><span class="bib-cite">Arnold, V.I. Small Denominators (1961). KAM theory and the stability of quasiperiodic motion.</span> <a class="bib-backref nav-push" href="040-stability.html#ref-040-stability-1">40-1</a></div>
-<div class="bib-row-author"><span class="bib-cite">Baldwin, J.M. A new factor in evolution (1896). The original proposal. Simpson, G.G. The Baldwin effect (1953). Modern synthesis treatment.</span> <a class="bib-backref nav-push" href="045-baldwin.html#ref-045-baldwin-1">45-1</a></div>
-<div class="bib-row-author"><span class="bib-cite">Barlow, H. Redundancy reduction revisited (2001). Efficient coding and the structure of natural signals.</span> <a class="bib-backref nav-push" href="044-ai-retina.html#ref-044-ai-retina-1">44-1</a></div>
-<div class="bib-row-author"><span class="bib-cite">Bauby, J-D. The Diving Bell and the Butterfly. Knopf, 1997. The primary text. Essential.</span> <a class="bib-backref nav-push" href="022-locked.html#ref-022-locked-1">22-1</a></div>
-<div class="bib-row-author"><span class="bib-cite">Bekenstein, Jacob. 'Black Holes and Entropy.' Physical Review D, 1973. The original argument that a black hole's information content is proportional to surface area, not volume.</span> <a class="bib-backref nav-push" href="031-surfaceinside.html#ref-031-surfaceinside-2">31-2</a></div>
+<div class="bib-row-author"><span class="bib-cite">Anderson, P.W.
+More Is Different.
+Science, 177(4047), 1972.</span> <a class="bib-backref nav-push" href="011-moreisdifferent.html#fn-011-moreisdifferent-2-mark">11-2</a></div>
+<div class="bib-row-author"><span class="bib-cite">Arnold, V.I.
+Small Denominators (1961).
+KAM theory and the stability of quasiperiodic motion.</span> <a class="bib-backref nav-push" href="040-stability.html#ref-040-stability-1">40-1</a></div>
+<div class="bib-row-author"><span class="bib-cite">Baldwin, J.M.
+A new factor in evolution (1896).
+The original proposal.
+Simpson, G.G.
+The Baldwin effect (1953).
+Modern synthesis treatment.</span> <a class="bib-backref nav-push" href="045-baldwin.html#ref-045-baldwin-1">45-1</a></div>
+<div class="bib-row-author"><span class="bib-cite">Barlow, H. Redundancy reduction revisited (2001).
+Efficient coding and the structure of natural signals.</span> <a class="bib-backref nav-push" href="044-ai-retina.html#ref-044-ai-retina-1">44-1</a></div>
+<div class="bib-row-author"><span class="bib-cite">Bauby, J-D.
+The Diving Bell and the Butterfly.
+Knopf, 1997.
+The primary text.
+Essential.</span> <a class="bib-backref nav-push" href="022-locked.html#ref-022-locked-1">22-1</a></div>
+<div class="bib-row-author"><span class="bib-cite">Bekenstein, Jacob.
+'Black Holes and Entropy.'
+Physical Review D, 1973.
+The original argument that a black hole's information content is proportional to surface area, not volume.</span> <a class="bib-backref nav-push" href="031-surfaceinside.html#ref-031-surfaceinside-2">31-2</a></div>
 <div class="bib-row-author"><span class="bib-cite">Benford, Frank (1938) — leading digit law in real world numerical data.</span> <a class="bib-backref nav-push" href="035-simplestnumbers.html#ref-035-simplestnumbers-2">35-2</a></div>
 <div class="bib-row-author"><span class="bib-cite">Bernardo Kastrup. The Idea of the World: A Multi-Disciplinary Argument for the Mental Nature of Reality. Iff Books, 2019.</span> <a class="bib-backref nav-push" href="080-unification.html#ref-080-unification-6">80-6</a></div>
-<div class="bib-row-author"><span class="bib-cite">Bohr, N. 'The Quantum Postulate and the Recent Development of Atomic Theory.' Nature, 1928. The original statement of complementarity.</span> <a class="bib-backref nav-push" href="026-twotruths.html#ref-026-twotruths-1">26-1</a></div>
-<div class="bib-row-author"><span class="bib-cite">Butterfield, H. The Whig Interpretation of History. Bell, 1931. Named the tendency to read history as progress toward the present.</span> <a class="bib-backref nav-push" href="027-usedtothink.html#ref-027-usedtothink-7">27-7</a></div>
-<div class="bib-row-author"><span class="bib-cite">Campbell, Joseph. *The Hero with a Thousand Faces*. Pantheon Books, 1949. The monomyth structure we project onto experience.</span> <a class="bib-backref nav-push" href="023-stories.html#ref-023-stories-4">23-4</a></div>
-<div class="bib-row-author"><span class="bib-cite">Chalmers, D. The Conscious Mind (1996). Zombies and the hard problem.</span> <a class="bib-backref nav-push" href="065-feel-do.html#ref-065-feel-do-1">65-1</a></div>
-<div class="bib-row-author"><span class="bib-cite">Chalmers, D. The Conscious Mind. Oxford, 1996. <span class="bib-check">Check</span></span> <a class="bib-backref nav-push" href="003-inside.html#fn-003-inside-3-mark">3-3</a> <a class="bib-backref nav-push" href="047-ai-feeling.html#ref-047-ai-feeling-1">47-1</a></div>
-<div class="bib-row-author"><span class="bib-cite">Darwin, C. On the Origin of Species. John Murray, 1859.</span> <a class="bib-backref nav-push" href="009-randomness.html#fn-009-randomness-5-mark">9-5</a></div>
-<div class="bib-row-author"><span class="bib-cite">Dennett, D. Consciousness Explained (1991). Dissolution of the distinction.</span> <a class="bib-backref nav-push" href="065-feel-do.html#ref-065-feel-do-2">65-2</a></div>
+<div class="bib-row-author"><span class="bib-cite">Bohr, N. 'The Quantum Postulate and the Recent Development of Atomic Theory.'
+Nature, 1928.
+The original statement of complementarity.</span> <a class="bib-backref nav-push" href="026-twotruths.html#ref-026-twotruths-1">26-1</a></div>
+<div class="bib-row-author"><span class="bib-cite">Butterfield, H. The Whig Interpretation of History.
+Bell, 1931.
+Named the tendency to read history as progress toward the present.</span> <a class="bib-backref nav-push" href="027-usedtothink.html#ref-027-usedtothink-7">27-7</a></div>
+<div class="bib-row-author"><span class="bib-cite">Campbell, Joseph. *The Hero with a Thousand Faces*.
+Pantheon Books, 1949.
+The monomyth structure we project onto experience.</span> <a class="bib-backref nav-push" href="023-stories.html#ref-023-stories-4">23-4</a></div>
+<div class="bib-row-author"><span class="bib-cite">Chalmers, D. The Conscious Mind (1996).
+Zombies and the hard problem.</span> <a class="bib-backref nav-push" href="065-feel-do.html#ref-065-feel-do-1">65-1</a></div>
+<div class="bib-row-author"><span class="bib-cite">Chalmers, D. The Conscious Mind.
+Oxford, 1996. <span class="bib-check">Check</span></span> <a class="bib-backref nav-push" href="003-inside.html#fn-003-inside-3-mark">3-3</a> <a class="bib-backref nav-push" href="047-ai-feeling.html#ref-047-ai-feeling-1">47-1</a></div>
+<div class="bib-row-author"><span class="bib-cite">Darwin, C. On the Origin of Species.
+John Murray, 1859.</span> <a class="bib-backref nav-push" href="009-randomness.html#fn-009-randomness-5-mark">9-5</a></div>
+<div class="bib-row-author"><span class="bib-cite">Dennett, D. Consciousness Explained (1991).
+Dissolution of the distinction.</span> <a class="bib-backref nav-push" href="065-feel-do.html#ref-065-feel-do-2">65-2</a></div>
 <div class="bib-row-author"><span class="bib-cite">Dennett, D. Intuition Pumps and Other Tools for Thinking (2013). <span class="bib-check">Check</span></span> <a class="bib-backref nav-push" href="021-just.html#ref-021-just-3">21-3</a> <a class="bib-backref nav-push" href="048-flashes.html#ref-048-flashes-1">48-1</a></div>
 <div class="bib-row-author"><span class="bib-cite">DeWitt, B. The many-universes interpretation (1970).</span> <a class="bib-backref nav-push" href="060-worldtests.html#ref-060-worldtests-2">60-2</a></div>
-<div class="bib-row-author"><span class="bib-cite">Dickens, K. The Telepathy Tapes. Podcast, Season 1, 2024.</span> <a class="bib-backref nav-push" href="022-locked.html#ref-022-locked-3">22-3</a></div>
-<div class="bib-row-author"><span class="bib-cite">Douady, A. and Hubbard, J. On the dynamics of polynomial-like maps (1985). Harmonic measure and the boundary. <span class="bib-check">Check</span></span> <a class="bib-backref nav-push" href="062-branchingdice.html#ref-062-branchingdice-1">62-1</a> <a class="bib-backref nav-push" href="064-choicedimension.html#ref-064-choicedimension-2">64-2</a></div>
-<div class="bib-row-author"><span class="bib-cite">Edelman, G. Neural Darwinism (1987). Selectionist theory of brain function. Friston, K. The free-energy principle (2010). Predictive processing.</span> <a class="bib-backref nav-push" href="046-thinkfast.html#ref-046-thinkfast-1">46-1</a></div>
-<div class="bib-row-author"><span class="bib-cite">Einstein, A. On the Electrodynamics of Moving Bodies. Annalen der Physik, 1905. The special relativity paper whose implications include the photon's reference frame.</span> <a class="bib-backref nav-push" href="028-network.html#ref-028-network-1">28-1</a></div>
-<div class="bib-row-author"><span class="bib-cite">Everett, H. 'Relative State Formulation of Quantum Mechanics.' Reviews of Modern Physics, 1957. <span class="bib-check">Check</span></span> <a class="bib-backref nav-push" href="032-skyfossil.html#ref-032-skyfossil-1">32-1</a> <a class="bib-backref nav-push" href="033-edge.html#ref-033-edge-4">33-4</a> <a class="bib-backref nav-push" href="054-bornharmonic.html#ref-054-bornharmonic-1">54-1</a> <a class="bib-backref nav-push" href="060-worldtests.html#ref-060-worldtests-1">60-1</a> <a class="bib-backref nav-push" href="064-choicedimension.html#ref-064-choicedimension-1">64-1</a></div>
+<div class="bib-row-author"><span class="bib-cite">Dickens, K. The Telepathy Tapes.
+Podcast, Season 1, 2024.</span> <a class="bib-backref nav-push" href="022-locked.html#ref-022-locked-3">22-3</a></div>
+<div class="bib-row-author"><span class="bib-cite">Douady, A. and Hubbard, J. On the dynamics of polynomial-like maps (1985).
+Harmonic measure and the boundary. <span class="bib-check">Check</span></span> <a class="bib-backref nav-push" href="062-branchingdice.html#ref-062-branchingdice-1">62-1</a> <a class="bib-backref nav-push" href="064-choicedimension.html#ref-064-choicedimension-2">64-2</a></div>
+<div class="bib-row-author"><span class="bib-cite">Edelman, G. Neural Darwinism (1987).
+Selectionist theory of brain function.
+Friston, K. The free-energy principle (2010).
+Predictive processing.</span> <a class="bib-backref nav-push" href="046-thinkfast.html#ref-046-thinkfast-1">46-1</a></div>
+<div class="bib-row-author"><span class="bib-cite">Einstein, A. On the Electrodynamics of Moving Bodies.
+Annalen der Physik, 1905.
+The special relativity paper whose implications include the photon's reference frame.</span> <a class="bib-backref nav-push" href="028-network.html#ref-028-network-1">28-1</a></div>
+<div class="bib-row-author"><span class="bib-cite">Everett, H. 'Relative State Formulation of Quantum Mechanics.'
+Reviews of Modern Physics, 1957. <span class="bib-check">Check</span></span> <a class="bib-backref nav-push" href="032-skyfossil.html#ref-032-skyfossil-1">32-1</a> <a class="bib-backref nav-push" href="033-edge.html#ref-033-edge-4">33-4</a> <a class="bib-backref nav-push" href="054-bornharmonic.html#ref-054-bornharmonic-1">54-1</a> <a class="bib-backref nav-push" href="060-worldtests.html#ref-060-worldtests-1">60-1</a> <a class="bib-backref nav-push" href="064-choicedimension.html#ref-064-choicedimension-1">64-1</a></div>
 <div class="bib-row-author"><span class="bib-cite">Farey sequence — rational numbers ordered by denominator size, governing bulb positions. <span class="bib-check">Check</span></span> <a class="bib-backref nav-push" href="033-edge.html#ref-033-edge-2">33-2</a> <a class="bib-backref nav-push" href="035-simplestnumbers.html#ref-035-simplestnumbers-1">35-1</a> <a class="bib-backref nav-push" href="038-consonance-map.html#ref-038-consonance-map-3">38-3</a></div>
-<div class="bib-row-author"><span class="bib-cite">Feynman, R. The Feynman Lectures on Physics, Vol. 2. Addison-Wesley, 1964. <span class="bib-check">Check</span></span> <a class="bib-backref nav-push" href="008-fields.html#fn-008-fields-3-mark">8-3</a> <a class="bib-backref nav-push" href="028-network.html#ref-028-network-2">28-2</a></div>
+<div class="bib-row-author"><span class="bib-cite">Feynman, R. The Feynman Lectures on Physics, Vol. 2.
+Addison-Wesley, 1964. <span class="bib-check">Check</span></span> <a class="bib-backref nav-push" href="008-fields.html#fn-008-fields-3-mark">8-3</a> <a class="bib-backref nav-push" href="028-network.html#ref-028-network-2">28-2</a></div>
 <div class="bib-row-author"><span class="bib-cite">Giulio Tononi. 'An Information Integration Theory of Consciousness.' BMC Neuroscience 5:42, 2004.</span> <a class="bib-backref nav-push" href="080-unification.html#ref-080-unification-5">80-5</a></div>
-<div class="bib-row-author"><span class="bib-cite">Gleick, J. Chaos: Making a New Science. Viking, 1987.</span> <a class="bib-backref nav-push" href="009-randomness.html#fn-009-randomness-7-mark">9-7</a></div>
-<div class="bib-row-author"><span class="bib-cite">Gödel, K. On Formally Undecidable Propositions of Principia Mathematica and Related Systems. 1931. <span class="bib-check">Check</span></span> <a class="bib-backref nav-push" href="010-largenumbers.html#fn-010-largenumbers-1-mark">10-1</a> <a class="bib-backref nav-push" href="020-penrose.html#fn-020-penrose-2-mark">20-2</a> <a class="bib-backref nav-push" href="026-twotruths.html#ref-026-twotruths-3">26-3</a></div>
-<div class="bib-row-author"><span class="bib-cite">Goff, P. Galileo's Error. Pantheon, 2019. <span class="bib-check">Check</span></span> <a class="bib-backref nav-push" href="003-inside.html#fn-003-inside-2-mark">3-2</a> <a class="bib-backref nav-push" href="027-usedtothink.html#ref-027-usedtothink-4">27-4</a> <a class="bib-backref nav-push" href="028-network.html#ref-028-network-4">28-4</a></div>
-<div class="bib-row-author"><span class="bib-cite">Goff, P., Seager, W., Allen-Hermanson, S. Panpsychism. Stanford Encyclopedia of Philosophy, 2022.</span> <a class="bib-backref nav-push" href="003-inside.html#fn-003-inside-2-mark">3-2</a></div>
-<div class="bib-row-author"><span class="bib-cite">Goffman, Erving. *The Presentation of Self in Everyday Life*. Anchor Books, 1959. Social interaction as theatrical performance; identity as enacted rather than expressed.</span> <a class="bib-backref nav-push" href="023-stories.html#ref-023-stories-6">23-6</a></div>
-<div class="bib-row-author"><span class="bib-cite">Hameroff, S. and Penrose, R. Orchestrated Reduction of Quantum Coherence in Brain Microtubules. Mathematics and Computers in Simulation, 1996.</span> <a class="bib-backref nav-push" href="020-penrose.html#fn-020-penrose-3-mark">20-3</a></div>
-<div class="bib-row-author"><span class="bib-cite">Hawking, Stephen. 'Particle Creation by Black Holes.' Communications in Mathematical Physics, 1975.</span> <a class="bib-backref nav-push" href="031-surfaceinside.html#ref-031-surfaceinside-3">31-3</a></div>
+<div class="bib-row-author"><span class="bib-cite">Gleick, J. Chaos: Making a New Science.
+Viking, 1987.</span> <a class="bib-backref nav-push" href="009-randomness.html#fn-009-randomness-7-mark">9-7</a></div>
+<div class="bib-row-author"><span class="bib-cite">Gödel, K. On Formally Undecidable Propositions of Principia Mathematica and Related Systems.
+1931. <span class="bib-check">Check</span></span> <a class="bib-backref nav-push" href="010-largenumbers.html#fn-010-largenumbers-1-mark">10-1</a> <a class="bib-backref nav-push" href="020-penrose.html#fn-020-penrose-2-mark">20-2</a> <a class="bib-backref nav-push" href="026-twotruths.html#ref-026-twotruths-3">26-3</a></div>
+<div class="bib-row-author"><span class="bib-cite">Goff, P. Galileo's Error.
+Pantheon, 2019. <span class="bib-check">Check</span></span> <a class="bib-backref nav-push" href="003-inside.html#fn-003-inside-2-mark">3-2</a> <a class="bib-backref nav-push" href="027-usedtothink.html#ref-027-usedtothink-4">27-4</a> <a class="bib-backref nav-push" href="028-network.html#ref-028-network-4">28-4</a></div>
+<div class="bib-row-author"><span class="bib-cite">Goff, P., Seager, W., Allen-Hermanson, S. Panpsychism.
+Stanford Encyclopedia of Philosophy, 2022.</span> <a class="bib-backref nav-push" href="003-inside.html#fn-003-inside-2-mark">3-2</a></div>
+<div class="bib-row-author"><span class="bib-cite">Goffman, Erving. *The Presentation of Self in Everyday Life*.
+Anchor Books, 1959.
+Social interaction as theatrical performance; identity as enacted rather than expressed.</span> <a class="bib-backref nav-push" href="023-stories.html#ref-023-stories-6">23-6</a></div>
+<div class="bib-row-author"><span class="bib-cite">Hameroff, S. and Penrose, R. Orchestrated Reduction of Quantum Coherence in Brain Microtubules.
+Mathematics and Computers in Simulation, 1996.</span> <a class="bib-backref nav-push" href="020-penrose.html#fn-020-penrose-3-mark">20-3</a></div>
+<div class="bib-row-author"><span class="bib-cite">Hawking, Stephen.
+'Particle Creation by Black Holes.'
+Communications in Mathematical Physics, 1975.</span> <a class="bib-backref nav-push" href="031-surfaceinside.html#ref-031-surfaceinside-3">31-3</a></div>
 <div class="bib-row-author"><span class="bib-cite">Henri Bergson. Matter and Memory. Zone Books, 1896/1991.</span> <a class="bib-backref nav-push" href="080-unification.html#ref-080-unification-2">80-2</a></div>
-<div class="bib-row-author"><span class="bib-cite">Hering, Ewald — opponent process theory of color vision, 1892. The original proposal that color experience is organized around opposing pairs.</span> <a class="bib-backref nav-push" href="041-colorwheel.html#ref-041-colorwheel-1">41-1</a></div>
-<div class="bib-row-author"><span class="bib-cite">Hofstadter, D. Gödel, Escher, Bach: An Eternal Golden Braid. Basic Books, 1979. <span class="bib-check">Check</span></span> <a class="bib-backref nav-push" href="010-largenumbers.html#fn-010-largenumbers-1-mark">10-1</a> <a class="bib-backref nav-push" href="011-moreisdifferent.html#fn-011-moreisdifferent-1-mark">11-1</a> <a class="bib-backref nav-push" href="020-penrose.html#fn-020-penrose-4-mark">20-4</a> <a class="bib-backref nav-push" href="049-strangeloop.html#ref-049-strangeloop-1">49-1</a></div>
-<div class="bib-row-author"><span class="bib-cite">Hume, David. A Treatise of Human Nature. 1739.</span> <a class="bib-backref nav-push" href="004-self.html#fn-004-self-1-mark">4-1</a></div>
-<div class="bib-row-author"><span class="bib-cite">Hurvich, L. and Jameson, D. An opponent-process theory of color vision (1957). Foundational account of opponent coding.</span> <a class="bib-backref nav-push" href="042-eyethinks.html#ref-042-eyethinks-1">42-1</a></div>
-<div class="bib-row-author"><span class="bib-cite">Ibn Arabi. The Bezels of Wisdom (Fusus al-Hikam), 13th century. The barzakh as cosmological principle.</span> <a class="bib-backref nav-push" href="031-surfaceinside.html#ref-031-surfaceinside-5">31-5</a></div>
-<div class="bib-row-author"><span class="bib-cite">ISO/IEC 7498-1. Information technology — Open Systems Interconnection — Basic Reference Model. 1994.</span> <a class="bib-backref nav-push" href="078-boundarystack.html#ref-078-boundarystack-1">78-1</a></div>
-<div class="bib-row-author"><span class="bib-cite">Johnson, W. and Lindenstrauss, J. Extensions of Lipschitz maps (1984). The classical dimension-reduction lemma.</span> <a class="bib-backref nav-push" href="053-dimensions.html#ref-053-dimensions-1">53-1</a></div>
-<div class="bib-row-author"><span class="bib-cite">Joule, J.P. On the Mechanical Equivalent of Heat. Philosophical Transactions of the Royal Society, 1850. The experimental work that displaced caloric theory.</span> <a class="bib-backref nav-push" href="027-usedtothink.html#ref-027-usedtothink-2">27-2</a></div>
-<div class="bib-row-author"><span class="bib-cite">Kahneman, Daniel. *Thinking, Fast and Slow*. Farrar, Straus and Giroux, 2011. System 1 as the automatic, story-generating mode of cognition; WYSIATI as the illusion of completeness.</span> <a class="bib-backref nav-push" href="023-stories.html#ref-023-stories-3">23-3</a></div>
-<div class="bib-row-author"><span class="bib-cite">Kant, I. Critique of Pure Reason. 1781.</span> <a class="bib-backref nav-push" href="002-events.html#fn-002-events-2-mark">2-2</a></div>
-<div class="bib-row-author"><span class="bib-cite">Katie, Byron. *Loving What Is: Four Questions That Can Change Your Life*. Harmony Books, 2002. &quot;The Work&quot; as a method for questioning interpretive narratives.</span> <a class="bib-backref nav-push" href="023-stories.html#ref-023-stories-7">23-7</a></div>
-<div class="bib-row-author"><span class="bib-cite">Kauffman, S. At Home in the Universe. Oxford University Press, 1995.</span> <a class="bib-backref nav-push" href="009-randomness.html#fn-009-randomness-1-mark">9-1</a></div>
-<div class="bib-row-author"><span class="bib-cite">Kauffman, S. The Origins of Order. Oxford University Press, 1993. <span class="bib-check">Check</span></span> <a class="bib-backref nav-push" href="009-randomness.html#fn-009-randomness-1-mark">9-1</a> <a class="bib-backref nav-push" href="077-intention.html#ref-077-intention-2">77-2</a></div>
-<div class="bib-row-author"><span class="bib-cite">Kearns, Mike. 'Could Daniel Dennett Be a Zombie?' PhilArchive.</span> <a class="bib-backref nav-push" href="025-widechannel.html#ref-025-widechannel-4">25-4</a></div>
-<div class="bib-row-author"><span class="bib-cite">Kirkpatrick, S., Gelatt, C.D., Vecchi, M.P. Optimization by Simulated Annealing. Science, 220(4598), 1983.</span> <a class="bib-backref nav-push" href="009-randomness.html#fn-009-randomness-2-mark">9-2</a></div>
-<div class="bib-row-author"><span class="bib-cite">Koestler, A. The Act of Creation. Hutchinson, 1964. Bisociation as the common structure of humor, discovery, and art. <span class="bib-check">Check</span></span> <a class="bib-backref nav-push" href="011-moreisdifferent.html#ref-011-moreisdifferent-3">11-3</a> <a class="bib-backref nav-push" href="024-ghostmachine.html#ref-024-ghostmachine-2">24-2</a> <a class="bib-backref nav-push" href="037-assembly.html#ref-037-assembly-1">37-1</a> <a class="bib-backref nav-push" href="078-boundarystack.html#ref-078-boundarystack-2">78-2</a></div>
-<div class="bib-row-author"><span class="bib-cite">Koestler, A. The Ghost in the Machine. Hutchinson, 1967.</span> <a class="bib-backref nav-push" href="011-moreisdifferent.html#fn-011-moreisdifferent-1-mark">11-1</a></div>
-<div class="bib-row-author"><span class="bib-cite">Kuhn, T.S. The Structure of Scientific Revolutions. University of Chicago Press, 1962. <span class="bib-check">Check</span></span> <a class="bib-backref nav-push" href="019-funerals.html#fn-019-funerals-1-mark">19-1</a> <a class="bib-backref nav-push" href="023-stories.html#ref-023-stories-5">23-5</a> <a class="bib-backref nav-push" href="027-usedtothink.html#ref-027-usedtothink-6">27-6</a></div>
-<div class="bib-row-author"><span class="bib-cite">Lakoff, George, and Mark Johnson. *Metaphors We Live By*. University of Chicago Press, 1980. The foundational argument that conceptual thought is structured by metaphor.</span> <a class="bib-backref nav-push" href="023-stories.html#ref-023-stories-2">23-2</a></div>
-<div class="bib-row-author"><span class="bib-cite">Laureys, S. et al. Unresponsive wakefulness syndrome: a new name for the vegetative state or apallic syndrome. BMC Medicine, 2010.</span> <a class="bib-backref nav-push" href="022-locked.html#ref-022-locked-1">22-1</a></div>
-<div class="bib-row-author"><span class="bib-cite">Lavoisier, A. Elements of Chemistry. 1789. The work that formalized caloric theory — a reminder that the theory was scientifically serious.</span> <a class="bib-backref nav-push" href="027-usedtothink.html#ref-027-usedtothink-1">27-1</a></div>
-<div class="bib-row-author"><span class="bib-cite">Leibniz, G.W. Monadology (1714).</span> <a class="bib-backref nav-push" href="067-monads-holons.html#ref-067-monads-holons-1">67-1</a></div>
-<div class="bib-row-author"><span class="bib-cite">Maldacena, J. The large N limit of superconformal field theories (1998). AdS/CFT.</span> <a class="bib-backref nav-push" href="067-monads-holons.html#ref-067-monads-holons-2">67-2</a></div>
-<div class="bib-row-author"><span class="bib-cite">Mandelbrot, Benoit. The Fractal Geometry of Nature. W.H. Freeman, 1982. The boundary as the locus of infinite complexity. <span class="bib-check">Check</span></span> <a class="bib-backref nav-push" href="031-surfaceinside.html#ref-031-surfaceinside-1">31-1</a> <a class="bib-backref nav-push" href="033-edge.html#ref-033-edge-1">33-1</a> <a class="bib-backref nav-push" href="034-onerule.html#ref-034-onerule-3">34-3</a> <a class="bib-backref nav-push" href="038-consonance-map.html#ref-038-consonance-map-2">38-2</a> <a class="bib-backref nav-push" href="078-boundarystack.html#ref-078-boundarystack-3">78-3</a></div>
-<div class="bib-row-author"><span class="bib-cite">Maturana, H. and Varela, F. Autopoiesis and Cognition. Reidel, 1980. <span class="bib-check">Check</span></span> <a class="bib-backref nav-push" href="009-randomness.html#fn-009-randomness-6-mark">9-6</a> <a class="bib-backref nav-push" href="012-autopoiesis.html#fn-012-autopoiesis-1-mark">12-1</a> <a class="bib-backref nav-push" href="027-usedtothink.html#ref-027-usedtothink-5">27-5</a></div>
-<div class="bib-row-author"><span class="bib-cite">Maturana, H. and Varela, F. The Tree of Knowledge. Shambhala, 1987.</span> <a class="bib-backref nav-push" href="012-autopoiesis.html#fn-012-autopoiesis-1-mark">12-1</a> <a class="bib-backref nav-push" href="013-enactment.html#fn-013-enactment-2-mark">13-2</a></div>
-<div class="bib-row-author"><span class="bib-cite">Maxwell, J.C. A Treatise on Electricity and Magnetism. Oxford, 1873.</span> <a class="bib-backref nav-push" href="008-fields.html#fn-008-fields-1-mark">8-1</a></div>
+<div class="bib-row-author"><span class="bib-cite">Hering, Ewald — opponent process theory of color vision, 1892.
+The original proposal that color experience is organized around opposing pairs.</span> <a class="bib-backref nav-push" href="041-colorwheel.html#ref-041-colorwheel-1">41-1</a></div>
+<div class="bib-row-author"><span class="bib-cite">Hofstadter, D. Gödel, Escher, Bach: An Eternal Golden Braid.
+Basic Books, 1979. <span class="bib-check">Check</span></span> <a class="bib-backref nav-push" href="010-largenumbers.html#fn-010-largenumbers-1-mark">10-1</a> <a class="bib-backref nav-push" href="011-moreisdifferent.html#fn-011-moreisdifferent-1-mark">11-1</a> <a class="bib-backref nav-push" href="020-penrose.html#fn-020-penrose-4-mark">20-4</a> <a class="bib-backref nav-push" href="049-strangeloop.html#ref-049-strangeloop-1">49-1</a></div>
+<div class="bib-row-author"><span class="bib-cite">Hume, David.
+A Treatise of Human Nature.
+1739.</span> <a class="bib-backref nav-push" href="004-self.html#fn-004-self-1-mark">4-1</a></div>
+<div class="bib-row-author"><span class="bib-cite">Hurvich, L. and Jameson, D. An opponent-process theory of color vision (1957).
+Foundational account of opponent coding.</span> <a class="bib-backref nav-push" href="042-eyethinks.html#ref-042-eyethinks-1">42-1</a></div>
+<div class="bib-row-author"><span class="bib-cite">Ibn Arabi.
+The Bezels of Wisdom (Fusus al-Hikam), 13th century.
+The barzakh as cosmological principle.</span> <a class="bib-backref nav-push" href="031-surfaceinside.html#ref-031-surfaceinside-5">31-5</a></div>
+<div class="bib-row-author"><span class="bib-cite">ISO/IEC 7498-1.
+Information technology — Open Systems Interconnection — Basic Reference Model.
+1994.</span> <a class="bib-backref nav-push" href="078-boundarystack.html#ref-078-boundarystack-1">78-1</a></div>
+<div class="bib-row-author"><span class="bib-cite">Johnson, W. and Lindenstrauss, J. Extensions of Lipschitz maps (1984).
+The classical dimension-reduction lemma.</span> <a class="bib-backref nav-push" href="053-dimensions.html#ref-053-dimensions-1">53-1</a></div>
+<div class="bib-row-author"><span class="bib-cite">Joule, J.P.
+On the Mechanical Equivalent of Heat.
+Philosophical Transactions of the Royal Society, 1850.
+The experimental work that displaced caloric theory.</span> <a class="bib-backref nav-push" href="027-usedtothink.html#ref-027-usedtothink-2">27-2</a></div>
+<div class="bib-row-author"><span class="bib-cite">Kahneman, Daniel. *Thinking, Fast and Slow*.
+Farrar, Straus and Giroux, 2011.
+System 1 as the automatic, story-generating mode of cognition; WYSIATI as the illusion of completeness.</span> <a class="bib-backref nav-push" href="023-stories.html#ref-023-stories-3">23-3</a></div>
+<div class="bib-row-author"><span class="bib-cite">Kant, I. Critique of Pure Reason.
+1781.</span> <a class="bib-backref nav-push" href="002-events.html#fn-002-events-2-mark">2-2</a></div>
+<div class="bib-row-author"><span class="bib-cite">Katie, Byron. *Loving What Is: Four Questions That Can Change Your Life*.
+Harmony Books, 2002.
+&quot;The Work&quot; as a method for questioning interpretive narratives.</span> <a class="bib-backref nav-push" href="023-stories.html#ref-023-stories-7">23-7</a></div>
+<div class="bib-row-author"><span class="bib-cite">Kauffman, S. At Home in the Universe.
+Oxford University Press, 1995.</span> <a class="bib-backref nav-push" href="009-randomness.html#fn-009-randomness-1-mark">9-1</a></div>
+<div class="bib-row-author"><span class="bib-cite">Kauffman, S. The Origins of Order.
+Oxford University Press, 1993. <span class="bib-check">Check</span></span> <a class="bib-backref nav-push" href="009-randomness.html#fn-009-randomness-1-mark">9-1</a> <a class="bib-backref nav-push" href="077-intention.html#ref-077-intention-2">77-2</a></div>
+<div class="bib-row-author"><span class="bib-cite">Kearns, Mike.
+'Could Daniel Dennett Be a Zombie?'
+PhilArchive.</span> <a class="bib-backref nav-push" href="025-widechannel.html#ref-025-widechannel-4">25-4</a></div>
+<div class="bib-row-author"><span class="bib-cite">Kirkpatrick, S., Gelatt, C.D., Vecchi, M.P.
+Optimization by Simulated Annealing.
+Science, 220(4598), 1983.</span> <a class="bib-backref nav-push" href="009-randomness.html#fn-009-randomness-2-mark">9-2</a></div>
+<div class="bib-row-author"><span class="bib-cite">Koestler, A. The Act of Creation.
+Hutchinson, 1964.
+Bisociation as the common structure of humor, discovery, and art. <span class="bib-check">Check</span></span> <a class="bib-backref nav-push" href="011-moreisdifferent.html#ref-011-moreisdifferent-3">11-3</a> <a class="bib-backref nav-push" href="024-ghostmachine.html#ref-024-ghostmachine-2">24-2</a> <a class="bib-backref nav-push" href="037-assembly.html#ref-037-assembly-1">37-1</a> <a class="bib-backref nav-push" href="078-boundarystack.html#ref-078-boundarystack-2">78-2</a></div>
+<div class="bib-row-author"><span class="bib-cite">Koestler, A. The Ghost in the Machine.
+Hutchinson, 1967.</span> <a class="bib-backref nav-push" href="011-moreisdifferent.html#fn-011-moreisdifferent-1-mark">11-1</a></div>
+<div class="bib-row-author"><span class="bib-cite">Kuhn, T.S.
+The Structure of Scientific Revolutions.
+University of Chicago Press, 1962. <span class="bib-check">Check</span></span> <a class="bib-backref nav-push" href="019-funerals.html#fn-019-funerals-1-mark">19-1</a> <a class="bib-backref nav-push" href="023-stories.html#ref-023-stories-5">23-5</a> <a class="bib-backref nav-push" href="027-usedtothink.html#ref-027-usedtothink-6">27-6</a></div>
+<div class="bib-row-author"><span class="bib-cite">Lakoff, George, and Mark Johnson. *Metaphors We Live By*.
+University of Chicago Press, 1980.
+The foundational argument that conceptual thought is structured by metaphor.</span> <a class="bib-backref nav-push" href="023-stories.html#ref-023-stories-2">23-2</a></div>
+<div class="bib-row-author"><span class="bib-cite">Laureys, S. et al. Unresponsive wakefulness syndrome: a new name for the vegetative state or apallic syndrome.
+BMC Medicine, 2010.</span> <a class="bib-backref nav-push" href="022-locked.html#ref-022-locked-1">22-1</a></div>
+<div class="bib-row-author"><span class="bib-cite">Lavoisier, A. Elements of Chemistry.
+1789.
+The work that formalized caloric theory — a reminder that the theory was scientifically serious.</span> <a class="bib-backref nav-push" href="027-usedtothink.html#ref-027-usedtothink-1">27-1</a></div>
+<div class="bib-row-author"><span class="bib-cite">Leibniz, G.W.
+Monadology (1714).</span> <a class="bib-backref nav-push" href="067-monads-holons.html#ref-067-monads-holons-1">67-1</a></div>
+<div class="bib-row-author"><span class="bib-cite">Maldacena, J. The large N limit of superconformal field theories (1998).
+AdS/CFT.</span> <a class="bib-backref nav-push" href="067-monads-holons.html#ref-067-monads-holons-2">67-2</a></div>
+<div class="bib-row-author"><span class="bib-cite">Mandelbrot, Benoit.
+The Fractal Geometry of Nature.
+W.H.
+Freeman, 1982.
+The boundary as the locus of infinite complexity. <span class="bib-check">Check</span></span> <a class="bib-backref nav-push" href="031-surfaceinside.html#ref-031-surfaceinside-1">31-1</a> <a class="bib-backref nav-push" href="033-edge.html#ref-033-edge-1">33-1</a> <a class="bib-backref nav-push" href="034-onerule.html#ref-034-onerule-3">34-3</a> <a class="bib-backref nav-push" href="038-consonance-map.html#ref-038-consonance-map-2">38-2</a> <a class="bib-backref nav-push" href="078-boundarystack.html#ref-078-boundarystack-3">78-3</a></div>
+<div class="bib-row-author"><span class="bib-cite">Maturana, H. and Varela, F. Autopoiesis and Cognition.
+Reidel, 1980. <span class="bib-check">Check</span></span> <a class="bib-backref nav-push" href="009-randomness.html#fn-009-randomness-6-mark">9-6</a> <a class="bib-backref nav-push" href="012-autopoiesis.html#fn-012-autopoiesis-1-mark">12-1</a> <a class="bib-backref nav-push" href="027-usedtothink.html#ref-027-usedtothink-5">27-5</a></div>
+<div class="bib-row-author"><span class="bib-cite">Maturana, H. and Varela, F. The Tree of Knowledge.
+Shambhala, 1987.</span> <a class="bib-backref nav-push" href="012-autopoiesis.html#fn-012-autopoiesis-1-mark">12-1</a> <a class="bib-backref nav-push" href="013-enactment.html#fn-013-enactment-2-mark">13-2</a></div>
+<div class="bib-row-author"><span class="bib-cite">Maxwell, J.C.
+A Treatise on Electricity and Magnetism.
+Oxford, 1873.</span> <a class="bib-backref nav-push" href="008-fields.html#fn-008-fields-1-mark">8-1</a></div>
 <div class="bib-row-author"><span class="bib-cite">Michael Marder, Plant-Thinking: A Philosophy of Vegetal Life, Columbia University Press, 2013.</span> <a class="bib-backref nav-push" href="077-intention.html#ref-077-intention-4">77-4</a></div>
-<div class="bib-row-author"><span class="bib-cite">Mollon, J.D. — the uses and origins of primate colour vision. Journal of Experimental Biology, 1989. The fruit and co-evolution hypothesis.</span> <a class="bib-backref nav-push" href="041-colorwheel.html#ref-041-colorwheel-2">41-2</a></div>
-<div class="bib-row-author"><span class="bib-cite">Nagel, T. What Is It Like to Be a Bat? Philosophical Review, 1974. <span class="bib-check">Check</span></span> <a class="bib-backref nav-push" href="003-inside.html#fn-003-inside-4-mark">3-4</a> <a class="bib-backref nav-push" href="077-intention.html#ref-077-intention-3">77-3</a></div>
+<div class="bib-row-author"><span class="bib-cite">Mollon, J.D.
+— the uses and origins of primate colour vision.
+Journal of Experimental Biology, 1989.
+The fruit and co-evolution hypothesis.</span> <a class="bib-backref nav-push" href="041-colorwheel.html#ref-041-colorwheel-2">41-2</a></div>
+<div class="bib-row-author"><span class="bib-cite">Nagel, T. What Is It Like to Be a Bat?
+Philosophical Review, 1974. <span class="bib-check">Check</span></span> <a class="bib-backref nav-push" href="003-inside.html#fn-003-inside-4-mark">3-4</a> <a class="bib-backref nav-push" href="077-intention.html#ref-077-intention-3">77-3</a></div>
 <div class="bib-row-author"><span class="bib-cite">Newcomb, Simon (1881) — noticed Benford's pattern fifty years earlier, ignored.</span> <a class="bib-backref nav-push" href="035-simplestnumbers.html#ref-035-simplestnumbers-3">35-3</a></div>
-<div class="bib-row-author"><span class="bib-cite">Olsson, E. et al. Superposition, memorization, and double descent (2022). Or similar interpretability work on superposition.</span> <a class="bib-backref nav-push" href="057-superfarey.html#ref-057-superfarey-1">57-1</a></div>
-<div class="bib-row-author"><span class="bib-cite">Parfit, Derek. Reasons and Persons. Oxford University Press, 1984.</span> <a class="bib-backref nav-push" href="004-self.html#fn-004-self-4-mark">4-4</a></div>
-<div class="bib-row-author"><span class="bib-cite">Penrose, R. Pentaplexity (1974). Tilings.</span> <a class="bib-backref nav-push" href="063-mandelcrystals.html#ref-063-mandelcrystals-2">63-2</a></div>
-<div class="bib-row-author"><span class="bib-cite">Penrose, R. Shadows of the Mind. Oxford University Press, 1994.</span> <a class="bib-backref nav-push" href="020-penrose.html#fn-020-penrose-1-mark">20-1</a></div>
-<div class="bib-row-author"><span class="bib-cite">Penrose, R. The Emperor's New Mind. Oxford University Press, 1989.</span> <a class="bib-backref nav-push" href="020-penrose.html#fn-020-penrose-1-mark">20-1</a></div>
+<div class="bib-row-author"><span class="bib-cite">Olsson, E. et al. Superposition, memorization, and double descent (2022).
+Or similar interpretability work on superposition.</span> <a class="bib-backref nav-push" href="057-superfarey.html#ref-057-superfarey-1">57-1</a></div>
+<div class="bib-row-author"><span class="bib-cite">Parfit, Derek.
+Reasons and Persons.
+Oxford University Press, 1984.</span> <a class="bib-backref nav-push" href="004-self.html#fn-004-self-4-mark">4-4</a></div>
+<div class="bib-row-author"><span class="bib-cite">Penrose, R. Pentaplexity (1974).
+Tilings.</span> <a class="bib-backref nav-push" href="063-mandelcrystals.html#ref-063-mandelcrystals-2">63-2</a></div>
+<div class="bib-row-author"><span class="bib-cite">Penrose, R. Shadows of the Mind.
+Oxford University Press, 1994.</span> <a class="bib-backref nav-push" href="020-penrose.html#fn-020-penrose-1-mark">20-1</a></div>
+<div class="bib-row-author"><span class="bib-cite">Penrose, R. The Emperor's New Mind.
+Oxford University Press, 1989.</span> <a class="bib-backref nav-push" href="020-penrose.html#fn-020-penrose-1-mark">20-1</a></div>
 <div class="bib-row-author"><span class="bib-cite">Philip Goff. Galileo's Error: Foundations for a New Science of Consciousness. Pantheon Books, 2019.</span> <a class="bib-backref nav-push" href="080-unification.html#ref-080-unification-7">80-7</a></div>
 <div class="bib-row-author"><span class="bib-cite">Planck, M. Scientific Autobiography. Philosophical Library, 1949. <span class="bib-check">Check</span></span> <a class="bib-backref nav-push" href="019-funerals.html#fn-019-funerals-2-mark">19-2</a> <a class="bib-backref nav-push" href="061-babyuniverse.html#ref-061-babyuniverse-1">61-1</a></div>
-<div class="bib-row-author"><span class="bib-cite">Prigogine, I. and Stengers, I. Order Out of Chaos. Bantam, 1984.</span> <a class="bib-backref nav-push" href="009-randomness.html#fn-009-randomness-4-mark">9-4</a> <a class="bib-backref nav-push" href="012-autopoiesis.html#fn-012-autopoiesis-6-mark">12-6</a></div>
+<div class="bib-row-author"><span class="bib-cite">Prigogine, I. and Stengers, I. Order Out of Chaos.
+Bantam, 1984.</span> <a class="bib-backref nav-push" href="009-randomness.html#fn-009-randomness-4-mark">9-4</a> <a class="bib-backref nav-push" href="012-autopoiesis.html#fn-012-autopoiesis-6-mark">12-6</a></div>
 <div class="bib-row-author"><span class="bib-cite">Pythagoras — consonance as simple integer ratios, now understood as stability under iteration. <span class="bib-check">Check</span></span> <a class="bib-backref nav-push" href="033-edge.html#ref-033-edge-3">33-3</a> <a class="bib-backref nav-push" href="038-consonance-map.html#ref-038-consonance-map-1">38-1</a></div>
-<div class="bib-row-author"><span class="bib-cite">Rahula, Walpola. What the Buddha Taught. 1959.</span> <a class="bib-backref nav-push" href="004-self.html#fn-004-self-3-mark">4-3</a></div>
+<div class="bib-row-author"><span class="bib-cite">Rahula, Walpola.
+What the Buddha Taught.
+1959.</span> <a class="bib-backref nav-push" href="004-self.html#fn-004-self-3-mark">4-3</a></div>
 <div class="bib-row-author"><span class="bib-cite">Roger Sperry. 'Hemisphere Deconnection and Unity in Conscious Awareness.' American Psychologist 23(10), 1968.</span> <a class="bib-backref nav-push" href="080-unification.html#ref-080-unification-9">80-9</a></div>
-<div class="bib-row-author"><span class="bib-cite">Rovelli, C. Reality Is Not What It Seems. Riverhead, 2017.</span> <a class="bib-backref nav-push" href="002-events.html#fn-002-events-3-mark">2-3</a></div>
-<div class="bib-row-author"><span class="bib-cite">Rovelli, C. Relational Quantum Mechanics. International Journal of Theoretical Physics, 1996.</span> <a class="bib-backref nav-push" href="002-events.html#fn-002-events-3-mark">2-3</a></div>
-<div class="bib-row-author"><span class="bib-cite">Rovelli, C. The Order of Time. Riverhead, 2018.</span> <a class="bib-backref nav-push" href="002-events.html#fn-002-events-3-mark">2-3</a></div>
-<div class="bib-row-author"><span class="bib-cite">Rukeyser, Muriel. *The Speed of Darkness*. Random House, 1968.</span> <a class="bib-backref nav-push" href="023-stories.html#ref-023-stories-1">23-1</a></div>
+<div class="bib-row-author"><span class="bib-cite">Rovelli, C. Reality Is Not What It Seems.
+Riverhead, 2017.</span> <a class="bib-backref nav-push" href="002-events.html#fn-002-events-3-mark">2-3</a></div>
+<div class="bib-row-author"><span class="bib-cite">Rovelli, C. Relational Quantum Mechanics.
+International Journal of Theoretical Physics, 1996.</span> <a class="bib-backref nav-push" href="002-events.html#fn-002-events-3-mark">2-3</a></div>
+<div class="bib-row-author"><span class="bib-cite">Rovelli, C. The Order of Time.
+Riverhead, 2018.</span> <a class="bib-backref nav-push" href="002-events.html#fn-002-events-3-mark">2-3</a></div>
+<div class="bib-row-author"><span class="bib-cite">Rukeyser, Muriel. *The Speed of Darkness*.
+Random House, 1968.</span> <a class="bib-backref nav-push" href="023-stories.html#ref-023-stories-1">23-1</a></div>
 <div class="bib-row-author"><span class="bib-cite">Ryle, G. The Concept of Mind (1949). <span class="bib-check">Check</span></span> <a class="bib-backref nav-push" href="021-just.html#ref-021-just-1">21-1</a> <a class="bib-backref nav-push" href="022-locked.html#ref-022-locked-5">22-5</a> <a class="bib-backref nav-push" href="024-ghostmachine.html#ref-024-ghostmachine-1">24-1</a></div>
 <div class="bib-row-author"><span class="bib-cite">Sagan, Carl — 'we are a way for the cosmos to know itself' — the surface version of this idea.</span> <a class="bib-backref nav-push" href="036-universenoticing.html#ref-036-universenoticing-3">36-3</a></div>
-<div class="bib-row-author"><span class="bib-cite">Schnabel, J. (dir.) The Diving Bell and the Butterfly. Film, 2007.</span> <a class="bib-backref nav-push" href="022-locked.html#ref-022-locked-2">22-2</a></div>
-<div class="bib-row-author"><span class="bib-cite">Schrödinger, E. What is Life? Cambridge University Press, 1944.</span> <a class="bib-backref nav-push" href="012-autopoiesis.html#fn-012-autopoiesis-3-mark">12-3</a></div>
-<div class="bib-row-author"><span class="bib-cite">Searle, John. 'Minds, Brains, and Programs.' Behavioral and Brain Sciences, 1980. The Chinese Room argument.</span> <a class="bib-backref nav-push" href="025-widechannel.html#ref-025-widechannel-2">25-2</a></div>
-<div class="bib-row-author"><span class="bib-cite">Shechtman, D. et al. Metallic phase with long-range order (1984). Quasicrystals.</span> <a class="bib-backref nav-push" href="063-mandelcrystals.html#ref-063-mandelcrystals-1">63-1</a></div>
+<div class="bib-row-author"><span class="bib-cite">Schnabel, J. (dir.)
+The Diving Bell and the Butterfly.
+Film, 2007.</span> <a class="bib-backref nav-push" href="022-locked.html#ref-022-locked-2">22-2</a></div>
+<div class="bib-row-author"><span class="bib-cite">Schrödinger, E. What is Life?
+Cambridge University Press, 1944.</span> <a class="bib-backref nav-push" href="012-autopoiesis.html#fn-012-autopoiesis-3-mark">12-3</a></div>
+<div class="bib-row-author"><span class="bib-cite">Searle, John.
+'Minds, Brains, and Programs.'
+Behavioral and Brain Sciences, 1980.
+The Chinese Room argument.</span> <a class="bib-backref nav-push" href="025-widechannel.html#ref-025-widechannel-2">25-2</a></div>
+<div class="bib-row-author"><span class="bib-cite">Shechtman, D. et al. Metallic phase with long-range order (1984).
+Quasicrystals.</span> <a class="bib-backref nav-push" href="063-mandelcrystals.html#ref-063-mandelcrystals-1">63-1</a></div>
 <div class="bib-row-author"><span class="bib-cite">Stern-Brocot tree — the complete ordered tree of rational numbers, mediating consonance and bulb structure.</span> <a class="bib-backref nav-push" href="033-edge.html#ref-033-edge-5">33-5</a></div>
-<div class="bib-row-author"><span class="bib-cite">Susskind, L. The World as a Hologram (1995). Van Raamsdonk, M. Building up spacetime with quantum entanglement (2010). <span class="bib-check">Check</span></span> <a class="bib-backref nav-push" href="051-spacetime.html#ref-051-spacetime-1">51-1</a> <a class="bib-backref nav-push" href="068-bubbles.html#ref-068-bubbles-1">68-1</a></div>
-<div class="bib-row-author"><span class="bib-cite">Teilhard de Chardin de Chardin, Pierre. The Phenomenon of Man. Harper &amp; Row, 1959. <span class="bib-check">Check</span></span> <a class="bib-backref nav-push" href="032-skyfossil.html#ref-032-skyfossil-2">32-2</a> <a class="bib-backref nav-push" href="036-universenoticing.html#ref-036-universenoticing-2">36-2</a> <a class="bib-backref nav-push" href="058-galacticnets.html#ref-058-galacticnets-2">58-2</a> <a class="bib-backref nav-push" href="059-galaxyevolve.html#ref-059-galaxyevolve-1">59-1</a> <a class="bib-backref nav-push" href="066-cosmicattractor.html#ref-066-cosmicattractor-2">66-2</a> <a class="bib-backref nav-push" href="077-intention.html#ref-077-intention-5">77-5</a></div>
-<div class="bib-row-author"><span class="bib-cite">Terrence Deacon, Incomplete Nature: How Mind Emerged from Matter, W.W. Norton, 2012.</span> <a class="bib-backref nav-push" href="077-intention.html#ref-077-intention-1">77-1</a></div>
-<div class="bib-row-author"><span class="bib-cite">Thompson, E. Mind in Life. Harvard University Press, 2007. <span class="bib-check">Check</span></span> <a class="bib-backref nav-push" href="006-output.html#fn-006-output-3-mark">6-3</a> <a class="bib-backref nav-push" href="012-autopoiesis.html#fn-012-autopoiesis-4-mark">12-4</a> <a class="bib-backref nav-push" href="013-enactment.html#fn-013-enactment-1-mark">13-1</a> <a class="bib-backref nav-push" href="031-surfaceinside.html#ref-031-surfaceinside-4">31-4</a></div>
-<div class="bib-row-author"><span class="bib-cite">Turing, A. Computing Machinery and Intelligence. Mind, 1950. <span class="bib-check">Check</span></span> <a class="bib-backref nav-push" href="006-output.html#fn-006-output-2-mark">6-2</a> <a class="bib-backref nav-push" href="025-widechannel.html#ref-025-widechannel-1">25-1</a></div>
-<div class="bib-row-author"><span class="bib-cite">Varela, F., Thompson, E., Rosch, E. The Embodied Mind. MIT Press, 1991.</span> <a class="bib-backref nav-push" href="012-autopoiesis.html#fn-012-autopoiesis-5-mark">12-5</a></div>
-<div class="bib-row-author"><span class="bib-cite">Vyse, S. The Telepathy Tapes: A Skeptical Analysis. Skeptical Inquirer, 2025.</span> <a class="bib-backref nav-push" href="022-locked.html#ref-022-locked-4">22-4</a></div>
-<div class="bib-row-author"><span class="bib-cite">Walker, S.I. et al. Assembly theory (Nature 2023). Assembly index and the signature of life.</span> <a class="bib-backref nav-push" href="037-assembly.html#ref-037-assembly-2">37-2</a></div>
+<div class="bib-row-author"><span class="bib-cite">Susskind, L. The World as a Hologram (1995).
+Van Raamsdonk, M. Building up spacetime with quantum entanglement (2010). <span class="bib-check">Check</span></span> <a class="bib-backref nav-push" href="051-spacetime.html#ref-051-spacetime-1">51-1</a> <a class="bib-backref nav-push" href="068-bubbles.html#ref-068-bubbles-1">68-1</a></div>
+<div class="bib-row-author"><span class="bib-cite">Teilhard de Chardin de Chardin, Pierre.
+The Phenomenon of Man.
+Harper &amp; Row, 1959. <span class="bib-check">Check</span></span> <a class="bib-backref nav-push" href="032-skyfossil.html#ref-032-skyfossil-2">32-2</a> <a class="bib-backref nav-push" href="036-universenoticing.html#ref-036-universenoticing-2">36-2</a> <a class="bib-backref nav-push" href="058-galacticnets.html#ref-058-galacticnets-2">58-2</a> <a class="bib-backref nav-push" href="059-galaxyevolve.html#ref-059-galaxyevolve-1">59-1</a> <a class="bib-backref nav-push" href="066-cosmicattractor.html#ref-066-cosmicattractor-2">66-2</a> <a class="bib-backref nav-push" href="077-intention.html#ref-077-intention-5">77-5</a></div>
+<div class="bib-row-author"><span class="bib-cite">Terrence Deacon, Incomplete Nature: How Mind Emerged from Matter, W.W.
+Norton, 2012.</span> <a class="bib-backref nav-push" href="077-intention.html#ref-077-intention-1">77-1</a></div>
+<div class="bib-row-author"><span class="bib-cite">Thompson, E. Mind in Life.
+Harvard University Press, 2007. <span class="bib-check">Check</span></span> <a class="bib-backref nav-push" href="006-output.html#fn-006-output-3-mark">6-3</a> <a class="bib-backref nav-push" href="012-autopoiesis.html#fn-012-autopoiesis-4-mark">12-4</a> <a class="bib-backref nav-push" href="013-enactment.html#fn-013-enactment-1-mark">13-1</a> <a class="bib-backref nav-push" href="031-surfaceinside.html#ref-031-surfaceinside-4">31-4</a></div>
+<div class="bib-row-author"><span class="bib-cite">Turing, A. Computing Machinery and Intelligence.
+Mind, 1950. <span class="bib-check">Check</span></span> <a class="bib-backref nav-push" href="006-output.html#fn-006-output-2-mark">6-2</a> <a class="bib-backref nav-push" href="025-widechannel.html#ref-025-widechannel-1">25-1</a></div>
+<div class="bib-row-author"><span class="bib-cite">Varela, F., Thompson, E., Rosch, E. The Embodied Mind.
+MIT Press, 1991.</span> <a class="bib-backref nav-push" href="012-autopoiesis.html#fn-012-autopoiesis-5-mark">12-5</a></div>
+<div class="bib-row-author"><span class="bib-cite">Vyse, S. The Telepathy Tapes: A Skeptical Analysis.
+Skeptical Inquirer, 2025.</span> <a class="bib-backref nav-push" href="022-locked.html#ref-022-locked-4">22-4</a></div>
+<div class="bib-row-author"><span class="bib-cite">Walker, S.I. et al. Assembly theory (Nature 2023).
+Assembly index and the signature of life.</span> <a class="bib-backref nav-push" href="037-assembly.html#ref-037-assembly-2">37-2</a></div>
 <div class="bib-row-author"><span class="bib-cite">Wheeler, John — one-electron universe, proposed by Feynman, entertained seriously; and 'it from bit': the universe as information processing.</span> <a class="bib-backref nav-push" href="034-onerule.html#ref-034-onerule-1">34-1</a></div>
-<div class="bib-row-author"><span class="bib-cite">Whitehead, A.N. Adventures of Ideas. Macmillan, 1933.</span> <a class="bib-backref nav-push" href="003-inside.html#fn-003-inside-1-mark">3-1</a></div>
-<div class="bib-row-author"><span class="bib-cite">Whitehead, A.N. Process and Reality. Macmillan, 1929. <span class="bib-check">Check</span></span> <a class="bib-backref nav-push" href="002-events.html#fn-002-events-1-mark">2-1</a> <a class="bib-backref nav-push" href="003-inside.html#fn-003-inside-1-mark">3-1</a> <a class="bib-backref nav-push" href="004-self.html#fn-004-self-2-mark">4-2</a> <a class="bib-backref nav-push" href="005-freewill.html#fn-005-freewill-1-mark">5-1</a> <a class="bib-backref nav-push" href="006-output.html#fn-006-output-1-mark">6-1</a> <a class="bib-backref nav-push" href="007-vacuum.html#fn-007-vacuum-1-mark">7-1</a> <a class="bib-backref nav-push" href="008-fields.html#fn-008-fields-2-mark">8-2</a> <a class="bib-backref nav-push" href="009-randomness.html#fn-009-randomness-3-mark">9-3</a> <a class="bib-backref nav-push" href="011-moreisdifferent.html#fn-011-moreisdifferent-2-mark">11-2</a> <a class="bib-backref nav-push" href="012-autopoiesis.html#fn-012-autopoiesis-2-mark">12-2</a> <a class="bib-backref nav-push" href="014-cities.html#fn-014-cities-1-mark">14-1</a> <a class="bib-backref nav-push" href="016-neuralnetwork.html#fn-016-neuralnetwork-1-mark">16-1</a> <a class="bib-backref nav-push" href="017-pastpresent.html#fn-017-pastpresent-1-mark">17-1</a> <a class="bib-backref nav-push" href="021-just.html#ref-021-just-2">21-2</a> <a class="bib-backref nav-push" href="024-ghostmachine.html#ref-024-ghostmachine-3">24-3</a> <a class="bib-backref nav-push" href="025-widechannel.html#ref-025-widechannel-5">25-5</a> <a class="bib-backref nav-push" href="026-twotruths.html#ref-026-twotruths-2">26-2</a> <a class="bib-backref nav-push" href="027-usedtothink.html#ref-027-usedtothink-3">27-3</a> <a class="bib-backref nav-push" href="028-network.html#ref-028-network-3">28-3</a> <a class="bib-backref nav-push" href="031-surfaceinside.html#ref-031-surfaceinside-6">31-6</a> <a class="bib-backref nav-push" href="032-skyfossil.html#ref-032-skyfossil-3">32-3</a> <a class="bib-backref nav-push" href="034-onerule.html#ref-034-onerule-2">34-2</a> <a class="bib-backref nav-push" href="036-universenoticing.html#ref-036-universenoticing-1">36-1</a> <a class="bib-backref nav-push" href="050-orthogonal.html#ref-050-orthogonal-1">50-1</a> <a class="bib-backref nav-push" href="052-dichotomy.html#ref-052-dichotomy-1">52-1</a> <a class="bib-backref nav-push" href="058-galacticnets.html#ref-058-galacticnets-1">58-1</a> <a class="bib-backref nav-push" href="066-cosmicattractor.html#ref-066-cosmicattractor-1">66-1</a> <a class="bib-backref nav-push" href="078-boundarystack.html#ref-078-boundarystack-4">78-4</a></div>
-<div class="bib-row-author"><span class="bib-cite">Whitehead, A.N. Science and the Modern World. Macmillan, 1925.</span> <a class="bib-backref nav-push" href="002-events.html#fn-002-events-1-mark">2-1</a></div>
+<div class="bib-row-author"><span class="bib-cite">Whitehead, A.N.
+Adventures of Ideas.
+Macmillan, 1933.</span> <a class="bib-backref nav-push" href="003-inside.html#fn-003-inside-1-mark">3-1</a></div>
+<div class="bib-row-author"><span class="bib-cite">Whitehead, A.N.
+Process and Reality.
+Macmillan, 1929. <span class="bib-check">Check</span></span> <a class="bib-backref nav-push" href="002-events.html#fn-002-events-1-mark">2-1</a> <a class="bib-backref nav-push" href="003-inside.html#fn-003-inside-1-mark">3-1</a> <a class="bib-backref nav-push" href="004-self.html#fn-004-self-2-mark">4-2</a> <a class="bib-backref nav-push" href="005-freewill.html#fn-005-freewill-1-mark">5-1</a> <a class="bib-backref nav-push" href="006-output.html#fn-006-output-1-mark">6-1</a> <a class="bib-backref nav-push" href="007-vacuum.html#fn-007-vacuum-1-mark">7-1</a> <a class="bib-backref nav-push" href="008-fields.html#fn-008-fields-2-mark">8-2</a> <a class="bib-backref nav-push" href="009-randomness.html#fn-009-randomness-3-mark">9-3</a> <a class="bib-backref nav-push" href="011-moreisdifferent.html#fn-011-moreisdifferent-2-mark">11-2</a> <a class="bib-backref nav-push" href="012-autopoiesis.html#fn-012-autopoiesis-2-mark">12-2</a> <a class="bib-backref nav-push" href="014-cities.html#fn-014-cities-1-mark">14-1</a> <a class="bib-backref nav-push" href="016-neuralnetwork.html#fn-016-neuralnetwork-1-mark">16-1</a> <a class="bib-backref nav-push" href="017-pastpresent.html#fn-017-pastpresent-1-mark">17-1</a> <a class="bib-backref nav-push" href="021-just.html#ref-021-just-2">21-2</a> <a class="bib-backref nav-push" href="024-ghostmachine.html#ref-024-ghostmachine-3">24-3</a> <a class="bib-backref nav-push" href="025-widechannel.html#ref-025-widechannel-5">25-5</a> <a class="bib-backref nav-push" href="026-twotruths.html#ref-026-twotruths-2">26-2</a> <a class="bib-backref nav-push" href="027-usedtothink.html#ref-027-usedtothink-3">27-3</a> <a class="bib-backref nav-push" href="028-network.html#ref-028-network-3">28-3</a> <a class="bib-backref nav-push" href="031-surfaceinside.html#ref-031-surfaceinside-6">31-6</a> <a class="bib-backref nav-push" href="032-skyfossil.html#ref-032-skyfossil-3">32-3</a> <a class="bib-backref nav-push" href="034-onerule.html#ref-034-onerule-2">34-2</a> <a class="bib-backref nav-push" href="036-universenoticing.html#ref-036-universenoticing-1">36-1</a> <a class="bib-backref nav-push" href="050-orthogonal.html#ref-050-orthogonal-1">50-1</a> <a class="bib-backref nav-push" href="052-dichotomy.html#ref-052-dichotomy-1">52-1</a> <a class="bib-backref nav-push" href="058-galacticnets.html#ref-058-galacticnets-1">58-1</a> <a class="bib-backref nav-push" href="066-cosmicattractor.html#ref-066-cosmicattractor-1">66-1</a> <a class="bib-backref nav-push" href="078-boundarystack.html#ref-078-boundarystack-4">78-4</a></div>
+<div class="bib-row-author"><span class="bib-cite">Whitehead, A.N.
+Science and the Modern World.
+Macmillan, 1925.</span> <a class="bib-backref nav-push" href="002-events.html#fn-002-events-1-mark">2-1</a></div>
 <div class="bib-row-author"><span class="bib-cite">William James. The Principles of Psychology, Chapter 6: 'The Mind-Stuff Theory.' Henry Holt and Company, 1890.</span> <a class="bib-backref nav-push" href="080-unification.html#ref-080-unification-1">80-1</a></div>
 <div class="bib-row-author"><span class="bib-cite">William James. The Varieties of Religious Experience: A Study in Human Nature (Gifford Lectures). Longmans, Green, and Co., 1902.</span> <a class="bib-backref nav-push" href="080-unification.html#ref-080-unification-3">80-3</a></div>
-<div class="bib-row-author"><span class="bib-cite">Wittgenstein, L. Philosophical Investigations. Blackwell, 1953.</span> <a class="bib-backref nav-push" href="002-events.html#fn-002-events-4-mark">2-4</a></div>
-<div class="bib-row-author"><span class="bib-cite">Wittgenstein, Ludwig. Philosophical Investigations. 1953. See especially §293, the beetle-in-a-box passage.</span> <a class="bib-backref nav-push" href="025-widechannel.html#ref-025-widechannel-3">25-3</a></div>
+<div class="bib-row-author"><span class="bib-cite">Wittgenstein, L. Philosophical Investigations.
+Blackwell, 1953.</span> <a class="bib-backref nav-push" href="002-events.html#fn-002-events-4-mark">2-4</a></div>
+<div class="bib-row-author"><span class="bib-cite">Wittgenstein, Ludwig.
+Philosophical Investigations.
+1953.
+See especially §293, the beetle-in-a-box passage.</span> <a class="bib-backref nav-push" href="025-widechannel.html#ref-025-widechannel-3">25-3</a></div>
 <div class="bib-row-author"><span class="bib-cite">Wolfram, Stephen — A New Kind of Science: simple rules generating irreducible complexity.</span> <a class="bib-backref nav-push" href="034-onerule.html#ref-034-onerule-4">34-4</a></div>
 </div>
 <script>(function(){
@@ -3995,16 +4369,24 @@ wrapEl.addEventListener(‘touchcancel’, endDrag);
 </script>to inject the built table or graph.
 8. <strong>Index and assets</strong>: <code>site_dir/index.html</code> (from <code>content/home.md</code>), <code>map.svg</code>, and <code>4u-ai.txt</code> are generated.</p>
 <p>Required files for a full build include: <code>content/home.md</code>, <code>content/internal/page.md</code>, and for each nav token either <code>content/&lt;token&gt;.md</code> or <code>content/&lt;token&gt;/page.md</code>. <code>config/status.txt</code> is also required.</p>
-<p>For config and nav: <a href="internal-settings.html">settings</a>. For @ directives in Markdown and seedpod files: <a href="internal-directives.html">directives</a>.</p>
+<p>For config and nav: <a href="internal-settings.html">settings</a>.
+For @ directives in Markdown and seedpod files: <a href="internal-directives.html">directives</a>.</p>
 <hr>
 <h2>Importing prototype seedpods</h2>
 <p>Prototype .md files (e.g. in <code>content/more/</code>) can be turned into seedpod .md files with:</p>
 <pre><code class="language-bash">just import content/more/primordia.md content/more/seed-speculations.md
 </code></pre>
-<p>By default the command runs in <strong>preview</strong> mode: it parses each file, assigns the next seedpod number and a shortname (from the title), and prints <code>number-shortname  Title</code> for each proto-seedpod. It does not write files. Use <strong><code>--apply</code></strong> to actually write each seedpod to <code>content/pods/</code>:</p>
+<p>By default the command runs in <strong>preview</strong> mode: it parses each file, assigns the next seedpod number and a shortname (from the title), and prints <code>number-shortname Title</code> for each proto-seedpod.
+It does not write files.
+Use <strong><code>--apply</code></strong> to actually write each seedpod to <code>content/pods/</code>:</p>
 <pre><code class="language-bash">just import --apply content/more/primordia.md content/more/seed-speculations.md
 </code></pre>
-<p>Imported seedpods have <code>#status proto</code> and a single body (no <code>#brief</code> directive). Each proto-seedpod in the source file must include a <code>#shortname</code> line (e.g. <code>#shortname harmonic-barchart</code>); if one is missing, import reports it and skips that seedpod without writing a file. The parser accepts optional numbering (e.g. <code>## 1. Title</code>) and category headings (e.g. <code>## Physics &amp; Mathematics</code>); categories are skipped. File-level <code>#ref</code> and <code>#term</code> in the prototype are added to each generated seedpod. After importing, run <code>just build</code> to regenerate the site. Imported files are written as <code>.md</code>.</p>
+<p>Imported seedpods have <code>#status proto</code> and a single body (no <code>#brief</code> directive).
+Each proto-seedpod in the source file must include a <code>#shortname</code> line (e.g. <code>#shortname harmonic-barchart</code>); if one is missing, import reports it and skips that seedpod without writing a file.
+The parser accepts optional numbering (e.g. <code>## 1. Title</code>) and category headings (e.g. <code>## Physics &amp; Mathematics</code>); categories are skipped.
+File-level <code>#ref</code> and <code>#term</code> in the prototype are added to each generated seedpod.
+After importing, run <code>just build</code> to regenerate the site.
+Imported files are written as <code>.md</code>.</p>
 <p><strong>Full format for import files:</strong> <a href="internal-import-format.html">import-format</a> — use it when creating or editing .md files meant for <code>just import</code> (e.g. new files like primordia or seed_speculations).</p>
 </div></div>
 <div class="page-end" id="page-end-version" data-page-version="1">
@@ -4014,6 +4396,6 @@ wrapEl.addEventListener(‘touchcancel’, endDrag);
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">Rev 1 · Edited 2026-04-19 03:06</span>
+  <span class="page-end-version" aria-hidden="true">Rev 1 · Edited 2026-04-23 00:36</span>
 </div>
 </body></html>

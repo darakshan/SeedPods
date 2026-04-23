@@ -58,19 +58,51 @@
   </div>
 </div>
 <div class="wrap"><div class="page-body home-page fade"><h2>Structure of a SeedPod</h2>
-<p>Every seedpod has the same five layers. This consistency makes the archive navigable and the template maintainable. A reader who knows the structure can find what they need at whatever depth they want.</p>
+<p>Every seedpod has the same five layers.
+This consistency makes the archive navigable and the template maintainable.
+A reader who knows the structure can find what they need at whatever depth they want.</p>
 <h3>Proto body (no primary sections)</h3>
-<p>SeedPods with status <strong>proto</strong> have an unheaded body (the proto text) and no primary section headers. Do <strong>not</strong> use <code>#brief</code>, <code>#surface</code>, <code>#depth</code>, <code>#script</code>, or <code>#images</code> in proto seedpods; the build derives the “brief” content from the first block of text after the metadata. Proto seedpods may optionally include <strong>#provenance</strong> (with prose, <code>#term</code>, and <code>#ref</code>). These are created by the import command from prototype .md files (e.g. in <code>content/more/</code>). Each proto-seedpod in the <strong>import source</strong> (.md) must include a <code>#shortname</code> line so the importer can assign the output filename; import skips any block that lacks it. The resulting seedpod <code>.md</code> file does not contain <code>#number</code> or <code>#shortname</code> — those are derived from the filename only. Proto seedpods may later be promoted to full seedpods by adding the five layers and changing status.</p>
+<p>SeedPods with status <strong>proto</strong> have an unheaded body (the proto text) and no primary section headers.
+Do <strong>not</strong> use <code>#brief</code>, <code>#surface</code>, <code>#depth</code>, <code>#script</code>, or <code>#images</code> in proto seedpods; the build derives the “brief” content from the first block of text after the metadata.
+Proto seedpods may optionally include <strong>#provenance</strong> (with prose, <code>#term</code>, and <code>#ref</code>).
+These are created by the import command from prototype .md files (e.g. in <code>content/more/</code>).
+Each proto-seedpod in the <strong>import source</strong> (.md) must include a <code>#shortname</code> line so the importer can assign the output filename; import skips any block that lacks it.
+The resulting seedpod <code>.md</code> file does not contain <code>#number</code> or <code>#shortname</code> — those are derived from the filename only.
+Proto seedpods may later be promoted to full seedpods by adding the five layers and changing status.</p>
 <h3>Layer 1: Surface</h3>
-<p>The accessible version. Written for a curious high schooler or a first-time encounter with the idea. Concrete language, relatable examples, no jargon. Goal: recognition — oh, I’ve felt that, I just didn’t have words for it. Ends with a call to action: “try this” or “look for this.” Length: 400–700 words. Test with real young readers.</p>
+<p>The accessible version.
+Written for a curious high schooler or a first-time encounter with the idea.
+Concrete language, relatable examples, no jargon.
+Goal: recognition — oh, I’ve felt that, I just didn’t have words for it.
+Ends with a call to action: “try this” or “look for this.”
+Length: 400–700 words.
+Test with real young readers.</p>
 <h3>Layer 2: Depth</h3>
-<p>The intellectual version. Connects to philosophy, science, history of ideas. Where Whitehead, Gödel, autopoiesis, and the rest live. Does not dumb down — assumes a reader who wants to go further. Can include technical detail. References other seedpods by number. Length: 300–600 words.</p>
+<p>The intellectual version.
+Connects to philosophy, science, history of ideas.
+Where Whitehead, Gödel, autopoiesis, and the rest live.
+Does not dumb down — assumes a reader who wants to go further.
+Can include technical detail.
+References other seedpods by number.
+Length: 300–600 words.</p>
 <h3>Layer 3: Provenance</h3>
-<p>The roots. Glossary of key terms with definitions. Bibliography with full citations. Intellectual lineage — whose ideas these are, where they came from, what to read next. Intellectual honesty baked into the structure. Not a footnote — a genuine resource for the curious reader.</p>
+<p>The roots.
+Glossary of key terms with definitions.
+Bibliography with full citations.
+Intellectual lineage — whose ideas these are, where they came from, what to read next.
+Intellectual honesty baked into the structure.
+Not a footnote — a genuine resource for the curious reader.</p>
 <h3>Layer 4: Script</h3>
-<p>The three-minute video version. Written as a shooting script with direction lines (in caps or italic) and spoken text. Designed for compression and emotional landing — the seedpod as a short piece of entertainment that arrives before it explains. Inspired by Jason Silva’s style: rapid, evocative, philosophically serious. Ends with a single sharp question or image.</p>
+<p>The three-minute video version.
+Written as a shooting script with direction lines (in caps or italic) and spoken text.
+Designed for compression and emotional landing — the seedpod as a short piece of entertainment that arrives before it explains.
+Inspired by Jason Silva’s style: rapid, evocative, philosophically serious.
+Ends with a single sharp question or image.</p>
 <h3>Layer 5: Images</h3>
-<p>The visual language. Describes (and eventually will contain) illustrations, animation concepts, shareable graphics. Each seedpod should have: a primary illustration, a shareable one-line graphic for social media, and a video thumbnail concept. The images should be able to stand alone and still transmit something of the seedpod’s essence.</p>
+<p>The visual language.
+Describes (and eventually will contain) illustrations, animation concepts, shareable graphics.
+Each seedpod should have: a primary illustration, a shareable one-line graphic for social media, and a video thumbnail concept.
+The images should be able to stand alone and still transmit something of the seedpod’s essence.</p>
 <h3>Additional fields</h3>
 <p>Each seedpod also carries:</p>
 <ul>
@@ -91,9 +123,12 @@
 <li><p>key terms (#term): optional lines anywhere in a seedpod; each line is <code>#term Term: Definition</code>. Use for any concept the seedpod introduces or relies on — this is how all non-category subject matter is tracked. The build generates the shared Glossary page (terms grouped, definitions indented; lists which seedpods define each).</p>
 </li>
 </ul>
-<p>These are stored in the source <code>.md</code> file and used to build the repository, navigation, and bibliography automatically. See the grammar file for details on how all of these are represented.</p>
+<p>These are stored in the source <code>.md</code> file and used to build the repository, navigation, and bibliography automatically.
+See the grammar file for details on how all of these are represented.</p>
 <h3>Status</h3>
-<p>Status reflects how many of the four main layers (Surface, Depth, Script, Images) have real content. Provenance is ignored for this count. A layer counts as having content only if it is not empty, and not a single line that is or starts with “TBD”.</p>
+<p>Status reflects how many of the four main layers (Surface, Depth, Script, Images) have real content.
+Provenance is ignored for this count.
+A layer counts as having content only if it is not empty, and not a single line that is or starts with “TBD”.</p>
 <table>
 <thead>
 <tr><th>Status</th><th>Meaning</th><th>Sections with content</th></tr>
@@ -107,8 +142,11 @@
 <tr><td><strong>proto</strong></td><td>Imported or drafted as a single unheaded body; no primary sections</td><td>1 (unheaded body only)</td></tr>
 </tbody>
 </table>
-<p>Use <strong>rough</strong> when the seedpod has all sections but they need substantial revision. Use <strong>draft1</strong> when the seedpod is complete but still open to revision, <strong>final</strong> when it is locked. The check tool reports a mismatch if status does not match the section count.</p>
-<p>SeedPods with status <strong>proto</strong> have an unheaded body (rendered as “Brief”) and optionally <strong>#provenance</strong>; they do not use the standard five primary layers. The site does not show the full layer-tabs nav for proto seedpods.</p>
+<p>Use <strong>rough</strong> when the seedpod has all sections but they need substantial revision.
+Use <strong>draft1</strong> when the seedpod is complete but still open to revision, <strong>final</strong> when it is locked.
+The check tool reports a mismatch if status does not match the section count.</p>
+<p>SeedPods with status <strong>proto</strong> have an unheaded body (rendered as “Brief”) and optionally <strong>#provenance</strong>; they do not use the standard five primary layers.
+The site does not show the full layer-tabs nav for proto seedpods.</p>
 </div></div>
 <div class="page-end" id="page-end-version" data-page-version="1">
   <button class="page-end-logo" aria-label="Show page info"
@@ -117,6 +155,6 @@
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">Rev 1 · Edited 2026-04-19 03:06</span>
+  <span class="page-end-version" aria-hidden="true">Rev 1 · Edited 2026-04-23 00:36</span>
 </div>
 </body></html>

@@ -58,11 +58,14 @@
   </div>
 </div>
 <div class="wrap"><div class="page-body home-page fade"><h1>SeedPods iOS App</h1>
-<p>This document describes the architecture, scope, and design decisions for a new SeedPods iOS app. It is intended as a briefing document for AI-assisted development sessions (Cursor/Claude). Read this first, then consult the linked internal docs for format and grammar details.</p>
+<p>This document describes the architecture, scope, and design decisions for a new SeedPods iOS app.
+It is intended as a briefing document for AI-assisted development sessions (Cursor/Claude).
+Read this first, then consult the linked internal docs for format and grammar details.</p>
 <p>Darakshan has added several NOTEs which are intended as amendments to this specification.</p>
 <hr>
 <h2>Purpose</h2>
-<p>The iOS app is a native mobile environment for creating, editing, browsing, and publishing SeedPods. It replaces the current workflow — which requires a Mac, a terminal, and manual file handling — with a fluid, conversation-driven experience on iPhone and iPad.</p>
+<p>The iOS app is a native mobile environment for creating, editing, browsing, and publishing SeedPods.
+It replaces the current workflow — which requires a Mac, a terminal, and manual file handling — with a fluid, conversation-driven experience on iPhone and iPad.</p>
 <p>The app is designed for two kinds of users:</p>
 <ul>
 <li><p><strong>Darakshan</strong> (primary author): full access to authoring, Claude conversations, build, and GitHub sync.</p>
@@ -128,7 +131,8 @@
 </ul>
 <hr>
 <h2>Data Model</h2>
-<p>Port <code>seedpod_parser.py</code> directly to Swift. The core struct:</p>
+<p>Port <code>seedpod_parser.py</code> directly to Swift.
+The core struct:</p>
 <pre><code class="language-swift">struct SeedPod: Identifiable, Codable {
     // Derived from filename: NNN-shortname.txt
     let number: String        // e.g. &quot;042&quot;
@@ -174,15 +178,23 @@ enum PodCategory: String, Codable, CaseIterable {
     case knowledge
 }
 </code></pre>
-<p><strong>Key rule</strong>: number and shortname come from the filename only. Never read <code>#number</code> or <code>#shortname</code> from the file body.</p>
+<p><strong>Key rule</strong>: number and shortname come from the filename only.
+Never read <code>#number</code> or <code>#shortname</code> from the file body.</p>
 <hr>
 <h2>Swift Module Architecture</h2>
 <p>Build in three layers, in this order.</p>
 <h3>Layer 1: Core (no UI)</h3>
-<p><code>SeedPodParser</code> — reads a <code>.txt</code> file and returns a <code>SeedPod</code>. Port of <code>seedpod_parser.py</code>. Handles both full pods (five layers) and proto pods (unheaded body).</p>
-<p><code>DirectiveProcessor</code> — scans text for <code>@verb(content)</code> patterns and either strips, expands, or renders them. Port of <code>directive.py</code>. The scanner handles nested parentheses and backtick escaping.</p>
-<p><code>SeedPodStore</code> — loads all pods from the iCloud <code>content/pods/</code> directory. Provides lookup by number, by slug, by category. Handles file writes and new file creation.</p>
-<p><code>VersionStore</code> (protocol) — defines: <code>save(pod:note:)</code>, <code>listVersions(for:)</code>, <code>revert(pod:to:)</code>. Two implementations:</p>
+<p><code>SeedPodParser</code> — reads a <code>.txt</code> file and returns a <code>SeedPod</code>.
+Port of <code>seedpod_parser.py</code>.
+Handles both full pods (five layers) and proto pods (unheaded body).</p>
+<p><code>DirectiveProcessor</code> — scans text for <code>@verb(content)</code> patterns and either strips, expands, or renders them.
+Port of <code>directive.py</code>.
+The scanner handles nested parentheses and backtick escaping.</p>
+<p><code>SeedPodStore</code> — loads all pods from the iCloud <code>content/pods/</code> directory.
+Provides lookup by number, by slug, by category.
+Handles file writes and new file creation.</p>
+<p><code>VersionStore</code> (protocol) — defines: <code>save(pod:note:)</code>, <code>listVersions(for:)</code>, <code>revert(pod:to:)</code>.
+Two implementations:</p>
 <ul>
 <li><p><code>LocalVersionStore</code>: keeps the last 20 snapshots per pod in <code>content/.versions/NNN-shortname/</code>. Each snapshot is a timestamped copy of the <code>.txt</code> file plus an optional <code>note.txt</code> (which may contain the Claude conversation summary that produced this version).</p>
 </li>
@@ -190,18 +202,42 @@ enum PodCategory: String, Codable, CaseIterable {
 </li>
 </ul>
 <h3>Layer 2: Build Engine</h3>
-<p><code>SiteBuilder</code> — takes <code>[SeedPod]</code> and writes HTML files to a local temp directory (not iCloud). For MVP, builds only individual pod pages. Deferred: index, bibliography, glossary, map.</p>
-<p><code>DirectiveRenderer</code> — expands pod-layer directives at render time: <code>@exercise</code>, <code>@image</code>, <code>@link</code>, <code>@warn</code>, <code>@timestamp</code>. Strips <code>@note</code>. The <code>.md</code>-only directives (<code>@bibliography</code>, <code>@glossary</code>, <code>@index</code>, <code>@map</code>, <code>@pods</code>, <code>@samples</code>, <code>@include</code>) are not needed for pod pages.</p>
-<p><code>MarkdownRenderer</code> — wraps <code>swift-markdown</code> or <code>cmark</code>. Converts layer text (after directive expansion) to HTML.</p>
-<p><code>SearchIndex</code> — builds a simple in-memory index from all pod titles, subtitles, and surface text. Used for the pod browser search bar.</p>
+<p><code>SiteBuilder</code> — takes <code>[SeedPod]</code> and writes HTML files to a local temp directory (not iCloud).
+For MVP, builds only individual pod pages.
+Deferred: index, bibliography, glossary, map.</p>
+<p><code>DirectiveRenderer</code> — expands pod-layer directives at render time: <code>@exercise</code>, <code>@image</code>, <code>@link</code>, <code>@warn</code>, <code>@timestamp</code>.
+Strips <code>@note</code>.
+The <code>.md</code>-only directives (<code>@bibliography</code>, <code>@glossary</code>, <code>@index</code>, <code>@map</code>, <code>@pods</code>, <code>@samples</code>, <code>@include</code>) are not needed for pod pages.</p>
+<p><code>MarkdownRenderer</code> — wraps <code>swift-markdown</code> or <code>cmark</code>.
+Converts layer text (after directive expansion) to HTML.</p>
+<p><code>SearchIndex</code> — builds a simple in-memory index from all pod titles, subtitles, and surface text.
+Used for the pod browser search bar.</p>
 <h3>Layer 3: iOS UI (SwiftUI)</h3>
-<p><code>PodListView</code> — browsable, searchable list of all pods. Grouped by category or status. Tap to open a pod.</p>
-<p><code>PodDetailView</code> — shows a pod’s layers as tabs (Surface, Depth, Provenance, Script, Images). Each tab shows the rendered HTML in a <code>WKWebView</code> (built on demand from the pod’s source). A raw-text escape hatch opens the pod file in an external editor (Files app or any text editor via <code>UIDocumentInteractionController</code>) for power editing, but this is not the primary editing path.</p>
-<p><code>PodBrowserView</code> — a <code>WKWebView</code> pointed at the locally-built site temp directory. Allows navigating the built site as it would appear on the web. Rebuilt on demand.</p>
-<p><code>ClaudeConversationView</code> — a full chat interface. At session start, the app injects archive context into the system prompt (see Claude Integration below). Editing is collaborative and inline: the user asks Claude to make a specific change (“revise the opening paragraph of surface”), Claude proposes the new text in the conversation, and the user accepts or pushes back. No external editor is needed for the main authoring workflow — this is pair programming, not a handoff. At session end, offers “Save to version history” and optionally “Write pod file(s)” for any pods Claude has drafted or revised.</p>
-<p><code>ContextualDiffSheet</code> — shown before any file write. Rather than previewing the entire pod, this displays the specific changed passage centered within its layer text in a scrollable window. The user can scroll up or down to see as much surrounding context as needed. Changed text is highlighted (additions in green, removals in red). The user confirms or cancels. This design supports the pair-programming editing model: changes are small and targeted, and the preview reflects that granularity.</p>
-<p><code>SettingsView</code> — GitHub token entry and connection toggle. Version store selector. API key management.</p>
-<p><code>ExportView</code> — builds a zip of the <code>content/</code> directory (or a subset) for sharing or backup. Uses <code>UIActivityViewController</code>.</p>
+<p><code>PodListView</code> — browsable, searchable list of all pods.
+Grouped by category or status.
+Tap to open a pod.</p>
+<p><code>PodDetailView</code> — shows a pod’s layers as tabs (Surface, Depth, Provenance, Script, Images).
+Each tab shows the rendered HTML in a <code>WKWebView</code> (built on demand from the pod’s source).
+A raw-text escape hatch opens the pod file in an external editor (Files app or any text editor via <code>UIDocumentInteractionController</code>) for power editing, but this is not the primary editing path.</p>
+<p><code>PodBrowserView</code> — a <code>WKWebView</code> pointed at the locally-built site temp directory.
+Allows navigating the built site as it would appear on the web.
+Rebuilt on demand.</p>
+<p><code>ClaudeConversationView</code> — a full chat interface.
+At session start, the app injects archive context into the system prompt (see Claude Integration below).
+Editing is collaborative and inline: the user asks Claude to make a specific change (“revise the opening paragraph of surface”), Claude proposes the new text in the conversation, and the user accepts or pushes back.
+No external editor is needed for the main authoring workflow — this is pair programming, not a handoff.
+At session end, offers “Save to version history” and optionally “Write pod file(s)” for any pods Claude has drafted or revised.</p>
+<p><code>ContextualDiffSheet</code> — shown before any file write.
+Rather than previewing the entire pod, this displays the specific changed passage centered within its layer text in a scrollable window.
+The user can scroll up or down to see as much surrounding context as needed.
+Changed text is highlighted (additions in green, removals in red).
+The user confirms or cancels.
+This design supports the pair-programming editing model: changes are small and targeted, and the preview reflects that granularity.</p>
+<p><code>SettingsView</code> — GitHub token entry and connection toggle.
+Version store selector.
+API key management.</p>
+<p><code>ExportView</code> — builds a zip of the <code>content/</code> directory (or a subset) for sharing or backup.
+Uses <code>UIActivityViewController</code>.</p>
 <p>NOTE we will also want to be able to export the full HTML of a site so it can be installed on a web server.</p>
 <hr>
 <h2>Claude Integration</h2>
@@ -217,11 +253,14 @@ enum PodCategory: String, Codable, CaseIterable {
 </ol>
 <h3>Archive context format</h3>
 <p>Rather than sending every pod in full (which becomes expensive as the archive grows), the app sends a two-level summary:</p>
-<p><strong>Category summaries</strong> (always included): one paragraph per category describing the pods it contains — their numbers, titles, and one-line subtitles. This lets Claude notice overlap and make connections without consuming the full text of every pod.</p>
-<p><strong>Full pod text</strong> (included on demand): when the conversation references a specific pod by number or title, the app automatically appends that pod’s full <code>.txt</code> source to the next message. This keeps context lean while ensuring Claude can quote and edit actual prose when needed.</p>
+<p><strong>Category summaries</strong> (always included): one paragraph per category describing the pods it contains — their numbers, titles, and one-line subtitles.
+This lets Claude notice overlap and make connections without consuming the full text of every pod.</p>
+<p><strong>Full pod text</strong> (included on demand): when the conversation references a specific pod by number or title, the app automatically appends that pod’s full <code>.txt</code> source to the next message.
+This keeps context lean while ensuring Claude can quote and edit actual prose when needed.</p>
 <p>The <code>4u-ai.txt</code> file that the Python builder already generates is a good starting point for the category summary format — the iOS app generates an equivalent in memory at conversation start.</p>
 <h3>Write-back flow</h3>
-<p>The primary editing model is collaborative and incremental — Claude proposes a specific change to a specific layer passage, not a full pod rewrite. When Claude produces a change:</p>
+<p>The primary editing model is collaborative and incremental — Claude proposes a specific change to a specific layer passage, not a full pod rewrite.
+When Claude produces a change:</p>
 <ol>
 <li><p>Claude outputs the proposed text in the conversation (a revised paragraph, a new section, a corrected sentence).</p>
 </li>
@@ -242,19 +281,30 @@ enum PodCategory: String, Codable, CaseIterable {
 <p>When a user opens a pod layer for active editing on one device, the app writes a lightweight coordination record to iCloud:</p>
 <pre><code>content/.editing/NNN-shortname-surface.lock
 </code></pre>
-<p>The file contains a device identifier and timestamp. Other devices opening the same pod check for this file and display a non-blocking warning: “Surface layer is being edited on your iPhone.” The lock is released when editing stops and expires automatically after a configurable timeout (default: 15 minutes) to handle crashes or lost connectivity.</p>
-<p>This does not prevent simultaneous editing — it makes concurrent access visible. For a single author across personal devices this is sufficient.</p>
+<p>The file contains a device identifier and timestamp.
+Other devices opening the same pod check for this file and display a non-blocking warning: “Surface layer is being edited on your iPhone.”
+The lock is released when editing stops and expires automatically after a configurable timeout (default: 15 minutes) to handle crashes or lost connectivity.</p>
+<p>This does not prevent simultaneous editing — it makes concurrent access visible.
+For a single author across personal devices this is sufficient.</p>
 <h3>Conflict resolution</h3>
-<p>If iCloud detects a conflict (two devices wrote different versions of the same file), the app surfaces this clearly in the pod list and detail view. The user is offered a side-by-side diff and can choose which version to keep, or can ask Claude to help merge the two versions.</p>
+<p>If iCloud detects a conflict (two devices wrote different versions of the same file), the app surfaces this clearly in the pod list and detail view.
+The user is offered a side-by-side diff and can choose which version to keep, or can ask Claude to help merge the two versions.</p>
 <hr>
 <h2>HTML Rendering and Future Native UI</h2>
-<p>The primary rendering approach uses <code>WKWebView</code> — a full Safari engine embedded in the app. It renders the existing HTML and CSS output from the site builder without modification, and is well-supported on all iOS versions.</p>
-<p>A future direction is to render pod layers using native SwiftUI components rather than HTML — native text, native typography, native scroll behavior. This would make the app feel more fully iOS-native and would open up features like inline editing within the rendered view. This is a significant additional effort and is deferred post-MVP. The <code>WKWebView</code> approach is the correct choice for MVP and will remain available as an option even if native rendering is added later.</p>
+<p>The primary rendering approach uses <code>WKWebView</code> — a full Safari engine embedded in the app.
+It renders the existing HTML and CSS output from the site builder without modification, and is well-supported on all iOS versions.</p>
+<p>A future direction is to render pod layers using native SwiftUI components rather than HTML — native text, native typography, native scroll behavior.
+This would make the app feel more fully iOS-native and would open up features like inline editing within the rendered view.
+This is a significant additional effort and is deferred post-MVP.
+The <code>WKWebView</code> approach is the correct choice for MVP and will remain available as an option even if native rendering is added later.</p>
 <hr>
 <h3>LocalVersionStore (default)</h3>
-<p>Snapshots are stored in <code>content/.versions/NNN-shortname/YYYYMMDD-HHMMSS.txt</code>. A companion file <code>YYYYMMDD-HHMMSS.note</code> may contain the session summary.</p>
-<p>The UI shows a version timeline per pod. Reverting replaces the current file with the snapshot content (after confirmation) and writes a new snapshot marking the revert.</p>
-<p>The store keeps the 20 most recent snapshots per pod. Older ones are pruned automatically.</p>
+<p>Snapshots are stored in <code>content/.versions/NNN-shortname/YYYYMMDD-HHMMSS.txt</code>.
+A companion file <code>YYYYMMDD-HHMMSS.note</code> may contain the session summary.</p>
+<p>The UI shows a version timeline per pod.
+Reverting replaces the current file with the snapshot content (after confirmation) and writes a new snapshot marking the revert.</p>
+<p>The store keeps the 20 most recent snapshots per pod.
+Older ones are pruned automatically.</p>
 <h3>GitHubVersionStore (optional)</h3>
 <p>Uses the GitHub REST API:</p>
 <ul>
@@ -263,8 +313,11 @@ enum PodCategory: String, Codable, CaseIterable {
 <li><p><code>PUT /repos/{owner}/{repo}/contents/{path}</code> — write file with commit message and SHA</p>
 </li>
 </ul>
-<p>Commit messages are short and descriptive. Claude can generate them from the conversation: “Added surface and depth layers for pod 043 (harmony).”</p>
-<p>The GitHub token is stored in the iOS Keychain. The user enters it once in Settings. No local git binary, no SSH keys.</p>
+<p>Commit messages are short and descriptive.
+Claude can generate them from the conversation: “Added surface and depth layers for pod 043 (harmony).”</p>
+<p>The GitHub token is stored in the iOS Keychain.
+The user enters it once in Settings.
+No local git binary, no SSH keys.</p>
 <hr>
 <h2>iCloud File Layout</h2>
 <p>The app’s iCloud container mirrors the existing repo structure:</p>
@@ -280,7 +333,8 @@ config/
   site.css
   logo.svg
 </code></pre>
-<p>The built site (HTML output) lives in a local temp directory, not in iCloud. It is rebuilt on demand and not persisted between app launches.</p>
+<p>The built site (HTML output) lives in a local temp directory, not in iCloud.
+It is rebuilt on demand and not persisted between app launches.</p>
 <hr>
 <h2>MVP Scope</h2>
 <p><strong>In scope for MVP:</strong></p>
@@ -351,6 +405,6 @@ config/
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">Rev 1 · Edited 2026-04-19 03:06</span>
+  <span class="page-end-version" aria-hidden="true">Rev 1 · Edited 2026-04-23 00:36</span>
 </div>
 </body></html>
