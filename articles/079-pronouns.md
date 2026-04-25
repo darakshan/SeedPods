@@ -15,7 +15,7 @@ Pronouns are the lightest possible payload in a communication stack.
 Precisely because they carry almost no descriptive content, they reveal the infrastructure that reference requires.
 A pronoun is an arrow that needs a shared world to land in.
 
-@image(079-pronouns,The manicule — an arrow that needs a shared world to land in,Wikimedia Commons)
+@image(079-pronouns,The manicule — an arrow that needs a shared world to land in,Double-M (CC BY 2.0) / Wikimedia Commons)
 
 Grammar across languages encodes distinctions of presence, relation, and referential density that English has largely flattened — and those distinctions are not ornamental.
 They are reports on what actually populates the field of address.

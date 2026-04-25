@@ -1,5 +1,5 @@
 @title Five Windows, One Room
-@edit-time 2026-04-23T16:54Z
+@edit-time 2026-04-23T17:06Z
 Light, sound, smell, touch, taste — all vibration in space and time.
 Yet each feels utterly unlike the others.
 That gap is the mystery.
@@ -12,8 +12,6 @@ That gap is the mystery.
 Every sense is vibration in space and time, yet red doesn't sound like anything and middle C has no flavor — the physics converges while experience diverges, and that gap between unified substrate and irreducibly distinct qualities is the hard problem at its sharpest.
 
 @section(proto)
-@image(076-fivewindows,Newton's prism — one light many colors,Wikimedia Commons)
-
 The physics is almost embarrassingly unified.
 Light is electromagnetic vibration.
 Sound is pressure waves — air molecules oscillating back and forth.
@@ -22,7 +20,7 @@ Touch is mechanical vibration of skin.
 Temperature is the average kinetic energy of molecules — which is to say, how hard they're vibrating.
 Even proprioception, your sense of where your body is, relies on cells that fire in rhythmic patterns when stretched.
 
-@image(076-fivewindows,Newton's prism — one light many colors,Wikimedia Commons)
+@image(076-fivewindows,Refraction at a prism — one light many paths,Wellcome Collection / Wikimedia Commons)
 
 Vibration in time.
 Pattern in space.

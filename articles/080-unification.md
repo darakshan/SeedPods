@@ -12,7 +12,7 @@ Whitehead placed it at the very foundation of his metaphysics: "The many become 
 Every actual occasion prehends — grasps, feels — prior occasions and synthesizes them into a new unity.
 He called this the "Category of the Ultimate," the rhythm of the universe itself.
 
-@image(080-unification,Two drops becoming one — the boundary dissolves,Wikimedia Commons)
+@image(080-unification,Mercury pours and merges — boundaries dissolve,Bionerd (CC BY 3.0) / Wikimedia Commons)
 
 But Whitehead was describing, not explaining.
 He told us *that* the many become one.

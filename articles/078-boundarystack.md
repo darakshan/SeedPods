@@ -15,7 +15,7 @@ We always think of a boundary as a surface between two touching things — the s
 This is the exterior boundary: inside separated from outside.
 It is spatial, tangible, and well understood (see @link(031) for how physics arrived at the holographic principle through this kind of boundary).
 
-@image(078-boundarystack,The cell membrane — a boundary that is itself a structure,Wikimedia Commons)
+@image(078-boundarystack,The cell membrane — a boundary that is itself a structure,Mariana Ruiz / Wikimedia Commons)
 
 But "inside" has a second meaning.
 Not the spatial interior of a thing — the air inside a bubble, the pulp inside the apple — but the experiential interiority of a thing.

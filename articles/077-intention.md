@@ -13,7 +13,7 @@ The universe demonstrably gives rise to systems with intrinsic intention, which 
 The universe demonstrably gives rise to systems with intrinsic intention — human beings being the most familiar example.
 This establishes something important: intention is not outside physics, but a phenomenon that emerges within it.
 
-@image(077-intention,Reaching for the sun — intention before mind,Wikimedia Commons)
+@image(077-intention,Reaching for the sun — intention before mind,Bruce Fritz / USDA / Wikimedia Commons)
 
 Terrence Deacon's *Incomplete Nature* offers the most rigorous contemporary account of how this happens: constraints propagate through thermodynamic and semiotic levels until "aboutness" — genuine reference to something absent — becomes possible. @ref(deacon, "Terrence Deacon, Incomplete Nature: How Mind Emerged from Matter, W.W.
 Norton, 2012.")
