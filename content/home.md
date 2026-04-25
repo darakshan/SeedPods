@@ -3,15 +3,12 @@
 # SeedPods
 ## Small ideas that change how you see.
 
-SeedPods is a collection of ideas that many of us will find surprising.
-This collection is alive, ever changing, incomplete, and growing.
-It is also the flagship content for the Gossamer app.
+SeedPods is a collection of short essays that trace surprising connections across physics, consciousness, mathematics, biology, and artificial intelligence.
+Each one opens a question rather than closing one.
 
-Each pod is elaborated in several ways — a simple surface of the idea, a deep dive into it, references to works that go even further, a dramatic exposition, and images (or for now, ideas for images).
-SeedPods is a work in progress and I'd love your feedback — reach me at darakshan@glenmuse.com.
+Start with @link(000, A Map of the Territory) — it will orient you and point you toward nine guided trails through the collection.
 
-The pods are organized into seven color-coded categories below.
-Click on any category to see its pods.
-You can find an overview of them all here: @link(0).
+This collection is alive, growing, and incomplete.
+Feedback welcome — reach me at darakshan@glenmuse.com.
 
 @categories

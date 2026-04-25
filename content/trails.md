@@ -1,10 +1,10 @@
 # Trails Through the Archive
 
-*Nine guided reading paths through the same landscape — every idea pod in the archive appears on at least one trail, with pod 003 as the gravitational center where multiple trails converge.*
+*Nine guided reading paths through the same landscape — every idea pod appears on exactly one trail.*
 
 There is no single right order to read these pods.
 But some readers prefer to be led rather than explore.
-Here are nine trails through the archive, each starting from a different question and converging on shared territory.
+Here are nine trails through the archive, each starting from a different question.
 
 <div class="trails-list" markdown="1">
 
@@ -15,19 +15,10 @@ Here are nine trails through the archive, each starting from a different questio
 - <span class="trail-num">1</span> @link(001)
 - <span class="trail-num">27</span> @link(027)
 - <span class="trail-num">21</span> @link(021)
-- <span class="trail-num">2</span> @link(002)
-- <span class="trail-num">7</span> @link(007)
-- <span class="trail-num">8</span> @link(008)
 - <span class="trail-num">3</span> @link(003)
 - <span class="trail-num">11</span> @link(011)
 - <span class="trail-num">9</span> @link(009)
 - <span class="trail-num">12</span> @link(012)
-- <span class="trail-num">34</span> @link(034)
-- <span class="trail-num">6</span> @link(006)
-- <span class="trail-num">22</span> @link(022)
-- <span class="trail-num">25</span> @link(025)
-- <span class="trail-num">16</span> @link(016)
-- <span class="trail-num">73</span> @link(073)
 
 ## 2. The Feeling Trail
 
@@ -36,11 +27,9 @@ Here are nine trails through the archive, each starting from a different questio
 - <span class="trail-num">8</span> @link(008)
 - <span class="trail-num">30</span> @link(030)
 - <span class="trail-num">38</span> @link(038)
-- <span class="trail-num">41</span> @link(041)
 - <span class="trail-num">35</span> @link(035)
 - <span class="trail-num">33</span> @link(033)
 - <span class="trail-num">34</span> @link(034)
-- <span class="trail-num">3</span> @link(003)
 - <span class="trail-num">69</span> @link(069)
 
 ## 3. The Cosmic Trail
@@ -53,16 +42,11 @@ Here are nine trails through the archive, each starting from a different questio
 - <span class="trail-num">28</span> @link(028)
 - <span class="trail-num">32</span> @link(032)
 - <span class="trail-num">36</span> @link(036)
-- <span class="trail-num">9</span> @link(009)
-- <span class="trail-num">11</span> @link(011)
-- <span class="trail-num">3</span> @link(003)
 
 ## 4. The AI Trail
 
 *The urgent contemporary question: what have we built, and what do we owe it?*
 
-- <span class="trail-num">1</span> @link(001)
-- <span class="trail-num">21</span> @link(021)
 - <span class="trail-num">6</span> @link(006)
 - <span class="trail-num">15</span> @link(015)
 - <span class="trail-num">16</span> @link(016)
@@ -98,7 +82,6 @@ Here are nine trails through the archive, each starting from a different questio
 - <span class="trail-num">40</span> @link(040)
 - <span class="trail-num">71</span> @link(071)
 - <span class="trail-num">72</span> @link(072)
-- <span class="trail-num">69</span> @link(069)
 
 ## 7. The Boundary Trail
 
@@ -147,9 +130,3 @@ Here are nine trails through the archive, each starting from a different questio
 - <span class="trail-num">61</span> @link(061)
 
 </div>
-
----
-
-Every idea pod in the archive appears on at least one trail. @link(003) remains the gravitational center — it appears as a destination on the Epistemology, Sensation, and Cosmic trails, marking where the archive's investigations converge on the claim that experience may be fundamental rather than late.
-The @link(000) offers the explorer's approach.
-These trails offer the pilgrim's.
