@@ -1,5 +1,5 @@
 @title Reality Is Made of Stories, Not Atoms
-@edit-time 2026-04-21T03:45Z
+@edit-time 2026-04-25T21:43Z
 The story we agree upon becomes the world we live in.
 @status partial
 @pub-time 2026-03-28T00:00Z
@@ -94,5 +94,3 @@ The world we share is, at bottom, the narrative we have agreed to tell together.
 
 The atoms are indifferent to our agreements.
 But we are not, because the story we converge on becomes the world we inhabit and the selves we become.
-
-@section(provenance)
