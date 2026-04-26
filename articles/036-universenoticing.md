@@ -1,5 +1,5 @@
 @title You Are the Universe Noticing Something
-@edit-time 2026-04-21T03:45Z
+@edit-time 2026-04-26T03:19Z
 Teilhard and Whitehead
 @status rough
 @pub-time 2026-03-14T00:00Z
@@ -9,7 +9,7 @@ Teilhard and Whitehead
 @related 002, 008, 009, 032, 058
 
 @argument
-Whitehead gives the mechanism — experience all the way down, accumulating — and Teilhard gives the vector — a direction that isn't random — so that you are not in the universe observing it but the universe at a particular moment of its self-discovery.
+One philosopher gives the mechanism — experience all the way down, accumulating — and another gives the vector — a direction that isn't random — so that you are not in the universe observing it but the universe at a particular moment of its self-discovery.
 
 @section(surface)
 When you have a thought, something is happening that took fourteen billion years to arrange.

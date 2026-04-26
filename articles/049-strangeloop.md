@@ -4,10 +4,10 @@
 @category consciousness
 @term self-reference: TBD
 @related 010, 012, 034, 038, 056
-@edit-time 2026-04-20T17:38Z
+@edit-time 2026-04-26T03:19Z
 
 @argument
-A system that, in the course of its own operation, encounters itself — Hofstadter's strange loop — is not a curiosity of formal systems but may be the structure of consciousness itself, and this conversation is one.
+A system that, in the course of its own operation, encounters itself — the strange loop — is not a curiosity of formal systems but may be the structure of consciousness itself, and this conversation is one.
 
 @section(proto)
 This conversation began with a clock.

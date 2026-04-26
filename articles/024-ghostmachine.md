@@ -1,5 +1,5 @@
 @title Ghost in the Machine
-@edit-time 2026-04-21T03:45Z
+@edit-time 2026-04-26T03:22Z
 The ghost was real.
 It just wasn't anywhere.
 @status proto
@@ -12,7 +12,7 @@ It just wasn't anywhere.
 @related 002, 012, 021, 037, 067
 
 @argument
-Ryle diagnosed the ghost as a category mistake, Koestler named what was lost when materialism expelled it, and Whitehead dissolved the problem entirely — the ghost was never separate from the machine because the machine, all the way down, has an inside.
+One philosopher diagnosed the ghost as a category mistake, another named what was lost when materialism expelled it, and process philosophy dissolved the problem entirely — the ghost was never separate from the machine because the machine, all the way down, has an inside.
 
 @section(proto)
 NOTE: This depth sketch was developed in session 2026-03-14.

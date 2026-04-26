@@ -1,5 +1,5 @@
 @title The Field Is the Medium of Feeling
-@edit-time 2026-04-21T03:45Z
+@edit-time 2026-04-26T03:30Z
 Physics and Whitehead converged on the same discovery from opposite directions.
 @status draft1
 @pub-time 2026-03-12T00:00Z
@@ -12,7 +12,7 @@ Physics and Whitehead converged on the same discovery from opposite directions.
 @related 003, 007, 016, 017, 029
 
 @argument
-Your nervous system does not merely use the electromagnetic field — it is a structure within it, the same field that carries light, and Whitehead arrived from pure philosophy at the same picture Maxwell found in mathematics: a continuous medium through which events feel each other.
+Your nervous system does not merely use the electromagnetic field — it is a structure within it, the same field that carries light, and process philosophy arrived from pure argument at the same picture mathematical physics found in equations: a continuous medium through which events feel each other.
 
 @section(surface)
 You've been using light as a metaphor your whole life.

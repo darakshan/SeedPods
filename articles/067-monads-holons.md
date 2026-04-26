@@ -5,10 +5,10 @@
 @term holographic-principle: TBD
 @term monads: TBD
 @related 003, 011, 037, 058, 068
-@edit-time 2026-04-20T17:38Z
+@edit-time 2026-04-26T03:19Z
 
 @argument
-Leibniz proposed windowless monads each containing a complete representation of the universe from its own perspective — dismissed as baroque fantasy for three centuries until Maldacena showed that a lower-dimensional boundary theory can encode an entire higher-dimensional interior, which is strikingly close to what the monads were doing all along.
+Three centuries ago a philosopher proposed windowless monads each containing a complete representation of the universe from its own perspective — dismissed as baroque fantasy until a physicist showed that a lower-dimensional boundary theory can encode an entire higher-dimensional interior, which is strikingly close to what the monads were doing all along.
 
 @section(proto)
 Leibniz@ref(leibniz, "Leibniz, G.W.

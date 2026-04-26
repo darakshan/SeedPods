@@ -1,5 +1,5 @@
 @title The Self Is a Pattern, Not a Thing
-@edit-time 2026-04-21T03:45Z
+@edit-time 2026-04-26T00:47Z
 The mystic's insight and the philosopher's proof arrive at the same place.
 @status prelim
 @pub-time 2026-04-14T00:00Z
@@ -11,7 +11,7 @@ The mystic's insight and the philosopher's proof arrive at the same place.
 @related 002, 008, 012, 031, 037
 
 @argument
-Hume looked for the self and found only a bundle of perceptions; the Buddhist looked and found anatta; Whitehead found a society of occasions stable enough to appear permanent — three traditions arriving independently at the same dissolution of the substantial self.
+One philosopher looked for the self and found only a bundle of perceptions; a contemplative tradition looked and found no fixed owner; a process metaphysics found a society of occasions stable enough to appear permanent — three traditions arriving independently at the same dissolution of the substantial self.
 
 @image(004-self,The self as wave pattern — not a fixed point,Wikimedia Commons)
 

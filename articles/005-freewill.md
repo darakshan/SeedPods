@@ -1,5 +1,5 @@
 @title Freedom Is What Nature Does Everywhere
-@edit-time 2026-04-21T03:45Z
+@edit-time 2026-04-26T00:47Z
 Free will is not the exception to physics.
 It is physics, at its most complex and self-aware.
 @status proto
@@ -12,7 +12,7 @@ It is physics, at its most complex and self-aware.
 @related 002, 009, 034, 046, 064
 
 @argument
-Free will is not the exception to physics but its most fundamental feature — Whitehead's creative advance, the irreducible self-determination at the heart of each event, present not only in minds but at every scale where possibility resolves into actuality.
+Free will is not the exception to physics but its most fundamental feature — the irreducible self-determination at the heart of each event, present not only in minds but at every scale where possibility resolves into actuality.
 
 @section(proto)
 In a universe of inert matter governed by deterministic laws, free will is an embarrassment.

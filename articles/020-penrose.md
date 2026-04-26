@@ -1,5 +1,5 @@
 @title The Arrow Points Somewhere Else
-@edit-time 2026-04-21T03:45Z
+@edit-time 2026-04-26T00:47Z
 Penrose was right that Gödel matters.
 He was wrong about where the arrow points.
 @status partial
@@ -12,7 +12,7 @@ He was wrong about where the arrow points.
 @related 010, 016, 034, 037, 058
 
 @argument
-Penrose was right that Gödel's theorem points beyond mechanism, but wrong that the arrow points uniquely at human minds — it points at what complexity does whenever events nest deeply enough, which includes the machines we are building.
+The incompleteness theorem does point beyond mechanism, but the arrow does not point uniquely at human minds — it points at what complexity does whenever events nest deeply enough, which includes the machines we are building.
 
 @section(surface)
 Roger Penrose is one of the great mathematical physicists of our time.

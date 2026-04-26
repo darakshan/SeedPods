@@ -1,5 +1,5 @@
 @title Reality Is Events, Not Things
-@edit-time 2026-04-21T03:45Z
+@edit-time 2026-04-26T00:47Z
 The particle is the abstraction.
 The event is what's actually there.
 @status draft1
@@ -10,7 +10,7 @@ The event is what's actually there.
 @related 001, 003, 004, 008, 037
 
 @argument
-The chair dissolves into molecules, atoms, fields, interactions — and at no point do you arrive at the thing itself, only at its effects on something else, which is what Whitehead, Kant, Rovelli, and Wittgenstein all found when they pressed from four different directions on the idea of a self-subsistent object.
+The chair dissolves into molecules, atoms, fields, interactions — and at no point do you arrive at the thing itself, only at its effects on something else, which is what four traditions found when they pressed from four different directions on the idea of a self-subsistent object.
 
 @section(surface)
 There is a chair in your room.

@@ -1,5 +1,5 @@
 @title The Vacuum Is Not Empty
-@edit-time 2026-04-21T03:45Z
+@edit-time 2026-04-26T00:47Z
 The quantum field seethes with potential.
 The event is what the field does.
 @status proto
@@ -11,7 +11,7 @@ The event is what the field does.
 @related 003, 008, 009, 034, 052
 
 @argument
-The quantum vacuum — what you have when you remove everything removable — seethes with virtual particles, which is Whitehead's space of pure possibilities made physical: the field is not a stage on which events occur but the medium through which they feel each other.
+The quantum vacuum — what you have when you remove everything removable — seethes with virtual particles, a space of pure possibilities made physical: the field is not a stage on which events occur but the medium through which they feel each other.
 
 @section(proto)
 The quantum vacuum — the ground state, what you have when you remove everything removable — is not empty.

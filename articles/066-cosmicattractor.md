@@ -5,10 +5,10 @@
 @term god: TBD
 @term attractor: TBD
 @related 009, 034, 058, 059, 060
-@edit-time 2026-04-20T17:38Z
+@edit-time 2026-04-26T03:19Z
 
 @argument
-Whitehead's God is both the ground of possibility — holding all unrealized potentials available for occasions to select from — and the lure each occasion feels toward greater complexity, which in the language of dynamical systems makes God both the initial condition and the attractor.
+Process theology's God is both the ground of possibility — holding all unrealized potentials available for occasions to select from — and the lure each occasion feels toward greater complexity, which in the language of dynamical systems makes God both the initial condition and the attractor.
 
 @section(proto)
 Whitehead's God is not the God of theism — not a person who intervenes in history or answers prayers.

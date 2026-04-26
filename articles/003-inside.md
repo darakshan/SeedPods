@@ -1,5 +1,5 @@
 @title Everything Has an Inside
-@edit-time 2026-04-21T05:11Z
+@edit-time 2026-04-26T00:47Z
 Not just brains.
 Not just animals.
 Experience may go all the way down.
@@ -10,7 +10,7 @@ Experience may go all the way down.
 @related 001, 002, 008, 031, 069
 
 @argument
-If you walk down the scale from human to insect to atom, at some point you say "obviously nothing is home" — but you cannot say where or why, and Whitehead argued that the question is malformed because experience was never absent, only scaled beyond recognition.
+If you walk down the scale from human to insect to atom, at some point you say "obviously nothing is home" — but you cannot say where or why, and the question may be malformed because experience was never absent, only scaled beyond recognition.
 
 @section(surface)
 Here is what everyone knows: matter is dark inside.

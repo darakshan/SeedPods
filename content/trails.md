@@ -1,16 +1,12 @@
-# Trails Through the Archive
+# Trails
 
-*Nine guided reading paths through the same landscape — every idea pod appears on exactly one trail.*
-
-There is no single right order to read these pods.
-But some readers prefer to be led rather than explore.
-Here are nine trails through the archive, each starting from a different question.
+An overview of the nine trails and the articles in each.
 
 <div class="trails-list" markdown="1">
 
 ## 1. The Epistemology Trail
 
-*How do we know what we know — and what are we getting wrong right now?*
+*How do we know what we know, and what are we getting wrong right now?*
 
 - <span class="trail-num">1</span> @link(001)
 - <span class="trail-num">27</span> @link(027)
@@ -59,7 +55,7 @@ Here are nine trails through the archive, each starting from a different questio
 
 ## 5. The Frameworks Trail
 
-*How do ideas take hold — and what gets lost when they change?*
+*How do ideas take hold, and what gets lost when they change?*
 
 - <span class="trail-num">19</span> @link(019)
 - <span class="trail-num">18</span> @link(018)
@@ -85,7 +81,7 @@ Here are nine trails through the archive, each starting from a different questio
 
 ## 7. The Boundary Trail
 
-*Where does inside meet outside — and what is the boundary made of?*
+*Where does inside meet outside, and what is the boundary made of?*
 
 - <span class="trail-num">31</span> @link(031)
 - <span class="trail-num">68</span> @link(068)

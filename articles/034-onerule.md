@@ -1,5 +1,5 @@
 @title One Rule Is Enough
-@edit-time 2026-04-21T03:45Z
+@edit-time 2026-04-26T03:19Z
 The Single Iterating Point
 @status rough
 @pub-time 2026-03-14T00:00Z
@@ -9,7 +9,7 @@ The Single Iterating Point
 @related 002, 007, 009, 003, 011
 
 @argument
-The Mandelbrot set's infinite complexity was never added — it accumulated through iteration of a single formula, the same intuition behind Wheeler's one-electron universe and Whitehead's occasions each grasping the previous.
+The Mandelbrot set's infinite complexity was never added — it accumulated through iteration of a single formula, the same intuition behind the one-electron universe and occasions each grasping the previous.
 
 @section(surface)
 The Mandelbrot set is computed one point at a time.
