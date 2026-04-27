@@ -4,20 +4,6 @@ The phrase that flatters the present and buries the past, and will be used again
 @status draft1
 @pub-time 2026-03-12T00:00Z
 @category knowledge
-@term history-of-science: TBD
-@term epistemology: TBD
-@term rhetoric: TBD
-@term humility: TBD
-@term language: TBD
-@term paradigm: Thomas Kuhn's term for the framework of assumptions, methods, and exemplary problems that defines normal science in a given period. The paradigm is not a theory, it is the background against which theories are tested. Scientists inside a paradigm generally cannot see it as a paradigm; it simply looks like reality.
-@term normal science: Kuhn's term for the day-to-day work of science inside a stable paradigm: puzzle-solving, refinement, extension. Anomalies are noticed but not taken as refutations unless they accumulate to crisis point.
-@term paradigm shift: the revolutionary replacement of one framework by another. Not cumulative addition but gestalt switch, the new framework sees the same data differently, not more of it. From The Structure of Scientific Revolutions (1962).
-@term presentism (epistemological): the implicit assumption that the present state of knowledge is the relevant endpoint. "Now we know" is presentism's rhetorical form.
-@term whig history of science: the tendency to narrate the history of science as a story of steady progress toward current knowledge, reading the past as a series of steps toward us. Named by Herbert Butterfield (1931). "We used to think / now we know" is its verbal formula.
-@term animism: the attribution of experience, agency, or spirit to natural phenomena. Dismissed by the materialist framework as projection or superstition. The dismissal may have been overconfident about the phenomenon, not just the mechanism.
-@term vitalism: the doctrine that living organisms contain a special life-force absent from non-living matter. Dismissed when mechanistic biology showed chemical processes suffice. The dismissal was correct about the mechanism; the phenomenon it was tracking, that living organization is qualitatively distinct, was real.
-@term caloric: the 18th-century theory that heat is a subtle fluid. Developed by Lavoisier; displaced by kinetic theory. Not a failure of intelligence, a triumph of science eventually superseded.
-@term quantum field: in modern physics, the fundamental layer of reality. Particles are excitations of underlying fields. The quantum vacuum seethes with potential.
 @related 003, 012, 015, 024, 047
 
 @argument
@@ -53,7 +39,7 @@ It was not a mistake.
 It was the best available map.
 It served them well until it didn't.
 
-"We used to think heat was a fluid called caloric."
+"We used to think heat was a fluid called @term(caloric, "the 18th-century theory that heat is a subtle fluid. Developed by Lavoisier; displaced by kinetic theory. Not a failure of intelligence, a triumph of science eventually superseded.")."
 Again, not stupid.
 Caloric theory was elegant.
 It explained why heat flowed from hot to cold, why things warmed up when you rubbed them, why steam engines worked.
@@ -138,7 +124,7 @@ Third, and this is the hidden cost, it discards the phenomenon along with the me
 When a framework is dismissed, everything associated with it tends to go together: the wrong explanation and whatever the wrong explanation was reaching for.
 The loss is rarely noticed because the new framework, in its confidence, doesn't look back.
 
-Consider animism, the belief, found in virtually every pre-scientific culture across human history, that the natural world has some form of inside to it.
+Consider @term(animism, "the attribution of experience, agency, or spirit to natural phenomena. Dismissed by the materialist framework as projection or superstition. The dismissal may have been overconfident about the phenomenon, not just the mechanism."), the belief, found in virtually every pre-scientific culture across human history, that the natural world has some form of inside to it.
 That rivers and fire and the living world carry something like experience or agency or presence.
 "We used to think nature was alive.
 Now we know it's chemistry and physics."
@@ -155,7 +141,7 @@ The animist had the phenomenon.
 The mechanism was mythological.
 "Now we know" discarded both without distinguishing between them.
 
-Consider vitalism, the doctrine that living things contain a special life-force absent from non-living matter.
+Consider @term(vitalism, "the doctrine that living organisms contain a special life-force absent from non-living matter. Dismissed when mechanistic biology showed chemical processes suffice. The dismissal was correct about the mechanism; the phenomenon it was tracking, that living organization is qualitatively distinct, was real."), the doctrine that living things contain a special life-force absent from non-living matter.
 Dismissed comprehensively when 20th-century biology reduced life to chemistry.
 But Maturana and Varela's@ref(maturana, "Maturana, H. and Varela, F. Autopoiesis and Cognition.
 Reidel, 1980.
@@ -169,10 +155,10 @@ The pattern is consistent: the mechanism was wrong, the phenomenon was real, and
 Thomas Kuhn@ref(kuhn, "Kuhn, T.S.
 The Structure of Scientific Revolutions.
 University of Chicago Press, 1962.
-The foundational text on paradigms and scientific revolutions.") observed that scientists inside a paradigm do not experience themselves as being inside a paradigm.
+The foundational text on paradigms and scientific revolutions.") observed that scientists inside a @term(paradigm, "Thomas Kuhn's term for the framework of assumptions, methods, and exemplary problems that defines normal science in a given period. The paradigm is not a theory, it is the background against which theories are tested. Scientists inside a paradigm generally cannot see it as a paradigm; it simply looks like reality.") do not experience themselves as being inside a paradigm.
 The historian Herbert Butterfield@ref(butterfield, "Butterfield, H. The Whig Interpretation of History.
 Bell, 1931.
-Named the tendency to read history as progress toward the present.") had already named the broader syndrome: the Whig interpretation of history, the habit of reading the past as a series of steps toward us.
+Named the tendency to read history as progress toward the present.") had already named the broader syndrome: the @term(Whig interpretation of history, whig history of science, "the tendency to narrate the history of science as a story of steady progress toward current knowledge, reading the past as a series of steps toward us. Named by Herbert Butterfield (1931\). \"We used to think / now we know\" is its verbal formula."), the habit of reading the past as a series of steps toward us.
 The framework is not seen, it is seen through.
 It simply looks like reality.
 This means the confident present-tense of "now we know" is structurally unavoidable, we cannot see our own framework as a framework, and always premature.

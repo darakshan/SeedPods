@@ -2,14 +2,11 @@
 @status proto
 @pub-time 2026-03-15T00:00Z
 @category biology
-@term recognition: TBD
-@term boundary: TBD
-@term interiority: TBD
 @related 051, 067, 031, 003, 037
 @edit-time 2026-04-27T01:08Z
 
 @argument
-A child stops for a soap bubble not from puzzlement but from recognition, the bubble is pure surface with no hidden interior, which is the holographic principle made visible, and the child is seeing the structure of her own existence without knowing it.
+A child stops for a soap bubble not from puzzlement but from @term(recognition), the bubble is pure surface with no hidden interior, which is the holographic principle made visible, and the child is seeing the structure of her own existence without knowing it.
 
 @section(proto)
 Children stop for soap bubbles.
@@ -23,10 +20,10 @@ Not consciously.
 Not propositionally.
 But structurally, the bubble shows us something about what we are.
 
-If the holographic principle@ref(susskind, "Susskind, L. The World as a Hologram (1995).
+If the @term(holographic principle, Holographic principle, "The information in a region is encoded on its boundary; the interior is what the boundary does.")@ref(susskind, "Susskind, L. The World as a Hologram (1995).
 't Hooft, G. Dimensional reduction in quantum gravity (1993).") is correct, then every bounded region of spacetime is a bubble in a precise sense.
 All the information in the interior is encoded on the surface.
-The interiority is not separate from the boundary, it is what the boundary does.
+The @term(interiority) is not separate from the @term(boundary), it is what the boundary does.
 The within of things is the surface of things, seen from inside.
 
 A soap bubble makes this visible.
@@ -40,4 +37,3 @@ She doesn't know this.
 But the stillness is not puzzlement.
 It is recognition.
 
-@term Holographic principle: The information in a region is encoded on its boundary; the interior is what the boundary does.

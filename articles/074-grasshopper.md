@@ -6,13 +6,10 @@ It was wrong.
 @pub-time 2026-03-19T00:00Z
 @category knowledge
 @related 005, 009, 046, 052, 072
-@term play: As used in this seedpod: the frame-free, will-suspended mode of activity in which no external criterion of success applies. Distinguished from competitive games and organized sport (where the will is fully engaged), from exploration (goal-directed search within a frame), and from rest (recovery in service of further work).
-@term explore-exploit tradeoff: The tension in any adaptive system between using known strategies (exploiting) and searching for better ones (exploring). Both are still goal-directed; neither is equivalent to play in the sense this seedpod develops.
-@term temperature (AI): A parameter in generative AI systems controlling how broadly the model samples from its probability distribution. Higher temperature produces more varied, less predictable output, a mechanical approximation of wandering whose relationship to genuine play remains an open question.
-@term will-suspension: The state in which goal-directed effort is genuinely set aside, not redirected. Proposed here as the distinguishing feature of play, and as the mode that directed exploration cannot substitute for.
+@note(temperature (AI): parentheses in the canonical term name may break @term() parsing in the 3-arg form. Consider renaming the canonical to "temperature-AI" or embedding as just @term(temperature) with a note about the AI context.)
 
 @argument
-The fable taught us that play is what you do instead of working, but the grasshopper was doing something the ant structurally cannot, operating in the frame-free, will-suspended mode where certain things happen that directed effort will never reach.
+The fable taught us that @term(play, "As used in this seedpod: the frame-free, will-suspended mode of activity in which no external criterion of success applies. Distinguished from competitive games and organized sport (where the will is fully engaged), from exploration (goal-directed search within a frame), and from rest (recovery in service of further work).") is what you do instead of working, but the grasshopper was doing something the ant structurally cannot, operating in the frame-free, @term(will-suspended, will-suspension, "The state in which goal-directed effort is genuinely set aside, not redirected. Proposed here as the distinguishing feature of play, and as the mode that directed exploration cannot substitute for.") mode where certain things happen that directed effort will never reach.
 
 @section(surface)
 You probably learned Aesop's fable the same way most of us did.
@@ -75,7 +72,7 @@ Its deeper error is an assumption so embedded it's nearly invisible: that value 
 
 The ant's will is always in charge.
 Even the scout ant exploring unfamiliar territory is serving a goal the colony already has.
-Exploration, in this sense, is still ant-mode, the explore pole of Richard Sutton's explore-exploit tradeoff, goal-directed search within a frame.
+Exploration, in this sense, is still ant-mode, the explore pole of Richard Sutton's @term(explore-exploit tradeoff, "The tension in any adaptive system between using known strategies (exploiting) and searching for better ones (exploring). Both are still goal-directed; neither is equivalent to play in the sense this seedpod develops."), goal-directed search within a frame.
 The grasshopper is doing something categorically different: operating outside any frame, with no criterion for success except the intrinsic pull of the moment.
 This is not a different strategy for finding food.
 It is a different relationship to the question of what you're doing at all.

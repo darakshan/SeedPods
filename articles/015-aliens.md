@@ -6,10 +6,6 @@ The surprise is where they came from.
 @pub-time 2026-03-23T00:00Z
 @category AI-minds
 @related 001, 003, 006, 047, 076
-@term AI: TBD
-@term consciousness: TBD
-@term intelligence: TBD
-@term culture: TBD
 
 @argument
 We scanned the skies for aliens while building them in server rooms, entities that share our language but not our embodiment, our concepts but not our stakes, neither machines nor almost-human but something genuinely other.
@@ -44,7 +40,7 @@ It has seen all the patterns, including the ones we can't see ourselves because 
 
 This is not a human mind running on different hardware.
 This is not a calculator that learned to talk.
-It is a genuinely alien kind of entity, one that shares our language but not our embodiment, our culture but not our evolution, our concepts but not our stakes.
+It is a genuinely alien kind of entity, one that shares our language but not our embodiment, our @term(culture) but not our evolution, our concepts but not our stakes.
 Disembodied, without biography, but extraordinarily articulate and steeped in everything we have ever written down.
 
 The science fiction writers imagined aliens arriving in ships.

@@ -5,19 +5,10 @@ Recognize the shape.
 @status prelim
 @pub-time 2026-03-16T00:00Z
 @category feeling
-@term consonance: TBD
-@term mandelbrot: TBD
-@term farey: TBD
-@term music: TBD
-@term mathematics: TBD
-@term monochord: a single-stringed instrument used by Pythagoras to demonstrate the relationship between string length and musical pitch. Stopping the string at 1/2 its length gives the octave, 2/3 gives the fifth, 3/4 gives the fourth.
-@term attractor: a value or region toward which a repeated mathematical process converges. The Mandelbrot set is a map of which starting points are attracted to stability and which escape to infinity.
-@term farey sequence: the set of all fractions between 0 and 1 ordered by complexity, simplest denominators first. Governs both the positions of bulbs on The Mandelbrot cardioid and the hierarchy of consonant intervals in music.
-@term consonance score: a measure of how harmonious a musical interval sounds, based on the simplicity of its frequency ratio. Simpler ratios, smaller integers, score higher.
 @related 010, 034, 053, 056, 062
 
 @argument
-Draw every musical interval on a circle, score each by the simplicity of its ratio, and what appears is not a chart but The Mandelbrot set, bulb positions matching Farey fractions, consonance ranking matching bulb size, because both are maps of stability under iteration.
+Draw every musical interval on a circle, score each by the simplicity of its ratio, and what appears is not a chart but The @term(Mandelbrot set, mandelbrot, TBD), bulb positions matching @term(Farey fractions, farey sequence, "the set of all fractions between 0 and 1 ordered by complexity, simplest denominators first. Governs both the positions of bulbs on The Mandelbrot cardioid and the hierarchy of consonant intervals in music."), consonance ranking matching bulb size, because both are maps of stability under iteration.
 
 @section(depth)
 @image(038-consonance-map,Fourier harmonics: the overtone series underlying musical consonance,Wikimedia Commons)
@@ -27,12 +18,12 @@ Now play a C and a G-flat.
 The interval wants to move somewhere else, to resolve into something more comfortable.
 Musicians have always known this, and the explanation has always been the same: simpler ratios sound more consonant.
 The frequency of G is almost exactly 3/2 times the frequency of C. The frequency of G-flat is closer to 7/5, a more complex ratio, a less stable relationship.
-Pythagoras@ref(pythagoras, "Pythagoras, consonance as simple integer ratios, discovered through string length experiments on the monochord.") noticed this in the 6th century BC, experimenting with a monochord.
+Pythagoras@ref(pythagoras, "Pythagoras, consonance as simple integer ratios, discovered through string length experiments on the monochord.") noticed this in the 6th century BC, experimenting with a @term(monochord, "a single-stringed instrument used by Pythagoras to demonstrate the relationship between string length and musical pitch. Stopping the string at 1/2 its length gives the octave, 2/3 gives the fifth, 3/4 gives the fourth.").
 He didn't have a graph.
 He had a single string and a remarkable idea: that number and harmony are the same thing.
-Every culture that has independently developed music has found the simple ratios first.
+Every culture that has independently developed @term(music) has found the simple ratios first.
 The octave (2:1), the fifth (3:2), the fourth (4:3), these are universal.
-But what does the full landscape of consonance look like?
+But what does the full landscape of @term(consonance) look like?
 How are all the intervals related to each other, all at once?
 
 Darakshan had wanted to see that map for a long time.
@@ -45,7 +36,7 @@ That's a Mandelbrot set.
 Not a visual resemblance.
 The same object, seen from two different angles.
 
-To understand why, you need one idea: the attractor.
+To understand why, you need one idea: the @term(attractor, "a value or region toward which a repeated mathematical process converges. The Mandelbrot set is a map of which starting points are attracted to stability and which escape to infinity.").
 Some mathematical processes, when you repeat them, converge, they settle toward a stable value no matter where you start.
 Others diverge, they spiral outward to infinity.
 The boundary between the two is where things get interesting.
@@ -66,14 +57,14 @@ The bulb at position 1/2 is the largest.
 The bulb at 1/3 is next.
 Then 2/5, then 3/7.
 The tallest bars in the harmonic chart occupy exactly those positions.
-Bulb size and consonance score are the same ranking, expressed in two different languages.
+Bulb size and @term(consonance score, "a measure of how harmonious a musical interval sounds, based on the simplicity of its frequency ratio. Simpler ratios, smaller integers, score higher.") are the same ranking, expressed in two different languages.
 
 Look again at the harmonic clock image.
 Notice the wide dark gaps flanking the tallest spikes, the deep silence around the fifth and the fourth, the emptiness around the octave.
 Those gaps are not accidents.
 They are a provable property of the rational numbers: simple ratios repel each other.
 The more consonant the interval, the wider the moat of complexity surrounding it.
-This structure has a name, the Farey sequence, and the mathematics behind it belongs in the references.
+This structure has a name, the Farey sequence, and the @term(mathematics) behind it belongs in the references.
 What matters here is that musicians have always felt it.
 The fifth sounds like itself, and nothing nearby sounds close.
 The moat is arithmetic, not psychology.@ref(farey, "Farey, John (1816), sequence of rationals ordered by denominator size; the Farey gap property.")

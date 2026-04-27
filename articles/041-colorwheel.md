@@ -4,20 +4,10 @@ The mind closes the line into a circle.
 @status prelim
 @pub-time 2026-03-16T00:00Z
 @category feeling
-@term color: TBD
-@term perception: TBD
-@term evolution: TBD
-@term neuroscience: TBD
-@term opponent processing: the transformation performed by the second layer of the retina, recombining the three raw cone signals into two opponent channels, red vs green and blue vs yellow, before any signal leaves the eye.
-@term color constancy: the perceptual ability to see a surface as having a stable color across different lighting conditions. Believed to be a primary function of the blue-yellow opponent channel.
-@term trichromacy: color vision based on three cone types. Most mammals are dichromats; primates re-evolved trichromacy, probably in connection with the red-green opponent axis.
-@term unique hues: the four perceptual primaries delivered by opponent processing, red, yellow, green, blue, which feel irreducible to any mixture. No color appears both reddish and greenish, or both bluish and yellowish.
-@term additive color mixing: mixing light of different wavelengths, where combining red and green produces yellow. The primary colors at this level are red, green, and blue.
-@term subtractive color mixing: mixing pigments, where each pigment absorbs certain wavelengths. The primary colors at this level are closer to cyan, magenta, and yellow. The painter's intuition of red, yellow, blue is an approximation of this layer combined with the opponent channel layer above it.
 @related 013, 016, 026, 029, 045
 
 @argument
-The visible spectrum is a line, but the mind closes it into a circle by inventing colors, purple, magenta, that correspond to no wavelength, and this closure happens before the brain is even informed, in retinal tissue that is embryologically brain.
+The visible spectrum is a line, but the mind closes it into a circle by inventing @term(colors, color, TBD), purple, magenta, that correspond to no wavelength, and this closure happens before the brain is even informed, in retinal tissue that is embryologically brain.
 
 @section(depth)
 @image(041-colorwheel,Munsell hue wheel: the mind closes the spectrum into a circle,Wikimedia Commons)
@@ -36,7 +26,7 @@ The mind does to the visual spectrum what it does to the musical spectrum: finds
 This happens before your brain is ever informed about what you are seeing.
 At the first layer of your retina, three cone types, roughly tuned to red, green, and blue, receive light.
 But they do not forward those raw signals.
-At the very next layer, still within the retina, those three signals are immediately recombined into two opponent channels: red against green, and blue against yellow, a transformation first identified by Ewald Hering@ref(hering, "Hering, Ewald, opponent process theory of color vision, 1892.
+At the very next layer, still within the retina, those three signals are immediately recombined into two @term(opponent channels, opponent processing, "the transformation performed by the second layer of the retina, recombining the three raw cone signals into two opponent channels, red vs green and blue vs yellow, before any signal leaves the eye."): red against green, and blue against yellow, a transformation first identified by Ewald Hering@ref(hering, "Hering, Ewald, opponent process theory of color vision, 1892.
 The original proposal that color experience is organized around opposing pairs.") in 1892.
 By the time visual information reaches the optic nerve, the world has already been transformed.
 The retina is not a camera.
@@ -45,7 +35,7 @@ And, here is the surprise, the retina is not separate from the brain.
 Embryologically it is brain tissue, an outgrowth of the developing brain that migrated into the eye.
 The thinking started earlier than you thought.
 
-That second retinal layer delivers four perceptual endpoints: red, yellow, green, blue.
+That second retinal layer delivers four @term(perceptual endpoints, unique hues, "the four perceptual primaries delivered by opponent processing, red, yellow, green, blue, which feel irreducible to any mixture. No color appears both reddish and greenish, or both bluish and yellowish."): red, yellow, green, blue.
 Not three, four.
 And not the painter's red, yellow, blue, nor the physicist's red, green, blue, but all four, as the natural output of two opponent axes.
 You can verify this with your own eyes.
@@ -66,7 +56,7 @@ Ask a physicist what the primary colors are and they say red, green, blue, the c
 Ask a painter and they say red, yellow, blue, closer to the opponent layer, though not quite right.
 Both are describing real phenomena.
 The apparent contradiction dissolves once you know which layer you are standing on.
-At least four distinct levels govern color experience: physics determines how wavelengths of light combine; chemistry determines how pigment molecules absorb and reflect, which is why mixing light and mixing paint follow different rules; the first retinal layer provides the three cone types that sample the result; and the second retinal layer recombines those samples into the opponent channels that deliver perceptual experience.
+At least four distinct levels govern color experience: physics determines how wavelengths of light combine; chemistry determines how pigment molecules absorb and reflect, which is why @term(mixing light, additive color mixing, "mixing light of different wavelengths, where combining red and green produces yellow. The primary colors at this level are red, green, and blue.") and @term(mixing paint, subtractive color mixing, "mixing pigments, where each pigment absorbs certain wavelengths. The primary colors at this level are closer to cyan, magenta, and yellow. The painter's intuition of red, yellow, blue is an approximation of this layer combined with the opponent channel layer above it.") follow different rules; the first retinal layer provides the three cone types that sample the result; and the second retinal layer recombines those samples into the opponent channels that deliver perceptual experience.
 Each level is real.
 Each is incomplete without the others.
 [026]
@@ -78,12 +68,12 @@ Mollon@ref(mollon, "Mollon, J.D.
 Journal of Experimental Biology, 1989.
 The fruit and co-evolution hypothesis.") among others: the red-green axis may record one of the longest conversations in the history of life, plants developing color to attract animals, animals refining the axis to read it, each driving the other forward.
 Flowers and fruit did not merely happen to be red and yellow.
-They evolved to be seen.
+They @term(evolved, evolution, TBD) to be seen.
 And the eye evolved to see them.
 You are the growing tip of that conversation.
 The blue-yellow axis may solve a different problem: factoring out the color of the light source so that surfaces appear constant across changing light conditions.
 You see a red apple as red in sunlight and in shadow.
-This is called color constancy, and it may be what the blue-yellow channel is largely for, discounting the sky so the world stays legible beneath it.
+This is called @term(color constancy, "the perceptual ability to see a surface as having a stable color across different lighting conditions. Believed to be a primary function of the blue-yellow opponent channel."), and it may be what the blue-yellow channel is largely for, discounting the sky so the world stays legible beneath it.
 
 This hypothesis gains weight from an unexpected direction.
 When deep neural networks are trained on natural images with no instruction about color, their first-layer filters spontaneously develop the same opponent channels.

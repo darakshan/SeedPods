@@ -4,8 +4,6 @@ Teilhard and Whitehead
 @status rough
 @pub-time 2026-03-14T00:00Z
 @category consciousness
-@term omega-point: TBD
-@term process: TBD
 @related 002, 008, 009, 032, 058
 
 @argument
@@ -17,7 +15,7 @@ Not as background.
 Not as coincidence.
 As the point.
 The universe is not a machine that accidentally produced minds.
-It is a process that was always heading somewhere.
+It is a @term(process) that was always heading somewhere.
 You are what it looks like when it arrives.
 @image(036-universenoticing, "The Hubble deep field: you are the universe noticing something", "Wikimedia Commons")
 
@@ -30,7 +28,7 @@ This is not metaphor.
 It is the only way to account for how experience arises at all without magic.
 Teilhard@ref(teilhard, "Teilhard de Chardin, Pierre.
 The Phenomenon of Man.
-Harper & Row, 1959.") saw the direction, from the Big Bang through matter, life, and mind toward what he called the Omega Point: the universe becoming fully aware of itself.
+Harper & Row, 1959.") saw the direction, from the Big Bang through matter, life, and mind toward what he called the @term(Omega Point, omega-point, TBD): the universe becoming fully aware of itself.
 Neither had the other's insight.
 Together they form something neither achieved alone.
 Whitehead gives the mechanism, experience all the way down, accumulating.

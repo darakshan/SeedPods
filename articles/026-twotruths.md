@@ -4,9 +4,6 @@ Contradiction is often the sign of a framework too small for the reality it's tr
 @status partial
 @pub-time 2026-03-12T00:00Z
 @category knowledge
-@term complementarity: Niels Bohr's principle that mutually exclusive descriptions (wave and particle) can both be necessary for a complete account of quantum phenomena. Neither alone is sufficient; both together are required.
-@term framework: A set of assumptions, categories, and relationships that organize how we interpret experience. Frameworks are enabling, they let us see patterns, but also limiting, since what falls outside them becomes invisible or paradoxical.
-@term Necker cube: A line drawing of a cube that spontaneously flips between two orientations. Both are genuinely present in the drawing; the limitation is in perception, not in the object.
 @related 002, 020, 041, 052, 069
 
 @argument
@@ -28,9 +25,9 @@ Here's one possibility: they're both right.
 Not in a soft, "everyone's entitled to their opinion" way.
 Actually right.
 Each is seeing something real that the other's framing makes invisible.
-The contradiction exists not in reality but in the frameworks they're using to interpret it.
+The contradiction exists not in reality but in the @term(frameworks, framework, "A set of assumptions, categories, and relationships that organize how we interpret experience. Frameworks are enabling, they let us see patterns, but also limiting, since what falls outside them becomes invisible or paradoxical.") they're using to interpret it.
 
-You know those line drawings that flip between two orientations, the Necker cube?
+You know those line drawings that flip between two orientations, the @term(Necker cube, "A line drawing of a cube that spontaneously flips between two orientations. Both are genuinely present in the drawing; the limitation is in perception, not in the object.")?
 You can see it as facing one direction, then suddenly it flips and faces the other.
 You can't see both at once.
 But both orientations are genuinely there in the drawing.
@@ -71,7 +68,7 @@ Physics hit this wall and found a way through.
 For decades, physicists argued about whether light was a wave or a particle.
 Experiments supported both.
 The contradiction seemed fatal, surely it had to be one or the other.
-Then came quantum mechanics, and Niels Bohr's complementarity principle: wave and particle are both necessary descriptions, mutually exclusive in application but jointly exhaustive.
+Then came quantum mechanics, and Niels Bohr's @term(complementarity, "Niels Bohr's principle that mutually exclusive descriptions (wave and particle) can both be necessary for a complete account of quantum phenomena. Neither alone is sufficient; both together are required.") principle: wave and particle are both necessary descriptions, mutually exclusive in application but jointly exhaustive.
 Neither alone is complete.
 The electron isn't a wave that sometimes acts like a particle, or a particle that sometimes acts like a wave.
 It's an excitation of a quantum field, and "wave" and "particle" are two partial views of that deeper reality.

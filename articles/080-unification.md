@@ -10,7 +10,7 @@ Whitehead called it "the many become one and are increased by one" and treated i
 
 Whitehead placed it at the very foundation of his metaphysics: "The many become one and are increased by one." @ref(whitehead-1, "Alfred North Whitehead. Process and Reality: An Essay in Cosmology. Macmillan, 1929.")
 Every actual occasion prehends, grasps, feels, prior occasions and synthesizes them into a new unity.
-He called this the "Category of the Ultimate," the rhythm of the universe itself.
+He called this the @term(Category of the Ultimate, "Whitehead's name for the foundational rhythm of reality, creativity, the many, and the one, in which the many become one and are increased by one."), the rhythm of the universe itself.
 
 @image(080-unification,Mercury pours and merges, boundaries dissolve,Bionerd (CC BY 3.0) / Wikimedia Commons)
 
@@ -18,7 +18,7 @@ But Whitehead was describing, not explaining.
 He told us *that* the many become one.
 He did not tell us *how*.
 
-The combination problem is supposed to be the fatal objection to panpsychism, and it may be.
+The @term(combination problem, "The challenge of explaining how micro-level experiences (if panpsychism is true) combine to form the unified macro-level experience of a conscious subject. William James considered it fatal to panpsychism; it remains the hardest open question for the position.") is supposed to be the fatal objection to panpsychism, and it may be.
 William James stated it in 1890 @ref(james-1, "William James. The Principles of Psychology, Chapter 6: 'The Mind-Stuff Theory.' Henry Holt and Company, 1890."): if you have twelve separate feelings, you don't automatically get a thirteenth feeling that is their combination.
 Each feeling is its own thing.
 Adding them together gives you twelve feelings, not one.
@@ -32,8 +32,8 @@ A pile of sand is in the same bucket, and it is not one experience.
 What makes the difference?
 What is it about certain physical configurations that turns a collection into a unity?
 
-Whitehead's prehension says each new occasion *grasps* the old ones.
-Tononi's Integrated Information Theory @ref(tononi-1, "Giulio Tononi. 'An Information Integration Theory of Consciousness.' BMC Neuroscience 5:42, 2004.") says consciousness corresponds to integrated information, a system is conscious to the degree its parts are informationally bound in a way that can't be decomposed, measured as Φ (phi).
+Whitehead's @term(prehension, "Whitehead's term for the process by which each actual occasion grasps, feels, and incorporates prior occasions into a new unity, the mechanism by which the many become one.") says each new occasion *grasps* the old ones.
+Tononi's Integrated Information Theory @ref(tononi-1, "Giulio Tononi. 'An Information Integration Theory of Consciousness.' BMC Neuroscience 5:42, 2004.") says consciousness corresponds to @term(integrated information, integrated information (Φ), "Tononi's measure of the degree to which a system's parts are informationally integrated in a way that cannot be decomposed into independent subsystems; proposed as a measure of consciousness."), a system is conscious to the degree its parts are informationally bound in a way that can't be decomposed, measured as Φ (phi).
 Both are pointing at the same intuition: that unification is an active process, not a passive sum.
 But neither explains what the process *is* at the physical level.
 
@@ -61,7 +61,7 @@ The hard problem isn't how separate experiences combine; it's how one experience
 Just as dissociative identity disorder produces distinct alters from a single psyche, the universe may produce distinct minds from a single experiential field.
 
 This reversal has a longer lineage than Kastrup.
-Henri Bergson argued in 1896 @ref(bergson-1, "Henri Bergson. Matter and Memory. Zone Books, 1896/1991.") that the brain is not a generator of consciousness but a *reducing valve*, it selects from a much larger field of awareness only what is useful for survival.
+Henri Bergson argued in 1896 @ref(bergson-1, "Henri Bergson. Matter and Memory. Zone Books, 1896/1991.") that the brain is not a generator of consciousness but a *@term(reducing valve, "Bergson's and Huxley's metaphor for the brain as a filter that limits a larger field of consciousness to what is useful for survival, rather than generating consciousness from neural activity.")*, it selects from a much larger field of awareness only what is useful for survival.
 William James arrived at a similar position in his Gifford Lectures @ref(james-2, "William James. The Varieties of Religious Experience: A Study in Human Nature (Gifford Lectures). Longmans, Green, and Co., 1902.").
 And Aldous Huxley @ref(huxley-1, "Aldous Huxley. The Doors of Perception. Chatto & Windus, 1954."), writing after his mescaline experience in *The Doors of Perception*, made the idea vivid: the drug weakens the valve, and more of reality floods in.
 The title comes from Blake, "If the doors of perception were cleansed every thing would appear to man as it is, Infinite."
@@ -119,8 +119,3 @@ The electrons enter a shared state.
 The many literally become one.
 Whatever interiority each drop had is now a single interiority, not because the experiences were added, but because the wall between them ceased to exist.
 
-@term combination problem: The challenge of explaining how micro-level experiences (if panpsychism is true) combine to form the unified macro-level experience of a conscious subject. William James considered it fatal to panpsychism; it remains the hardest open question for the position.
-@term reducing valve: Bergson's and Huxley's metaphor for the brain as a filter that limits a larger field of consciousness to what is useful for survival, rather than generating consciousness from neural activity.
-@term integrated information (Φ): Tononi's measure of the degree to which a system's parts are informationally integrated in a way that cannot be decomposed into independent subsystems; proposed as a measure of consciousness.
-@term prehension: Whitehead's term for the process by which each actual occasion grasps, feels, and incorporates prior occasions into a new unity, the mechanism by which the many become one.
-@term Category of the Ultimate: Whitehead's name for the foundational rhythm of reality, creativity, the many, and the one, in which the many become one and are increased by one.

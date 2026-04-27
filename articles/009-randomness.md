@@ -4,11 +4,6 @@ Galaxies, cells, brains, all tracing back to a random fluctuation in a nearly un
 @status draft1
 @pub-time 2026-03-13T00:00Z
 @category biology
-@term physics: TBD
-@term emergence: TBD
-@term complexity: TBD
-@term evolution: TBD
-@term symmetry-breaking: TBD
 @related 005, 007, 011, 018, 034
 
 @argument
@@ -76,7 +71,7 @@ The randomness is the designer.
 It just works in six directions at once.
 
 A kaleidoscope is just mirrors enforcing symmetry on random tumbling fragments. Whatever falls in, the symmetry transforms into something beautiful.
-A snowflake is the same trick, except the mirrors are physics.
+A snowflake is the same trick, except the mirrors are @term(physics).
 The randomness is real.
 The symmetry is also real.
 And the beauty is what happens when they meet.
@@ -101,7 +96,7 @@ It is the imperfection, the random mistake, that made everything.
 @exercise(Find something intricate near you: a frost pattern on glass, a crack in old plaster, the branching of a tree against the sky. Don't look for the designer. Look for the original asymmetry, the tiny difference that a force found and refused to leave alone. It's always there. Structure is what randomness does when you give it enough time and something to push against.)
 
 @section(depth)
-The technical term for what the Surface was describing is "spontaneous symmetry breaking."
+The technical term for what the Surface was describing is "@term(spontaneous symmetry breaking, Spontaneous symmetry breaking, "the process by which a system in a perfectly symmetric but unstable state falls into an asymmetric lower-energy state through random perturbation, and stays there. The mechanism behind crystal formation, dune building, and the large-scale structure of the universe.")."
 A system sits in a state that is perfectly symmetric but unstable, like a ball balanced on the peak of a hill.
 Any random perturbation causes it to fall into a lower-energy asymmetric state and stay there.
 The universe does this at every scale, from the Higgs field in the first moments after the Big Bang to the formation of every crystal, every dune, every weather system.
@@ -118,7 +113,7 @@ Remove the rules and you have noise.
 Remove the freedom and you have a recording.
 Jazz is what happens when they are both fully present simultaneously.
 
-Evolution is jazz slowed to geological time.
+@term(Evolution, evolution, TBD) is jazz slowed to geological time.
 Mutation is random: copying errors, cosmic ray hits, chemical accidents.
 Natural selection is the rule that won't let small advantages stay small.
 The creationist intuition that pure randomness couldn't build an eye is actually correct.
@@ -129,20 +124,20 @@ Stuart Kauffman@footnote(@ref(kauffman, "Kauffman, S. The Origins of Order.
 Oxford University Press, 1993.")
 The technical treatment of autocatalytic sets and "order for free," how chemistry at sufficient complexity spontaneously organizes without external direction.
 For a more accessible version, see @ref(kauffman-2, "Kauffman, S. At Home in the Universe.
-Oxford University Press, 1995.")) showed that chemistry at sufficient complexity spontaneously organizes itself into "autocatalytic sets," self-sustaining networks where each molecule's production is catalyzed by others in the set.
-Autopoiesis, the property by which living cells continuously produce the very components that sustain them, is this same logic carried one level further.
+Oxford University Press, 1995.")) showed that chemistry at sufficient @term(complexity) spontaneously organizes itself into "@term(autocatalytic sets, Autocatalytic set, "a network of molecules in which each member's production is catalyzed by other members of the set. Stuart Kauffman's demonstration that chemistry at sufficient complexity spontaneously organizes itself without external direction.")," self-sustaining networks where each molecule's production is catalyzed by others in the set.
+@term(Autopoiesis, "the property of living systems that continuously produce the very components that sustain them; coined by Maturana and Varela. The cell does not merely use its components but makes them, circularly, as the condition of its own continued existence."), the property by which living cells continuously produce the very components that sustain them, is this same logic carried one level further.
 "Order for free," as Kauffman put it.
 Nothing added.
 The numbers just got large enough.
 
 Engineers and scientists have learned to put this principle to work deliberately.
 If you're trying to find the highest hill in an unknown landscape, the naive strategy, always walk uphill from where you stand, will get you stuck on the nearest peak, which may be a small one.
-The solution is to occasionally jump randomly, accepting a worse position in order to escape the local trap and keep searching.
-This is "simulated annealing@footnote(@ref(kirkpatrick, "Kirkpatrick, S., Gelatt, C.D., Vecchi, M.P.
+The solution is to occasionally jump randomly, accepting a worse position in order to escape the @term(local trap, Local maximum, "a solution that is better than all its immediate neighbors but not the best solution overall. The trap that pure hill-climbing optimization falls into; escaped by introducing randomness into the search.") and keep searching.
+This is "@term(simulated annealing, Simulated annealing, "an optimization technique borrowed from metallurgy that uses controlled randomness to escape local maxima. By occasionally accepting worse solutions, the algorithm avoids getting trapped and finds better global solutions. Used in engineering, chip design, and AI training.")@footnote(@ref(kirkpatrick, "Kirkpatrick, S., Gelatt, C.D., Vecchi, M.P.
 Optimization by Simulated Annealing.
 Science, 220(4598), 1983.")
 The paper that formalized the principle: controlled randomness finds better solutions than pure determinism, borrowed from the metallurgical process of heating and slow cooling.)," borrowed from metallurgy, where heating metal adds randomness to atomic motion and slow cooling lets atoms find configurations they couldn't reach by settling from where they started.
-The neural networks behind modern AI are trained by "stochastic gradient descent," deliberately injecting randomness into each step, because pure deterministic optimization gets trapped.
+The neural networks behind modern AI are trained by "@term(stochastic gradient descent, Stochastic gradient descent, "the training algorithm used in neural networks that deliberately injects randomness into each optimization step. Pure deterministic optimization gets trapped in local minima; the randomness keeps the search moving toward better solutions.")," deliberately injecting randomness into each step, because pure deterministic optimization gets trapped.
 NASA has used genetic algorithms, literally simulating evolution, to design antennas no human engineer would have drawn, because they look wrong and work better.
 Randomness is not the enemy of good solutions.
 In many domains it is the only way to find them.
@@ -151,7 +146,7 @@ Alfred North Whitehead@footnote(@ref(whitehead, "Whitehead, A.N.
 Process and Reality.
 Macmillan, 1929.")
 Part I, Category of the Ultimate, where Whitehead grounds the creative advance into novelty as the irreducible self-determination at the heart of each occasion.) saw this as fundamental.
-His "creative advance into novelty," the irreducible self-determination at the heart of each "actual occasion," is not a flaw in the system.
+His "@term(creative advance into novelty, Creative advance into novelty, "Whitehead's term for the irreducible self-determination at the heart of each actual occasion; the source of genuine newness in the universe that cannot be fully predicted from prior causes.")," the irreducible self-determination at the heart of each "@term(actual occasion, Actual occasion, "Whitehead's term for the fundamental unit of reality; a moment of experience that takes in its world, reaches a decision, and completes into the next occasion's inheritance.")," is not a flaw in the system.
 It is the engine.
 Whether the ultimate source of that indeterminacy is quantum randomness, deterministic chaos at scales too small to resolve, or something else entirely, is a question physics has not settled.
 What Whitehead insists on is that genuine novelty requires something beyond pure repetition of prior causes.
@@ -182,15 +177,6 @@ The best popular introduction to deterministic chaos and its surprising relation
 
 In philosophy, Whitehead's process philosophy provides the deepest frame: genuine novelty, the creative advance into novelty, is constitutive of reality at every scale.
 Not a property of complex systems only, but the basic character of each actual occasion.
-
-@term Spontaneous symmetry breaking: the process by which a system in a perfectly symmetric but unstable state falls into an asymmetric lower-energy state through random perturbation, and stays there. The mechanism behind crystal formation, dune building, and the large-scale structure of the universe.
-@term Simulated annealing: an optimization technique borrowed from metallurgy that uses controlled randomness to escape local maxima. By occasionally accepting worse solutions, the algorithm avoids getting trapped and finds better global solutions. Used in engineering, chip design, and AI training.
-@term Stochastic gradient descent: the training algorithm used in neural networks that deliberately injects randomness into each optimization step. Pure deterministic optimization gets trapped in local minima; the randomness keeps the search moving toward better solutions.
-@term Creative advance into novelty: Whitehead's term for the irreducible self-determination at the heart of each actual occasion; the source of genuine newness in the universe that cannot be fully predicted from prior causes.
-@term Actual occasion: Whitehead's term for the fundamental unit of reality; a moment of experience that takes in its world, reaches a decision, and completes into the next occasion's inheritance.
-@term Autocatalytic set: a network of molecules in which each member's production is catalyzed by other members of the set. Stuart Kauffman's demonstration that chemistry at sufficient complexity spontaneously organizes itself without external direction.
-@term Autopoiesis: the property of living systems that continuously produce the very components that sustain them; coined by Maturana and Varela. The cell does not merely use its components but makes them, circularly, as the condition of its own continued existence.
-@term Local maximum: a solution that is better than all its immediate neighbors but not the best solution overall. The trap that pure hill-climbing optimization falls into; escaped by introducing randomness into the search.
 
 @section(script)
 Note to composer: Three themes. A child's theme (simple, solo piano), a snowflake journey (sparse single line blooming to six simultaneous voices as the crystal arms branch), and an evolutionary journey (slow, ancient, accumulating).

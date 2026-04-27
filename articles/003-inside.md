@@ -6,7 +6,6 @@ Experience may go all the way down.
 @status draft1
 @pub-time 2026-03-13T00:00Z
 @category consciousness
-@term experience: TBD
 @related 001, 002, 008, 031, 069
 
 @argument
@@ -17,7 +16,7 @@ Here is what everyone knows: matter is dark inside.
 @image(003-inside,A geode opened: the inside revealed,Wikimedia Commons)
 
 A rock (events, as in @link(002)) doesn't feel the sun on it.
-A raindrop doesn't experience falling.
+A raindrop doesn't @term(experience) falling.
 The carbon in your bones has no inner life. It's just carbon.
 Somewhere along the way, in a few special biological cases, matter arranged itself into nervous systems, and nervous systems somehow produce experience.
 How?
@@ -89,7 +88,7 @@ That shift, from "obviously nothing" to "something we don't have words for yet,"
 Alfred North Whitehead@footnote(@ref(whitehead, "Whitehead, A.N.
 Process and Reality.
 Macmillan, 1929.")
-Dense but foundational. Part III on the theory of prehension is where the claim that experience goes all the way down is most fully developed.
+Dense but foundational. Part III on the theory of @term(prehension, Prehension, "Whitehead's term for the way each actual occasion takes in and registers what surrounds it before completing itself. Plain English equivalent: feeling, taking-in. The root is the same as \"apprehend.\"") is where the claim that experience goes all the way down is most fully developed.
 For a more accessible entry, see @ref(whitehead-2, "Whitehead, A.N.
 Adventures of Ideas.
 Macmillan, 1933.")
@@ -98,7 +97,7 @@ Macmillan, 1933.")
 It is constitutive of what it means for anything to happen at all.
 
 Whitehead's position is not the soft version of this claim, that maybe complex systems feel something.
-It is stronger: every actual occasion, his term for the fundamental event of reality, does not merely occur externally.
+It is stronger: every @term(actual occasion, Actual occasion, "Alfred North Whitehead's term for the fundamental unit of reality: a discrete event of becoming that takes in its environment, integrates it, and completes itself. Enduring objects are families (Whitehead: \"societies\") of actual occasions stable enough to appear permanent."), his term for the fundamental event of reality, does not merely occur externally.
 It takes in what surrounds it, integrates that intake, and completes itself.
 He called this taking-in a "feeling," or in his technical vocabulary, a "prehension," from the same root as "apprehend."
 The feeling is the inside of the event.
@@ -107,7 +106,7 @@ Not projection.
 The inside is what the event is, from within.
 If the process is real, the interiority is real, scaled and textured by the complexity of the entity, but not absent at any level.
 
-This position is called panpsychism, the view that experience is a fundamental and ubiquitous feature of reality.
+This position is called @term(panpsychism, Panpsychism, "the philosophical position that experience or mind is a fundamental and ubiquitous feature of reality, not a late biological product. Distinguished from animism (which attributes spirits or agency to natural objects) by its grounding in rigorous argument rather than cultural tradition."), the view that experience is a fundamental and ubiquitous feature of reality.
 It has a long philosophical history and has recently been revived in serious analytic philosophy.
 Philip Goff@footnote(@ref(goff, "Goff, P. Galileo's Error.
 Pantheon, 2019.")
@@ -115,7 +114,7 @@ The clearest contemporary reconstruction of panpsychism in analytic idiom. Goff 
 For the broader philosophical landscape, see @ref(goff-2, "Goff, P., Seager, W., Allen-Hermanson, S. Panpsychism.
 Stanford Encyclopedia of Philosophy, 2022.")), David Chalmers@footnote(@ref(chalmers, "Chalmers, D. The Conscious Mind.
 Oxford, 1996.")
-Introduced the hard problem of consciousness and argues for a position close to property dualism, that phenomenal experience is a fundamental feature of reality not reducible to physical processes.), and others find it more coherent than the standard alternative: that experience emerges from non-experiential matter at some threshold of complexity.
+Introduced the @term(hard problem of consciousness, Hard problem of consciousness, "David Chalmers\' term (1995) for the question of why any physical process gives rise to subjective experience at all. Distinguished from the \"easy problems\" of explaining attention, memory, and behavior, which are hard in practice but tractable in principle. The hard problem is why there is something it is like to be a system at all.") and argues for a position close to property dualism, that phenomenal experience is a fundamental feature of reality not reducible to physical processes.), and others find it more coherent than the standard alternative: that experience emerges from non-experiential matter at some threshold of complexity.
 That alternative faces what David Chalmers called the hard problem of consciousness: why should any physical process, however complex, give rise to subjective experience at all?
 Every proposed answer either explains the tractable problems (attention, memory, behavior) and ignores the hard one, or quietly smuggles experience in without admitting it.
 
@@ -151,11 +150,6 @@ Philosophical Review, 1974.")
 The classic paper establishing that subjective experience cannot be fully captured from an objective viewpoint.
 Nagel's bat is chosen precisely because it is close enough to us to be sure it has experience, but alien enough that we cannot imagine what that experience is like.)
 — established that subjective experience cannot be fully captured from an objective viewpoint, and remains the sharpest formulation of what makes the hard problem hard.
-
-@term Panpsychism: the philosophical position that experience or mind is a fundamental and ubiquitous feature of reality, not a late biological product. Distinguished from animism (which attributes spirits or agency to natural objects) by its grounding in rigorous argument rather than cultural tradition.
-@term Actual occasion: Alfred North Whitehead's term for the fundamental unit of reality: a discrete event of becoming that takes in its environment, integrates it, and completes itself. Enduring objects are families (Whitehead: "societies") of actual occasions stable enough to appear permanent.
-@term Hard problem of consciousness: David Chalmers' term (1995) for the question of why any physical process gives rise to subjective experience at all. Distinguished from the "easy problems" of explaining attention, memory, and behavior, which are hard in practice but tractable in principle. The hard problem is why there is something it is like to be a system at all.
-@term Prehension: Whitehead's term for the way each actual occasion takes in and registers what surrounds it before completing itself. Plain English equivalent: feeling, taking-in. The root is the same as "apprehend."
 
 @section(script)
 1. Extreme close-up of a human eye, iris in full detail. VO: We know this is an inside looking out.

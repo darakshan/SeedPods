@@ -2,8 +2,6 @@
 @status proto
 @pub-time 2026-03-15T00:00Z
 @category physics
-@term cosmology: TBD
-@term self-reference: TBD
 @related 009, 010, 028, 036, 058
 @edit-time 2026-04-27T01:07Z
 
@@ -11,13 +9,13 @@
 When a person looks at a map of the cosmic microwave background, the fluctuations on the screen are the ancestors of the neural patterns doing the looking, the universe observing its own origin, which is not poetry but a literal description of the causal chain.
 
 @section(proto)
-The cosmic microwave background is the oldest light we can see, radiation from 380,000 years after the Big Bang, when the universe first became transparent.
+The @term(cosmic microwave background, CMB, "the oldest observable light, from 380,000 years after the Big Bang, when the universe first became transparent.") is the oldest light we can see, radiation from 380,000 years after the Big Bang, when the universe first became transparent.
 It is nearly uniform, nearly featureless, with tiny fluctuations of one part in 100,000@ref(planck, "Planck Collaboration.
 Planck 2018 results (2018).
 The CMB and the seeds of structure.").
 
 Those fluctuations are the seeds of everything.
-Every galaxy, every star, every planet, every mind, all traceable to quantum fluctuations in the first fraction of a second, amplified by inflation, imprinted on the CMB, and then elaborated over fourteen billion years of gravitational dynamics.
+Every galaxy, every star, every planet, every mind, all traceable to quantum fluctuations in the first fraction of a second, amplified by @term(inflation, Inflation, "The early-universe phase of exponential expansion that amplified quantum fluctuations into cosmic structure."), imprinted on the CMB, and then elaborated over fourteen billion years of gravitational dynamics.
 
 When a person looks at a map of the CMB on a screen, something philosophically precise is happening.
 The universe is looking at its own baby picture.
@@ -27,8 +25,6 @@ The process that began as noise in the quantum vacuum has organized itself, over
 This is not poetry.
 It is a literal description of the causal chain.
 
-@term CMB: Cosmic microwave background; the oldest observable light, from 380,000 years after the Big Bang.
-@term Inflation: The early-universe phase of exponential expansion that amplified quantum fluctuations into cosmic structure.
 
 @section(images)
 @image(061-babyuniverse, "WMAP cosmic microwave background: the universe's baby picture", "Wikimedia Commons")

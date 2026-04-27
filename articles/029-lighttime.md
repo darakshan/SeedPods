@@ -5,19 +5,13 @@ From the photon's perspective, these are the same moment.
 @status proto
 @pub-time 2026-03-16T00:00Z
 @category physics
-@term time: TBD
-@term relativity: TBD
-@term consciousness: TBD
-@term fields: TBD
-@term light: TBD
-@term harmonics: TBD
 @related 008, 017, 028, 038, 041
 
 @argument
 A photon leaves a star and arrives at your eye, and from the photon's perspective these are the same moment, no journey, no duration, no distance, which is not a paradox to be dissolved but a genuine feature of how connection works at the boundary of the physical.
 
 @section(depth)
-In special relativity, time dilation reaches its limit at the speed of light: a photon has no proper time.
+In special @term(relativity), @term(time) dilation reaches its limit at the speed of @term(light): a photon has no @term(proper time, "in special relativity, the time elapsed as measured by a clock traveling with an object. For a photon traveling at the speed of light, proper time is zero, emission and absorption are the same event from the photon's perspective.").
 From the photon's reference frame, to the extent that frame is meaningful, emission and absorption are the same event.
 No duration elapses.
 The mirror a light-year away reflects the beam back; two years pass for the observer; zero time passes for the light.
@@ -35,15 +29,15 @@ What is the relationship between a circuit, a mirror, and the kind of connection
 That question is left open here as a seed for further thinking.
 
 Light is also unlike sound in a way that keeps mattering.
-When a string vibrates or air moves through a tube, the harmonics are integer multiples of the fundamental: 2x, 3x, 4x.
-The octave (2:1) appears naturally in the overtone series of any vibrating physical object, it is baked into the physics of classical mechanical vibration in a bounded medium.
+When a string vibrates or air moves through a tube, the @term(harmonics) are integer multiples of the fundamental: 2x, 3x, 4x.
+The octave (2:1) appears naturally in the @term(overtone series, "the set of frequencies naturally produced by a vibrating physical object, string, air column, membrane. Integer multiples of the fundamental frequency: 2x (octave\), 3x (fifth plus octave\), 4x (two octaves\), and so on. The physical basis of musical consonance.") of any vibrating physical object, it is baked into the physics of classical mechanical vibration in a bounded medium.
 This is why the consonance hierarchy is not merely a perceptual construction: it is physically real, built into the nature of sound itself, and the ear evolved to recognize something that was already there.
 
 Light does not work this way.
 An atom emitting light produces one specific frequency determined by its quantum energy transition, not a fundamental plus overtones, but a single discrete event.
 The harmonic series is a feature of classical vibration in a bounded medium.
 Light is not that.
-Each photon is a quantum of a field, not a standing wave in a tube.
+Each photon is a quantum of a @term(field, fields, TBD), not a standing wave in a tube.
 The octave of visible red falls in the ultraviolet, outside our perceptual window entirely, and not naturally co-produced with the red in the first place.
 
 This is one reason the visual system had to invent its circle rather than inherit one from physics.
@@ -85,6 +79,4 @@ The flux is just extraordinarily low compared to solar radiation.
 So the starlight is never not shining on you.
 The sun’s presence is an observational obstacle, not a physical one.​​​​​​​​​​​​​​​​
 
-@term proper time: in special relativity, the time elapsed as measured by a clock traveling with an object. For a photon traveling at the speed of light, proper time is zero, emission and absorption are the same event from the photon's perspective.
-@term overtone series: the set of frequencies naturally produced by a vibrating physical object, string, air column, membrane. Integer multiples of the fundamental frequency: 2x (octave), 3x (fifth plus octave), 4x (two octaves), and so on. The physical basis of musical consonance.
-@term quantized emission: the process by which atoms emit light as discrete photons, each with a specific frequency determined by the energy difference between electron states. Unlike classical vibration, there is no natural harmonic series.
+@note(quantized emission: this term does not appear by that phrase in the body; body uses "quantum energy transition" (line 43). Consider adding an occurrence or removing the term.)

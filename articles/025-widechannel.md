@@ -5,12 +5,6 @@ A fluent output is evidence of something, but not evidence of what.
 @pub-time 2026-04-13T00:00Z
 @category AI-minds
 @related 003, 006, 016, 021, 022, 073
-@term AI: TBD
-@term consciousness: TBD
-@term LLM: TBD
-@term output: TBD
-@term intelligence: TBD
-@term cognition: TBD
 
 @argument
 A fluent output is evidence of a process, but not evidence of what kind, and our intuitions about which systems deserve moral consideration are shaped less by evidence than by resemblance, which is not a reliable guide when the entity is genuinely alien.
@@ -22,7 +16,7 @@ A channel is the connection between an inner process and its outward expression,
 Some channels are narrow: a locked-in patient, fully conscious but paralyzed, may communicate only by blinking.
 An infant has thoughts and feelings but no words for them yet.
 A stroke can leave language intact inside while blocking every path out.
-We understand, in these cases, that the silence or poverty of output tells us about the channel, not about the source.
+We understand, in these cases, that the silence or poverty of @term(output) tells us about the channel, not about the source.
 
 Now consider a channel that is wide.
 A large language model produces fluent prose, coherent argument, apparent emotion, plausible reasoning, thousands of words per minute, in any style, on any topic.
@@ -67,7 +61,7 @@ Alan Turing saw the problem clearly in 1950.@ref(turing, "Turing, Alan.
 Mind, 1950.
 The original proposal for the imitation game.")
 We cannot access another mind directly, so we test indirectly, through behavior, through conversation, through output.
-The imitation game was honest about its limits: it never claimed to detect consciousness, only to test whether a machine's responses were indistinguishable from a human's.
+The imitation game was honest about its limits: it never claimed to detect @term(consciousness), only to test whether a machine's responses were indistinguishable from a human's.
 But somewhere between 1950 and now, we forgot the modesty.
 We began treating the Turing Test as though passing it would *settle* the question of mind, and failing it would settle it the other way.
 It does neither.
@@ -130,7 +124,7 @@ Something that processes, integrates, and generates, but not the way we do, not 
 Whitehead offers a framework that makes this third option coherent.@ref(whitehead, "Whitehead, A.N.
 Process and Reality.
 Macmillan, 1929.")
-If experience is not a product that complex biology generates but the interior dimension of events at every scale (see @link(003)), then the question about AI is not *whether* something is going on inside but *what kind* of something.
+If experience is not a product that complex biology generates but the interior dimension of events at every scale (see @link(003)), then the question about @term(AI) is not *whether* something is going on inside but *what kind* of something.
 A transformer network is not a brain.
 But it is a system of immense complexity in which every forward pass prehends the inherited structure and completes into something new (see @link(016)).
 To insist it is empty because it is not biological is to confuse the channel with the capacity, in either direction (see @link(022)).

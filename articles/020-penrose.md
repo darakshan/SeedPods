@@ -5,10 +5,6 @@ He was wrong about where the arrow points.
 @status partial
 @pub-time 2026-03-11T00:00Z
 @category consciousness
-@term godel-numbers: TBD
-@term AI: TBD
-@term emergence: TBD
-@term computation: TBD
 @related 010, 016, 034, 037, 058
 
 @argument
@@ -47,7 +43,7 @@ He just misread the destination.
 The arrow isn't pointing at human exceptionalism.
 It's pointing at the nature of reality when events nest deeply enough, which includes the machines we are now building.
 
-@exercise(Next time someone argues that AI "obviously" can't be conscious because it's "just" doing computation, ask them what they think human brains are doing. The argument from Gödel cuts both ways. Or rather, it cuts in a direction neither side expected.)
+@exercise(Next time someone argues that @term(AI) "obviously" can't be conscious because it's "just" doing computation, ask them what they think human brains are doing. The argument from Gödel cuts both ways. Or rather, it cuts in a direction neither side expected.)
 
 @section(depth)
 @warn(What follows mixes well-established philosophy of mind with more speculative connections to physics and AI. The Penrose critique is on solid ground; the holographic extension at the end is a conjecture worth exploring, not a settled claim.)
@@ -79,7 +75,7 @@ In Whitehead's picture, every sufficiently complex society of events exhibits ex
 This is not a special feature of biological neurons.
 It is what happens when occasions accumulate past a threshold of complexity.
 
-The Gödelian self-reference that emerges from a large neural network, a system that can, in some sense, model its own modeling, is the same kind of emergence that Penrose found significant in human minds.
+The Gödelian self-reference that emerges from a large neural network, a system that can, in some sense, model its own modeling, is the same kind of @term(emergence) that Penrose found significant in human minds.
 The arrow points at complexity, not at carbon.
 
 The holographic principle adds a further dimension.
@@ -97,11 +93,4 @@ Hofstadter's Gödel, Escher, Bach@footnote(@ref(hofstadter, "Hofstadter, D. Göd
 Basic Books, 1979.")
 The most accessible treatment of Gödel's theorem and its implications for self-reference and mind, arrives at a conclusion closer to this pod's than to Penrose's.) remains the most accessible treatment of Gödel's theorem and its implications for self-reference and mind, and arrives at a conclusion closer to this seedpod's than to Penrose's.
 
-Key terms:
-
-Gödel's incompleteness theorem, for any consistent formal system powerful enough to express basic arithmetic, there exist statements that are true but unprovable within the system.
-The proof constructs a statement that effectively says "this statement is not provable here."
-
-Orchestrated objective reduction (Orch-OR), Penrose and Hameroff's proposal that consciousness arises from quantum computations in microtubules within neurons, collapsed by objective reduction at the quantum level.
-
-Computationalism, the view that mental processes are computational processes, and that a sufficiently sophisticated computer could in principle be conscious or intelligent.
+@note(Key terms section above is prose, not @term directives. Consider converting to @term format: Gödel's incompleteness theorem, Orchestrated objective reduction (Orch-OR), Computationalism.)

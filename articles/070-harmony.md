@@ -2,14 +2,11 @@
 @status prelim
 @pub-time 2026-03-17T00:00Z
 @category feeling
-@term harmony: The experience of elements fitting together, in sound, in color, in social life, with a sense of inevitability governed by the simplicity of the ratios between them.
-@term equal temperament: A tuning system that closes the circle of fifths by distributing the Pythagorean comma equally across all twelve steps, trading intervallic purity for the freedom to modulate.
-@term Tonnetz: A two-dimensional lattice of pitch relationships organized by thirds and fifths, first described by Euler (1739) and later formalized by Hugo Riemann.
 @related 035, 037, 038, 071, 072
 @edit-time 2026-04-27T01:08Z
 
 @argument
-Harmony is the experience of elements fitting together, in sound, in color, in a room full of people, and it works the same way everywhere: a sense of home, the tension of departure, the resolution of return, all governed by ratios simple enough that every culture finds them independently, and all made possible by an imperfection the Pythagoreans thought would destroy them.
+@term(Harmony, harmony, "The experience of elements fitting together, in sound, in color, in social life, with a sense of inevitability governed by the simplicity of the ratios between them.") is the experience of elements fitting together, in sound, in color, in a room full of people, and it works the same way everywhere: a sense of home, the tension of departure, the resolution of return, all governed by ratios simple enough that every culture finds them independently, and all made possible by an imperfection the Pythagoreans thought would destroy them.
 
 @section(depth)
 
@@ -28,7 +25,7 @@ Indian classical music, Scottish pibroch, the tambura's hum beneath a raga: thes
 
 But Western music took a different path.
 It learned to move home itself, to shift the tonic, to modulate, and this was a difference not of degree but of kind, like moving from the number line to the complex plane.
-The enabling condition was equal temperament, which closes the circle of fifths by distributing the Pythagorean comma, the tiny, irreducible gap between twelve perfect fifths and seven octaves, equally across all twelve steps.
+The enabling condition was @term(equal temperament, "A tuning system that closes the circle of fifths by distributing the Pythagorean comma equally across all twelve steps, trading intervallic purity for the freedom to modulate."), which closes the circle of fifths by distributing the Pythagorean comma, the tiny, irreducible gap between twelve perfect fifths and seven octaves, equally across all twelve steps.
 Every interval becomes slightly impure.
 No fifth is quite right.
 No third is quite right.
@@ -43,7 +40,7 @@ But as Leonard Cohen sang, "There is a crack in everything, that's how the light
 Equal temperament's deliberate imperfection is what lets the system explore.
 A drone pins you to one place with perfect purity; equal temperament lets you travel, at the cost of never being quite pure anywhere.
 This is the same trade-off that appears when you add a temperature parameter to a neural network or noise to an evolutionary search, the imperfection is not a defect but the condition that makes exploration possible (@link(072)).
-W. A. Mathieu, in *Harmonic Experience*, maps the pathways that great composers found through this tempered space, Bach, Beethoven, Coltrane, plotting their harmonic journeys on a two-dimensional lattice of thirds and fifths that Leonhard Euler first described in 1739 as the *Tonnetz* and that extends, in principle, without limit @ref(mathieu-1, "Mathieu, W. A. *Harmonic Experience: Tonal Harmony from Its Natural Origins to Its Modern Expression.* Inner Traditions, 1997.") @ref(euler-1, "Euler, Leonhard. *Tentamen novae theoriae musicae.* 1739.").
+W. A. Mathieu, in *Harmonic Experience*, maps the pathways that great composers found through this tempered space, Bach, Beethoven, Coltrane, plotting their harmonic journeys on a two-dimensional lattice of thirds and fifths that Leonhard Euler first described in 1739 as the *@term(Tonnetz, "A two-dimensional lattice of pitch relationships organized by thirds and fifths, first described by Euler (1739) and later formalized by Hugo Riemann.")* and that extends, in principle, without limit @ref(mathieu-1, "Mathieu, W. A. *Harmonic Experience: Tonal Harmony from Its Natural Origins to Its Modern Expression.* Inner Traditions, 1997.") @ref(euler-1, "Euler, Leonhard. *Tentamen novae theoriae musicae.* 1739.").
 Jacob Collier lives natively in that lattice, navigating by ear through regions most musicians reach only by theory.
 
 The word *harmony* extends beyond music without becoming metaphor.

@@ -2,15 +2,11 @@
 @status proto
 @pub-time 2026-03-15T00:00Z
 @category feeling
-@term vision: TBD
-@term retina: TBD
-@term opponent-processing: TBD
-@term perception: TBD
 @related 003, 013, 016, 037, 045
 @edit-time 2026-04-27T01:06Z
 
 @argument
-The retina, which is embryologically brain tissue that migrated into the eye, recombines three raw cone signals into opponent channels before any signal leaves the eye, so that the world has already been interpreted one synapse past the photoreceptors.
+The @term(retina), which is embryologically brain tissue that migrated into the eye, recombines three raw cone signals into @term(opponent channels, Opponent process, "Recombination of cone signals into red/green, blue/yellow, and light/dark channels within the retina.") before any signal leaves the eye, so that the world has already been interpreted one synapse past the photoreceptors.
 
 @section(proto)
 The retina performs a surprising computation before any signal leaves the eye.
@@ -22,5 +18,4 @@ By the time visual information reaches the optic nerve, the world has already be
 The eye does not merely sense.
 It interprets.
 
-@term Opponent process: Recombination of cone signals into red/green, blue/yellow, and light/dark channels within the retina.
 @image(042-eyethinks,Center-surround receptive field: the retina thinks before the brain,Wikimedia Commons)

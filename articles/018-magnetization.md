@@ -6,11 +6,6 @@ Then the field does the rest.
 @pub-time 2026-03-28T00:00Z
 @category knowledge
 @related 009, 011, 014, 056, 063
-@term nucleation: the formation of small ordered regions (nuclei or seeds) within a disordered medium. The seeds provide a template that neighboring elements can join, initiating a phase transition.
-@term percolation threshold: the critical moment when isolated clusters become a connected network. Before it, seeds are islands; after it, they form a continent and the remaining disorder is surrounded.
-@term phase transition: a change in the state of a system, liquid to solid, disordered to ordered, uncommitted to aligned. Requires the medium to be in the right condition (cooled, supersaturated, primed) and seeds to initiate the shift.
-@term magnetic domain: a region within a ferromagnetic material where atomic spins are aligned. Domains grow by recruiting neighbors at their boundaries until the whole material is magnetized.
-
 @argument
 You don't need to convert everyone, you need to seed the right clusters in a medium that's ready to shift, because local alignment propagates through neighbors until figure and ground flip and the remaining disorder is what's surrounded.
 
@@ -66,8 +61,8 @@ More surface area, more neighbors pulled up.
 Suddenly the room flips, mostly standing, with a few holdouts still seated.
 The holdouts capitulate or remain visibly outside the new consensus.
 
-The physics term is "nucleation and growth."
-The critical moment, when islands become continent, when figure and ground exchange, is the percolation threshold.
+The physics term is "@term(nucleation, "the formation of small ordered regions (nuclei or seeds) within a disordered medium. The seeds provide a template that neighboring elements can join, initiating a phase transition.") and growth."
+The critical moment, when islands become continent, when figure and ground exchange, is the @term(percolation threshold, "the critical moment when isolated clusters become a connected network. Before it, seeds are islands; after it, they form a continent and the remaining disorder is surrounded.").
 Before it, the seeds are isolated.
 After it, they're connected, and the remaining disorder is the thing that's surrounded.
 
@@ -125,8 +120,8 @@ The question is never "how do I convince everyone?"
 It's "where are the low-threshold nodes, and is the temperature right?"
 
 @section(depth)
-The physics of phase transitions offers a precise vocabulary for what the surface layer describes intuitively.
-A ferromagnetic material like iron consists of magnetic domains, regions where atomic spins are aligned.
+The physics of @term(phase transitions, phase transition, "a change in the state of a system, liquid to solid, disordered to ordered, uncommitted to aligned. Requires the medium to be in the right condition (cooled, supersaturated, primed) and seeds to initiate the shift.") offers a precise vocabulary for what the surface layer describes intuitively.
+A ferromagnetic material like iron consists of @term(magnetic domains, magnetic domain, "a region within a ferromagnetic material where atomic spins are aligned. Domains grow by recruiting neighbors at their boundaries until the whole material is magnetized."), regions where atomic spins are aligned.
 Above the Curie temperature, thermal agitation overwhelms the alignment; the domains dissolve into disorder.
 Below it, the material is ready to magnetize, but needs seeds: nucleation sites where alignment begins.
 

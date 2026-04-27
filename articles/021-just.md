@@ -4,15 +4,7 @@ When someone says a process is "just" doing something, they've described the out
 @status draft1
 @pub-time 2026-03-11T00:00Z
 @category knowledge
-@term language: TBD
-@term rhetoric: TBD
-@term cognition: TBD
-@term reductionism: TBD
-@term dismissal: TBD
-@term just (explanatory): when deployed to present a description of mechanism as a complete account of experience or process. Makes a claim of sufficiency that is never argued. Distinct from its innocent uses: timing ("I just arrived"), limitation ("I just want water"), or emphasis.
-@term category mistake: Ryle's term for applying an explanation from one category to something in a different category, then treating it as complete. The Concept of Mind (1949).
-@term intuition pump: Dennett's term for a device that makes a conclusion feel obvious without establishing it through argument. Intuition Pumps and Other Tools for Thinking (2013).
-@term fallacy of misplaced concreteness: Whitehead's term for mistaking a useful abstraction for the full concrete reality it was extracted from. Process and Reality (1929).
+@note(just (explanatory): the word "just" is too ubiquitous to embed @term cleanly; also the paren in the term name needs special handling. Suggest deciding on a canonical embed point — perhaps line 36 "The word \"just\" does that.")
 @related 003, 006, 022, 025, 069
 
 @argument
@@ -57,7 +49,7 @@ Every time you hear "just" used to close down a question, ask yourself: has this
 Or did one small word just do all the philosophical work, while nobody was looking?
 
 @section(depth)
-The philosopher Gilbert Ryle@ref(ryle, "Ryle, G. The Concept of Mind (1949).") introduced a concept in 1949 that most people have never heard of but instantly recognize when they see it: the *category mistake*.
+The philosopher Gilbert Ryle@ref(ryle, "Ryle, G. The Concept of Mind (1949).") introduced a concept in 1949 that most people have never heard of but instantly recognize when they see it: the *@term(category mistake, "Ryle's term for applying an explanation from one category to something in a different category, then treating it as complete. The Concept of Mind (1949).")*.
 A category mistake happens when you describe something using the wrong kind of explanation, and then act as if the description is complete.
 Ryle's most famous example is the ghost in the machine: the idea that somewhere inside the body's physical mechanism there must be a separate mental thing doing the real work.
 But the error runs in both directions.
@@ -73,16 +65,16 @@ That second claim, sufficiency, is never argued.
 It's assumed.
 
 Whitehead@ref(whitehead, "Whitehead, A.N.
-Process and Reality (1929).") called the deeper version of this error the fallacy of misplaced concreteness: taking a useful abstraction and mistaking it for the full concrete reality.
+Process and Reality (1929).") called the deeper version of this error the @term(fallacy of misplaced concreteness, "Whitehead's term for mistaking a useful abstraction for the full concrete reality it was extracted from. Process and Reality (1929)."): taking a useful abstraction and mistaking it for the full concrete reality.
 "Oxytocin" is an abstraction, a powerful and accurate one, extracted from something vastly richer.
 "Just" is the word that performs the substitution, replacing the rich thing with the abstraction and closing the door behind it.
 
-Daniel Dennett@ref(dennett, "Dennett, D. Intuition Pumps and Other Tools for Thinking (2013).") gave us a useful tool for spotting this move: the *intuition pump*.
+Daniel Dennett@ref(dennett, "Dennett, D. Intuition Pumps and Other Tools for Thinking (2013).") gave us a useful tool for spotting this move: the *@term(intuition pump, "Dennett's term for a device that makes a conclusion feel obvious without establishing it through argument. Intuition Pumps and Other Tools for Thinking (2013).")*.
 An intuition pump is a rhetorical device, often dressed as an argument, that makes a conclusion feel obvious without actually establishing it.
 "It's just oxytocin" is a near-perfect intuition pump.
 It conjures an image of reduction and completeness.
 It feels like clarity.
-The word "just" is the pump handle, pull it once and the dismissal flows naturally, without anyone noticing that no argument was made.
+The word "just" is the pump handle, pull it once and the @term(dismissal) flows naturally, without anyone noticing that no argument was made.
 
 This matters beyond love and chemistry.
 The same move appears wherever hard questions get deflated: it's just pattern matching, it's just neurons firing, it's just what evolution programmed us to do.

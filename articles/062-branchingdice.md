@@ -2,9 +2,6 @@
 @status proto
 @pub-time 2026-03-15T00:00Z
 @category mathematics
-@term mandelbrot-set: TBD
-@term probability: TBD
-@term farey-sequence: TBD
 @related 005, 009, 038, 054, 060
 @edit-time 2026-04-27T01:07Z
 
@@ -12,21 +9,19 @@
 The branching at each Mandelbrot bifurcation is not arbitrary but fixed by local algebra, always a finite whole number equal to the bulb's period, and assigning uniform probability to each branch produces a natural measure that weights simpler branches more heavily, which is exactly what the ear already knows.
 
 @section(proto)
-At every bifurcation point in the Mandelbrot set, the branching is not arbitrary.
+At every bifurcation point in the @term(Mandelbrot set, mandelbrot-set, TBD), the branching is not arbitrary.
 The number of branches is exactly the period of the bulb the point belongs to, a period-3 bulb sprouts 3-branching lightning bolts, period-5 sprouts 5, and so on.
-@image(062-branchingdice,Branching numbers as finite dice at each Mandelbrot node,Wikimedia Commons) The branching number is determined by the local algebraic structure. It is always a finite whole number.
+@image(062-branchingdice,Branching numbers as finite dice at each Mandelbrot node,Wikimedia Commons) The @term(branching number, Branching number, "At each Mandelbrot node, the number of branches equals the period of the bulb; fixed by local algebra.") is determined by the local algebraic structure. It is always a finite whole number.
 
 This means the "choice space" of the Mandelbrot set is not a continuous dimension.
 It is a tree of finite dice.
 At each node you roll a die whose number of sides is fixed by the mathematics.
 The dice get more sided as you go deeper, main bulbs have small periods, and as you zoom into the boundary the periods grow.
 
-Assigning uniform probability 1/n to each branch of an n-branching node gives a natural probability measure on the boundary, the harmonic measure@ref(douady, "Douady, A. and Hubbard, J. On the dynamics of polynomial-like maps (1985).
+Assigning uniform @term(probability) 1/n to each branch of an n-branching node gives a natural probability measure on the boundary, the @term(harmonic measure, Harmonic measure, "The natural probability measure on the Mandelbrot boundary; uniform 1/n at each n-fold branch gives consonant weighting.")@ref(douady, "Douady, A. and Hubbard, J. On the dynamics of polynomial-like maps (1985).
 Harmonic measure and the boundary.").
 This measure weights simpler branches more heavily.
 The octave gets more probability than the minor seventh.
 Which is exactly what the ear already knows.
 The consonance weighting is not imposed, it falls out of the uniform die assumption applied to the tree structure.
 
-@term Harmonic measure: The natural probability measure on the Mandelbrot boundary; uniform 1/n at each n-fold branch gives consonant weighting.
-@term Branching number: At each Mandelbrot node, the number of branches equals the period of the bulb; fixed by local algebra.

@@ -4,10 +4,6 @@ Fossils of Primal Evolution
 @status rough
 @pub-time 2026-03-14T00:00Z
 @category physics
-@term cosmology: TBD
-@term evolution: TBD
-@term many-worlds: TBD
-@term omega-point: TBD
 @related 009, 028, 036, 037, 058
 
 @argument
@@ -16,7 +12,7 @@ When you look at the night sky you are seeing not space but time, and not just t
 @section(surface)
 When you look at the night sky you think you're seeing space.
 You're actually seeing time.
-But there's a third thing you're seeing that nobody told you, you're seeing evolution.
+But there's a third thing you're seeing that nobody told you, you're seeing @term(evolution).
 Not biological evolution.
 Something older.
 @image(032-skyfossil,The cosmic microwave background: the sky as fossil record,Wikimedia Commons)
@@ -27,11 +23,11 @@ Each galaxy a thread of that process.
 Stars as moments in the thread.
 The telos isn't survival.
 It's self-awareness, the universe developing the capacity to know what it is.
-Many Worlds@ref(everett, "Everett, H. 'Relative State Formulation of Quantum Mechanics.'
+@term(Many Worlds, many-worlds, TBD)@ref(everett, "Everett, H. 'Relative State Formulation of Quantum Mechanics.'
 Reviews of Modern Physics, 1957.") extends this: every quantum branch is running its own evolutionary experiment simultaneously in nearly-orthogonal subspaces of Hilbert space.
 Teilhard de Chardin@ref(teilhard, "Teilhard de Chardin de Chardin, Pierre.
 The Phenomenon of Man.
-Harper & Row, 1959.") saw one Omega Point.
+Harper & Row, 1959.") saw one @term(Omega Point, omega-point, TBD).
 Many Worlds suggests the attractor is deeper than any single thread, every branch feeling toward the same convergence from different directions.
 Whitehead's@ref(whitehead, "Whitehead, A.N.
 Process and Reality.

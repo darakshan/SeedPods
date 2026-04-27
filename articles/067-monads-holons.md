@@ -2,13 +2,11 @@
 @status proto
 @pub-time 2026-03-15T00:00Z
 @category physics
-@term holographic-principle: TBD
-@term monads: TBD
 @related 003, 011, 037, 058, 068
 @edit-time 2026-04-27T01:08Z
 
 @argument
-Three centuries ago a philosopher proposed windowless monads each containing a complete representation of the universe from its own perspective, dismissed as baroque fantasy until a physicist showed that a lower-dimensional boundary theory can encode an entire higher-dimensional interior, which is strikingly close to what the monads were doing all along.
+Three centuries ago a philosopher proposed windowless @term(monads, Monad, "Leibniz's indivisible unit of experience; each contains a complete representation of the universe from its perspective.") each containing a complete representation of the universe from its own perspective, dismissed as baroque fantasy until a physicist showed that a lower-dimensional boundary theory can encode an entire higher-dimensional interior, which is strikingly close to what the monads were doing all along.
 
 @section(proto)
 Leibniz@ref(leibniz, "Leibniz, G.W.
@@ -26,12 +24,10 @@ Every point on the boundary encodes the entire interior from its perspective.
 The boundary is a collection of perspectives, each containing all the others.
 
 Leibniz was not right about the details.
-But the structure, interiority as fundamental, each part containing the whole from its perspective, no direct contact between parts but perfect correlation through a pre-established harmony (which in modern terms is the consistency of the holographic encoding), is strikingly close to what the AdS/CFT correspondence actually says.
+But the structure, interiority as fundamental, each part containing the whole from its perspective, no direct contact between parts but perfect correlation through a pre-established harmony (which in modern terms is the consistency of the holographic encoding), is strikingly close to what the @term(AdS/CFT, "Maldacena's correspondence: a gravitational theory in the bulk is equivalent to a quantum theory on the boundary; each boundary point encodes the interior.") correspondence actually says.
 
-The holographic principle may be the physics of what Leibniz was gesturing at philosophically.
+The @term(holographic principle, holographic-principle, TBD) may be the physics of what Leibniz was gesturing at philosophically.
 
-@term Monad: Leibniz's indivisible unit of experience; each contains a complete representation of the universe from its perspective.
-@term AdS/CFT: Maldacena's correspondence: a gravitational theory in the bulk is equivalent to a quantum theory on the boundary; each boundary point encodes the interior.
 
 @section(images)
 @image(067-monads-holons, "Leibniz's I Ching hexagram diagram of 1701", "Wikimedia Commons")

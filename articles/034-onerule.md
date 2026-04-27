@@ -4,15 +4,13 @@ The Single Iterating Point
 @status rough
 @pub-time 2026-03-14T00:00Z
 @category mathematics
-@term iteration: TBD
-@term mandelbrot-set: TBD
 @related 002, 007, 009, 003, 011
 
 @argument
 The Mandelbrot set's infinite complexity was never added, it accumulated through iteration of a single formula, the same intuition behind the one-electron universe and occasions each grasping the previous.
 
 @section(surface)
-The Mandelbrot set is computed one point at a time.
+The @term(Mandelbrot set, mandelbrot-set, TBD) is computed one point at a time.
 One rule.
 Applied again and again.
 The infinite complexity of its boundary, all those bulbs, all that branching, the self-similarity at every scale, was never added.
@@ -23,7 +21,7 @@ The universe may work the same way.
 @section(depth)
 Wheeler@ref(wheeler, "Wheeler, John, one-electron universe, proposed by Feynman, entertained seriously; and 'it from bit': the universe as information processing.") proposed the one-electron universe, a single electron traversing all of spacetime, zigzagging forward and backward in time, appearing as the many electrons we observe.
 The intuition generalizes: a single photon iterating, one step at a time, accumulating the complexity we call reality.
-Each iteration is a prehension in Whitehead's@ref(whitehead, "Whitehead, A.N.
+Each @term(iteration) is a prehension in Whitehead's@ref(whitehead, "Whitehead, A.N.
 Process and Reality.
 Macmillan, 1929.") sense, the universe grasping its previous state and generating the next.
 The Mandelbrot@ref(mandelbrot, "Mandelbrot, Benoit.

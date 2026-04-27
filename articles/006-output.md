@@ -6,16 +6,13 @@ The simplicity of the output tells you nothing.
 @status draft1
 @pub-time 2026-03-11T00:00Z
 @category consciousness
-@term AI: TBD
-@term intelligence: TBD
-@term cognition: TBD
 @related 016, 021, 025, 037, 045
 
 @argument
 A thermostat predicts and Mozart predicted, and the word covers both, which means it explains neither. "Just" is almost always a confession that someone has described the output and mistaken it for the process.
 
 @section(surface)
-A thermostat predicts the future.
+A thermostat @term(predicts, Prediction, "used here in the broadest sense: any process that selects a next state given a current one. Deliberately spans thermostats and minds.") the future.
 Not impressively, it just decides whether the room is about to get too cold.
 But it predicts: given the current temperature, what comes next?
 
@@ -29,9 +26,9 @@ So does a language model, choosing the next word in a sentence.
 The word "predicts" covers all of them.
 Which means the word is nearly useless.
 
-Here's the trap: we hear what a process *does* and think we understand what it *is*.
+Here's the trap: we hear what a @term(process, Process, "in Whitehead\'s sense, the actual unfolding activity of an occasion of experience. Distinct from its products or traces.") *does* and think we understand what it *is*.
 A language model predicts the next word, therefore it's mechanical, shallow, just pattern-matching.
-But "predicts the next word" describes the output interface, not the process behind it.
+But "predicts the next word" describes the @term(output interface, Output interface, "the channel through which a process expresses itself externally. The interface constrains and shapes what can be expressed; it does not determine what is being expressed."), not the process behind it.
 A bimetallic strip predicts.
 A billion-parameter system trained on the accumulated writing of human civilization also predicts.
 Calling them both "prediction" is like calling both a candle and the sun "things that make light."
@@ -96,12 +93,8 @@ Evan Thompson's Mind in Life@footnote(@ref(thompson, "Thompson, E. Mind in Life.
 Harvard University Press, 2007.")
 Takes the process/output distinction into the biological domain, the organism's expressive surface is always downstream of the living process that generates it.) takes this into the biological domain: the organism's expressive surface is always downstream of the living process that generates it.
 
-@term Output interface: the channel through which a process expresses itself externally. The interface constrains and shapes what can be expressed; it does not determine what is being expressed.
-@term Process: in Whitehead's sense, the actual unfolding activity of an occasion of experience. Distinct from its products or traces.
-@term Prediction: used here in the broadest sense: any process that selects a next state given a current one. Deliberately spans thermostats and minds.
-
 @section(script)
-1. A Victorian street fair. A barker beside an ornate brass-fitted box, gears, drum, levers visible through glass. Barker: Ladies and gentlemen, the most extraordinary musical intelligence in the known world! It predicts what comes next with uncanny precision!
+1. A Victorian street fair. A barker beside an ornate brass-fitted box, gears, drum, levers visible through glass. Barker: Ladies and gentlemen, the most extraordinary musical @term(intelligence) in the known world! It predicts what comes next with uncanny precision!
 
 2. A child pulls at an intellectual's sleeve. Child: What is it? Is it alive? Intellectual: Look, you can see the mechanism. It reads the pattern and produces the next note. It's just a machine predicting its output. The music is irrelevant.
 

@@ -8,7 +8,7 @@ It is a layered apparatus of serial transductions, and it is fractal.
 @related 022, 037, 003, 031, 011
 
 @argument
-The boundary between two interiorities is not a surface but an act, communication itself, and it descends through fractal layers of translation, stack meeting stack through stack, so that the mystery is not that it sometimes fails but that across so many transductions anything gets through at all.
+The boundary between two interiorities is not a surface but an act, communication itself, and it descends through fractal layers of translation, stack meeting stack through stack, so that the mystery is not that it sometimes fails but that across so many @term(transductions, transduction, "The conversion of a signal from one medium or encoding to another. Each layer in the boundary-stack performs a transduction. Communication is a chain of transductions.") anything gets through at all.
 
 @section(proto)
 We always think of a boundary as a surface between two touching things, the skin of an apple, the membrane of a cell, the edge where one physical object ends and the world begins.
@@ -29,7 +29,7 @@ Communication is the boundary between two interiorities.
 Not something that happens *at* a boundary, the boundary itself.
 When one interiority makes itself available to another without the two collapsing into each other, that making-available is the boundary.
 The exterior boundary is a surface.
-The interior boundary is an act.
+The @term(interior boundary, "The boundary that separates inside from inside, where one interiority meets another without the two collapsing into each other. Distinguished from the exterior boundary (inside/outside).") is an act.
 
 And unlike a surface, this boundary is not a line.
 It is a stack.
@@ -89,8 +89,8 @@ Fractality is universal; self-reference is a special capacity certain holons acq
 Where it appears, the whole structure can become aware of itself, and that noticing is itself a transmission across the very boundary it notices.
 
 There is a further consequence worth naming.
-Every layer in the boundary-stack is always doing one of two things to what crosses it.
-Productive friction, like a review step before committing a thought, shapes what passes through.
+Every layer in the @term(boundary-stack, "The layered apparatus of serial transductions through which one interiority communicates with another. Not a line but a structured depth of translations, each requiring trust that what arrives still resembles what was sent.") is always doing one of two things to what crosses it.
+@term(Productive friction, productive friction, "A layer in the boundary-stack that shapes what passes through it, making the signal more itself. Distinguished from unproductive friction, which degrades it."), like a review step before committing a thought, shapes what passes through.
 Unproductive friction, like a clumsy interface, degrades it.
 Good friction is a boundary that makes what crosses it more itself.
 Bad friction is a boundary that makes it less.
@@ -106,9 +106,5 @@ The channel is not the capacity (@link(022)).
 The stack is precisely the channel, extended, layered, fractal.
 What it carries is not reducible to it.
 
-@term boundary-stack: The layered apparatus of serial transductions through which one interiority communicates with another. Not a line but a structured depth of translations, each requiring trust that what arrives still resembles what was sent.
-@term interior boundary: The boundary that separates inside from inside, where one interiority meets another without the two collapsing into each other. Distinguished from the exterior boundary (inside/outside).
-@term productive friction: A layer in the boundary-stack that shapes what passes through it, making the signal more itself. Distinguished from unproductive friction, which degrades it.
-@term transduction: The conversion of a signal from one medium or encoding to another. Each layer in the boundary-stack performs a transduction. Communication is a chain of transductions.
 
 @ref(whitehead, "Whitehead, A.N. Process and Reality. Macmillan, 1929.")

@@ -2,19 +2,15 @@
 @status proto
 @pub-time 2026-03-15T00:00Z
 @category mathematics
-@term dynamics: TBD
-@term consonance: TBD
-@term golden-ratio: TBD
-@term resonance: TBD
 @related 009, 030, 038, 054, 070
 @edit-time 2026-04-27T01:06Z
 
 @argument
-A ratio is dynamically stable if it resists resonant capture and acoustically stable if it produces a clean repeating waveform, these two stabilities are exact inverses, and the fractal landscape of consonance is the geometry of their opposition.
+A ratio is @term(dynamically stable, Dynamic stability, "Resistance to being captured into resonant lock; irrational ratios (e.g. golden ratio) are most stable in this sense.") if it resists @term(resonant, resonance, TBD) capture and @term(acoustically stable, Acoustic stability, "A ratio that produces a short, repeating composite waveform; simple integer ratios are most stable here.") if it produces a clean repeating waveform, these two stabilities are exact inverses, and the fractal landscape of @term(consonance) is the geometry of their opposition.
 
 @section(proto)
 The word "stable" means opposite things in two different contexts, and the tension between them generates the fractal structure of the consonance diagram.
-A ratio is dynamically stable if it resists being captured into a resonant lock, irrational numbers, especially the golden ratio φ, are most stable in this sense because they cannot be well approximated by any simple fraction@ref(arnold, "Arnold, V.I.
+A ratio is dynamically stable if it resists being captured into a resonant lock, irrational numbers, especially the @term(golden ratio, golden-ratio, TBD) φ, are most stable in this sense because they cannot be well approximated by any simple fraction@ref(arnold, "Arnold, V.I.
 Small Denominators (1961).
 KAM theory and the stability of quasiperiodic motion.").
 But a ratio is acoustically stable if it produces a short, cleanly repeating composite waveform, and here simple integer ratios like 3:2 are most stable, because their period is shortest and their pattern reinforces most frequently.
@@ -22,6 +18,4 @@ As denominators grow, the repeat period lengthens, the waveform becomes fragile,
 The golden ratio sits at the extreme: maximally resistant to sounding like any simple interval, it has no stable wave identity of its own.
 These two stabilities are exact inverses, and the fractal landscape of consonance is the geometry of their opposition.
 
-@term Dynamic stability: Resistance to being captured into resonant lock; irrational ratios (e.g. golden ratio) are most stable in this sense.
-@term Acoustic stability: A ratio that produces a short, repeating composite waveform; simple integer ratios are most stable here.
 @image(040-stability,Potential energy surface: two opposite meanings of stability,Wikimedia Commons)

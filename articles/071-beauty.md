@@ -2,15 +2,11 @@
 @status proto
 @pub-time 2026-03-17T00:00Z
 @category feeling
-@term beauty: TBD
-@term mathematics: TBD
-@term perception: TBD
-@term wabi-sabi: TBD
 @related 002, 003, 009, 034, 040
 @edit-time 2026-04-27T01:08Z
 
 @argument
-Beauty is in the eye of the beholder and in the mathematics of the thing beheld, the golden ratio keeps appearing in living forms, wabi-sabi finds beauty in imperfection and transience, and both are beautiful because what the eye finds beautiful is a record of the structures that have mattered.
+@term(Beauty, beauty, TBD) is in the eye of the beholder and in the @term(mathematics) of the thing beheld, the golden ratio keeps appearing in living forms, @term(wabi-sabi) finds beauty in imperfection and transience, and both are beautiful because what the eye finds beautiful is a record of the structures that have mattered.
 
 @section(proto)
 Beauty is in the eye of the beholder, and also in the mathematics of the thing beheld.

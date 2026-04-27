@@ -2,21 +2,18 @@
 @status proto
 @pub-time 2026-03-15T00:00Z
 @category physics
-@term quantum-mechanics: TBD
-@term many-worlds: TBD
-@term mandelbrot-set: TBD
 @related 009, 038, 053, 057, 062
 @edit-time 2026-04-27T01:07Z
 
 @argument
-The Mandelbrot set's boundary has a natural probability measure, the harmonic measure, that weights simpler, more consonant branches more heavily, and if the universe's wavefunction branches according to a similar tree structure, the Born rule may fall out of the geometry rather than being imposed as a postulate.
+The @term(Mandelbrot set, mandelbrot-set, TBD)'s boundary has a natural probability measure, the @term(harmonic measure, Harmonic measure, "Natural probability measure on the Mandelbrot boundary; favors simpler (more consonant) branches."), that weights simpler, more consonant branches more heavily, and if the universe's wavefunction branches according to a similar tree structure, the Born rule may fall out of the geometry rather than being imposed as a postulate.
 
 @section(proto)
-The Born rule is quantum mechanics' most mysterious postulate.
+The @term(Born rule, "The quantum postulate that measurement outcome probability is the squared amplitude; origin remains unexplained.") is @term(quantum mechanics, quantum-mechanics, TBD)'s most mysterious postulate.
 It says the probability of a measurement outcome is proportional to the square of the wavefunction's amplitude.
 @image(054-bornharmonic,Standing wave harmonics: the Born rule as harmonic measure,Wikimedia Commons) It works perfectly. Nobody knows why it is the square and not something else.
 
-Everett's Many Worlds interpretation@ref(everett, "Everett, H. Relative state formulation of quantum mechanics (1957).
+Everett's @term(Many Worlds, many-worlds, TBD) interpretation@ref(everett, "Everett, H. Relative state formulation of quantum mechanics (1957).
 Many Worlds.
 Douady, A. and Hubbard, J. On the dynamics of polynomial-like maps (1985).
 Harmonic measure on Julia sets.") makes this more acute: if all branches are real, why do we experience some branches more than others?
@@ -33,5 +30,3 @@ A consequence of the branching geometry.
 This is speculative.
 But it is the right kind of speculative, it connects two things that are separately mysterious (why the Born rule, why the Mandelbrot measure) and asks if they are the same mystery.
 
-@term Born rule: The quantum postulate that measurement outcome probability is the squared amplitude; origin remains unexplained.
-@term Harmonic measure: Natural probability measure on the Mandelbrot boundary; favors simpler (more consonant) branches.

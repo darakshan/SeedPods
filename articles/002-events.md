@@ -5,8 +5,6 @@ The event is what's actually there.
 @status draft1
 @pub-time 2026-03-13T00:00Z
 @category physics
-@term ontology: TBD
-@term process-philosophy: TBD
 @related 001, 003, 004, 008, 037
 
 @argument
@@ -27,7 +25,7 @@ The molecules are made of atoms.
 The atoms are made of a nucleus and electrons.
 The nucleus is made of protons and neutrons.
 Those are made of quarks.
-And quarks, as far as we can tell, aren't made of anything. They are excitations of a quantum field.
+And quarks, as far as we can tell, aren't made of anything. They are excitations of a @term(quantum field, Quantum field, "in quantum field theory, the fundamental entities are fields that pervade space. Particles are localized excitations of these fields, brought into being by interactions and resolved by others. The field is ontologically primary; the particle is a derived event.").
 
 So the chair is, at bottom, a pattern of excitations in a field.
 Not a thing at all.
@@ -87,7 +85,7 @@ A note on language: from here on, we'll sometimes say "things" because that's ho
 Alfred North Whitehead@footnote(@ref(whitehead, "Whitehead, A.N.
 Process and Reality.
 Macmillan, 1929.")
-Part I develops the fallacy of misplaced concreteness; Part II develops the doctrine of actual occasions.
+Part I develops the @term(fallacy of misplaced concreteness, Fallacy of misplaced concreteness, "Alfred North Whitehead's term for the error of treating an abstraction as if it were the concrete reality. The paradigm case: treating the particle, a scientific abstraction useful for calculation, as the fundamental unit of nature, while forgetting that it was abstracted from the concrete flow of events."); Part II develops the doctrine of @term(actual occasions, Actual occasion, "Whitehead's term for the fundamental unit of reality: a discrete event of becoming. Enduring objects are families (Whitehead: \"societies\") of actual occasions whose pattern is stable enough to appear permanent. The occasion is primary; the object is derivative.").
 For a more accessible entry point, see @ref(whitehead-smw, "Whitehead, A.N.
 Science and the Modern World.
 Macmillan, 1925.") which introduces the critique of substance-based thinking without the technical apparatus.)
@@ -137,7 +135,7 @@ The original paper proposing that quantum states are relative to observers, not 
 For accessible treatments, see @ref(rovelli-2, "Rovelli, C. Reality Is Not What It Seems.
 Riverhead, 2017.") on the dissolution of the object in quantum gravity, and @ref(rovelli-3, "Rovelli, C. The Order of Time.
 Riverhead, 2018.") on the dissolution of the thing-based picture of time.
-Rovelli converges with Whitehead from within physics without citing him.) relational quantum mechanics goes further than standard quantum field theory: quantum states themselves are not absolute.
+Rovelli converges with Whitehead from within physics without citing him.) @term(relational quantum mechanics, Relational quantum mechanics, "Carlo Rovelli's interpretation of quantum mechanics, in which quantum states are relative to observers or measuring systems rather than absolute. Properties do not exist independently of interactions.") goes further than standard quantum field theory: quantum states themselves are not absolute.
 They are relative to an observer or measuring system.
 An electron does not have a definite spin until it interacts with something.
 There is no view from nowhere, no set of properties the electron has independently of its relationships.
@@ -145,7 +143,7 @@ This is not a philosophical gloss on quantum mechanics, it is one of its most ca
 
 Wittgenstein's analysis of "chair" approaches this from yet another direction, not physics or metaphysics but the logic of language.
 Ludwig Wittgenstein@footnote(@ref(wittgenstein-1, "Wittgenstein, L. Philosophical Investigations.
-Blackwell, 1953.") §47 contains the direct analysis of the simple parts of a chair, "It makes no sense at all to speak absolutely of the 'simple parts of a chair.'" §66–67 develop the concept of family resemblance, showing that categories like "game" have no single defining feature.)
+Blackwell, 1953.") §47 contains the direct analysis of the simple parts of a chair, "It makes no sense at all to speak absolutely of the 'simple parts of a chair.'" §66–67 develop the concept of @term(family resemblance, Family resemblance, "Wittgenstein's term for the way members of a category (chairs, games, languages) share overlapping similarities without any single feature common to all. The category is held together by a web of resemblances, not by a shared essence."), showing that categories like "game" have no single defining feature.)
 (1889–1951), in Philosophical Investigations, demonstrated that ordinary nouns like "chair" do not name fixed essences.
 They name clusters of family resemblances, patterns of use, contextual regularities, that have no single defining feature.
 The word "chair" works perfectly well in practice.
@@ -163,12 +161,6 @@ If events are primary and constituted by their relationships, then every event h
 That is the territory of @link(003).
 If the self is a stable pattern of events rather than an enduring substance, that is @link(004).
 If the field is the medium through which events reach each other, that is @link(008).
-
-@term Fallacy of misplaced concreteness: Alfred North Whitehead's term for the error of treating an abstraction as if it were the concrete reality. The paradigm case: treating the particle, a scientific abstraction useful for calculation, as the fundamental unit of nature, while forgetting that it was abstracted from the concrete flow of events.
-@term Actual occasion: Whitehead's term for the fundamental unit of reality: a discrete event of becoming. Enduring objects are families (Whitehead: "societies") of actual occasions whose pattern is stable enough to appear permanent. The occasion is primary; the object is derivative.
-@term Quantum field: in quantum field theory, the fundamental entities are fields that pervade space. Particles are localized excitations of these fields, brought into being by interactions and resolved by others. The field is ontologically primary; the particle is a derived event.
-@term Family resemblance: Wittgenstein's term for the way members of a category (chairs, games, languages) share overlapping similarities without any single feature common to all. The category is held together by a web of resemblances, not by a shared essence.
-@term Relational quantum mechanics: Carlo Rovelli's interpretation of quantum mechanics, in which quantum states are relative to observers or measuring systems rather than absolute. Properties do not exist independently of interactions.
 
 @section(script)
 1. A plain wooden chair in a pool of light. VO: Just a chair. We know what a chair is.

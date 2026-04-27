@@ -2,7 +2,6 @@
 @status proto
 @pub-time 2026-03-15T00:00Z
 @category consciousness
-@term metaphysics: TBD
 @related 002, 008, 051, 064, 067
 @edit-time 2026-04-27T01:06Z
 
@@ -17,7 +16,7 @@ The proposal here inverts that.
 Consciousness is not produced by spacetime, it is a dimension orthogonal to spacetime, with a range from zero to infinity.
 Spacetime may itself emerge from this dimension rather than the other way around.
 
-This is not straightforwardly testable yet, but it is not purely metaphysical either.
+This is not straightforwardly testable yet, but it is not purely @term(metaphysical, metaphysics, TBD) either.
 The hard problem of consciousness, why any physical process feels like anything, has no solution within the standard picture.
 Every proposed solution either eliminates experience (eliminativism) or smuggles it in (functionalism).
 The orthogonal dimension proposal takes experience as primitive, the way physics takes mass or charge as primitive, and asks what follows.
@@ -25,15 +24,13 @@ The orthogonal dimension proposal takes experience as primitive, the way physics
 What follows is that the universe has always had an interior.
 Not just since brains arrived.
 From the beginning.
-Whitehead called this prehension@ref(whitehead, "Whitehead, A.N.
+Whitehead called this @term(prehension, Prehension, "Whitehead's term for how occasions take in their world; the interior dimension of process.")@ref(whitehead, "Whitehead, A.N.
 Process and Reality (1929).
 Prehension and the interiority of occasions.
 Teilhard de Chardin, P. The Phenomenon of Man (1955).
 The within of things.").
-Teilhard called it the within of things.
+Teilhard called it the @term(within, Within, "Teilhard de Chardin's term for the interior aspect of matter, present from the beginning.") of things.
 Neither had the language of orthogonal dimensions.
 The language helps.
 
-@term Prehension: Whitehead's term for how occasions take in their world; the interior dimension of process.
-@term Within: Teilhard de Chardin's term for the interior aspect of matter, present from the beginning.
 @image(050-orthogonal,Minkowski spacetime diagram: consciousness as an orthogonal dimension,Wikimedia Commons)

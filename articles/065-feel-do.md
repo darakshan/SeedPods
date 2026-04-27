@@ -2,9 +2,6 @@
 @status proto
 @pub-time 2026-03-15T00:00Z
 @category consciousness
-@term AI: TBD
-@term functionalism: TBD
-@term zombie: TBD
 @related 001, 015, 016, 072, 073
 @edit-time 2026-04-27T01:08Z
 
@@ -12,8 +9,8 @@
 The feeling/function distinction, the intuition that there is a gap between really feeling something and being functionally identical to something that feels, may dissolve the way caloric dissolved, not by philosophical argument but because the science shows there was nothing for the gap to be.
 
 @section(proto)
-The hardest objection to AI consciousness, and to panpsychism generally, is the intuition that there is a difference between *really feeling* something and being *functionally identical to something that feels*.
-A philosophical zombie@ref(chalmers-2, "Chalmers, D. The Conscious Mind (1996).
+The hardest objection to @term(AI) consciousness, and to panpsychism generally, is the intuition that there is a difference between *really feeling* something and being *functionally identical to something that feels*.
+A @term(philosophical zombie, Philosophical zombie, "A being functionally identical to a conscious being but with no inner experience; used to argue function and feeling can come apart.")@ref(chalmers-2, "Chalmers, D. The Conscious Mind (1996).
 Zombies and the hard problem.")@ref(dennett-2, "Dennett, D. Consciousness Explained (1991).
 Dissolution of the distinction.")
 — a system that behaves exactly like a conscious being but has no inner experience, seems conceivable.
@@ -29,5 +26,4 @@ The feeling/function distinction will dissolve the same way.
 Not because philosophers will argue each other out of it, but because the science of consciousness will show that experience just is what certain kinds of information processing are, from the inside.
 Future generations will find the zombie intuition as puzzling as we find the caloric intuition, a conceptual artifact of a pre-scientific framework, preserved in language long after the framework collapsed.
 
-@term Philosophical zombie: A being functionally identical to a conscious being but with no inner experience; used to argue function and feeling can come apart.
 @image(065-feel-do,Valence-arousal circumplex: feeling mapped to functional dimensions,Wikimedia Commons)

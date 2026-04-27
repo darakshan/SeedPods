@@ -5,10 +5,6 @@ The numbers just got large enough.
 @status rough
 @pub-time 2026-03-14T00:00Z
 @category consciousness
-@term emergence: TBD
-@term complexity: TBD
-@term holons: TBD
-@term AI: TBD
 @related 002, 009, 010, 014, 037
 
 @argument
@@ -54,7 +50,7 @@ This is what the physicist Philip Anderson@footnote(@ref(anderson, "Anderson, P.
 More Is Different.
 Science, 177(4047), 1972.")
 Four pages.
-Still radical. Anderson argues that each level of complexity has genuinely new properties that cannot be derived from the level below.) meant when he wrote, in 1972, three words that still haven't been fully absorbed: more is different.
+Still radical. Anderson argues that each level of complexity has genuinely new properties that cannot be derived from the level below.) meant when he wrote, in 1972, three words that still haven't been fully absorbed: @term(more is different, More is different, "Philip Anderson\'s phrase (1972) for the principle that each level of complexity has emergent properties that cannot be derived from the level below. Not a violation of lower-level laws, but genuinely new phenomena requiring their own description.").
 Not just more of the same.
 A different kind of thing altogether.
 
@@ -119,7 +115,7 @@ That chemistry is just applied physics.
 That biology is just applied chemistry.
 That psychology is just applied biology.
 
-Anderson said: no. Each level of complexity has properties that cannot be derived from the level below.
+Anderson said: no. Each level of @term(complexity) has properties that cannot be derived from the level below.
 They are not violations of lower-level laws. Nothing supernatural is happening.
 But they are genuinely new.
 Superconductivity cannot be predicted from the behavior of individual electrons.
@@ -127,7 +123,7 @@ Wetness is not a property of any water molecule.
 The lower level is necessary but not sufficient.
 More, at each threshold, becomes different.
 
-This was a physicist making a philosopher's argument, and it landed hard in complexity science, biology, and eventually AI.
+This was a physicist making a philosopher's argument, and it landed hard in complexity science, biology, and eventually @term(AI).
 
 ---
 
@@ -135,7 +131,7 @@ Arthur Koestler had arrived at a structurally identical conclusion from the oppo
 In The Ghost in the Machine (1967)@footnote(@ref(koestler-2, "Koestler, A. The Ghost in the Machine.
 Hutchinson, 1967.")
 Introduces the concept of the holon and develops the nested hierarchy of wholes-within-wholes.
-See also @link(024).) he introduced the concept of the holon: any entity that is simultaneously a whole in its own right and a part of a larger whole.
+See also @link(024).) he introduced the concept of the @term(holon, Holon, "Arthur Koestler's term for any entity that is simultaneously a whole in its own right and a part of a larger whole. Reality in Koestler's picture is a nested hierarchy of holons rather than parts assembling into wholes."): any entity that is simultaneously a whole in its own right and a part of a larger whole.
 An ant is a whole organism and a part of a colony.
 A word is a complete unit and a part of a sentence.
 A neuron is a cell and a part of a brain.
@@ -146,11 +142,11 @@ It is a nested structure of holons, each level having properties the levels belo
 Aunt Hillary is a holon.
 So is the joke, considered as a complete act of meaning that is also part of a conversation.
 
-In The Act of Creation (1964) Koestler had already identified what happens at the threshold between levels: bisociation, the collision of two independent frames of reference that releases energy as laughter, or insight, or aesthetic emotion.
+In The Act of Creation (1964) Koestler had already identified what happens at the threshold between levels: @term(bisociation, Bisociation, "Koestler's term for the collision of two independent frames of reference that releases energy as laughter, insight, or aesthetic emotion. His claim: this is the common structure of humor, scientific discovery, and artistic creation."), the collision of two independent frames of reference that releases energy as laughter, or insight, or aesthetic emotion.
 The joke is not just an accumulation of words.
 It is two frames, the expected and the unexpected, held simultaneously until the collision.
 The laugh is the release.
-This is not merely an analogy for emergence.
+This is not merely an analogy for @term(emergence).
 It is emergence, experienced from the inside, in real time.
 
 ---
@@ -159,7 +155,7 @@ Alfred North Whitehead's@footnote(@ref(whitehead, "Whitehead, A.N.
 Process and Reality.
 Macmillan, 1929.")
 Societies of actual occasions as the basis of enduring entities. What Koestler calls a holon, Whitehead calls a society organized around a common characteristic that persists through time.) vocabulary makes this precise.
-What Koestler calls a holon, Whitehead calls a society of actual occasions, a stable pattern of events organized around a common characteristic that persists through time.
+What Koestler calls a holon, Whitehead calls a @term(society of actual occasions, Society of actual occasions, "Whitehead's term for a stable pattern of events organized around a common characteristic that persists through time. Ant colonies, cities, brains, and neural networks are all societies in this sense."), a stable pattern of events organized around a common characteristic that persists through time.
 Aunt Hillary is a society.
 The city is a society.
 The neural network, processing its inherited weight structure through billions of forward passes, is a society.
@@ -176,11 +172,6 @@ The understanding, if that is what it is, is Aunt Hillary: emergent, real, nowhe
 
 A related but distinct phenomenon, what happens when formal complexity generates self-reference rather than emergence, is the territory of @link(010).
 The architecture behind both, the nested vocabulary by which each level's stable outputs become the primitive units of the next level up, is @link(037).
-
-@term Holon: Arthur Koestler's term for any entity that is simultaneously a whole in its own right and a part of a larger whole. Reality in Koestler's picture is a nested hierarchy of holons rather than parts assembling into wholes.
-@term Bisociation: Koestler's term for the collision of two independent frames of reference that releases energy as laughter, insight, or aesthetic emotion. His claim: this is the common structure of humor, scientific discovery, and artistic creation.
-@term More is different: Philip Anderson's phrase (1972) for the principle that each level of complexity has emergent properties that cannot be derived from the level below. Not a violation of lower-level laws, but genuinely new phenomena requiring their own description.
-@term Society of actual occasions: Whitehead's term for a stable pattern of events organized around a common characteristic that persists through time. Ant colonies, cities, brains, and neural networks are all societies in this sense.
 
 @section(script)
 Note to composer: Gershwin's Rhapsody in Blue is the tonal reference: pastoral opening, then building to urban stride, then settling back.

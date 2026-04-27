@@ -4,12 +4,6 @@ Harmony, the double slit, and thought may all be the same phenomenon at differen
 @status proto
 @pub-time 2026-03-12T00:00Z
 @category feeling
-@term physics: TBD
-@term music: TBD
-@term consciousness: TBD
-@term harmony: TBD
-@term fields: TBD
-@term double-slit: TBD
 @related 007, 009, 016, 029, 054
 
 @argument
@@ -17,11 +11,11 @@ The ear detecting consonance and the screen detecting the double-slit pattern ar
 
 @section(proto)
 Interference is the mechanism by which two waves meeting in the same medium reinforce or cancel depending on their phase relationship.
-In music this produces consonance and dissonance, the reason certain intervals feel stable and others tense is that their interference patterns are periodic and regular, or not.
-@image(030-interference,The double-slit interference pattern,Wikimedia Commons) In the double slit experiment it produces the banded pattern on the screen that proves light is a wave phenomenon. In the brain, millions of neurons continuously disturbing the electromagnetic field produce overlapping interference patterns whose structure may be what we call thought.
+In @term(music) this produces consonance and dissonance, the reason certain intervals feel stable and others tense is that their interference patterns are periodic and regular, or not.
+@image(030-interference,The double-slit interference pattern,Wikimedia Commons) In the @term(double slit, double-slit, TBD) experiment it produces the banded pattern on the screen that proves light is a wave phenomenon. In the brain, millions of neurons continuously disturbing the electromagnetic @term(field, fields, TBD) produce overlapping interference patterns whose structure may be what we call thought.
 
 The same mathematics describes all three cases.
-The question is whether this is analogy or identity, whether harmony, diffraction, and cognition are genuinely the same phenomenon at different scales, or merely share a formal description.
+The question is whether this is analogy or identity, whether @term(harmony) and diffraction, and cognition are genuinely the same phenomenon at different scales, or merely share a formal description.
 That question is left open here.
 But the formal identity is already surprising enough: the ear detecting consonance and the screen detecting the double slit pattern are both reading the same kind of structure from the same kind of process.
 

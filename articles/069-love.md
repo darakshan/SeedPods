@@ -8,12 +8,9 @@ Love is what Light feels like.
 @pub-time 2026-03-27T00:00Z
 @category feeling
 @related 002, 003, 029, 036, 066
-@term love: TBD
-@term consciousness: TBD
-@term light: TBD
 
 @argument
-Physicists describe light and mystics describe love, and they keep reaching for the same words, attraction, radiance, union, the dissolution of distance, not because one is borrowing from the other but because they may be describing the outside and inside of the same phenomenon.
+Physicists describe @term(light) and mystics describe @term(love), and they keep reaching for the same words, attraction, radiance, union, the dissolution of distance, not because one is borrowing from the other but because they may be describing the outside and inside of the same phenomenon.
 
 @section(surface)
 Physicists describe light: electromagnetic radiation, photons crossing space at the maximum speed the universe allows.
@@ -93,7 +90,7 @@ Desire not as lack but as the engine of becoming.
 Simone Weil, the French philosopher and mystic who died in 1943, drew a distinction that illuminates the structure.
 In *Gravity and Grace*, she describes two movements: gravity pulls downward, toward dispersion; grace pulls toward God, toward unity.
 Both are modes of attraction, which is to say, both are love differently oriented.
-Her insight that "attention is the rarest and purest form of generosity" points to the connection between love and consciousness.
+Her insight that "attention is the rarest and purest form of generosity" points to the connection between love and @term(consciousness).
 Sustained attention *is* love.
 There may be no other definition that survives scrutiny.
 

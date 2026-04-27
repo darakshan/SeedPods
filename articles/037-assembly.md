@@ -4,9 +4,6 @@ TBD
 @status proto
 @pub-time 2026-03-14T00:00Z
 @category mathematics
-@term emergence: TBD
-@term hierarchy: TBD
-@term holons: TBD
 @related 011, 002, 012, 014, 067
 
 @argument
@@ -28,14 +25,14 @@ Of course more is different: because at sufficient complexity the sentences stab
 Three frameworks describe the same architecture from different angles:
 
 Arthur Koestler's@ref(koestler, "Koestler, A. The Ghost in the Machine (1967).
-Holons and the hierarchy of whole/part.") holons (@link(011), @link(024)): entities that are simultaneously wholes and parts of larger wholes.
+Holons and the hierarchy of whole/part.") @term(holons, Holon, "Koestler's whole/part; the stable \"sentence\" at one level becomes the \"word\" at the next.") (@link(011), @link(024)): entities that are simultaneously wholes and parts of larger wholes.
 The holon is the stable sentence that becomes the next level's word.
 
-Alfred North Whitehead's societies of actual occasions: stable patterns of events that persist through time and become the inherited world of the next level of events.
+Alfred North Whitehead's @term(societies of actual occasions, Society of occasions, "Whitehead's persistent pattern of events that functions as vocabulary for the next level."): stable patterns of events that persist through time and become the inherited world of the next level of events.
 The society is the sentence.
 The next society prehends it as vocabulary.
 
-Sara Walker's assembly theory@ref(walker, "Walker, S.I. et al. Assembly theory (Nature 2023).
+Sara Walker's @term(assembly theory, Assembly theory, "Walker et al.: complexity measured by assembly index (steps to construct\); high-index, high-copy objects signal life.")@ref(walker, "Walker, S.I. et al. Assembly theory (Nature 2023).
 Assembly index and the signature of life."): complex objects can only exist if assembled through a sequence of steps.
 The assembly index measures complexity by the length of that sequence.
 High assembly index objects that reproduce at high copy number are the signature of life.
@@ -44,6 +41,3 @@ The history is stored in the structure, the sentence is still present in the wor
 These three are not competing accounts.
 They are the same architecture described from physics, philosophy, and biology respectively.
 
-@term Assembly theory: Walker et al.: complexity measured by assembly index (steps to construct); high-index, high-copy objects signal life.
-@term Holon: Koestler's whole/part; the stable "sentence" at one level becomes the "word" at the next.
-@term Society of occasions: Whitehead's persistent pattern of events that functions as vocabulary for the next level.

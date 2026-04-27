@@ -2,24 +2,22 @@
 @status proto
 @pub-time 2026-03-15T00:00Z
 @category consciousness
-@term god: TBD
-@term attractor: TBD
 @related 009, 034, 058, 059, 060
 @edit-time 2026-04-27T01:08Z
 
 @argument
-Process theology's God is both the ground of possibility, holding all unrealized potentials available for occasions to select from, and the lure each occasion feels toward greater complexity, which in the language of dynamical systems makes God both the initial condition and the attractor.
+Process theology's @term(God, god, TBD) is both the ground of possibility, holding all unrealized potentials available for occasions to select from, and the lure each occasion feels toward greater complexity, which in the language of dynamical systems makes God both the initial condition and the @term(attractor).
 
 @section(proto)
 Whitehead's God is not the God of theism, not a person who intervenes in history or answers prayers.
 God in Whitehead's system plays two roles in the metaphysics of process.
 
-First, God is the ground of possibility, the one who holds all unrealized potentials available for actual occasions to select from.
+First, God is the ground of possibility, the one who holds all @term(unrealized potentials, Eternal objects, "The realm of possibility that God holds available; occasions select from it in their self-determination.") available for actual occasions to select from.
 Without this role, there is no account of where possibilities come from.
 An occasion can only actualize what is genuinely available to it.
 God makes possibilities available.
 
-Second, God is the lure, the initial aim that each occasion feels as a pull toward the best possibility available given its situation.
+Second, God is the lure, the @term(initial aim, Initial aim, "Whitehead's lure, the pull each occasion feels toward the best possibility available; not compulsion but attraction.") that each occasion feels as a pull toward the best possibility available given its situation.
 This is not compulsion.
 The occasion is free to deviate from the lure.
 But the lure is always there, always pointing toward greater complexity, greater depth of experience, greater integration.
@@ -38,6 +36,4 @@ God as ground of possibility and lure.")@ref(teilhard, "Teilhard de Chardin, P. 
 Omega Point.").
 Together they describe a universe that is going somewhere, and knows it, at every scale.
 
-@term Initial aim: Whitehead's lure, the pull each occasion feels toward the best possibility available; not compulsion but attraction.
-@term Eternal objects: The realm of possibility that God holds available; occasions select from it in their self-determination.
 @image(066-cosmicattractor,Lorenz attractor: God as initial condition and cosmic attractor,Wikimedia Commons)

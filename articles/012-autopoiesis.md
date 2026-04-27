@@ -4,14 +4,6 @@ Life is defined not by what it's made of, but by the circular process that keeps
 @status draft1
 @pub-time 2026-03-11T00:00Z
 @category biology
-@term life: TBD
-@term cells: TBD
-@term maturana-varela: TBD
-@term entropy: TBD
-@term evolution: TBD
-@term autopoiesis: Maturana and Varela's term for a system that continuously produces the very components that constitute and maintain it. The defining organizational property of living systems.
-@term society of occasions: Whitehead's term for a persistent pattern of actual occasions organized with sufficient coherence and closure to act as a unit through time. The metaphysical counterpart to the autopoietic organization.
-@term negative entropy: Schrödinger's term for the ordered structure that living systems import from their environment to offset internal disorder. The thermodynamic face of what autopoiesis achieves organizationally.
 @related 002, 003, 011, 031, 037
 
 @argument
@@ -28,10 +20,10 @@ It reproduces.
 All true.
 But those are behaviors.
 They describe what life does.
-They don't say what life is.
+They don't say what @term(life) is.
 
 Try this instead.
-Imagine a single cell, the simplest living thing you can find, a bacterium smaller than anything you'll ever see with your naked eye.
+Imagine a single @term(cell, cells, TBD), the simplest living thing you can find, a bacterium smaller than anything you'll ever see with your naked eye.
 Every few minutes, its molecules get replaced.
 The proteins that were there a moment ago are gone.
 New ones have been assembled in their place.
@@ -60,7 +52,7 @@ It is a storm.
 Thousands of molecular machines, each one a protein folded into a precise shape, grabbing passing molecules, transforming them, releasing them, all of it happening millions of times per second, in a space you could fit ten thousand of inside the period at the end of this sentence.
 The circle holds not despite that chaos but through it.
 
-Two biologists, Humberto Maturana and Francisco Varela, gave this a name in the 1970s: autopoiesis.
+Two biologists, Humberto Maturana and Francisco Varela, gave this a name in the 1970s: @term(autopoiesis, "Maturana and Varela's term for a system that continuously produces the very components that constitute and maintain it. The defining organizational property of living systems.").
 From the Greek: auto, self; poiesis, making.
 A self-making system.
 
@@ -69,9 +61,9 @@ The universe is not on the cell's side.
 Heat disperses.
 Molecules drift.
 Radiation breaks chemical bonds.
-Entropy, the tendency of everything to fall apart, spread out, and go inert, is relentless.
+@term(Entropy, entropy, TBD), the tendency of everything to fall apart, spread out, and go inert, is relentless.
 The cell holds its shape against all of that, not by being rigid, but by continuously remaking itself faster than it dissolves.
-That loop, stable enough to persist against everything trying to disrupt it, flexible enough to respond when conditions shift: that is what evolution found. @link(009) shows how structure emerges from random process; a self-maintaining loop is one of the structures that emerged.
+That loop, stable enough to persist against everything trying to disrupt it, flexible enough to respond when conditions shift: that is what @term(evolution) found. @link(009) shows how structure emerges from random process; a self-maintaining loop is one of the structures that emerged.
 
 And notice what it means to be defined by your own self-production.
 The cell doesn't just happen to be organized this way.
@@ -109,7 +101,7 @@ The cell remains the sole confirmed instance.
 Whitehead@footnote(@ref(whitehead, "Whitehead, A.N.
 Process and Reality.
 Macmillan, 1929.")
-The metaphysical framework. Society of occasions as the counterpart of autopoietic organization.
+The metaphysical framework. @term(Society of occasions, society of occasions, "Whitehead's term for a persistent pattern of actual occasions organized with sufficient coherence and closure to act as a unit through time. The metaphysical counterpart to the autopoietic organization.") as the counterpart of autopoietic organization.
 A living cell in Whiteheadian terms is a society of occasions organized with enough coherence and closure to constitute a persistent center of activity.) arrived at a related insight from a completely different direction.
 In his process philosophy, the fundamental units of reality are events rather than things (@link(002)), occasions that arise, integrate what came before, and perish into the next occasion.
 A living cell, in Whiteheadian terms, is a society of such occasions organized with enough coherence and closure to constitute a persistent center of activity.
@@ -135,7 +127,7 @@ Schrödinger@footnote(@ref(schrodinger, "Schrödinger, E. What is Life?
 Cambridge University Press, 1944.")
 The thermodynamic framing that set the question: what distinguishes living matter from dead matter?
 Schrödinger's answer: living systems import order (negative entropy) from their environment to offset internal disorder.) asked in 1944 what distinguished living matter from dead matter thermodynamically.
-His answer: living systems survive by continuously importing order from their environment (what he called negative entropy) and using it to offset the disorder that would otherwise accumulate inside.
+His answer: living systems survive by continuously importing order from their environment (what he called @term(negative entropy, "Schrödinger's term for the ordered structure that living systems import from their environment to offset internal disorder. The thermodynamic face of what autopoiesis achieves organizationally.")) and using it to offset the disorder that would otherwise accumulate inside.
 Autopoiesis is the organizational answer to Schrödinger's thermodynamic question: this is the loop that does the importing.
 
 @link(013) picks up here: once you have a self-maintaining loop with a boundary, you have a system that begins to enact a world rather than merely exist in one.

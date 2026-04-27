@@ -4,11 +4,6 @@ Physics and Whitehead converged on the same discovery from opposite directions.
 @status draft1
 @pub-time 2026-03-12T00:00Z
 @category feeling
-@term physics: TBD
-@term fields: TBD
-@term quantum-mechanics: TBD
-@term consciousness: TBD
-@term electromagnetism: TBD
 @related 003, 007, 016, 017, 029
 
 @argument
@@ -21,14 +16,14 @@ You've been using light as a metaphor your whole life.
 Shine some light on it.
 I'm in the dark.
 Suddenly it all became clear.
-Consciousness is the light; ignorance is the darkness; attention is the beam of a flashlight.
+@term(Consciousness, consciousness, TBD) is the light; ignorance is the darkness; attention is the beam of a flashlight.
 
 It's a good metaphor.
-But here's something strange: when you look closely at what light actually is, the metaphor starts to feel less like poetry and more like physics.
+But here's something strange: when you look closely at what light actually is, the metaphor starts to feel less like poetry and more like @term(physics).
 
 In the 1860s, James Clerk Maxwell noticed something remarkable.
-Electric fields and magnetic fields, which everyone had been studying separately, were the same thing, caught at different moments.
-And that unified thing, the electromagnetic field, turned out to fill all of space.
+Electric @term(fields) and magnetic fields, which everyone had been studying separately, were the same thing, caught at different moments.
+And that unified thing, the @term(electromagnetic field, Electromagnetic field, "the unified field described by James Clerk Maxwell's equations (1865\), of which electricity, magnetism, and light are all aspects. Not a medium that contains these phenomena but the phenomenon itself. Pervades all of space."), turned out to fill all of space.
 It doesn't just connect objects that have electric charge; it pervades everything, a continuous medium with no gaps.
 Light isn't a separate phenomenon that travels through this field.
 Light is the field in motion, a disturbance propagating outward, the way a ripple is the pond in motion.
@@ -59,7 +54,7 @@ What if "medium of feeling" isn't a metaphor at all, just an accurate descriptio
 James Clerk Maxwell's@footnote(@ref(maxwell, "Maxwell, J.C.
 A Treatise on Electricity and Magnetism.
 Oxford, 1873.")
-The foundational text of classical electromagnetism, where the unification of electricity, magnetism, and light into a single field is worked out in full mathematical detail.) unification of electricity and magnetism in 1865 revealed that light, electricity, and magnetism are all aspects of a single field, but the deeper surprise is what connects that field to radiation.
+The foundational text of classical @term(electromagnetism), where the unification of electricity, magnetism, and light into a single field is worked out in full mathematical detail.) unification of electricity and magnetism in 1865 revealed that light, electricity, and magnetism are all aspects of a single field, but the deeper surprise is what connects that field to @term(radiation, Radiation, "what the electromagnetic field does when a charged particle accelerates. The disturbance propagates outward as light. A stationary charge is silent; only acceleration speaks.").
 A stationary charge is quiet.
 A charge moving at constant velocity adds a magnetic component but still doesn't radiate.
 Only a charge that accelerates, that changes its velocity, shakes the field, and that shake propagates outward as light.
@@ -74,7 +69,7 @@ The field doesn't stop at the skull.
 Alfred North Whitehead@footnote(@ref(whitehead, "Whitehead, A.N.
 Process and Reality.
 Macmillan, 1929.")
-See especially Part III on prehension, where Whitehead develops the claim that each occasion reaches out and takes in what surrounds it, and that the field is the medium through which this reaching occurs.) arrived at a structurally identical picture from pure philosophical argument, with no knowledge of neuroscience.
+See especially Part III on @term(prehension, Prehension, "Alfred North Whitehead's term for the fundamental act by which any event takes in and is shaped by what surrounds it. Not a metaphor for perception but a proposed feature of reality at every scale: each occasion reaches out and feels its environment before it can become itself. Whitehead argued the electromagnetic field is the physical medium through which this reaching occurs."), where Whitehead develops the claim that each occasion reaches out and takes in what surrounds it, and that the field is the medium through which this reaching occurs.) arrived at a structurally identical picture from pure philosophical argument, with no knowledge of neuroscience.
 His claim: every actual occasion, every event in nature, reaches out and takes in what surrounds it before it can become itself.
 He called this reaching prehension.
 The field, in Whitehead's picture, is not a passive container but the medium through which occasions feel each other.
@@ -89,18 +84,10 @@ Richard Feynman's Lectures on Physics@footnote(@ref(feynman, "Feynman, R. The Fe
 Addison-Wesley, 1964.")
 Volume 2 covers electromagnetism, the clearest physical account available of what the electromagnetic field actually says about the world.) remain the clearest physical account of what electromagnetism actually says about the world.
 
-@term Electromagnetic field: the unified field described by James Clerk Maxwell's equations (1865), of which electricity, magnetism, and light are all aspects. Not a medium that contains these phenomena but the phenomenon itself. Pervades all of space.
-
-@term Radiation: what the electromagnetic field does when a charged particle accelerates. The disturbance propagates outward as light. A stationary charge is silent; only acceleration speaks.
-
-@term Prehension: Alfred North Whitehead's term for the fundamental act by which any event takes in and is shaped by what surrounds it. Not a metaphor for perception but a proposed feature of reality at every scale: each occasion reaches out and feels its environment before it can become itself. Whitehead argued the electromagnetic field is the physical medium through which this reaching occurs.
-
-@term Diffraction: the spreading and interference of waves when they pass through a gap or around an obstacle. Visible when light passes through a mesh screen. Evidence that light is a field phenomenon, not a particle traveling a straight path.
-
 @section(script)
 1. A summer night. A child on a porch, pressing her face against a screen door. A rhythmic, unidentifiable sound from inside, dim room beyond. Her body already receiving before she can resolve what it is.
 
-2. She retrieves her flashlight and shines it through the screen door. The mesh diffracts the beam, an interference pattern spreads across the far wall.
+2. She retrieves her flashlight and shines it through the screen door. The mesh @term(diffracts, Diffraction, "the spreading and interference of waves when they pass through a gap or around an obstacle. Visible when light passes through a mesh screen. Evidence that light is a field phenomenon, not a particle traveling a straight path.") the beam, an interference pattern spreads across the far wall.
 
 3. Inside, in the warm light: her grandmother in a rocking chair. The source of the sound. A presence continuously radiating, whether detected or not.
 

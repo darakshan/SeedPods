@@ -4,10 +4,6 @@ The Bubble
 @status prelim
 @pub-time 2026-04-14T00:00Z
 @category physics
-@term holographic: The principle that all information in a volume of space is encoded on its boundary surface, not distributed through the interior. Discovered by Bekenstein and developed through Hawking's work on black holes.
-@term boundary: The surface between inside and outside. In physics, where information lives. In Sufi metaphysics (barzakh), a mediating realm of its own.
-@term interiority: Whitehead's sense of "inside", not spatial but experiential. What an event is from within.
-@term barzakh: In Sufi metaphysics, especially Ibn Arabi, the isthmus or intermediate realm that separates and connects different states of existence. The boundary where the invisible becomes visible.
 @related 003, 012, 033, 068, 078
 
 @argument
@@ -26,7 +22,7 @@ There is nothing inside it but air, the same air that's outside.
 No hidden interior, no depth to excavate.
 And yet a child stops for it.
 Not only because it's pretty.
-Because it's showing her something: a thing that is entirely boundary, entirely edge, and entirely complete.
+Because it's showing her something: a thing that is entirely @term(boundary, "The surface between inside and outside. In physics, where information lives. In Sufi metaphysics (barzakh), a mediating realm of its own."), entirely edge, and entirely complete.
 The soap bubble is not a metaphor for this insight.
 It is an instance of it (see @link(068)).
 
@@ -48,7 +44,7 @@ There is always another layer, not because depth is infinite but because surface
 Depth is surface you haven't turned over yet.
 
 Physics arrived at the same insight from a completely different direction.
-The holographic principle, discovered by Bekenstein@ref(bekenstein, "Bekenstein, Jacob.
+The @term(holographic, "The principle that all information in a volume of space is encoded on its boundary surface, not distributed through the interior. Discovered by Bekenstein and developed through Hawking's work on black holes.") principle, discovered by Bekenstein@ref(bekenstein, "Bekenstein, Jacob.
 'Black Holes and Entropy.'
 Physical Review D, 1973.
 The original argument that a black hole's information content is proportional to surface area, not volume.") and developed through Hawking's@ref(hawking, "Hawking, Stephen.
@@ -66,10 +62,10 @@ Harvard University Press, 2007.
 The cell membrane as cognitive boundary mediating identity and communication.")
 
 The Sufis knew something about boundaries.
-In Ibn Arabi's metaphysics, the *barzakh* is the isthmus, the intermediate realm that separates and connects different states of existence.@ref(ibnarabi, "Ibn Arabi.
+In Ibn Arabi's metaphysics, the *@term(barzakh, "In Sufi metaphysics, especially Ibn Arabi, the isthmus or intermediate realm that separates and connects different states of existence. The boundary where the invisible becomes visible.")* is the isthmus, the intermediate realm that separates and connects different states of existence.@ref(ibnarabi, "Ibn Arabi.
 The Bezels of Wisdom (Fusus al-Hikam), 13th century.
 The barzakh as cosmological principle.")
-Not a wall between inside and outside but a mediating realm of its own, where the invisible becomes visible, where interiority expresses itself outward.
+Not a wall between inside and outside but a mediating realm of its own, where the invisible becomes visible, where @term(interiority, "Whitehead's sense of \"inside\", not spatial but experiential. What an event is from within.") expresses itself outward.
 The holographic principle in the language of physics.
 The bubble in the language of mysticism.
 

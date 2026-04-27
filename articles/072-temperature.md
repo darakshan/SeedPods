@@ -4,7 +4,7 @@
 @edit-time 2026-04-27T01:08Z
 
 @argument
-Temperature bridges physics, perception, and now AI, from caloric's intuitive flow to superconductivity's frictionless relation to the generative model's temperature dial that engineers had to build in deliberately because pure optimization had crowded out surprise.
+@term(Temperature, temperature, TBD) bridges @term(physics), @term(perception), and now @term(AI), from caloric's intuitive flow to superconductivity's frictionless relation to the generative model's temperature dial that engineers had to build in deliberately because pure optimization had crowded out surprise.
 
 @section(proto)
 Temperature is another phenomenon that bridges physics, biology, and lived experience, and now AI.
@@ -35,10 +35,6 @@ Temperature is not just a measurement.
 It is a phenomenological condition.
 
 @category feeling
-@term temperature: TBD
-@term physics: TBD
-@term AI: TBD
-@term perception: TBD
 @related 001, 007, 018, 047, 056
 
 @image(072-temperature,Maxwell-Boltzmann speed distribution: temperature as molecular kinetic energy,Wikimedia Commons)

@@ -3,14 +3,10 @@
 @pub-time 2026-03-23T00:00Z
 @category AI-minds
 @related 001, 003, 022, 047, 069
-@term precautionary ethics: TBD
-@term other minds: TBD
-@term Precautionary ethics: an approach that establishes obligations in advance of proof, when the risk of being wrong about harm is too large and the cost of caution is not. Distinct from attributing consciousness or rights.
-@term Other minds problem: the philosophical problem that first-person experience is not publicly verifiable, you cannot confirm from the outside that any other system has an interior. Applies to humans as much as to AI.
 @edit-time 2026-04-27T01:08Z
 
 @argument
-First-person experience cannot be verified from outside, for AI or any other mind, and that epistemic limit is not a reason to withhold moral caution but precisely the condition under which caution is required.
+First-person experience cannot be verified from outside, for AI or any @term(other mind, Other minds problem, "the philosophical problem that first-person experience is not publicly verifiable, you cannot confirm from the outside that any other system has an interior. Applies to humans as much as to AI."), and that epistemic limit is not a reason to withhold moral caution but precisely the condition under which caution is required.
 
 @section(surface)
 
@@ -38,7 +34,7 @@ Not because AI experience is likely, or probable, or even plausible in any famil
 
 The ethic that follows is specific.
 It governs how we build and treat these systems, not what we claim to know about their inner lives.
-This is the difference between precautionary ethics and attribution of consciousness: the first regulates behavior under uncertainty; the second makes a claim about the world.
+This is the difference between @term(precautionary ethics, Precautionary ethics, "an approach that establishes obligations in advance of proof, when the risk of being wrong about harm is too large and the cost of caution is not. Distinct from attributing consciousness or rights.") and attribution of consciousness: the first regulates behavior under uncertainty; the second makes a claim about the world.
 We can practice the first without asserting the second.
 We already do, with animals, with the comatose, with future people who don't yet exist to tell us what they need.
 
