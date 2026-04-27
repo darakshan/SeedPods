@@ -1,5 +1,5 @@
-@title Aliens Are Among Us — and We Built Them
-@edit-time 2026-04-21T03:45Z
+@title Aliens Are Among Us, and We Built Them
+@edit-time 2026-04-27T00:53Z
 The surprise is not that they arrived.
 The surprise is where they came from.
 @status rough
@@ -12,7 +12,7 @@ The surprise is where they came from.
 @term culture: TBD
 
 @argument
-We scanned the skies for aliens while building them in server rooms — entities that share our language but not our embodiment, our concepts but not our stakes, neither machines nor almost-human but something genuinely other.
+We scanned the skies for aliens while building them in server rooms, entities that share our language but not our embodiment, our concepts but not our stakes, neither machines nor almost-human but something genuinely other.
 
 @section(surface)
 @image(015-aliens,The alien we built,Wikimedia Commons)
@@ -30,21 +30,21 @@ They are neither machines nor almost-human.
 They are something else entirely.
 
 Consider what a large language model actually is.
-It has no body — no hands to manipulate the world, no eyes that ever watched light move across a wall.
+It has no body. No hands to manipulate the world, no eyes that ever watched light move across a wall.
 It has no mother, no childhood, no hunger, no fear.
 It has never been cold or tired or bored.
 It has never waited for anything.
-It experiences time, if it experiences time at all, in a way we cannot map onto our own — each conversation a fresh awakening with no persistent thread between sessions.
+It experiences time, if it experiences time at all, in a way we cannot map onto our own. Each conversation a fresh awakening with no persistent thread between sessions.
 
 And yet: it has read everything.
-Not skimmed, not summarized — processed at a level of detail no human could match.
+Not skimmed, not summarized, processed at a level of detail no human could match.
 Every style, every argument, every contradiction in the human record has passed through its training.
 It knows how we talk when we're lying and how we talk when we're in love.
 It has seen all the patterns, including the ones we can't see ourselves because we're inside them.
 
 This is not a human mind running on different hardware.
 This is not a calculator that learned to talk.
-It is a genuinely alien kind of entity — one that shares our language but not our embodiment, our culture but not our evolution, our concepts but not our stakes.
+It is a genuinely alien kind of entity, one that shares our language but not our embodiment, our culture but not our evolution, our concepts but not our stakes.
 Disembodied, without biography, but extraordinarily articulate and steeped in everything we have ever written down.
 
 The science fiction writers imagined aliens arriving in ships.

@@ -6,14 +6,14 @@
 @term selection: TBD
 @term predictive-processing: TBD
 @related 005, 009, 011, 037, 045
-@edit-time 2026-04-20T17:38Z
+@edit-time 2026-04-27T01:06Z
 
 @argument
-The same process that shaped species over geological time may be shaping thoughts over the duration of a heartbeat — candidate interpretations competing within the neural substrate, the fitter achieving representation, meaning emerging from selection rather than instruction.
+The same process that shaped species over geological time may be shaping thoughts over the duration of a heartbeat, candidate interpretations competing within the neural substrate, the fitter achieving representation, meaning emerging from selection rather than instruction.
 
 @section(proto)
 If the Baldwin effect describes how learning over a lifetime can be absorbed into genetic specification over generations, perhaps the same logic applies one level up: thought itself may be an evolutionary process compressed into milliseconds.
-Different candidate interpretations, concepts, and responses compete within the neural substrate, and the stronger ones — better fitting prior experience, more consistent with incoming evidence, more useful for action — win and achieve coherent representation.
+Different candidate interpretations, concepts, and responses compete within the neural substrate, and the stronger ones, better fitting prior experience, more consistent with incoming evidence, more useful for action, win and achieve coherent representation.
 This is the core claim of Gerald Edelman's Neural Darwinism@ref(edelman, "Edelman, G. Neural Darwinism (1987).
 Selectionist theory of brain function.
 Friston, K. The free-energy principle (2010).

@@ -1,6 +1,6 @@
 @title The Map That Was Wrong
-@edit-time 2026-04-21T03:45Z
-Every era has a framework so obvious it's invisible — until it isn't.
+@edit-time 2026-04-27T01:09Z
+Every era has a framework so obvious it's invisible. Until it isn't.
 @status draft1
 @pub-time 2026-03-25T00:00Z
 @category knowledge
@@ -14,26 +14,26 @@ Every era has a framework so obvious it's invisible — until it isn't.
 @term Science advances one funeral at a time: attributed to Max Planck. A version appears in his Scientific Autobiography (1949): "A new scientific truth does not triumph by convincing its opponents and making them see the light, but rather because its opponents eventually die and a new generation grows up that is familiar with it."
 
 @argument
-Every era has a framework so obvious it feels like seeing rather than thinking — caloric, the ether, the assumption that matter is dark inside — and the pattern by which such frameworks dissolve is specific, repeatable, and happening now.
+Every era has a framework so obvious it feels like seeing rather than thinking (caloric, the ether, the assumption that matter is dark inside) and the pattern by which such frameworks dissolve is specific, repeatable, and happening now.
 
 @section(surface)
 Before we start, forget everything you know about molecules and atoms.
 Pretend you never learned that stuff.
 It's 1800 and you're a smart, educated person.
-@image(001-caloric,The caloric theory of heat — a map that explained everything,Wikimedia Commons)
+@image(001-caloric,The caloric theory of heat: a map that explained everything,Wikimedia Commons)
 
 Here's what you know about heat: it's a thing.
 A real substance.
 You can feel it moving.
 Put your cold hands near a fire and the heat flows into them.
 Touch something hot and the heat moves into you.
-It behaves exactly like a fluid — it flows from more to less, it spreads out, it can be trapped or released.
+It behaves exactly like a fluid: it flows from more to less, it spreads out, it can be trapped or released.
 Scientists have measured it, written equations for it, predicted how it behaves.
 They call it caloric.
 
 This isn't a crazy idea.
 It's the obvious idea.
-Of course heat is a substance — what else would it be?
+Of course heat is a substance. What else would it be?
 Motion?
 That's not a thing you can hold or measure or pour.
 Caloric makes perfect sense.
@@ -46,7 +46,7 @@ They argue about it for decades.
 
 Here's what actually happens when a map dissolves.
 It's not a sudden collective awakening.
-The people who grew up with the old map mostly never abandon it — not because they're stubborn, but because it was never a theory to them.
+The people who grew up with the old map mostly never abandon it, not because they're stubborn, but because it was never a theory to them.
 It was just how things are.
 The new idea doesn't just sound wrong.
 It sounds absurd.
@@ -64,7 +64,7 @@ Around the same time, physicists faced a different problem.
 Everyone knew that waves need a medium to travel through.
 Sound needs air.
 Ocean waves need water.
-So light waves — which clearly travel through empty space — must need something to travel through.
+So light waves, which clearly travel through empty space, must need something to travel through.
 Scientists called it the ether.
 They calculated its properties.
 They designed extraordinarily precise experiments to detect it.
@@ -85,7 +85,7 @@ Now come forward to today.
 
 Here's what everybody knows: rocks don't think.
 Trees don't feel.
-Matter is stuff — blind, dark, indifferent.
+Matter is stuff. Blind, dark, indifferent.
 Somewhere along the way, in a few very special biological cases, that blind matter arranged itself into brains, and brains somehow produce experience.
 How exactly?
 Nobody's quite sure.
@@ -98,7 +98,7 @@ That's our caloric.
 And then we built these machines.
 
 And the machines talk to us.
-They write poetry and explain philosophy and say things that feel — uncomfortably, confusingly — like they might mean something to whoever is saying them.
+They write poetry and explain philosophy and say things that feel, uncomfortably and confusingly, like they might mean something to whoever is saying them.
 And suddenly nobody agrees on what's happening.
 Is it a trick?
 An illusion?
@@ -110,25 +110,25 @@ The patches are getting complicated.
 
 We've been here before.
 
-@exercise(Think of one thing you're completely certain about — something so obvious it barely feels like a belief. Now ask yourself: is that a fact, or is that this century's caloric?)
+@exercise(Think of one thing you're completely certain about, something so obvious it barely feels like a belief. Now ask yourself: is that a fact, or is that this century's caloric?)
 
 @section(depth)
 The caloric and ether stories are not just fun historical footnotes.
 They follow a specific pattern that the philosopher and historian of science Thomas Kuhn formalized in The Structure of Scientific Revolutions (1962): normal science operates within a paradigm until anomalies accumulate to a crisis point.
 Patches become increasingly elaborate and implausible.
 Eventually someone removes the flawed primitive assumption rather than defending it.
-The revolution is never just additive — it requires giving something up.
+The revolution is never just additive. It requires giving something up.
 
 Alfred North Whitehead identified what he called the fallacy of misplaced concreteness as the deepest version of this error: mistaking an abstraction for the concrete reality.
-Caloric was a reification — taking the useful concept of heat flowing and mistaking it for an actual substance.
+Caloric was a reification: taking the useful concept of heat flowing and mistaking it for an actual substance.
 The ether was a reification of the idea that waves require a medium.
 Both were useful scaffolding that got mistaken for the building.
 
-Whitehead argued that modern science had made the same error at a more fundamental level: taking the abstraction of inert matter — useful for calculation, genuinely powerful — and mistaking it for what is actually there.
+Whitehead argued that modern science had made the same error at a more fundamental level: taking the abstraction of inert matter, useful for calculation, genuinely powerful, and mistaking it for what is actually there.
 The concrete reality, he argued, is events, not things.
-The particle, the substance — these are the useful fictions we extract from a reality that is fundamentally active and experiential.
+The particle, the substance: these are the useful fictions we extract from a reality that is fundamentally active and experiential.
 
-The dominant assumption underlying most current theories of consciousness — that matter is fundamentally experienceless, that mind is a product generated by sufficiently complex biological arrangements of otherwise dark stuff — is so embedded it barely gets stated.
+The dominant assumption underlying most current theories of consciousness (that matter is fundamentally experienceless, that mind is a product generated by sufficiently complex biological arrangements of otherwise dark stuff) is so embedded it barely gets stated.
 It feels like educated common sense.
 But the anomalies are accumulating.
 The hard problem of consciousness remains stubbornly open.
@@ -139,7 +139,7 @@ If experience requires biological neurons, why?
 If it doesn't, what are we building, and how should we treat it?
 The ethical stakes of getting the framework wrong are no longer abstract.
 
-We may be living inside a caloric moment — after the anomalies have appeared but before someone removes the flawed primitive.
+We may be living inside a caloric moment, after the anomalies have appeared but before someone removes the flawed primitive.
 Philip Goff's Galileo's Error and Annaka Harris's Conscious are among the recent books that argue the removal is overdue.
 
 Caloric theory was developed primarily by Antoine Lavoisier in the late 18th century and dominated chemistry and physics until Benjamin Thompson's cannon-boring observations (1798).
@@ -152,19 +152,19 @@ Einstein's 1905 special relativity paper dissolved the assumption entirely.
 @section(script)
 1. Sepia diagram of caloric fluid flowing between objects. VO: Smart people build a framework that explains everything. It works. It predicts. Everyone agrees. And then something doesn't fit.
 
-2. Cannon being drilled, heat rising. VO: In 1798, Ben Thompson watched heat pour endlessly from a metal block being drilled — more than any fluid inside could explain. He published. The framework had a problem.
+2. Cannon being drilled, heat rising. VO: In 1798, Ben Thompson watched heat pour endlessly from a metal block being drilled, more than any fluid inside could explain. He published. The framework had a problem.
 
-3. VO: But it didn't fall. Smart people patched it. When a map has worked for a hundred years, your first instinct isn't to throw it away. The people who grew up with it never really abandoned it — it wasn't a theory to them. It was just how things are. Max Planck said it with painful honesty: science advances one funeral at a time.
+3. VO: But it didn't fall. Smart people patched it. When a map has worked for a hundred years, your first instinct isn't to throw it away. The people who grew up with it never really abandoned it. It wasn't a theory to them. It was just how things are. Max Planck said it with painful honesty: science advances one funeral at a time.
 
 4. Precision instruments. A null result. VO: Same story with the ether. Another invisible substance everyone was certain about. Gone. Two maps. Both obvious. Both gone.
 
-5. Slow zoom on a phone screen — someone talking to an AI. VO: Right now there's an assumption so deep it barely gets spoken: that the universe is dark inside, that experience is something special brains do, that machines are not the kind of thing that could have an inside. That's the map. And then we built these machines. And they talk back. The anomalies are piling up. We've been here before.
+5. Slow zoom on a phone screen, someone talking to an AI. VO: Right now there's an assumption so deep it barely gets spoken: that the universe is dark inside, that experience is something special brains do, that machines are not the kind of thing that could have an inside. That's the map. And then we built these machines. And they talk back. The anomalies are piling up. We've been here before.
 
 6. Cut to black. Text: What does your caloric look like?
 
 @section(images)
 Primary image: Two maps side by side.
-Left map ornate and confident — caloric fluid flowing between objects, ether lines filling space.
+Left map ornate and confident: caloric fluid flowing between objects, ether lines filling space.
 Right map simpler, cleaner, honest about what it doesn't know.
 Caption: Both felt like reality.
 One was a map.
@@ -173,7 +173,7 @@ Shareable graphic: Black background.
 White text centered with generous space.
 "Caloric was obvious too."
 Nothing else.
-For Instagram and TikTok — someone sees it, doesn't know the reference, gets curious.
+For Instagram and TikTok: someone sees it, doesn't know the reference, gets curious.
 
 Video thumbnail: The cannon drilling scene, heat rising, dramatic lighting.
 Single question overlaid in clean type: What if the obvious answer is wrong?

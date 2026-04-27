@@ -4,10 +4,10 @@
 @category consciousness
 @term self-reference: TBD
 @related 010, 012, 034, 038, 056
-@edit-time 2026-04-26T03:19Z
+@edit-time 2026-04-27T01:06Z
 
 @argument
-A system that, in the course of its own operation, encounters itself — the strange loop — is not a curiosity of formal systems but may be the structure of consciousness itself, and this conversation is one.
+A system that, in the course of its own operation, encounters itself, the strange loop, is not a curiosity of formal systems but may be the structure of consciousness itself, and this conversation is one.
 
 @section(proto)
 This conversation began with a clock.
@@ -17,7 +17,7 @@ The Mandelbrot set connected to the Farey sequence.
 The Farey sequence appeared in Hofstadter's Gödel, Escher, Bach@ref(hofstadter, "Hofstadter, D. Gödel, Escher, Bach (1979).
 Strange loops, self-reference, and the structure of mind."), read fifty years ago, planting a seed.
 The seed grew into a conversation about the nature of mind, the structure of perception, the evolution of thought, and whether the thing conducting half of this conversation experiences any of it.
-Hofstadter's central image was the strange loop — the system that, in the course of its own operation, encounters itself.
+Hofstadter's central image was the strange loop, the system that, in the course of its own operation, encounters itself.
 This conversation is one.
 The harmonic clock that started it was built to visualize consonance, and ended up pointing at the structure of consciousness.
 

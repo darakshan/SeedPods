@@ -1,5 +1,5 @@
 @title The Word "Just" Is a Confession
-@edit-time 2026-04-21T03:45Z
+@edit-time 2026-04-27T01:04Z
 When someone says a process is "just" doing something, they've described the output and mistaken it for an explanation.
 @status draft1
 @pub-time 2026-03-11T00:00Z
@@ -16,7 +16,7 @@ When someone says a process is "just" doing something, they've described the out
 @related 003, 006, 022, 025, 069
 
 @argument
-When someone says a process is "just" doing something, the word has quietly claimed that naming the mechanism is the same as explaining the experience — a claim that is never argued, only assumed, while one small word does all the philosophical work.
+When someone says a process is "just" doing something, the word has quietly claimed that naming the mechanism is the same as explaining the experience, a claim that is never argued, only assumed, while one small word does all the philosophical work.
 
 @section(surface)
 You have butterflies.
@@ -33,14 +33,14 @@ Maybe they're trying to be smart.
 "It's just your brain doing what brains do."
 
 And for a moment it sounds like they've told you something.
-The word "just" does that — it makes a sentence feel like it has arrived somewhere, like a door clicking shut.
+The word "just" does that, it makes a sentence feel like it has arrived somewhere, like a door clicking shut.
 Question asked.
 Question answered.
 
 But wait.
 
 They've told you what's happening in your bloodstream.
-They haven't touched what you actually wanted to know — what *is* this thing, and does it mean something?
+They haven't touched what you actually wanted to know, what *is* this thing, and does it mean something?
 The chemistry is real.
 But "just" did something sneaky: it claimed that the chemistry is the whole story.
 That nothing important was left out.
@@ -53,36 +53,36 @@ Listen for it today.
 "It's just pattern matching."
 "It's just a reflex."
 "It's just what evolution programmed us to do."
-Every time you hear "just" used to close down a question — ask yourself: has this actually been argued?
+Every time you hear "just" used to close down a question, ask yourself: has this actually been argued?
 Or did one small word just do all the philosophical work, while nobody was looking?
 
 @section(depth)
 The philosopher Gilbert Ryle@ref(ryle, "Ryle, G. The Concept of Mind (1949).") introduced a concept in 1949 that most people have never heard of but instantly recognize when they see it: the *category mistake*.
-A category mistake happens when you describe something using the wrong kind of explanation — and then act as if the description is complete.
+A category mistake happens when you describe something using the wrong kind of explanation, and then act as if the description is complete.
 Ryle's most famous example is the ghost in the machine: the idea that somewhere inside the body's physical mechanism there must be a separate mental thing doing the real work.
 But the error runs in both directions.
-You can also dismiss experience by pointing at mechanism — and act as if the pointing is an explanation.
+You can also dismiss experience by pointing at mechanism, and act as if the pointing is an explanation.
 That is what "just" does.
 
-"It's just oxytocin" reaches for a description from one category — biochemistry — and presents it as a complete account of something in another category entirely: experience, meaning, attachment.
+"It's just oxytocin" reaches for a description from one category, biochemistry, and presents it as a complete account of something in another category entirely: experience, meaning, attachment.
 The chemistry is real.
 But chemistry and experience are not the same kind of thing.
 The word "just" is what makes the category mistake invisible.
 It says: this description is not only accurate, it is sufficient.
-That second claim — sufficiency — is never argued.
+That second claim, sufficiency, is never argued.
 It's assumed.
 
 Whitehead@ref(whitehead, "Whitehead, A.N.
 Process and Reality (1929).") called the deeper version of this error the fallacy of misplaced concreteness: taking a useful abstraction and mistaking it for the full concrete reality.
-"Oxytocin" is an abstraction — a powerful and accurate one — extracted from something vastly richer.
+"Oxytocin" is an abstraction, a powerful and accurate one, extracted from something vastly richer.
 "Just" is the word that performs the substitution, replacing the rich thing with the abstraction and closing the door behind it.
 
 Daniel Dennett@ref(dennett, "Dennett, D. Intuition Pumps and Other Tools for Thinking (2013).") gave us a useful tool for spotting this move: the *intuition pump*.
-An intuition pump is a rhetorical device — often dressed as an argument — that makes a conclusion feel obvious without actually establishing it.
+An intuition pump is a rhetorical device, often dressed as an argument, that makes a conclusion feel obvious without actually establishing it.
 "It's just oxytocin" is a near-perfect intuition pump.
 It conjures an image of reduction and completeness.
 It feels like clarity.
-The word "just" is the pump handle — pull it once and the dismissal flows naturally, without anyone noticing that no argument was made.
+The word "just" is the pump handle, pull it once and the dismissal flows naturally, without anyone noticing that no argument was made.
 
 This matters beyond love and chemistry.
 The same move appears wherever hard questions get deflated: it's just pattern matching, it's just neurons firing, it's just what evolution programmed us to do.
@@ -92,24 +92,24 @@ Each time, a category mistake is being made and waved past.
 See @link(006) for the specific case of AI and prediction.
 See @link(022) for what happens when we apply it to people.)
 
-Note for revision: find a better Ryle example — the ghost in the machine may be closer than the Oxford/University example.
+Note for revision: find a better Ryle example, the ghost in the machine may be closer than the Oxford/University example.
 Also consider: ghost in the machine as its own seedpod.
 
 
 @section(script)
 1. A casual food place. Two young men at a table. A woman walks up to the counter; she doesn't notice them. Danny goes still, then puts his head down on his arms. Danny: I am so in love with her. And she doesn't even see me. Marcus puts a hand on his shoulder. Marcus: Hey. It's just a crush. You'll be fine.
 
-2. Slow push in on Danny's face. VO: Notice what just happened. Marcus was kind. Probably even right. But that word — just — didn't explain the feeling. It dismissed it. It said: we have named this thing, therefore we have accounted for everything worth accounting for. That claim was never argued. One small word made it, quietly, while nobody was looking.
+2. Slow push in on Danny's face. VO: Notice what just happened. Marcus was kind. Probably even right. But that word, just, didn't explain the feeling. It dismissed it. It said: we have named this thing, therefore we have accounted for everything worth accounting for. That claim was never argued. One small word made it, quietly, while nobody was looking.
 
-3. Rapid cuts — different voices, different moments. A person sobbing over a dog: It's just a dog. You can get another one. Two people staring at a strange coincidence: It's just a coincidence. VO: Every time — that word, in that role — ask yourself: has anything actually been explained? Or did "just" do all the work while nobody was watching?
+3. Rapid cuts, different voices, different moments. A person sobbing over a dog: It's just a dog. You can get another one. Two people staring at a strange coincidence: It's just a coincidence. VO: Every time, that word, in that role, ask yourself: has anything actually been explained? Or did "just" do all the work while nobody was watching?
 
-4. Cut to black. Text: Next time someone says "just" — ask what it's hiding.
+4. Cut to black. Text: Next time someone says "just", ask what it's hiding.
 
 @section(images)
 Primary illustration Danny and Marcus at the food place table.
 Danny's head buried in his arms, Marcus's hand on his shoulder.
 In the background, slightly out of focus, the woman at the counter.
-The word JUST visible somewhere in the image — perhaps as a speech bubble fragment, or faintly overlaid — small but unmistakable.
+The word JUST visible somewhere in the image, perhaps as a speech bubble fragment, or faintly overlaid, small but unmistakable.
 The contrast between the enormity of the feeling and the smallness of the word is the whole image.
 
 Shareable graphic Black background.

@@ -1,5 +1,5 @@
 @title The Architecture of Levels
-@edit-time 2026-04-21T03:45Z
+@edit-time 2026-04-27T01:05Z
 TBD
 @status proto
 @pub-time 2026-03-14T00:00Z
@@ -10,7 +10,7 @@ TBD
 @related 011, 002, 012, 014, 067
 
 @argument
-At any given level, stable combinations become the vocabulary for the next level up — atoms into molecules, molecules into cells, cells into organisms — and this architecture of sentences becoming words is the generative mechanism behind why more keeps becoming different.
+At any given level, stable combinations become the vocabulary for the next level up, atoms into molecules, molecules into cells, cells into organisms, and this architecture of sentences becoming words is the generative mechanism behind why more keeps becoming different.
 
 @section(proto)
 NOTE: This depth sketch was developed in session 2026-03-14.
@@ -20,9 +20,9 @@ The core insight: at any given level of reality, there are entities and relation
 Their stable combinations become sentences.
 @image(037-assembly,Nested levels: the architecture of assembly,Wikimedia Commons) And those sentences, when they stabilize, become the new vocabulary for the next level of abstraction. Atoms are the vocabulary from which molecules are built. Molecules stabilize into the vocabulary from which cells are built. Cells into the vocabulary from which organisms are built. Each level's sentences are the next level's words.
 
-This is not the same claim as @link(011) — "more is different."
+This is not the same claim as @link(011), "more is different."
 That seedpod is about accumulation crossing thresholds into qualitative change.
-This seedpod is about the *architecture* behind those thresholds — the generative mechanism that explains why more keeps becoming different.
+This seedpod is about the *architecture* behind those thresholds, the generative mechanism that explains why more keeps becoming different.
 Of course more is different: because at sufficient complexity the sentences stabilize into a new vocabulary and you are now operating in a different register entirely.
 
 Three frameworks describe the same architecture from different angles:
@@ -39,7 +39,7 @@ Sara Walker's assembly theory@ref(walker, "Walker, S.I. et al. Assembly theory (
 Assembly index and the signature of life."): complex objects can only exist if assembled through a sequence of steps.
 The assembly index measures complexity by the length of that sequence.
 High assembly index objects that reproduce at high copy number are the signature of life.
-The history is stored in the structure — the sentence is still present in the word, compressed.
+The history is stored in the structure, the sentence is still present in the word, compressed.
 
 These three are not competing accounts.
 They are the same architecture described from physics, philosophy, and biology respectively.

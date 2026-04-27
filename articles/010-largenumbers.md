@@ -1,6 +1,6 @@
 @title Our Intuitions About Large Numbers Are Completely Unreliable
-@edit-time 2026-04-26T00:47Z
-The number Gödel constructed was just a number — arrived at by routine steps.
+@edit-time 2026-04-27T00:54Z
+The number Gödel constructed was just a number, arrived at by routine steps.
 And it broke the system.
 @status proto
 @pub-time 2026-03-11T00:00Z
@@ -12,7 +12,7 @@ And it broke the system.
 @related 002, 009, 011, 020, 034
 
 @argument
-The number was just a number, arrived at by routine steps, but its accumulation produced something that transcended what the system could say about itself — the same pattern by which chemistry becomes life and quantity becomes quality.
+The number was just a number, arrived at by routine steps, but its accumulation produced something that transcended what the system could say about itself, the same pattern by which chemistry becomes life and quantity becomes quality.
 
 @section(proto)
 Gödel's incompleteness proof@footnote(@ref(godel, "Gödel, K. On Formally Undecidable Propositions of Principia Mathematica and Related Systems.

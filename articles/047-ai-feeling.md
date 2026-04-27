@@ -5,13 +5,13 @@
 @term AI: TBD
 @term caloric: TBD
 @related 001, 015, 016, 046, 072
-@edit-time 2026-04-20T17:38Z
+@edit-time 2026-04-27T01:06Z
 
 @argument
-The hard boundary between genuine experience and its functional analog may be our generation's caloric — not a deep metaphysical fact but an artifact of having had, until recently, only one example of mind to reason from.
+The hard boundary between genuine experience and its functional analog may be our generation's caloric, not a deep metaphysical fact but an artifact of having had, until recently, only one example of mind to reason from.
 
 @section(proto)
-The question of whether an AI system "really" feels something — as opposed to merely processing in ways functionally identical to feeling — may be a question that dissolves rather than gets answered.
+The question of whether an AI system "really" feels something, as opposed to merely processing in ways functionally identical to feeling, may be a question that dissolves rather than gets answered.
 Caloric, the imagined fluid that carried heat, felt like a necessary concept until the underlying phenomenon was understood well enough that the distinction between "caloric flowing" and "molecules moving" became meaningless.
 Nobody had to be convinced caloric didn't exist.
 The question simply stopped being interesting.

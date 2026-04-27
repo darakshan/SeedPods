@@ -6,10 +6,10 @@
 @term many-worlds: TBD
 @term mandelbrot-set: TBD
 @related 009, 038, 053, 057, 062
-@edit-time 2026-04-20T17:38Z
+@edit-time 2026-04-27T01:07Z
 
 @argument
-The Mandelbrot set's boundary has a natural probability measure — the harmonic measure — that weights simpler, more consonant branches more heavily, and if the universe's wavefunction branches according to a similar tree structure, the Born rule may fall out of the geometry rather than being imposed as a postulate.
+The Mandelbrot set's boundary has a natural probability measure, the harmonic measure, that weights simpler, more consonant branches more heavily, and if the universe's wavefunction branches according to a similar tree structure, the Born rule may fall out of the geometry rather than being imposed as a postulate.
 
 @section(proto)
 The Born rule is quantum mechanics' most mysterious postulate.
@@ -23,15 +23,15 @@ Harmonic measure on Julia sets.") makes this more acute: if all branches are rea
 The probability has to come from somewhere.
 
 The speculation: the Mandelbrot set's branching tree has a natural probability measure on its boundary called the harmonic measure.
-It assigns higher probability to simpler, more consonant branches — the large bulbs, the shallow Farey fractions.
-This measure is not imposed — it falls out of the geometry.
+It assigns higher probability to simpler, more consonant branches, the large bulbs, the shallow Farey fractions.
+This measure is not imposed, it falls out of the geometry.
 
-If the universe's wavefunction branches according to a similar tree structure — with branching numbers determined by local algebraic structure rather than arbitrary choice — then the Born rule probabilities may fall out of the harmonic measure of that tree.
+If the universe's wavefunction branches according to a similar tree structure, with branching numbers determined by local algebraic structure rather than arbitrary choice, then the Born rule probabilities may fall out of the harmonic measure of that tree.
 Not a postulate.
 A consequence of the branching geometry.
 
 This is speculative.
-But it is the right kind of speculative — it connects two things that are separately mysterious (why the Born rule, why the Mandelbrot measure) and asks if they are the same mystery.
+But it is the right kind of speculative, it connects two things that are separately mysterious (why the Born rule, why the Mandelbrot measure) and asks if they are the same mystery.
 
 @term Born rule: The quantum postulate that measurement outcome probability is the squared amplitude; origin remains unexplained.
 @term Harmonic measure: Natural probability measure on the Mandelbrot boundary; favors simpler (more consonant) branches.

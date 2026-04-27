@@ -5,21 +5,21 @@
 @term god: TBD
 @term attractor: TBD
 @related 009, 034, 058, 059, 060
-@edit-time 2026-04-26T03:19Z
+@edit-time 2026-04-27T01:08Z
 
 @argument
-Process theology's God is both the ground of possibility — holding all unrealized potentials available for occasions to select from — and the lure each occasion feels toward greater complexity, which in the language of dynamical systems makes God both the initial condition and the attractor.
+Process theology's God is both the ground of possibility, holding all unrealized potentials available for occasions to select from, and the lure each occasion feels toward greater complexity, which in the language of dynamical systems makes God both the initial condition and the attractor.
 
 @section(proto)
-Whitehead's God is not the God of theism — not a person who intervenes in history or answers prayers.
+Whitehead's God is not the God of theism, not a person who intervenes in history or answers prayers.
 God in Whitehead's system plays two roles in the metaphysics of process.
 
-First, God is the ground of possibility — the one who holds all unrealized potentials available for actual occasions to select from.
+First, God is the ground of possibility, the one who holds all unrealized potentials available for actual occasions to select from.
 Without this role, there is no account of where possibilities come from.
 An occasion can only actualize what is genuinely available to it.
 God makes possibilities available.
 
-Second, God is the lure — the initial aim that each occasion feels as a pull toward the best possibility available given its situation.
+Second, God is the lure, the initial aim that each occasion feels as a pull toward the best possibility available given its situation.
 This is not compulsion.
 The occasion is free to deviate from the lure.
 But the lure is always there, always pointing toward greater complexity, greater depth of experience, greater integration.
@@ -27,10 +27,10 @@ But the lure is always there, always pointing toward greater complexity, greater
 In the language of dynamical systems: God is both the initial condition of the iteration and the attractor the iteration is feeling toward.
 The universe is not wandering.
 It is being drawn.
-Not forced — drawn.
+Not forced, drawn.
 The difference matters enormously.
 
-Teilhard's Omega Point is this attractor made cosmic — the state toward which the entire evolutionary process converges.
+Teilhard's Omega Point is this attractor made cosmic, the state toward which the entire evolutionary process converges.
 Whitehead gives the mechanism (the lure operating at every occasion).
 Teilhard gives the destination@ref(whitehead, "Whitehead, A.N.
 Process and Reality (1929).
@@ -38,6 +38,6 @@ God as ground of possibility and lure.")@ref(teilhard, "Teilhard de Chardin, P. 
 Omega Point.").
 Together they describe a universe that is going somewhere, and knows it, at every scale.
 
-@term Initial aim: Whitehead's lure — the pull each occasion feels toward the best possibility available; not compulsion but attraction.
+@term Initial aim: Whitehead's lure, the pull each occasion feels toward the best possibility available; not compulsion but attraction.
 @term Eternal objects: The realm of possibility that God holds available; occasions select from it in their self-determination.
 @image(066-cosmicattractor,Lorenz attractor: God as initial condition and cosmic attractor,Wikimedia Commons)

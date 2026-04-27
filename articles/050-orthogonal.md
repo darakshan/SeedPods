@@ -4,21 +4,21 @@
 @category consciousness
 @term metaphysics: TBD
 @related 002, 008, 051, 064, 067
-@edit-time 2026-04-20T17:38Z
+@edit-time 2026-04-27T01:06Z
 
 @argument
-Consciousness may not be produced by spacetime but be a dimension orthogonal to it — primitive the way mass or charge is primitive — which would mean the universe has always had an interior, not just since brains arrived.
+Consciousness may not be produced by spacetime but be a dimension orthogonal to it, primitive the way mass or charge is primitive, which would mean the universe has always had an interior, not just since brains arrived.
 
 @section(proto)
 The standard picture puts consciousness at the end of a long causal chain: matter first, then complexity, then biology, then brains, then experience.
 Consciousness is the caboose.
 
 The proposal here inverts that.
-Consciousness is not produced by spacetime — it is a dimension orthogonal to spacetime, with a range from zero to infinity.
+Consciousness is not produced by spacetime, it is a dimension orthogonal to spacetime, with a range from zero to infinity.
 Spacetime may itself emerge from this dimension rather than the other way around.
 
 This is not straightforwardly testable yet, but it is not purely metaphysical either.
-The hard problem of consciousness — why any physical process feels like anything — has no solution within the standard picture.
+The hard problem of consciousness, why any physical process feels like anything, has no solution within the standard picture.
 Every proposed solution either eliminates experience (eliminativism) or smuggles it in (functionalism).
 The orthogonal dimension proposal takes experience as primitive, the way physics takes mass or charge as primitive, and asks what follows.
 
