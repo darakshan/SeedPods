@@ -160,15 +160,23 @@ a.bib-ref:hover{color:var(--accent)}
 .fn-num:hover{color:var(--accent)}
 .fn-text{flex:1;min-width:0}
 /* Glossary */
-.gloss-entry{margin-bottom:2rem;font-size:.95rem}
-.gloss-term-line{margin-bottom:.35rem}
+.gloss-sort-section{margin-top:0}
+.gloss-entry{margin-bottom:1.25rem;font-size:.95rem}
+.gloss-entry-flat{margin-bottom:.75rem}
+.gloss-term-line{margin-bottom:.3rem}
 .gloss-term{font-weight:600;font-size:1rem}
 .gloss-defs{margin-left:1.5rem}
-.gloss-def-block{margin-bottom:.8rem;line-height:1.6}
+.gloss-def-block{margin-bottom:.55rem;line-height:1.55}
 .gloss-def-block:last-child{margin-bottom:0}
+.gloss-backref{font-family:'DM Mono',monospace;font-size:.78rem;color:var(--warm);white-space:nowrap;margin-left:.35em}
+.gloss-backref:hover{color:var(--accent)}
+.gloss-ref{color:var(--link)}
+.gloss-ref:hover{color:var(--warm)}
 .gloss-in{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.08em;margin-right:.35rem}
 .gloss-def-block a{color:var(--link)}
 .gloss-def-block a:hover{color:var(--warm)}
+.gloss-def-block a.gloss-backref{color:var(--warm)}
+.gloss-def-block a.gloss-backref:hover{color:var(--accent)}
 .gloss-explainer{font-weight:400;margin-left:.25rem}
 .gloss-explainer:hover{opacity:.8}
 .explainer-link-line{display:block;margin-bottom:.45rem}
