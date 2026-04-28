@@ -1,0 +1,81 @@
+{
+  "article" : "001-caloric.md",
+  "article-sha" : "sha256:35ccda7b2861e68e3591e3e55aeecb4229e499ab83865bc6096312aed10a94d6",
+  "narrative" : "Caloric and the ether were invisible substances that explained everything perfectly until they didn't. The pattern by which such frameworks dissolve is specific and repeatable: anomalies accumulate, patches grow elaborate, and eventually someone removes the flawed primitive. The article argues we are inside exactly such a moment now, with the assumption that matter is experienceless playing the role caloric once did, and AI making the crisis acute.",
+  "schema" : 1,
+  "terms" : [
+    {
+      "aliases" : [
+        "white head"
+      ],
+      "canonical" : "Whitehead",
+      "weight" : 0.90000000000000002
+    },
+    {
+      "aliases" : [
+        "kuhn",
+        "coon"
+      ],
+      "canonical" : "Thomas Kuhn",
+      "weight" : 0.80000000000000004
+    },
+    {
+      "aliases" : [
+        "plonk"
+      ],
+      "canonical" : "Max Planck",
+      "weight" : 0.69999999999999996
+    },
+    {
+      "aliases" : [
+        "rumford"
+      ],
+      "canonical" : "Count Rumford",
+      "weight" : 0.69999999999999996
+    },
+    {
+      "aliases" : [
+        "goff"
+      ],
+      "canonical" : "Philip Goff",
+      "weight" : 0.59999999999999998
+    },
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "Annaka Harris",
+      "weight" : 0.5
+    },
+    {
+      "aliases" : [
+        "lavoisier"
+      ],
+      "canonical" : "Lavoisier",
+      "weight" : 0.5
+    },
+    {
+      "aliases" : [
+        "michelson morley"
+      ],
+      "canonical" : "Michelson-Morley",
+      "weight" : 0.5
+    },
+    {
+      "aliases" : [
+        "caloric"
+      ],
+      "canonical" : "caloric",
+      "weight" : 1
+    }
+  ],
+  "themes" : [
+    "paradigm shift",
+    "caloric",
+    "ether",
+    "hard problem",
+    "frameworks",
+    "AI"
+  ],
+  "updated-at" : "2026-04-28T02:38:17Z"
+}

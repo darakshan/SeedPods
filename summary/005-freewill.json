@@ -1,0 +1,37 @@
+{
+  "article" : "005-freewill.md",
+  "article-sha" : "sha256:21eaf6693fc3682062488248af54e6869c98d5301f1ad73c7aae5ea34d1c9dee",
+  "narrative" : "Free will is reframed not as the exception to physics but as its most fundamental feature: the irreducible self-determination at the heart of each event where possibility resolves into actuality. Whitehead's creative advance into novelty places genuine novelty at every scale, not only in minds, dissolving the traditional free will debate by removing the assumption that physics is deterministic and freedom is the anomaly.",
+  "schema" : 1,
+  "terms" : [
+    {
+      "aliases" : [
+        "white head"
+      ],
+      "canonical" : "Whitehead",
+      "weight" : 1
+    },
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "creative advance",
+      "weight" : 0.80000000000000004
+    },
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "actual occasion",
+      "weight" : 0.59999999999999998
+    }
+  ],
+  "themes" : [
+    "free will",
+    "determinism",
+    "creative advance",
+    "self-determination",
+    "process philosophy"
+  ],
+  "updated-at" : "2026-04-28T02:38:18Z"
+}

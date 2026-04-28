@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "article": "023-stories.md",
+  "article-sha": "sha256:unknown",
+  "updated-at": "2026-04-27T04:00:00Z",
+
+  "narrative": "We never access reality directly, only the story we tell about it. Three levels of narrative, perceptual, interpretive, and dramatic, are progressively harder to catch in the act of being stories rather than the given. Lakoff's conceptual metaphor, Kahneman's WYSIATI, Campbell's monomyth, and Goffman's performed self converge on the claim that consensus reality is negotiated fiction that forgot it was negotiated. Byron Katie's method targets the middle layer.",
+
+  "themes": ["narrative", "perception", "metaphor", "consensus reality", "epistemology"],
+
+  "terms": [
+    { "canonical": "Muriel Rukeyser", "aliases": ["rukeyser", "ruckeyser"], "weight": 0.9 },
+    { "canonical": "George Lakoff", "aliases": ["lakoff", "laycoff"], "weight": 0.8 },
+    { "canonical": "Daniel Kahneman", "aliases": ["kahneman", "conoman"], "weight": 0.8 },
+    { "canonical": "Joseph Campbell", "aliases": ["campbell"], "weight": 0.7 },
+    { "canonical": "Erving Goffman", "aliases": ["goffman"], "weight": 0.7 },
+    { "canonical": "Byron Katie", "aliases": ["katie"], "weight": 0.7 },
+    { "canonical": "Thomas Kuhn", "aliases": ["kuhn", "coon"], "weight": 0.6 },
+    { "canonical": "WYSIATI", "aliases": ["wizzy atty", "what you see is all there is"], "weight": 0.5 }
+  ]
+}

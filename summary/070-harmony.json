@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "article": "070-harmony.md",
+  "article-sha": "sha256:unknown",
+  "updated-at": "2026-04-27T04:00:00Z",
+
+  "narrative": "Harmony is the experience of elements fitting together, in sound, in color, in social life, governed by ratios simple enough that every culture finds them independently. The depth section traces the arc from drone-based music through the Pythagorean wound (the circle of fifths doesn't close) to equal temperament's deliberate imperfection as the enabling condition for harmonic movement, then widens to aesthetic and social harmony as structurally the same phenomenon, not metaphor.",
+
+  "themes": ["consonance", "equal temperament", "pythagorean comma", "beauty", "imperfection", "cultural vocabularies"],
+
+  "terms": [
+    { "canonical": "Pythagorean", "aliases": ["pythagorean"], "weight": 1.0 },
+    { "canonical": "Jacob Collier", "aliases": ["collier"], "weight": 0.9 },
+    { "canonical": "W. A. Mathieu", "aliases": ["mathieu"], "weight": 0.9 },
+    { "canonical": "Tonnetz", "aliases": ["tonnets", "tone nets"], "weight": 0.8 },
+    { "canonical": "Leonard Cohen", "aliases": ["cohen"], "weight": 0.7 },
+    { "canonical": "Euler", "aliases": ["oiler"], "weight": 0.7 },
+    { "canonical": "Farey", "aliases": ["fairey", "ferry"], "weight": 0.6 },
+    { "canonical": "Mandelbrot", "aliases": ["mandlebrot"], "weight": 0.5 },
+    { "canonical": "wabi-sabi", "aliases": ["wabi sabi", "wobby sobby"], "weight": 0.4 }
+  ]
+}

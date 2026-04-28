@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "article": "080-unification.md",
+  "article-sha": "sha256:unknown",
+  "updated-at": "2026-04-27T04:00:00Z",
+
+  "narrative": "The combination problem, how micro-level experiences combine into unified macro-experience, may be pointing in the wrong direction. Mercury drops merging by boundary dissolution, Kastrup's reversal (dissociation from unity rather than assembly from parts), Bergson and Huxley's reducing valve, and the sun-and-stars metaphor for dominance over component signals converge on the proposal that the brain is an integrator, not a source.",
+
+  "themes": ["combination problem", "panpsychism", "reducing valve", "integrated information", "dissociation", "unity"],
+
+  "terms": [
+    { "canonical": "Whitehead", "aliases": ["white head"], "weight": 1.0 },
+    { "canonical": "Tononi", "aliases": ["tononi"], "weight": 0.9 },
+    { "canonical": "Kastrup", "aliases": ["kastrup"], "weight": 0.9 },
+    { "canonical": "Bergson", "aliases": ["bergson"], "weight": 0.8 },
+    { "canonical": "Huxley", "aliases": [], "weight": 0.7 },
+    { "canonical": "William James", "aliases": [], "weight": 0.7 },
+    { "canonical": "Philip Goff", "aliases": ["goff"], "weight": 0.6 },
+    { "canonical": "Roger Sperry", "aliases": ["sperry"], "weight": 0.5 },
+    { "canonical": "prehension", "aliases": ["prehention"], "weight": 0.5 }
+  ]
+}

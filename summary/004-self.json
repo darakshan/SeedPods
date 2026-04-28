@@ -1,0 +1,60 @@
+{
+  "article" : "004-self.md",
+  "article-sha" : "sha256:10c235e85275c4b6d3fd6e90aa9303ebaea8c2eb1b44def39d1f4293f1edd80f",
+  "narrative" : "Three traditions arrived independently at the same dissolution of the substantial self. Hume looked and found only a bundle of perceptions, the Buddhist tradition found anatta (no fixed owner), and Whitehead found a society of occasions stable enough to appear permanent. Parfit's thought experiments confirm the gradient: identity is not a fact but a convention. The self is a wave that convinced itself it was water.",
+  "schema" : 1,
+  "terms" : [
+    {
+      "aliases" : [
+        "hume"
+      ],
+      "canonical" : "David Hume",
+      "weight" : 1
+    },
+    {
+      "aliases" : [
+        "white head"
+      ],
+      "canonical" : "Whitehead",
+      "weight" : 0.90000000000000002
+    },
+    {
+      "aliases" : [
+        "anata",
+        "a notta"
+      ],
+      "canonical" : "anatta",
+      "weight" : 0.90000000000000002
+    },
+    {
+      "aliases" : [
+        "parfit",
+        "parfitt"
+      ],
+      "canonical" : "Derek Parfit",
+      "weight" : 0.80000000000000004
+    },
+    {
+      "aliases" : [
+        "rahula"
+      ],
+      "canonical" : "Walpola Rahula",
+      "weight" : 0.59999999999999998
+    },
+    {
+      "aliases" : [
+        "prehention"
+      ],
+      "canonical" : "prehension",
+      "weight" : 0.5
+    }
+  ],
+  "themes" : [
+    "self",
+    "identity",
+    "anatta",
+    "bundle theory",
+    "process"
+  ],
+  "updated-at" : "2026-04-28T02:38:18Z"
+}

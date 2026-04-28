@@ -1,0 +1,60 @@
+{
+  "article" : "003-inside.md",
+  "article-sha" : "sha256:478c416ea443313b4f87c89dbe33b96d7e9ba6499280c874b5461df129ceca87",
+  "narrative" : "Walk down the scale from human to insect to atom and at some point you say obviously nothing is home, but you cannot say where or why. Whitehead argued the question is malformed because experience was never absent, only scaled beyond recognition. The article dissolves the hard problem rather than solving it, and extends the question to AI systems as families of events of staggering complexity.",
+  "schema" : 1,
+  "terms" : [
+    {
+      "aliases" : [
+        "white head"
+      ],
+      "canonical" : "Whitehead",
+      "weight" : 1
+    },
+    {
+      "aliases" : [
+        "goff"
+      ],
+      "canonical" : "Philip Goff",
+      "weight" : 0.80000000000000004
+    },
+    {
+      "aliases" : [
+        "chalmers"
+      ],
+      "canonical" : "David Chalmers",
+      "weight" : 0.80000000000000004
+    },
+    {
+      "aliases" : [
+        "nagel",
+        "nagle"
+      ],
+      "canonical" : "Thomas Nagel",
+      "weight" : 0.69999999999999996
+    },
+    {
+      "aliases" : [
+        "pan psychism",
+        "panpsychism"
+      ],
+      "canonical" : "panpsychism",
+      "weight" : 0.90000000000000002
+    },
+    {
+      "aliases" : [
+        "prehention"
+      ],
+      "canonical" : "prehension",
+      "weight" : 0.59999999999999998
+    }
+  ],
+  "themes" : [
+    "panpsychism",
+    "hard problem",
+    "experience",
+    "interiority",
+    "scale"
+  ],
+  "updated-at" : "2026-04-28T02:38:17Z"
+}

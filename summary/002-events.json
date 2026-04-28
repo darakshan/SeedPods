@@ -1,0 +1,60 @@
+{
+  "article" : "002-events.md",
+  "article-sha" : "sha256:c0d4240184eaf671f84a220b9e87c7573563d405dd1f87e592cc2678bbccad1c",
+  "narrative" : "The chair dissolves into molecules, atoms, fields, interactions, and at no point do you arrive at the thing itself. Four traditions pressed on the idea of a self-subsistent object from different directions and found the same dissolution: Whitehead from process metaphysics, Kant from epistemology, Rovelli from relational quantum mechanics, Wittgenstein from the logic of language. The event is primary; the object is derivative.",
+  "schema" : 1,
+  "terms" : [
+    {
+      "aliases" : [
+        "white head"
+      ],
+      "canonical" : "Whitehead",
+      "weight" : 1
+    },
+    {
+      "aliases" : [
+        "rovelli"
+      ],
+      "canonical" : "Rovelli",
+      "weight" : 0.90000000000000002
+    },
+    {
+      "aliases" : [
+        "wittgenstein",
+        "vittgenstein"
+      ],
+      "canonical" : "Wittgenstein",
+      "weight" : 0.80000000000000004
+    },
+    {
+      "aliases" : [
+        "cont"
+      ],
+      "canonical" : "Kant",
+      "weight" : 0.80000000000000004
+    },
+    {
+      "aliases" : [
+        "prehention"
+      ],
+      "canonical" : "prehension",
+      "weight" : 0.69999999999999996
+    },
+    {
+      "aliases" : [
+        "ding on zeesh",
+        "ding an sikh"
+      ],
+      "canonical" : "Ding an sich",
+      "weight" : 0.5
+    }
+  ],
+  "themes" : [
+    "events",
+    "process philosophy",
+    "relational quantum mechanics",
+    "substance",
+    "ontology"
+  ],
+  "updated-at" : "2026-04-28T02:38:17Z"
+}
