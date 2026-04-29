@@ -1,5 +1,5 @@
 @title To-Do List
-@edit-time 2026-04-25T22:09Z
+@edit-time 2026-04-29T03:58Z
 Ideas, questions, and tasks awaiting their pods.
 @status proto
 @pub-time 2026-04-17T00:00Z
@@ -9,6 +9,13 @@ Ideas, questions, and tasks awaiting their pods.
 
 - [ ] Build a tool that reads trail configuration and generates prev/next navigation buttons for sequential reading within a trail
 - [ ] Write transition text between trails and possibly between articles, so the trails become a flowing narrative
+
+## Possible new trail: "The Crack That Lets the Light In"
+
+- Consider a trail organized around the question: *Why does imperfection keep turning out to be essential?*
+- Candidate pods: 009 (randomness as builder), 070 (Pythagorean comma / equal temperament), 071 (wabi-sabi), 072 (temperature parameter), 074 (mechanical play), 001 (the anomaly), 003 (the crack where the inside shows)
+- The thread already runs through the collection but no trail currently owns it
+- Trade-off: every pod lives on exactly one trail, so pulling these would leave gaps in existing trails. Worth mapping which trails currently claim them before committing.
 
 ## Other
 
