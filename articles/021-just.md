@@ -1,10 +1,10 @@
 @title The Word "Just" Is a Confession
-@edit-time 2026-04-27T01:04Z
+@edit-time 2026-04-29T03:33Z
 When someone says a process is "just" doing something, they've described the output and mistaken it for an explanation.
 @status draft1
 @pub-time 2026-03-11T00:00Z
 @category knowledge
-@note(just (explanatory): the word "just" is too ubiquitous to embed @term cleanly; also the paren in the term name needs special handling. Suggest deciding on a canonical embed point — perhaps line 36 "The word \"just\" does that.")
+@note(just (explanatory): the word "just" is too ubiquitous to embed @term cleanly; also the paren in the term name needs special handling. Suggest deciding on a canonical embed point, perhaps line 36 "The word \"just\" does that.")
 @related 003, 006, 022, 025, 069
 
 @argument
