@@ -17,8 +17,8 @@
 <div class="nav-row">
 <div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
-  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search articles" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto article</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to article" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
+  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search subjects" onclick="seedNavOpenSearch();return false">Search</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto subject</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to subject" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
@@ -49,7 +49,7 @@
   </ul></div>
 </div>
 </nav>
-<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search articles" hidden>
+<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search subjects" hidden>
   <div class="search-dialog-overlay" onclick="seedNavCloseSearch()"></div>
   <div class="search-dialog-inner">
     <div class="search-dialog-header"><input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)"><button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button></div>
@@ -58,15 +58,15 @@
   </div>
 </div>
 <div class="wrap">
-  <div class="article-header fade cat-colored cat-biology"><h1>The Organism Enacts Its World</h1><p class="premise">Cognition is not the processing of representations inside a passive receiver but the enactment of a world, organism and environment co-arising through active engagement, so that even a bacterium swimming toward a chemical gradient is not following a rule but making a world in which that gradient matters.</p><div class="article-nav-row" data-pod-filename="013-enactment"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Article 13</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
-  <section id="_prolog" class="article-section article-prolog"><div class="prose"><p>Cognition is not passive reception.
+  <div class="subject-header fade cat-colored cat-biology"><h1>The Organism Enacts Its World</h1><p class="premise">Cognition is not the processing of representations inside a passive receiver but the enactment of a world, organism and environment co-arising through active engagement, so that even a bacterium swimming toward a chemical gradient is not following a rule but making a world in which that gradient matters.</p><div class="subject-nav-row" data-pod-filename="013-enactment"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Subject 13</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
+  <section id="_prolog" class="subject-section subject-prolog"><div class="prose"><p>Cognition is not passive reception.
 The organism and its environment co-arise.</p>
 </div></section>
-<section id="proto" class="article-section"><h2 class="section-heading">Proto</h2><div class="prose"><p>Evan Thompson’s<sup class="footnote-mark" id="fn-013-enactment-1-mark"><a href="footnotes.html#fn-013-enactment-1">1</a></sup> enactivism, building on Maturana and Varela<sup class="footnote-mark" id="fn-013-enactment-2-mark"><a href="footnotes.html#fn-013-enactment-2">2</a></sup>: <em><a class="gloss-ref nav-push" id="term-013-enactment-1" href="glossary.html#cognition">cognition</a></em> is not the processing of representations of an external world inside a passive receiver.
+<section id="proto" class="subject-section"><h2 class="section-heading">Proto</h2><div class="prose"><p>Evan Thompson’s<sup class="footnote-mark" id="fn-013-enactment-1-mark"><a href="footnotes.html#fn-013-enactment-1">1</a></sup> enactivism, building on Maturana and Varela<sup class="footnote-mark" id="fn-013-enactment-2-mark"><a href="footnotes.html#fn-013-enactment-2">2</a></sup>: <em><a class="gloss-ref nav-push" id="term-013-enactment-1" href="glossary.html#cognition">cognition</a></em> is not the processing of representations of an external world inside a passive receiver.
 It is the enactment of a world, the organism and its environment co-arising through active engagement.</p>
 <figure class="directive-image directive-image--left"><img src="images/013-enactment.jpg" alt=""><figcaption>Organism enacting its world through active engagement</figcaption></figure> A bacterium swimming toward a chemical gradient is not merely following a rule. It is enacting a world in which that gradient is meaningful. This is <em><a class="gloss-ref nav-push" id="term-013-enactment-2" href="glossary.html#prehension">prehension</a></em> at the scale of the organism, the Whiteheadian pattern in biological language.
 </div></section>
-<section id="provenance" class="article-section"><div class="related-section"><h3 class="section-heading related-label">Related articles</h3><div class="related-grid"><a href="002-events.html" class="related-card cat-colored cat-physics nav-push"><div class="related-title">2. Reality Is Events, Not Things</div></a>
+<section id="provenance" class="subject-section"><div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="002-events.html" class="related-card cat-colored cat-physics nav-push"><div class="related-title">2. Reality Is Events, Not Things</div></a>
 <a href="003-inside.html" class="related-card cat-colored cat-consciousness nav-push"><div class="related-title">3. Everything Has an Inside</div></a>
 <a href="004-self.html" class="related-card related-card-prelim cat-colored cat-consciousness nav-push"><div class="related-title">4. The Self Is a Pattern, Not a Thing</div></a>
 <a href="042-eyethinks.html" class="related-card related-card-prelim cat-colored cat-feeling nav-push"><div class="related-title">42. Opponent Processing: The Eye Thinks Before the Brain Does</div></a>

@@ -17,8 +17,8 @@
 <div class="nav-row">
 <div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
-  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search articles" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto article</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to article" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
+  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search subjects" onclick="seedNavOpenSearch();return false">Search</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto subject</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to subject" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
@@ -49,7 +49,7 @@
   </ul></div>
 </div>
 </nav>
-<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search articles" hidden>
+<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search subjects" hidden>
   <div class="search-dialog-overlay" onclick="seedNavCloseSearch()"></div>
   <div class="search-dialog-inner">
     <div class="search-dialog-header"><input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)"><button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button></div>
@@ -58,8 +58,8 @@
   </div>
 </div>
 <div class="wrap">
-  <div class="article-header fade cat-colored cat-knowledge"><h1>A Map of the Territory</h1><p class="premise">Short essays organized into nine trails, each following a different question through the same landscape. Read them in any order you like, but if you want to go sequentially, here is a way to do it.</p><div class="article-nav-row" data-pod-filename="000-map"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Article 0</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
-  <section id="surface" class="article-section"><h2 class="section-heading">Surface</h2><div class="prose"><p>Something strange happens when you press hard enough on any familiar concept.
+  <div class="subject-header fade cat-colored cat-knowledge"><h1>A Map of the Territory</h1><p class="premise">Short essays organized into nine trails, each following a different question through the same landscape. Read them in any order you like, but if you want to go sequentially, here is a way to do it.</p><div class="subject-nav-row" data-pod-filename="000-map"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Subject 0</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
+  <section id="surface" class="subject-section"><h2 class="section-heading">Surface</h2><div class="prose"><p>Something strange happens when you press hard enough on any familiar concept.
 Matter dissolves into events.
 The vacuum turns out to be full.
 The self scatters into a bundle of perceptions that three traditions, Western, Buddhist, process-philosophical, independently failed to find.
@@ -128,7 +128,7 @@ That’s the point.</p>
 Start anywhere.</p>
 <p>The full trail listings are on the <a href="trails.html">Trails</a> page.</p>
 </div></section>
-<section id="provenance" class="article-section"><div class="related-section"><h3 class="section-heading related-label">Related articles</h3><div class="inbound-refs"><span class="inbound-label">0 inbound references</span><span class="inbound-links"></span></div></div></section>
+<section id="provenance" class="subject-section"><div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="inbound-refs"><span class="inbound-label">0 inbound references</span><span class="inbound-links"></span></div></div></section>
 </div>
 <div class="page-end" id="page-end-version" data-page-version="1">
   <button class="page-end-logo" aria-label="Show page info"

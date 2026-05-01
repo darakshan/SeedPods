@@ -17,8 +17,8 @@
 <div class="nav-row">
 <div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
-  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search articles" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto article</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to article" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
+  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search subjects" onclick="seedNavOpenSearch();return false">Search</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto subject</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to subject" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
@@ -49,7 +49,7 @@
   </ul></div>
 </div>
 </nav>
-<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search articles" hidden>
+<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search subjects" hidden>
   <div class="search-dialog-overlay" onclick="seedNavCloseSearch()"></div>
   <div class="search-dialog-inner">
     <div class="search-dialog-header"><input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)"><button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button></div>
@@ -58,10 +58,10 @@
   </div>
 </div>
 <div class="wrap">
-  <div class="article-header fade cat-colored cat-knowledge"><h1>The Map That Was Wrong</h1><p class="premise">Every era has a framework so obvious it feels like seeing rather than thinking (caloric, the ether, the assumption that matter is dark inside) and the pattern by which such frameworks dissolve is specific, repeatable, and happening now.</p><div class="article-nav-row" data-pod-filename="001-caloric"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Article 1</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
-  <section id="_prolog" class="article-section article-prolog"><div class="prose"><p>Every era has a framework so obvious it’s invisible. Until it isn’t.</p>
+  <div class="subject-header fade cat-colored cat-knowledge"><h1>The Map That Was Wrong</h1><p class="premise">Every era has a framework so obvious it feels like seeing rather than thinking (caloric, the ether, the assumption that matter is dark inside) and the pattern by which such frameworks dissolve is specific, repeatable, and happening now.</p><div class="subject-nav-row" data-pod-filename="001-caloric"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Subject 1</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
+  <section id="_prolog" class="subject-section subject-prolog"><div class="prose"><p>Every era has a framework so obvious it’s invisible. Until it isn’t.</p>
 </div></section>
-<section id="surface" class="article-section"><h2 class="section-heading">Surface</h2><div class="prose"><p>Before we start, forget everything you know about molecules and atoms.
+<section id="surface" class="subject-section"><h2 class="section-heading">Surface</h2><div class="prose"><p>Before we start, forget everything you know about molecules and atoms.
 Pretend you never learned that stuff.
 It’s 1800 and you’re a smart, educated person.</p>
 <figure class="directive-image directive-image--left"><img src="images/001-caloric.jpg" alt=""><figcaption>The caloric theory of heat: a map that explained everything</figcaption></figure>
@@ -137,7 +137,7 @@ The patches are getting complicated.</p>
 <p>We’ve been here before.</p>
 <div class="cta">Think of one thing you're completely certain about, something so obvious it barely feels like a belief. Now ask yourself: is that a fact, or is that this century's caloric?</div>
 </div></section>
-<section id="depth" class="article-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>The caloric and ether stories are not just fun historical footnotes.
+<section id="depth" class="subject-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>The caloric and ether stories are not just fun historical footnotes.
 They follow a specific pattern that the philosopher and <em><a class="gloss-ref nav-push" id="term-001-caloric-2" href="glossary.html#history-of-science">historian of science</a></em> Thomas Kuhn formalized in The Structure of Scientific Revolutions (1962): normal science operates within a <em><a class="gloss-ref nav-push" id="term-001-caloric-3" href="glossary.html#paradigm-shift">paradigm</a></em> until anomalies accumulate to a crisis point.
 Patches become increasingly elaborate and implausible.
 Eventually someone removes the flawed primitive assumption rather than defending it.
@@ -166,13 +166,13 @@ James Prescott Joule’s mechanical equivalent of heat experiments in the 1840s 
 The Michelson-Morley experiment of 1887 produced the null result that precipitated the crisis.
 Einstein’s 1905 special relativity paper dissolved the assumption entirely.</p>
 </div></section>
-<section id="provenance" class="article-section"><div class="related-section"><h3 class="section-heading related-label">Related articles</h3><div class="related-grid"><a href="002-events.html" class="related-card cat-colored cat-physics nav-push"><div class="related-title">2. Reality Is Events, Not Things</div></a>
+<section id="provenance" class="subject-section"><div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="002-events.html" class="related-card cat-colored cat-physics nav-push"><div class="related-title">2. Reality Is Events, Not Things</div></a>
 <a href="003-inside.html" class="related-card cat-colored cat-consciousness nav-push"><div class="related-title">3. Everything Has an Inside</div></a>
 <a href="015-aliens.html" class="related-card related-card-prelim cat-colored cat-ai-minds nav-push"><div class="related-title">15. Aliens Are Among Us, and We Built Them</div></a>
 <a href="047-ai-feeling.html" class="related-card related-card-prelim cat-colored cat-consciousness nav-push"><div class="related-title">47. The Distinction Between Feeling and Functioning May Evaporate</div></a>
 <a href="065-feel-do.html" class="related-card related-card-prelim cat-colored cat-consciousness nav-push"><div class="related-title">65. The Feeling/Function Distinction Will Dissolve</div></a></div>
 <div class="inbound-refs"><span class="inbound-label">10 inbound references</span><span class="inbound-links"><a href="002-events.html" class="inbound-link nav-push cat-colored cat-physics" title="Reality Is Events, Not Things">2</a><a href="003-inside.html" class="inbound-link nav-push cat-colored cat-consciousness" title="Everything Has an Inside">3</a><a href="015-aliens.html" class="inbound-link nav-push cat-colored cat-ai-minds" title="Aliens Are Among Us, and We Built Them">15</a><a href="022-locked.html" class="inbound-link nav-push cat-colored cat-consciousness" title="The Channel Is Not the Capacity">22</a><a href="023-stories.html" class="inbound-link nav-push cat-colored cat-consciousness" title="Reality Is Made of Stories, Not Atoms">23</a><a href="047-ai-feeling.html" class="inbound-link nav-push cat-colored cat-consciousness" title="The Distinction Between Feeling and Functioning May Evaporate">47</a><a href="065-feel-do.html" class="inbound-link nav-push cat-colored cat-consciousness" title="The Feeling/Function Distinction Will Dissolve">65</a><a href="072-temperature.html" class="inbound-link nav-push cat-colored cat-feeling" title="Temperature">72</a><a href="073-moral-caution.html" class="inbound-link nav-push cat-colored cat-ai-minds" title="What We Cannot Know Is Not What We May Ignore">73</a><a href="077-intention.html" class="inbound-link nav-push cat-colored cat-consciousness" title="The Universe's Intention">77</a></span></div></div></section>
-<section id="script" class="article-section"><h2 class="section-heading">Script</h2><div class="prose"><ol>
+<section id="script" class="subject-section"><h2 class="section-heading">Script</h2><div class="prose"><ol>
 <li><p>Sepia diagram of caloric fluid flowing between objects. VO: Smart people build a framework that explains everything. It works. It predicts. Everyone agrees. And then something doesn’t fit.</p>
 </li>
 <li><p>Cannon being drilled, heat rising. VO: In 1798, Ben Thompson watched heat pour endlessly from a metal block being drilled, more than any fluid inside could explain. He published. The framework had a problem.</p>
@@ -187,7 +187,7 @@ Einstein’s 1905 special relativity paper dissolved the assumption entirely.</p
 </li>
 </ol>
 </div></section>
-<section id="images" class="article-section"><h2 class="section-heading">Images</h2><div class="prose"><p>Primary image: Two maps side by side.
+<section id="images" class="subject-section"><h2 class="section-heading">Images</h2><div class="prose"><p>Primary image: Two maps side by side.
 Left map ornate and confident: caloric fluid flowing between objects, ether lines filling space.
 Right map simpler, cleaner, honest about what it doesn’t know.
 Caption: Both felt like reality.

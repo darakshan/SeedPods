@@ -17,8 +17,8 @@
 <div class="nav-row">
 <div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
-  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search articles" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto article</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to article" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
+  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search subjects" onclick="seedNavOpenSearch();return false">Search</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto subject</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to subject" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
@@ -49,7 +49,7 @@
   </ul></div>
 </div>
 </nav>
-<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search articles" hidden>
+<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search subjects" hidden>
   <div class="search-dialog-overlay" onclick="seedNavCloseSearch()"></div>
   <div class="search-dialog-inner">
     <div class="search-dialog-header"><input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)"><button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button></div>
@@ -58,15 +58,15 @@
   </div>
 </div>
 <div class="wrap">
-  <div class="article-header fade cat-colored cat-knowledge"><h1>Science Advances One Funeral at a Time</h1><p class="premise">A new scientific truth does not triumph by convincing its opponents but by outlasting them, the old map’s holders never convert, they retire and die, and the next generation simply grows up inside the new one.</p><div class="article-nav-row" data-pod-filename="019-funerals"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Article 19</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
-  <section id="_prolog" class="article-section article-prolog"><div class="prose"><p>The map doesn’t get replaced.
+  <div class="subject-header fade cat-colored cat-knowledge"><h1>Science Advances One Funeral at a Time</h1><p class="premise">A new scientific truth does not triumph by convincing its opponents but by outlasting them, the old map’s holders never convert, they retire and die, and the next generation simply grows up inside the new one.</p><div class="subject-nav-row" data-pod-filename="019-funerals"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Subject 19</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
+  <section id="_prolog" class="subject-section subject-prolog"><div class="prose"><p>The map doesn’t get replaced.
 The people holding the old map get replaced.</p>
 </div></section>
-<section id="proto" class="article-section"><h2 class="section-heading">Proto</h2><div class="prose"><p>Thomas Kuhn<sup class="footnote-mark" id="fn-019-funerals-1-mark"><a href="footnotes.html#fn-019-funerals-1">1</a></sup> documented carefully that most holders of an old paradigm never come around.
+<section id="proto" class="subject-section"><h2 class="section-heading">Proto</h2><div class="prose"><p>Thomas Kuhn<sup class="footnote-mark" id="fn-019-funerals-1-mark"><a href="footnotes.html#fn-019-funerals-1">1</a></sup> documented carefully that most holders of an old paradigm never come around.
 They don’t eventually see the light.</p>
 <figure class="directive-image directive-image--left"><img src="images/019-funerals.jpg" alt=""><figcaption>Max Planck: science advances one funeral at a time</figcaption></figure> They retire and die. The next generation of students, who learned the new map before it had any enemies, who have no old identity to protect, just grow up thinking it's obvious. Max Planck: "A new scientific truth does not triumph by convincing its opponents and making them see the light, but rather because its opponents eventually die and a new generation grows up that is familiar with it."<sup class="footnote-mark" id="fn-019-funerals-2-mark"><a href="footnotes.html#fn-019-funerals-2">2</a></sup> This is connected to the magnetization seedpod, the new map spreads not by argument but by <em><a class="gloss-ref nav-push" id="term-019-funerals-1" href="glossary.html#generational-replacement">generational replacement</a></em>.
 </div></section>
-<section id="provenance" class="article-section"><div class="related-section"><h3 class="section-heading related-label">Related articles</h3><div class="related-grid"><a href="002-events.html" class="related-card cat-colored cat-physics nav-push"><div class="related-title">2. Reality Is Events, Not Things</div></a>
+<section id="provenance" class="subject-section"><div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="002-events.html" class="related-card cat-colored cat-physics nav-push"><div class="related-title">2. Reality Is Events, Not Things</div></a>
 <a href="009-randomness.html" class="related-card cat-colored cat-biology nav-push"><div class="related-title">9. Structure Is What Randomness Does</div></a>
 <a href="011-moreisdifferent.html" class="related-card related-card-prelim cat-colored cat-consciousness nav-push"><div class="related-title">11. More Is Different</div></a>
 <a href="015-aliens.html" class="related-card related-card-prelim cat-colored cat-ai-minds nav-push"><div class="related-title">15. Aliens Are Among Us, and We Built Them</div></a>

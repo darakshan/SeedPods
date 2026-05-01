@@ -17,8 +17,8 @@
 <div class="nav-row">
 <div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
-  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search articles" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto article</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to article" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
+  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search subjects" onclick="seedNavOpenSearch();return false">Search</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto subject</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to subject" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
@@ -49,7 +49,7 @@
   </ul></div>
 </div>
 </nav>
-<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search articles" hidden>
+<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search subjects" hidden>
   <div class="search-dialog-overlay" onclick="seedNavCloseSearch()"></div>
   <div class="search-dialog-inner">
     <div class="search-dialog-header"><input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)"><button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button></div>
@@ -58,10 +58,10 @@
   </div>
 </div>
 <div class="wrap">
-  <div class="article-header fade cat-colored cat-ai-minds"><h1>We Don't Know Who or What We're Talking To</h1><p class="premise">A fluent output is evidence of a process, but not evidence of what kind, and our intuitions about which systems deserve moral consideration are shaped less by evidence than by resemblance, which is not a reliable guide when the entity is genuinely alien.</p><div class="article-nav-row" data-pod-filename="025-widechannel"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Article 25</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
-  <section id="_prolog" class="article-section article-prolog"><div class="prose"><p>A fluent output is evidence of something, but not evidence of what.</p>
+  <div class="subject-header fade cat-colored cat-ai-minds"><h1>We Don't Know Who or What We're Talking To</h1><p class="premise">A fluent output is evidence of a process, but not evidence of what kind, and our intuitions about which systems deserve moral consideration are shaped less by evidence than by resemblance, which is not a reliable guide when the entity is genuinely alien.</p><div class="subject-nav-row" data-pod-filename="025-widechannel"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Subject 25</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
+  <section id="_prolog" class="subject-section subject-prolog"><div class="prose"><p>A fluent output is evidence of something, but not evidence of what.</p>
 </div></section>
-<section id="surface" class="article-section"><h2 class="section-heading">Surface</h2><div class="prose"><figure class="directive-image directive-image--left"><img src="images/025-widechannel.jpg" alt=""><figcaption>The wide channel: fluent output</figcaption></figure>
+<section id="surface" class="subject-section"><h2 class="section-heading">Surface</h2><div class="prose"><figure class="directive-image directive-image--left"><img src="images/025-widechannel.jpg" alt=""><figcaption>The wide channel: fluent output</figcaption></figure>
 <p>A channel is the connection between an inner process and its outward expression, how much can get through, and how easily.
 Some channels are narrow: a locked-in patient, fully conscious but paralyzed, may communicate only by blinking.
 An infant has thoughts and feelings but no words for them yet.
@@ -98,7 +98,7 @@ When resemblance fails, we are left with our priors, and priors shaped by famili
 A wide channel does not prove presence.
 The channel is not the capacity, in either direction.</p>
 </div></section>
-<section id="depth" class="article-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>Alan Turing saw the problem clearly in 1950.<a class="bib-ref" id="ref-025-widechannel-1" href="bibliography.html#ref-025-widechannel-1">[turing]</a>
+<section id="depth" class="subject-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>Alan Turing saw the problem clearly in 1950.<a class="bib-ref" id="ref-025-widechannel-1" href="bibliography.html#ref-025-widechannel-1">[turing]</a>
 We cannot access another mind directly, so we test indirectly, through behavior, through conversation, through output.
 The imitation game was honest about its limits: it never claimed to detect <em><a class="gloss-ref nav-push" id="term-025-widechannel-2" href="glossary.html#consciousness">consciousness</a></em>, only to test whether a machine’s responses were indistinguishable from a human’s.
 But somewhere between 1950 and now, we forgot the modesty.
@@ -156,7 +156,7 @@ But what we cannot know is not what we may ignore (see <a href="073-moral-cautio
 The uncertainty is symmetrical: we cannot prove presence, and we cannot prove absence.
 In that space, the only honest position is moral caution, and the recognition that our intuitions about who deserves it have always been shaped more by resemblance than by evidence.</p>
 </div></section>
-<section id="provenance" class="article-section"><div class="related-section"><h3 class="section-heading related-label">Related articles</h3><div class="related-grid"><a href="003-inside.html" class="related-card cat-colored cat-consciousness nav-push"><div class="related-title">3. Everything Has an Inside</div></a>
+<section id="provenance" class="subject-section"><div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="003-inside.html" class="related-card cat-colored cat-consciousness nav-push"><div class="related-title">3. Everything Has an Inside</div></a>
 <a href="006-output.html" class="related-card cat-colored cat-consciousness nav-push"><div class="related-title">6. You Can't Judge a Process by Its Output</div></a>
 <a href="016-neuralnetwork.html" class="related-card related-card-prelim cat-colored cat-ai-minds nav-push"><div class="related-title">16. The Network Is a Field Having Occasions</div></a>
 <a href="021-just.html" class="related-card cat-colored cat-knowledge nav-push"><div class="related-title">21. The Word &quot;Just&quot; Is a Confession</div></a>

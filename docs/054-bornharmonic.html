@@ -17,8 +17,8 @@
 <div class="nav-row">
 <div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
-  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search articles" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto article</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to article" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
+  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search subjects" onclick="seedNavOpenSearch();return false">Search</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto subject</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to subject" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
@@ -49,7 +49,7 @@
   </ul></div>
 </div>
 </nav>
-<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search articles" hidden>
+<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search subjects" hidden>
   <div class="search-dialog-overlay" onclick="seedNavCloseSearch()"></div>
   <div class="search-dialog-inner">
     <div class="search-dialog-header"><input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)"><button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button></div>
@@ -58,8 +58,8 @@
   </div>
 </div>
 <div class="wrap">
-  <div class="article-header fade cat-colored cat-physics"><h1>The Born Rule as Harmonic Measure</h1><p class="premise">The @term(Mandelbrot set, mandelbrot-set, TBD)’s boundary has a natural probability measure, the @term(harmonic measure, Harmonic measure, “Natural probability measure on the Mandelbrot boundary; favors simpler (more consonant) branches.”), that weights simpler, more consonant branches more heavily, and if the universe’s wavefunction branches according to a similar tree structure, the Born rule may fall out of the geometry rather than being imposed as a postulate.</p><div class="article-nav-row" data-pod-filename="054-bornharmonic"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Article 54</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
-  <section id="proto" class="article-section"><h2 class="section-heading">Proto</h2><div class="prose"><p>The <em><a class="gloss-ref nav-push" id="term-054-bornharmonic-1" href="glossary.html#born-rule">Born rule</a></em> is <em><a class="gloss-ref nav-push" id="term-054-bornharmonic-2" href="glossary.html#quantum-mechanics">quantum mechanics</a></em>‘s most mysterious postulate.
+  <div class="subject-header fade cat-colored cat-physics"><h1>The Born Rule as Harmonic Measure</h1><p class="premise">The @term(Mandelbrot set, mandelbrot-set, TBD)’s boundary has a natural probability measure, the @term(harmonic measure, Harmonic measure, “Natural probability measure on the Mandelbrot boundary; favors simpler (more consonant) branches.”), that weights simpler, more consonant branches more heavily, and if the universe’s wavefunction branches according to a similar tree structure, the Born rule may fall out of the geometry rather than being imposed as a postulate.</p><div class="subject-nav-row" data-pod-filename="054-bornharmonic"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Subject 54</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
+  <section id="proto" class="subject-section"><h2 class="section-heading">Proto</h2><div class="prose"><p>The <em><a class="gloss-ref nav-push" id="term-054-bornharmonic-1" href="glossary.html#born-rule">Born rule</a></em> is <em><a class="gloss-ref nav-push" id="term-054-bornharmonic-2" href="glossary.html#quantum-mechanics">quantum mechanics</a></em>‘s most mysterious postulate.
 It says the probability of a measurement outcome is proportional to the square of the wavefunction’s amplitude.</p>
 <figure class="directive-image directive-image--left"><img src="images/054-bornharmonic.jpg" alt=""><figcaption>Standing wave harmonics: the Born rule as harmonic measure</figcaption></figure> It works perfectly. Nobody knows why it is the square and not something else.
 <p>Everett’s <em><a class="gloss-ref nav-push" id="term-054-bornharmonic-3" href="glossary.html#many-worlds">Many Worlds</a></em> interpretation<a class="bib-ref" id="ref-054-bornharmonic-1" href="bibliography.html#ref-054-bornharmonic-1">[everett]</a> makes this more acute: if all branches are real, why do we experience some branches more than others?
@@ -73,7 +73,7 @@ A consequence of the branching geometry.</p>
 <p>This is speculative.
 But it is the right kind of speculative, it connects two things that are separately mysterious (why the Born rule, why the Mandelbrot measure) and asks if they are the same mystery.</p>
 </div></section>
-<section id="provenance" class="article-section"><div class="related-section"><h3 class="section-heading related-label">Related articles</h3><div class="related-grid"><a href="009-randomness.html" class="related-card cat-colored cat-biology nav-push"><div class="related-title">9. Structure Is What Randomness Does</div></a>
+<section id="provenance" class="subject-section"><div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="009-randomness.html" class="related-card cat-colored cat-biology nav-push"><div class="related-title">9. Structure Is What Randomness Does</div></a>
 <a href="038-consonance-map.html" class="related-card related-card-prelim cat-colored cat-feeling nav-push"><div class="related-title">38. The Surprising Consonance Map</div></a>
 <a href="053-dimensions.html" class="related-card related-card-prelim cat-colored cat-mathematics nav-push"><div class="related-title">53. The Virtual Dimensions Formula as a Publishable Conjecture</div></a>
 <a href="057-superfarey.html" class="related-card related-card-prelim cat-colored cat-ai-minds nav-push"><div class="related-title">57. Superposition in Neural Network Representations</div></a>

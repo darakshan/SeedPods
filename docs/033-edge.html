@@ -17,8 +17,8 @@
 <div class="nav-row">
 <div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
-  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search articles" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto article</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to article" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
+  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search subjects" onclick="seedNavOpenSearch();return false">Search</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto subject</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to subject" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
@@ -49,7 +49,7 @@
   </ul></div>
 </div>
 </nav>
-<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search articles" hidden>
+<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search subjects" hidden>
   <div class="search-dialog-overlay" onclick="seedNavCloseSearch()"></div>
   <div class="search-dialog-inner">
     <div class="search-dialog-header"><input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)"><button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button></div>
@@ -58,8 +58,8 @@
   </div>
 </div>
 <div class="wrap">
-  <div class="article-header fade cat-colored cat-feeling"><h1>The Edge Is Where Everything Happens</h1><p class="premise">The Mandelbrot set’s interior is uniform and its exterior escapes to infinity, but the boundary between them is infinitely complex and self-similar at every scale, governed by the same Farey mathematics that governs musical consonance, and possibly what consciousness feels like from inside.</p><div class="article-nav-row" data-pod-filename="033-edge"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Article 33</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
-  <section id="surface" class="article-section"><h2 class="section-heading">Surface</h2><div class="prose"><p>The <em><a class="gloss-ref nav-push" id="term-033-edge-1" href="glossary.html#mandelbrot-set">Mandelbrot set</a></em> has an inside and an outside.
+  <div class="subject-header fade cat-colored cat-feeling"><h1>The Edge Is Where Everything Happens</h1><p class="premise">The Mandelbrot set’s interior is uniform and its exterior escapes to infinity, but the boundary between them is infinitely complex and self-similar at every scale, governed by the same Farey mathematics that governs musical consonance, and possibly what consciousness feels like from inside.</p><div class="subject-nav-row" data-pod-filename="033-edge"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Subject 33</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
+  <section id="surface" class="subject-section"><h2 class="section-heading">Surface</h2><div class="prose"><p>The <em><a class="gloss-ref nav-push" id="term-033-edge-1" href="glossary.html#mandelbrot-set">Mandelbrot set</a></em> has an inside and an outside.
 The inside is stable, points that keep returning.
 The outside escapes to infinity.
 The <em><a class="gloss-ref nav-push" id="term-033-edge-2" href="glossary.html#boundary">boundary</a></em> between them is infinitely complex, self-similar at every scale, and inexhaustible.
@@ -67,7 +67,7 @@ That boundary is where everything interesting happens.
 Including you.</p>
 <figure class="directive-image directive-image--left"><img src="images/033-edge.jpg" alt=""><figcaption>The Mandelbrot boundary: the edge where everything happens</figcaption></figure>
 </div></section>
-<section id="depth" class="article-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>The bulbs of The Mandelbrot<a class="bib-ref" id="ref-033-edge-1" href="bibliography.html#ref-033-edge-1">[mandelbrot]</a> set appear at positions governed by the <em><a class="gloss-ref nav-push" id="term-033-edge-3" href="glossary.html#farey-sequence">Farey sequence</a></em><a class="bib-ref" id="ref-033-edge-2" href="bibliography.html#ref-033-edge-2">[farey]</a> and Stern-Brocot tree, the same mathematics that governs musical <em><a class="gloss-ref nav-push" id="term-033-edge-4" href="glossary.html#consonance">consonance</a></em>.
+<section id="depth" class="subject-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>The bulbs of The Mandelbrot<a class="bib-ref" id="ref-033-edge-1" href="bibliography.html#ref-033-edge-1">[mandelbrot]</a> set appear at positions governed by the <em><a class="gloss-ref nav-push" id="term-033-edge-3" href="glossary.html#farey-sequence">Farey sequence</a></em><a class="bib-ref" id="ref-033-edge-2" href="bibliography.html#ref-033-edge-2">[farey]</a> and Stern-Brocot tree, the same mathematics that governs musical <em><a class="gloss-ref nav-push" id="term-033-edge-4" href="glossary.html#consonance">consonance</a></em>.
 The 1/2 bulb corresponds to the octave.
 The 1/3 bulb to the fifth.
 Stability under iteration justifies music, and justifies Pythagoras’s<a class="bib-ref" id="ref-033-edge-3" href="bibliography.html#ref-033-edge-3">[pythagoras]</a> ancient observation that the consonant intervals correspond to simple ratios.
@@ -77,13 +77,13 @@ Each bifurcation is a world-split in Everett’s<a class="bib-ref" id="ref-033-e
 The entire <em><a class="gloss-ref nav-push" id="term-033-edge-5" href="glossary.html#fractal">fractal</a></em> boundary is a map of possibility space, the holographic surface between the stable interior and the infinite branching exterior.
 Consciousness may be what it feels like to be a point on that boundary.<a class="bib-ref" id="ref-033-edge-5" href="bibliography.html#ref-033-edge-5">[stern-brocot]</a></p>
 </div></section>
-<section id="provenance" class="article-section"><div class="related-section"><h3 class="section-heading related-label">Related articles</h3><div class="related-grid"><a href="002-events.html" class="related-card cat-colored cat-physics nav-push"><div class="related-title">2. Reality Is Events, Not Things</div></a>
+<section id="provenance" class="subject-section"><div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="002-events.html" class="related-card cat-colored cat-physics nav-push"><div class="related-title">2. Reality Is Events, Not Things</div></a>
 <a href="005-freewill.html" class="related-card related-card-prelim cat-colored cat-consciousness nav-push"><div class="related-title">5. Freedom Is What Nature Does Everywhere</div></a>
 <a href="007-vacuum.html" class="related-card related-card-prelim cat-colored cat-physics nav-push"><div class="related-title">7. The Vacuum Is Not Empty</div></a>
 <a href="009-randomness.html" class="related-card cat-colored cat-biology nav-push"><div class="related-title">9. Structure Is What Randomness Does</div></a>
 <a href="056-mandelneural.html" class="related-card related-card-prelim cat-colored cat-ai-minds nav-push"><div class="related-title">56. Neural Networks as High-Dimensional Mandelbrot Sets</div></a></div>
 <div class="inbound-refs"><span class="inbound-label">2 inbound references</span><span class="inbound-links"><a href="031-surfaceinside.html" class="inbound-link nav-push cat-colored cat-physics" title="The Surface Is the Inside">31</a><a href="063-mandelcrystals.html" class="inbound-link nav-push cat-colored cat-mathematics" title="Mandelbrot Structure in Physical Crystals">63</a></span></div></div></section>
-<section id="script" class="article-section"><h2 class="section-heading">Script</h2><div class="prose"><ol>
+<section id="script" class="subject-section"><h2 class="section-heading">Script</h2><div class="prose"><ol>
 <li><p>Zoom into The Mandelbrot boundary. Deeper. Deeper. It never resolves. At every scale the same complexity returns.</p>
 </li>
 <li><p>A coastline from a plane. Then from space. Then a neuron branching.</p>
@@ -92,7 +92,7 @@ Consciousness may be what it feels like to be a point on that boundary.<a class=
 </li>
 </ol>
 </div></section>
-<section id="images" class="article-section"><h2 class="section-heading">Images</h2><div class="prose"><p>Mandelbrot boundary zoom sequence Farey sequence diagram Coastline fractal comparison Neuron branching structure</p>
+<section id="images" class="subject-section"><h2 class="section-heading">Images</h2><div class="prose"><p>Mandelbrot boundary zoom sequence Farey sequence diagram Coastline fractal comparison Neuron branching structure</p>
 </div></section>
 </div>
 <div class="page-end" id="page-end-version" data-page-version="1">

@@ -17,8 +17,8 @@
 <div class="nav-row">
 <div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
-  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search articles" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto article</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to article" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
+  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search subjects" onclick="seedNavOpenSearch();return false">Search</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto subject</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to subject" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
@@ -49,7 +49,7 @@
   </ul></div>
 </div>
 </nav>
-<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search articles" hidden>
+<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search subjects" hidden>
   <div class="search-dialog-overlay" onclick="seedNavCloseSearch()"></div>
   <div class="search-dialog-inner">
     <div class="search-dialog-header"><input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)"><button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button></div>
@@ -58,11 +58,11 @@
   </div>
 </div>
 <div class="wrap">
-  <div class="article-header fade cat-colored cat-knowledge"><h1>The Grasshopper Was Right</h1><p class="premise">The fable taught us that @term(play, “As used in this seedpod: the frame-free, will-suspended mode of activity in which no external criterion of success applies. Distinguished from competitive games and organized sport (where the will is fully engaged), from exploration (goal-directed search within a frame), and from rest (recovery in service of further work).”) is what you do instead of working, but the grasshopper was doing something the ant structurally cannot, operating in the frame-free, @term(will-suspended, will-suspension, “The state in which goal-directed effort is genuinely set aside, not redirected. Proposed here as the distinguishing feature of play, and as the mode that directed exploration cannot substitute for.”) mode where certain things happen that directed effort will never reach.</p><div class="article-nav-row" data-pod-filename="074-grasshopper"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Article 74</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
-  <section id="_prolog" class="article-section article-prolog"><div class="prose"><p>The fable taught us that play is what you do instead of working.
+  <div class="subject-header fade cat-colored cat-knowledge"><h1>The Grasshopper Was Right</h1><p class="premise">The fable taught us that @term(play, “As used in this seedpod: the frame-free, will-suspended mode of activity in which no external criterion of success applies. Distinguished from competitive games and organized sport (where the will is fully engaged), from exploration (goal-directed search within a frame), and from rest (recovery in service of further work).”) is what you do instead of working, but the grasshopper was doing something the ant structurally cannot, operating in the frame-free, @term(will-suspended, will-suspension, “The state in which goal-directed effort is genuinely set aside, not redirected. Proposed here as the distinguishing feature of play, and as the mode that directed exploration cannot substitute for.”) mode where certain things happen that directed effort will never reach.</p><div class="subject-nav-row" data-pod-filename="074-grasshopper"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Subject 74</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
+  <section id="_prolog" class="subject-section subject-prolog"><div class="prose"><p>The fable taught us that play is what you do instead of working.
 It was wrong.</p>
 </div></section>
-<section id="surface" class="article-section"><h2 class="section-heading">Surface</h2><div class="prose"><p>You probably learned Aesop’s fable the same way most of us did.
+<section id="surface" class="subject-section"><h2 class="section-heading">Surface</h2><div class="prose"><p>You probably learned Aesop’s fable the same way most of us did.
 The ant works all summer storing food.
 The grasshopper sings and plays.
 Winter comes.
@@ -105,7 +105,7 @@ And the cost of that missing slot accumulates quietly, in ways that are hard to 
 The grasshopper was doing something the ant structurally cannot.</p>
 <div class="cta">&quot;Try this: Think of something you do, or used to do, where the question 'is this productive?' genuinely doesn't apply. Not rest, not hobby-as-self-improvement. Something where your will steps back. Notice how hard it is to protect time for it, and what that tells you about which mode your life is organized around.&quot;</div>
 </div></section>
-<section id="depth" class="article-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>The fable’s error runs deeper than “play is also valuable.”
+<section id="depth" class="subject-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>The fable’s error runs deeper than “play is also valuable.”
 Its deeper error is an assumption so embedded it’s nearly invisible: that value only accrues when the will is in charge.</p>
 <p>The ant’s will is always in charge.
 Even the scout ant exploring unfamiliar territory is serving a goal the colony already has.
@@ -158,13 +158,13 @@ Complex extension is mathematical: the function moves into the imaginary axis.
 Grasshopper play is cognitive/experiential: the will moves off the axis of goal-direction.</p>
 <p>The same word, play, may be pointing at the same deep structure in three different domains.</p>
 </div></section>
-<section id="provenance" class="article-section"><div class="related-section"><h3 class="section-heading related-label">Related articles</h3><div class="related-grid"><a href="005-freewill.html" class="related-card related-card-prelim cat-colored cat-consciousness nav-push"><div class="related-title">5. Freedom Is What Nature Does Everywhere</div></a>
+<section id="provenance" class="subject-section"><div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="005-freewill.html" class="related-card related-card-prelim cat-colored cat-consciousness nav-push"><div class="related-title">5. Freedom Is What Nature Does Everywhere</div></a>
 <a href="009-randomness.html" class="related-card cat-colored cat-biology nav-push"><div class="related-title">9. Structure Is What Randomness Does</div></a>
 <a href="046-thinkfast.html" class="related-card related-card-prelim cat-colored cat-ai-minds nav-push"><div class="related-title">46. Thought as Evolution in Milliseconds</div></a>
 <a href="052-dichotomy.html" class="related-card related-card-prelim cat-colored cat-mathematics nav-push"><div class="related-title">52. Discrete and Continuous as a False Dichotomy</div></a>
 <a href="072-temperature.html" class="related-card related-card-prelim cat-colored cat-feeling nav-push"><div class="related-title">72. Temperature</div></a></div>
 <div class="inbound-refs"><span class="inbound-label">0 inbound references</span><span class="inbound-links"></span></div></div></section>
-<section id="script" class="article-section"><h2 class="section-heading">Script</h2><div class="prose"><ol>
+<section id="script" class="subject-section"><h2 class="section-heading">Script</h2><div class="prose"><ol>
 <li><p>A child in a summer field, watching an insect, following it a few steps, losing interest, lying back. The sky is very large. No voiceover. Just the unhurried quality of time when nothing is required.</p>
 </li>
 <li><p>The Aesop fable rendered briefly, almost diagrammatic: ant carrying grain, grasshopper on a stem, snow, grasshopper at the ant’s door. VO: The moral was clear. Stop playing. Start working. But what was the grasshopper actually doing?</p>
@@ -179,7 +179,7 @@ Grasshopper play is cognitive/experiential: the will moves off the axis of goal-
 </li>
 </ol>
 </div></section>
-<section id="images" class="article-section"><h2 class="section-heading">Images</h2><div class="prose"><p>Primary illustration: Two panels.
+<section id="images" class="subject-section"><h2 class="section-heading">Images</h2><div class="prose"><p>Primary illustration: Two panels.
 Left: an ant in close-up, carrying something, perfectly purposeful, beautiful in its efficiency, but contained within a single vector of intention.
 Right: a grasshopper on a stem, apparently doing nothing, but the composition gives it the larger sky, the more open frame.
 Not a moral contrast, an observation about the shape of the two modes.</p>

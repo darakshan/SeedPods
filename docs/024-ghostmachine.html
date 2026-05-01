@@ -17,8 +17,8 @@
 <div class="nav-row">
 <div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
-  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search articles" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto article</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to article" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
+  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search subjects" onclick="seedNavOpenSearch();return false">Search</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto subject</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to subject" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
@@ -49,7 +49,7 @@
   </ul></div>
 </div>
 </nav>
-<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search articles" hidden>
+<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search subjects" hidden>
   <div class="search-dialog-overlay" onclick="seedNavCloseSearch()"></div>
   <div class="search-dialog-inner">
     <div class="search-dialog-header"><input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)"><button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button></div>
@@ -58,11 +58,11 @@
   </div>
 </div>
 <div class="wrap">
-  <div class="article-header fade cat-colored cat-consciousness"><h1>Ghost in the Machine</h1><p class="premise">One philosopher diagnosed the ghost as a category mistake, another named what was lost when materialism expelled it, and process philosophy dissolved the problem entirely, the ghost was never separate from the machine because the machine, all the way down, has an inside.</p><div class="article-nav-row" data-pod-filename="024-ghostmachine"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Article 24</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
-  <section id="_prolog" class="article-section article-prolog"><div class="prose"><p>The ghost was real.
+  <div class="subject-header fade cat-colored cat-consciousness"><h1>Ghost in the Machine</h1><p class="premise">One philosopher diagnosed the ghost as a category mistake, another named what was lost when materialism expelled it, and process philosophy dissolved the problem entirely, the ghost was never separate from the machine because the machine, all the way down, has an inside.</p><div class="subject-nav-row" data-pod-filename="024-ghostmachine"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Subject 24</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
+  <section id="_prolog" class="subject-section subject-prolog"><div class="prose"><p>The ghost was real.
 It just wasn’t anywhere.</p>
 </div></section>
-<section id="proto" class="article-section"><h2 class="section-heading">Proto</h2><div class="prose"><p>NOTE: This depth sketch was developed in session 2026-03-14.
+<section id="proto" class="subject-section"><h2 class="section-heading">Proto</h2><div class="prose"><p>NOTE: This depth sketch was developed in session 2026-03-14.
 The seedpod needs a full Surface, Script, and Images before it can advance beyond prelim.</p>
 <figure class="directive-image directive-image--left"><img src="images/024-ghostmachine.jpg" alt=""><figcaption>The ghost in the machine: clockwork mechanism</figcaption></figure>
 <p>Three thinkers triangulate the same territory from different directions:</p>
@@ -86,7 +86,7 @@ Koestler names what was lost.
 Whitehead removes the assumption that created the problem.</p>
 <p>See also <a href="003-inside.html">Everything Has an Inside</a> for the inside going all the way down, and <a href="011-moreisdifferent.html">More Is Different</a> for Koestler’s holon concept developed more fully.</p>
 </div></section>
-<section id="provenance" class="article-section"><div class="related-section"><h3 class="section-heading related-label">Related articles</h3><div class="related-grid"><a href="002-events.html" class="related-card cat-colored cat-physics nav-push"><div class="related-title">2. Reality Is Events, Not Things</div></a>
+<section id="provenance" class="subject-section"><div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="002-events.html" class="related-card cat-colored cat-physics nav-push"><div class="related-title">2. Reality Is Events, Not Things</div></a>
 <a href="012-autopoiesis.html" class="related-card cat-colored cat-biology nav-push"><div class="related-title">12. The Cell That Makes Itself</div></a>
 <a href="021-just.html" class="related-card cat-colored cat-knowledge nav-push"><div class="related-title">21. The Word &quot;Just&quot; Is a Confession</div></a>
 <a href="037-assembly.html" class="related-card related-card-prelim cat-colored cat-mathematics nav-push"><div class="related-title">37. The Architecture of Levels</div></a>

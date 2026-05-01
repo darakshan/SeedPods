@@ -21,3 +21,4 @@ Ideas, questions, and tasks awaiting their pods.
 
 - [ ] Deep linking: implement `@anchor(tag)` and `@link(NNN,tag)` for cross-references into the middle of an article
 - [ ] testing commit 4/21 12:11
+- [ ] Status line UI design for agent presence in group conversations

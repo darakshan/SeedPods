@@ -17,8 +17,8 @@
 <div class="nav-row">
 <div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
-  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search articles" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto article</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to article" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
+  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search subjects" onclick="seedNavOpenSearch();return false">Search</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto subject</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to subject" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
@@ -49,7 +49,7 @@
   </ul></div>
 </div>
 </nav>
-<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search articles" hidden>
+<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search subjects" hidden>
   <div class="search-dialog-overlay" onclick="seedNavCloseSearch()"></div>
   <div class="search-dialog-inner">
     <div class="search-dialog-header"><input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)"><button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button></div>
@@ -58,10 +58,10 @@
   </div>
 </div>
 <div class="wrap">
-  <div class="article-header fade cat-colored cat-biology"><h1>The Cell That Makes Itself</h1><p class="premise">The cell’s molecules are replaced every few hours and yet the cell persists, because what defines it is not its material but the circular process, components producing the network that produces the components, that figured out, three billion years ago, how not to stop.</p><div class="article-nav-row" data-pod-filename="012-autopoiesis"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Article 12</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
-  <section id="_prolog" class="article-section article-prolog"><div class="prose"><p>Life is defined not by what it’s made of, but by the circular process that keeps making it.</p>
+  <div class="subject-header fade cat-colored cat-biology"><h1>The Cell That Makes Itself</h1><p class="premise">The cell’s molecules are replaced every few hours and yet the cell persists, because what defines it is not its material but the circular process, components producing the network that produces the components, that figured out, three billion years ago, how not to stop.</p><div class="subject-nav-row" data-pod-filename="012-autopoiesis"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Subject 12</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
+  <section id="_prolog" class="subject-section subject-prolog"><div class="prose"><p>Life is defined not by what it’s made of, but by the circular process that keeps making it.</p>
 </div></section>
-<section id="surface" class="article-section"><h2 class="section-heading">Surface</h2><div class="prose"><p>Here’s a question that sounds simple: what makes something alive?</p>
+<section id="surface" class="subject-section"><h2 class="section-heading">Surface</h2><div class="prose"><p>Here’s a question that sounds simple: what makes something alive?</p>
 <figure class="directive-image directive-image--left"><img src="images/012-autopoiesis.jpg" alt=""><figcaption>The cell that makes itself: autopoiesis under the microscope</figcaption></figure>
 <p>You might say: it grows.
 It moves.
@@ -117,7 +117,7 @@ It has a process it sustains.
 Things that help that process are, for the cell, different from things that don’t.</p>
 <div class="cta">Look at your own hand. The cells there are doing this right now, maintaining themselves, replacing their own components, holding the boundary that makes them cells. You are not a thing that contains life. You are a process that, at every level, keeps making itself.</div>
 </div></section>
-<section id="depth" class="article-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>Most definitions of life are lists of behaviors: metabolism, reproduction, response to stimuli.
+<section id="depth" class="subject-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>Most definitions of life are lists of behaviors: metabolism, reproduction, response to stimuli.
 Humberto Maturana and Francisco Varela’s<sup class="footnote-mark" id="fn-012-autopoiesis-1-mark"><a href="footnotes.html#fn-012-autopoiesis-1">1</a></sup> definition is structural.
 In their 1972 paper coining the term autopoiesis, they asked: what organization is necessary and sufficient for a system to be living?
 Their answer: a network of processes that produces the very components that constitute and maintain the network.
@@ -172,13 +172,13 @@ His concept of a society of occasions, a persistent pattern of events with suffi
 <p>Varela, Thompson, and Rosch’s The Embodied Mind<sup class="footnote-mark" id="fn-012-autopoiesis-5-mark"><a href="footnotes.html#fn-012-autopoiesis-5">5</a></sup> extends autopoiesis into cognitive science and phenomenology, showing how the same organizational principles that define life also structure cognition.</p>
 <p>Prigogine’s dissipative structures work<sup class="footnote-mark" id="fn-012-autopoiesis-6-mark"><a href="footnotes.html#fn-012-autopoiesis-6">6</a></sup> provides the deeper bridge: systems far from equilibrium spontaneously generate and maintain complex ordered patterns, sustained by a continuous flow of energy.</p>
 </div></section>
-<section id="provenance" class="article-section"><div class="related-section"><h3 class="section-heading related-label">Related articles</h3><div class="related-grid"><a href="002-events.html" class="related-card cat-colored cat-physics nav-push"><div class="related-title">2. Reality Is Events, Not Things</div></a>
+<section id="provenance" class="subject-section"><div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="002-events.html" class="related-card cat-colored cat-physics nav-push"><div class="related-title">2. Reality Is Events, Not Things</div></a>
 <a href="003-inside.html" class="related-card cat-colored cat-consciousness nav-push"><div class="related-title">3. Everything Has an Inside</div></a>
 <a href="011-moreisdifferent.html" class="related-card related-card-prelim cat-colored cat-consciousness nav-push"><div class="related-title">11. More Is Different</div></a>
 <a href="031-surfaceinside.html" class="related-card related-card-prelim cat-colored cat-physics nav-push"><div class="related-title">31. The Surface Is the Inside</div></a>
 <a href="037-assembly.html" class="related-card related-card-prelim cat-colored cat-mathematics nav-push"><div class="related-title">37. The Architecture of Levels</div></a></div>
 <div class="inbound-refs"><span class="inbound-label">7 inbound references</span><span class="inbound-links"><a href="004-self.html" class="inbound-link nav-push cat-colored cat-consciousness" title="The Self Is a Pattern, Not a Thing">4</a><a href="024-ghostmachine.html" class="inbound-link nav-push cat-colored cat-consciousness" title="Ghost in the Machine">24</a><a href="027-usedtothink.html" class="inbound-link nav-push cat-colored cat-knowledge" title="We Used to Think. Now We Know.">27</a><a href="031-surfaceinside.html" class="inbound-link nav-push cat-colored cat-physics" title="The Surface Is the Inside">31</a><a href="037-assembly.html" class="inbound-link nav-push cat-colored cat-mathematics" title="The Architecture of Levels">37</a><a href="049-strangeloop.html" class="inbound-link nav-push cat-colored cat-consciousness" title="The Strange Loop That Contains Itself">49</a><a href="077-intention.html" class="inbound-link nav-push cat-colored cat-consciousness" title="The Universe's Intention">77</a></span></div></div></section>
-<section id="script" class="article-section"><h2 class="section-heading">Script</h2><div class="prose"><p>Note to composer: Opens sparse and low, unresolved.
+<section id="script" class="subject-section"><h2 class="section-heading">Script</h2><div class="prose"><p>Note to composer: Opens sparse and low, unresolved.
 Builds with tension as the wound appears.
 Dense and urgent during the cell zoom.
 Returns to the opening theme at the end. Same notes, but settled.
@@ -199,7 +199,7 @@ Just a quieter patience.</p>
 </li>
 </ol>
 </div></section>
-<section id="images" class="article-section"><h2 class="section-heading">Images</h2><div class="prose"><p>Primary illustration: The vigil room, rendered as a single still.
+<section id="images" class="subject-section"><h2 class="section-heading">Images</h2><div class="prose"><p>Primary illustration: The vigil room, rendered as a single still.
 Candlelight.
 The river through the window.
 A hand resting on a bed.

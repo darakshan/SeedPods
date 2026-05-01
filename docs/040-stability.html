@@ -17,8 +17,8 @@
 <div class="nav-row">
 <div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
-  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search articles" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto article</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to article" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
+  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search subjects" onclick="seedNavOpenSearch();return false">Search</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto subject</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to subject" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
@@ -49,7 +49,7 @@
   </ul></div>
 </div>
 </nav>
-<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search articles" hidden>
+<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search subjects" hidden>
   <div class="search-dialog-overlay" onclick="seedNavCloseSearch()"></div>
   <div class="search-dialog-inner">
     <div class="search-dialog-header"><input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)"><button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button></div>
@@ -58,8 +58,8 @@
   </div>
 </div>
 <div class="wrap">
-  <div class="article-header fade cat-colored cat-mathematics"><h1>Two Opposite Kinds of Stability</h1><p class="premise">A ratio is @term(dynamically stable, Dynamic stability, “Resistance to being captured into resonant lock; irrational ratios (e.g. golden ratio) are most stable in this sense.”) if it resists @term(resonant, resonance, TBD) capture and @term(acoustically stable, Acoustic stability, “A ratio that produces a short, repeating composite waveform; simple integer ratios are most stable here.”) if it produces a clean repeating waveform, these two stabilities are exact inverses, and the fractal landscape of @term(consonance) is the geometry of their opposition.</p><div class="article-nav-row" data-pod-filename="040-stability"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Article 40</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
-  <section id="proto" class="article-section"><h2 class="section-heading">Proto</h2><div class="prose"><p>The word “stable” means opposite things in two different contexts, and the tension between them generates the fractal structure of the consonance diagram.
+  <div class="subject-header fade cat-colored cat-mathematics"><h1>Two Opposite Kinds of Stability</h1><p class="premise">A ratio is @term(dynamically stable, Dynamic stability, “Resistance to being captured into resonant lock; irrational ratios (e.g. golden ratio) are most stable in this sense.”) if it resists @term(resonant, resonance, TBD) capture and @term(acoustically stable, Acoustic stability, “A ratio that produces a short, repeating composite waveform; simple integer ratios are most stable here.”) if it produces a clean repeating waveform, these two stabilities are exact inverses, and the fractal landscape of @term(consonance) is the geometry of their opposition.</p><div class="subject-nav-row" data-pod-filename="040-stability"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Subject 40</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
+  <section id="proto" class="subject-section"><h2 class="section-heading">Proto</h2><div class="prose"><p>The word “stable” means opposite things in two different contexts, and the tension between them generates the fractal structure of the consonance diagram.
 A ratio is dynamically stable if it resists being captured into a resonant lock, irrational numbers, especially the <em><a class="gloss-ref nav-push" id="term-040-stability-1" href="glossary.html#golden-ratio">golden ratio</a></em> φ, are most stable in this sense because they cannot be well approximated by any simple fraction<a class="bib-ref" id="ref-040-stability-1" href="bibliography.html#ref-040-stability-1">[arnold]</a>.
 But a ratio is acoustically stable if it produces a short, cleanly repeating composite waveform, and here simple integer ratios like 3:2 are most stable, because their period is shortest and their pattern reinforces most frequently.
 As denominators grow, the repeat period lengthens, the waveform becomes fragile, and near-irrational ratios produce composites that never settle into a stable shape at all.
@@ -67,7 +67,7 @@ The golden ratio sits at the extreme: maximally resistant to sounding like any s
 These two stabilities are exact inverses, and the fractal landscape of consonance is the geometry of their opposition.</p>
 <figure class="directive-image directive-image--left"><img src="images/040-stability.png" alt=""><figcaption>Potential energy surface: two opposite meanings of stability</figcaption></figure>
 </div></section>
-<section id="provenance" class="article-section"><div class="related-section"><h3 class="section-heading related-label">Related articles</h3><div class="related-grid"><a href="009-randomness.html" class="related-card cat-colored cat-biology nav-push"><div class="related-title">9. Structure Is What Randomness Does</div></a>
+<section id="provenance" class="subject-section"><div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="009-randomness.html" class="related-card cat-colored cat-biology nav-push"><div class="related-title">9. Structure Is What Randomness Does</div></a>
 <a href="030-interference.html" class="related-card related-card-prelim cat-colored cat-feeling nav-push"><div class="related-title">30. The Pattern Is What the Waves Do Together</div></a>
 <a href="038-consonance-map.html" class="related-card related-card-prelim cat-colored cat-feeling nav-push"><div class="related-title">38. The Surprising Consonance Map</div></a>
 <a href="054-bornharmonic.html" class="related-card related-card-prelim cat-colored cat-physics nav-push"><div class="related-title">54. The Born Rule as Harmonic Measure</div></a>

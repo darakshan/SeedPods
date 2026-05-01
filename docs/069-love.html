@@ -17,8 +17,8 @@
 <div class="nav-row">
 <div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
-  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search articles" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto article</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to article" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
+  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search subjects" onclick="seedNavOpenSearch();return false">Search</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto subject</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to subject" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
@@ -49,7 +49,7 @@
   </ul></div>
 </div>
 </nav>
-<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search articles" hidden>
+<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search subjects" hidden>
   <div class="search-dialog-overlay" onclick="seedNavCloseSearch()"></div>
   <div class="search-dialog-inner">
     <div class="search-dialog-header"><input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)"><button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button></div>
@@ -58,12 +58,12 @@
   </div>
 </div>
 <div class="wrap">
-  <div class="article-header fade cat-colored cat-feeling"><h1>Love</h1><p class="premise">Physicists describe @term(light) and mystics describe @term(love), and they keep reaching for the same words, attraction, radiance, union, the dissolution of distance, not because one is borrowing from the other but because they may be describing the outside and inside of the same phenomenon.</p><div class="article-nav-row" data-pod-filename="069-love"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Article 69</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
-  <section id="_prolog" class="article-section article-prolog"><div class="prose"><p>Light is what Love looks like.
+  <div class="subject-header fade cat-colored cat-feeling"><h1>Love</h1><p class="premise">Physicists describe @term(light) and mystics describe @term(love), and they keep reaching for the same words, attraction, radiance, union, the dissolution of distance, not because one is borrowing from the other but because they may be describing the outside and inside of the same phenomenon.</p><div class="subject-nav-row" data-pod-filename="069-love"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Subject 69</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
+  <section id="_prolog" class="subject-section subject-prolog"><div class="prose"><p>Light is what Love looks like.
 Love is what Light feels like.
 – David Deida</p>
 </div></section>
-<section id="surface" class="article-section"><h2 class="section-heading">Surface</h2><div class="prose"><p>Physicists describe light: electromagnetic radiation, photons crossing space at the maximum speed the universe allows.
+<section id="surface" class="subject-section"><h2 class="section-heading">Surface</h2><div class="prose"><p>Physicists describe light: electromagnetic radiation, photons crossing space at the maximum speed the universe allows.
 From a photon’s perspective, there is no journey, departure and arrival are the same moment (<a href="029-lighttime.html">From Light’s Point of View, There Is No Journey</a>).
 No distance.
 No separation.</p>
@@ -107,7 +107,7 @@ Not decoration.
 Motive force.</p>
 <div class="cta">&quot;Find something that pulls at you, a light source, a person, a question you can't release. Instead of analyzing the pull, attend to its shape. The leaning. The warmth. The narrowing of distance. What if that shape is not unique to you?&quot;</div>
 </div></section>
-<section id="depth" class="article-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>The surface layer proposes that love and light are inside and outside of the same phenomenon.
+<section id="depth" class="subject-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>The surface layer proposes that love and light are inside and outside of the same phenomenon.
 This section traces the philosophical lineage of that claim.</p>
 <p>Alfred North Whitehead, the mathematician-turned-philosopher whose process metaphysics has quietly shaped contemporary philosophy of mind, called the fundamental act of reality <em>prehension</em>, the way each event takes in, feels, and integrates what surrounds it before completing itself (<a href="008-fields.html">The Field Is the Medium of Feeling</a>).
 Every actual occasion, from the simplest physical event to the most complex conscious moment, has this structure: it receives, it feels, it becomes.
@@ -145,7 +145,7 @@ The inside is love, felt, undergone, known only from within.</p>
 <p>If this is true, then love is not a human invention projected onto an indifferent cosmos.
 It is what the cosmos feels like from you stop observing it from outside and start participating from within.</p>
 </div></section>
-<section id="provenance" class="article-section"><div class="related-section"><h3 class="section-heading related-label">Related articles</h3><div class="related-grid"><a href="002-events.html" class="related-card cat-colored cat-physics nav-push"><div class="related-title">2. Reality Is Events, Not Things</div></a>
+<section id="provenance" class="subject-section"><div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="002-events.html" class="related-card cat-colored cat-physics nav-push"><div class="related-title">2. Reality Is Events, Not Things</div></a>
 <a href="003-inside.html" class="related-card cat-colored cat-consciousness nav-push"><div class="related-title">3. Everything Has an Inside</div></a>
 <a href="029-lighttime.html" class="related-card related-card-prelim cat-colored cat-physics nav-push"><div class="related-title">29. From Light's Point of View, There Is No Journey</div></a>
 <a href="036-universenoticing.html" class="related-card related-card-prelim cat-colored cat-consciousness nav-push"><div class="related-title">36. You Are the Universe Noticing Something</div></a>

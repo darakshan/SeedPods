@@ -17,8 +17,8 @@
 <div class="nav-row">
 <div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
-  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search articles" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto article</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to article" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
+  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search subjects" onclick="seedNavOpenSearch();return false">Search</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto subject</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to subject" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
@@ -49,7 +49,7 @@
   </ul></div>
 </div>
 </nav>
-<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search articles" hidden>
+<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search subjects" hidden>
   <div class="search-dialog-overlay" onclick="seedNavCloseSearch()"></div>
   <div class="search-dialog-inner">
     <div class="search-dialog-header"><input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)"><button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button></div>
@@ -58,16 +58,16 @@
   </div>
 </div>
 <div class="wrap">
-  <div class="article-header fade cat-colored cat-physics"><h1>The Surface Is the Inside</h1><p class="premise">A soap bubble is pure surface with nothing inside it but air, and yet it is entirely complete, which is the holographic principle in miniature: all the information in a volume lives on its boundary, and depth is just surface you haven’t turned over yet.</p><div class="article-nav-row" data-pod-filename="031-surfaceinside"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Article 31</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
-  <section id="_prolog" class="article-section article-prolog"><div class="prose"><p>The Bubble</p>
+  <div class="subject-header fade cat-colored cat-physics"><h1>The Surface Is the Inside</h1><p class="premise">A soap bubble is pure surface with nothing inside it but air, and yet it is entirely complete, which is the holographic principle in miniature: all the information in a volume lives on its boundary, and depth is just surface you haven’t turned over yet.</p><div class="subject-nav-row" data-pod-filename="031-surfaceinside"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Subject 31</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
+  <section id="_prolog" class="subject-section subject-prolog"><div class="prose"><p>The Bubble</p>
 </div></section>
-<section id="surface" class="article-section"><h2 class="section-heading">Surface</h2><div class="prose"><p>A child stops everything for a soap bubble.
+<section id="surface" class="subject-section"><h2 class="section-heading">Surface</h2><div class="prose"><p>A child stops everything for a soap bubble.
 There’s something revelatory about it, not just beautiful.
 As if it’s showing us something we already knew.
 It is.</p>
 <figure class="directive-image directive-image--left"><img src="images/031-surfaceinside.jpg" alt=""><figcaption>Soap bubble: the surface is the inside</figcaption></figure>
 </div></section>
-<section id="depth" class="article-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>A soap bubble is pure surface.
+<section id="depth" class="subject-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>A soap bubble is pure surface.
 There is nothing inside it but air, the same air that’s outside.
 No hidden interior, no depth to excavate.
 And yet a child stops for it.
@@ -121,20 +121,20 @@ And yet it is entirely complete.
 This is something to meditate on.
 Not to measure.</p>
 </div></section>
-<section id="provenance" class="article-section"><div class="related-section"><h3 class="section-heading related-label">Related articles</h3><div class="related-grid"><a href="003-inside.html" class="related-card cat-colored cat-consciousness nav-push"><div class="related-title">3. Everything Has an Inside</div></a>
+<section id="provenance" class="subject-section"><div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="003-inside.html" class="related-card cat-colored cat-consciousness nav-push"><div class="related-title">3. Everything Has an Inside</div></a>
 <a href="012-autopoiesis.html" class="related-card cat-colored cat-biology nav-push"><div class="related-title">12. The Cell That Makes Itself</div></a>
 <a href="033-edge.html" class="related-card related-card-prelim cat-colored cat-feeling nav-push"><div class="related-title">33. The Edge Is Where Everything Happens</div></a>
 <a href="068-bubbles.html" class="related-card related-card-prelim cat-colored cat-biology nav-push"><div class="related-title">68. The Soap Bubble as Recognition, Not Metaphor</div></a>
 <a href="078-boundarystack.html" class="related-card related-card-prelim cat-colored cat-consciousness nav-push"><div class="related-title">78. The Boundary Is a Stack</div></a></div>
 <div class="inbound-refs"><span class="inbound-label">5 inbound references</span><span class="inbound-links"><a href="003-inside.html" class="inbound-link nav-push cat-colored cat-consciousness" title="Everything Has an Inside">3</a><a href="004-self.html" class="inbound-link nav-push cat-colored cat-consciousness" title="The Self Is a Pattern, Not a Thing">4</a><a href="012-autopoiesis.html" class="inbound-link nav-push cat-colored cat-biology" title="The Cell That Makes Itself">12</a><a href="068-bubbles.html" class="inbound-link nav-push cat-colored cat-biology" title="The Soap Bubble as Recognition, Not Metaphor">68</a><a href="078-boundarystack.html" class="inbound-link nav-push cat-colored cat-consciousness" title="The Boundary Is a Stack">78</a></span></div></div></section>
-<section id="script" class="article-section"><h2 class="section-heading">Script</h2><div class="prose"><ol>
+<section id="script" class="subject-section"><h2 class="section-heading">Script</h2><div class="prose"><ol>
 <li><p>A child’s face. A soap bubble drifting past. She’s not thinking about physics. But her stillness is recognition.</p>
 </li>
 <li><p>A black hole boundary, same geometry. Different scale.</p>
 </li>
 </ol>
 </div></section>
-<section id="images" class="article-section"><h2 class="section-heading">Images</h2><div class="prose"><p>Soap bubble catching light Black hole accretion disk Cell membrane electron microscopy</p>
+<section id="images" class="subject-section"><h2 class="section-heading">Images</h2><div class="prose"><p>Soap bubble catching light Black hole accretion disk Cell membrane electron microscopy</p>
 </div></section>
 </div>
 <div class="page-end" id="page-end-version" data-page-version="1">

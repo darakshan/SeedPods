@@ -17,8 +17,8 @@
 <div class="nav-row">
 <div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
-  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search articles" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto article</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to article" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
+  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search subjects" onclick="seedNavOpenSearch();return false">Search</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto subject</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to subject" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
@@ -49,7 +49,7 @@
   </ul></div>
 </div>
 </nav>
-<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search articles" hidden>
+<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search subjects" hidden>
   <div class="search-dialog-overlay" onclick="seedNavCloseSearch()"></div>
   <div class="search-dialog-inner">
     <div class="search-dialog-header"><input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)"><button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button></div>
@@ -58,10 +58,10 @@
   </div>
 </div>
 <div class="wrap">
-  <div class="article-header fade cat-colored cat-knowledge"><h1>The Word &quot;Just&quot; Is a Confession</h1><p class="premise">When someone says a process is “just” doing something, the word has quietly claimed that naming the mechanism is the same as explaining the experience, a claim that is never argued, only assumed, while one small word does all the philosophical work.</p><div class="article-nav-row" data-pod-filename="021-just"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Article 21</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
-  <section id="_prolog" class="article-section article-prolog"><div class="prose"><p>When someone says a process is “just” doing something, they’ve described the output and mistaken it for an explanation.</p>
+  <div class="subject-header fade cat-colored cat-knowledge"><h1>The Word &quot;Just&quot; Is a Confession</h1><p class="premise">When someone says a process is “just” doing something, the word has quietly claimed that naming the mechanism is the same as explaining the experience, a claim that is never argued, only assumed, while one small word does all the philosophical work.</p><div class="subject-nav-row" data-pod-filename="021-just"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Subject 21</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
+  <section id="_prolog" class="subject-section subject-prolog"><div class="prose"><p>When someone says a process is “just” doing something, they’ve described the output and mistaken it for an explanation.</p>
 </div></section>
-<section id="surface" class="article-section"><h2 class="section-heading">Surface</h2><div class="prose"><p>You have butterflies.
+<section id="surface" class="subject-section"><h2 class="section-heading">Surface</h2><div class="prose"><p>You have butterflies.
 You can’t stop thinking about this person.
 You keep checking your phone for no reason.
 When you finally sit down with your best friend and try to explain it, you’re tripping over your own words because the feeling is bigger than anything you know how to say.</p>
@@ -91,7 +91,7 @@ The word made it for free.</p>
 Every time you hear “just” used to close down a question, ask yourself: has this actually been argued?
 Or did one small word just do all the philosophical work, while nobody was looking?</p>
 </div></section>
-<section id="depth" class="article-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>The philosopher Gilbert Ryle<a class="bib-ref" id="ref-021-just-1" href="bibliography.html#ref-021-just-1">[ryle]</a> introduced a concept in 1949 that most people have never heard of but instantly recognize when they see it: the <em><em><a class="gloss-ref nav-push" id="term-021-just-1" href="glossary.html#category-mistake">category mistake</a></em></em>.
+<section id="depth" class="subject-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>The philosopher Gilbert Ryle<a class="bib-ref" id="ref-021-just-1" href="bibliography.html#ref-021-just-1">[ryle]</a> introduced a concept in 1949 that most people have never heard of but instantly recognize when they see it: the <em><em><a class="gloss-ref nav-push" id="term-021-just-1" href="glossary.html#category-mistake">category mistake</a></em></em>.
 A category mistake happens when you describe something using the wrong kind of explanation, and then act as if the description is complete.
 Ryle’s most famous example is the ghost in the machine: the idea that somewhere inside the body’s physical mechanism there must be a separate mental thing doing the real work.
 But the error runs in both directions.
@@ -123,13 +123,13 @@ See <a href="022-locked.html">The Channel Is Not the Capacity</a> for what happe
 <p>Note for revision: find a better Ryle example, the ghost in the machine may be closer than the Oxford/University example.
 Also consider: ghost in the machine as its own seedpod.</p>
 </div></section>
-<section id="provenance" class="article-section"><div class="related-section"><h3 class="section-heading related-label">Related articles</h3><div class="related-grid"><a href="003-inside.html" class="related-card cat-colored cat-consciousness nav-push"><div class="related-title">3. Everything Has an Inside</div></a>
+<section id="provenance" class="subject-section"><div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="003-inside.html" class="related-card cat-colored cat-consciousness nav-push"><div class="related-title">3. Everything Has an Inside</div></a>
 <a href="006-output.html" class="related-card cat-colored cat-consciousness nav-push"><div class="related-title">6. You Can't Judge a Process by Its Output</div></a>
 <a href="022-locked.html" class="related-card cat-colored cat-consciousness nav-push"><div class="related-title">22. The Channel Is Not the Capacity</div></a>
 <a href="025-widechannel.html" class="related-card cat-colored cat-ai-minds nav-push"><div class="related-title">25. We Don't Know Who or What We're Talking To</div></a>
 <a href="069-love.html" class="related-card cat-colored cat-feeling nav-push"><div class="related-title">69. Love</div></a></div>
 <div class="inbound-refs"><span class="inbound-label">5 inbound references</span><span class="inbound-links"><a href="006-output.html" class="inbound-link nav-push cat-colored cat-consciousness" title="You Can't Judge a Process by Its Output">6</a><a href="022-locked.html" class="inbound-link nav-push cat-colored cat-consciousness" title="The Channel Is Not the Capacity">22</a><a href="024-ghostmachine.html" class="inbound-link nav-push cat-colored cat-consciousness" title="Ghost in the Machine">24</a><a href="025-widechannel.html" class="inbound-link nav-push cat-colored cat-ai-minds" title="We Don't Know Who or What We're Talking To">25</a><a href="079-pronouns.html" class="inbound-link nav-push cat-colored cat-knowledge" title="Pronouns, Reference, and the Density of Presence">79</a></span></div></div></section>
-<section id="script" class="article-section"><h2 class="section-heading">Script</h2><div class="prose"><ol>
+<section id="script" class="subject-section"><h2 class="section-heading">Script</h2><div class="prose"><ol>
 <li><p>A casual food place. Two young men at a table. A woman walks up to the counter; she doesn’t notice them. Danny goes still, then puts his head down on his arms. Danny: I am so in love with her. And she doesn’t even see me. Marcus puts a hand on his shoulder. Marcus: Hey. It’s just a crush. You’ll be fine.</p>
 </li>
 <li><p>Slow push in on Danny’s face. VO: Notice what just happened. Marcus was kind. Probably even right. But that word, just, didn’t explain the feeling. It dismissed it. It said: we have named this thing, therefore we have accounted for everything worth accounting for. That claim was never argued. One small word made it, quietly, while nobody was looking.</p>
@@ -140,7 +140,7 @@ Also consider: ghost in the machine as its own seedpod.</p>
 </li>
 </ol>
 </div></section>
-<section id="images" class="article-section"><h2 class="section-heading">Images</h2><div class="prose"><p>Primary illustration Danny and Marcus at the food place table.
+<section id="images" class="subject-section"><h2 class="section-heading">Images</h2><div class="prose"><p>Primary illustration Danny and Marcus at the food place table.
 Danny’s head buried in his arms, Marcus’s hand on his shoulder.
 In the background, slightly out of focus, the woman at the counter.
 The word JUST visible somewhere in the image, perhaps as a speech bubble fragment, or faintly overlaid, small but unmistakable.

@@ -17,8 +17,8 @@
 <div class="nav-row">
 <div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
-  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search articles" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto article</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to article" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
+  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search subjects" onclick="seedNavOpenSearch();return false">Search</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto subject</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to subject" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
@@ -49,7 +49,7 @@
   </ul></div>
 </div>
 </nav>
-<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search articles" hidden>
+<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search subjects" hidden>
   <div class="search-dialog-overlay" onclick="seedNavCloseSearch()"></div>
   <div class="search-dialog-inner">
     <div class="search-dialog-header"><input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)"><button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button></div>
@@ -58,11 +58,11 @@
   </div>
 </div>
 <div class="wrap">
-  <div class="article-header fade cat-colored cat-consciousness"><h1>More Is Different</h1><p class="premise">Nothing was added, no Aunt Hillary molecule, no special ingredient, the numbers just got large enough that a different kind of thing appeared, and whether that thing has an inside scaled to its complexity is the question that haunts all emergence.</p><div class="article-nav-row" data-pod-filename="011-moreisdifferent"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Article 11</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
-  <section id="_prolog" class="article-section article-prolog"><div class="prose"><p>Nothing was added.
+  <div class="subject-header fade cat-colored cat-consciousness"><h1>More Is Different</h1><p class="premise">Nothing was added, no Aunt Hillary molecule, no special ingredient, the numbers just got large enough that a different kind of thing appeared, and whether that thing has an inside scaled to its complexity is the question that haunts all emergence.</p><div class="subject-nav-row" data-pod-filename="011-moreisdifferent"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Subject 11</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
+  <section id="_prolog" class="subject-section subject-prolog"><div class="prose"><p>Nothing was added.
 The numbers just got large enough.</p>
 </div></section>
-<section id="surface" class="article-section"><h2 class="section-heading">Surface</h2><div class="prose"><p>There is a colony of ants living somewhere near you.
+<section id="surface" class="subject-section"><h2 class="section-heading">Surface</h2><div class="prose"><p>There is a colony of ants living somewhere near you.
 Hundreds of thousands of them, maybe millions.
 Each one knows almost nothing.
 It can follow a scent trail.
@@ -132,7 +132,7 @@ We knew something about what we were building, but not everything.
 More, again, turned out to be different.</p>
 <div class="cta">&quot;Next time you laugh at something, try to find the exact word that made it funny. Notice that you can't. The laugh was never in any one place. It was in the count.&quot;</div>
 </div></section>
-<section id="depth" class="article-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>In 1972 the physicist Philip Anderson published a short paper called “More Is Different.”
+<section id="depth" class="subject-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>In 1972 the physicist Philip Anderson published a short paper called “More Is Different.”
 He was arguing against an assumption so embedded in science it rarely gets stated: that if you understand the lower level, you understand the higher one.
 That chemistry is just applied physics.
 That biology is just applied chemistry.
@@ -178,13 +178,13 @@ The understanding, if that is what it is, is Aunt Hillary: emergent, real, nowhe
 <p>A related but distinct phenomenon, what happens when formal complexity generates self-reference rather than emergence, is the territory of <a href="010-largenumbers.html">Our Intuitions About Large Numbers Are Completely Unreliable</a>.
 The architecture behind both, the nested vocabulary by which each level’s stable outputs become the primitive units of the next level up, is <a href="037-assembly.html">The Architecture of Levels</a>.</p>
 </div></section>
-<section id="provenance" class="article-section"><div class="related-section"><h3 class="section-heading related-label">Related articles</h3><div class="related-grid"><a href="002-events.html" class="related-card cat-colored cat-physics nav-push"><div class="related-title">2. Reality Is Events, Not Things</div></a>
+<section id="provenance" class="subject-section"><div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="002-events.html" class="related-card cat-colored cat-physics nav-push"><div class="related-title">2. Reality Is Events, Not Things</div></a>
 <a href="009-randomness.html" class="related-card cat-colored cat-biology nav-push"><div class="related-title">9. Structure Is What Randomness Does</div></a>
 <a href="010-largenumbers.html" class="related-card related-card-prelim cat-colored cat-knowledge nav-push"><div class="related-title">10. Our Intuitions About Large Numbers Are Completely Unreliable</div></a>
 <a href="014-cities.html" class="related-card related-card-prelim cat-colored cat-biology nav-push"><div class="related-title">14. Cities Have an Inside Too</div></a>
 <a href="037-assembly.html" class="related-card related-card-prelim cat-colored cat-mathematics nav-push"><div class="related-title">37. The Architecture of Levels</div></a></div>
 <div class="inbound-refs"><span class="inbound-label">14 inbound references</span><span class="inbound-links"><a href="009-randomness.html" class="inbound-link nav-push cat-colored cat-biology" title="Structure Is What Randomness Does">9</a><a href="010-largenumbers.html" class="inbound-link nav-push cat-colored cat-knowledge" title="Our Intuitions About Large Numbers Are Completely Unreliable">10</a><a href="012-autopoiesis.html" class="inbound-link nav-push cat-colored cat-biology" title="The Cell That Makes Itself">12</a><a href="014-cities.html" class="inbound-link nav-push cat-colored cat-biology" title="Cities Have an Inside Too">14</a><a href="016-neuralnetwork.html" class="inbound-link nav-push cat-colored cat-ai-minds" title="The Network Is a Field Having Occasions">16</a><a href="018-magnetization.html" class="inbound-link nav-push cat-colored cat-knowledge" title="Ideas Magnetize Through a Group Like Iron">18</a><a href="019-funerals.html" class="inbound-link nav-push cat-colored cat-knowledge" title="Science Advances One Funeral at a Time">19</a><a href="034-onerule.html" class="inbound-link nav-push cat-colored cat-mathematics" title="One Rule Is Enough">34</a><a href="037-assembly.html" class="inbound-link nav-push cat-colored cat-mathematics" title="The Architecture of Levels">37</a><a href="045-baldwin.html" class="inbound-link nav-push cat-colored cat-biology" title="How Learning Becomes Hardwired: The Baldwin Effect">45</a><a href="046-thinkfast.html" class="inbound-link nav-push cat-colored cat-ai-minds" title="Thought as Evolution in Milliseconds">46</a><a href="056-mandelneural.html" class="inbound-link nav-push cat-colored cat-ai-minds" title="Neural Networks as High-Dimensional Mandelbrot Sets">56</a><a href="067-monads-holons.html" class="inbound-link nav-push cat-colored cat-physics" title="Leibniz as the Unlikely Ancestor of the Holographic Principle">67</a><a href="078-boundarystack.html" class="inbound-link nav-push cat-colored cat-consciousness" title="The Boundary Is a Stack">78</a></span></div></div></section>
-<section id="script" class="article-section"><h2 class="section-heading">Script</h2><div class="prose"><p>Note to composer: Gershwin’s Rhapsody in Blue is the tonal reference: pastoral opening, then building to urban stride, then settling back.</p>
+<section id="script" class="subject-section"><h2 class="section-heading">Script</h2><div class="prose"><p>Note to composer: Gershwin’s Rhapsody in Blue is the tonal reference: pastoral opening, then building to urban stride, then settling back.</p>
 <ol>
 <li><p>A child on a hillside, following a single ant along the ground. Camera at ant level. Near silence.</p>
 </li>
@@ -206,7 +206,7 @@ The architecture behind both, the nested vocabulary by which each level’s stab
 </li>
 </ol>
 </div></section>
-<section id="images" class="article-section"><h2 class="section-heading">Images</h2><div class="prose"><p>Primary illustration: The split shot as a static image.
+<section id="images" class="subject-section"><h2 class="section-heading">Images</h2><div class="prose"><p>Primary illustration: The split shot as a static image.
 Bottom half: a cross-section of an ant hill, tunnels, chambers, ants moving with purpose, rendered with scientific precision but warm in color.
 Top half: an aerial view of a city grid, streets, intersections, people and cars.
 The layouts mirror each other almost exactly.

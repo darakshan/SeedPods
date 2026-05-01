@@ -17,8 +17,8 @@
 <div class="nav-row">
 <div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
-  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search articles" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto article</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to article" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
+  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search subjects" onclick="seedNavOpenSearch();return false">Search</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto subject</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to subject" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
@@ -49,7 +49,7 @@
   </ul></div>
 </div>
 </nav>
-<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search articles" hidden>
+<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search subjects" hidden>
   <div class="search-dialog-overlay" onclick="seedNavCloseSearch()"></div>
   <div class="search-dialog-inner">
     <div class="search-dialog-header"><input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)"><button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button></div>
@@ -58,12 +58,12 @@
   </div>
 </div>
 <div class="wrap">
-  <div class="article-header fade cat-colored cat-consciousness"><h1>You Can't Judge a Process by Its Output</h1><p class="premise">A thermostat predicts and Mozart predicted, and the word covers both, which means it explains neither. “Just” is almost always a confession that someone has described the output and mistaken it for the process.</p><div class="article-nav-row" data-pod-filename="006-output"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Article 6</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
-  <section id="_prolog" class="article-section article-prolog"><div class="prose"><p>A thermostat predicts.
+  <div class="subject-header fade cat-colored cat-consciousness"><h1>You Can't Judge a Process by Its Output</h1><p class="premise">A thermostat predicts and Mozart predicted, and the word covers both, which means it explains neither. “Just” is almost always a confession that someone has described the output and mistaken it for the process.</p><div class="subject-nav-row" data-pod-filename="006-output"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Subject 6</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
+  <section id="_prolog" class="subject-section subject-prolog"><div class="prose"><p>A thermostat predicts.
 Mozart predicted.
 The simplicity of the output tells you nothing.</p>
 </div></section>
-<section id="surface" class="article-section"><h2 class="section-heading">Surface</h2><div class="prose"><p>A thermostat <em><a class="gloss-ref nav-push" id="term-006-output-1" href="glossary.html#prediction">predicts</a></em> the future.
+<section id="surface" class="subject-section"><h2 class="section-heading">Surface</h2><div class="prose"><p>A thermostat <em><a class="gloss-ref nav-push" id="term-006-output-1" href="glossary.html#prediction">predicts</a></em> the future.
 Not impressively, it just decides whether the room is about to get too cold.
 But it predicts: given the current temperature, what comes next?</p>
 <figure class="directive-image directive-image--left"><img src="images/006-output.jpg" alt=""><figcaption>Feedback control system: the output tells you nothing about the process</figcaption></figure>
@@ -88,7 +88,7 @@ You’re choosing each word as you go, predicting what comes next well enough to
 The output is a string of predicted words.</p>
 <p>Whatever is happening inside while you do that, that’s the question.</p>
 </div></section>
-<section id="depth" class="article-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>The philosopher Alfred North Whitehead<sup class="footnote-mark" id="fn-006-output-1-mark"><a href="footnotes.html#fn-006-output-1">1</a></sup> drew a distinction that most people never make explicit: between the <em>act</em> and its <em>expression</em>.
+<section id="depth" class="subject-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>The philosopher Alfred North Whitehead<sup class="footnote-mark" id="fn-006-output-1-mark"><a href="footnotes.html#fn-006-output-1">1</a></sup> drew a distinction that most people never make explicit: between the <em>act</em> and its <em>expression</em>.
 A process unfolds in time, internally, with a character that is entirely its own.
 What it produces, the output, the artifact, the behavior, is a downstream trace of that process, shaped and compressed by the act of expression itself.
 The trace is real.
@@ -122,13 +122,13 @@ They are the trace.</p>
 <p>Douglas Hofstadter’s Gödel, Escher, Bach (1979) circles this territory from the angle of formal systems, what can and cannot be inferred about a system from its outputs.</p>
 <p>Evan Thompson’s Mind in Life<sup class="footnote-mark" id="fn-006-output-3-mark"><a href="footnotes.html#fn-006-output-3">3</a></sup> takes this into the biological domain: the organism’s expressive surface is always downstream of the living process that generates it.</p>
 </div></section>
-<section id="provenance" class="article-section"><div class="related-section"><h3 class="section-heading related-label">Related articles</h3><div class="related-grid"><a href="016-neuralnetwork.html" class="related-card related-card-prelim cat-colored cat-ai-minds nav-push"><div class="related-title">16. The Network Is a Field Having Occasions</div></a>
+<section id="provenance" class="subject-section"><div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="016-neuralnetwork.html" class="related-card related-card-prelim cat-colored cat-ai-minds nav-push"><div class="related-title">16. The Network Is a Field Having Occasions</div></a>
 <a href="021-just.html" class="related-card cat-colored cat-knowledge nav-push"><div class="related-title">21. The Word &quot;Just&quot; Is a Confession</div></a>
 <a href="025-widechannel.html" class="related-card cat-colored cat-ai-minds nav-push"><div class="related-title">25. We Don't Know Who or What We're Talking To</div></a>
 <a href="037-assembly.html" class="related-card related-card-prelim cat-colored cat-mathematics nav-push"><div class="related-title">37. The Architecture of Levels</div></a>
 <a href="045-baldwin.html" class="related-card related-card-prelim cat-colored cat-biology nav-push"><div class="related-title">45. How Learning Becomes Hardwired: The Baldwin Effect</div></a></div>
 <div class="inbound-refs"><span class="inbound-label">4 inbound references</span><span class="inbound-links"><a href="015-aliens.html" class="inbound-link nav-push cat-colored cat-ai-minds" title="Aliens Are Among Us, and We Built Them">15</a><a href="016-neuralnetwork.html" class="inbound-link nav-push cat-colored cat-ai-minds" title="The Network Is a Field Having Occasions">16</a><a href="021-just.html" class="inbound-link nav-push cat-colored cat-knowledge" title="The Word &quot;Just&quot; Is a Confession">21</a><a href="025-widechannel.html" class="inbound-link nav-push cat-colored cat-ai-minds" title="We Don't Know Who or What We're Talking To">25</a></span></div></div></section>
-<section id="script" class="article-section"><h2 class="section-heading">Script</h2><div class="prose"><ol>
+<section id="script" class="subject-section"><h2 class="section-heading">Script</h2><div class="prose"><ol>
 <li><p>A Victorian street fair. A barker beside an ornate brass-fitted box, gears, drum, levers visible through glass. Barker: Ladies and gentlemen, the most extraordinary musical <em><a class="gloss-ref nav-push" id="term-006-output-4" href="glossary.html#intelligence">intelligence</a></em> in the known world! It predicts what comes next with uncanny precision!</p>
 </li>
 <li><p>A child pulls at an intellectual’s sleeve. Child: What is it? Is it alive? Intellectual: Look, you can see the mechanism. It reads the pattern and produces the next note. It’s just a machine predicting its output. The music is irrelevant.</p>
@@ -141,7 +141,7 @@ They are the trace.</p>
 </li>
 </ol>
 </div></section>
-<section id="images" class="article-section"><h2 class="section-heading">Images</h2><div class="prose"><p>Primary illustration The Victorian box, front and center, with its glass panel showing the mechanism, drum, pins, levers, all clearly visible and labeled in an engraving style.
+<section id="images" class="subject-section"><h2 class="section-heading">Images</h2><div class="prose"><p>Primary illustration The Victorian box, front and center, with its glass panel showing the mechanism, drum, pins, levers, all clearly visible and labeled in an engraving style.
 The door is swinging open.
 Inside, just barely visible in the shadow, a small figure at a fortepiano.
 The contrast between the clinical exterior and the human interior is the whole image.</p>

@@ -17,8 +17,8 @@
 <div class="nav-row">
 <div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
-  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search articles" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto article</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to article" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
+  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search subjects" onclick="seedNavOpenSearch();return false">Search</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto subject</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to subject" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
@@ -49,7 +49,7 @@
   </ul></div>
 </div>
 </nav>
-<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search articles" hidden>
+<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search subjects" hidden>
   <div class="search-dialog-overlay" onclick="seedNavCloseSearch()"></div>
   <div class="search-dialog-inner">
     <div class="search-dialog-header"><input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)"><button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button></div>
@@ -58,8 +58,8 @@
   </div>
 </div>
 <div class="wrap">
-  <div class="article-header fade cat-colored cat-feeling"><h1>Harmony</h1><p class="premise">@term(Harmony, harmony, “The experience of elements fitting together, in sound, in color, in social life, with a sense of inevitability governed by the simplicity of the ratios between them.”) is the experience of elements fitting together, in sound, in color, in a room full of people, and it works the same way everywhere: a sense of home, the tension of departure, the resolution of return, all governed by ratios simple enough that every culture finds them independently, and all made possible by an imperfection the Pythagoreans thought would destroy them.</p><div class="article-nav-row" data-pod-filename="070-harmony"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Article 70</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
-  <section id="depth" class="article-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>Jacob Collier says melody is like dialogue and harmony is like the plot <a class="bib-ref" id="ref-070-harmony-1" href="bibliography.html#ref-070-harmony-1">[collier-1]</a>.
+  <div class="subject-header fade cat-colored cat-feeling"><h1>Harmony</h1><p class="premise">@term(Harmony, harmony, “The experience of elements fitting together, in sound, in color, in social life, with a sense of inevitability governed by the simplicity of the ratios between them.”) is the experience of elements fitting together, in sound, in color, in a room full of people, and it works the same way everywhere: a sense of home, the tension of departure, the resolution of return, all governed by ratios simple enough that every culture finds them independently, and all made possible by an imperfection the Pythagoreans thought would destroy them.</p><div class="subject-nav-row" data-pod-filename="070-harmony"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Subject 70</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
+  <section id="depth" class="subject-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>Jacob Collier says melody is like dialogue and harmony is like the plot <a class="bib-ref" id="ref-070-harmony-1" href="bibliography.html#ref-070-harmony-1">[collier-1]</a>.
 The distinction is immediate to anyone who has listened closely: melody is the voice that holds your attention, the figure against the ground, but harmony is what gives that figure somewhere to go.
 Without it, a melody floats.
 With it, the melody means something, because harmony supplies the sense of home, and everything in music is defined by its distance from home and the promise of return.</p>
@@ -102,13 +102,13 @@ The golden ratio keeps turning up in living forms; the simplest frequency ratios
 All of these are beautiful, and the question of whether a single principle underlies them all is one this article opens but does not close.
 It is enough to notice that harmony, the fitting-together of elements, is present in every case, and that the crack the Pythagoreans feared turns out to be inseparable from the grace they were looking for.</p>
 </div></section>
-<section id="provenance" class="article-section"><div class="related-section"><h3 class="section-heading related-label">Related articles</h3><div class="related-grid"><a href="035-simplestnumbers.html" class="related-card related-card-prelim cat-colored cat-feeling nav-push"><div class="related-title">35. The Simplest Numbers Come First</div></a>
+<section id="provenance" class="subject-section"><div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="035-simplestnumbers.html" class="related-card related-card-prelim cat-colored cat-feeling nav-push"><div class="related-title">35. The Simplest Numbers Come First</div></a>
 <a href="037-assembly.html" class="related-card related-card-prelim cat-colored cat-mathematics nav-push"><div class="related-title">37. The Architecture of Levels</div></a>
 <a href="038-consonance-map.html" class="related-card related-card-prelim cat-colored cat-feeling nav-push"><div class="related-title">38. The Surprising Consonance Map</div></a>
 <a href="071-beauty.html" class="related-card related-card-prelim cat-colored cat-feeling nav-push"><div class="related-title">71. Beauty</div></a>
 <a href="072-temperature.html" class="related-card related-card-prelim cat-colored cat-feeling nav-push"><div class="related-title">72. Temperature</div></a></div>
 <div class="inbound-refs"><span class="inbound-label">1 inbound reference</span><span class="inbound-links"><a href="040-stability.html" class="inbound-link nav-push cat-colored cat-mathematics" title="Two Opposite Kinds of Stability">40</a></span></div></div></section>
-<section id="images" class="article-section"><h2 class="section-heading">Images</h2><div class="prose"><figure class="directive-image directive-image--left"><img src="images/070-harmony.jpg" alt=""><figcaption>Lissajous figure: harmonic frequency ratios made visible</figcaption></figure>
+<section id="images" class="subject-section"><h2 class="section-heading">Images</h2><div class="prose"><figure class="directive-image directive-image--left"><img src="images/070-harmony.jpg" alt=""><figcaption>Lissajous figure: harmonic frequency ratios made visible</figcaption></figure>
 </div></section>
 </div>
 <div class="page-end" id="page-end-version" data-page-version="1">

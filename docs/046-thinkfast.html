@@ -17,8 +17,8 @@
 <div class="nav-row">
 <div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
 <div class="nav-center"><ul class="nav-links nav-links-center">
-  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search articles" onclick="seedNavOpenSearch();return false">Search</button></li>
-  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto article</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to article" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
+  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search subjects" onclick="seedNavOpenSearch();return false">Search</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto subject</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to subject" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
 </ul></div>
 <div class="nav-end"><ul class="nav-links nav-links-end">
   <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
@@ -49,7 +49,7 @@
   </ul></div>
 </div>
 </nav>
-<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search articles" hidden>
+<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search subjects" hidden>
   <div class="search-dialog-overlay" onclick="seedNavCloseSearch()"></div>
   <div class="search-dialog-inner">
     <div class="search-dialog-header"><input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)"><button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button></div>
@@ -58,15 +58,15 @@
   </div>
 </div>
 <div class="wrap">
-  <div class="article-header fade cat-colored cat-ai-minds"><h1>Thought as Evolution in Milliseconds</h1><p class="premise">The same process that shaped species over geological time may be shaping @term(thoughts, thought, TBD) over the duration of a heartbeat, candidate interpretations competing within the neural substrate, the fitter achieving representation, meaning emerging from @term(selection) rather than instruction.</p><div class="article-nav-row" data-pod-filename="046-thinkfast"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Article 46</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
-  <section id="proto" class="article-section"><h2 class="section-heading">Proto</h2><div class="prose"><p>If the Baldwin effect describes how learning over a lifetime can be absorbed into genetic specification over generations, perhaps the same logic applies one level up: thought itself may be an evolutionary process compressed into milliseconds.
+  <div class="subject-header fade cat-colored cat-ai-minds"><h1>Thought as Evolution in Milliseconds</h1><p class="premise">The same process that shaped species over geological time may be shaping @term(thoughts, thought, TBD) over the duration of a heartbeat, candidate interpretations competing within the neural substrate, the fitter achieving representation, meaning emerging from @term(selection) rather than instruction.</p><div class="subject-nav-row" data-pod-filename="046-thinkfast"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Subject 46</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
+  <section id="proto" class="subject-section"><h2 class="section-heading">Proto</h2><div class="prose"><p>If the Baldwin effect describes how learning over a lifetime can be absorbed into genetic specification over generations, perhaps the same logic applies one level up: thought itself may be an evolutionary process compressed into milliseconds.
 Different candidate interpretations, concepts, and responses compete within the neural substrate, and the stronger ones, better fitting prior experience, more consistent with incoming evidence, more useful for action, win and achieve coherent representation.
 This is the core claim of Gerald Edelman’s <em><a class="gloss-ref nav-push" id="term-046-thinkfast-1" href="glossary.html#neural-darwinism">Neural Darwinism</a></em><a class="bib-ref" id="ref-046-thinkfast-1" href="bibliography.html#ref-046-thinkfast-1">[edelman]</a>, William Calvin’s cortical competition models, Daniel Dennett’s <em><a class="gloss-ref nav-push" id="term-046-thinkfast-2" href="glossary.html#multiple-drafts">multiple drafts</a></em> theory, and Karl Friston’s <em><a class="gloss-ref nav-push" id="term-046-thinkfast-3" href="glossary.html#predictive-processing">predictive processing</a></em> framework.
 What they share is the insight that the brain is not an instruction-following computer producing a single authoritative output, but a selectionist system in which meaning emerges from competition.
 The same process that shaped species over geological time may be shaping thoughts over the duration of a heartbeat.</p>
 <figure class="directive-image directive-image--left"><img src="images/046-thinkfast.png" alt=""><figcaption>Bayesian phylogenetic tree: thought as rapid evolutionary selection</figcaption></figure>
 </div></section>
-<section id="provenance" class="article-section"><div class="related-section"><h3 class="section-heading related-label">Related articles</h3><div class="related-grid"><a href="005-freewill.html" class="related-card related-card-prelim cat-colored cat-consciousness nav-push"><div class="related-title">5. Freedom Is What Nature Does Everywhere</div></a>
+<section id="provenance" class="subject-section"><div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="005-freewill.html" class="related-card related-card-prelim cat-colored cat-consciousness nav-push"><div class="related-title">5. Freedom Is What Nature Does Everywhere</div></a>
 <a href="009-randomness.html" class="related-card cat-colored cat-biology nav-push"><div class="related-title">9. Structure Is What Randomness Does</div></a>
 <a href="011-moreisdifferent.html" class="related-card related-card-prelim cat-colored cat-consciousness nav-push"><div class="related-title">11. More Is Different</div></a>
 <a href="037-assembly.html" class="related-card related-card-prelim cat-colored cat-mathematics nav-push"><div class="related-title">37. The Architecture of Levels</div></a>
