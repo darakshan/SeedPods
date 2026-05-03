@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Multi-User Collaboration — Design Spec · SeedPods</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;600&family=DM+Mono:wght@300;400&display=swap">
+<link rel="icon" href="logo.svg">
+<link rel="stylesheet" href="site.css">
+<script src="pods.js"></script>
+<script src="nav.js"></script>
+</head>
+<body>
+<nav style="position:sticky;top:0;z-index:100;">
+<div class="nav-row">
+<div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
+<div class="nav-center"><ul class="nav-links nav-links-center">
+  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search subjects" onclick="seedNavOpenSearch();return false">Search</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto subject</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to subject" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
+</ul></div>
+<div class="nav-end"><ul class="nav-links nav-links-end">
+  <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
+            <li class="nav-link-item nav-item-dropdown nav-lists-dropdown">
+            <a href="list.html" class="nav-btn nav-push">Lists</a>
+            <button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-label="Lists menu"></button>
+            <ul class="nav-dropdown"><li><a href="trails.html" class="nav-push">Trails</a></li>
+              <li><a href="list.html" class="nav-push">Index</a></li>
+              <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="footnotes.html" class="nav-push">Footnotes</a></li>
+              <li><a href="glossary.html" class="nav-push">Glossary</a></li>
+              <li><a href="map.html" class="nav-push">Map</a></li>
+              <li><a href="more.html" class="nav-push">More</a></li></ul>
+          </li>
+</ul><button type="button" class="nav-hamburger-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav-hamburger-panel" onclick="seedNavToggleMenu();return false">&#9776;</button></div>
+</div>
+<div class="nav-hamburger-panel" id="nav-hamburger-panel" role="menu" aria-hidden="true">
+  <div class="nav-hamburger-overlay" onclick="seedNavToggleMenu()"></div>
+  <div class="nav-hamburger-inner"><ul class="nav-hamburger-list">
+    <li><a href="about.html">About</a></li>
+    <li><a href="trails.html" class="nav-push">Trails</a></li>
+              <li><a href="list.html" class="nav-push">Index</a></li>
+              <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="footnotes.html" class="nav-push">Footnotes</a></li>
+              <li><a href="glossary.html" class="nav-push">Glossary</a></li>
+              <li><a href="map.html" class="nav-push">Map</a></li>
+              <li><a href="more.html" class="nav-push">More</a></li>
+  </ul></div>
+</div>
+</nav>
+<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search subjects" hidden>
+  <div class="search-dialog-overlay" onclick="seedNavCloseSearch()"></div>
+  <div class="search-dialog-inner">
+    <div class="search-dialog-header"><input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)"><button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button></div>
+    <div id="search-dialog-count" class="search-dialog-count"></div>
+    <div id="search-dialog-results" class="search-dialog-results"></div>
+  </div>
+</div>
+<div class="wrap">
+  <div class="subject-header fade cat-colored cat-zzz-debug"><h1>Multi-User Collaboration — Design Spec</h1><p class="premise">Design specification for the first multi-user collaboration features in Gossamer: invitation, roles, pending edits, and notification.</p><div class="subject-nav-row" data-pod-filename="102-collab"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Subject 102</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
+  <section id="_prolog" class="subject-section subject-prolog"><div class="prose"><h2>Overview</h2>
+<p>Allow one user (the owner) to invite others to share and collaborate on a project. This spec covers the MVP: roles, project/user data model, pending edit review, agent behavior, and summarization. The invitation flow and notification system are deferred — initial user/project mapping is done manually via an admin screen.</p>
+<h2>Roles</h2>
+<p>Three roles, in order of privilege:</p>
+<ul>
+<li><p><strong>Owner.</strong> Full control. Can accept or decline edits, make direct changes. One per project (for now).</p>
+</li>
+<li><p><strong>Contributor.</strong> Can participate in chat, ask the agent to propose edits. Cannot accept or decline edits — proposals go to the owner for review.</p>
+</li>
+<li><p><strong>Observer.</strong> Can see the chat and browse the project. Cannot speak in chat (no text input window shown). Cannot propose edits.</p>
+</li>
+</ul>
+<h2>Data model</h2>
+<p>Two JSON files serve as a minimal database. Both live in the root of shared data and will eventually be replaced by a single SQLite database.</p>
+<h3>projects.json</h3>
+<pre><code class="language-json">[
+  {
+    &quot;id&quot;: &quot;SeedPods&quot;,
+    &quot;name&quot;: &quot;SeedPods&quot;,
+    &quot;members&quot;: [
+      { &quot;userId&quot;: &quot;FA2ABF2F-24EF-40A0-8D65-A0A4FFA3E4E3&quot;, &quot;role&quot;: &quot;owner&quot; }
+    ]
+  }
+]
+</code></pre>
+<p>Each project has an <code>id</code>, a display <code>name</code>, and a <code>members</code> array of <code>{ userId, role }</code> pairs. <code>userId</code> is currently a username; it will migrate to an opaque ID in a later pass. Roles are <code>owner</code>, <code>contributor</code>, or <code>observer</code>.</p>
+<h3>users.json</h3>
+<p>A user registry. No project membership — that lives in <code>projects.json</code>.</p>
+<p>The <code>id</code> field is currently a UUID token that doubles as a shared secret (future passkey). It will eventually become an opaque ID separate from authentication.</p>
+<pre><code class="language-json">[
+  {
+    &quot;id&quot;: &quot;FA2ABF2F-24EF-40A0-8D65-A0A4FFA3E4E3&quot;,
+    &quot;name&quot;: &quot;Darakshan&quot;,
+    &quot;initials&quot;: &quot;darak&quot;,
+    &quot;devices&quot;: [
+      &quot;F86E0D90-9B7A-4EDF-BCC0-70F721D036D9&quot;,
+      &quot;5E2DCE06-6BD4-4669-A4D9-177DEC7F31C7&quot;
+    ],
+    &quot;profile&quot;: &quot;73 years old, experienced software architect, student of spiritual traditions and philosophy, founder of SeedPods&quot;
+  }
+]
+</code></pre>
+<h3>Admin screen</h3>
+<p>A page in the admin interface allows the owner to:</p>
+<ul>
+<li><p>Add a user to a project with a role (by selecting from known users).</p>
+</li>
+<li><p>Change a user’s role.</p>
+</li>
+<li><p>Remove a user from a project.</p>
+</li>
+</ul>
+<p>This replaces the full invitation flow for now. No notification badges, no accept/decline dialogue.</p>
+<h3>Migration</h3>
+<p>The current <code>config/users.json</code> inside each project directory is retired. Its data moves to the server-level <code>users.json</code> and <code>projects.json</code>. The per-project file can remain as a read-only cache if needed for offline use, but the server-level files are authoritative.</p>
+<h2>Project switching</h2>
+<p>Once a user has access to more than one project, they need a way to switch. Switching changes both the chat pane and the browse pane. The UI for this is TBD but could be a project selector in the settings pane or a swipe gesture.</p>
+<h2>Pending edits</h2>
+<p>When a contributor asks the agent to make a change, the agent proposes the edit as a chip. But only the owner can accept or decline it.</p>
+<ul>
+<li><p>The chip enters a <strong>pending</strong> state. The conversation continues — it does not block.</p>
+</li>
+<li><p>The contributor sees their proposal marked “waiting for owner.”</p>
+</li>
+<li><p>The agent knows the proposal is pending and does not treat it as applied.</p>
+</li>
+<li><p>The owner can review pending edits in the browse pane. The proposed change appears as a highlighted diff overlay on the rendered subject, with accept/decline buttons in context.</p>
+</li>
+<li><p>A <strong>“next pending”</strong> button on the chip lets the owner cycle through all pending edits.</p>
+</li>
+<li><p>This is analogous to document review in Word or Google Docs, except the owner sees the change as a reader would, not as raw markup.</p>
+</li>
+</ul>
+<h2>Agent behavior in multi-user chat</h2>
+<ul>
+<li><p>The agent can see all participants and their roles.</p>
+</li>
+<li><p><strong>Subject detection:</strong> The agent watches the conversation and matches it against subject arguments. When confident, it surfaces a relevant subject via the status line.</p>
+</li>
+<li><p><strong>Hand-raising:</strong> The agent can signal it has something to contribute via the status line, without interrupting.</p>
+</li>
+<li><p><strong>Status line:</strong> A single line the agent can write to at any time — subject detection, hand-raising, pending-edit count, reactions, emoji. Participants can react with emoji back.</p>
+</li>
+<li><p><strong>Mute modes:</strong> The group can toggle between lightweight mode (subject detection only) and full mode (agent follows conversation and can contribute). Muting saves cost.</p>
+</li>
+<li><p>The group trains the agent over time. Ignored contributions are signal.</p>
+</li>
+</ul>
+<h2>Minutes (server-triggered summarization)</h2>
+<p>The server runs a configurable timer (default 30 minutes) after the last message in any user’s current chat. When it fires, the server sends the agent a message asking it to summarize the conversation as a summary chip.</p>
+<p>The summary captures three things:</p>
+<ul>
+<li><p><strong>What was established.</strong> Things the group now holds that they didn’t before.</p>
+</li>
+<li><p><strong>What’s open.</strong> Things raised but not resolved.</p>
+</li>
+<li><p><strong>What’s next.</strong> Anything anyone committed to doing.</p>
+</li>
+</ul>
+<p>These categories are domain-agnostic. The same mechanism fires when context is getting full. One feature, two triggers, same output. The summary is stored as a chip and persists across sessions.</p>
+<h2>Notification system (deferred)</h2>
+<p>The full notification system is deferred to a later phase. It would include:</p>
+<ul>
+<li><p>Red dot on the lozenge for pending invitations and unread items.</p>
+</li>
+<li><p>App badge when any notification is active.</p>
+</li>
+<li><p>Settings sidebar highlighting the section wanting attention.</p>
+</li>
+<li><p>Lozenge hides when keyboard is active, reappears when keyboard dismisses.</p>
+</li>
+<li><p>Invitation flow: owner provides email, invitee gets badge, accept/decline/cancel dialogue.</p>
+</li>
+</ul>
+<h2>Open questions</h2>
+<ul>
+<li><p>What happens to a contributor’s pending edits if they are removed from the project?</p>
+</li>
+<li><p>How does the “next pending” button order the edits — chronological, by subject, by contributor?</p>
+</li>
+<li><p>Should the agent carry context from previous group sessions via stored minutes, or start fresh each time?</p>
+</li>
+<li><p>Can there be multiple owners?</p>
+</li>
+</ul>
+</div></section>
+<section id="provenance" class="subject-section"><div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="100-todo.html" class="related-card related-card-prelim cat-colored cat-zzz-debug nav-push"><div class="related-title">100. To-Do List</div></a>
+<a href="101-gossamer.html" class="related-card related-card-prelim cat-colored cat-zzz-debug nav-push"><div class="related-title">101. Gossamer App Test</div></a></div>
+<div class="inbound-refs"><span class="inbound-label">0 inbound references</span><span class="inbound-links"></span></div></div></section>
+</div>
+<div class="page-end" id="page-end-version" data-page-version="1">
+  <button class="page-end-logo" aria-label="Show page info"
+    onmouseenter="typeof seedNavShowVersion==='function'&&seedNavShowVersion(true)"
+    onmouseleave="typeof seedNavShowVersion==='function'&&seedNavShowVersion(false)"
+    ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
+    <img src="logo.svg" alt="" width="32" height="32">
+  </button>
+  <span class="page-end-version" aria-hidden="true">zzz-debug · proto · Rev 1 · Edited 2000-01-01 00:00</span>
+</div>
+</body></html>
