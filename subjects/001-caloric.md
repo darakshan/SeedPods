@@ -1,5 +1,5 @@
 @title The Map That Was Wrong
-@edit-time 2026-04-27T01:09Z
+@edit-time 2026-05-05T05:52Z
 Every era has a framework so obvious it's invisible. Until it isn't.
 @status draft1
 @pub-time 2026-03-25T00:00Z
@@ -104,6 +104,15 @@ The patches are getting complicated.
 We've been here before.
 
 @exercise(Think of one thing you're completely certain about, something so obvious it barely feels like a belief. Now ask yourself: is that a fact, or is that this century's caloric?)
+
+@note(Transition to @link(027). The caloric story shows how frameworks dissolve; the next subject asks what gets lost in the dissolution.)
+
+The caloric story shows us how a framework dissolves — anomalies pile up, patches grow elaborate, and eventually the whole map gets replaced.
+But replacement has a hidden cost.
+When we throw out the wrong explanation, we rarely check whether it was also holding something the new map doesn't have a name for yet.
+The old mechanism goes, and the phenomenon it was reaching for goes with it.
+For instance, nearly every culture that ever existed believed the natural world had some kind of inside to it.
+We know better now.
 
 @section(depth)
 The caloric and ether stories are not just fun historical footnotes.

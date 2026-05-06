@@ -382,4 +382,31 @@ details.category-group[open] .cat-toggle-icon::before{content:'▾\00a0'}
 .mobile-sim .section-tabs-prev,.mobile-sim .section-tabs-next{font-size:.85rem;padding:.25rem .1rem}
 .mobile-sim .search-dialog-input{font-size:16px}
 
+/* Pending edit blocks: rendered when a file has an @edit-proposal(...) markup
+   that hasn't been accepted or rejected yet. Word-level diff: removed text gets
+   strikethrough red, added text gets green highlight. Container has a subtle
+   warm tint and a left border so it reads as "pending state" without
+   dominating the page. */
+.pending-edit{
+  border-left:3px solid #d0a000;
+  background:#fffefa;
+  padding:.4rem .6rem;
+  margin:.5rem 0;
+  border-radius:4px;
+}
+.pending-edit-removed{
+  color:#a00;
+  text-decoration:line-through;
+  text-decoration-color:rgba(170,0,0,.55);
+}
+.pending-edit-added{
+  color:#0a6;
+  background:#eaffea;
+  border-radius:2px;
+  padding:0 .15em;
+}
+.pending-edit p:last-child,
+.pending-edit ul:last-child,
+.pending-edit ol:last-child{margin-bottom:0}
+
 body{overflow-x:clip}.subject-header.cat-colored,details.category-group summary.index-tag-name.cat-colored{margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);padding-left:calc(50vw - 50%);padding-right:calc(50vw - 50%);background:var(--cat-bg)}.cat-ai-minds{--cat-bg:#FFB6C1}.cat-biology{--cat-bg:#FECBA1}.cat-consciousness{--cat-bg:#FFFACD}.cat-knowledge{--cat-bg:#C8E8A4}.cat-mathematics{--cat-bg:#AFEEEE}.cat-physics{--cat-bg:#BDE0FE}.cat-feeling{--cat-bg:#F9C6F0}.cat-zzz-debug{--cat-bg:#C0C0C0}
