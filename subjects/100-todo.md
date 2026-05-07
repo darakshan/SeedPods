@@ -1,5 +1,5 @@
 @title To-Do List
-@edit-time 2026-05-06T03:59Z
+@edit-time 2026-05-07T15:16Z
 Ideas, questions, and tasks awaiting their pods.
 @status proto
 @pub-time 2026-04-17T00:00Z
@@ -20,6 +20,3 @@ Ideas, questions, and tasks awaiting their pods.
 
 - [ ] Deep linking: implement `@anchor(tag)` and `@link(NNN,tag)` for cross-references into the middle of an article
 - [ ] Status line UI design for agent presence in group conversations
-- [ ] Second test entry: still working (2026-05-05)
-- [ ] Third test entry: edit via conversation confirmed (2026-05-05T17:06:15-07:00)
-- [ ] Fourth test entry: added (2026-05-05T17:35:30-07:00)
