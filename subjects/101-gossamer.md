@@ -1,5 +1,5 @@
 @title Gossamer App Test
-@edit-time 2026-04-23T16:37Z
+@edit-time 2026-05-07T21:18Z
 A framework for collections of linked ideas
 @status proto
 @pub-time 2026-03-27T00:00Z
@@ -18,7 +18,8 @@ A collection is a directory of markdown files:
 - `content/about/`, `content/more/`, etc. — supporting pages
 - `content/internal/` — documentation
 
-Each pod has metadata fields (#title, #subtitle, #status, #date, #category, #tags), up to six content layers (surface, depth, provenance, script, images, brief), and links to other pods via @link(NNN) syntax.
+Each pod has metadata fields (#title, #subtitle, #status, #date, #category, #tags), up to six content layers (surface, depth, provenance, script, images, brief), 
+and links to other pods via \@link(NNN) syntax.
 
 ## The AI Collaborator
 

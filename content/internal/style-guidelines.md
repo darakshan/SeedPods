@@ -18,7 +18,7 @@ Don't leave technical terms half-simplified, where a reader in one layer gets th
 When a concept from one seedpod appears in another, don't assume the reader has read the earlier one.
 Give enough words for the reference to land on its own, then offer a link for those who want more.
 
-Use @link(NNN) to reference another seedpod.
+Use \@link(NNN) to reference another seedpod.
 Never precede it with the word "seedpod" — links should feel like invitations, not citations.
 
 ---

@@ -73,6 +73,10 @@
       "name" : "Map"
     },
     {
+      "link" : "errors",
+      "name" : "Errors"
+    },
+    {
       "link" : "more",
       "name" : "More"
     }
