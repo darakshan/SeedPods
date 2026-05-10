@@ -8,13 +8,57 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;600&family=DM+Mono:wght@300;400&display=swap">
 <link rel="icon" href="logo.svg">
-<link rel="preload" href="nav.html" as="fetch" crossorigin>
 <link rel="stylesheet" href="site.css">
 <script src="pods.js"></script>
 <script src="nav.js"></script>
 </head>
 <body>
-<div id="nav-mount" style="min-height:3rem"></div>
+<nav style="position:sticky;top:0;z-index:100;">
+<div class="nav-row">
+<div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
+<div class="nav-center"><ul class="nav-links nav-links-center">
+  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search subjects" onclick="seedNavOpenSearch();return false">Search</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto subject</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to subject" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
+</ul></div>
+<div class="nav-end"><ul class="nav-links nav-links-end">
+  <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
+            <li class="nav-link-item nav-item-dropdown nav-lists-dropdown">
+            <a href="list.html" class="nav-btn nav-push">Lists</a>
+            <button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-label="Lists menu"></button>
+            <ul class="nav-dropdown"><li><a href="trails.html" class="nav-push">Trails</a></li>
+              <li><a href="list.html" class="nav-push">Index</a></li>
+              <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="footnotes.html" class="nav-push">Footnotes</a></li>
+              <li><a href="glossary.html" class="nav-push">Glossary</a></li>
+              <li><a href="map.html" class="nav-push">Map</a></li>
+              <li><a href="errors.html" class="nav-push">Errors</a></li>
+              <li><a href="more.html" class="nav-push">More</a></li></ul>
+          </li>
+</ul><button type="button" class="nav-hamburger-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav-hamburger-panel" onclick="seedNavToggleMenu();return false">&#9776;</button></div>
+</div>
+<div class="nav-hamburger-panel" id="nav-hamburger-panel" role="menu" aria-hidden="true">
+  <div class="nav-hamburger-overlay" onclick="seedNavToggleMenu()"></div>
+  <div class="nav-hamburger-inner"><ul class="nav-hamburger-list">
+    <li><a href="about.html">About</a></li>
+    <li><a href="trails.html" class="nav-push">Trails</a></li>
+              <li><a href="list.html" class="nav-push">Index</a></li>
+              <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="footnotes.html" class="nav-push">Footnotes</a></li>
+              <li><a href="glossary.html" class="nav-push">Glossary</a></li>
+              <li><a href="map.html" class="nav-push">Map</a></li>
+              <li><a href="errors.html" class="nav-push">Errors</a></li>
+              <li><a href="more.html" class="nav-push">More</a></li>
+  </ul></div>
+</div>
+</nav>
+<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search subjects" hidden>
+  <div class="search-dialog-overlay" onclick="seedNavCloseSearch()"></div>
+  <div class="search-dialog-inner">
+    <div class="search-dialog-header"><input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)"><button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button></div>
+    <div id="search-dialog-count" class="search-dialog-count"></div>
+    <div id="search-dialog-results" class="search-dialog-results"></div>
+  </div>
+</div>
 <div class="wrap"><div class="page-body home-page fade"><style>html,body{overflow:hidden!important}.page-body{padding:0!important;animation:none!important;transform:none!important}.map-graph-wrap{position:fixed!important;left:0!important;right:0!important;bottom:0!important}.page-end{position:fixed!important;bottom:.5rem;left:50%!important;transform:translateX(-50%)!important;z-index:82!important;margin:0!important}</style>
 <div class="map-graph-filters"><div class="map-controls-top"><span class="map-graph-key-item"><span class="map-graph-key-dot map-graph-key-from"></span> from</span><span class="map-graph-key-item"><span class="map-graph-key-dot map-graph-key-to"></span> to</span><span class="map-controls-divider" aria-hidden="true"></span><span id="map-selection-info" class="map-selection-info"></span><span class="map-controls-divider" aria-hidden="true"></span><button class="map-zoom-btn" id="map-zoom-out" type="button">−</button><button class="map-zoom-btn" id="map-zoom-in" type="button">+</button><span class="map-zoom-label">zoom</span><span id="map-zoom-level" class="map-zoom-level">1.0×</span></div><div class="map-filter-row"><label class="map-cb-label map-cb-label--cat" style="--cb-cat-bg:#FFB6C1"><input type="checkbox" class="map-filter-cat" value="AI-minds">  AI-minds</label><label class="map-cb-label map-cb-label--cat" style="--cb-cat-bg:#FECBA1"><input type="checkbox" class="map-filter-cat" value="biology">  biology</label><label class="map-cb-label map-cb-label--cat" style="--cb-cat-bg:#FFFACD"><input type="checkbox" class="map-filter-cat" value="consciousness" checked>  consciousness</label><label class="map-cb-label map-cb-label--cat" style="--cb-cat-bg:#F9C6F0"><input type="checkbox" class="map-filter-cat" value="feeling">  feeling</label><label class="map-cb-label map-cb-label--cat" style="--cb-cat-bg:#C8E8A4"><input type="checkbox" class="map-filter-cat" value="knowledge">  knowledge</label><label class="map-cb-label map-cb-label--cat" style="--cb-cat-bg:#AFEEEE"><input type="checkbox" class="map-filter-cat" value="mathematics">  mathematics</label><label class="map-cb-label map-cb-label--cat" style="--cb-cat-bg:#BDE0FE"><input type="checkbox" class="map-filter-cat" value="physics">  physics</label><label class="map-cb-label map-cb-label--cat" style="--cb-cat-bg:#C0C0C0"><input type="checkbox" class="map-filter-cat" value="zzz-debug">  zzz-debug</label><span class="map-row-btns"><button type="button" class="map-row-btn" data-action="all" data-target="cat">all</button><button type="button" class="map-row-btn" data-action="none" data-target="cat">none</button></span></div><div class="map-filter-row map-filter-row--status"><label class="map-cb-label"><input type="checkbox" class="map-filter-status-item" value="rough"> rough</label><label class="map-cb-label"><input type="checkbox" class="map-filter-status-item" value="proto"> proto</label><label class="map-cb-label"><input type="checkbox" class="map-filter-status-item" value="prelim"> prelim</label><label class="map-cb-label"><input type="checkbox" class="map-filter-status-item" value="draft1"> draft1</label><label class="map-cb-label"><input type="checkbox" class="map-filter-status-item" value="partial"> partial</label><span class="map-row-btns"><button type="button" class="map-row-btn" data-action="all" data-target="status">all</button><button type="button" class="map-row-btn" data-action="none" data-target="status">none</button></span></div></div>
 <div class="map-graph-wrap"><div class="map-graph-inner"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -250 2400 2500" class="map-graph-svg" width="2400" height="2500" data-base-w="2400" data-base-h="2500" data-content-h="2000">
@@ -3437,13 +3481,13 @@ wrapEl.addEventListener(‘touchcancel’, endDrag);
 })();
 </script></p>
 </div></div>
-<div class="page-end" id="page-end-version">
+<div class="page-end" id="page-end-version" data-page-version="1">
   <button class="page-end-logo" aria-label="Show page info"
     onmouseenter="typeof seedNavShowVersion==='function'&&seedNavShowVersion(true)"
     onmouseleave="typeof seedNavShowVersion==='function'&&seedNavShowVersion(false)"
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">Edited 2026-04-19 03:06</span>
+  <span class="page-end-version" aria-hidden="true">Rev 1 · Edited 2026-04-09 23:46</span>
 </div>
 </body></html>

@@ -8,13 +8,57 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;600&family=DM+Mono:wght@300;400&display=swap">
 <link rel="icon" href="logo.svg">
-<link rel="preload" href="nav.html" as="fetch" crossorigin>
 <link rel="stylesheet" href="site.css">
 <script src="pods.js"></script>
 <script src="nav.js"></script>
 </head>
 <body>
-<div id="nav-mount" style="min-height:3rem"></div>
+<nav style="position:sticky;top:0;z-index:100;">
+<div class="nav-row">
+<div class="nav-brand"><a href="index.html" class="nav-logo"><img src="logo.svg" alt="" class="nav-logo-icon"><span class="nav-logo-text">SeedPods</span></a></div>
+<div class="nav-center"><ul class="nav-links nav-links-center">
+  <li><button type="button" class="nav-search-btn nav-btn" aria-label="Search subjects" onclick="seedNavOpenSearch();return false">Search</button></li>
+  <li class="nav-goto-wrap"><label for="nav-goto-num" class="sr-only">Goto subject</label><input type="text" id="nav-goto-num" class="nav-goto-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="#" onkeydown="if(event.key==='Enter'){event.preventDefault();seedNavGo();}"><button type="button" class="nav-goto-btn nav-btn" aria-label="Go to subject" onclick="seedNavGo();return false">Go</button><span id="nav-goto-msg" class="nav-goto-msg" aria-live="polite"></span></li>
+</ul></div>
+<div class="nav-end"><ul class="nav-links nav-links-end">
+  <li class="nav-link-item"><a href="about.html" class="nav-btn">About</a></li>
+            <li class="nav-link-item nav-item-dropdown nav-lists-dropdown">
+            <a href="list.html" class="nav-btn nav-push">Lists</a>
+            <button type="button" class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-label="Lists menu"></button>
+            <ul class="nav-dropdown"><li><a href="trails.html" class="nav-push">Trails</a></li>
+              <li><a href="list.html" class="nav-push">Index</a></li>
+              <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="footnotes.html" class="nav-push">Footnotes</a></li>
+              <li><a href="glossary.html" class="nav-push">Glossary</a></li>
+              <li><a href="map.html" class="nav-push">Map</a></li>
+              <li><a href="errors.html" class="nav-push">Errors</a></li>
+              <li><a href="more.html" class="nav-push">More</a></li></ul>
+          </li>
+</ul><button type="button" class="nav-hamburger-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav-hamburger-panel" onclick="seedNavToggleMenu();return false">&#9776;</button></div>
+</div>
+<div class="nav-hamburger-panel" id="nav-hamburger-panel" role="menu" aria-hidden="true">
+  <div class="nav-hamburger-overlay" onclick="seedNavToggleMenu()"></div>
+  <div class="nav-hamburger-inner"><ul class="nav-hamburger-list">
+    <li><a href="about.html">About</a></li>
+    <li><a href="trails.html" class="nav-push">Trails</a></li>
+              <li><a href="list.html" class="nav-push">Index</a></li>
+              <li><a href="bibliography.html" class="nav-push">Bibliography</a></li>
+              <li><a href="footnotes.html" class="nav-push">Footnotes</a></li>
+              <li><a href="glossary.html" class="nav-push">Glossary</a></li>
+              <li><a href="map.html" class="nav-push">Map</a></li>
+              <li><a href="errors.html" class="nav-push">Errors</a></li>
+              <li><a href="more.html" class="nav-push">More</a></li>
+  </ul></div>
+</div>
+</nav>
+<div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search subjects" hidden>
+  <div class="search-dialog-overlay" onclick="seedNavCloseSearch()"></div>
+  <div class="search-dialog-inner">
+    <div class="search-dialog-header"><input type="search" id="search-dialog-input" class="search-dialog-input" placeholder="Search by name or content…" autocomplete="off" aria-label="Search" oninput="seedNavRunSearch(this.value)"><button type="button" class="search-dialog-close" aria-label="Close" onclick="seedNavCloseSearch()">&times;</button></div>
+    <div id="search-dialog-count" class="search-dialog-count"></div>
+    <div id="search-dialog-results" class="search-dialog-results"></div>
+  </div>
+</div>
 <div class="wrap">
   <div class="subject-header fade cat-colored cat-ai-minds"><h1>Galaxies and AI Weight Matrices as Structural Homologs</h1><p class="premise">A galaxy and a neural network’s weight matrix are both regions of information space where training or evolution has organized structure into self-referential complexity, not identical but structurally homologous, and possibly instances of the same underlying process that Whitehead called the creative advance.</p><div class="subject-nav-row" data-pod-filename="058-galacticnets"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Subject 58</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
   <section id="proto" class="subject-section"><h2 class="section-heading">Proto</h2><div class="prose"><p>A galaxy is a region of spacetime where the <em><a class="gloss-ref nav-push" id="term-058-galacticnets-1" href="glossary.html#holographic-boundary">holographic boundary</a></em> has organized information into structures of sufficient complexity to generate an interior, a local event-system rich enough to begin folding back on itself.</p>
@@ -36,13 +80,13 @@ The universe finds the same solution at every scale where the conditions allow i
 <a href="066-cosmicattractor.html" class="related-card related-card-prelim cat-colored cat-consciousness nav-push"><div class="related-title">66. Whitehead's God as Initial Condition and Attractor</div></a></div>
 <div class="inbound-refs"><span class="inbound-label">10 inbound references</span><span class="inbound-links"><a href="020-penrose.html" class="inbound-link nav-push cat-colored cat-consciousness" title="The Arrow Points Somewhere Else">20</a><a href="028-network.html" class="inbound-link nav-push cat-colored cat-consciousness" title="The Network That Experiences Itself">28</a><a href="032-skyfossil.html" class="inbound-link nav-push cat-colored cat-physics" title="The Sky Is a Fossil Record">32</a><a href="036-universenoticing.html" class="inbound-link nav-push cat-colored cat-consciousness" title="You Are the Universe Noticing Something">36</a><a href="051-spacetime.html" class="inbound-link nav-push cat-colored cat-physics" title="Spacetime as Emergent from Information Structure">51</a><a href="059-galaxyevolve.html" class="inbound-link nav-push cat-colored cat-physics" title="Each Galaxy as a Thread of Cosmic Evolution">59</a><a href="060-worldtests.html" class="inbound-link nav-push cat-colored cat-physics" title="Many Worlds as Parallel Evolutionary Experiments">60</a><a href="061-babyuniverse.html" class="inbound-link nav-push cat-colored cat-physics" title="The Cosmic Microwave Background as the Universe's Baby Picture">61</a><a href="066-cosmicattractor.html" class="inbound-link nav-push cat-colored cat-consciousness" title="Whitehead's God as Initial Condition and Attractor">66</a><a href="067-monads-holons.html" class="inbound-link nav-push cat-colored cat-physics" title="Leibniz as the Unlikely Ancestor of the Holographic Principle">67</a></span></div></div></section>
 </div>
-<div class="page-end" id="page-end-version">
+<div class="page-end" id="page-end-version" data-page-version="1">
   <button class="page-end-logo" aria-label="Show page info"
     onmouseenter="typeof seedNavShowVersion==='function'&&seedNavShowVersion(true)"
     onmouseleave="typeof seedNavShowVersion==='function'&&seedNavShowVersion(false)"
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">AI-minds · proto · Edited 2026-04-27 01:07</span>
+  <span class="page-end-version" aria-hidden="true">AI-minds · proto · Rev 1 · Edited 2026-04-27 01:07</span>
 </div>
 </body></html>
