@@ -1,0 +1,37 @@
+{
+  "labels" : [
+    "dev-fixture"
+  ],
+  "schema" : {
+    "priority" : {
+      "values" : [
+        "p1",
+        "p2",
+        "p3",
+        "p4"
+      ]
+    },
+    "version" : {
+      "type" : "string"
+    }
+  },
+  "statuses" : [
+    "📥 Inbox",
+    "🔍 Verify",
+    "✅ Done"
+  ],
+  "views" : [
+    {
+      "fields" : [
+        "number",
+        "priority",
+        "status",
+        "version",
+        "labels",
+        "name"
+      ],
+      "name" : "All tasks",
+      "sort" : "number"
+    }
+  ]
+}

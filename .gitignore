@@ -1,4 +1,6 @@
 # Managed by Gossamer — do not edit this section by hand.
+Gossamer/
+context/
 conflicts/
 .gossamer-site-clean
 .*-incoming-*
