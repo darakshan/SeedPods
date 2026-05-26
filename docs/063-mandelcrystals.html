@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mandelbrot Structure in Physical Crystals · SeedPods</title>
+<title>Mandelbrot Structure in Physical Crystals · Untitled</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;600&family=DM+Mono:wght@300;400&display=swap">
@@ -12,13 +12,66 @@
 <link rel="stylesheet" href="site.css">
 <script src="pods.js"></script>
 <script src="nav.js"></script>
+<script>
+/* Live reload: subscribe to this project's build stream and hard-reload
+   when a build touches THIS page (or a shared asset) — so a user merely
+   *viewing* a shared project sees another user's edit without manually
+   refreshing. An unrelated page's change only advances the baseline; it
+   does not reload. A full rebuild, or a build missed while suspended /
+   back-forward-cached (reconnect snapshot), reloads unconditionally
+   since we can't safely diff it. EventSource auto-reconnects and the
+   server re-sends the current generation on every (re)connect. */
+(function(){
+  if(window.__gossLive)return;window.__gossLive=1;
+  var base=null,es=null;
+  var SHARED={"site.css":1,"nav.html":1,"nav.js":1,"pods.js":1,
+              "search-index.json":1,"logo.svg":1};
+  function myPage(){
+    var p;try{p=decodeURIComponent(location.pathname);}catch(_){p=location.pathname;}
+    var i=p.indexOf("/site/");
+    var rest=i>=0?p.slice(i+6):p.replace(/^\/+/,"");
+    if(rest===""||rest.charAt(rest.length-1)==="/")rest+="index.html";
+    return rest;
+  }
+  function relevant(list){
+    if(!list||!list.length)return false;
+    var me=myPage();
+    for(var k=0;k<list.length;k++){
+      if(list[k]===me||SHARED[list[k]])return true;
+    }
+    return false;
+  }
+  function handle(ev){
+    var d;try{d=JSON.parse(ev.data);}catch(_){return;}
+    var g=d.gen;if(typeof g!=="number")return;
+    if(base===null){base=g;return;}
+    if(g===base)return;
+    if(d.full===true){location.reload();return;}
+    if(Object.prototype.toString.call(d.changed)==="[object Array]"){
+      if(relevant(d.changed))location.reload();else base=g;
+      return;
+    }
+    location.reload(); /* snapshot after a missed build */
+  }
+  function open(){
+    if(es&&es.readyState!==2)return;
+    try{es=new EventSource("/site/__live");}catch(_){return;}
+    es.onmessage=handle;
+  }
+  open();
+  window.addEventListener("pageshow",function(e){if(e.persisted)open();});
+  document.addEventListener("visibilitychange",function(){
+    if(document.visibilityState==="visible")open();
+  });
+})();
+</script>
 </head>
 <body>
 <div id="nav-mount" style="min-height:3rem"></div>
 <div class="wrap">
   <div class="subject-header fade cat-colored cat-mathematics"><h1>Mandelbrot Structure in Physical Crystals</h1><p class="premise"><em><a class="gloss-ref nav-push" href="glossary.html#quasicrystal">Quasicrystals</a></em>, magnetic domain walls, and charge density waves all produce Mandelbrot-like <em><a class="gloss-ref nav-push" href="glossary.html#fractals">fractal</a></em> structure, not by computing a formula but by obeying local iterative rules, because that structure is what local iteration produces at its boundaries regardless of substrate.</p><div class="subject-nav-row" data-pod-filename="063-mandelcrystals"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Subject 63</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
   <section id="proto" class="subject-section"><h2 class="section-heading">Proto</h2><div class="prose"><p><em><a class="gloss-ref nav-push" id="term-063-mandelcrystals-1" href="glossary.html#mandelbrot-set">Mandelbrot</a></em>-like fractal structure has been found in physical systems, not as visual coincidence but as a consequence of the same iterative mathematics running in physical substrates.</p>
-<figure class="directive-image directive-image--left"><img src="images/063-mandelcrystals.jpg" alt=""><figcaption>A snowflake: Mandelbrot structure in physical crystals</figcaption></figure>
+<figure class="directive-image directive-image--left"><img src="images/063-mandelcrystals.jpg" alt=""><figcaption>A snowflake: Mandelbrot structure in physical crystals <cite>Wikimedia Commons</cite></figcaption></figure>
 <p>Quasicrystals and Penrose tilings<a class="bib-ref" id="ref-063-mandelcrystals-1" href="bibliography.html#ref-063-mandelcrystals-1">[shechtman]</a><a class="bib-ref" id="ref-063-mandelcrystals-2" href="bibliography.html#ref-063-mandelcrystals-2">[penrose-3]</a> show self-similar structure governed by the golden ratio, which sits at a specific location in the Farey sequence and <em><a class="gloss-ref nav-push" id="term-063-mandelcrystals-2" href="glossary.html#stern-brocot-tree">Stern-Brocot tree</a></em>, the same location that determines key features of the Mandelbrot boundary geometry.</p>
 <p>Magnetic domain boundaries in certain ferromagnetic materials form fractal walls that closely mirror Mandelbrot geometry.
 The <em><a class="gloss-ref nav-push" id="term-063-mandelcrystals-3" href="glossary.html#physics">physics</a></em> is iterated nearest-neighbor interactions, each atom responding to its neighbors by a local rule, and the global boundary structure emerging from that iteration without being planned.</p>

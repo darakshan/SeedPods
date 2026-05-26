@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Network That Experiences Itself · SeedPods</title>
+<title>The Network That Experiences Itself · Untitled</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;600&family=DM+Mono:wght@300;400&display=swap">
@@ -12,6 +12,59 @@
 <link rel="stylesheet" href="site.css">
 <script src="pods.js"></script>
 <script src="nav.js"></script>
+<script>
+/* Live reload: subscribe to this project's build stream and hard-reload
+   when a build touches THIS page (or a shared asset) — so a user merely
+   *viewing* a shared project sees another user's edit without manually
+   refreshing. An unrelated page's change only advances the baseline; it
+   does not reload. A full rebuild, or a build missed while suspended /
+   back-forward-cached (reconnect snapshot), reloads unconditionally
+   since we can't safely diff it. EventSource auto-reconnects and the
+   server re-sends the current generation on every (re)connect. */
+(function(){
+  if(window.__gossLive)return;window.__gossLive=1;
+  var base=null,es=null;
+  var SHARED={"site.css":1,"nav.html":1,"nav.js":1,"pods.js":1,
+              "search-index.json":1,"logo.svg":1};
+  function myPage(){
+    var p;try{p=decodeURIComponent(location.pathname);}catch(_){p=location.pathname;}
+    var i=p.indexOf("/site/");
+    var rest=i>=0?p.slice(i+6):p.replace(/^\/+/,"");
+    if(rest===""||rest.charAt(rest.length-1)==="/")rest+="index.html";
+    return rest;
+  }
+  function relevant(list){
+    if(!list||!list.length)return false;
+    var me=myPage();
+    for(var k=0;k<list.length;k++){
+      if(list[k]===me||SHARED[list[k]])return true;
+    }
+    return false;
+  }
+  function handle(ev){
+    var d;try{d=JSON.parse(ev.data);}catch(_){return;}
+    var g=d.gen;if(typeof g!=="number")return;
+    if(base===null){base=g;return;}
+    if(g===base)return;
+    if(d.full===true){location.reload();return;}
+    if(Object.prototype.toString.call(d.changed)==="[object Array]"){
+      if(relevant(d.changed))location.reload();else base=g;
+      return;
+    }
+    location.reload(); /* snapshot after a missed build */
+  }
+  function open(){
+    if(es&&es.readyState!==2)return;
+    try{es=new EventSource("/site/__live");}catch(_){return;}
+    es.onmessage=handle;
+  }
+  open();
+  window.addEventListener("pageshow",function(e){if(e.persisted)open();});
+  document.addEventListener("visibilitychange",function(){
+    if(document.visibilityState==="visible")open();
+  });
+})();
+</script>
 </head>
 <body>
 <div id="nav-mount" style="min-height:3rem"></div>
@@ -21,7 +74,7 @@
 From inside a light beam, there is no distance between them at all.</p>
 </div></section>
 <section id="surface" class="subject-section"><h2 class="section-heading">Surface</h2><div class="prose"><p>Here is something <em><a class="gloss-ref nav-push" id="term-028-network-1" href="glossary.html#relativity">relativity</a></em> tells us that almost nobody stops to think about.</p>
-<figure class="directive-image directive-image--left"><img src="images/028-network.jpg" alt=""><figcaption>The cosmic web: the network that experiences itself</figcaption></figure>
+<figure class="directive-image directive-image--left"><img src="images/028-network.jpg" alt=""><figcaption>The cosmic web: the network that experiences itself <cite>Wikimedia Commons</cite></figcaption></figure>
 <p>When a photon, a particle of light, leaves a star a billion light years away and travels across the universe to reach your eye, something strange is true about that journey.
 From your perspective, it takes a billion years.
 From the photon’s perspective, it takes no time at all.

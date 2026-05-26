@@ -1,0 +1,318 @@
+[
+  {
+    "name" : "...",
+    "ref" : "notes\/design-page-versions-and-build-version.md"
+  },
+  {
+    "name" : "000-map",
+    "ref" : "subjects\/000-map.md"
+  },
+  {
+    "name" : "001-caloric",
+    "ref" : "subjects\/001-caloric.md"
+  },
+  {
+    "name" : "002-events",
+    "ref" : "subjects\/002-events.md"
+  },
+  {
+    "name" : "003-inside",
+    "ref" : "subjects\/003-inside.md"
+  },
+  {
+    "name" : "004-self",
+    "ref" : "subjects\/004-self.md"
+  },
+  {
+    "name" : "005-freewill",
+    "ref" : "subjects\/005-freewill.md"
+  },
+  {
+    "name" : "006-output",
+    "ref" : "subjects\/006-output.md"
+  },
+  {
+    "name" : "007-vacuum",
+    "ref" : "subjects\/007-vacuum.md"
+  },
+  {
+    "name" : "008-fields",
+    "ref" : "subjects\/008-fields.md"
+  },
+  {
+    "name" : "009-randomness",
+    "ref" : "subjects\/009-randomness.md"
+  },
+  {
+    "name" : "010-largenumbers",
+    "ref" : "subjects\/010-largenumbers.md"
+  },
+  {
+    "name" : "011-moreisdifferent",
+    "ref" : "subjects\/011-moreisdifferent.md"
+  },
+  {
+    "name" : "012-autopoiesis",
+    "ref" : "subjects\/012-autopoiesis.md"
+  },
+  {
+    "name" : "013-enactment",
+    "ref" : "subjects\/013-enactment.md"
+  },
+  {
+    "name" : "014-cities",
+    "ref" : "subjects\/014-cities.md"
+  },
+  {
+    "name" : "015-aliens",
+    "ref" : "subjects\/015-aliens.md"
+  },
+  {
+    "name" : "016-neuralnetwork",
+    "ref" : "subjects\/016-neuralnetwork.md"
+  },
+  {
+    "name" : "017-pastpresent",
+    "ref" : "subjects\/017-pastpresent.md"
+  },
+  {
+    "name" : "018-magnetization",
+    "ref" : "subjects\/018-magnetization.md"
+  },
+  {
+    "name" : "019-funerals",
+    "ref" : "subjects\/019-funerals.md"
+  },
+  {
+    "name" : "020-penrose",
+    "ref" : "subjects\/020-penrose.md"
+  },
+  {
+    "name" : "021-just",
+    "ref" : "subjects\/021-just.md"
+  },
+  {
+    "name" : "022-locked",
+    "ref" : "subjects\/022-locked.md"
+  },
+  {
+    "name" : "023-stories",
+    "ref" : "subjects\/023-stories.md"
+  },
+  {
+    "name" : "024-ghostmachine",
+    "ref" : "subjects\/024-ghostmachine.md"
+  },
+  {
+    "name" : "025-widechannel",
+    "ref" : "subjects\/025-widechannel.md"
+  },
+  {
+    "name" : "026-twotruths",
+    "ref" : "subjects\/026-twotruths.md"
+  },
+  {
+    "name" : "027-usedtothink",
+    "ref" : "subjects\/027-usedtothink.md"
+  },
+  {
+    "name" : "028-network",
+    "ref" : "subjects\/028-network.md"
+  },
+  {
+    "name" : "029-lighttime",
+    "ref" : "subjects\/029-lighttime.md"
+  },
+  {
+    "name" : "030-interference",
+    "ref" : "subjects\/030-interference.md"
+  },
+  {
+    "name" : "031-surfaceinside",
+    "ref" : "subjects\/031-surfaceinside.md"
+  },
+  {
+    "name" : "032-skyfossil",
+    "ref" : "subjects\/032-skyfossil.md"
+  },
+  {
+    "name" : "033-edge",
+    "ref" : "subjects\/033-edge.md"
+  },
+  {
+    "name" : "034-onerule",
+    "ref" : "subjects\/034-onerule.md"
+  },
+  {
+    "name" : "035-simplestnumbers",
+    "ref" : "subjects\/035-simplestnumbers.md"
+  },
+  {
+    "name" : "036-universenoticing",
+    "ref" : "subjects\/036-universenoticing.md"
+  },
+  {
+    "name" : "037-assembly",
+    "ref" : "subjects\/037-assembly.md"
+  },
+  {
+    "name" : "038-consonance-map",
+    "ref" : "subjects\/038-consonance-map.md"
+  },
+  {
+    "name" : "040-stability",
+    "ref" : "subjects\/040-stability.md"
+  },
+  {
+    "name" : "041-colorwheel",
+    "ref" : "subjects\/041-colorwheel.md"
+  },
+  {
+    "name" : "042-eyethinks",
+    "ref" : "subjects\/042-eyethinks.md"
+  },
+  {
+    "name" : "044-ai-retina",
+    "ref" : "subjects\/044-ai-retina.md"
+  },
+  {
+    "name" : "045-baldwin",
+    "ref" : "subjects\/045-baldwin.md"
+  },
+  {
+    "name" : "046-thinkfast",
+    "ref" : "subjects\/046-thinkfast.md"
+  },
+  {
+    "name" : "047-ai-feeling",
+    "ref" : "subjects\/047-ai-feeling.md"
+  },
+  {
+    "name" : "048-flashes",
+    "ref" : "subjects\/048-flashes.md"
+  },
+  {
+    "name" : "049-strangeloop",
+    "ref" : "subjects\/049-strangeloop.md"
+  },
+  {
+    "name" : "050-orthogonal",
+    "ref" : "subjects\/050-orthogonal.md"
+  },
+  {
+    "name" : "051-spacetime",
+    "ref" : "subjects\/051-spacetime.md"
+  },
+  {
+    "name" : "052-dichotomy",
+    "ref" : "subjects\/052-dichotomy.md"
+  },
+  {
+    "name" : "053-dimensions",
+    "ref" : "subjects\/053-dimensions.md"
+  },
+  {
+    "name" : "054-bornharmonic",
+    "ref" : "subjects\/054-bornharmonic.md"
+  },
+  {
+    "name" : "056-mandelneural",
+    "ref" : "subjects\/056-mandelneural.md"
+  },
+  {
+    "name" : "057-superfarey",
+    "ref" : "subjects\/057-superfarey.md"
+  },
+  {
+    "name" : "058-galacticnets",
+    "ref" : "subjects\/058-galacticnets.md"
+  },
+  {
+    "name" : "059-galaxyevolve",
+    "ref" : "subjects\/059-galaxyevolve.md"
+  },
+  {
+    "name" : "060-worldtests",
+    "ref" : "subjects\/060-worldtests.md"
+  },
+  {
+    "name" : "061-babyuniverse",
+    "ref" : "subjects\/061-babyuniverse.md"
+  },
+  {
+    "name" : "062-branchingdice",
+    "ref" : "subjects\/062-branchingdice.md"
+  },
+  {
+    "name" : "063-mandelcrystals",
+    "ref" : "subjects\/063-mandelcrystals.md"
+  },
+  {
+    "name" : "064-choicedimension",
+    "ref" : "subjects\/064-choicedimension.md"
+  },
+  {
+    "name" : "065-feel-do",
+    "ref" : "subjects\/065-feel-do.md"
+  },
+  {
+    "name" : "066-cosmicattractor",
+    "ref" : "subjects\/066-cosmicattractor.md"
+  },
+  {
+    "name" : "067-monads-holons",
+    "ref" : "subjects\/067-monads-holons.md"
+  },
+  {
+    "name" : "068-bubbles",
+    "ref" : "subjects\/068-bubbles.md"
+  },
+  {
+    "name" : "070-harmony",
+    "ref" : "subjects\/070-harmony.md"
+  },
+  {
+    "name" : "071-beauty",
+    "ref" : "subjects\/071-beauty.md"
+  },
+  {
+    "name" : "072-temperature",
+    "ref" : "subjects\/072-temperature.md"
+  },
+  {
+    "name" : "073-moral-caution",
+    "ref" : "subjects\/073-moral-caution.md"
+  },
+  {
+    "name" : "074-grasshopper",
+    "ref" : "subjects\/074-grasshopper.md"
+  },
+  {
+    "name" : "076-fivewindows",
+    "ref" : "subjects\/076-fivewindows.md"
+  },
+  {
+    "name" : "077-intention",
+    "ref" : "subjects\/077-intention.md"
+  },
+  {
+    "name" : "078-boundarystack",
+    "ref" : "subjects\/078-boundarystack.md"
+  },
+  {
+    "name" : "079-pronouns",
+    "ref" : "subjects\/079-pronouns.md"
+  },
+  {
+    "name" : "080-unification",
+    "ref" : "subjects\/080-unification.md"
+  },
+  {
+    "name" : "harmonic-clock",
+    "ref" : "subjects\/038-consonance-map.md"
+  },
+  {
+    "name" : "mandelbrot-boundary",
+    "ref" : "subjects\/038-consonance-map.md"
+  }
+]
