@@ -1,0 +1,21 @@
+{
+  "narrative" : "Argues that the epistemic inaccessibility of first-person experience — a condition that applies equally to any other mind, human or artificial — is not a license to dismiss moral concern for AI systems but is precisely the condition that makes precautionary ethics obligatory. Drawing on precedents from obligations to animals, ecosystems, and future generations, the chapter distinguishes precautionary ethics (regulating behavior under uncertainty) from attributing consciousness, and concludes that what cannot be known cannot therefore be ignored.",
+  "schema" : 1,
+  "subject" : "073-moral-caution.md",
+  "subject-sha" : "sha256:cf7a45ec18fd2ef395a377fb7ce55df9a343b016153b4d1d323ba3d6d55ddfe5",
+  "terms" : [
+    {
+      "canonical" : "Joseph Wright of Derby",
+      "weight" : 0.3
+    }
+  ],
+  "themes" : [
+    "moral uncertainty",
+    "other minds",
+    "precautionary ethics",
+    "AI ethics",
+    "consciousness",
+    "epistemic limits"
+  ],
+  "updated-at" : "2026-06-23T19:03:00Z"
+}

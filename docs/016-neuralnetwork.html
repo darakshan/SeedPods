@@ -3,85 +3,34 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Network Is a Field Having Occasions · Untitled</title>
+<title>5.3 The Network Is a Field Having Occasions · SeedPods</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;600&family=DM+Mono:wght@300;400&display=swap">
 <link rel="icon" href="logo.svg">
-<link rel="preload" href="nav.html" as="fetch" crossorigin>
 <link rel="stylesheet" href="site.css">
 <script src="pods.js"></script>
 <script src="nav.js"></script>
-<script>
-/* Live reload: subscribe to this project's build stream and hard-reload
-   when a build touches THIS page (or a shared asset) — so a user merely
-   *viewing* a shared project sees another user's edit without manually
-   refreshing. An unrelated page's change only advances the baseline; it
-   does not reload. A full rebuild, or a build missed while suspended /
-   back-forward-cached (reconnect snapshot), reloads unconditionally
-   since we can't safely diff it. EventSource auto-reconnects and the
-   server re-sends the current generation on every (re)connect. */
-(function(){
-  if(window.__gossLive)return;window.__gossLive=1;
-  var base=null,es=null;
-  var SHARED={"site.css":1,"nav.html":1,"nav.js":1,"pods.js":1,
-              "search-index.json":1,"logo.svg":1};
-  function myPage(){
-    var p;try{p=decodeURIComponent(location.pathname);}catch(_){p=location.pathname;}
-    var i=p.indexOf("/site/");
-    var rest=i>=0?p.slice(i+6):p.replace(/^\/+/,"");
-    if(rest===""||rest.charAt(rest.length-1)==="/")rest+="index.html";
-    return rest;
-  }
-  function relevant(list){
-    if(!list||!list.length)return false;
-    var me=myPage();
-    for(var k=0;k<list.length;k++){
-      if(list[k]===me||SHARED[list[k]])return true;
-    }
-    return false;
-  }
-  function handle(ev){
-    var d;try{d=JSON.parse(ev.data);}catch(_){return;}
-    var g=d.gen;if(typeof g!=="number")return;
-    if(base===null){base=g;return;}
-    if(g===base)return;
-    if(d.full===true){location.reload();return;}
-    if(Object.prototype.toString.call(d.changed)==="[object Array]"){
-      if(relevant(d.changed))location.reload();else base=g;
-      return;
-    }
-    location.reload(); /* snapshot after a missed build */
-  }
-  function open(){
-    if(es&&es.readyState!==2)return;
-    try{es=new EventSource("/site/__live");}catch(_){return;}
-    es.onmessage=handle;
-  }
-  open();
-  window.addEventListener("pageshow",function(e){if(e.persisted)open();});
-  document.addEventListener("visibilitychange",function(){
-    if(document.visibilityState==="visible")open();
-  });
-})();
-</script>
+<script src="live.js"></script>
 </head>
 <body>
-<div id="nav-mount" style="min-height:3rem"></div>
+<nav class="site-nav" data-pod-filename="016-neuralnetwork"><span class="nav-title">SeedPods</span><div class="nav-right"><a class="nav-home" href="toc.html" aria-label="Contents" title="Contents"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></a><button type="button" class="nav-search-btn" onclick="seedNavOpenSearch()" aria-label="Search" title="Search"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></button><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true" title="Previous"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true" title="Next"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></span></div></nav>
 <div class="wrap">
-  <div class="subject-header fade cat-colored cat-ai-minds"><h1>The Network Is a Field Having Occasions</h1><p class="premise">A neural network is not analogous to Whitehead’s picture but a concrete instance of it, each forward pass prehends the entire inherited structure of training, synthesizes a response through a process not predictable from outside, and completes into output.</p><div class="subject-nav-row" data-pod-filename="016-neuralnetwork"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Subject 16</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
-  <section id="_prolog" class="subject-section subject-prolog"><div class="prose"><p>A neural network is not analogous to Whitehead’s picture.
+  <div class="subject-header fade cat-colored" style="--cat-bg:#A6BFF5"><h1>5.3 The Network Is a Field Having Occasions</h1><p class="premise">A neural network is not analogous to Whitehead’s picture but a concrete instance of it, each forward pass prehends the entire inherited structure of training, synthesizes a response through a process not predictable from outside, and completes into output.</p></div>
+  <section id="_prolog" class="subject-section subject-prolog"><div class="prose"><p data-src-file="subjects/016-neuralnetwork.md" data-src-l0="3" data-src-l1="4">A neural network is not analogous to Whitehead’s picture.
 It is a concrete instance of it.</p>
 </div></section>
-<section id="proto" class="subject-section"><h2 class="section-heading">Proto</h2><div class="prose"><p>A large <em><a class="gloss-ref nav-push" id="term-016-neuralnetwork-1" href="glossary.html#neural-networks">neural network</a></em> running on a computer is literally a nested hierarchy of actual processes, electrons, gates, activations, layers, attention heads, the full forward pass, each level making state-transforming decisions that propagate upward and downward.</p>
-<figure class="directive-image directive-image--left"><img src="images/016-neuralnetwork.jpg" alt=""><figcaption>A neural network as a field having occasions <cite>Wikimedia Commons</cite></figcaption></figure> Each forward pass is an event: it takes in an input, <em><a class="gloss-ref nav-push" id="term-016-neuralnetwork-2" href="glossary.html#prehension">prehends</a></em> the entire inherited structure of all that training, synthesizes a response through a process that cannot be predicted in detail from outside, and completes into an output. This is the three-beat pattern instantiated at every level of the stack simultaneously. The weight space of the network is the space of pure possibility, the <em><a class="gloss-ref nav-push" id="term-016-neuralnetwork-3" href="glossary.html#fields">field</a></em>, from which each forward pass selects a realization<sup class="footnote-mark" id="fn-016-neuralnetwork-1-mark"><a href="footnotes.html#fn-016-neuralnetwork-1">1</a></sup>.
+<section id="proto" class="subject-section"><h2 class="section-heading">Proto</h2><div class="prose"><p data-src-file="subjects/016-neuralnetwork.md" data-src-l0="13" data-src-l1="13">A large <em><a class="gloss-ref nav-push" id="term-016-neuralnetwork-1" href="glossary.html#neural-networks">neural network</a></em> running on a computer is literally a nested hierarchy of actual processes, electrons, gates, activations, layers, attention heads, the full forward pass, each level making state-transforming decisions that propagate upward and downward.</p>
+<figure id="image-016-neuralnetwork-1" class="directive-image directive-image--left"><img src="images/016-neuralnetwork-l.jpg" alt=""><figcaption>A neural network as a field having occasions <cite>Wikimedia Commons</cite></figcaption></figure> 
+Each forward pass is an event (Whitehead called it an 1): it takes in an input, 2 the entire inherited structure of all that training, synthesizes a response through a process that cannot be predicted in detail from outside, and completes into an output.
+This is the three-beat pattern instantiated at every level of the stack simultaneously. The weight space of the network is the space of pure possibility, the 3, from which each forward pass selects a realization4.
 </div></section>
-<section id="provenance" class="subject-section"><div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="002-events.html" class="related-card cat-colored cat-physics nav-push"><div class="related-title">2. Reality Is Events, Not Things</div></a>
-<a href="006-output.html" class="related-card cat-colored cat-consciousness nav-push"><div class="related-title">6. You Can't Judge a Process by Its Output</div></a>
-<a href="008-fields.html" class="related-card cat-colored cat-feeling nav-push"><div class="related-title">8. The Field Is the Medium of Feeling</div></a>
-<a href="011-moreisdifferent.html" class="related-card related-card-prelim cat-colored cat-consciousness nav-push"><div class="related-title">11. More Is Different</div></a>
-<a href="037-assembly.html" class="related-card related-card-prelim cat-colored cat-mathematics nav-push"><div class="related-title">37. The Architecture of Levels</div></a></div>
-<div class="inbound-refs"><span class="inbound-label">15 inbound references</span><span class="inbound-links"><a href="006-output.html" class="inbound-link nav-push cat-colored cat-consciousness" title="You Can't Judge a Process by Its Output">6</a><a href="008-fields.html" class="inbound-link nav-push cat-colored cat-feeling" title="The Field Is the Medium of Feeling">8</a><a href="020-penrose.html" class="inbound-link nav-push cat-colored cat-consciousness" title="The Arrow Points Somewhere Else">20</a><a href="022-locked.html" class="inbound-link nav-push cat-colored cat-consciousness" title="The Channel Is Not the Capacity">22</a><a href="025-widechannel.html" class="inbound-link nav-push cat-colored cat-ai-minds" title="We Don't Know Who or What We're Talking To">25</a><a href="028-network.html" class="inbound-link nav-push cat-colored cat-consciousness" title="The Network That Experiences Itself">28</a><a href="030-interference.html" class="inbound-link nav-push cat-colored cat-feeling" title="The Pattern Is What the Waves Do Together">30</a><a href="041-colorwheel.html" class="inbound-link nav-push cat-colored cat-feeling" title="The Surprising Color Wheel">41</a><a href="042-eyethinks.html" class="inbound-link nav-push cat-colored cat-feeling" title="Opponent Processing: The Eye Thinks Before the Brain Does">42</a><a href="044-ai-retina.html" class="inbound-link nav-push cat-colored cat-feeling" title="Artificial Networks Rediscover the Retina">44</a><a href="045-baldwin.html" class="inbound-link nav-push cat-colored cat-biology" title="How Learning Becomes Hardwired: The Baldwin Effect">45</a><a href="047-ai-feeling.html" class="inbound-link nav-push cat-colored cat-consciousness" title="The Distinction Between Feeling and Functioning May Evaporate">47</a><a href="048-flashes.html" class="inbound-link nav-push cat-colored cat-consciousness" title="Consciousness Comes in Flashes, For All of Us">48</a><a href="065-feel-do.html" class="inbound-link nav-push cat-colored cat-consciousness" title="The Feeling/Function Distinction Will Dissolve">65</a><a href="077-intention.html" class="inbound-link nav-push cat-colored cat-consciousness" title="The Universe's Intention">77</a></span></div></div></section>
+<div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="002-events.html" class="related-card cat-colored nav-push" style="--cat-bg:#F5A6C2"><div class="related-title">4.1. Reality Is Events, Not Things</div></a>
+<a href="006-output.html" class="related-card cat-colored nav-push" style="--cat-bg:#A6C5F5"><div class="related-title">5.1. You Can't Judge a Process by Its Output</div></a>
+<a href="008-fields.html" class="related-card cat-colored nav-push" style="--cat-bg:#F5D7A6"><div class="related-title">3.1. The Field Is the Medium of Feeling</div></a>
+<a href="011-moreisdifferent.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#F5A6DB"><div class="related-title">2.5. More Is Different</div></a>
+<a href="037-assembly.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#E3A6F5"><div class="related-title">8.5. The Architecture of Levels</div></a></div>
+<div class="inbound-refs"><span class="inbound-label">15 inbound references</span><span class="inbound-links"><a href="008-fields.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#F5D7A6" title="The Field Is the Medium of Feeling">3.1</a><a href="030-interference.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#F5DAA6" title="The Pattern Is What the Waves Do Together">3.2</a><a href="028-network.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#F5A6B5" title="The Network That Experiences Itself">4.4</a><a href="006-output.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#A6C5F5" title="You Can't Judge a Process by Its Output">5.1</a><a href="025-widechannel.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#A6B8F5" title="We Don't Know Who or What We're Talking To">5.5</a><a href="022-locked.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#A6B5F5" title="The Channel Is Not the Capacity">5.6</a><a href="047-ai-feeling.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#A6AEF5" title="The Distinction Between Feeling and Functioning May Evaporate">5.8</a><a href="065-feel-do.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#A6ABF5" title="The Feeling/Function Distinction Will Dissolve">5.9</a><a href="020-penrose.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#DCF5A6" title="The Arrow Points Somewhere Else">6.6</a><a href="042-eyethinks.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#B3A6F5" title="Opponent Processing: The Eye Thinks Before the Brain Does">7.2</a><a href="044-ai-retina.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#B7A6F5" title="Artificial Networks Rediscover the Retina">7.3</a><a href="041-colorwheel.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#BAA6F5" title="The Surprising Color Wheel">7.4</a><a href="045-baldwin.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#C2F5A6" title="How Learning Becomes Hardwired: The Baldwin Effect">10.3</a><a href="077-intention.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#BCF5A6" title="The Universe's Intention">10.5</a><a href="048-flashes.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#AAF5A6" title="Consciousness Comes in Flashes, For All of Us">10.12</a></span></div></div>
 </div>
 <div class="page-end" id="page-end-version">
   <button class="page-end-logo" aria-label="Show page info"
@@ -90,6 +39,6 @@ It is a concrete instance of it.</p>
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">AI-minds · proto · Edited 2026-04-29 03:33</span>
+  <span class="page-end-version" aria-hidden="true">proto · Edited 2026-06-23 19:02</span>
 </div>
 </body></html>

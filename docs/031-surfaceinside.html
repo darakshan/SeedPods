@@ -3,82 +3,29 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Surface Is the Inside · Untitled</title>
+<title>8.1 The Surface Is the Inside · SeedPods</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;600&family=DM+Mono:wght@300;400&display=swap">
 <link rel="icon" href="logo.svg">
-<link rel="preload" href="nav.html" as="fetch" crossorigin>
 <link rel="stylesheet" href="site.css">
 <script src="pods.js"></script>
 <script src="nav.js"></script>
-<script>
-/* Live reload: subscribe to this project's build stream and hard-reload
-   when a build touches THIS page (or a shared asset) — so a user merely
-   *viewing* a shared project sees another user's edit without manually
-   refreshing. An unrelated page's change only advances the baseline; it
-   does not reload. A full rebuild, or a build missed while suspended /
-   back-forward-cached (reconnect snapshot), reloads unconditionally
-   since we can't safely diff it. EventSource auto-reconnects and the
-   server re-sends the current generation on every (re)connect. */
-(function(){
-  if(window.__gossLive)return;window.__gossLive=1;
-  var base=null,es=null;
-  var SHARED={"site.css":1,"nav.html":1,"nav.js":1,"pods.js":1,
-              "search-index.json":1,"logo.svg":1};
-  function myPage(){
-    var p;try{p=decodeURIComponent(location.pathname);}catch(_){p=location.pathname;}
-    var i=p.indexOf("/site/");
-    var rest=i>=0?p.slice(i+6):p.replace(/^\/+/,"");
-    if(rest===""||rest.charAt(rest.length-1)==="/")rest+="index.html";
-    return rest;
-  }
-  function relevant(list){
-    if(!list||!list.length)return false;
-    var me=myPage();
-    for(var k=0;k<list.length;k++){
-      if(list[k]===me||SHARED[list[k]])return true;
-    }
-    return false;
-  }
-  function handle(ev){
-    var d;try{d=JSON.parse(ev.data);}catch(_){return;}
-    var g=d.gen;if(typeof g!=="number")return;
-    if(base===null){base=g;return;}
-    if(g===base)return;
-    if(d.full===true){location.reload();return;}
-    if(Object.prototype.toString.call(d.changed)==="[object Array]"){
-      if(relevant(d.changed))location.reload();else base=g;
-      return;
-    }
-    location.reload(); /* snapshot after a missed build */
-  }
-  function open(){
-    if(es&&es.readyState!==2)return;
-    try{es=new EventSource("/site/__live");}catch(_){return;}
-    es.onmessage=handle;
-  }
-  open();
-  window.addEventListener("pageshow",function(e){if(e.persisted)open();});
-  document.addEventListener("visibilitychange",function(){
-    if(document.visibilityState==="visible")open();
-  });
-})();
-</script>
+<script src="live.js"></script>
 </head>
 <body>
-<div id="nav-mount" style="min-height:3rem"></div>
+<nav class="site-nav" data-pod-filename="031-surfaceinside"><span class="nav-title">SeedPods</span><div class="nav-right"><a class="nav-home" href="toc.html" aria-label="Contents" title="Contents"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></a><button type="button" class="nav-search-btn" onclick="seedNavOpenSearch()" aria-label="Search" title="Search"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></button><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true" title="Previous"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true" title="Next"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></span></div></nav>
 <div class="wrap">
-  <div class="subject-header fade cat-colored cat-physics"><h1>The Surface Is the Inside</h1><p class="premise">A soap bubble is pure surface with nothing inside it but air, and yet it is entirely complete, which is the holographic principle in miniature: all the information in a volume lives on its boundary, and depth is just surface you haven’t turned over yet.</p><div class="subject-nav-row" data-pod-filename="031-surfaceinside"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Subject 31</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
-  <section id="_prolog" class="subject-section subject-prolog"><div class="prose"><p>The Bubble</p>
+  <div class="subject-header fade cat-colored" style="--cat-bg:#D6A6F5"><h1>8.1 The Surface Is the Inside</h1><p class="premise">A soap bubble is pure surface with nothing inside it but air, and yet it is entirely complete, which is the holographic principle in miniature: all the information in a volume lives on its boundary, and depth is just surface you haven’t turned over yet.</p></div>
+  <section id="_prolog" class="subject-section subject-prolog"><div class="prose"><p data-src-file="subjects/031-surfaceinside.md" data-src-l0="3" data-src-l1="3">The Bubble</p>
 </div></section>
-<section id="surface" class="subject-section"><h2 class="section-heading">Surface</h2><div class="prose"><p>A child stops everything for a soap bubble.
+<section id="surface" class="subject-section"><h2 class="section-heading">Surface</h2><div class="prose"><p data-src-file="subjects/031-surfaceinside.md" data-src-l0="12" data-src-l1="15">A child stops everything for a soap bubble.
 There’s something revelatory about it, not just beautiful.
 As if it’s showing us something we already knew.
 It is.</p>
-<figure class="directive-image directive-image--left"><img src="images/031-surfaceinside.jpg" alt=""><figcaption>Soap bubble: the surface is the inside <cite>Wikimedia Commons</cite></figcaption></figure>
+<figure id="image-031-surfaceinside-1" class="directive-image directive-image--left"><img src="images/031-surfaceinside-l.jpg" alt=""><figcaption>Soap bubble: the surface is the inside <cite>Wikimedia Commons</cite></figcaption></figure>
 </div></section>
-<section id="depth" class="subject-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>A soap bubble is pure surface.
+<section id="depth" class="subject-section"><h2 class="section-heading">Depth</h2><div class="prose"><p data-src-file="subjects/031-surfaceinside.md" data-src-l0="19" data-src-l1="26">A soap bubble is pure surface.
 There is nothing inside it but air, the same air that’s outside.
 No hidden interior, no depth to excavate.
 And yet a child stops for it.
@@ -86,18 +33,18 @@ Not only because it’s pretty.
 Because it’s showing her something: a thing that is entirely <em><a class="gloss-ref nav-push" id="term-031-surfaceinside-1" href="glossary.html#boundary">boundary</a></em>, entirely edge, and entirely complete.
 The soap bubble is not a metaphor for this insight.
 It is an instance of it (see <a href="068-bubbles.html">The Soap Bubble as Recognition, Not Metaphor</a>).</p>
-<p>The Mandelbrot set’s<a class="bib-ref" id="ref-031-surfaceinside-1" href="bibliography.html#ref-031-surfaceinside-1">[mandelbrot]</a> complexity lives not in its interior, which is uniform, shapeless, dull, but on its boundary (see <a href="033-edge.html">The Edge Is Where Everything Happens</a>).
+<p data-src-file="subjects/031-surfaceinside.md" data-src-l0="28" data-src-l1="33">The Mandelbrot set’s<a class="bib-ref" id="ref-031-surfaceinside-1" href="bibliography.html#ref-031-surfaceinside-1">[mandelbrot]</a> complexity lives not in its interior, which is uniform, shapeless, dull, but on its boundary (see <a href="033-edge.html">The Edge Is Where Everything Happens</a>).
 Zoom into the edge and you find more edge, forever.
 The interior is simple.
 The boundary is where everything happens.
 The bubble is all boundary.
 So, it turns out, is everything else that matters.</p>
-<p>When you dig into the depth of something and expose it to explore it, it becomes surface.
+<p data-src-file="subjects/031-surfaceinside.md" data-src-l0="35" data-src-l1="39">When you dig into the depth of something and expose it to explore it, it becomes surface.
 Peel back the skin of a cell and the molecular machinery underneath is now what you’re looking at, it’s the new surface.
 Crack open that machinery and the protein folding is the new surface.
 There is always another layer, not because depth is infinite but because surface is what experience does with whatever it touches.
 Depth is surface you haven’t turned over yet.</p>
-<p>Physics arrived at the same insight from a completely different direction.
+<p data-src-file="subjects/031-surfaceinside.md" data-src-l0="41" data-src-l1="49">Physics arrived at the same insight from a completely different direction.
 The <em><a class="gloss-ref nav-push" id="term-031-surfaceinside-2" href="glossary.html#holographic">holographic</a></em> principle, discovered by Bekenstein<a class="bib-ref" id="ref-031-surfaceinside-2" href="bibliography.html#ref-031-surfaceinside-2">[bekenstein]</a> and developed through Hawking’s<a class="bib-ref" id="ref-031-surfaceinside-3" href="bibliography.html#ref-031-surfaceinside-3">[hawking]</a> work on black hole thermodynamics, shows that all the information in a volume of space is encoded on its boundary.
 The interior is a projection of the surface.
 This is not metaphor.
@@ -106,47 +53,47 @@ We used to think the cell membrane was featureless wrapping.
 Now we know it intermediates an enormous variety of communication mechanisms, recognizing requests, broadcasting state, mediating the cell’s relationship with everything outside it (see <a href="012-autopoiesis.html">The Cell That Makes Itself</a>).
 The membrane is not packaging.
 It is the cell’s principal organ of expression.<a class="bib-ref" id="ref-031-surfaceinside-4" href="bibliography.html#ref-031-surfaceinside-4">[thompson]</a></p>
-<p>The Sufis knew something about boundaries.
+<p data-src-file="subjects/031-surfaceinside.md" data-src-l0="51" data-src-l1="55">The Sufis knew something about boundaries.
 In Ibn Arabi’s metaphysics, the <em><em><a class="gloss-ref nav-push" id="term-031-surfaceinside-3" href="glossary.html#barzakh">barzakh</a></em></em> is the isthmus, the intermediate realm that separates and connects different states of existence.<a class="bib-ref" id="ref-031-surfaceinside-5" href="bibliography.html#ref-031-surfaceinside-5">[ibnarabi]</a>
 Not a wall between inside and outside but a mediating realm of its own, where the invisible becomes visible, where <em><a class="gloss-ref nav-push" id="term-031-surfaceinside-4" href="glossary.html#interiority">interiority</a></em> expresses itself outward.
 The holographic principle in the language of physics.
 The bubble in the language of mysticism.</p>
-<p>Physically, there are three things: interior, exterior, and the surface that is their boundary.
+<p data-src-file="subjects/031-surfaceinside.md" data-src-l0="57" data-src-l1="62">Physically, there are three things: interior, exterior, and the surface that is their boundary.
 Everything this pod has discussed so far is about that surface, the exterior boundary.
 Whitehead<a class="bib-ref" id="ref-031-surfaceinside-6" href="bibliography.html#ref-031-surfaceinside-6">[whitehead]</a> showed that everything has an experiential inside, an interiority that is not spatial but felt (see <a href="003-inside.html">Everything Has an Inside</a>).
 But “inside” now means something different from the air inside a bubble.
 It means what the bubble is from within.
 And if this experiential interiority is real, what kind of boundary could it have?</p>
-<p>Not a surface.
+<p data-src-file="subjects/031-surfaceinside.md" data-src-l0="64" data-src-l1="70">Not a surface.
 The boundary of an experiential inside is communication.
 When one interiority makes itself available to another, encoding, transmitting, decoding across a shared medium, that act of making-available is the boundary itself.
 Not something that happens at a boundary, but the boundary between two interiorities.
 A dolphin’s call, a cell’s signaling, a galaxy’s exchange of light, a human conversation, each is a boundary between insides.
 The exterior boundary is the barzakh between a thing and its world.
 The interior boundary is the barzakh between one interiority and another.</p>
-<p>And unlike the exterior boundary, this one is not a surface at all.
-It is structured, layered, and, as it turns out, fractal.</p>
-<p>The bubble holds the question open.
+<p data-src-file="subjects/031-surfaceinside.md" data-src-l0="72" data-src-l1="73">And unlike the exterior boundary, this one is not a surface at all.
+It is structured, layered, and, as it turns out, fractal — developed in <a href="078-boundarystack.html">The Boundary Is a Stack</a>.</p>
+<p data-src-file="subjects/031-surfaceinside.md" data-src-l0="75" data-src-l1="79">The bubble holds the question open.
 It has no spatial inside at all.
 And yet it is entirely complete.
 This is something to meditate on.
 Not to measure.</p>
 </div></section>
-<section id="provenance" class="subject-section"><div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="003-inside.html" class="related-card cat-colored cat-consciousness nav-push"><div class="related-title">3. Everything Has an Inside</div></a>
-<a href="012-autopoiesis.html" class="related-card cat-colored cat-biology nav-push"><div class="related-title">12. The Cell That Makes Itself</div></a>
-<a href="033-edge.html" class="related-card related-card-prelim cat-colored cat-feeling nav-push"><div class="related-title">33. The Edge Is Where Everything Happens</div></a>
-<a href="068-bubbles.html" class="related-card related-card-prelim cat-colored cat-biology nav-push"><div class="related-title">68. The Soap Bubble as Recognition, Not Metaphor</div></a>
-<a href="078-boundarystack.html" class="related-card related-card-prelim cat-colored cat-consciousness nav-push"><div class="related-title">78. The Boundary Is a Stack</div></a></div>
-<div class="inbound-refs"><span class="inbound-label">5 inbound references</span><span class="inbound-links"><a href="003-inside.html" class="inbound-link nav-push cat-colored cat-consciousness" title="Everything Has an Inside">3</a><a href="004-self.html" class="inbound-link nav-push cat-colored cat-consciousness" title="The Self Is a Pattern, Not a Thing">4</a><a href="012-autopoiesis.html" class="inbound-link nav-push cat-colored cat-biology" title="The Cell That Makes Itself">12</a><a href="068-bubbles.html" class="inbound-link nav-push cat-colored cat-biology" title="The Soap Bubble as Recognition, Not Metaphor">68</a><a href="078-boundarystack.html" class="inbound-link nav-push cat-colored cat-consciousness" title="The Boundary Is a Stack">78</a></span></div></div></section>
 <section id="script" class="subject-section"><h2 class="section-heading">Script</h2><div class="prose"><ol>
-<li><p>A child’s face. A soap bubble drifting past. She’s not thinking about physics. But her stillness is recognition.</p>
+<li data-src-file="subjects/031-surfaceinside.md" data-src-l0="82" data-src-l1="83"><p data-src-file="subjects/031-surfaceinside.md" data-src-l0="82" data-src-l1="82">A child’s face. A soap bubble drifting past. She’s not thinking about physics. But her stillness is recognition.</p>
 </li>
-<li><p>A black hole boundary, same geometry. Different scale.</p>
+<li data-src-file="subjects/031-surfaceinside.md" data-src-l0="84" data-src-l1="84"><p data-src-file="subjects/031-surfaceinside.md" data-src-l0="84" data-src-l1="84">A black hole boundary, same geometry. Different scale.</p>
 </li>
 </ol>
 </div></section>
-<section id="images" class="subject-section"><h2 class="section-heading">Images</h2><div class="prose"><p>Soap bubble catching light Black hole accretion disk Cell membrane electron microscopy</p>
+<section id="images" class="subject-section"><h2 class="section-heading">Images</h2><div class="prose"><p data-src-file="subjects/031-surfaceinside.md" data-src-l0="87" data-src-l1="87">Soap bubble catching light Black hole accretion disk Cell membrane electron microscopy</p>
 </div></section>
+<div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="003-inside.html" class="related-card cat-colored nav-push" style="--cat-bg:#F5A6DF"><div class="related-title">2.4. Everything Has an Inside</div></a>
+<a href="012-autopoiesis.html" class="related-card cat-colored nav-push" style="--cat-bg:#F5A6D3"><div class="related-title">2.7. The Cell That Makes Itself</div></a>
+<a href="033-edge.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#F5E5A6"><div class="related-title">3.5. The Edge Is Where Everything Happens</div></a>
+<a href="068-bubbles.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#D9A6F5"><div class="related-title">8.2. The Soap Bubble as Recognition, Not Metaphor</div></a>
+<a href="078-boundarystack.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#E6A6F5"><div class="related-title">8.6. The Boundary Is a Stack</div></a></div>
+<div class="inbound-refs"><span class="inbound-label">5 inbound references</span><span class="inbound-links"><a href="003-inside.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#F5A6DF" title="Everything Has an Inside">2.4</a><a href="012-autopoiesis.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#F5A6D3" title="The Cell That Makes Itself">2.7</a><a href="068-bubbles.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#D9A6F5" title="The Soap Bubble as Recognition, Not Metaphor">8.2</a><a href="078-boundarystack.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#E6A6F5" title="The Boundary Is a Stack">8.6</a><a href="004-self.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#EAA6F5" title="The Self Is a Pattern, Not a Thing">8.7</a></span></div></div>
 </div>
 <div class="page-end" id="page-end-version">
   <button class="page-end-logo" aria-label="Show page info"
@@ -155,6 +102,6 @@ Not to measure.</p>
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">physics · prelim · Edited 2026-04-27 01:05</span>
+  <span class="page-end-version" aria-hidden="true">prelim · Edited 2026-06-19 14:46</span>
 </div>
 </body></html>

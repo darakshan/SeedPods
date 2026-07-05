@@ -1,0 +1,38 @@
+{
+  "narrative" : "Reframes the night sky as a fossil record of directed cosmic evolution: looking outward is looking backward in time through a process aimed at self-awareness, with Many Worlds quantum branching extending Teilhard de Chardin's Omega Point concept into a multi-threaded convergence across all branches of Hilbert space. The chapter draws the arc from Big Bang structure formation through biology and neural networks to a single observer looking up and recognizing themselves in the universe.",
+  "schema" : 1,
+  "subject" : "032-skyfossil.md",
+  "subject-sha" : "sha256:e95fa6e7a07b30b285c766ba96074642d5670208196d6d8f2f0fd1ecacc55b22",
+  "terms" : [
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "Hilbert space",
+      "weight" : 0.5
+    },
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "Teilhard de Chardin",
+      "weight" : 0.7
+    },
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "Whitehead",
+      "weight" : 0.4
+    }
+  ],
+  "themes" : [
+    "cosmology",
+    "directed evolution",
+    "self-awareness",
+    "deep time",
+    "many worlds",
+    "teilhard"
+  ],
+  "updated-at" : "2026-06-20T21:01:41Z"
+}

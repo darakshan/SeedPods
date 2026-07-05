@@ -1,0 +1,33 @@
+{
+  "narrative" : "Argues that the universe generates simple numbers before complex ones, drawing on the Farey sequence's ordering of fractions by complexity, Benford's Law's logarithmic distribution of leading digits in real-world data, and the universal musical discovery of simple ratios across independent cultures. The chapter treats these convergences as a single signature of an iterative, rule-governed world, with the virtual dimension formula V(d,n) cited as an explicit carrier of that structure.",
+  "schema" : 1,
+  "subject" : "035-simplestnumbers.md",
+  "subject-sha" : "sha256:4f4db07625b7ad64718bcd6b418a4ba264db3bc82fec0e5b77566ecdcf41aee0",
+  "terms" : [
+    {
+      "canonical" : "Farey sequence",
+      "weight" : 1
+    },
+    {
+      "canonical" : "Benford's Law",
+      "weight" : 0.9
+    },
+    {
+      "canonical" : "Simon Newcomb",
+      "weight" : 0.5
+    },
+    {
+      "canonical" : "Stern-Brocot tree",
+      "weight" : 0.4
+    }
+  ],
+  "themes" : [
+    "number theory",
+    "musical consonance",
+    "emergence",
+    "logarithms",
+    "complexity",
+    "universality"
+  ],
+  "updated-at" : "2026-06-25T10:29:03Z"
+}

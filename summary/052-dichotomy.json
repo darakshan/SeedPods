@@ -1,0 +1,21 @@
+{
+  "narrative" : "Argues that the debate over whether consciousness is discrete or continuous is a false dichotomy, drawing on quantum field theory as a model: just as an electron is neither particle nor wave but a discrete excitation of a continuous field, Whitehead's actual occasions can be understood as excitations of a continuous experiential field, making his process philosophy more coherent rather than less.",
+  "schema" : 1,
+  "subject" : "052-dichotomy.md",
+  "subject-sha" : "sha256:f68e29ff9579f0b258590f3d94827dc22c9db0ccbd52cb9ee05364fd4fa0d1e1",
+  "terms" : [
+    {
+      "canonical" : "Cantor's dust",
+      "weight" : 0.3
+    }
+  ],
+  "themes" : [
+    "false dichotomy",
+    "quantum field theory",
+    "whitehead",
+    "consciousness",
+    "process philosophy",
+    "panpsychism"
+  ],
+  "updated-at" : "2026-06-23T19:22:41Z"
+}

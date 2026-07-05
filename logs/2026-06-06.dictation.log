@@ -1,0 +1,312 @@
+Test 2026-06-06.16-48-14:
+[key] "Fe"
+[key] "w"
+[cur] 0
+[cur] 3
+[del] 3
+[key] "P"
+[key] "h"
+[key] "e"
+[key] "w"
+[key] " "
+[del] 1
+[key] "."
+[key] " "
+[pause]
+[fix] "Phew. " -> NONE
+[key] "I"
+[key] "’ve"
+[key] " spent"
+[key] " the last"
+[key] "."
+[del] 1
+[key] " 12 days"
+[key] "."
+[cur] 6
+[cur] 34
+[key] " "
+[cur] 34
+[del] 1
+[clear]
+[mic] on
+[mic] "I"
+[mic] "I have"
+[mic] "I have spent"
+[mic] "I have spent the"
+[mic] "I have spent the last"
+[mic] "I have spent the last 12"
+[mic] "I have spent the last 12 days"
+[mic] "I have spent the last 12 days up"
+[mic] "I have spent the last 12 days upgrading"
+[mic] "I have spent the last 12 days upgrading this"
+[mic] "I have spent the last 12 days upgrading this app"
+[mic] "I have spent the last 12 days upgrading this app and"
+[mic] "I have spent the last 12 days upgrading this app and so"
+[mic] "I have spent the last 12 days upgrading this app and so many"
+[mic] "I have spent the last 12 days upgrading this app and so many way"
+[mic] "I have spent the last 12 days upgrading this app and so many ways"
+[pause]
+[fix] "I have spent the last 12 days upgrading this app and so many ways" -> NONE
+[mic] "I have spent the last 12 days upgrading this app and so many ways I"
+[mic] "I have spent the last 12 days upgrading this app and so many ways I finally"
+[mic] "I have spent the last 12 days upgrading this app and so many ways I finally released"
+[mic] "I have spent the last 12 days upgrading this app and so many ways. I finally released it"
+[mic] "I have spent the last 12 days upgrading this app and so many ways. I finally released it."
+[pause]
+[fix] "I have spent the last 12 days upgrading this app and so many ways. I finally released it." -> "I have spent the last 12 days upgrading this app in so many ways."
+[mic] "I have spent the last 12 days upgrading this app and so many ways. I finally released it now"
+[mic] "I have spent the last 12 days upgrading this app and so many ways. I finally released it now the"
+[mic] "I have spent the last 12 days upgrading this app and so many ways. I finally released it now the track"
+[mic] "I have spent the last 12 days upgrading this app and so many ways. I finally released it now the tracker"
+[mic] "I have spent the last 12 days upgrading this app and so many ways. I finally released it now the tracker is"
+[mic] "I have spent the last 12 days upgrading this app and so many ways. I finally released it now the tracker is access"
+[mic] "I have spent the last 12 days upgrading this app and so many ways. I finally released it now the tracker is accessible"
+[mic] "I have spent the last 12 days upgrading this app and so many ways. I finally released it now the tracker is accessible from"
+[mic] "I have spent the last 12 days upgrading this app and so many ways. I finally released it now the tracker is accessible from both"
+[mic] "I have spent the last 12 days upgrading this app and so many ways. I finally released it now the tracker is accessible from both the"
+[mic] "I have spent the last 12 days upgrading this app and so many ways. I finally released it now the tracker is accessible from both the develop"
+[mic] "I have spent the last 12 days upgrading this app and so many ways. I finally released it now the tracker is accessible from both the development"
+[mic] "I have spent the last 12 days upgrading this app and so many ways. I finally released it now the tracker is accessible from both the development."
+[mic] "I have spent the last 12 days upgrading this app and so many ways. I finally released it now the tracker is accessible from both the development and"
+[mic] "I have spent the last 12 days upgrading this app and so many ways. I finally released it now the tracker is accessible from both the development and."
+[mic] "I have spent the last 12 days upgrading this app and so many ways. I finally released it now the tracker is accessible from both the development and the"
+[mic] "I have spent the last 12 days upgrading this app and so many ways. I finally released it now the tracker is accessible from both the development and the."
+[pause]
+[fix] "I have spent the last 12 days upgrading this app and so many ways. I finally released it now the tracker is accessible from both the development and the." -> "I've spent the last 12 days upgrading this app in so many ways. I finally released it and now the tracker is accessible from both the development and the..."
+[mic] "I have spent the last 12 days upgrading this app and so many ways. I finally released it now the tracker is accessible from both the development and the product"
+[mic] "I have spent the last 12 days upgrading this app and so many ways. I finally released it now the tracker is accessible from both the development and the production"
+[mic] "I have spent the last 12 days upgrading this app and so many ways. I finally released it now the tracker is accessible from both the development and the production system"
+[mic] "I have spent the last 12 days upgrading this app and so many ways. I finally released it now the tracker is accessible from both the development and the production system."
+[key] " "
+[pause]
+[fix] "I have spent the last 12 days upgrading this app and so many ways. I finally released it now the tracker is accessible from both the development and the production system." -> "I've spent the last 12 days upgrading this app in so many ways. I finally released it and now the tracker is accessible from both the development and production systems."
+[mic] "I have spent the last 12 days upgrading this app and so many ways. I finally released it now the tracker is accessible from both the development and the production system which"
+[mic] "I have spent the last 12 days upgrading this app and so many ways. I finally released it now the tracker is accessible from both the development and the production system, which means"
+[mic] "I have spent the last 12 days upgrading this app and so many ways. I finally released it now the tracker is accessible from both the development and the production system which means for"
+[mic] "I have spent the last 12 days upgrading this app and so many ways. I finally released it now the tracker is accessible from both the development and the production system which means for the"
+[mic] "I have spent the last 12 days upgrading this app and so many ways. I finally released it now the tracker is accessible from both the development and the production system, which means for the first"
+[mic] "I have spent the last 12 days upgrading this app and so many ways. I finally released it now the tracker is accessible from both the development and the production system, which means for the first time"
+[mic] "I have spent the last 12 days upgrading this app and so many ways. I finally released it now the tracker is accessible from both the development and the production system, which means for the first time."
+[pause]
+[fix] "I have spent the last 12 days upgrading this app and so many ways. I finally released it now the tracker is accessible from both the development and the production system, which means for the first time." -> NONE
+[mic] "I have spent the last 12 days upgrading this app and so many ways. I finally released it now the tracker is accessible from both the development and the production system, which means for the first time while"
+[mic] "I have spent the last 12 days upgrading this app and so many ways. I finally released it now the tracker is accessible from both the development and the production system, which means for the first time while I"
+[mic] "I have spent the last 12 days upgrading this app and so many ways. I finally released it now the tracker is accessible from both the development and the production system, which means for the first time while I'm"
+[mic] "I have spent the last 12 days upgrading this app and so many ways. I finally released it now the tracker is accessible from both the development and the production system, which means for the first time while I'm test"
+[mic] "I have spent the last 12 days upgrading this app and so many ways. I finally released it now the tracker is accessible from both the development and the production system, which means for the first time while I'm test."
+[mic] "I have spent the last 12 days upgrading this app and so many ways. I finally released it now the tracker is accessible from both the development and the production system, which means for the first time while I'm testing"
+[mic] "I have spent the last 12 days upgrading this app and so many ways. I finally released it now the tracker is accessible from both the development and the production system, which means for the first time while I'm testing."
+[mic] "I have spent the last 12 days upgrading this app and so many ways. I finally released it now the tracker is accessible from both the development and the production system, which means for the first time while I'm testing we"
+[mic] "I have spent the last 12 days upgrading this app and so many ways. I finally released it now the tracker is accessible from both the development and the production system, which means for the first time while I'm testing we can"
+[mic] "I have spent the last 12 days upgrading this app and so many ways. I finally released it now the tracker is accessible from both the development and the production system, which means for the first time while I'm testing we can."
+[pause]
+[fix] "I have spent the last 12 days upgrading this app and so many ways. I finally released it now the tracker is accessible from both the development and the production system, which means for the first time while I'm testing we can." -> "I've spent the last 12 days upgrading this app in so many ways. I finally released it; now the tracker is accessible from both the development and the production system, which means for the first time while I'm testing we can."
+[mic] "I have spent the last 12 days upgrading this app and so many ways. I finally released it now the tracker is accessible from both the development and the production system, which means for the first time while I'm testing, we can post"
+[mic] "I have spent the last 12 days upgrading this app and so many ways. I finally released it now the tracker is accessible from both the development and the production system, which means for the first time while I'm testing, we can post."
+[mic] "I have spent the last 12 days upgrading this app and so many ways. I finally released it now the tracker is accessible from both the development and the production system, which means for the first time while I'm testing, we can post new"
+[mic] "I have spent the last 12 days upgrading this app and so many ways. I finally released it now the tracker is accessible from both the development and the production system, which means for the first time while I'm testing, we can post new."
+[mic] "I have spent the last 12 days upgrading this app and so many ways. I finally released it now the tracker is accessible from both the development and the production system, which means for the first time while I'm testing, we can post new test"
+[mic] "I have spent the last 12 days upgrading this app and so many ways. I finally released it now the tracker is accessible from both the development and the production system, which means for the first time while I'm testing, we can post new test."
+[mic] "I have spent the last 12 days upgrading this app and so many ways. I finally released it now the tracker is accessible from both the development and the production system, which means for the first time while I'm testing, we can post new tests"
+[mic] "I have spent the last 12 days upgrading this app and so many ways. I finally released it now the tracker is accessible from both the development and the production system, which means for the first time while I'm testing, we can post new tests."
+[key] " "
+[key] " "
+[mic] "I have spent the last 12 days upgrading this app and so many ways. I finally released it now the tracker is accessible from both the development and the production system, which means for the first time while I'm testing, we can post new tests the"
+[mic] "I have spent the last 12 days upgrading this app and so many ways. I finally released it now the tracker is accessible from both the development and the production system, which means for the first time while I'm testing, we can post new tests the problem"
+[mic] "I have spent the last 12 days upgrading this app and so many ways. I finally released it now the tracker is accessible from both the development and the production system, which means for the first time while I'm testing, we can post new tests the problem now"
+[mic] "I have spent the last 12 days upgrading this app and so many ways. I finally released it now the tracker is accessible from both the development and the production system, which means for the first time while I'm testing, we can post new tests the problem now."
+[pause]
+[fix] "I have spent the last 12 days upgrading this app and so many ways. I finally released it now the tracker is accessible from both the development and the production system, which means for the first time while I'm testing, we can post new tests the problem now." -> "I've spent the last 12 days upgrading this app in so many ways. I finally released it. Now the tracker is accessible from both the development and the production system, which means for the first time while I'm testing, we can post new tests to the problem now."
+[cur] 244
+[cur] 245
+[key] "."
+[cur] 246
+[key] " "
+[cur] 264
+[cur] 263
+[del] 1
+[cur] 262
+[del] 1
+[cur] 263
+[key] " "
+[mic] "Is"
+[mic] "Is that"
+[mic] "Is that the"
+[mic] "Is that the track"
+[mic] "Is that the tracker"
+[mic] "Is that the tracker has"
+[mic] "Is that the tracker has way"
+[mic] "Is that the tracker has way too"
+[mic] "Is that the tracker has way too many"
+[mic] "Is that the tracker has way too many things"
+[mic] "Is that the tracker has way too many things on"
+[mic] "Is that the tracker has way too many things on it"
+[cur] 313
+[key] " "
+[del] 1
+[key] "."
+[cur] 314
+[key] " "
+[pause]
+[fix] "the problem now is that the tracker has way too many things on it.   " -> "The problem now is that the tracker has way too many things"
+[mic] "It"
+[mic] "It was"
+[mic] "It was recommend"
+[mic] "It was recommended"
+[mic] "It was recommended before"
+[mic] "It was recommended before that"
+[mic] "It was recommended before that I"
+[pause]
+[context] "I have spent the last 12 days upgrading this app and so many. ways I finally released. it now the tracker is accessible from both the development and the production, system which means for the first time while I'm, testing we can post new tests.  the problem now is that the tracker has way too many things on it. "
+[fix] "It was recommended before that I" -> NONE
+[mic] "It was recommended before that I do"
+[mic] "It was recommended before that I do a"
+[mic] "It was recommended before that I do a tri"
+[mic] "It was recommended before that I do a triage"
+[cur] 359
+[key] " "
+[pause]
+[fix] "It was recommended before that I do a triage   " -> NONE
+[mic] "And"
+[mic] "And I"
+[mic] "And I added"
+[mic] "And I added the"
+[mic] "And I added the tree"
+[mic] "And I added the triage"
+[mic] "And I added the triage check"
+[mic] "And I added the triage checks"
+[mic] "And I added the triage checks to"
+[mic] "And I added the triage checks to make"
+[mic] "And I added the triage checks to make that"
+[mic] "And I added the triage checks to make that easier"
+[cur] 409
+[key] " "
+[del] 1
+[key] "."
+[cur] 410
+[key] " "
+[mic] "But"
+[mic] "But I"
+[mic] "But I still"
+[mic] "But I still don"
+[mic] "But I still don't"
+[mic] "But I still don't feel"
+[mic] "But I still don't feel like"
+[mic] "But I still don't feel like doing"
+[mic] "But I still don't feel like doing it"
+[cur] 447
+[key] " "
+[del] 1
+[key] "."
+[cur] 448
+[key] " "
+[pause]
+[fix] "But I still don't feel like doing it.   " -> NONE
+[cur] 388
+[cur] 387
+[del] 1
+[cur] 388
+[key] "m"
+[cur] 389
+[key] "a"
+[cur] 390
+[key] "r"
+[cur] 391
+[key] "k"
+[cur] 392
+[key] "s"
+[cur] 393
+[key] " "
+[cur] 395
+[key] "an"
+[cur] 398
+[key] "d e"
+[cur] 401
+[key] "ven"
+[cur] 404
+[key] " in"
+[cur] 415
+[key] "tegrated it"
+[cur] 425
+[key] " into this"
+[cur] 429
+[key] " app"
+[cur] 393
+[cur] 429
+[cur] 402
+[cur] 403
+[key] "f"
+[cur] 404
+[key] "u"
+[cur] 405
+[key] "l"
+[cur] 406
+[key] "l"
+[cur] 407
+[key] "y"
+[cur] 408
+[key] " "
+[cur] 455
+[cur] 419
+[cur] 496
+[cur] 495
+[cur] 496
+[key] " "
+[cur] 498
+[key] "Wha"
+[cur] 500
+[key] "t"
+[cur] 502
+[key] " should I do"
+[cur] 513
+[key] "?"
+[cur] 496
+[del] 17
+[cur] 498
+[key] "What should I do?"
+[mic] off
+[expect] "I have spent the last 12 days upgrading this app and so many. ways I finally released. it now the tracker is accessible from both the development and the production, system which means for the first time while I'm, testing we can post new tests.  the problem now is that the tracker has way too many things on it. It was recommended before that I do a triage and I added the triage checkmarks and even fully integrated it into this app to make that easier. But I still don't feel like doing it.  What should I do?  "
+[send] "I have spent the last 12 days upgrading this app and so many. ways I finally released. it now the tracker is accessible from both the development and the production, system which means for the first time while I'm, testing we can post new tests.  the problem now is that the tracker has way too many things on it. It was recommended before that I do a triage and I added the triage checkmarks and even fully integrated it into this app to make that easier. But I still don't feel like doing it.  What should I do?"
+
+Test 2026-06-06.16-50-20:
+[key] "It"
+[key] "’s a"
+[key] " clever"
+[key] " idea"
+[key] " to"
+[key] " wait"
+[key] " 40"
+[del] 1
+[key] "8"
+[key] " hours"
+[key] " and"
+[key] " then"
+[key] " do"
+[key] " a 70"
+[del] 1
+[key] "2"
+[key] " hour"
+[key] " scan"
+[cur] 0
+[cur] 62
+[key] " "
+[del] 1
+[key] "."
+[key] " "
+[key] "Tha"
+[key] "t"
+[key] "’ll keep"
+[key] " the"
+[key] " list."
+[key] " short"
+[cur] 92
+[key] " That’ll keep the list short."
+[cur] 119
+[del] 1
+[cur] 120
+[cur] 119
+[del] 1
+[key] "!"
+[expect] "It’s a clever idea to wait 48 hours and then do a 72 hour scan. That’ll keep the list short That’ll keep the list short!"
+[send] "It’s a clever idea to wait 48 hours and then do a 72 hour scan. That’ll keep the list short That’ll keep the list short!"
+

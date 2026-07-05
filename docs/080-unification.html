@@ -3,165 +3,112 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Many Become One · Untitled</title>
+<title>10.11 The Many Become One · SeedPods</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;600&family=DM+Mono:wght@300;400&display=swap">
 <link rel="icon" href="logo.svg">
-<link rel="preload" href="nav.html" as="fetch" crossorigin>
 <link rel="stylesheet" href="site.css">
 <script src="pods.js"></script>
 <script src="nav.js"></script>
-<script>
-/* Live reload: subscribe to this project's build stream and hard-reload
-   when a build touches THIS page (or a shared asset) — so a user merely
-   *viewing* a shared project sees another user's edit without manually
-   refreshing. An unrelated page's change only advances the baseline; it
-   does not reload. A full rebuild, or a build missed while suspended /
-   back-forward-cached (reconnect snapshot), reloads unconditionally
-   since we can't safely diff it. EventSource auto-reconnects and the
-   server re-sends the current generation on every (re)connect. */
-(function(){
-  if(window.__gossLive)return;window.__gossLive=1;
-  var base=null,es=null;
-  var SHARED={"site.css":1,"nav.html":1,"nav.js":1,"pods.js":1,
-              "search-index.json":1,"logo.svg":1};
-  function myPage(){
-    var p;try{p=decodeURIComponent(location.pathname);}catch(_){p=location.pathname;}
-    var i=p.indexOf("/site/");
-    var rest=i>=0?p.slice(i+6):p.replace(/^\/+/,"");
-    if(rest===""||rest.charAt(rest.length-1)==="/")rest+="index.html";
-    return rest;
-  }
-  function relevant(list){
-    if(!list||!list.length)return false;
-    var me=myPage();
-    for(var k=0;k<list.length;k++){
-      if(list[k]===me||SHARED[list[k]])return true;
-    }
-    return false;
-  }
-  function handle(ev){
-    var d;try{d=JSON.parse(ev.data);}catch(_){return;}
-    var g=d.gen;if(typeof g!=="number")return;
-    if(base===null){base=g;return;}
-    if(g===base)return;
-    if(d.full===true){location.reload();return;}
-    if(Object.prototype.toString.call(d.changed)==="[object Array]"){
-      if(relevant(d.changed))location.reload();else base=g;
-      return;
-    }
-    location.reload(); /* snapshot after a missed build */
-  }
-  function open(){
-    if(es&&es.readyState!==2)return;
-    try{es=new EventSource("/site/__live");}catch(_){return;}
-    es.onmessage=handle;
-  }
-  open();
-  window.addEventListener("pageshow",function(e){if(e.persisted)open();});
-  document.addEventListener("visibilitychange",function(){
-    if(document.visibilityState==="visible")open();
-  });
-})();
-</script>
+<script src="live.js"></script>
 </head>
 <body>
-<div id="nav-mount" style="min-height:3rem"></div>
+<nav class="site-nav" data-pod-filename="080-unification"><span class="nav-title">SeedPods</span><div class="nav-right"><a class="nav-home" href="toc.html" aria-label="Contents" title="Contents"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></a><button type="button" class="nav-search-btn" onclick="seedNavOpenSearch()" aria-label="Search" title="Search"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></button><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true" title="Previous"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true" title="Next"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></span></div></nav>
 <div class="wrap">
-  <div class="subject-header fade cat-colored cat-consciousness"><h1>The Many Become One</h1><div class="subject-nav-row" data-pod-filename="080-unification"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Subject 80</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
-  <section id="_prolog" class="subject-section subject-prolog"><div class="prose"><p>Whitehead placed it at the very foundation of his metaphysics: “The many become one and are increased by one.” <a class="bib-ref" id="ref-080-unification-1" href="bibliography.html#ref-080-unification-1">[whitehead-1]</a>
+  <div class="subject-header fade cat-colored" style="--cat-bg:#ADF5A6"><h1>10.11 The Many Become One</h1></div>
+  <section id="_prolog" class="subject-section subject-prolog"><div class="prose"><p data-src-file="subjects/080-unification.md" data-src-l0="10" data-src-l1="12">Whitehead placed it at the very foundation of his metaphysics: “The many become one and are increased by one.” <a class="bib-ref" id="ref-080-unification-1" href="bibliography.html#ref-080-unification-1">[whitehead-1]</a>
 Every actual occasion prehends, grasps, feels, prior occasions and synthesizes them into a new unity.
 He called this the <em><a class="gloss-ref nav-push" id="term-080-unification-1" href="glossary.html#category-of-the-ultimate">Category of the Ultimate</a></em>, the rhythm of the universe itself.</p>
-<figure class="directive-image directive-image--left"><img src="images/080-unification.jpg" alt=""><figcaption>Mercury pours and merges <cite>boundaries dissolve</cite></figcaption></figure>
-<p>But Whitehead was describing, not explaining.
+<figure id="image-080-unification-1" class="directive-image directive-image--left"><img src="images/080-unification-l.jpg" alt=""><figcaption>Mercury pours and merges <cite>boundaries dissolve</cite></figcaption></figure>
+<p data-src-file="subjects/080-unification.md" data-src-l0="16" data-src-l1="18">But Whitehead was describing, not explaining.
 He told us <em>that</em> the many become one.
 He did not tell us <em>how</em>.</p>
-<p>The <em><a class="gloss-ref nav-push" id="term-080-unification-2" href="glossary.html#combination-problem">combination problem</a></em> is supposed to be the fatal objection to panpsychism, and it may be.
+<p data-src-file="subjects/080-unification.md" data-src-l0="20" data-src-l1="25">The <em><a class="gloss-ref nav-push" id="term-080-unification-2" href="glossary.html#combination-problem">combination problem</a></em> is supposed to be the fatal objection to panpsychism, and it may be.
 William James stated it in 1890 <a class="bib-ref" id="ref-080-unification-2" href="bibliography.html#ref-080-unification-2">[james-1]</a>: if you have twelve separate feelings, you don’t automatically get a thirteenth feeling that is their combination.
 Each feeling is its own thing.
 Adding them together gives you twelve feelings, not one.
 A century and a half later, Philip Goff <a class="bib-ref" id="ref-080-unification-3" href="bibliography.html#ref-080-unification-3">[goff-1]</a>, the most prominent contemporary panpsychist, agrees it remains the hardest open question.
 Nobody has solved it.</p>
-<p>The problem cuts deep.
+<p data-src-file="subjects/080-unification.md" data-src-l0="27" data-src-l1="32">The problem cuts deep.
 If experience goes all the way down, if even an electron has some flicker of interiority, how do billions of flickers become the single unified experience you’re having right now?
 It’s not enough to say they’re in the same skull, or the same nervous system, or the same electromagnetic field.
 A pile of sand is in the same bucket, and it is not one experience.
 What makes the difference?
 What is it about certain physical configurations that turns a collection into a unity?</p>
-<p>Whitehead’s <em><a class="gloss-ref nav-push" id="term-080-unification-3" href="glossary.html#prehension">prehension</a></em> says each new occasion <em>grasps</em> the old ones.
+<p data-src-file="subjects/080-unification.md" data-src-l0="34" data-src-l1="37">Whitehead’s <em><a class="gloss-ref nav-push" id="term-080-unification-3" href="glossary.html#prehension">prehension</a></em> says each new occasion <em>grasps</em> the old ones.
 Tononi’s Integrated Information Theory <a class="bib-ref" id="ref-080-unification-4" href="bibliography.html#ref-080-unification-4">[tononi-1]</a> says consciousness corresponds to <em><a class="gloss-ref nav-push" id="term-080-unification-4" href="glossary.html#integrated-information-φ">integrated information</a></em>, a system is conscious to the degree its parts are informationally bound in a way that can’t be decomposed, measured as Φ (phi).
 Both are pointing at the same intuition: that unification is an active process, not a passive sum.
 But neither explains what the process <em>is</em> at the physical level.</p>
-<p>The question may, however, be pointing in the wrong direction.</p>
-<h1>The physical image</h1>
-<p>Watch two drops of mercury approach each other on a surface.
+<p data-src-file="subjects/080-unification.md" data-src-l0="39" data-src-l1="39">The question may, however, be pointing in the wrong direction.</p>
+<h1 data-src-file="subjects/080-unification.md" data-src-l0="41" data-src-l1="41">The physical image</h1>
+<p data-src-file="subjects/080-unification.md" data-src-l0="43" data-src-l1="48">Watch two drops of mercury approach each other on a surface.
 There is a moment of contact, and then the boundary dissolves.
 One drop.
 The electrons that were confined to each drop are now in a shared quantum state, not two populations coexisting, but a single system.
 The surface tension that held them apart was real, and so was the force that overcame it.
 This is what unification looks like in matter: not assembly from below, but the dissolution of a boundary.</p>
-<p>Water does it.
+<p data-src-file="subjects/080-unification.md" data-src-l0="50" data-src-l1="53">Water does it.
 Cells do it when they fuse.
 Companies do it.
 The pattern recurs wherever two bounded systems come close enough for the boundary to give way.</p>
-<h1>The reversal</h1>
-<p>Bernardo Kastrup <a class="bib-ref" id="ref-080-unification-5" href="bibliography.html#ref-080-unification-5">[kastrup-1]</a>, arguing from analytic idealism, proposes that the combination problem is backwards.
+<h1 data-src-file="subjects/080-unification.md" data-src-l0="55" data-src-l1="55">The reversal</h1>
+<p data-src-file="subjects/080-unification.md" data-src-l0="57" data-src-l1="60">Bernardo Kastrup <a class="bib-ref" id="ref-080-unification-5" href="bibliography.html#ref-080-unification-5">[kastrup-1]</a>, arguing from analytic idealism, proposes that the combination problem is backwards.
 The default state of consciousness is not separation but unity, one field, undifferentiated.
 The hard problem isn’t how separate experiences combine; it’s how one experience <em>dissociates</em> into apparently separate subjects.
 Just as dissociative identity disorder produces distinct alters from a single psyche, the universe may produce distinct minds from a single experiential field.</p>
-<p>This reversal has a longer lineage than Kastrup.
+<p data-src-file="subjects/080-unification.md" data-src-l0="62" data-src-l1="66">This reversal has a longer lineage than Kastrup.
 Henri Bergson argued in 1896 <a class="bib-ref" id="ref-080-unification-6" href="bibliography.html#ref-080-unification-6">[bergson-1]</a> that the brain is not a generator of consciousness but a <em><em><a class="gloss-ref nav-push" id="term-080-unification-5" href="glossary.html#reducing-valve">reducing valve</a></em></em>, it selects from a much larger field of awareness only what is useful for survival.
 William James arrived at a similar position in his Gifford Lectures <a class="bib-ref" id="ref-080-unification-7" href="bibliography.html#ref-080-unification-7">[james-2]</a>.
 And Aldous Huxley <a class="bib-ref" id="ref-080-unification-8" href="bibliography.html#ref-080-unification-8">[huxley-1]</a>, writing after his mescaline experience in <em>The Doors of Perception</em>, made the idea vivid: the drug weakens the valve, and more of reality floods in.
 The title comes from Blake, “If the doors of perception were cleansed every thing would appear to man as it is, Infinite.”</p>
-<p>If the brain is a filter rather than a generator, then consciousness without a brain isn’t <em>less</em>, it’s less <em>structured</em>.
+<p data-src-file="subjects/080-unification.md" data-src-l0="68" data-src-l1="72">If the brain is a filter rather than a generator, then consciousness without a brain isn’t <em>less</em>, it’s less <em>structured</em>.
 A cell doesn’t have dimmer experience; it lacks the apparatus to construct the darkness, to create figure against ground.
 It may be in the wash.
 Which points to a related mystery, what is it like to be a cell?
 — that this pod names but does not attempt to resolve.</p>
-<h1>The sun and the stars</h1>
-<p>Think of a bright day.
+<h1 data-src-file="subjects/080-unification.md" data-src-l0="74" data-src-l1="74">The sun and the stars</h1>
+<p data-src-file="subjects/080-unification.md" data-src-l0="76" data-src-l1="80">Think of a bright day.
 The stars haven’t gone anywhere, the sun’s light, scattered through the atmosphere, creates a blue wash that overwhelms them.
 Your unified conscious experience may work the same way.
 It is not built from component experiences the way a wall is built from bricks.
 It is the dominant signal, the sun, that renders the others invisible.</p>
-<p>This is not assembly.
+<p data-src-file="subjects/080-unification.md" data-src-l0="82" data-src-l1="83">This is not assembly.
 It is dominance.</p>
-<p>And the reducing valve theory tells you what the dominance is <em>for</em>: survival.
+<p data-src-file="subjects/080-unification.md" data-src-l0="85" data-src-l1="87">And the reducing valve theory tells you what the dominance is <em>for</em>: survival.
 The brain selects, emphasizes boundaries, constructs the figure-ground distinction that lets you act.
 The undifferentiated wash is real, but it’s not useful for dodging predators.</p>
-<h1>The leaks</h1>
-<p>If unified consciousness is dominance rather than assembly, we should expect leaks, moments when the other signals show through.
+<h1 data-src-file="subjects/080-unification.md" data-src-l0="89" data-src-l1="89">The leaks</h1>
+<p data-src-file="subjects/080-unification.md" data-src-l0="91" data-src-l1="92">If unified consciousness is dominance rather than assembly, we should expect leaks, moments when the other signals show through.
 And we find them everywhere.</p>
-<p>Split-brain patients, whose corpus callosum has been severed, exhibit two apparently independent consciousnesses in one skull <a class="bib-ref" id="ref-080-unification-9" href="bibliography.html#ref-080-unification-9">[sperry-1]</a>.
+<p data-src-file="subjects/080-unification.md" data-src-l0="94" data-src-l1="95">Split-brain patients, whose corpus callosum has been severed, exhibit two apparently independent consciousnesses in one skull <a class="bib-ref" id="ref-080-unification-9" href="bibliography.html#ref-080-unification-9">[sperry-1]</a>.
 The unity we normally take for granted depends on a specific physical connection, and when it is cut, two suns shine.</p>
-<p>Dreams loosen the filter.
+<p data-src-file="subjects/080-unification.md" data-src-l0="97" data-src-l1="101">Dreams loosen the filter.
 Freudian slips let a suppressed intention surface through the cracks.
 Drawing after a deep experience, rather than talking about it, can produce information that the verbal, dominant consciousness wouldn’t have selected.
 The material that emerges isn’t noise.
 It is signal from a consciousness that is normally outshone.</p>
-<p>The standard framing calls these phenomena “unconscious.”
+<p data-src-file="subjects/080-unification.md" data-src-l0="103" data-src-l1="107">The standard framing calls these phenomena “unconscious.”
 But that word may be doing the same work as “just”, quietly claiming that what is hidden from the dominant process is not there at all.
 The leaks suggest otherwise.
 The stars are still burning.
 The sun is just very bright.</p>
-<h1>The integrator, not the source</h1>
-<p>When two mercury drops merge, Tononi’s Φ increases, the information integration of the system goes up.
+<h1 data-src-file="subjects/080-unification.md" data-src-l0="109" data-src-l1="109">The integrator, not the source</h1>
+<p data-src-file="subjects/080-unification.md" data-src-l0="111" data-src-l1="113">When two mercury drops merge, Tononi’s Φ increases, the information integration of the system goes up.
 The brain achieves a spectacularly high Φ, not by generating experience from nothing, but by integrating what was already there into a structure so tightly bound that it dominates everything else.
 The brain is an integrator, not a source.</p>
-<p>The mercury drops may be closer to an explanation than the philosophy has managed.
+<p data-src-file="subjects/080-unification.md" data-src-l0="115" data-src-l1="119">The mercury drops may be closer to an explanation than the philosophy has managed.
 The boundary dissolves when the force drawing the drops together exceeds the surface tension holding them apart.
 The electrons enter a shared state.
 The many literally become one.
 Whatever interiority each drop had is now a single interiority, not because the experiences were added, but because the wall between them ceased to exist.</p>
 </div></section>
-<section id="provenance" class="subject-section"><div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="003-inside.html" class="related-card cat-colored cat-consciousness nav-push"><div class="related-title">3. Everything Has an Inside</div></a>
-<a href="078-boundarystack.html" class="related-card related-card-prelim cat-colored cat-consciousness nav-push"><div class="related-title">78. The Boundary Is a Stack</div></a>
-<a href="046-thinkfast.html" class="related-card related-card-prelim cat-colored cat-ai-minds nav-push"><div class="related-title">46. Thought as Evolution in Milliseconds</div></a>
-<a href="069-love.html" class="related-card cat-colored cat-feeling nav-push"><div class="related-title">69. Love</div></a>
-<a href="029-lighttime.html" class="related-card related-card-prelim cat-colored cat-physics nav-push"><div class="related-title">29. From Light's Point of View, There Is No Journey</div></a></div>
-<div class="inbound-refs"><span class="inbound-label">0 inbound references</span><span class="inbound-links"></span></div></div></section>
+<div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="003-inside.html" class="related-card cat-colored nav-push" style="--cat-bg:#F5A6DF"><div class="related-title">2.4. Everything Has an Inside</div></a>
+<a href="078-boundarystack.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#E6A6F5"><div class="related-title">8.6. The Boundary Is a Stack</div></a>
+<a href="046-thinkfast.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#C4F5A6"><div class="related-title">10.2. Thought as Evolution in Milliseconds</div></a>
+<a href="069-love.html" class="related-card cat-colored nav-push" style="--cat-bg:#F5F0A6"><div class="related-title">3.8. Love</div></a>
+<a href="029-lighttime.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#F5A6BA"><div class="related-title">4.3. From Light's Point of View, There Is No Journey</div></a></div>
+<div class="inbound-refs"><span class="inbound-label">0 inbound references</span><span class="inbound-links"></span></div></div>
 </div>
 <div class="page-end" id="page-end-version">
   <button class="page-end-logo" aria-label="Show page info"
@@ -170,6 +117,6 @@ Whatever interiority each drop had is now a single interiority, not because the 
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">consciousness · proto · Edited 2026-04-27 01:09</span>
+  <span class="page-end-version" aria-hidden="true">proto · Edited 2026-06-19 14:46</span>
 </div>
 </body></html>

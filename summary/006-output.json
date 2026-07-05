@@ -1,0 +1,33 @@
+{
+  "narrative" : "This chapter argues that a process cannot be understood by examining its outputs alone, using the shared word 'predicts' to span thermostats and Mozart as its central demonstration. Drawing on Whitehead's act-versus-expression distinction, Turing's reframing of machine thought, and evidence from locked-in syndrome and non-speaking autism, it shows that 'just predicting the next word' describes an output interface rather than a process, and that the word 'just' is almost always a signal that someone has mistaken a description of output for an explanation.",
+  "schema" : 1,
+  "subject" : "006-output.md",
+  "subject-sha" : "sha256:ab5d7112ead37112da33457a643a7aa95e56a6a0c724b3ed680e343c93f57dc8",
+  "terms" : [
+    {
+      "canonical" : "Tito Mukhopadhyay",
+      "weight" : 0.4
+    },
+    {
+      "canonical" : "Anne Donnellan",
+      "weight" : 0.4
+    },
+    {
+      "canonical" : "Gödel, Escher, Bach",
+      "weight" : 0.4
+    },
+    {
+      "canonical" : "locked-in syndrome",
+      "weight" : 0.4
+    }
+  ],
+  "themes" : [
+    "process vs output",
+    "prediction",
+    "dismissal",
+    "expression",
+    "consciousness",
+    "philosophy of mind"
+  ],
+  "updated-at" : "2026-06-25T10:36:00Z"
+}

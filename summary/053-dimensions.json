@@ -1,0 +1,31 @@
+{
+  "narrative" : "Proposes a publishable conjecture that replaces the arbitrary tolerance in high-dimensional near-orthogonality with a principled one derived from the Farey sequence, yielding the formula V(d,n) ~ (n²\/π²)^d. The chapter argues this expression unifies musical consonance, neural network superposition capacity, and Many Worlds branch distinguishability under a single geometric framework, a connection not previously made explicit in the literature.",
+  "schema" : 1,
+  "subject" : "053-dimensions.md",
+  "subject-sha" : "sha256:95f47d623230b9e15dfee1eb327d3a7b4d9cee2d9b8e326e0b34c130f2bef3a3",
+  "terms" : [
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "Johnson-Lindenstrauss",
+      "weight" : 0.5
+    },
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "V(d,n)",
+      "weight" : 0.7
+    }
+  ],
+  "themes" : [
+    "conjecture",
+    "high-dimensional geometry",
+    "consonance",
+    "superposition",
+    "quantum branching",
+    "information capacity"
+  ],
+  "updated-at" : "2026-06-20T21:05:21Z"
+}

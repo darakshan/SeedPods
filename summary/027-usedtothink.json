@@ -1,0 +1,52 @@
+{
+  "narrative" : "An examination of the rhetorical move 'we used to think X, now we know Y' — how it marks genuine scientific progress while simultaneously caricaturing the past and, most critically, discarding the phenomenon alongside the discredited mechanism. The chapter traces this pattern through caloric theory, animism, and vitalism to argue that confident present-tense knowledge claims are structurally blind to their own framework, and that what gets erased in a paradigm shift sometimes deserves a better name rather than oblivion.",
+  "schema" : 1,
+  "subject" : "027-usedtothink.md",
+  "subject-sha" : "sha256:d54e703aa914e9d602984c7cc2556d3b81e0d76e6a6b4173e9b8e670ce3dad4c",
+  "terms" : [
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "caloric",
+      "weight" : 0.9
+    },
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "animism",
+      "weight" : 0.8
+    },
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "vitalism",
+      "weight" : 0.8
+    },
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "autopoiesis",
+      "weight" : 0.5
+    },
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "panpsychism",
+      "weight" : 0.5
+    }
+  ],
+  "themes" : [
+    "epistemology",
+    "paradigm shifts",
+    "whig history",
+    "philosophy of science",
+    "loss of knowledge",
+    "progress"
+  ],
+  "updated-at" : "2026-06-20T20:59:47Z"
+}

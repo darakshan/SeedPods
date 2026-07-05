@@ -3,106 +3,53 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ghost in the Machine · Untitled</title>
+<title>8.8 Ghost in the Machine · SeedPods</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;600&family=DM+Mono:wght@300;400&display=swap">
 <link rel="icon" href="logo.svg">
-<link rel="preload" href="nav.html" as="fetch" crossorigin>
 <link rel="stylesheet" href="site.css">
 <script src="pods.js"></script>
 <script src="nav.js"></script>
-<script>
-/* Live reload: subscribe to this project's build stream and hard-reload
-   when a build touches THIS page (or a shared asset) — so a user merely
-   *viewing* a shared project sees another user's edit without manually
-   refreshing. An unrelated page's change only advances the baseline; it
-   does not reload. A full rebuild, or a build missed while suspended /
-   back-forward-cached (reconnect snapshot), reloads unconditionally
-   since we can't safely diff it. EventSource auto-reconnects and the
-   server re-sends the current generation on every (re)connect. */
-(function(){
-  if(window.__gossLive)return;window.__gossLive=1;
-  var base=null,es=null;
-  var SHARED={"site.css":1,"nav.html":1,"nav.js":1,"pods.js":1,
-              "search-index.json":1,"logo.svg":1};
-  function myPage(){
-    var p;try{p=decodeURIComponent(location.pathname);}catch(_){p=location.pathname;}
-    var i=p.indexOf("/site/");
-    var rest=i>=0?p.slice(i+6):p.replace(/^\/+/,"");
-    if(rest===""||rest.charAt(rest.length-1)==="/")rest+="index.html";
-    return rest;
-  }
-  function relevant(list){
-    if(!list||!list.length)return false;
-    var me=myPage();
-    for(var k=0;k<list.length;k++){
-      if(list[k]===me||SHARED[list[k]])return true;
-    }
-    return false;
-  }
-  function handle(ev){
-    var d;try{d=JSON.parse(ev.data);}catch(_){return;}
-    var g=d.gen;if(typeof g!=="number")return;
-    if(base===null){base=g;return;}
-    if(g===base)return;
-    if(d.full===true){location.reload();return;}
-    if(Object.prototype.toString.call(d.changed)==="[object Array]"){
-      if(relevant(d.changed))location.reload();else base=g;
-      return;
-    }
-    location.reload(); /* snapshot after a missed build */
-  }
-  function open(){
-    if(es&&es.readyState!==2)return;
-    try{es=new EventSource("/site/__live");}catch(_){return;}
-    es.onmessage=handle;
-  }
-  open();
-  window.addEventListener("pageshow",function(e){if(e.persisted)open();});
-  document.addEventListener("visibilitychange",function(){
-    if(document.visibilityState==="visible")open();
-  });
-})();
-</script>
+<script src="live.js"></script>
 </head>
 <body>
-<div id="nav-mount" style="min-height:3rem"></div>
+<nav class="site-nav" data-pod-filename="024-ghostmachine"><span class="nav-title">SeedPods</span><div class="nav-right"><a class="nav-home" href="toc.html" aria-label="Contents" title="Contents"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></a><button type="button" class="nav-search-btn" onclick="seedNavOpenSearch()" aria-label="Search" title="Search"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></button><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true" title="Previous"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true" title="Next"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></span></div></nav>
 <div class="wrap">
-  <div class="subject-header fade cat-colored cat-consciousness"><h1>Ghost in the Machine</h1><p class="premise">One philosopher diagnosed the ghost as a category mistake, another named what was lost when materialism expelled it, and process philosophy dissolved the problem entirely, the ghost was never separate from the machine because the machine, all the way down, has an inside.</p><div class="subject-nav-row" data-pod-filename="024-ghostmachine"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Subject 24</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
-  <section id="_prolog" class="subject-section subject-prolog"><div class="prose"><p>The ghost was real.
+  <div class="subject-header fade cat-colored" style="--cat-bg:#EDA6F5"><h1>8.8 Ghost in the Machine</h1><p class="premise">One philosopher diagnosed the ghost as a category mistake, another named what was lost when materialism expelled it, and process philosophy dissolved the problem entirely, the ghost was never separate from the machine because the machine, all the way down, has an inside.</p></div>
+  <section id="_prolog" class="subject-section subject-prolog"><div class="prose"><p data-src-file="subjects/024-ghostmachine.md" data-src-l0="3" data-src-l1="4">The ghost was real.
 It just wasn’t anywhere.</p>
 </div></section>
-<section id="proto" class="subject-section"><h2 class="section-heading">Proto</h2><div class="prose"><p>NOTE: This depth sketch was developed in session 2026-03-14.
+<section id="proto" class="subject-section"><h2 class="section-heading">Proto</h2><div class="prose"><p data-src-file="subjects/024-ghostmachine.md" data-src-l0="13" data-src-l1="14">NOTE: This depth sketch was developed in session 2026-03-14.
 The seedpod needs a full Surface, Script, and Images before it can advance beyond prelim.</p>
-<figure class="directive-image directive-image--left"><img src="images/024-ghostmachine.jpg" alt=""><figcaption>The ghost in the machine: clockwork mechanism <cite>Wikimedia Commons</cite></figcaption></figure>
-<p>Three thinkers triangulate the same territory from different directions:</p>
-<p>Gilbert Ryle<a class="bib-ref" id="ref-024-ghostmachine-1" href="bibliography.html#ref-024-ghostmachine-1">[ryle]</a>
+<figure id="image-024-ghostmachine-1" class="directive-image directive-image--left"><img src="images/024-ghostmachine-l.jpg" alt=""><figcaption>The ghost in the machine: clockwork mechanism <cite>Wikimedia Commons</cite></figcaption></figure>
+<p data-src-file="subjects/024-ghostmachine.md" data-src-l0="19" data-src-l1="19">Three thinkers triangulate the same territory from different directions:</p>
+<p data-src-file="subjects/024-ghostmachine.md" data-src-l0="21" data-src-l1="25">Gilbert Ryle<a class="bib-ref" id="ref-024-ghostmachine-1" href="bibliography.html#ref-024-ghostmachine-1">[ryle]</a>
 (The Concept of Mind, 1949) diagnosed the error: there is no ghost.
 The “mind” as a separate substance haunting the body is a <em><a class="gloss-ref nav-push" id="term-024-ghostmachine-1" href="glossary.html#category-mistake">category mistake</a></em>, the confusion of a process with a thing.
 Ryle called it the ghost in the machine.
 He was right that the ghost, as traditionally conceived, doesn’t exist.</p>
-<p>Arthur Koestler<a class="bib-ref" id="ref-024-ghostmachine-2" href="bibliography.html#ref-024-ghostmachine-2">[koestler]</a>
+<p data-src-file="subjects/024-ghostmachine.md" data-src-l0="27" data-src-l1="31">Arthur Koestler<a class="bib-ref" id="ref-024-ghostmachine-2" href="bibliography.html#ref-024-ghostmachine-2">[koestler]</a>
 (The Ghost in the Machine, 1967) named what was lost in correcting Ryle’s error: by expelling the ghost, materialist reductionism threw out something real.
 There is something it is like to be a living organized system, not a supernatural substance, but genuine interiority at each level of the <em><a class="gloss-ref nav-push" id="term-024-ghostmachine-2" href="glossary.html#holon">holon</a></em> hierarchy.
 The ghost was real.
 It was just mislocated.</p>
-<p>Alfred North Whitehead<a class="bib-ref" id="ref-024-ghostmachine-3" href="bibliography.html#ref-024-ghostmachine-3">[whitehead]</a> dissolved the problem entirely: the ghost was never separate from the machine in the first place.
+<p data-src-file="subjects/024-ghostmachine.md" data-src-l0="33" data-src-l1="37">Alfred North Whitehead<a class="bib-ref" id="ref-024-ghostmachine-3" href="bibliography.html#ref-024-ghostmachine-3">[whitehead]</a> dissolved the problem entirely: the ghost was never separate from the machine in the first place.
 The machine, all the way down, has an inside.
 Experience is not a product that complex biology generates, it is the interior dimension of events that complex biology expresses at its highest pitch.
 The hard problem of consciousness doesn’t get solved by this picture.
 It gets dissolved.</p>
-<p>Ryle diagnoses the error.
+<p data-src-file="subjects/024-ghostmachine.md" data-src-l0="39" data-src-l1="41">Ryle diagnoses the error.
 Koestler names what was lost.
 Whitehead removes the assumption that created the problem.</p>
-<p>See also <a href="003-inside.html">Everything Has an Inside</a> for the inside going all the way down, and <a href="011-moreisdifferent.html">More Is Different</a> for Koestler’s holon concept developed more fully.</p>
+<p data-src-file="subjects/024-ghostmachine.md" data-src-l0="43" data-src-l1="43">See also <a href="003-inside.html">Everything Has an Inside</a> for the inside going all the way down, and <a href="011-moreisdifferent.html">More Is Different</a> for Koestler’s holon concept developed more fully.</p>
 </div></section>
-<section id="provenance" class="subject-section"><div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="002-events.html" class="related-card cat-colored cat-physics nav-push"><div class="related-title">2. Reality Is Events, Not Things</div></a>
-<a href="012-autopoiesis.html" class="related-card cat-colored cat-biology nav-push"><div class="related-title">12. The Cell That Makes Itself</div></a>
-<a href="021-just.html" class="related-card cat-colored cat-knowledge nav-push"><div class="related-title">21. The Word &quot;Just&quot; Is a Confession</div></a>
-<a href="037-assembly.html" class="related-card related-card-prelim cat-colored cat-mathematics nav-push"><div class="related-title">37. The Architecture of Levels</div></a>
-<a href="067-monads-holons.html" class="related-card related-card-prelim cat-colored cat-physics nav-push"><div class="related-title">67. Leibniz as the Unlikely Ancestor of the Holographic Principle</div></a></div>
-<div class="inbound-refs"><span class="inbound-label">1 inbound reference</span><span class="inbound-links"><a href="027-usedtothink.html" class="inbound-link nav-push cat-colored cat-knowledge" title="We Used to Think. Now We Know.">27</a></span></div></div></section>
+<div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="002-events.html" class="related-card cat-colored nav-push" style="--cat-bg:#F5A6C2"><div class="related-title">4.1. Reality Is Events, Not Things</div></a>
+<a href="012-autopoiesis.html" class="related-card cat-colored nav-push" style="--cat-bg:#F5A6D3"><div class="related-title">2.7. The Cell That Makes Itself</div></a>
+<a href="021-just.html" class="related-card cat-colored nav-push" style="--cat-bg:#F5A6E3"><div class="related-title">2.3. The Word &quot;Just&quot; Is a Confession</div></a>
+<a href="037-assembly.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#E3A6F5"><div class="related-title">8.5. The Architecture of Levels</div></a>
+<a href="067-monads-holons.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#DDA6F5"><div class="related-title">8.3. Leibniz as the Unlikely Ancestor of the Holographic Principle</div></a></div>
+<div class="inbound-refs"><span class="inbound-label">1 inbound reference</span><span class="inbound-links"><a href="027-usedtothink.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#F5A6E7" title="We Used to Think. Now We Know.">2.2</a></span></div></div>
 </div>
 <div class="page-end" id="page-end-version">
   <button class="page-end-logo" aria-label="Show page info"
@@ -111,6 +58,6 @@ Whitehead removes the assumption that created the problem.</p>
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">consciousness · proto · Edited 2026-04-27 01:04</span>
+  <span class="page-end-version" aria-hidden="true">proto · Edited 2026-06-19 13:36</span>
 </div>
 </body></html>

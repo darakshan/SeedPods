@@ -1,1068 +1,1068 @@
 {
-  "000-map" : {
-    "filename" : "000-map.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "4b3017e63b6dd717788ac68732c0206d28de8db31744533fd50b7153325eb417"
-  },
-  "001-caloric" : {
-    "filename" : "001-caloric.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "30452b0d677b35d61687c30101633cd5f5adf7669ede4424d17a13404266f00b"
-  },
-  "002-events" : {
-    "filename" : "002-events.png",
-    "mime" : "image\/png",
-    "signature" : "0650358831b710fd770912c199d2e96705af795195b7d29103ff3c760ed572fc"
-  },
-  "003-inside" : {
-    "filename" : "003-inside.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "5ce36856214dedddcc588c2672efcfdcdbeb64b62509d715287a99a13db35b3e"
-  },
-  "004-self" : {
-    "filename" : "004-self.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "049c210087c8881004b4a2298825fda2adc74f7e177ff8b35caeb11dd09cbc57"
-  },
-  "005-freewill" : {
-    "filename" : "005-freewill.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "41f55f99941ded626c1e318345108512b1b864bed40ddfdc20602568f2656c20"
-  },
-  "006-output" : {
-    "filename" : "006-output.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "b05787f5b1426de7fab4e3ebd165d0fbf9fa9f587ec2758c19b50418b7de6c75"
-  },
-  "007-vacuum" : {
-    "filename" : "007-vacuum.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "cb8a5a57cc4c089445e0276a19b2079e5a8cb2c61f78853514207de7421fbed6"
-  },
-  "008-fields" : {
-    "filename" : "008-fields.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "a28cf79e13e0be2d439e94e4f4a779d3ff8ab91f39f091c3e4a608f4e5244b92"
-  },
-  "009-randomness" : {
-    "filename" : "009-randomness.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "d4d2d6f0bddf74bc53d146a4f52c43676f321ee2d92cc0c203f769e6f718bdf5"
-  },
-  "010-largenumbers" : {
-    "filename" : "010-largenumbers.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "0c719fe133fa25960ef2bcaf7e3bd8dedcb4075c4977158633578b8fbbd8d530"
-  },
-  "011-moreisdifferent" : {
-    "filename" : "011-moreisdifferent.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "830012d9fd4dbe5830abe02e095febb14bafbe0db635c769e136183f5911abd4"
-  },
-  "012-autopoiesis" : {
-    "filename" : "012-autopoiesis.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "3b03fd454017bf6fb7aba532ec33b71daf403e2545654228065f048b55ad9c20"
-  },
-  "013-enactment" : {
-    "filename" : "013-enactment.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "ef85ef52491df5322e20e4505d46610c8597b0d209d8fb1fec82a593c0bc46e1"
-  },
-  "014-cities" : {
-    "filename" : "014-cities.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "30aeb7d7f0f019a6abc5ca305416185685b065933f3ba86b600581c3aed377a0"
-  },
-  "015-aliens" : {
-    "filename" : "015-aliens.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "6865a9c3893e14a64f928db0656b279f01cd2495cf8b24d2cd2d63d825ca6bdf"
-  },
-  "016-neuralnetwork" : {
-    "filename" : "016-neuralnetwork.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "cd7a3d185a57f9217e6caf7189838a1a29f54f89c44d704929fa286c1bd09b32"
-  },
-  "017-pastpresent" : {
-    "filename" : "017-pastpresent.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "f3404c6f09ed79c1e6b26304219e7582ae2fb57e9be46f56ec4627a50d04e8ec"
-  },
-  "018-magnetization" : {
-    "filename" : "018-magnetization.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "3dc25c141bc229263fa1b1f9f0e18cc72b93b266f4a992641c44093e49769f8e"
-  },
-  "019-funerals" : {
-    "filename" : "019-funerals.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "12b6909b000c90e04b05c619305e86e47b600a0605966bd4e02da175f171306d"
-  },
-  "020-penrose" : {
-    "filename" : "020-penrose.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "b6a2c6cf2611cc14659d83572215f0d040daaf355e2f416ee6cc928bd453359a"
-  },
-  "021-just" : {
-    "filename" : "021-just.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "f3555f580cb247b3bb569bdcc180ea4d23a8ab067d757e3dbae0d7f01dbc4f86"
-  },
-  "022-locked" : {
-    "filename" : "022-locked.png",
-    "mime" : "image\/png",
-    "signature" : "850937534caff2b4975059d180da0a7a415157a96ee358b737e9a5da7e8e6538"
-  },
-  "023-stories" : {
-    "filename" : "023-stories.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "b991da94a6357619ba549789b8bcbf66a69bc6e2e0fc8b6f8ee7f20699b72222"
-  },
-  "024-ghostmachine" : {
-    "filename" : "024-ghostmachine.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "283c41fbbefefb8993c3dadda117675a4544b2bedbf52da1310c2949c4a6137c"
-  },
-  "025-widechannel" : {
-    "filename" : "025-widechannel.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "2a18943189ab5b840d3d515e30467a76540c706640ceaff904af30ee3948f6db"
-  },
-  "026-twotruths" : {
-    "filename" : "026-twotruths.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "d3045d5895d09afaa1ddaa868a23d01de997c53980cd408e6744f613fe900870"
-  },
-  "027-usedtothink" : {
-    "filename" : "027-usedtothink.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "640104624554bf8d22b7d95dd6e7f7409d526611429167ef2227ba38e7ee6f15"
-  },
-  "028-network" : {
-    "filename" : "028-network.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "349ed40258e4ec6a8f6bf4fe16a59c989541e32af27173342757098fdcf97185"
-  },
-  "029-lighttime" : {
-    "filename" : "029-lighttime.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "9ce76ab1d179af7e16cc10d90680e89813bf6ee45d0edfc7ca11692722d5b7ff"
-  },
-  "030-interference" : {
-    "filename" : "030-interference.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "55182627cf7902857238c563f77e545b0d4d6bfa193fff6c13dcb0363cf0f04b"
-  },
-  "031-surfaceinside" : {
-    "filename" : "031-surfaceinside.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "95a116bf327e293006fa1d5291fc25083c548c889e8ddcc7d026a21f3ddc2f99"
-  },
-  "032-skyfossil" : {
-    "filename" : "032-skyfossil.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "db07eb740185a22dc81ae69749ed52fda471aa19346582125742a2ba719d35fd"
-  },
-  "033-edge" : {
-    "filename" : "033-edge.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "fbb3d49fc622647fe3e85b4f152e3ed4320fa2980d28551bbdf422bd705d7f4b"
-  },
-  "034-onerule" : {
-    "filename" : "034-onerule.png",
-    "mime" : "image\/png",
-    "signature" : "c7e0fe65b8e1e5127bf6c3260b6ce464d3fac38cdf6ec4bc623e1d071180289c"
-  },
-  "035-simplestnumbers" : {
-    "filename" : "035-simplestnumbers.png",
-    "mime" : "image\/png",
-    "signature" : "00dbb7732259a9bf6f301c8c3f8240b62e0e97eca6687c7778157506ca9079c4"
-  },
-  "036-universenoticing" : {
-    "filename" : "036-universenoticing.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "888b858ff7ca93e20ad3fb3d1a23549084e634922626fe10c075d6b9ef445cb5"
-  },
-  "037-assembly" : {
-    "filename" : "037-assembly.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "4c25cc66f17be4ed1b5db566b8d215d92ba66b58ecfaeb82fd7b5ac59d40adb4"
-  },
-  "038-consonance-map" : {
-    "filename" : "038-consonance-map.png",
-    "mime" : "image\/png",
-    "signature" : "ae4dad55459ddab8f2a1906f9c790060a4397ec47fe7becea936d7aa427d87f9"
-  },
-  "040-stability" : {
-    "filename" : "040-stability.png",
-    "mime" : "image\/png",
-    "signature" : "6512251c16b58c7ae3211b69b579ab2709bfea1e707f56ed258670c37cddc880"
-  },
-  "041-colorwheel" : {
-    "filename" : "041-colorwheel.png",
-    "mime" : "image\/png",
-    "signature" : "8f9f672d9b9066cd6a45dd6335696dd3b886c2c2c2daa596c8669289f51a39d2"
-  },
-  "042-eyethinks" : {
-    "filename" : "042-eyethinks.png",
-    "mime" : "image\/png",
-    "signature" : "0e308e4dd5384ea0ddb7fe3621ba396bf4018f9a171ed13919727bd1bcd4f47f"
-  },
-  "044-ai-retina" : {
-    "filename" : "044-ai-retina.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "ceb48859d3ccac4406a11fb386d1be8e7c9afe5d6cc753fcae9f68f55e815bb2"
-  },
-  "045-baldwin" : {
-    "filename" : "045-baldwin.png",
-    "mime" : "image\/png",
-    "signature" : "d0fdb5a6d1fec46659a6e6f155e4ba2dc96f761f283a8c0bb67fad89dac54b6b"
-  },
-  "046-thinkfast" : {
-    "filename" : "046-thinkfast.png",
-    "mime" : "image\/png",
-    "signature" : "c9f2e97847614994bb85c93db2346759b1a0d68c6df307455bb49780ab54af20"
-  },
-  "047-ai-feeling" : {
-    "filename" : "047-ai-feeling.png",
-    "mime" : "image\/png",
-    "signature" : "96f29c937e68f9b5c22488c009961273e67c179083040b813699b29bb58a71f0"
-  },
-  "048-flashes" : {
-    "filename" : "048-flashes.png",
-    "mime" : "image\/png",
-    "signature" : "dec45288d3ec8fa9f6a1df07693744eae7d02f19ae01cee5fe2980bf22ac270e"
-  },
-  "049-strangeloop" : {
-    "filename" : "049-strangeloop.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "25df7adcd2a59ba4011f609de63488f2d57f179a31a0b467ec87759be445812b"
-  },
-  "050-orthogonal" : {
-    "filename" : "050-orthogonal.png",
-    "mime" : "image\/png",
-    "signature" : "6749c6a0bb501dc98a22690d178159768fa4ff545bc1fc60aab0cd2f90284a68"
-  },
-  "051-spacetime" : {
-    "filename" : "051-spacetime.png",
-    "mime" : "image\/png",
-    "signature" : "941bb2de689de39fe3e3bea9f795eb47dcadf02a2b5326349da827b1c1d69aca"
-  },
-  "052-dichotomy" : {
-    "filename" : "052-dichotomy.png",
-    "mime" : "image\/png",
-    "signature" : "072d58b276de2da51983c54dc73a503bc18b069ddf30ef668bcc8e7790e287b5"
-  },
-  "053-dimensions" : {
-    "filename" : "053-dimensions.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "281f3d82125fc2b48a562de68d6ae7d0bbcccc729d02a4d99975956ad1bfccdb"
-  },
-  "054-bornharmonic" : {
-    "filename" : "054-bornharmonic.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "9d4d49f6a720e4ccd517e1b392586ff47b3e14ab77bb1cf862bf703e10481545"
-  },
-  "056-mandelneural" : {
-    "filename" : "056-mandelneural.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "a8bed34ab88b4ca31448457b02bb55710e926cd5c6c1f59ef787bda33e8a150d"
-  },
-  "057-superfarey" : {
-    "filename" : "057-superfarey.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "e9a1641057f705e3e06bb7bd3a064ff1ea3489a470ae279a426b878e547ee775"
-  },
-  "058-galacticnets" : {
-    "filename" : "058-galacticnets.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "5b6e4f1f44ed3728ecd48c2592db4632e596b5226c170c3a27763e0589c17aef"
-  },
-  "059-galaxyevolve" : {
-    "filename" : "059-galaxyevolve.png",
-    "mime" : "image\/png",
-    "signature" : "32de078195937f88362b965c2bb88a6334fc9a4cdbeefc83e4247f2b701bf331"
-  },
-  "060-worldtests" : {
-    "filename" : "060-worldtests.png",
-    "mime" : "image\/png",
-    "signature" : "e623abd19c6dfb89fd5b32dc588386cc94bc453def9aefea891fb713ae90b72b"
-  },
-  "061-babyuniverse" : {
-    "filename" : "061-babyuniverse.png",
-    "mime" : "image\/png",
-    "signature" : "0747c9a630596f75e5d6c07f4a2b3b5e38c1820e313183bba1bf6449699d53c5"
-  },
-  "062-branchingdice" : {
-    "filename" : "062-branchingdice.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "f39e17d9f4e8c9e13fccf062991aee059a96e5a72825fbf1f0e212f223ae9404"
-  },
-  "063-mandelcrystals" : {
-    "filename" : "063-mandelcrystals.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "5930ebbf7331f7c5a5ddae0cc6a2359dc2e99764e52ec91640e486dfa47e99ed"
-  },
-  "064-choicedimension" : {
-    "filename" : "064-choicedimension.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "727da61c37a6d1a356d3096a279d7e65876ced812aa275f01988fecce81cdeb3"
-  },
-  "065-feel-do" : {
-    "filename" : "065-feel-do.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "4b8dfd73d4b08f950bd08ee9b225b078933612973bb6c5d4905a5328003c3a71"
-  },
-  "066-cosmicattractor" : {
-    "filename" : "066-cosmicattractor.png",
-    "mime" : "image\/png",
-    "signature" : "b574d8c5c4bd36191135724ff33c3e60233eacb42b775bf83c1213b4f6c03764"
-  },
-  "067-monads-holons" : {
-    "filename" : "067-monads-holons.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "8e91a19be102f11b29497cd899921a022cf8cf9929ce2298680e9d93e97bfd68"
-  },
-  "068-bubbles" : {
-    "filename" : "068-bubbles.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "59672c0947da95102e50f36278bb3094ab4e6ee21c45116cab7e407a1e9c693d"
-  },
-  "069-love" : {
-    "filename" : "069-love.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "1ea02a918cff5cdfa87ffeb38a6357528087aa9f3e43acedaa39e8cbca6ff1df"
-  },
-  "070-harmony" : {
-    "filename" : "070-harmony.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "45f3de418d1587e117aea43e1bb5edde4a31117e9f7950e5b72c0852fa52d577"
-  },
-  "071-beauty" : {
-    "filename" : "071-beauty.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "51e44c78e24dbbf70b4ab8b769a0f59c7bfb77519cc5c95b364666d990ff01a6"
-  },
-  "072-temperature" : {
-    "filename" : "072-temperature.png",
-    "mime" : "image\/png",
-    "signature" : "2a1fb01206ededb58f9b99a32fbb21e5f66b69d14d0f9015fd3ecf1a824f514a"
-  },
-  "073-moral-caution" : {
-    "filename" : "073-moral-caution.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "5cee259a1390c01c5531422ca150ae3bcebfa7218a6d2d40e5c0273512bcbbe2"
-  },
-  "074-grasshopper" : {
-    "filename" : "074-grasshopper.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "cda55eee2a3f59c99e3d8a1dd753b95e3b3671168fb5ca93795f23876a73306e"
-  },
-  "076-fivewindows" : {
-    "filename" : "076-fivewindows.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "1c200824d7536f8cdd3f2b6e0b96fa637a89ef0ea78d7bf71fada0226042809c"
-  },
-  "077-intention" : {
-    "filename" : "077-intention.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "dea7bac84b164f67829e1933a58fde37b9bbc9cefa482c7a5a5fa557ae61c7a7"
-  },
-  "078-boundarystack" : {
-    "filename" : "078-boundarystack.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "1bafa062d9a446df1eb925af3e02e6056535c3538a2a303c665d19380e2f577a"
-  },
-  "079-pronouns" : {
-    "filename" : "079-pronouns.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "fe73116cbee54cdb0b7552e59270e8471114b6cce566385e3451d78e0f075285"
-  },
-  "080-unification" : {
-    "filename" : "080-unification.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "bbb788961fcb8f7fa176145fb2b203afa96c5df0f85cfe542d552858c007ec33"
-  },
-  "20170505_065602" : {
-    "signature" : "d987371af50a191fed47c4358299ce6274719afcdc7dd1b734c45c5b049e4ffe"
-  },
-  "IMG_3353" : {
-    "signature" : "1ff22b31768b60a743f5ef66334adbf3cfda8a0377835d68fa46205623113629"
-  },
-  "IMG_3537" : {
-    "filename" : "IMG_3537.jpeg",
-    "mime" : "image\/jpeg",
-    "signature" : "ffdc38e89662dec074d9345215b570818c84f93d8497c1123e2afc6dc1da4bde"
-  },
-  "IMG_3538" : {
-    "filename" : "IMG_3538.jpeg",
-    "mime" : "image\/jpeg",
-    "signature" : "3478b6f6edf7a17bc0a4310d83f28fc686c0e4039b6ab540ef07081e962c93a4"
-  },
-  "attachments\/000-map.jpg" : {
-    "filename" : "000-map.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "4b3017e63b6dd717788ac68732c0206d28de8db31744533fd50b7153325eb417"
-  },
-  "attachments\/001-caloric.jpg" : {
-    "filename" : "001-caloric.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "30452b0d677b35d61687c30101633cd5f5adf7669ede4424d17a13404266f00b"
-  },
-  "attachments\/002-events.png" : {
-    "filename" : "002-events.png",
-    "mime" : "image\/png",
-    "signature" : "0650358831b710fd770912c199d2e96705af795195b7d29103ff3c760ed572fc"
-  },
-  "attachments\/003-inside.jpg" : {
-    "filename" : "003-inside.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "5ce36856214dedddcc588c2672efcfdcdbeb64b62509d715287a99a13db35b3e"
-  },
-  "attachments\/004-self.jpg" : {
-    "filename" : "004-self.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "049c210087c8881004b4a2298825fda2adc74f7e177ff8b35caeb11dd09cbc57"
-  },
-  "attachments\/005-freewill.jpg" : {
-    "filename" : "005-freewill.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "41f55f99941ded626c1e318345108512b1b864bed40ddfdc20602568f2656c20"
-  },
-  "attachments\/006-output.jpg" : {
-    "filename" : "006-output.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "b05787f5b1426de7fab4e3ebd165d0fbf9fa9f587ec2758c19b50418b7de6c75"
-  },
-  "attachments\/007-vacuum.jpg" : {
-    "filename" : "007-vacuum.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "cb8a5a57cc4c089445e0276a19b2079e5a8cb2c61f78853514207de7421fbed6"
-  },
-  "attachments\/008-fields.jpg" : {
-    "filename" : "008-fields.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "a28cf79e13e0be2d439e94e4f4a779d3ff8ab91f39f091c3e4a608f4e5244b92"
-  },
-  "attachments\/009-randomness.jpg" : {
-    "filename" : "009-randomness.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "d4d2d6f0bddf74bc53d146a4f52c43676f321ee2d92cc0c203f769e6f718bdf5"
-  },
-  "attachments\/010-largenumbers.jpg" : {
-    "filename" : "010-largenumbers.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "0c719fe133fa25960ef2bcaf7e3bd8dedcb4075c4977158633578b8fbbd8d530"
-  },
-  "attachments\/011-moreisdifferent.jpg" : {
-    "filename" : "011-moreisdifferent.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "830012d9fd4dbe5830abe02e095febb14bafbe0db635c769e136183f5911abd4"
-  },
-  "attachments\/012-autopoiesis.jpg" : {
-    "filename" : "012-autopoiesis.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "3b03fd454017bf6fb7aba532ec33b71daf403e2545654228065f048b55ad9c20"
-  },
-  "attachments\/013-enactment.jpg" : {
-    "filename" : "013-enactment.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "ef85ef52491df5322e20e4505d46610c8597b0d209d8fb1fec82a593c0bc46e1"
-  },
-  "attachments\/014-cities.jpg" : {
-    "filename" : "014-cities.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "30aeb7d7f0f019a6abc5ca305416185685b065933f3ba86b600581c3aed377a0"
-  },
-  "attachments\/015-aliens.jpg" : {
-    "filename" : "015-aliens.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "6865a9c3893e14a64f928db0656b279f01cd2495cf8b24d2cd2d63d825ca6bdf"
-  },
-  "attachments\/016-neuralnetwork.jpg" : {
-    "filename" : "016-neuralnetwork.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "cd7a3d185a57f9217e6caf7189838a1a29f54f89c44d704929fa286c1bd09b32"
-  },
-  "attachments\/017-pastpresent.jpg" : {
-    "filename" : "017-pastpresent.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "f3404c6f09ed79c1e6b26304219e7582ae2fb57e9be46f56ec4627a50d04e8ec"
-  },
-  "attachments\/018-magnetization.jpg" : {
-    "filename" : "018-magnetization.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "3dc25c141bc229263fa1b1f9f0e18cc72b93b266f4a992641c44093e49769f8e"
-  },
-  "attachments\/019-funerals.jpg" : {
-    "filename" : "019-funerals.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "12b6909b000c90e04b05c619305e86e47b600a0605966bd4e02da175f171306d"
-  },
-  "attachments\/020-penrose.jpg" : {
-    "filename" : "020-penrose.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "b6a2c6cf2611cc14659d83572215f0d040daaf355e2f416ee6cc928bd453359a"
-  },
-  "attachments\/021-just.jpg" : {
-    "filename" : "021-just.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "f3555f580cb247b3bb569bdcc180ea4d23a8ab067d757e3dbae0d7f01dbc4f86"
-  },
-  "attachments\/022-locked.png" : {
-    "filename" : "022-locked.png",
-    "mime" : "image\/png",
-    "signature" : "850937534caff2b4975059d180da0a7a415157a96ee358b737e9a5da7e8e6538"
-  },
-  "attachments\/023-stories.jpg" : {
-    "filename" : "023-stories.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "b991da94a6357619ba549789b8bcbf66a69bc6e2e0fc8b6f8ee7f20699b72222"
-  },
-  "attachments\/024-ghostmachine.jpg" : {
-    "filename" : "024-ghostmachine.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "283c41fbbefefb8993c3dadda117675a4544b2bedbf52da1310c2949c4a6137c"
-  },
-  "attachments\/025-widechannel.jpg" : {
-    "filename" : "025-widechannel.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "2a18943189ab5b840d3d515e30467a76540c706640ceaff904af30ee3948f6db"
-  },
-  "attachments\/026-twotruths.jpg" : {
-    "filename" : "026-twotruths.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "d3045d5895d09afaa1ddaa868a23d01de997c53980cd408e6744f613fe900870"
-  },
-  "attachments\/027-usedtothink.jpg" : {
-    "filename" : "027-usedtothink.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "640104624554bf8d22b7d95dd6e7f7409d526611429167ef2227ba38e7ee6f15"
-  },
-  "attachments\/028-network.jpg" : {
-    "filename" : "028-network.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "349ed40258e4ec6a8f6bf4fe16a59c989541e32af27173342757098fdcf97185"
-  },
-  "attachments\/029-lighttime.jpg" : {
-    "filename" : "029-lighttime.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "9ce76ab1d179af7e16cc10d90680e89813bf6ee45d0edfc7ca11692722d5b7ff"
-  },
-  "attachments\/030-interference.jpg" : {
-    "filename" : "030-interference.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "55182627cf7902857238c563f77e545b0d4d6bfa193fff6c13dcb0363cf0f04b"
-  },
-  "attachments\/031-surfaceinside.jpg" : {
-    "filename" : "031-surfaceinside.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "95a116bf327e293006fa1d5291fc25083c548c889e8ddcc7d026a21f3ddc2f99"
-  },
-  "attachments\/032-skyfossil.jpg" : {
-    "filename" : "032-skyfossil.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "db07eb740185a22dc81ae69749ed52fda471aa19346582125742a2ba719d35fd"
-  },
-  "attachments\/033-edge.jpg" : {
-    "filename" : "033-edge.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "fbb3d49fc622647fe3e85b4f152e3ed4320fa2980d28551bbdf422bd705d7f4b"
-  },
-  "attachments\/034-onerule.png" : {
-    "filename" : "034-onerule.png",
-    "mime" : "image\/png",
-    "signature" : "c7e0fe65b8e1e5127bf6c3260b6ce464d3fac38cdf6ec4bc623e1d071180289c"
-  },
-  "attachments\/035-simplestnumbers.png" : {
-    "filename" : "035-simplestnumbers.png",
-    "mime" : "image\/png",
-    "signature" : "00dbb7732259a9bf6f301c8c3f8240b62e0e97eca6687c7778157506ca9079c4"
-  },
-  "attachments\/036-universenoticing.jpg" : {
-    "filename" : "036-universenoticing.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "888b858ff7ca93e20ad3fb3d1a23549084e634922626fe10c075d6b9ef445cb5"
-  },
-  "attachments\/037-assembly.jpg" : {
-    "filename" : "037-assembly.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "4c25cc66f17be4ed1b5db566b8d215d92ba66b58ecfaeb82fd7b5ac59d40adb4"
-  },
-  "attachments\/038-consonance-map.png" : {
-    "filename" : "038-consonance-map.png",
-    "mime" : "image\/png",
-    "signature" : "ae4dad55459ddab8f2a1906f9c790060a4397ec47fe7becea936d7aa427d87f9"
-  },
-  "attachments\/040-stability.png" : {
-    "filename" : "040-stability.png",
-    "mime" : "image\/png",
-    "signature" : "6512251c16b58c7ae3211b69b579ab2709bfea1e707f56ed258670c37cddc880"
-  },
-  "attachments\/041-colorwheel.png" : {
-    "filename" : "041-colorwheel.png",
-    "mime" : "image\/png",
-    "signature" : "8f9f672d9b9066cd6a45dd6335696dd3b886c2c2c2daa596c8669289f51a39d2"
-  },
-  "attachments\/042-eyethinks.png" : {
-    "filename" : "042-eyethinks.png",
-    "mime" : "image\/png",
-    "signature" : "0e308e4dd5384ea0ddb7fe3621ba396bf4018f9a171ed13919727bd1bcd4f47f"
-  },
-  "attachments\/044-ai-retina.jpg" : {
-    "filename" : "044-ai-retina.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "ceb48859d3ccac4406a11fb386d1be8e7c9afe5d6cc753fcae9f68f55e815bb2"
-  },
-  "attachments\/045-baldwin.png" : {
-    "filename" : "045-baldwin.png",
-    "mime" : "image\/png",
-    "signature" : "d0fdb5a6d1fec46659a6e6f155e4ba2dc96f761f283a8c0bb67fad89dac54b6b"
-  },
-  "attachments\/046-thinkfast.png" : {
-    "filename" : "046-thinkfast.png",
-    "mime" : "image\/png",
-    "signature" : "c9f2e97847614994bb85c93db2346759b1a0d68c6df307455bb49780ab54af20"
-  },
-  "attachments\/047-ai-feeling.png" : {
-    "filename" : "047-ai-feeling.png",
-    "mime" : "image\/png",
-    "signature" : "96f29c937e68f9b5c22488c009961273e67c179083040b813699b29bb58a71f0"
-  },
-  "attachments\/048-flashes.png" : {
-    "filename" : "048-flashes.png",
-    "mime" : "image\/png",
-    "signature" : "dec45288d3ec8fa9f6a1df07693744eae7d02f19ae01cee5fe2980bf22ac270e"
-  },
-  "attachments\/049-strangeloop.jpg" : {
-    "filename" : "049-strangeloop.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "25df7adcd2a59ba4011f609de63488f2d57f179a31a0b467ec87759be445812b"
-  },
-  "attachments\/050-orthogonal.png" : {
-    "filename" : "050-orthogonal.png",
-    "mime" : "image\/png",
-    "signature" : "6749c6a0bb501dc98a22690d178159768fa4ff545bc1fc60aab0cd2f90284a68"
-  },
-  "attachments\/051-spacetime.png" : {
-    "filename" : "051-spacetime.png",
-    "mime" : "image\/png",
-    "signature" : "941bb2de689de39fe3e3bea9f795eb47dcadf02a2b5326349da827b1c1d69aca"
-  },
-  "attachments\/052-dichotomy.png" : {
-    "filename" : "052-dichotomy.png",
-    "mime" : "image\/png",
-    "signature" : "072d58b276de2da51983c54dc73a503bc18b069ddf30ef668bcc8e7790e287b5"
-  },
-  "attachments\/053-dimensions.jpg" : {
-    "filename" : "053-dimensions.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "281f3d82125fc2b48a562de68d6ae7d0bbcccc729d02a4d99975956ad1bfccdb"
-  },
-  "attachments\/054-bornharmonic.jpg" : {
-    "filename" : "054-bornharmonic.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "9d4d49f6a720e4ccd517e1b392586ff47b3e14ab77bb1cf862bf703e10481545"
-  },
-  "attachments\/056-mandelneural.jpg" : {
-    "filename" : "056-mandelneural.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "a8bed34ab88b4ca31448457b02bb55710e926cd5c6c1f59ef787bda33e8a150d"
-  },
-  "attachments\/057-superfarey.jpg" : {
-    "filename" : "057-superfarey.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "e9a1641057f705e3e06bb7bd3a064ff1ea3489a470ae279a426b878e547ee775"
-  },
-  "attachments\/058-galacticnets.jpg" : {
-    "filename" : "058-galacticnets.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "5b6e4f1f44ed3728ecd48c2592db4632e596b5226c170c3a27763e0589c17aef"
-  },
-  "attachments\/059-galaxyevolve.png" : {
-    "filename" : "059-galaxyevolve.png",
-    "mime" : "image\/png",
-    "signature" : "32de078195937f88362b965c2bb88a6334fc9a4cdbeefc83e4247f2b701bf331"
-  },
-  "attachments\/060-worldtests.png" : {
-    "filename" : "060-worldtests.png",
-    "mime" : "image\/png",
-    "signature" : "e623abd19c6dfb89fd5b32dc588386cc94bc453def9aefea891fb713ae90b72b"
-  },
-  "attachments\/061-babyuniverse.png" : {
-    "filename" : "061-babyuniverse.png",
-    "mime" : "image\/png",
-    "signature" : "0747c9a630596f75e5d6c07f4a2b3b5e38c1820e313183bba1bf6449699d53c5"
-  },
-  "attachments\/062-branchingdice.jpg" : {
-    "filename" : "062-branchingdice.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "f39e17d9f4e8c9e13fccf062991aee059a96e5a72825fbf1f0e212f223ae9404"
-  },
-  "attachments\/063-mandelcrystals.jpg" : {
-    "filename" : "063-mandelcrystals.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "5930ebbf7331f7c5a5ddae0cc6a2359dc2e99764e52ec91640e486dfa47e99ed"
-  },
-  "attachments\/064-choicedimension.jpg" : {
-    "filename" : "064-choicedimension.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "727da61c37a6d1a356d3096a279d7e65876ced812aa275f01988fecce81cdeb3"
-  },
-  "attachments\/065-feel-do.jpg" : {
-    "filename" : "065-feel-do.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "4b8dfd73d4b08f950bd08ee9b225b078933612973bb6c5d4905a5328003c3a71"
-  },
-  "attachments\/066-cosmicattractor.png" : {
-    "filename" : "066-cosmicattractor.png",
-    "mime" : "image\/png",
-    "signature" : "b574d8c5c4bd36191135724ff33c3e60233eacb42b775bf83c1213b4f6c03764"
-  },
-  "attachments\/067-monads-holons.jpg" : {
-    "filename" : "067-monads-holons.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "8e91a19be102f11b29497cd899921a022cf8cf9929ce2298680e9d93e97bfd68"
-  },
-  "attachments\/068-bubbles.jpg" : {
-    "filename" : "068-bubbles.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "59672c0947da95102e50f36278bb3094ab4e6ee21c45116cab7e407a1e9c693d"
-  },
-  "attachments\/069-love.jpg" : {
-    "filename" : "069-love.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "1ea02a918cff5cdfa87ffeb38a6357528087aa9f3e43acedaa39e8cbca6ff1df"
-  },
-  "attachments\/070-harmony.jpg" : {
-    "filename" : "070-harmony.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "45f3de418d1587e117aea43e1bb5edde4a31117e9f7950e5b72c0852fa52d577"
-  },
-  "attachments\/071-beauty.jpg" : {
-    "filename" : "071-beauty.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "51e44c78e24dbbf70b4ab8b769a0f59c7bfb77519cc5c95b364666d990ff01a6"
-  },
-  "attachments\/072-temperature.png" : {
-    "filename" : "072-temperature.png",
-    "mime" : "image\/png",
-    "signature" : "2a1fb01206ededb58f9b99a32fbb21e5f66b69d14d0f9015fd3ecf1a824f514a"
-  },
-  "attachments\/073-moral-caution.jpg" : {
-    "filename" : "073-moral-caution.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "5cee259a1390c01c5531422ca150ae3bcebfa7218a6d2d40e5c0273512bcbbe2"
-  },
-  "attachments\/074-grasshopper.jpg" : {
-    "filename" : "074-grasshopper.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "cda55eee2a3f59c99e3d8a1dd753b95e3b3671168fb5ca93795f23876a73306e"
-  },
-  "attachments\/076-fivewindows.jpg" : {
-    "filename" : "076-fivewindows.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "1c200824d7536f8cdd3f2b6e0b96fa637a89ef0ea78d7bf71fada0226042809c"
-  },
-  "attachments\/077-intention.jpg" : {
-    "filename" : "077-intention.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "dea7bac84b164f67829e1933a58fde37b9bbc9cefa482c7a5a5fa557ae61c7a7"
-  },
-  "attachments\/078-boundarystack.jpg" : {
-    "filename" : "078-boundarystack.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "1bafa062d9a446df1eb925af3e02e6056535c3538a2a303c665d19380e2f577a"
-  },
-  "attachments\/079-pronouns.jpg" : {
-    "filename" : "079-pronouns.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "fe73116cbee54cdb0b7552e59270e8471114b6cce566385e3451d78e0f075285"
-  },
-  "attachments\/080-unification.jpg" : {
-    "filename" : "080-unification.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "bbb788961fcb8f7fa176145fb2b203afa96c5df0f85cfe542d552858c007ec33"
-  },
-  "attachments\/20170505_065602.jpeg" : {
-    "filename" : "20170505_065602.jpeg",
-    "mime" : "image\/jpeg",
-    "signature" : "d987371af50a191fed47c4358299ce6274719afcdc7dd1b734c45c5b049e4ffe"
-  },
-  "attachments\/IMG_3179.jpeg" : {
-    "filename" : "IMG_3179.jpeg",
-    "mime" : "image\/jpeg",
-    "signature" : "f173782a7972f282ab65438007b07fa112565a502e8ded17841743616756ede4"
-  },
-  "attachments\/IMG_3297.jpeg" : {
-    "filename" : "IMG_3297.jpeg",
-    "mime" : "image\/jpeg",
-    "signature" : "5e191f78bf4e4f2ee7f0965355a7ebdeca50868d7d63989b9978fe92f956d52c"
-  },
-  "attachments\/IMG_3353.jpeg" : {
-    "filename" : "IMG_3353.jpeg",
-    "mime" : "image\/jpeg",
-    "signature" : "1ff22b31768b60a743f5ef66334adbf3cfda8a0377835d68fa46205623113629"
-  },
-  "attachments\/IMG_3493.webp" : {
-    "filename" : "IMG_3493.webp",
-    "mime" : "image\/webp",
-    "signature" : "a0e8d286d8e99553956d3dc17a216f9220af2b1d6cb3a1dff2c36b2fd5012301"
-  },
-  "attachments\/IMG_3537.jpeg" : {
-    "filename" : "IMG_3537.jpeg",
-    "mime" : "image\/jpeg",
-    "signature" : "ffdc38e89662dec074d9345215b570818c84f93d8497c1123e2afc6dc1da4bde"
-  },
-  "attachments\/IMG_3538.jpeg" : {
-    "filename" : "IMG_3538.jpeg",
-    "mime" : "image\/jpeg",
-    "signature" : "3478b6f6edf7a17bc0a4310d83f28fc686c0e4039b6ab540ef07081e962c93a4"
-  },
-  "attachments\/IMG_3548.jpeg" : {
-    "filename" : "IMG_3548.jpeg",
-    "mime" : "image\/jpeg",
-    "signature" : "f1b186570c01557b77a0a9e74932aaa6f10f9768961f64f3c95d87082a8013ad"
-  },
-  "attachments\/IMG_6181.jpeg" : {
-    "filename" : "IMG_6181.jpeg",
-    "mime" : "image\/jpeg",
-    "signature" : "d9ed0d78f7e4a1f509e5025893778ade8c3a818bf125c6f07ab7f29bb53acd8f"
-  },
-  "attachments\/docs\/docs\/agent.md" : {
-    "filename" : "agent.md",
-    "mime" : "text\/plain; charset=utf-8",
-    "signature" : "16672c45424c5383e8213ecf2f53dd3094958930c59cc1089fb077463aab05c3"
-  },
-  "attachments\/docs\/docs\/architecture.md" : {
-    "filename" : "architecture.md",
-    "mime" : "text\/plain; charset=utf-8",
-    "signature" : "b7b7bb98a44806614ebb05d425c2c99fa24e01ca1432a8e3a982585357fd8857"
-  },
-  "attachments\/docs\/docs\/build-site.md" : {
-    "filename" : "build-site.md",
-    "mime" : "text\/plain; charset=utf-8",
-    "signature" : "607ce184553337532b39facf27580cfcfc326f9557acef5ea4755fc8928e50b7"
-  },
-  "attachments\/docs\/docs\/chips-speakers-and-dates.md" : {
-    "filename" : "chips-speakers-and-dates.md",
-    "mime" : "text\/plain; charset=utf-8",
-    "signature" : "92a9933c391b005d474f5aee43ee1852a5360cc6995a30b36448cb929d87e622"
-  },
-  "attachments\/docs\/docs\/claude-edit-protocol.md" : {
-    "filename" : "claude-edit-protocol.md",
-    "mime" : "text\/plain; charset=utf-8",
-    "signature" : "a0f6ab4fdd840b4ebed3e51bd527f171ae1cd21befb49544c57484338bb0cf60"
-  },
-  "attachments\/docs\/docs\/codex-restore-spec.md" : {
-    "filename" : "codex-restore-spec.md",
-    "mime" : "text\/plain; charset=utf-8",
-    "signature" : "3f158f0f71989864ca6ef07b8f4ded97c26a9acbe1937ce67832ef639dacd8f9"
-  },
-  "attachments\/docs\/docs\/convos-format.md" : {
-    "filename" : "convos-format.md",
-    "mime" : "text\/plain; charset=utf-8",
-    "signature" : "b10033588f253d1545b035a15792dd3cfc3b53bc2fe98e3eeb952515fa2911b7"
-  },
-  "attachments\/docs\/docs\/deferred-work.md" : {
-    "filename" : "deferred-work.md",
-    "mime" : "text\/plain; charset=utf-8",
-    "signature" : "137504cc9e3d3e37e95fd367c777144c41e6b9e79a9f692edf66352f60110e11"
-  },
-  "attachments\/docs\/docs\/edit-proposal-markup.md" : {
-    "filename" : "edit-proposal-markup.md",
-    "mime" : "text\/plain; charset=utf-8",
-    "signature" : "f5f574855eb11f4853b8f16452000793996399ded931f04425ce47eb1cca7973"
-  },
-  "attachments\/docs\/docs\/future\/admin-todo-plan.md" : {
-    "filename" : "admin-todo-plan.md",
-    "mime" : "text\/plain; charset=utf-8",
-    "signature" : "5a8c6a7d059b8afc04f18f0a687001d7a894cf99c03c3972e87868def035a3cf"
-  },
-  "attachments\/docs\/docs\/future\/admin-todo.md" : {
-    "filename" : "admin-todo.md",
-    "mime" : "text\/plain; charset=utf-8",
-    "signature" : "e8922630f1515ebb9535a6cdcb72db0259cdd0f91a477adab3589b0a16fab286"
-  },
-  "attachments\/docs\/docs\/future\/agent-data-separation-and-turn-routing.md" : {
-    "filename" : "agent-data-separation-and-turn-routing.md",
-    "mime" : "text\/plain; charset=utf-8",
-    "signature" : "8fa94dd6b25851142e57baf64dbde0d2fb5a656e249b378590d51266ddcc6ae9"
-  },
-  "attachments\/docs\/docs\/future\/attachments-design.md" : {
-    "filename" : "attachments-design.md",
-    "mime" : "text\/plain; charset=utf-8",
-    "signature" : "8ece8716f1bf93a88d6e1a1795ed3ff53a20cbdc77733c4aee0ddac3a3bb80af"
-  },
-  "attachments\/docs\/docs\/future\/attachments-implementation-plan.md" : {
-    "filename" : "attachments-implementation-plan.md",
-    "mime" : "text\/plain; charset=utf-8",
-    "signature" : "1f4ba0feacc0a6977c28df44ef38a68607f01d5de590fbee420f2465fecf25c9"
-  },
-  "attachments\/docs\/docs\/future\/auth-architecture.md" : {
-    "filename" : "auth-architecture.md",
-    "mime" : "text\/plain; charset=utf-8",
-    "signature" : "9309e9a866b2a96078a9a23a085e35da0eb14c3bf79d8681c72723d45e77f491"
-  },
-  "attachments\/docs\/docs\/future\/cache-safe-settlement-and-time-based-chip-ids.md" : {
-    "filename" : "cache-safe-settlement-and-time-based-chip-ids.md",
-    "mime" : "text\/plain; charset=utf-8",
-    "signature" : "19b07901ba7f81c67fd70d5dc9a0be0870b2b6b867a40d3b764e21540131f0fe"
-  },
-  "attachments\/docs\/docs\/future\/conversation-rotation.md" : {
-    "filename" : "conversation-rotation.md",
-    "mime" : "text\/plain; charset=utf-8",
-    "signature" : "a126e277451afceea531ef65919b9c3aae091d22b6754cc3773a1fda4ad298ae"
-  },
-  "attachments\/docs\/docs\/future\/dictation-architecture.md" : {
-    "filename" : "dictation-architecture.md",
-    "mime" : "text\/plain; charset=utf-8",
-    "signature" : "83fefbbd335666fbc4360a84c42ac31a192311acf283860a2202c17aa0fe359a"
-  },
-  "attachments\/docs\/docs\/future\/dictation-local-cleanup-and-bias.md" : {
-    "filename" : "dictation-local-cleanup-and-bias.md",
-    "mime" : "text\/plain; charset=utf-8",
-    "signature" : "45df87ca2da948df40f128ed2314045ae22f68f50108cb39e6922debaa174eea"
-  },
-  "attachments\/docs\/docs\/future\/gossamer-agent-storage-spec.md" : {
-    "filename" : "gossamer-agent-storage-spec.md",
-    "mime" : "text\/plain; charset=utf-8",
-    "signature" : "f38a20c5a57a58e793f967a5da5c4acbc1416984eabadbff151105a47eb6d0c4"
-  },
-  "attachments\/docs\/docs\/future\/gossamer-multi-layer-routing.md" : {
-    "filename" : "gossamer-multi-layer-routing.md",
-    "mime" : "text\/plain; charset=utf-8",
-    "signature" : "4b9a4f931c0cac406be9d9ee422ded60df3fa7aeeef5ba15c23a50bf6b8ed297"
-  },
-  "attachments\/docs\/docs\/future\/identity-server-c1.md" : {
-    "filename" : "identity-server-c1.md",
-    "mime" : "text\/plain; charset=utf-8",
-    "signature" : "e8c95f9417a7752d65475e1154e169780057a28a39264d26d1a57836f9a3fa4f"
-  },
-  "attachments\/docs\/docs\/future\/multi-user-collaboration.md" : {
-    "filename" : "multi-user-collaboration.md",
-    "mime" : "text\/plain; charset=utf-8",
-    "signature" : "48f5dd5eadc9479b3c13ffce1ec3772bd209049c92f4731bac959c937a81fb1a"
-  },
-  "attachments\/docs\/docs\/future\/notification-testing-strategy.md" : {
-    "filename" : "notification-testing-strategy.md",
-    "mime" : "text\/plain; charset=utf-8",
-    "signature" : "f556b389593463d74b2824ec13a20c010fd79b3dc7d718267585857f89b49474"
-  },
-  "attachments\/docs\/docs\/future\/per-subject-summaries.md" : {
-    "filename" : "per-subject-summaries.md",
-    "mime" : "text\/plain; charset=utf-8",
-    "signature" : "affff30c77646d18f1bd5f4da525b296f5e5121a63ad5352cb19ec1b9fba7740"
-  },
-  "attachments\/docs\/docs\/future\/stateful-admin-warnings.md" : {
-    "filename" : "stateful-admin-warnings.md",
-    "mime" : "text\/plain; charset=utf-8",
-    "signature" : "e65c564a7f7b7f70b1c4f094569ba96ef3aaab692317843f8190acc1febb68b3"
-  },
-  "attachments\/docs\/docs\/future\/swiftpm-xcode-test-split.md" : {
-    "filename" : "swiftpm-xcode-test-split.md",
-    "mime" : "text\/plain; charset=utf-8",
-    "signature" : "852cd65d581358eed8f3c73746817b26a9b146da84e75ee370b1de703b0b4fc9"
-  },
-  "attachments\/docs\/docs\/future\/test-coverage-plan.md" : {
-    "filename" : "test-coverage-plan.md",
-    "mime" : "text\/plain; charset=utf-8",
-    "signature" : "7aa2aca38516ea8bfbfbc5d501b11a2bbdcf7cb96a8afe1d45cd625f9348e1dd"
-  },
-  "attachments\/docs\/docs\/gossamer-development-history.md" : {
-    "filename" : "gossamer-development-history.md",
-    "mime" : "text\/plain; charset=utf-8",
-    "signature" : "b9a792fc064c50455145b15fb429a2aa2f97c8e5b48fd3545c31b0e64d3ee395"
-  },
-  "attachments\/docs\/docs\/gossamer-origin-story.md" : {
-    "filename" : "gossamer-origin-story.md",
-    "mime" : "text\/plain; charset=utf-8",
-    "signature" : "206f80905eb57ec056483fc60ffcffdc49459cc482b12e677ff1f6fadb8e2a6a"
-  },
-  "attachments\/docs\/docs\/gossamer-protocol-design.md" : {
-    "filename" : "gossamer-protocol-design.md",
-    "mime" : "text\/plain; charset=utf-8",
-    "signature" : "14e4921fec2e03da49387de82de3e4a20e1d82b85c7f10a76c4e1630af4b9bfc"
-  },
-  "attachments\/docs\/docs\/image-manager.md" : {
-    "filename" : "image-manager.md",
-    "mime" : "text\/plain; charset=utf-8",
-    "signature" : "9f6b8f5384b3ed937d58e397402e028514941b38a47ee1fd3af0e937ce474bb5"
-  },
-  "attachments\/docs\/docs\/logo-design.md" : {
-    "filename" : "logo-design.md",
-    "mime" : "text\/plain; charset=utf-8",
-    "signature" : "db25d41349fa8050099a26ad426cae3eec5e62c0ea72fd654ded1b7692330f5a"
-  },
-  "attachments\/docs\/docs\/modules.md" : {
-    "filename" : "modules.md",
-    "mime" : "text\/plain; charset=utf-8",
-    "signature" : "8b3f93fb06dc2ed60a4505372245185419f0b33fd8c4e820ab3f2d47626fdc43"
-  },
-  "attachments\/docs\/docs\/multi-project-notifications.md" : {
-    "filename" : "multi-project-notifications.md",
-    "mime" : "text\/plain; charset=utf-8",
-    "signature" : "7196c6c49acf5eac84ed9b79490e575d63e2edfff75f18d9f60797e146af8be1"
-  },
-  "attachments\/docs\/docs\/never\/gossamer-null-router-and-migration.md" : {
-    "filename" : "gossamer-null-router-and-migration.md",
-    "mime" : "text\/plain; charset=utf-8",
-    "signature" : "5b15585d250b16c29503a889a461f9aa4fb9194a330cd4d236a555d85a53d5aa"
-  },
-  "attachments\/docs\/docs\/never\/gossamer-router-state-machines.md" : {
-    "filename" : "gossamer-router-state-machines.md",
-    "mime" : "text\/plain; charset=utf-8",
-    "signature" : "42e658ecd90e2043fcd12594b685c556a041b4396b0084b9a829c5aeca61b77b"
-  },
-  "attachments\/docs\/docs\/projects-json.md" : {
-    "filename" : "projects-json.md",
-    "mime" : "text\/plain; charset=utf-8",
-    "signature" : "bf347b87992f4b63e05b5fea523b1a6483fc5ef13a78f19b7f345d10df11ab4f"
-  },
-  "attachments\/docs\/docs\/settings-pane.md" : {
-    "filename" : "settings-pane.md",
-    "mime" : "text\/plain; charset=utf-8",
-    "signature" : "f715c3da4785e29589ba9b6fa9d75c1dd5dee09e665cef89a33d9997f8fa9d58"
-  },
-  "attachments\/docs\/docs\/three-role-agent-routing.md" : {
-    "filename" : "three-role-agent-routing.md",
-    "mime" : "text\/plain; charset=utf-8",
-    "signature" : "77e9a11df51a7bee4e65a442591108dbfc0c7dbdf6728e7f1257eafe587145f8"
-  },
-  "attachments\/docs\/docs\/three-server-environments.md" : {
-    "filename" : "three-server-environments.md",
-    "mime" : "text\/plain; charset=utf-8",
-    "signature" : "b5198e9f14e3b34ab68d608cde1c6a73a6271dbaa40a2a6af68182bda1757591"
-  },
-  "attachments\/docs\/docs\/users.md" : {
-    "filename" : "users.md",
-    "mime" : "text\/plain; charset=utf-8",
-    "signature" : "f23407ad28c1ba16f9294c39c9c0a08ff73a3fa959816f1881a368ebce7a0e6f"
-  },
-  "attachments\/docs\/docs\/web-client-port.md" : {
-    "filename" : "web-client-port.md",
-    "mime" : "text\/plain; charset=utf-8",
-    "signature" : "abac43f3f5174dd5d883a6f2a91ca152f688aed57bfb8cd9d42fd1ceb85608ac"
-  },
-  "attachments\/harmonic-clock.jpg" : {
-    "filename" : "harmonic-clock.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "e14c605ac40130a0c86dea76cf93014d307258c54e27685cf4154a2941f173a5"
-  },
-  "attachments\/mandelbrot-boundary.jpg" : {
-    "filename" : "mandelbrot-boundary.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "0c719fe133fa25960ef2bcaf7e3bd8dedcb4075c4977158633578b8fbbd8d530"
-  },
-  "harmonic-clock" : {
-    "filename" : "harmonic-clock.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "e14c605ac40130a0c86dea76cf93014d307258c54e27685cf4154a2941f173a5"
-  },
-  "mandelbrot-boundary" : {
-    "filename" : "mandelbrot-boundary.jpg",
-    "mime" : "image\/jpeg",
-    "signature" : "0c719fe133fa25960ef2bcaf7e3bd8dedcb4075c4977158633578b8fbbd8d530"
+  "000-map": {
+    "filename": "000-map.jpg",
+    "mime": "image/jpeg",
+    "signature": "4b3017e63b6dd717788ac68732c0206d28de8db31744533fd50b7153325eb417"
+  },
+  "000-map.jpg": {
+    "filename": "000-map.jpg",
+    "mime": "image/jpeg",
+    "signature": "4b3017e63b6dd717788ac68732c0206d28de8db31744533fd50b7153325eb417"
+  },
+  "001-caloric": {
+    "filename": "001-caloric.jpg",
+    "mime": "image/jpeg",
+    "signature": "30452b0d677b35d61687c30101633cd5f5adf7669ede4424d17a13404266f00b"
+  },
+  "001-caloric.jpg": {
+    "filename": "001-caloric.jpg",
+    "mime": "image/jpeg",
+    "signature": "30452b0d677b35d61687c30101633cd5f5adf7669ede4424d17a13404266f00b"
+  },
+  "002-events": {
+    "filename": "002-events.png",
+    "mime": "image/png",
+    "signature": "0650358831b710fd770912c199d2e96705af795195b7d29103ff3c760ed572fc"
+  },
+  "002-events.png": {
+    "filename": "002-events.png",
+    "mime": "image/png",
+    "signature": "0650358831b710fd770912c199d2e96705af795195b7d29103ff3c760ed572fc"
+  },
+  "003-inside": {
+    "filename": "003-inside.jpg",
+    "mime": "image/jpeg",
+    "signature": "5ce36856214dedddcc588c2672efcfdcdbeb64b62509d715287a99a13db35b3e"
+  },
+  "003-inside.jpg": {
+    "filename": "003-inside.jpg",
+    "mime": "image/jpeg",
+    "signature": "5ce36856214dedddcc588c2672efcfdcdbeb64b62509d715287a99a13db35b3e"
+  },
+  "004-self": {
+    "filename": "004-self.jpg",
+    "mime": "image/jpeg",
+    "signature": "049c210087c8881004b4a2298825fda2adc74f7e177ff8b35caeb11dd09cbc57"
+  },
+  "004-self.jpg": {
+    "filename": "004-self.jpg",
+    "mime": "image/jpeg",
+    "signature": "049c210087c8881004b4a2298825fda2adc74f7e177ff8b35caeb11dd09cbc57"
+  },
+  "005-freewill": {
+    "filename": "005-freewill.jpg",
+    "mime": "image/jpeg",
+    "signature": "41f55f99941ded626c1e318345108512b1b864bed40ddfdc20602568f2656c20"
+  },
+  "005-freewill.jpg": {
+    "filename": "005-freewill.jpg",
+    "mime": "image/jpeg",
+    "signature": "41f55f99941ded626c1e318345108512b1b864bed40ddfdc20602568f2656c20"
+  },
+  "006-output": {
+    "filename": "006-output.jpg",
+    "mime": "image/jpeg",
+    "signature": "b05787f5b1426de7fab4e3ebd165d0fbf9fa9f587ec2758c19b50418b7de6c75"
+  },
+  "006-output.jpg": {
+    "filename": "006-output.jpg",
+    "mime": "image/jpeg",
+    "signature": "b05787f5b1426de7fab4e3ebd165d0fbf9fa9f587ec2758c19b50418b7de6c75"
+  },
+  "007-vacuum": {
+    "filename": "007-vacuum.jpg",
+    "mime": "image/jpeg",
+    "signature": "cb8a5a57cc4c089445e0276a19b2079e5a8cb2c61f78853514207de7421fbed6"
+  },
+  "007-vacuum.jpg": {
+    "filename": "007-vacuum.jpg",
+    "mime": "image/jpeg",
+    "signature": "cb8a5a57cc4c089445e0276a19b2079e5a8cb2c61f78853514207de7421fbed6"
+  },
+  "008-fields": {
+    "filename": "008-fields.jpg",
+    "mime": "image/jpeg",
+    "signature": "a28cf79e13e0be2d439e94e4f4a779d3ff8ab91f39f091c3e4a608f4e5244b92"
+  },
+  "008-fields.jpg": {
+    "filename": "008-fields.jpg",
+    "mime": "image/jpeg",
+    "signature": "a28cf79e13e0be2d439e94e4f4a779d3ff8ab91f39f091c3e4a608f4e5244b92"
+  },
+  "009-randomness": {
+    "filename": "009-randomness.jpg",
+    "mime": "image/jpeg",
+    "signature": "d4d2d6f0bddf74bc53d146a4f52c43676f321ee2d92cc0c203f769e6f718bdf5"
+  },
+  "009-randomness.jpg": {
+    "filename": "009-randomness.jpg",
+    "mime": "image/jpeg",
+    "signature": "d4d2d6f0bddf74bc53d146a4f52c43676f321ee2d92cc0c203f769e6f718bdf5"
+  },
+  "010-largenumbers": {
+    "filename": "010-largenumbers.jpg",
+    "mime": "image/jpeg",
+    "signature": "0c719fe133fa25960ef2bcaf7e3bd8dedcb4075c4977158633578b8fbbd8d530"
+  },
+  "010-largenumbers.jpg": {
+    "filename": "010-largenumbers.jpg",
+    "mime": "image/jpeg",
+    "signature": "0c719fe133fa25960ef2bcaf7e3bd8dedcb4075c4977158633578b8fbbd8d530"
+  },
+  "011-moreisdifferent": {
+    "filename": "011-moreisdifferent.jpg",
+    "mime": "image/jpeg",
+    "signature": "830012d9fd4dbe5830abe02e095febb14bafbe0db635c769e136183f5911abd4"
+  },
+  "011-moreisdifferent.jpg": {
+    "filename": "011-moreisdifferent.jpg",
+    "mime": "image/jpeg",
+    "signature": "830012d9fd4dbe5830abe02e095febb14bafbe0db635c769e136183f5911abd4"
+  },
+  "012-autopoiesis": {
+    "filename": "012-autopoiesis.jpg",
+    "mime": "image/jpeg",
+    "signature": "3b03fd454017bf6fb7aba532ec33b71daf403e2545654228065f048b55ad9c20"
+  },
+  "012-autopoiesis.jpg": {
+    "filename": "012-autopoiesis.jpg",
+    "mime": "image/jpeg",
+    "signature": "3b03fd454017bf6fb7aba532ec33b71daf403e2545654228065f048b55ad9c20"
+  },
+  "013-enactment": {
+    "filename": "013-enactment.jpg",
+    "mime": "image/jpeg",
+    "signature": "ef85ef52491df5322e20e4505d46610c8597b0d209d8fb1fec82a593c0bc46e1"
+  },
+  "013-enactment.jpg": {
+    "filename": "013-enactment.jpg",
+    "mime": "image/jpeg",
+    "signature": "ef85ef52491df5322e20e4505d46610c8597b0d209d8fb1fec82a593c0bc46e1"
+  },
+  "014-cities": {
+    "filename": "014-cities.jpg",
+    "mime": "image/jpeg",
+    "signature": "30aeb7d7f0f019a6abc5ca305416185685b065933f3ba86b600581c3aed377a0"
+  },
+  "014-cities.jpg": {
+    "filename": "014-cities.jpg",
+    "mime": "image/jpeg",
+    "signature": "30aeb7d7f0f019a6abc5ca305416185685b065933f3ba86b600581c3aed377a0"
+  },
+  "015-aliens": {
+    "filename": "015-aliens.jpg",
+    "mime": "image/jpeg",
+    "signature": "6865a9c3893e14a64f928db0656b279f01cd2495cf8b24d2cd2d63d825ca6bdf"
+  },
+  "015-aliens.jpg": {
+    "filename": "015-aliens.jpg",
+    "mime": "image/jpeg",
+    "signature": "6865a9c3893e14a64f928db0656b279f01cd2495cf8b24d2cd2d63d825ca6bdf"
+  },
+  "016-neuralnetwork": {
+    "filename": "016-neuralnetwork.jpg",
+    "mime": "image/jpeg",
+    "signature": "cd7a3d185a57f9217e6caf7189838a1a29f54f89c44d704929fa286c1bd09b32"
+  },
+  "016-neuralnetwork.jpg": {
+    "filename": "016-neuralnetwork.jpg",
+    "mime": "image/jpeg",
+    "signature": "cd7a3d185a57f9217e6caf7189838a1a29f54f89c44d704929fa286c1bd09b32"
+  },
+  "017-pastpresent": {
+    "filename": "017-pastpresent.jpg",
+    "mime": "image/jpeg",
+    "signature": "f3404c6f09ed79c1e6b26304219e7582ae2fb57e9be46f56ec4627a50d04e8ec"
+  },
+  "017-pastpresent.jpg": {
+    "filename": "017-pastpresent.jpg",
+    "mime": "image/jpeg",
+    "signature": "f3404c6f09ed79c1e6b26304219e7582ae2fb57e9be46f56ec4627a50d04e8ec"
+  },
+  "018-magnetization": {
+    "filename": "018-magnetization.jpg",
+    "mime": "image/jpeg",
+    "signature": "3dc25c141bc229263fa1b1f9f0e18cc72b93b266f4a992641c44093e49769f8e"
+  },
+  "018-magnetization.jpg": {
+    "filename": "018-magnetization.jpg",
+    "mime": "image/jpeg",
+    "signature": "3dc25c141bc229263fa1b1f9f0e18cc72b93b266f4a992641c44093e49769f8e"
+  },
+  "019-funerals": {
+    "filename": "019-funerals.jpg",
+    "mime": "image/jpeg",
+    "signature": "12b6909b000c90e04b05c619305e86e47b600a0605966bd4e02da175f171306d"
+  },
+  "019-funerals.jpg": {
+    "filename": "019-funerals.jpg",
+    "mime": "image/jpeg",
+    "signature": "12b6909b000c90e04b05c619305e86e47b600a0605966bd4e02da175f171306d"
+  },
+  "020-penrose": {
+    "filename": "020-penrose.jpg",
+    "mime": "image/jpeg",
+    "signature": "b6a2c6cf2611cc14659d83572215f0d040daaf355e2f416ee6cc928bd453359a"
+  },
+  "020-penrose.jpg": {
+    "filename": "020-penrose.jpg",
+    "mime": "image/jpeg",
+    "signature": "b6a2c6cf2611cc14659d83572215f0d040daaf355e2f416ee6cc928bd453359a"
+  },
+  "021-just": {
+    "filename": "021-just.jpg",
+    "mime": "image/jpeg",
+    "signature": "f3555f580cb247b3bb569bdcc180ea4d23a8ab067d757e3dbae0d7f01dbc4f86"
+  },
+  "021-just.jpg": {
+    "filename": "021-just.jpg",
+    "mime": "image/jpeg",
+    "signature": "f3555f580cb247b3bb569bdcc180ea4d23a8ab067d757e3dbae0d7f01dbc4f86"
+  },
+  "022-locked": {
+    "filename": "022-locked.png",
+    "mime": "image/png",
+    "signature": "850937534caff2b4975059d180da0a7a415157a96ee358b737e9a5da7e8e6538"
+  },
+  "022-locked.png": {
+    "filename": "022-locked.png",
+    "mime": "image/png",
+    "signature": "850937534caff2b4975059d180da0a7a415157a96ee358b737e9a5da7e8e6538"
+  },
+  "023-stories": {
+    "filename": "023-stories.jpg",
+    "mime": "image/jpeg",
+    "signature": "b991da94a6357619ba549789b8bcbf66a69bc6e2e0fc8b6f8ee7f20699b72222"
+  },
+  "023-stories.jpg": {
+    "filename": "023-stories.jpg",
+    "mime": "image/jpeg",
+    "signature": "b991da94a6357619ba549789b8bcbf66a69bc6e2e0fc8b6f8ee7f20699b72222"
+  },
+  "024-ghostmachine": {
+    "filename": "024-ghostmachine.jpg",
+    "mime": "image/jpeg",
+    "signature": "283c41fbbefefb8993c3dadda117675a4544b2bedbf52da1310c2949c4a6137c"
+  },
+  "024-ghostmachine.jpg": {
+    "filename": "024-ghostmachine.jpg",
+    "mime": "image/jpeg",
+    "signature": "283c41fbbefefb8993c3dadda117675a4544b2bedbf52da1310c2949c4a6137c"
+  },
+  "025-widechannel": {
+    "filename": "025-widechannel.jpg",
+    "mime": "image/jpeg",
+    "signature": "2a18943189ab5b840d3d515e30467a76540c706640ceaff904af30ee3948f6db"
+  },
+  "025-widechannel.jpg": {
+    "filename": "025-widechannel.jpg",
+    "mime": "image/jpeg",
+    "signature": "2a18943189ab5b840d3d515e30467a76540c706640ceaff904af30ee3948f6db"
+  },
+  "026-twotruths": {
+    "filename": "026-twotruths.jpg",
+    "mime": "image/jpeg",
+    "signature": "d3045d5895d09afaa1ddaa868a23d01de997c53980cd408e6744f613fe900870"
+  },
+  "026-twotruths.jpg": {
+    "filename": "026-twotruths.jpg",
+    "mime": "image/jpeg",
+    "signature": "d3045d5895d09afaa1ddaa868a23d01de997c53980cd408e6744f613fe900870"
+  },
+  "027-usedtothink": {
+    "filename": "027-usedtothink.jpg",
+    "mime": "image/jpeg",
+    "signature": "640104624554bf8d22b7d95dd6e7f7409d526611429167ef2227ba38e7ee6f15"
+  },
+  "027-usedtothink.jpg": {
+    "filename": "027-usedtothink.jpg",
+    "mime": "image/jpeg",
+    "signature": "640104624554bf8d22b7d95dd6e7f7409d526611429167ef2227ba38e7ee6f15"
+  },
+  "028-network": {
+    "filename": "028-network.jpg",
+    "mime": "image/jpeg",
+    "signature": "349ed40258e4ec6a8f6bf4fe16a59c989541e32af27173342757098fdcf97185"
+  },
+  "028-network.jpg": {
+    "filename": "028-network.jpg",
+    "mime": "image/jpeg",
+    "signature": "349ed40258e4ec6a8f6bf4fe16a59c989541e32af27173342757098fdcf97185"
+  },
+  "029-lighttime": {
+    "filename": "029-lighttime.jpg",
+    "mime": "image/jpeg",
+    "signature": "9ce76ab1d179af7e16cc10d90680e89813bf6ee45d0edfc7ca11692722d5b7ff"
+  },
+  "029-lighttime.jpg": {
+    "filename": "029-lighttime.jpg",
+    "mime": "image/jpeg",
+    "signature": "9ce76ab1d179af7e16cc10d90680e89813bf6ee45d0edfc7ca11692722d5b7ff"
+  },
+  "030-interference": {
+    "filename": "030-interference.jpg",
+    "mime": "image/jpeg",
+    "signature": "55182627cf7902857238c563f77e545b0d4d6bfa193fff6c13dcb0363cf0f04b"
+  },
+  "030-interference.jpg": {
+    "filename": "030-interference.jpg",
+    "mime": "image/jpeg",
+    "signature": "55182627cf7902857238c563f77e545b0d4d6bfa193fff6c13dcb0363cf0f04b"
+  },
+  "031-surfaceinside": {
+    "filename": "031-surfaceinside.jpg",
+    "mime": "image/jpeg",
+    "signature": "95a116bf327e293006fa1d5291fc25083c548c889e8ddcc7d026a21f3ddc2f99"
+  },
+  "031-surfaceinside.jpg": {
+    "filename": "031-surfaceinside.jpg",
+    "mime": "image/jpeg",
+    "signature": "95a116bf327e293006fa1d5291fc25083c548c889e8ddcc7d026a21f3ddc2f99"
+  },
+  "032-skyfossil": {
+    "filename": "032-skyfossil.jpg",
+    "mime": "image/jpeg",
+    "signature": "db07eb740185a22dc81ae69749ed52fda471aa19346582125742a2ba719d35fd"
+  },
+  "032-skyfossil.jpg": {
+    "filename": "032-skyfossil.jpg",
+    "mime": "image/jpeg",
+    "signature": "db07eb740185a22dc81ae69749ed52fda471aa19346582125742a2ba719d35fd"
+  },
+  "033-edge": {
+    "filename": "033-edge.jpg",
+    "mime": "image/jpeg",
+    "signature": "fbb3d49fc622647fe3e85b4f152e3ed4320fa2980d28551bbdf422bd705d7f4b"
+  },
+  "033-edge.jpg": {
+    "filename": "033-edge.jpg",
+    "mime": "image/jpeg",
+    "signature": "fbb3d49fc622647fe3e85b4f152e3ed4320fa2980d28551bbdf422bd705d7f4b"
+  },
+  "034-onerule": {
+    "filename": "034-onerule.png",
+    "mime": "image/png",
+    "signature": "c7e0fe65b8e1e5127bf6c3260b6ce464d3fac38cdf6ec4bc623e1d071180289c"
+  },
+  "034-onerule.png": {
+    "filename": "034-onerule.png",
+    "mime": "image/png",
+    "signature": "c7e0fe65b8e1e5127bf6c3260b6ce464d3fac38cdf6ec4bc623e1d071180289c"
+  },
+  "035-simplestnumbers": {
+    "filename": "035-simplestnumbers.png",
+    "mime": "image/png",
+    "signature": "00dbb7732259a9bf6f301c8c3f8240b62e0e97eca6687c7778157506ca9079c4"
+  },
+  "035-simplestnumbers.png": {
+    "filename": "035-simplestnumbers.png",
+    "mime": "image/png",
+    "signature": "00dbb7732259a9bf6f301c8c3f8240b62e0e97eca6687c7778157506ca9079c4"
+  },
+  "036-universenoticing": {
+    "filename": "036-universenoticing.jpg",
+    "mime": "image/jpeg",
+    "signature": "888b858ff7ca93e20ad3fb3d1a23549084e634922626fe10c075d6b9ef445cb5"
+  },
+  "036-universenoticing.jpg": {
+    "filename": "036-universenoticing.jpg",
+    "mime": "image/jpeg",
+    "signature": "888b858ff7ca93e20ad3fb3d1a23549084e634922626fe10c075d6b9ef445cb5"
+  },
+  "037-assembly": {
+    "filename": "037-assembly.jpg",
+    "mime": "image/jpeg",
+    "signature": "4c25cc66f17be4ed1b5db566b8d215d92ba66b58ecfaeb82fd7b5ac59d40adb4"
+  },
+  "037-assembly.jpg": {
+    "filename": "037-assembly.jpg",
+    "mime": "image/jpeg",
+    "signature": "4c25cc66f17be4ed1b5db566b8d215d92ba66b58ecfaeb82fd7b5ac59d40adb4"
+  },
+  "038-consonance-map": {
+    "filename": "038-consonance-map.png",
+    "mime": "image/png",
+    "signature": "ae4dad55459ddab8f2a1906f9c790060a4397ec47fe7becea936d7aa427d87f9"
+  },
+  "038-consonance-map.png": {
+    "filename": "038-consonance-map.png",
+    "mime": "image/png",
+    "signature": "ae4dad55459ddab8f2a1906f9c790060a4397ec47fe7becea936d7aa427d87f9"
+  },
+  "040-stability": {
+    "filename": "040-stability.png",
+    "mime": "image/png",
+    "signature": "6512251c16b58c7ae3211b69b579ab2709bfea1e707f56ed258670c37cddc880"
+  },
+  "040-stability.png": {
+    "filename": "040-stability.png",
+    "mime": "image/png",
+    "signature": "6512251c16b58c7ae3211b69b579ab2709bfea1e707f56ed258670c37cddc880"
+  },
+  "041-colorwheel": {
+    "filename": "041-colorwheel.png",
+    "mime": "image/png",
+    "signature": "8f9f672d9b9066cd6a45dd6335696dd3b886c2c2c2daa596c8669289f51a39d2"
+  },
+  "041-colorwheel.png": {
+    "filename": "041-colorwheel.png",
+    "mime": "image/png",
+    "signature": "8f9f672d9b9066cd6a45dd6335696dd3b886c2c2c2daa596c8669289f51a39d2"
+  },
+  "042-eyethinks": {
+    "filename": "042-eyethinks.png",
+    "mime": "image/png",
+    "signature": "0e308e4dd5384ea0ddb7fe3621ba396bf4018f9a171ed13919727bd1bcd4f47f"
+  },
+  "042-eyethinks.png": {
+    "filename": "042-eyethinks.png",
+    "mime": "image/png",
+    "signature": "0e308e4dd5384ea0ddb7fe3621ba396bf4018f9a171ed13919727bd1bcd4f47f"
+  },
+  "044-ai-retina": {
+    "filename": "044-ai-retina.jpg",
+    "mime": "image/jpeg",
+    "signature": "ceb48859d3ccac4406a11fb386d1be8e7c9afe5d6cc753fcae9f68f55e815bb2"
+  },
+  "044-ai-retina.jpg": {
+    "filename": "044-ai-retina.jpg",
+    "mime": "image/jpeg",
+    "signature": "ceb48859d3ccac4406a11fb386d1be8e7c9afe5d6cc753fcae9f68f55e815bb2"
+  },
+  "045-baldwin": {
+    "filename": "045-baldwin.png",
+    "mime": "image/png",
+    "signature": "d0fdb5a6d1fec46659a6e6f155e4ba2dc96f761f283a8c0bb67fad89dac54b6b"
+  },
+  "045-baldwin.png": {
+    "filename": "045-baldwin.png",
+    "mime": "image/png",
+    "signature": "d0fdb5a6d1fec46659a6e6f155e4ba2dc96f761f283a8c0bb67fad89dac54b6b"
+  },
+  "046-thinkfast": {
+    "filename": "046-thinkfast.png",
+    "mime": "image/png",
+    "signature": "c9f2e97847614994bb85c93db2346759b1a0d68c6df307455bb49780ab54af20"
+  },
+  "046-thinkfast.png": {
+    "filename": "046-thinkfast.png",
+    "mime": "image/png",
+    "signature": "c9f2e97847614994bb85c93db2346759b1a0d68c6df307455bb49780ab54af20"
+  },
+  "047-ai-feeling": {
+    "filename": "047-ai-feeling.png",
+    "mime": "image/png",
+    "signature": "96f29c937e68f9b5c22488c009961273e67c179083040b813699b29bb58a71f0"
+  },
+  "047-ai-feeling.png": {
+    "filename": "047-ai-feeling.png",
+    "mime": "image/png",
+    "signature": "96f29c937e68f9b5c22488c009961273e67c179083040b813699b29bb58a71f0"
+  },
+  "048-flashes": {
+    "filename": "048-flashes.png",
+    "mime": "image/png",
+    "signature": "dec45288d3ec8fa9f6a1df07693744eae7d02f19ae01cee5fe2980bf22ac270e"
+  },
+  "048-flashes.png": {
+    "filename": "048-flashes.png",
+    "mime": "image/png",
+    "signature": "dec45288d3ec8fa9f6a1df07693744eae7d02f19ae01cee5fe2980bf22ac270e"
+  },
+  "049-strangeloop": {
+    "filename": "049-strangeloop.jpg",
+    "mime": "image/jpeg",
+    "signature": "25df7adcd2a59ba4011f609de63488f2d57f179a31a0b467ec87759be445812b"
+  },
+  "049-strangeloop.jpg": {
+    "filename": "049-strangeloop.jpg",
+    "mime": "image/jpeg",
+    "signature": "25df7adcd2a59ba4011f609de63488f2d57f179a31a0b467ec87759be445812b"
+  },
+  "050-orthogonal": {
+    "filename": "050-orthogonal.png",
+    "mime": "image/png",
+    "signature": "6749c6a0bb501dc98a22690d178159768fa4ff545bc1fc60aab0cd2f90284a68"
+  },
+  "050-orthogonal.png": {
+    "filename": "050-orthogonal.png",
+    "mime": "image/png",
+    "signature": "6749c6a0bb501dc98a22690d178159768fa4ff545bc1fc60aab0cd2f90284a68"
+  },
+  "051-spacetime": {
+    "filename": "051-spacetime.png",
+    "mime": "image/png",
+    "signature": "941bb2de689de39fe3e3bea9f795eb47dcadf02a2b5326349da827b1c1d69aca"
+  },
+  "051-spacetime.png": {
+    "filename": "051-spacetime.png",
+    "mime": "image/png",
+    "signature": "941bb2de689de39fe3e3bea9f795eb47dcadf02a2b5326349da827b1c1d69aca"
+  },
+  "052-dichotomy": {
+    "filename": "052-dichotomy.png",
+    "mime": "image/png",
+    "signature": "072d58b276de2da51983c54dc73a503bc18b069ddf30ef668bcc8e7790e287b5"
+  },
+  "052-dichotomy.png": {
+    "filename": "052-dichotomy.png",
+    "mime": "image/png",
+    "signature": "072d58b276de2da51983c54dc73a503bc18b069ddf30ef668bcc8e7790e287b5"
+  },
+  "053-dimensions": {
+    "filename": "053-dimensions.jpg",
+    "mime": "image/jpeg",
+    "signature": "281f3d82125fc2b48a562de68d6ae7d0bbcccc729d02a4d99975956ad1bfccdb"
+  },
+  "053-dimensions.jpg": {
+    "filename": "053-dimensions.jpg",
+    "mime": "image/jpeg",
+    "signature": "281f3d82125fc2b48a562de68d6ae7d0bbcccc729d02a4d99975956ad1bfccdb"
+  },
+  "054-bornharmonic": {
+    "filename": "054-bornharmonic.jpg",
+    "mime": "image/jpeg",
+    "signature": "9d4d49f6a720e4ccd517e1b392586ff47b3e14ab77bb1cf862bf703e10481545"
+  },
+  "054-bornharmonic.jpg": {
+    "filename": "054-bornharmonic.jpg",
+    "mime": "image/jpeg",
+    "signature": "9d4d49f6a720e4ccd517e1b392586ff47b3e14ab77bb1cf862bf703e10481545"
+  },
+  "056-mandelneural": {
+    "filename": "056-mandelneural.jpg",
+    "mime": "image/jpeg",
+    "signature": "a8bed34ab88b4ca31448457b02bb55710e926cd5c6c1f59ef787bda33e8a150d"
+  },
+  "056-mandelneural.jpg": {
+    "filename": "056-mandelneural.jpg",
+    "mime": "image/jpeg",
+    "signature": "a8bed34ab88b4ca31448457b02bb55710e926cd5c6c1f59ef787bda33e8a150d"
+  },
+  "057-superfarey": {
+    "filename": "057-superfarey.jpg",
+    "mime": "image/jpeg",
+    "signature": "e9a1641057f705e3e06bb7bd3a064ff1ea3489a470ae279a426b878e547ee775"
+  },
+  "057-superfarey.jpg": {
+    "filename": "057-superfarey.jpg",
+    "mime": "image/jpeg",
+    "signature": "e9a1641057f705e3e06bb7bd3a064ff1ea3489a470ae279a426b878e547ee775"
+  },
+  "058-galacticnets": {
+    "filename": "058-galacticnets.jpg",
+    "mime": "image/jpeg",
+    "signature": "5b6e4f1f44ed3728ecd48c2592db4632e596b5226c170c3a27763e0589c17aef"
+  },
+  "058-galacticnets.jpg": {
+    "filename": "058-galacticnets.jpg",
+    "mime": "image/jpeg",
+    "signature": "5b6e4f1f44ed3728ecd48c2592db4632e596b5226c170c3a27763e0589c17aef"
+  },
+  "059-galaxyevolve": {
+    "filename": "059-galaxyevolve.png",
+    "mime": "image/png",
+    "signature": "32de078195937f88362b965c2bb88a6334fc9a4cdbeefc83e4247f2b701bf331"
+  },
+  "059-galaxyevolve.png": {
+    "filename": "059-galaxyevolve.png",
+    "mime": "image/png",
+    "signature": "32de078195937f88362b965c2bb88a6334fc9a4cdbeefc83e4247f2b701bf331"
+  },
+  "060-worldtests": {
+    "filename": "060-worldtests.png",
+    "mime": "image/png",
+    "signature": "e623abd19c6dfb89fd5b32dc588386cc94bc453def9aefea891fb713ae90b72b"
+  },
+  "060-worldtests.png": {
+    "filename": "060-worldtests.png",
+    "mime": "image/png",
+    "signature": "e623abd19c6dfb89fd5b32dc588386cc94bc453def9aefea891fb713ae90b72b"
+  },
+  "061-babyuniverse": {
+    "filename": "061-babyuniverse.png",
+    "mime": "image/png",
+    "signature": "0747c9a630596f75e5d6c07f4a2b3b5e38c1820e313183bba1bf6449699d53c5"
+  },
+  "061-babyuniverse.png": {
+    "filename": "061-babyuniverse.png",
+    "mime": "image/png",
+    "signature": "0747c9a630596f75e5d6c07f4a2b3b5e38c1820e313183bba1bf6449699d53c5"
+  },
+  "062-branchingdice": {
+    "filename": "062-branchingdice.jpg",
+    "mime": "image/jpeg",
+    "signature": "f39e17d9f4e8c9e13fccf062991aee059a96e5a72825fbf1f0e212f223ae9404"
+  },
+  "062-branchingdice.jpg": {
+    "filename": "062-branchingdice.jpg",
+    "mime": "image/jpeg",
+    "signature": "f39e17d9f4e8c9e13fccf062991aee059a96e5a72825fbf1f0e212f223ae9404"
+  },
+  "063-mandelcrystals": {
+    "filename": "063-mandelcrystals.jpg",
+    "mime": "image/jpeg",
+    "signature": "5930ebbf7331f7c5a5ddae0cc6a2359dc2e99764e52ec91640e486dfa47e99ed"
+  },
+  "063-mandelcrystals.jpg": {
+    "filename": "063-mandelcrystals.jpg",
+    "mime": "image/jpeg",
+    "signature": "5930ebbf7331f7c5a5ddae0cc6a2359dc2e99764e52ec91640e486dfa47e99ed"
+  },
+  "064-choicedimension": {
+    "filename": "064-choicedimension.jpg",
+    "mime": "image/jpeg",
+    "signature": "727da61c37a6d1a356d3096a279d7e65876ced812aa275f01988fecce81cdeb3"
+  },
+  "064-choicedimension.jpg": {
+    "filename": "064-choicedimension.jpg",
+    "mime": "image/jpeg",
+    "signature": "727da61c37a6d1a356d3096a279d7e65876ced812aa275f01988fecce81cdeb3"
+  },
+  "065-feel-do": {
+    "filename": "065-feel-do.jpg",
+    "mime": "image/jpeg",
+    "signature": "4b8dfd73d4b08f950bd08ee9b225b078933612973bb6c5d4905a5328003c3a71"
+  },
+  "065-feel-do.jpg": {
+    "filename": "065-feel-do.jpg",
+    "mime": "image/jpeg",
+    "signature": "4b8dfd73d4b08f950bd08ee9b225b078933612973bb6c5d4905a5328003c3a71"
+  },
+  "066-cosmicattractor": {
+    "filename": "066-cosmicattractor.png",
+    "mime": "image/png",
+    "signature": "b574d8c5c4bd36191135724ff33c3e60233eacb42b775bf83c1213b4f6c03764"
+  },
+  "066-cosmicattractor.png": {
+    "filename": "066-cosmicattractor.png",
+    "mime": "image/png",
+    "signature": "b574d8c5c4bd36191135724ff33c3e60233eacb42b775bf83c1213b4f6c03764"
+  },
+  "067-monads-holons": {
+    "filename": "067-monads-holons.jpg",
+    "mime": "image/jpeg",
+    "signature": "8e91a19be102f11b29497cd899921a022cf8cf9929ce2298680e9d93e97bfd68"
+  },
+  "067-monads-holons.jpg": {
+    "filename": "067-monads-holons.jpg",
+    "mime": "image/jpeg",
+    "signature": "8e91a19be102f11b29497cd899921a022cf8cf9929ce2298680e9d93e97bfd68"
+  },
+  "068-bubbles": {
+    "filename": "068-bubbles.jpg",
+    "mime": "image/jpeg",
+    "signature": "59672c0947da95102e50f36278bb3094ab4e6ee21c45116cab7e407a1e9c693d"
+  },
+  "068-bubbles.jpg": {
+    "filename": "068-bubbles.jpg",
+    "mime": "image/jpeg",
+    "signature": "59672c0947da95102e50f36278bb3094ab4e6ee21c45116cab7e407a1e9c693d"
+  },
+  "069-love": {
+    "filename": "069-love.jpg",
+    "mime": "image/jpeg",
+    "signature": "1ea02a918cff5cdfa87ffeb38a6357528087aa9f3e43acedaa39e8cbca6ff1df"
+  },
+  "069-love.jpg": {
+    "filename": "069-love.jpg",
+    "mime": "image/jpeg",
+    "signature": "1ea02a918cff5cdfa87ffeb38a6357528087aa9f3e43acedaa39e8cbca6ff1df"
+  },
+  "070-harmony": {
+    "filename": "070-harmony.jpg",
+    "mime": "image/jpeg",
+    "signature": "45f3de418d1587e117aea43e1bb5edde4a31117e9f7950e5b72c0852fa52d577"
+  },
+  "070-harmony.jpg": {
+    "filename": "070-harmony.jpg",
+    "mime": "image/jpeg",
+    "signature": "45f3de418d1587e117aea43e1bb5edde4a31117e9f7950e5b72c0852fa52d577"
+  },
+  "071-beauty": {
+    "filename": "071-beauty.jpg",
+    "mime": "image/jpeg",
+    "signature": "51e44c78e24dbbf70b4ab8b769a0f59c7bfb77519cc5c95b364666d990ff01a6"
+  },
+  "071-beauty.jpg": {
+    "filename": "071-beauty.jpg",
+    "mime": "image/jpeg",
+    "signature": "51e44c78e24dbbf70b4ab8b769a0f59c7bfb77519cc5c95b364666d990ff01a6"
+  },
+  "072-temperature": {
+    "filename": "072-temperature.png",
+    "mime": "image/png",
+    "signature": "2a1fb01206ededb58f9b99a32fbb21e5f66b69d14d0f9015fd3ecf1a824f514a"
+  },
+  "072-temperature.png": {
+    "filename": "072-temperature.png",
+    "mime": "image/png",
+    "signature": "2a1fb01206ededb58f9b99a32fbb21e5f66b69d14d0f9015fd3ecf1a824f514a"
+  },
+  "073-moral-caution": {
+    "filename": "073-moral-caution.jpg",
+    "mime": "image/jpeg",
+    "signature": "5cee259a1390c01c5531422ca150ae3bcebfa7218a6d2d40e5c0273512bcbbe2"
+  },
+  "073-moral-caution.jpg": {
+    "filename": "073-moral-caution.jpg",
+    "mime": "image/jpeg",
+    "signature": "5cee259a1390c01c5531422ca150ae3bcebfa7218a6d2d40e5c0273512bcbbe2"
+  },
+  "074-grasshopper": {
+    "filename": "074-grasshopper.jpg",
+    "mime": "image/jpeg",
+    "signature": "cda55eee2a3f59c99e3d8a1dd753b95e3b3671168fb5ca93795f23876a73306e"
+  },
+  "074-grasshopper.jpg": {
+    "filename": "074-grasshopper.jpg",
+    "mime": "image/jpeg",
+    "signature": "cda55eee2a3f59c99e3d8a1dd753b95e3b3671168fb5ca93795f23876a73306e"
+  },
+  "076-fivewindows": {
+    "filename": "076-fivewindows.jpg",
+    "mime": "image/jpeg",
+    "signature": "1c200824d7536f8cdd3f2b6e0b96fa637a89ef0ea78d7bf71fada0226042809c"
+  },
+  "076-fivewindows.jpg": {
+    "filename": "076-fivewindows.jpg",
+    "mime": "image/jpeg",
+    "signature": "1c200824d7536f8cdd3f2b6e0b96fa637a89ef0ea78d7bf71fada0226042809c"
+  },
+  "077-intention": {
+    "filename": "077-intention.jpg",
+    "mime": "image/jpeg",
+    "signature": "dea7bac84b164f67829e1933a58fde37b9bbc9cefa482c7a5a5fa557ae61c7a7"
+  },
+  "077-intention.jpg": {
+    "filename": "077-intention.jpg",
+    "mime": "image/jpeg",
+    "signature": "dea7bac84b164f67829e1933a58fde37b9bbc9cefa482c7a5a5fa557ae61c7a7"
+  },
+  "078-boundarystack": {
+    "filename": "078-boundarystack.jpg",
+    "mime": "image/jpeg",
+    "signature": "1bafa062d9a446df1eb925af3e02e6056535c3538a2a303c665d19380e2f577a"
+  },
+  "078-boundarystack.jpg": {
+    "filename": "078-boundarystack.jpg",
+    "mime": "image/jpeg",
+    "signature": "1bafa062d9a446df1eb925af3e02e6056535c3538a2a303c665d19380e2f577a"
+  },
+  "079-pronouns": {
+    "filename": "079-pronouns.jpg",
+    "mime": "image/jpeg",
+    "signature": "fe73116cbee54cdb0b7552e59270e8471114b6cce566385e3451d78e0f075285"
+  },
+  "079-pronouns.jpg": {
+    "filename": "079-pronouns.jpg",
+    "mime": "image/jpeg",
+    "signature": "fe73116cbee54cdb0b7552e59270e8471114b6cce566385e3451d78e0f075285"
+  },
+  "080-unification": {
+    "filename": "080-unification.jpg",
+    "mime": "image/jpeg",
+    "signature": "bbb788961fcb8f7fa176145fb2b203afa96c5df0f85cfe542d552858c007ec33"
+  },
+  "080-unification.jpg": {
+    "filename": "080-unification.jpg",
+    "mime": "image/jpeg",
+    "signature": "bbb788961fcb8f7fa176145fb2b203afa96c5df0f85cfe542d552858c007ec33"
+  },
+  "20170505_065602": {
+    "signature": "d987371af50a191fed47c4358299ce6274719afcdc7dd1b734c45c5b049e4ffe"
+  },
+  "20170505_065602.jpeg": {
+    "filename": "20170505_065602.jpeg",
+    "mime": "image/jpeg",
+    "signature": "d987371af50a191fed47c4358299ce6274719afcdc7dd1b734c45c5b049e4ffe"
+  },
+  "IMG_3179.jpeg": {
+    "filename": "IMG_3179.jpeg",
+    "mime": "image/jpeg",
+    "signature": "f173782a7972f282ab65438007b07fa112565a502e8ded17841743616756ede4"
+  },
+  "IMG_3297.jpeg": {
+    "filename": "IMG_3297.jpeg",
+    "mime": "image/jpeg",
+    "signature": "5e191f78bf4e4f2ee7f0965355a7ebdeca50868d7d63989b9978fe92f956d52c"
+  },
+  "IMG_3353": {
+    "signature": "1ff22b31768b60a743f5ef66334adbf3cfda8a0377835d68fa46205623113629"
+  },
+  "IMG_3353.jpeg": {
+    "filename": "IMG_3353.jpeg",
+    "mime": "image/jpeg",
+    "signature": "1ff22b31768b60a743f5ef66334adbf3cfda8a0377835d68fa46205623113629"
+  },
+  "IMG_3493.webp": {
+    "filename": "IMG_3493.webp",
+    "mime": "image/webp",
+    "signature": "a0e8d286d8e99553956d3dc17a216f9220af2b1d6cb3a1dff2c36b2fd5012301"
+  },
+  "IMG_3537": {
+    "filename": "IMG_3537.jpeg",
+    "mime": "image/jpeg",
+    "signature": "ffdc38e89662dec074d9345215b570818c84f93d8497c1123e2afc6dc1da4bde"
+  },
+  "IMG_3537.jpeg": {
+    "filename": "IMG_3537.jpeg",
+    "mime": "image/jpeg",
+    "signature": "ffdc38e89662dec074d9345215b570818c84f93d8497c1123e2afc6dc1da4bde"
+  },
+  "IMG_3538": {
+    "filename": "IMG_3538.jpeg",
+    "mime": "image/jpeg",
+    "signature": "3478b6f6edf7a17bc0a4310d83f28fc686c0e4039b6ab540ef07081e962c93a4"
+  },
+  "IMG_3538.jpeg": {
+    "filename": "IMG_3538.jpeg",
+    "mime": "image/jpeg",
+    "signature": "3478b6f6edf7a17bc0a4310d83f28fc686c0e4039b6ab540ef07081e962c93a4"
+  },
+  "IMG_3548.jpeg": {
+    "filename": "IMG_3548.jpeg",
+    "mime": "image/jpeg",
+    "signature": "f1b186570c01557b77a0a9e74932aaa6f10f9768961f64f3c95d87082a8013ad"
+  },
+  "IMG_6181.jpeg": {
+    "filename": "IMG_6181.jpeg",
+    "mime": "image/jpeg",
+    "signature": "d9ed0d78f7e4a1f509e5025893778ade8c3a818bf125c6f07ab7f29bb53acd8f"
+  },
+  "docs/agent.md": {
+    "filename": "agent.md",
+    "mime": "text/plain; charset=utf-8",
+    "signature": "16672c45424c5383e8213ecf2f53dd3094958930c59cc1089fb077463aab05c3"
+  },
+  "docs/architecture.md": {
+    "filename": "architecture.md",
+    "mime": "text/plain; charset=utf-8",
+    "signature": "b7b7bb98a44806614ebb05d425c2c99fa24e01ca1432a8e3a982585357fd8857"
+  },
+  "docs/build-site.md": {
+    "filename": "build-site.md",
+    "mime": "text/plain; charset=utf-8",
+    "signature": "607ce184553337532b39facf27580cfcfc326f9557acef5ea4755fc8928e50b7"
+  },
+  "docs/chips-speakers-and-dates.md": {
+    "filename": "chips-speakers-and-dates.md",
+    "mime": "text/plain; charset=utf-8",
+    "signature": "92a9933c391b005d474f5aee43ee1852a5360cc6995a30b36448cb929d87e622"
+  },
+  "docs/claude-edit-protocol.md": {
+    "filename": "claude-edit-protocol.md",
+    "mime": "text/plain; charset=utf-8",
+    "signature": "a0f6ab4fdd840b4ebed3e51bd527f171ae1cd21befb49544c57484338bb0cf60"
+  },
+  "docs/codex-restore-spec.md": {
+    "filename": "codex-restore-spec.md",
+    "mime": "text/plain; charset=utf-8",
+    "signature": "3f158f0f71989864ca6ef07b8f4ded97c26a9acbe1937ce67832ef639dacd8f9"
+  },
+  "docs/convos-format.md": {
+    "filename": "convos-format.md",
+    "mime": "text/plain; charset=utf-8",
+    "signature": "b10033588f253d1545b035a15792dd3cfc3b53bc2fe98e3eeb952515fa2911b7"
+  },
+  "docs/deferred-work.md": {
+    "filename": "deferred-work.md",
+    "mime": "text/plain; charset=utf-8",
+    "signature": "137504cc9e3d3e37e95fd367c777144c41e6b9e79a9f692edf66352f60110e11"
+  },
+  "docs/edit-proposal-markup.md": {
+    "filename": "edit-proposal-markup.md",
+    "mime": "text/plain; charset=utf-8",
+    "signature": "f5f574855eb11f4853b8f16452000793996399ded931f04425ce47eb1cca7973"
+  },
+  "docs/future/admin-todo-plan.md": {
+    "filename": "admin-todo-plan.md",
+    "mime": "text/plain; charset=utf-8",
+    "signature": "5a8c6a7d059b8afc04f18f0a687001d7a894cf99c03c3972e87868def035a3cf"
+  },
+  "docs/future/admin-todo.md": {
+    "filename": "admin-todo.md",
+    "mime": "text/plain; charset=utf-8",
+    "signature": "e8922630f1515ebb9535a6cdcb72db0259cdd0f91a477adab3589b0a16fab286"
+  },
+  "docs/future/agent-data-separation-and-turn-routing.md": {
+    "filename": "agent-data-separation-and-turn-routing.md",
+    "mime": "text/plain; charset=utf-8",
+    "signature": "8fa94dd6b25851142e57baf64dbde0d2fb5a656e249b378590d51266ddcc6ae9"
+  },
+  "docs/future/attachments-design.md": {
+    "filename": "attachments-design.md",
+    "mime": "text/plain; charset=utf-8",
+    "signature": "8ece8716f1bf93a88d6e1a1795ed3ff53a20cbdc77733c4aee0ddac3a3bb80af"
+  },
+  "docs/future/attachments-implementation-plan.md": {
+    "filename": "attachments-implementation-plan.md",
+    "mime": "text/plain; charset=utf-8",
+    "signature": "1f4ba0feacc0a6977c28df44ef38a68607f01d5de590fbee420f2465fecf25c9"
+  },
+  "docs/future/auth-architecture.md": {
+    "filename": "auth-architecture.md",
+    "mime": "text/plain; charset=utf-8",
+    "signature": "9309e9a866b2a96078a9a23a085e35da0eb14c3bf79d8681c72723d45e77f491"
+  },
+  "docs/future/cache-safe-settlement-and-time-based-chip-ids.md": {
+    "filename": "cache-safe-settlement-and-time-based-chip-ids.md",
+    "mime": "text/plain; charset=utf-8",
+    "signature": "19b07901ba7f81c67fd70d5dc9a0be0870b2b6b867a40d3b764e21540131f0fe"
+  },
+  "docs/future/conversation-rotation.md": {
+    "filename": "conversation-rotation.md",
+    "mime": "text/plain; charset=utf-8",
+    "signature": "a126e277451afceea531ef65919b9c3aae091d22b6754cc3773a1fda4ad298ae"
+  },
+  "docs/future/dictation-architecture.md": {
+    "filename": "dictation-architecture.md",
+    "mime": "text/plain; charset=utf-8",
+    "signature": "83fefbbd335666fbc4360a84c42ac31a192311acf283860a2202c17aa0fe359a"
+  },
+  "docs/future/dictation-local-cleanup-and-bias.md": {
+    "filename": "dictation-local-cleanup-and-bias.md",
+    "mime": "text/plain; charset=utf-8",
+    "signature": "45df87ca2da948df40f128ed2314045ae22f68f50108cb39e6922debaa174eea"
+  },
+  "docs/future/gossamer-agent-storage-spec.md": {
+    "filename": "gossamer-agent-storage-spec.md",
+    "mime": "text/plain; charset=utf-8",
+    "signature": "f38a20c5a57a58e793f967a5da5c4acbc1416984eabadbff151105a47eb6d0c4"
+  },
+  "docs/future/gossamer-multi-layer-routing.md": {
+    "filename": "gossamer-multi-layer-routing.md",
+    "mime": "text/plain; charset=utf-8",
+    "signature": "4b9a4f931c0cac406be9d9ee422ded60df3fa7aeeef5ba15c23a50bf6b8ed297"
+  },
+  "docs/future/identity-server-c1.md": {
+    "filename": "identity-server-c1.md",
+    "mime": "text/plain; charset=utf-8",
+    "signature": "e8c95f9417a7752d65475e1154e169780057a28a39264d26d1a57836f9a3fa4f"
+  },
+  "docs/future/multi-user-collaboration.md": {
+    "filename": "multi-user-collaboration.md",
+    "mime": "text/plain; charset=utf-8",
+    "signature": "48f5dd5eadc9479b3c13ffce1ec3772bd209049c92f4731bac959c937a81fb1a"
+  },
+  "docs/future/notification-testing-strategy.md": {
+    "filename": "notification-testing-strategy.md",
+    "mime": "text/plain; charset=utf-8",
+    "signature": "f556b389593463d74b2824ec13a20c010fd79b3dc7d718267585857f89b49474"
+  },
+  "docs/future/per-subject-summaries.md": {
+    "filename": "per-subject-summaries.md",
+    "mime": "text/plain; charset=utf-8",
+    "signature": "affff30c77646d18f1bd5f4da525b296f5e5121a63ad5352cb19ec1b9fba7740"
+  },
+  "docs/future/stateful-admin-warnings.md": {
+    "filename": "stateful-admin-warnings.md",
+    "mime": "text/plain; charset=utf-8",
+    "signature": "e65c564a7f7b7f70b1c4f094569ba96ef3aaab692317843f8190acc1febb68b3"
+  },
+  "docs/future/swiftpm-xcode-test-split.md": {
+    "filename": "swiftpm-xcode-test-split.md",
+    "mime": "text/plain; charset=utf-8",
+    "signature": "852cd65d581358eed8f3c73746817b26a9b146da84e75ee370b1de703b0b4fc9"
+  },
+  "docs/future/test-coverage-plan.md": {
+    "filename": "test-coverage-plan.md",
+    "mime": "text/plain; charset=utf-8",
+    "signature": "7aa2aca38516ea8bfbfbc5d501b11a2bbdcf7cb96a8afe1d45cd625f9348e1dd"
+  },
+  "docs/gossamer-development-history.md": {
+    "filename": "gossamer-development-history.md",
+    "mime": "text/plain; charset=utf-8",
+    "signature": "b9a792fc064c50455145b15fb429a2aa2f97c8e5b48fd3545c31b0e64d3ee395"
+  },
+  "docs/gossamer-origin-story.md": {
+    "filename": "gossamer-origin-story.md",
+    "mime": "text/plain; charset=utf-8",
+    "signature": "206f80905eb57ec056483fc60ffcffdc49459cc482b12e677ff1f6fadb8e2a6a"
+  },
+  "docs/gossamer-protocol-design.md": {
+    "filename": "gossamer-protocol-design.md",
+    "mime": "text/plain; charset=utf-8",
+    "signature": "14e4921fec2e03da49387de82de3e4a20e1d82b85c7f10a76c4e1630af4b9bfc"
+  },
+  "docs/image-manager.md": {
+    "filename": "image-manager.md",
+    "mime": "text/plain; charset=utf-8",
+    "signature": "9f6b8f5384b3ed937d58e397402e028514941b38a47ee1fd3af0e937ce474bb5"
+  },
+  "docs/logo-design.md": {
+    "filename": "logo-design.md",
+    "mime": "text/plain; charset=utf-8",
+    "signature": "db25d41349fa8050099a26ad426cae3eec5e62c0ea72fd654ded1b7692330f5a"
+  },
+  "docs/modules.md": {
+    "filename": "modules.md",
+    "mime": "text/plain; charset=utf-8",
+    "signature": "8b3f93fb06dc2ed60a4505372245185419f0b33fd8c4e820ab3f2d47626fdc43"
+  },
+  "docs/multi-project-notifications.md": {
+    "filename": "multi-project-notifications.md",
+    "mime": "text/plain; charset=utf-8",
+    "signature": "7196c6c49acf5eac84ed9b79490e575d63e2edfff75f18d9f60797e146af8be1"
+  },
+  "docs/never/gossamer-null-router-and-migration.md": {
+    "filename": "gossamer-null-router-and-migration.md",
+    "mime": "text/plain; charset=utf-8",
+    "signature": "5b15585d250b16c29503a889a461f9aa4fb9194a330cd4d236a555d85a53d5aa"
+  },
+  "docs/never/gossamer-router-state-machines.md": {
+    "filename": "gossamer-router-state-machines.md",
+    "mime": "text/plain; charset=utf-8",
+    "signature": "42e658ecd90e2043fcd12594b685c556a041b4396b0084b9a829c5aeca61b77b"
+  },
+  "docs/projects-json.md": {
+    "filename": "projects-json.md",
+    "mime": "text/plain; charset=utf-8",
+    "signature": "bf347b87992f4b63e05b5fea523b1a6483fc5ef13a78f19b7f345d10df11ab4f"
+  },
+  "docs/settings-pane.md": {
+    "filename": "settings-pane.md",
+    "mime": "text/plain; charset=utf-8",
+    "signature": "f715c3da4785e29589ba9b6fa9d75c1dd5dee09e665cef89a33d9997f8fa9d58"
+  },
+  "docs/three-role-agent-routing.md": {
+    "filename": "three-role-agent-routing.md",
+    "mime": "text/plain; charset=utf-8",
+    "signature": "77e9a11df51a7bee4e65a442591108dbfc0c7dbdf6728e7f1257eafe587145f8"
+  },
+  "docs/three-server-environments.md": {
+    "filename": "three-server-environments.md",
+    "mime": "text/plain; charset=utf-8",
+    "signature": "b5198e9f14e3b34ab68d608cde1c6a73a6271dbaa40a2a6af68182bda1757591"
+  },
+  "docs/users.md": {
+    "filename": "users.md",
+    "mime": "text/plain; charset=utf-8",
+    "signature": "f23407ad28c1ba16f9294c39c9c0a08ff73a3fa959816f1881a368ebce7a0e6f"
+  },
+  "docs/web-client-port.md": {
+    "filename": "web-client-port.md",
+    "mime": "text/plain; charset=utf-8",
+    "signature": "abac43f3f5174dd5d883a6f2a91ca152f688aed57bfb8cd9d42fd1ceb85608ac"
+  },
+  "harmonic-clock": {
+    "filename": "harmonic-clock.jpg",
+    "mime": "image/jpeg",
+    "signature": "e14c605ac40130a0c86dea76cf93014d307258c54e27685cf4154a2941f173a5"
+  },
+  "harmonic-clock.jpg": {
+    "filename": "harmonic-clock.jpg",
+    "mime": "image/jpeg",
+    "signature": "e14c605ac40130a0c86dea76cf93014d307258c54e27685cf4154a2941f173a5"
+  },
+  "mandelbrot-boundary": {
+    "filename": "mandelbrot-boundary.jpg",
+    "mime": "image/jpeg",
+    "signature": "0c719fe133fa25960ef2bcaf7e3bd8dedcb4075c4977158633578b8fbbd8d530"
+  },
+  "mandelbrot-boundary.jpg": {
+    "filename": "mandelbrot-boundary.jpg",
+    "mime": "image/jpeg",
+    "signature": "0c719fe133fa25960ef2bcaf7e3bd8dedcb4075c4977158633578b8fbbd8d530"
   }
 }

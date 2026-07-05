@@ -1,0 +1,37 @@
+{
+  "narrative" : "This chapter argues that love and light are the exterior and interior faces of the same phenomenon — that physicists and mystics converge on identical language (attraction, radiance, union, the dissolution of distance) not by borrowing but by describing reality from opposite sides. Drawing on Whitehead's prehension, Hesiod's primordial Eros, Simone Weil's attention, Sufi fana, and Dante's closing cosmology, the chapter builds a philosophical case that love is the felt dimension of relation constitutive of physics itself, not sentiment projected onto an indifferent cosmos.",
+  "schema" : 1,
+  "subject" : "069-love.md",
+  "subject-sha" : "sha256:257667a844d88a706ef82c75352ee92d72816302a9edefe8c7d7d3d7c29d68c5",
+  "terms" : [
+    {
+      "canonical" : "David Deida",
+      "weight" : 0.8
+    },
+    {
+      "canonical" : "prehension",
+      "weight" : 0.7
+    },
+    {
+      "canonical" : "fana",
+      "weight" : 0.6
+    },
+    {
+      "canonical" : "baqa",
+      "weight" : 0.5
+    },
+    {
+      "canonical" : "Theogony",
+      "weight" : 0.4
+    }
+  ],
+  "themes" : [
+    "love",
+    "light",
+    "mysticism and physics",
+    "prehension",
+    "eros",
+    "union"
+  ],
+  "updated-at" : "2026-06-20T21:57:50Z"
+}

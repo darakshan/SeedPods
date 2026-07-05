@@ -1,0 +1,37 @@
+{
+  "narrative" : "An essay on the word 'just' as a covert philosophical move — the way it smuggles in an unargued claim of sufficiency, collapsing rich experience into mechanism without explanation. Drawing on Ryle's category mistake, Whitehead's fallacy of misplaced concreteness, and Dennett's intuition pump, the chapter argues that 'just' is not a shorthand for clarity but a device for dismissal, and invites readers to hear it as a confession of unexplained assumption.",
+  "schema" : 1,
+  "subject" : "021-just.md",
+  "subject-sha" : "sha256:ce3b65eb34958feef152f3ea4d5967d4d233401b9693aa161add91316a5cf890",
+  "terms" : [
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "Gilbert Ryle",
+      "weight" : 0.8
+    },
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "Alfred North Whitehead",
+      "weight" : 0.7
+    },
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "Daniel Dennett",
+      "weight" : 0.7
+    }
+  ],
+  "themes" : [
+    "reductionism",
+    "language",
+    "category mistake",
+    "dismissal",
+    "explanation vs mechanism"
+  ],
+  "updated-at" : "2026-06-20T20:58:47Z"
+}

@@ -1,0 +1,38 @@
+{
+  "narrative" : "Draws a direct analogy between Darwinian evolution and the sub-second process of thought, arguing that candidate interpretations compete within the neural substrate and meaning emerges from selection rather than instruction. Connects the Baldwin effect, Neural Darwinism, multiple drafts theory, and predictive processing as converging evidence that the brain is a selectionist system compressed into milliseconds.",
+  "schema" : 1,
+  "subject" : "046-thinkfast.md",
+  "subject-sha" : "sha256:420ff3c49896975e80ebf703e4e92678503e653bead36701534028cb9434080c",
+  "terms" : [
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "Gerald Edelman",
+      "weight" : 0.8
+    },
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "William Calvin",
+      "weight" : 0.6
+    },
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "Baldwin effect",
+      "weight" : 0.6
+    }
+  ],
+  "themes" : [
+    "evolution",
+    "neural darwinism",
+    "selectionism",
+    "cognition",
+    "competition",
+    "emergence"
+  ],
+  "updated-at" : "2026-06-20T21:03:49Z"
+}

@@ -1,0 +1,31 @@
+{
+  "narrative" : "Explores the relativistic fact that a photon experiences zero proper time — emission and absorption are a single event from its perspective — and draws this out into a meditation on the nature of connection, circuit, and return at the boundary of the physical. The chapter also contrasts light with sound by noting that light lacks the harmonic overtone series intrinsic to classical mechanical vibration, which is why the visual system had to construct its own circular structure rather than inheriting one from physics, and closes with a note on how starlight continuously reaches us even in daylight, obscured only by signal-to-noise rather than any physical absence.",
+  "schema" : 1,
+  "subject" : "029-lighttime.md",
+  "subject-sha" : "sha256:586a2e3540ef9b769b423bf07ef209a92416b9ecd8bf3a2d923a9d9aa7c1de33",
+  "terms" : [
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "Rayleigh scattering",
+      "weight" : 0.4
+    },
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "Whitehead",
+      "weight" : 0.4
+    }
+  ],
+  "themes" : [
+    "relativity",
+    "photon",
+    "proper time",
+    "harmonics",
+    "light vs sound",
+    "connection"
+  ],
+  "updated-at" : "2026-06-20T21:08:40Z"
+}

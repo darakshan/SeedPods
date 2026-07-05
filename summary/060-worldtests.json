@@ -1,0 +1,37 @@
+{
+  "narrative" : "Applies the Everett Many Worlds interpretation to the book's evolutionary cosmology, arguing that each quantum branch constitutes a parallel evolutionary experiment and that Teilhard's Omega Point is not a single timeline's destination but a structural attractor in possibility space that every branch of the wavefunction converges toward independently.",
+  "schema" : 1,
+  "subject" : "060-worldtests.md",
+  "subject-sha" : "sha256:734acbede9def7d606dd23f6a646c44da2259f95dd74f7023127153a98c89275",
+  "terms" : [
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "Everett",
+      "weight" : 0.8
+    },
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "Teilhard",
+      "weight" : 0.7
+    },
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "Hilbert space",
+      "weight" : 0.4
+    }
+  ],
+  "themes" : [
+    "many worlds",
+    "quantum branching",
+    "omega point",
+    "evolutionary cosmology",
+    "parallel universes"
+  ],
+  "updated-at" : "2026-06-20T21:06:39Z"
+}

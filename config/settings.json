@@ -1,52 +1,5 @@
 {
-  "categories" : [
-    {
-      "category" : "AI-minds",
-      "color_name" : "pink",
-      "hex" : "#FFB6C1"
-    },
-    {
-      "category" : "biology",
-      "color_name" : "creamsicle",
-      "hex" : "#FECBA1"
-    },
-    {
-      "category" : "consciousness",
-      "color_name" : "light yellow",
-      "hex" : "#FFFACD"
-    },
-    {
-      "category" : "knowledge",
-      "color_name" : "yellow-green",
-      "hex" : "#C8E8A4"
-    },
-    {
-      "category" : "mathematics",
-      "color_name" : "blue-green",
-      "hex" : "#AFEEEE"
-    },
-    {
-      "category" : "physics",
-      "color_name" : "light blue",
-      "hex" : "#BDE0FE"
-    },
-    {
-      "category" : "feeling",
-      "color_name" : "magenta",
-      "hex" : "#F9C6F0"
-    },
-    {
-      "category" : "zzz-debug",
-      "color_name" : "gray",
-      "hex" : "#C0C0C0"
-    }
-  ],
-  "depth_max_words" : 600,
-  "depth_min_words" : 300,
-  "devices" : {
-    "5E2DCE06-6BD4-4669-A4D9-177DEC7F31C7" : "iPhone",
-    "F86E0D90-9B7A-4EDF-BCC0-70F721D036D9" : "macbook"
-  },
+  "experimental_colors" : true,
   "list_menu" : [
     {
       "link" : "trails",
@@ -81,11 +34,7 @@
       "name" : "More"
     }
   ],
-  "menu_title" : "Lists",
   "min_related_in_degree" : 2,
-  "nav" : "about, trails, list",
-  "repo_link" : "Full repository →",
-  "section_head" : "All seeds",
   "sections" : [
     {
       "displayName" : "Argument",
@@ -134,11 +83,15 @@
       "name" : "images",
       "optional" : true,
       "orderSpecific" : true
+    },
+    {
+      "displayName" : "Transition",
+      "name" : "transition",
+      "optional" : true,
+      "orderSpecific" : true
     }
   ],
   "site" : "docs",
-  "site_base" : "https:\/\/darakshan.github.io\/SeedPods\/",
-  "site_dir" : "docs",
   "status" : [
     "draft1",
     "rough",
@@ -146,10 +99,5 @@
     "prelim",
     "proto",
     "empty"
-  ],
-  "surface_max_words" : 700,
-  "surface_min_words" : 400,
-  "title" : "SeedPods",
-  "version" : 41,
-  "view_all" : "View all {n} seeds →"
+  ]
 }

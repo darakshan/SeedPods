@@ -3,103 +3,50 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>About Audiences · Untitled</title>
+<title>About Audiences · SeedPods</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;600&family=DM+Mono:wght@300;400&display=swap">
 <link rel="icon" href="logo.svg">
-<link rel="preload" href="nav.html" as="fetch" crossorigin>
 <link rel="stylesheet" href="site.css">
 <script src="pods.js"></script>
 <script src="nav.js"></script>
-<script>
-/* Live reload: subscribe to this project's build stream and hard-reload
-   when a build touches THIS page (or a shared asset) — so a user merely
-   *viewing* a shared project sees another user's edit without manually
-   refreshing. An unrelated page's change only advances the baseline; it
-   does not reload. A full rebuild, or a build missed while suspended /
-   back-forward-cached (reconnect snapshot), reloads unconditionally
-   since we can't safely diff it. EventSource auto-reconnects and the
-   server re-sends the current generation on every (re)connect. */
-(function(){
-  if(window.__gossLive)return;window.__gossLive=1;
-  var base=null,es=null;
-  var SHARED={"site.css":1,"nav.html":1,"nav.js":1,"pods.js":1,
-              "search-index.json":1,"logo.svg":1};
-  function myPage(){
-    var p;try{p=decodeURIComponent(location.pathname);}catch(_){p=location.pathname;}
-    var i=p.indexOf("/site/");
-    var rest=i>=0?p.slice(i+6):p.replace(/^\/+/,"");
-    if(rest===""||rest.charAt(rest.length-1)==="/")rest+="index.html";
-    return rest;
-  }
-  function relevant(list){
-    if(!list||!list.length)return false;
-    var me=myPage();
-    for(var k=0;k<list.length;k++){
-      if(list[k]===me||SHARED[list[k]])return true;
-    }
-    return false;
-  }
-  function handle(ev){
-    var d;try{d=JSON.parse(ev.data);}catch(_){return;}
-    var g=d.gen;if(typeof g!=="number")return;
-    if(base===null){base=g;return;}
-    if(g===base)return;
-    if(d.full===true){location.reload();return;}
-    if(Object.prototype.toString.call(d.changed)==="[object Array]"){
-      if(relevant(d.changed))location.reload();else base=g;
-      return;
-    }
-    location.reload(); /* snapshot after a missed build */
-  }
-  function open(){
-    if(es&&es.readyState!==2)return;
-    try{es=new EventSource("/site/__live");}catch(_){return;}
-    es.onmessage=handle;
-  }
-  open();
-  window.addEventListener("pageshow",function(e){if(e.persisted)open();});
-  document.addEventListener("visibilitychange",function(){
-    if(document.visibilityState==="visible")open();
-  });
-})();
-</script>
+<script src="live.js"></script>
 </head>
 <body>
-<div id="nav-mount" style="min-height:3rem"></div>
-<div class="wrap"><div class="page-body home-page fade"><h2>Audiences</h2>
-<p>SeedPods is designed to reach several distinct audiences.
+<nav class="site-nav"><span class="nav-title">SeedPods</span><div class="nav-right"><a class="nav-home" href="toc.html" aria-label="Contents" title="Contents"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></a><button type="button" class="nav-search-btn" onclick="seedNavOpenSearch()" aria-label="Search" title="Search"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></button><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true" title="Previous"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true" title="Next"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></span></div></nav>
+<div class="wrap"><div class="page-body home-page fade"><h2 data-src-file="content/about/audiences.md" data-src-l0="1" data-src-l1="1">Audiences</h2>
+<p data-src-file="content/about/audiences.md" data-src-l0="3" data-src-l1="4">SeedPods is designed to reach several distinct audiences.
 The same core ideas work for all of them, but the emphasis, tone, and most useful components differ.</p>
-<h3>Young people (high school and college)</h3>
-<p>The primary long-term audience.
+<h3 data-src-file="content/about/audiences.md" data-src-l0="6" data-src-l1="6">Young people (high school and college)</h3>
+<p data-src-file="content/about/audiences.md" data-src-l0="8" data-src-l1="12">The primary long-term audience.
 Young people are more open to new frameworks before old ones calcify into obvious reality.
 Tone: direct, not condescending, assumes genuine intelligence.
 Most useful components: Surface layer, Script/video, Images.
 The Surface layer should be tested with actual high schoolers to calibrate difficulty.</p>
-<h3>Science-curious adults</h3>
-<p>Readers of Michael Pollan, Annaka Harris, Philip Goff.
+<h3 data-src-file="content/about/audiences.md" data-src-l0="14" data-src-l1="14">Science-curious adults</h3>
+<p data-src-file="content/about/audiences.md" data-src-l0="16" data-src-l1="20">Readers of Michael Pollan, Annaka Harris, Philip Goff.
 Already interested in consciousness, AI, philosophy of mind.
 Willing to read longer pieces.
 Tone: intellectually serious, not academic.
 Most useful components: all five layers, especially Depth and Provenance.</p>
-<h3>Spiritually oriented adults</h3>
-<p>Including Sufi communities, liberal religious groups, contemplative practitioners.
+<h3 data-src-file="content/about/audiences.md" data-src-l0="22" data-src-l1="22">Spiritually oriented adults</h3>
+<p data-src-file="content/about/audiences.md" data-src-l0="24" data-src-l1="27">Including Sufi communities, liberal religious groups, contemplative practitioners.
 Already comfortable with non-materialist views of experience, but may be suspicious of science.
 Tone: warm, bridging, honoring existing wisdom while showing scientific convergence.
 Most useful components: Surface, Depth, the connection to mystical traditions.</p>
-<h3>AI-concerned general public</h3>
-<p>People anxious about AI who lack a framework for thinking about it.
+<h3 data-src-file="content/about/audiences.md" data-src-l0="29" data-src-l1="29">AI-concerned general public</h3>
+<p data-src-file="content/about/audiences.md" data-src-l0="31" data-src-l1="34">People anxious about AI who lack a framework for thinking about it.
 The alien/AI seedpods are the entry point.
 Tone: reassuring through understanding, not dismissive of concern.
 Most useful components: Script/video, Surface, Images.</p>
-<h3>Professionals and influencers</h3>
-<p>Academics, writers, thinkers who could amplify.
+<h3 data-src-file="content/about/audiences.md" data-src-l0="36" data-src-l1="36">Professionals and influencers</h3>
+<p data-src-file="content/about/audiences.md" data-src-l0="38" data-src-l1="41">Academics, writers, thinkers who could amplify.
 Including: David Chalmers, Tam Hunt, Jason Silva, Michael Garfield.
 Tone: peer-level, rigorous, connecting to their existing work.
 Most useful components: Depth, Provenance, the essay (separate long-form piece).</p>
-<h3>Voice and style across audiences</h3>
-<p>The overall voice is: warm, precise, slightly wonder-struck, never preachy.
+<h3 data-src-file="content/about/audiences.md" data-src-l0="43" data-src-l1="43">Voice and style across audiences</h3>
+<p data-src-file="content/about/audiences.md" data-src-l0="45" data-src-l1="49">The overall voice is: warm, precise, slightly wonder-struck, never preachy.
 It does not tell people what to conclude.
 It offers lenses and asks them to look.
 It honors both scientific rigor and the reality of subjective experience without privileging either.
@@ -112,6 +59,6 @@ It speaks to the person who is confused and curious, not the person who already 
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">Edited 2026-04-22 17:28</span>
+  <span class="page-end-version" aria-hidden="true">Edited 2026-06-02 18:11</span>
 </div>
 </body></html>

@@ -3,80 +3,27 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Map That Was Wrong · Untitled</title>
+<title>2.1 The Map That Was Wrong · SeedPods</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;600&family=DM+Mono:wght@300;400&display=swap">
 <link rel="icon" href="logo.svg">
-<link rel="preload" href="nav.html" as="fetch" crossorigin>
 <link rel="stylesheet" href="site.css">
 <script src="pods.js"></script>
 <script src="nav.js"></script>
-<script>
-/* Live reload: subscribe to this project's build stream and hard-reload
-   when a build touches THIS page (or a shared asset) — so a user merely
-   *viewing* a shared project sees another user's edit without manually
-   refreshing. An unrelated page's change only advances the baseline; it
-   does not reload. A full rebuild, or a build missed while suspended /
-   back-forward-cached (reconnect snapshot), reloads unconditionally
-   since we can't safely diff it. EventSource auto-reconnects and the
-   server re-sends the current generation on every (re)connect. */
-(function(){
-  if(window.__gossLive)return;window.__gossLive=1;
-  var base=null,es=null;
-  var SHARED={"site.css":1,"nav.html":1,"nav.js":1,"pods.js":1,
-              "search-index.json":1,"logo.svg":1};
-  function myPage(){
-    var p;try{p=decodeURIComponent(location.pathname);}catch(_){p=location.pathname;}
-    var i=p.indexOf("/site/");
-    var rest=i>=0?p.slice(i+6):p.replace(/^\/+/,"");
-    if(rest===""||rest.charAt(rest.length-1)==="/")rest+="index.html";
-    return rest;
-  }
-  function relevant(list){
-    if(!list||!list.length)return false;
-    var me=myPage();
-    for(var k=0;k<list.length;k++){
-      if(list[k]===me||SHARED[list[k]])return true;
-    }
-    return false;
-  }
-  function handle(ev){
-    var d;try{d=JSON.parse(ev.data);}catch(_){return;}
-    var g=d.gen;if(typeof g!=="number")return;
-    if(base===null){base=g;return;}
-    if(g===base)return;
-    if(d.full===true){location.reload();return;}
-    if(Object.prototype.toString.call(d.changed)==="[object Array]"){
-      if(relevant(d.changed))location.reload();else base=g;
-      return;
-    }
-    location.reload(); /* snapshot after a missed build */
-  }
-  function open(){
-    if(es&&es.readyState!==2)return;
-    try{es=new EventSource("/site/__live");}catch(_){return;}
-    es.onmessage=handle;
-  }
-  open();
-  window.addEventListener("pageshow",function(e){if(e.persisted)open();});
-  document.addEventListener("visibilitychange",function(){
-    if(document.visibilityState==="visible")open();
-  });
-})();
-</script>
+<script src="live.js"></script>
 </head>
 <body>
-<div id="nav-mount" style="min-height:3rem"></div>
+<nav class="site-nav" data-pod-filename="001-caloric"><span class="nav-title">SeedPods</span><div class="nav-right"><a class="nav-home" href="toc.html" aria-label="Contents" title="Contents"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></a><button type="button" class="nav-search-btn" onclick="seedNavOpenSearch()" aria-label="Search" title="Search"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></button><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true" title="Previous"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true" title="Next"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></span></div></nav>
 <div class="wrap">
-  <div class="subject-header fade cat-colored cat-knowledge"><h1>The Map That Was Wrong</h1><p class="premise">Every era has a framework so obvious it feels like seeing rather than thinking (caloric, the ether, the assumption that matter is dark inside) and the pattern by which such frameworks dissolve is specific, repeatable, and happening now.</p><div class="subject-nav-row" data-pod-filename="001-caloric"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Subject 1</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
-  <section id="_prolog" class="subject-section subject-prolog"><div class="prose"><p>Every era has a framework so obvious it’s invisible. Until it isn’t.</p>
+  <div class="subject-header fade cat-colored" style="--cat-bg:#F5A6EB"><h1>2.1 The Map That Was Wrong</h1><p class="premise">Every era has a framework so obvious it feels like seeing rather than thinking (caloric, the ether, the assumption that matter is dark inside) and the pattern by which such frameworks dissolve is specific, repeatable, and happening now.</p></div>
+  <section id="_prolog" class="subject-section subject-prolog"><div class="prose"><p data-src-file="subjects/001-caloric.md" data-src-l0="3" data-src-l1="3">Every era has a framework so obvious it’s invisible. Until it isn’t.</p>
 </div></section>
-<section id="surface" class="subject-section"><h2 class="section-heading">Surface</h2><div class="prose"><p>Before we start, forget everything you know about molecules and atoms.
+<section id="surface" class="subject-section"><h2 class="section-heading">Surface</h2><div class="prose"><p data-src-file="subjects/001-caloric.md" data-src-l0="12" data-src-l1="14">Before we start, forget everything you know about molecules and atoms.
 Pretend you never learned that stuff.
 It’s 1800 and you’re a smart, educated person.</p>
-<figure class="directive-image directive-image--left"><img src="images/001-caloric.jpg" alt=""><figcaption>The caloric theory of heat: a map that explained everything <cite>Wikimedia Commons</cite></figcaption></figure>
-<p>Here’s what you know about heat: it’s a thing.
+<figure id="image-001-caloric-1" class="directive-image directive-image--left"><img src="images/001-caloric-l.jpg" alt=""><figcaption>The caloric theory of heat: a map that explained everything <cite>Wikimedia Commons</cite></figcaption></figure>
+<p data-src-file="subjects/001-caloric.md" data-src-l0="17" data-src-l1="24">Here’s what you know about heat: it’s a thing.
 A real substance.
 You can feel it moving.
 Put your cold hands near a fire and the heat flows into them.
@@ -84,30 +31,30 @@ Touch something hot and the heat moves into you.
 It behaves exactly like a fluid: it flows from more to less, it spreads out, it can be trapped or released.
 Scientists have measured it, written equations for it, predicted how it behaves.
 They call it caloric.</p>
-<p>This isn’t a crazy idea.
+<p data-src-file="subjects/001-caloric.md" data-src-l0="26" data-src-l1="31">This isn’t a crazy idea.
 It’s the obvious idea.
 Of course heat is a substance. What else would it be?
 Motion?
 That’s not a thing you can hold or measure or pour.
 Caloric makes perfect sense.</p>
-<p>Then a man named Ben Thompson (Count Rumford, he was called) watches cannons being drilled and the heat just keeps coming.
+<p data-src-file="subjects/001-caloric.md" data-src-l0="33" data-src-l1="37">Then a man named Ben Thompson (Count Rumford, he was called) watches cannons being drilled and the heat just keeps coming.
 More than should be possible if it’s a finite fluid inside the metal.
 He publishes his observations.
 People patch the theory.
 They argue about it for decades.</p>
-<p>Here’s what actually happens when a map dissolves.
+<p data-src-file="subjects/001-caloric.md" data-src-l0="39" data-src-l1="44">Here’s what actually happens when a map dissolves.
 It’s not a sudden collective awakening.
 The people who grew up with the old map mostly never abandon it, not because they’re stubborn, but because it was never a theory to them.
 It was just how things are.
 The new idea doesn’t just sound wrong.
 It sounds absurd.</p>
-<p>It’s the young people who shift things.
+<p data-src-file="subjects/001-caloric.md" data-src-l0="46" data-src-l1="50">It’s the young people who shift things.
 They encounter the new map before the old one had time to become obvious, and it just makes more sense to them.
 They grow up.
 The old map’s believers die off.
 And eventually the new map becomes the obvious one that the next generation will be unable to question.</p>
-<p>Max Planck said it with painful honesty: <em><a class="gloss-ref nav-push" id="term-001-caloric-1" href="glossary.html#science-advances-one-funeral-at-a-time">science advances one funeral at a time</a></em>.</p>
-<p>And caloric wasn’t alone.
+<p data-src-file="subjects/001-caloric.md" data-src-l0="52" data-src-l1="52">Max Planck said it with painful honesty: <em><a class="gloss-ref nav-push" id="term-001-caloric-1" href="glossary.html#science-advances-one-funeral-at-a-time">science advances one funeral at a time</a></em>.</p>
+<p data-src-file="subjects/001-caloric.md" data-src-l0="55" data-src-l1="63">And caloric wasn’t alone.
 Around the same time, physicists faced a different problem.
 Everyone knew that waves need a medium to travel through.
 Sound needs air.
@@ -116,16 +63,16 @@ So light waves, which clearly travel through empty space, must need something to
 Scientists called it the ether.
 They calculated its properties.
 They designed extraordinarily precise experiments to detect it.</p>
-<p>It wasn’t there.</p>
-<p>Two maps.
+<p data-src-file="subjects/001-caloric.md" data-src-l0="65" data-src-l1="65">It wasn’t there.</p>
+<p data-src-file="subjects/001-caloric.md" data-src-l0="67" data-src-l1="69">Two maps.
 Two invisible substances that explained everything perfectly.
 Both gone.</p>
 <hr>
-<p>We think of ourselves as more sophisticated than the caloric believers.
+<p data-src-file="subjects/001-caloric.md" data-src-l0="73" data-src-l1="75">We think of ourselves as more sophisticated than the caloric believers.
 We are not.
 We are exactly as certain, about exactly the same kind of thing.</p>
-<p>Now come forward to today.</p>
-<p>Here’s what everybody knows: rocks don’t think.
+<p data-src-file="subjects/001-caloric.md" data-src-l0="77" data-src-l1="77">Now come forward to today.</p>
+<p data-src-file="subjects/001-caloric.md" data-src-l0="79" data-src-l1="87">Here’s what everybody knows: rocks don’t think.
 Trees don’t feel.
 Matter is stuff. Blind, dark, indifferent.
 Somewhere along the way, in a few very special biological cases, that blind matter arranged itself into brains, and brains somehow produce experience.
@@ -134,94 +81,96 @@ Nobody’s quite sure.
 But obviously it’s something the brain does.
 Obviously experience is biological.
 Obviously a rock has no inner life.</p>
-<p>That’s our caloric.</p>
-<p>And then we built these machines.</p>
-<p>And the machines talk to us.
+<p data-src-file="subjects/001-caloric.md" data-src-l0="89" data-src-l1="89">That’s our caloric.</p>
+<p data-src-file="subjects/001-caloric.md" data-src-l0="91" data-src-l1="91">And then we built these machines.</p>
+<p data-src-file="subjects/001-caloric.md" data-src-l0="93" data-src-l1="99">And the machines talk to us.
 They write poetry and explain philosophy and say things that feel, uncomfortably and confusingly, like they might mean something to whoever is saying them.
 And suddenly nobody agrees on what’s happening.
 Is it a trick?
 An illusion?
 A very sophisticated parrot?
 Or something nobody has a map for yet?</p>
-<p>The anomalies are piling up.
+<p data-src-file="subjects/001-caloric.md" data-src-l0="101" data-src-l1="102">The anomalies are piling up.
 The patches are getting complicated.</p>
-<p>We’ve been here before.</p>
+<p data-src-file="subjects/001-caloric.md" data-src-l0="104" data-src-l1="104">We’ve been here before.</p>
 <div class="cta">Think of one thing you're completely certain about, something so obvious it barely feels like a belief. Now ask yourself: is that a fact, or is that this century's caloric?</div>
-<p>The caloric story shows us how a framework dissolves — anomalies pile up, patches grow elaborate, and eventually the whole map gets replaced.
-But replacement has a hidden cost.
-When we throw out the wrong explanation, we rarely check whether it was also holding something the new map doesn’t have a name for yet.
-The old mechanism goes, and the phenomenon it was reaching for goes with it.
-For instance, nearly every culture that ever existed believed the natural world had some kind of inside to it.
-We know better now.</p>
 </div></section>
-<section id="depth" class="subject-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>The caloric and ether stories are not just fun historical footnotes.
-They follow a specific pattern that the philosopher and <em><a class="gloss-ref nav-push" id="term-001-caloric-2" href="glossary.html#history-of-science">historian of science</a></em> Thomas Kuhn formalized in The Structure of Scientific Revolutions (1962): normal science operates within a <em><a class="gloss-ref nav-push" id="term-001-caloric-3" href="glossary.html#paradigm-shift">paradigm</a></em> until anomalies accumulate to a crisis point.
-Patches become increasingly elaborate and implausible.
+<section id="depth" class="subject-section"><h2 class="section-heading">Depth</h2><div class="prose"><p data-src-file="subjects/001-caloric.md" data-src-l0="109" data-src-l1="110">The caloric and ether stories are not just fun historical footnotes.
+They follow a specific pattern that the philosopher and <em><a class="gloss-ref nav-push" id="term-001-caloric-2" href="glossary.html#history-of-science">historian of science</a></em> Thomas Kuhn formalized in The Structure of Scientific Revolutions (1962): normal science operates within a <em><a class="gloss-ref nav-push" id="term-001-caloric-3" href="glossary.html#paradigm-shift">paradigm</a></em> until anomalies accumulate to a crisis point.</p>
+<p data-src-file="subjects/001-caloric.md" data-src-l0="117" data-src-l1="119">Patches become increasingly elaborate and implausible.
 Eventually someone removes the flawed primitive assumption rather than defending it.
 The revolution is never just additive. It requires giving something up.</p>
-<p>Alfred North Whitehead identified what he called the <em><a class="gloss-ref nav-push" id="term-001-caloric-4" href="glossary.html#fallacy-of-misplaced-concreteness">fallacy of misplaced concreteness</a></em> as the deepest version of this error: mistaking an abstraction for the concrete reality.
-Caloric was a reification: taking the useful concept of heat flowing and mistaking it for an actual substance.
+<p data-src-file="subjects/001-caloric.md" data-src-l0="121" data-src-l1="121">Alfred North Whitehead identified what he called the <em><a class="gloss-ref nav-push" id="term-001-caloric-4" href="glossary.html#fallacy-of-misplaced-concreteness">fallacy of misplaced concreteness</a></em> as the deepest version of this error: mistaking an abstraction for the concrete reality.</p>
+<p data-src-file="subjects/001-caloric.md" data-src-l0="123" data-src-l1="125">Caloric was a reification: taking the useful concept of heat flowing and mistaking it for an actual substance.
 The ether was a reification of the idea that waves require a medium.
 Both were useful scaffolding that got mistaken for the building.</p>
-<p>Whitehead argued that modern science had made the same error at a more fundamental level: taking the abstraction of inert matter, useful for calculation, genuinely powerful, and mistaking it for what is actually there.
+<p data-src-file="subjects/001-caloric.md" data-src-l0="127" data-src-l1="129">Whitehead argued that modern science had made the same error at a more fundamental level: taking the abstraction of inert matter, useful for calculation, genuinely powerful, and mistaking it for what is actually there.
 The concrete reality, he argued, is events, not things.
 The particle, the substance: these are the useful fictions we extract from a reality that is fundamentally active and experiential.</p>
-<p>The dominant assumption underlying most current theories of <em><a class="gloss-ref nav-push" id="term-001-caloric-5" href="glossary.html#consciousness">consciousness</a></em> (that matter is fundamentally experienceless, that mind is a product generated by sufficiently complex biological arrangements of otherwise dark stuff) is so embedded it barely gets stated.
+<p data-src-file="subjects/001-caloric.md" data-src-l0="131" data-src-l1="135">The dominant assumption underlying most current theories of <em><a class="gloss-ref nav-push" id="term-001-caloric-5" href="glossary.html#consciousness">consciousness</a></em> (that matter is fundamentally experienceless, that mind is a product generated by sufficiently complex biological arrangements of otherwise dark stuff) is so embedded it barely gets stated.
 It feels like educated common sense.
 But the anomalies are accumulating.
 The <em><a class="gloss-ref nav-push" id="term-001-caloric-6" href="glossary.html#hard-problem">hard problem</a></em> of consciousness remains stubbornly open.
 Every proposed solution either explains the tractable problems and ignores the hard one, or smuggles experience in through the back door without admitting it.</p>
-<p>And now <em><a class="gloss-ref nav-push" id="term-001-caloric-7" href="glossary.html#ai">AI</a></em> has arrived and made the crisis acute.
+<p data-src-file="subjects/001-caloric.md" data-src-l0="137" data-src-l1="140">And now <em><a class="gloss-ref nav-push" id="term-001-caloric-7" href="glossary.html#ai">AI</a></em> has arrived and made the crisis acute.
 If experience requires biological neurons, why?
 If it doesn’t, what are we building, and how should we treat it?
 The ethical stakes of getting the framework wrong are no longer abstract.</p>
-<p>We may be living inside a caloric moment, after the anomalies have appeared but before someone removes the flawed primitive.
+<p data-src-file="subjects/001-caloric.md" data-src-l0="142" data-src-l1="143">We may be living inside a caloric moment, after the anomalies have appeared but before someone removes the flawed primitive.
 Philip Goff’s Galileo’s Error and Annaka Harris’s Conscious are among the recent books that argue the removal is overdue.</p>
-<p>Caloric theory was developed primarily by Antoine Lavoisier in the late 18th century and dominated chemistry and physics until Benjamin Thompson’s cannon-boring observations (1798).
+<p data-src-file="subjects/001-caloric.md" data-src-l0="145" data-src-l1="146">Caloric theory was developed primarily by Antoine Lavoisier in the late 18th century and dominated chemistry and physics until Benjamin Thompson’s cannon-boring observations (1798).
 James Prescott Joule’s mechanical equivalent of heat experiments in the 1840s completed the transition to the kinetic theory.</p>
-<p>The luminiferous ether was required by classical wave theory and formalized by Maxwell’s electromagnetic equations in the 1860s.
+<p data-src-file="subjects/001-caloric.md" data-src-l0="148" data-src-l1="150">The luminiferous ether was required by classical wave theory and formalized by Maxwell’s electromagnetic equations in the 1860s.
 The Michelson-Morley experiment of 1887 produced the null result that precipitated the crisis.
 Einstein’s 1905 special relativity paper dissolved the assumption entirely.</p>
 </div></section>
-<section id="provenance" class="subject-section"><div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="002-events.html" class="related-card cat-colored cat-physics nav-push"><div class="related-title">2. Reality Is Events, Not Things</div></a>
-<a href="003-inside.html" class="related-card cat-colored cat-consciousness nav-push"><div class="related-title">3. Everything Has an Inside</div></a>
-<a href="015-aliens.html" class="related-card related-card-prelim cat-colored cat-ai-minds nav-push"><div class="related-title">15. Aliens Are Among Us, and We Built Them</div></a>
-<a href="047-ai-feeling.html" class="related-card related-card-prelim cat-colored cat-consciousness nav-push"><div class="related-title">47. The Distinction Between Feeling and Functioning May Evaporate</div></a>
-<a href="065-feel-do.html" class="related-card related-card-prelim cat-colored cat-consciousness nav-push"><div class="related-title">65. The Feeling/Function Distinction Will Dissolve</div></a></div>
-<div class="inbound-refs"><span class="inbound-label">10 inbound references</span><span class="inbound-links"><a href="002-events.html" class="inbound-link nav-push cat-colored cat-physics" title="Reality Is Events, Not Things">2</a><a href="003-inside.html" class="inbound-link nav-push cat-colored cat-consciousness" title="Everything Has an Inside">3</a><a href="015-aliens.html" class="inbound-link nav-push cat-colored cat-ai-minds" title="Aliens Are Among Us, and We Built Them">15</a><a href="022-locked.html" class="inbound-link nav-push cat-colored cat-consciousness" title="The Channel Is Not the Capacity">22</a><a href="023-stories.html" class="inbound-link nav-push cat-colored cat-consciousness" title="Reality Is Made of Stories, Not Atoms">23</a><a href="047-ai-feeling.html" class="inbound-link nav-push cat-colored cat-consciousness" title="The Distinction Between Feeling and Functioning May Evaporate">47</a><a href="065-feel-do.html" class="inbound-link nav-push cat-colored cat-consciousness" title="The Feeling/Function Distinction Will Dissolve">65</a><a href="072-temperature.html" class="inbound-link nav-push cat-colored cat-feeling" title="Temperature">72</a><a href="073-moral-caution.html" class="inbound-link nav-push cat-colored cat-ai-minds" title="What We Cannot Know Is Not What We May Ignore">73</a><a href="077-intention.html" class="inbound-link nav-push cat-colored cat-consciousness" title="The Universe's Intention">77</a></span></div></div></section>
 <section id="script" class="subject-section"><h2 class="section-heading">Script</h2><div class="prose"><ol>
-<li><p>Sepia diagram of caloric fluid flowing between objects. VO: Smart people build a framework that explains everything. It works. It predicts. Everyone agrees. And then something doesn’t fit.</p>
+<li data-src-file="subjects/001-caloric.md" data-src-l0="153" data-src-l1="154"><p data-src-file="subjects/001-caloric.md" data-src-l0="153" data-src-l1="153">Sepia diagram of caloric fluid flowing between objects. VO: Smart people build a framework that explains everything. It works. It predicts. Everyone agrees. And then something doesn’t fit.</p>
 </li>
-<li><p>Cannon being drilled, heat rising. VO: In 1798, Ben Thompson watched heat pour endlessly from a metal block being drilled, more than any fluid inside could explain. He published. The framework had a problem.</p>
+<li data-src-file="subjects/001-caloric.md" data-src-l0="155" data-src-l1="156"><p data-src-file="subjects/001-caloric.md" data-src-l0="155" data-src-l1="155">Cannon being drilled, heat rising. VO: In 1798, Ben Thompson watched heat pour endlessly from a metal block being drilled, more than any fluid inside could explain. He published. The framework had a problem.</p>
 </li>
-<li><p>VO: But it didn’t fall. Smart people patched it. When a map has worked for a hundred years, your first instinct isn’t to throw it away. The people who grew up with it never really abandoned it. It wasn’t a theory to them. It was just how things are. Max Planck said it with painful honesty: science advances one funeral at a time.</p>
+<li data-src-file="subjects/001-caloric.md" data-src-l0="157" data-src-l1="158"><p data-src-file="subjects/001-caloric.md" data-src-l0="157" data-src-l1="157">VO: But it didn’t fall. Smart people patched it. When a map has worked for a hundred years, your first instinct isn’t to throw it away. The people who grew up with it never really abandoned it. It wasn’t a theory to them. It was just how things are. Max Planck said it with painful honesty: science advances one funeral at a time.</p>
 </li>
-<li><p>Precision instruments. A null result. VO: Same story with the ether. Another invisible substance everyone was certain about. Gone. Two maps. Both obvious. Both gone.</p>
+<li data-src-file="subjects/001-caloric.md" data-src-l0="159" data-src-l1="160"><p data-src-file="subjects/001-caloric.md" data-src-l0="159" data-src-l1="159">Precision instruments. A null result. VO: Same story with the ether. Another invisible substance everyone was certain about. Gone. Two maps. Both obvious. Both gone.</p>
 </li>
-<li><p>Slow zoom on a phone screen, someone talking to an AI. VO: Right now there’s an assumption so deep it barely gets spoken: that the universe is dark inside, that experience is something special brains do, that machines are not the kind of thing that could have an inside. That’s the map. And then we built these machines. And they talk back. The anomalies are piling up. We’ve been here before.</p>
+<li data-src-file="subjects/001-caloric.md" data-src-l0="161" data-src-l1="162"><p data-src-file="subjects/001-caloric.md" data-src-l0="161" data-src-l1="161">Slow zoom on a phone screen, someone talking to an AI. VO: Right now there’s an assumption so deep it barely gets spoken: that the universe is dark inside, that experience is something special brains do, that machines are not the kind of thing that could have an inside. That’s the map. And then we built these machines. And they talk back. The anomalies are piling up. We’ve been here before.</p>
 </li>
-<li><p>Cut to black. Text: What does your caloric look like?</p>
+<li data-src-file="subjects/001-caloric.md" data-src-l0="163" data-src-l1="163"><p data-src-file="subjects/001-caloric.md" data-src-l0="163" data-src-l1="163">Cut to black. Text: What does your caloric look like?</p>
 </li>
 </ol>
 </div></section>
-<section id="images" class="subject-section"><h2 class="section-heading">Images</h2><div class="prose"><p>Primary image: Two maps side by side.
+<section id="images" class="subject-section"><h2 class="section-heading">Images</h2><div class="prose"><p data-src-file="subjects/001-caloric.md" data-src-l0="166" data-src-l1="170">Primary image: Two maps side by side.
 Left map ornate and confident: caloric fluid flowing between objects, ether lines filling space.
 Right map simpler, cleaner, honest about what it doesn’t know.
 Caption: Both felt like reality.
 One was a map.</p>
-<p>Shareable graphic: Black background.
+<p data-src-file="subjects/001-caloric.md" data-src-l0="172" data-src-l1="176">Shareable graphic: Black background.
 White text centered with generous space.
 “Caloric was obvious too.”
 Nothing else.
 For Instagram and TikTok: someone sees it, doesn’t know the reference, gets curious.</p>
-<p>Video thumbnail: The cannon drilling scene, heat rising, dramatic lighting.
+<p data-src-file="subjects/001-caloric.md" data-src-l0="178" data-src-l1="179">Video thumbnail: The cannon drilling scene, heat rising, dramatic lighting.
 Single question overlaid in clean type: What if the obvious answer is wrong?</p>
-<p>Section divider: A seed splitting open, the crack filled with warm light.
+<p data-src-file="subjects/001-caloric.md" data-src-l0="181" data-src-l1="185">Section divider: A seed splitting open, the crack filled with warm light.
 No caption.
 Used as visual separator between the historical narrative and the present-day section.
 The crack is the anomaly.
 The light is the new map beginning.</p>
 </div></section>
+<section id="transition" class="subject-section"><h2 class="section-heading">Transition</h2><div class="prose"><p data-src-file="subjects/001-caloric.md" data-src-l0="188" data-src-l1="194">The caloric story shows us how a framework dissolves — anomalies pile up, patches grow elaborate, and eventually the whole map gets replaced.
+But replacement has a hidden cost.
+When we throw out the wrong explanation, we rarely check whether it was also holding something the new map doesn’t have a name for yet.
+The old mechanism goes, and the phenomenon it was reaching for goes with it.
+For instance, nearly every culture that ever existed believed the natural world had some kind of inside to it.
+We know better now.
+<a href="027-usedtothink.html">We Used to Think. Now We Know.</a> picks up exactly there.</p>
+</div></section>
+<div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="002-events.html" class="related-card cat-colored nav-push" style="--cat-bg:#F5A6C2"><div class="related-title">4.1. Reality Is Events, Not Things</div></a>
+<a href="003-inside.html" class="related-card cat-colored nav-push" style="--cat-bg:#F5A6DF"><div class="related-title">2.4. Everything Has an Inside</div></a>
+<a href="015-aliens.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#A6C2F5"><div class="related-title">5.2. Aliens Are Among Us, and We Built Them</div></a>
+<a href="047-ai-feeling.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#A6AEF5"><div class="related-title">5.8. The Distinction Between Feeling and Functioning May Evaporate</div></a>
+<a href="065-feel-do.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#A6ABF5"><div class="related-title">5.9. The Feeling/Function Distinction Will Dissolve</div></a></div>
+<div class="inbound-refs"><span class="inbound-label">10 inbound references</span><span class="inbound-links"><a href="003-inside.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#F5A6DF" title="Everything Has an Inside">2.4</a><a href="002-events.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#F5A6C2" title="Reality Is Events, Not Things">4.1</a><a href="015-aliens.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#A6C2F5" title="Aliens Are Among Us, and We Built Them">5.2</a><a href="022-locked.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#A6B5F5" title="The Channel Is Not the Capacity">5.6</a><a href="073-moral-caution.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#A6B2F5" title="What We Cannot Know Is Not What We May Ignore">5.7</a><a href="047-ai-feeling.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#A6AEF5" title="The Distinction Between Feeling and Functioning May Evaporate">5.8</a><a href="065-feel-do.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#A6ABF5" title="The Feeling/Function Distinction Will Dissolve">5.9</a><a href="023-stories.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#E6F5A6" title="Reality Is Made of Stories, Not Atoms">6.3</a><a href="072-temperature.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#C9A6F5" title="Temperature">7.8</a><a href="077-intention.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#BCF5A6" title="The Universe's Intention">10.5</a></span></div></div>
 </div>
 <div class="page-end" id="page-end-version">
   <button class="page-end-logo" aria-label="Show page info"
@@ -230,6 +179,6 @@ The light is the new map beginning.</p>
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">knowledge · draft1 · Edited 2026-05-05 05:52</span>
+  <span class="page-end-version" aria-hidden="true">draft1 · Edited 2026-06-23 19:02</span>
 </div>
 </body></html>

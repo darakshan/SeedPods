@@ -1,0 +1,25 @@
+{
+  "narrative" : "Whitehead's God performs two metaphysical roles: as the ground of possibility, making eternal objects available for occasions to select from, and as the initial aim, the lure drawing each occasion toward greater complexity and depth. Mapped onto dynamical systems language, God functions simultaneously as initial condition and attractor — the universe is not wandering but drawn. Teilhard's Omega Point is introduced as the cosmic-scale destination that completes Whitehead's mechanism of the lure operating at every occasion.",
+  "schema" : 1,
+  "subject" : "066-cosmicattractor.md",
+  "subject-sha" : "sha256:46018057a00727532c65c98ca9ee5d4b86bd169217993d35c516e82103403452",
+  "terms" : [
+    {
+      "canonical" : "Omega Point",
+      "weight" : 0.8
+    },
+    {
+      "canonical" : "Lorenz attractor",
+      "weight" : 0.4
+    }
+  ],
+  "themes" : [
+    "process theology",
+    "attractor",
+    "dynamical systems",
+    "teleology",
+    "whitehead",
+    "teilhard"
+  ],
+  "updated-at" : "2026-06-23T19:11:06Z"
+}

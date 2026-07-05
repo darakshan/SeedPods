@@ -1,0 +1,33 @@
+{
+  "narrative" : "Presents evidence that Mandelbrot-like fractal structure appears in physical systems — quasicrystals, magnetic domain walls, and charge density waves — not as visual coincidence but as a natural consequence of local iterative rules operating in physical substrates. The central philosophical argument is that the mathematics is substrate-independent: crystals produce fractal boundaries because that is what local iteration generates at boundaries, not because any computation of the Mandelbrot set is occurring.",
+  "schema" : 1,
+  "subject" : "063-mandelcrystals.md",
+  "subject-sha" : "sha256:51aa26f670f8892971559849f52f91d4ca4ec6e1a15e635014196ea0f0f5e8e6",
+  "terms" : [
+    {
+      "canonical" : "Penrose tilings",
+      "weight" : 0.7
+    },
+    {
+      "canonical" : "Farey sequence",
+      "weight" : 0.6
+    },
+    {
+      "canonical" : "charge density waves",
+      "weight" : 0.5
+    },
+    {
+      "canonical" : "Shechtman",
+      "weight" : 0.4
+    }
+  ],
+  "themes" : [
+    "fractals",
+    "emergence",
+    "substrate independence",
+    "iteration",
+    "crystallography",
+    "self-similarity"
+  ],
+  "updated-at" : "2026-06-23T19:14:37Z"
+}

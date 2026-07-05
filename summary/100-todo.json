@@ -1,0 +1,20 @@
+{
+  "narrative" : "A working to-do list tracking open tasks and ideas across the project, including trail navigation tooling, transition prose between trails, a possible new trail centered on the theme of productive imperfection, deep-linking directives, and UI design for agent presence in group conversations.",
+  "schema" : 1,
+  "subject" : "100-todo.md",
+  "subject-sha" : "sha256:c4b6690ed14a8942084f5ab868223044c53009c9b8c1dd8e4f2e791e8b55a032",
+  "terms" : [
+    {
+      "canonical" : "The Crack That Lets the Light In",
+      "weight" : 0.7
+    }
+  ],
+  "themes" : [
+    "planning",
+    "trails",
+    "navigation",
+    "deep linking",
+    "imperfection"
+  ],
+  "updated-at" : "2026-06-20T21:19:34Z"
+}

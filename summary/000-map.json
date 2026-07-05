@@ -1,16 +1,18 @@
 {
-  "schema": 1,
-  "article": "000-map.md",
-  "article-sha": "sha256:unknown",
-  "updated-at": "2026-04-27T04:00:00Z",
+  "narrative" : "The collection's entry point and navigation hub, introducing the central thesis that experience may be fundamental to reality rather than a late biological accident, then laying out nine named reading trails through the archive, each organized around a distinct philosophical question, with every article appearing on exactly one trail.",
+  "schema" : 1,
+  "subject" : "000-map.md",
+  "subject-sha" : "sha256:0f633db8c201e86be806d8f165b375253b39471446fdfabf3f18a86cd93e5fa9",
+  "terms" : [
 
-  "narrative": "The collection's entry point. Opens with a conceptual overview of the project's central thread, that experience may be fundamental rather than late, then introduces nine reading trails through the archive, each organized around a question, with a link to the first article in each trail. Every article appears on exactly one trail.",
-
-  "themes": ["orientation", "trails", "navigation", "overview"],
-
-  "terms": [
-    { "canonical": "Whitehead", "aliases": ["white head"], "weight": 0.7 },
-    { "canonical": "Mandelbrot", "aliases": ["mandlebrot"], "weight": 0.6 },
-    { "canonical": "Farey", "aliases": ["fairey", "ferry"], "weight": 0.5 }
-  ]
+  ],
+  "themes" : [
+    "orientation",
+    "navigation",
+    "trails",
+    "overview",
+    "epistemology",
+    "consciousness"
+  ],
+  "updated-at" : "2026-06-20T21:16:23Z"
 }

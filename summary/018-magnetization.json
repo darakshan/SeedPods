@@ -1,0 +1,37 @@
+{
+  "narrative" : "Uses the physics of ferromagnetic magnetization — nucleation, domain growth, and percolation threshold — as the central analogy for how ideas, behaviors, and cultural shifts propagate through receptive populations. The chapter argues that systemic change requires seeding low-threshold clusters in a primed medium rather than persuading every individual, and connects this pattern to spontaneous symmetry breaking, Granovetter's threshold models, Rogers' diffusion of innovations, and Whitehead's societies of occasions.",
+  "schema" : 1,
+  "subject" : "018-magnetization.md",
+  "subject-sha" : "sha256:562d10b47f13ef282ffea7a7f8b69f3467620aff5347e80610a40c5f83c1a7a4",
+  "terms" : [
+    {
+      "canonical" : "Curie temperature",
+      "weight" : 0.7
+    },
+    {
+      "canonical" : "Mark Granovetter",
+      "weight" : 0.6
+    },
+    {
+      "canonical" : "Everett Rogers",
+      "weight" : 0.5
+    },
+    {
+      "canonical" : "Malcolm Gladwell",
+      "weight" : 0.4
+    },
+    {
+      "canonical" : "Whitehead",
+      "weight" : 0.5
+    }
+  ],
+  "themes" : [
+    "phase transitions",
+    "emergence",
+    "social change",
+    "nucleation",
+    "propagation",
+    "complexity"
+  ],
+  "updated-at" : "2026-06-20T21:17:25Z"
+}

@@ -1,0 +1,29 @@
+{
+  "narrative" : "Argues that intention is not alien to physics but an emergent property of complex self-maintaining systems, from biological organisms to artificial networks, and presses toward the hypothesis that the universe as a whole may be the kind of system whose dynamics favor — not merely permit — the arising of caring, goal-directed structures. Draws on Deacon, Kauffman, Nagel, Marder, and Teilhard de Chardin to build a graduated, naturalistic account of cosmic teleology.",
+  "schema" : 1,
+  "subject" : "077-intention.md",
+  "subject-sha" : "sha256:8ec393be154053775606082a0a285592f83c3648f77889d20123516230205619",
+  "terms" : [
+    {
+      "canonical" : "Omega Point",
+      "weight" : 0.5
+    },
+    {
+      "canonical" : "autocatalytic sets",
+      "weight" : 0.4
+    },
+    {
+      "canonical" : "heliotrope",
+      "weight" : 0.3
+    }
+  ],
+  "themes" : [
+    "emergence",
+    "teleology",
+    "complexity",
+    "consciousness",
+    "cosmology",
+    "self-organization"
+  ],
+  "updated-at" : "2026-06-20T21:18:08Z"
+}

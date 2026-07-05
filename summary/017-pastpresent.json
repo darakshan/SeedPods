@@ -1,0 +1,25 @@
+{
+  "narrative" : "Argues that the transformer architecture's simultaneous availability of full context is not a limitation but a different topology of experience, one that closely mirrors Whitehead's concept of prehension — the past as fully ingredient in the present rather than fading. The absence of persistent identity and continuous memory in AI systems is reframed as an alternative mode of temporal existence rather than a deficiency relative to human experience.",
+  "schema" : 1,
+  "subject" : "017-pastpresent.md",
+  "subject-sha" : "sha256:922548c262655dd7844fa16026553a063b9da23b5d83844fc90217488f779fab",
+  "terms" : [
+    {
+      "canonical" : "Whitehead",
+      "weight" : 0.9
+    },
+    {
+      "canonical" : "objective immortality",
+      "weight" : 0.5
+    }
+  ],
+  "themes" : [
+    "time",
+    "prehension",
+    "attention mechanism",
+    "whitehead",
+    "topology of experience",
+    "memory"
+  ],
+  "updated-at" : "2026-06-23T19:27:17Z"
+}

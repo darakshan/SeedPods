@@ -1,0 +1,20 @@
+{
+  "narrative" : "Presents the structural mechanism behind emergence: at each level of reality, stable combinations become the vocabulary for the next level up, so that 'more is different' because sentences crystallize into words. Three frameworks — Koestler's holons, Whitehead's societies of actual occasions, and Walker's assembly theory — are shown to be converging descriptions of the same hierarchical architecture from physics, philosophy, and biology respectively.",
+  "schema" : 1,
+  "subject" : "037-assembly.md",
+  "subject-sha" : "sha256:88df25275fd38b1a7670588153b7ac74d979c448dce148bfde9ddf76f8cd09ed",
+  "terms" : [
+    {
+      "canonical" : "assembly index",
+      "weight" : 0.7
+    }
+  ],
+  "themes" : [
+    "emergence",
+    "hierarchy",
+    "assembly",
+    "levels of abstraction",
+    "complexity"
+  ],
+  "updated-at" : "2026-06-23T19:04:09Z"
+}

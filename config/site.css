@@ -1,0 +1,15 @@
+/* ---------------------------------------------------------------------------
+ *  config/site.css — codex CSS overrides
+ *
+ *  This file is appended on top of the server's baseline `site.css` when this
+ *  codex is rendered. Anything you put here applies to THIS codex only and
+ *  takes precedence over the baseline (later rules win, same specificity).
+ *
+ *  Examples you might add:
+ *    body              { background: #fafafa; }   /* warmer paper      */
+ *    .premise          { color: #2a2a2a; }        /* darker subtitle   */
+ *    .subject-header   { padding-top: 2rem; }     /* roomier header    */
+ *
+ *  Leave this file empty (or delete it) to use the baseline CSS unchanged.
+ *  Future baseline edits land automatically; nothing here is overwritten.
+ * --------------------------------------------------------------------------- */

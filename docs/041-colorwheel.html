@@ -3,76 +3,23 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Surprising Color Wheel · Untitled</title>
+<title>7.4 The Surprising Color Wheel · SeedPods</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;600&family=DM+Mono:wght@300;400&display=swap">
 <link rel="icon" href="logo.svg">
-<link rel="preload" href="nav.html" as="fetch" crossorigin>
 <link rel="stylesheet" href="site.css">
 <script src="pods.js"></script>
 <script src="nav.js"></script>
-<script>
-/* Live reload: subscribe to this project's build stream and hard-reload
-   when a build touches THIS page (or a shared asset) — so a user merely
-   *viewing* a shared project sees another user's edit without manually
-   refreshing. An unrelated page's change only advances the baseline; it
-   does not reload. A full rebuild, or a build missed while suspended /
-   back-forward-cached (reconnect snapshot), reloads unconditionally
-   since we can't safely diff it. EventSource auto-reconnects and the
-   server re-sends the current generation on every (re)connect. */
-(function(){
-  if(window.__gossLive)return;window.__gossLive=1;
-  var base=null,es=null;
-  var SHARED={"site.css":1,"nav.html":1,"nav.js":1,"pods.js":1,
-              "search-index.json":1,"logo.svg":1};
-  function myPage(){
-    var p;try{p=decodeURIComponent(location.pathname);}catch(_){p=location.pathname;}
-    var i=p.indexOf("/site/");
-    var rest=i>=0?p.slice(i+6):p.replace(/^\/+/,"");
-    if(rest===""||rest.charAt(rest.length-1)==="/")rest+="index.html";
-    return rest;
-  }
-  function relevant(list){
-    if(!list||!list.length)return false;
-    var me=myPage();
-    for(var k=0;k<list.length;k++){
-      if(list[k]===me||SHARED[list[k]])return true;
-    }
-    return false;
-  }
-  function handle(ev){
-    var d;try{d=JSON.parse(ev.data);}catch(_){return;}
-    var g=d.gen;if(typeof g!=="number")return;
-    if(base===null){base=g;return;}
-    if(g===base)return;
-    if(d.full===true){location.reload();return;}
-    if(Object.prototype.toString.call(d.changed)==="[object Array]"){
-      if(relevant(d.changed))location.reload();else base=g;
-      return;
-    }
-    location.reload(); /* snapshot after a missed build */
-  }
-  function open(){
-    if(es&&es.readyState!==2)return;
-    try{es=new EventSource("/site/__live");}catch(_){return;}
-    es.onmessage=handle;
-  }
-  open();
-  window.addEventListener("pageshow",function(e){if(e.persisted)open();});
-  document.addEventListener("visibilitychange",function(){
-    if(document.visibilityState==="visible")open();
-  });
-})();
-</script>
+<script src="live.js"></script>
 </head>
 <body>
-<div id="nav-mount" style="min-height:3rem"></div>
+<nav class="site-nav" data-pod-filename="041-colorwheel"><span class="nav-title">SeedPods</span><div class="nav-right"><a class="nav-home" href="toc.html" aria-label="Contents" title="Contents"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></a><button type="button" class="nav-search-btn" onclick="seedNavOpenSearch()" aria-label="Search" title="Search"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></button><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true" title="Previous"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true" title="Next"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></span></div></nav>
 <div class="wrap">
-  <div class="subject-header fade cat-colored cat-feeling"><h1>The Surprising Color Wheel</h1><p class="premise">The visible spectrum is a line, but the mind closes it into a circle by inventing <em><a class="gloss-ref nav-push" href="glossary.html#color">colors</a></em>, purple, magenta, that correspond to no wavelength, and this closure happens before the brain is even informed, in retinal tissue that is embryologically brain.</p><div class="subject-nav-row" data-pod-filename="041-colorwheel"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Subject 41</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
-  <section id="_prolog" class="subject-section subject-prolog"><div class="prose"><p>The mind closes the line into a circle.</p>
+  <div class="subject-header fade cat-colored" style="--cat-bg:#BAA6F5"><h1>7.4 The Surprising Color Wheel</h1><p class="premise">The visible spectrum is a line, but the mind closes it into a circle by inventing <em><a class="gloss-ref nav-push" href="glossary.html#color">colors</a></em>, purple, magenta, that correspond to no wavelength, and this closure happens before the brain is even informed, in retinal tissue that is embryologically brain.</p></div>
+  <section id="_prolog" class="subject-section subject-prolog"><div class="prose"><p data-src-file="subjects/041-colorwheel.md" data-src-l0="3" data-src-l1="3">The mind closes the line into a circle.</p>
 </div></section>
-<section id="depth" class="subject-section"><h2 class="section-heading">Depth</h2><div class="prose"><figure class="directive-image directive-image--left"><img src="images/041-colorwheel.jpg" alt=""><figcaption>Munsell hue wheel: the mind closes the spectrum into a circle <cite>Wikimedia Commons</cite></figcaption></figure>
+<section id="depth" class="subject-section"><h2 class="section-heading">Depth</h2><div class="prose"><figure id="image-041-colorwheel-1" class="directive-image directive-image--left"><img src="images/041-colorwheel-l.jpg" alt=""><figcaption>Munsell hue wheel: the mind closes the spectrum into a circle <cite>Wikimedia Commons</cite></figcaption></figure>
 The visible spectrum is a line segment.
 At one end, violet, around 380 nanometers.
 At the other, red, around 700 nanometers.
@@ -84,7 +31,7 @@ The color wheel is not a feature of light.
 It is a feature of the mind looking at light.
 The mind does to the visual spectrum what it does to the musical spectrum: finds a way to close the line into a circle.
 [038]
-<p>This happens before your brain is ever informed about what you are seeing.
+<p data-src-file="subjects/041-colorwheel.md" data-src-l0="25" data-src-l1="34">This happens before your brain is ever informed about what you are seeing.
 At the first layer of your retina, three cone types, roughly tuned to red, green, and blue, receive light.
 But they do not forward those raw signals.
 At the very next layer, still within the retina, those three signals are immediately recombined into two <em><a class="gloss-ref nav-push" id="term-041-colorwheel-1" href="glossary.html#opponent-processing">opponent channels</a></em>: red against green, and blue against yellow, a transformation first identified by Ewald Hering<a class="bib-ref" id="ref-041-colorwheel-1" href="bibliography.html#ref-041-colorwheel-1">[hering]</a> in 1892.
@@ -94,7 +41,7 @@ It is a processor.
 And, here is the surprise, the retina is not separate from the brain.
 Embryologically it is brain tissue, an outgrowth of the developing brain that migrated into the eye.
 The thinking started earlier than you thought.</p>
-<p>That second retinal layer delivers four <em><a class="gloss-ref nav-push" id="term-041-colorwheel-2" href="glossary.html#unique-hues">perceptual endpoints</a></em>: red, yellow, green, blue.
+<p data-src-file="subjects/041-colorwheel.md" data-src-l0="36" data-src-l1="50">That second retinal layer delivers four <em><a class="gloss-ref nav-push" id="term-041-colorwheel-2" href="glossary.html#unique-hues">perceptual endpoints</a></em>: red, yellow, green, blue.
 Not three, four.
 And not the painter’s red, yellow, blue, nor the physicist’s red, green, blue, but all four, as the natural output of two opponent axes.
 You can verify this with your own eyes.
@@ -109,7 +56,7 @@ This is what the painter was actually reporting.
 This is also why yellow, which has no dedicated cone, feels as primary as red.
 It is primary, at the second layer.
 Yellow is what the retina computes when red and green fire together.</p>
-<p>This also dissolves a long-standing argument.
+<p data-src-file="subjects/041-colorwheel.md" data-src-l0="52" data-src-l1="60">This also dissolves a long-standing argument.
 Ask a physicist what the primary colors are and they say red, green, blue, the cone layer.
 Ask a painter and they say red, yellow, blue, closer to the opponent layer, though not quite right.
 Both are describing real phenomena.
@@ -118,7 +65,7 @@ At least four distinct levels govern color experience: physics determines how wa
 Each level is real.
 Each is incomplete without the others.
 [026]</p>
-<p>Why these two opponent axes and not others?
+<p data-src-file="subjects/041-colorwheel.md" data-src-l0="62" data-src-l1="71">Why these two opponent axes and not others?
 Here is one compelling idea, though not one we can claim as settled, developed in detail by J.D.
 Mollon<a class="bib-ref" id="ref-041-colorwheel-2" href="bibliography.html#ref-041-colorwheel-2">[mollon]</a> among others: the red-green axis may record one of the longest conversations in the history of life, plants developing color to attract animals, animals refining the axis to read it, each driving the other forward.
 Flowers and fruit did not merely happen to be red and yellow.
@@ -128,21 +75,21 @@ You are the growing tip of that conversation.
 The blue-yellow axis may solve a different problem: factoring out the color of the light source so that surfaces appear constant across changing light conditions.
 You see a red apple as red in sunlight and in shadow.
 This is called <em><a class="gloss-ref nav-push" id="term-041-colorwheel-6" href="glossary.html#color-constancy">color constancy</a></em>, and it may be what the blue-yellow channel is largely for, discounting the sky so the world stays legible beneath it.</p>
-<p>This hypothesis gains weight from an unexpected direction.
+<p data-src-file="subjects/041-colorwheel.md" data-src-l0="73" data-src-l1="77">This hypothesis gains weight from an unexpected direction.
 When deep neural networks are trained on natural images with no instruction about color, their first-layer filters spontaneously develop the same opponent channels.
 Gradient descent, running for hours, found what hundreds of millions of years of co-evolution may have found before it, because both were responding to the same underlying pressure: the statistical structure of a world lit by a single sun, edged by objects, divided between vegetation and sky.
 The solution is not arbitrary.
 It is what close attention to this particular world eventually produces.</p>
-<p>What we experience as color, the redness of red, the completeness of a saturated hue, the restlessness of a muddied one, is the shape of that solution, felt from the inside.
+<p data-src-file="subjects/041-colorwheel.md" data-src-l0="79" data-src-l1="81">What we experience as color, the redness of red, the completeness of a saturated hue, the restlessness of a muddied one, is the shape of that solution, felt from the inside.
 Why it feels like anything at all is a different question, and a deeper one.
 [042]</p>
 </div></section>
-<section id="provenance" class="subject-section"><div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="013-enactment.html" class="related-card related-card-prelim cat-colored cat-biology nav-push"><div class="related-title">13. The Organism Enacts Its World</div></a>
-<a href="016-neuralnetwork.html" class="related-card related-card-prelim cat-colored cat-ai-minds nav-push"><div class="related-title">16. The Network Is a Field Having Occasions</div></a>
-<a href="026-twotruths.html" class="related-card cat-colored cat-knowledge nav-push"><div class="related-title">26. Two Things Can Be True at Once</div></a>
-<a href="029-lighttime.html" class="related-card related-card-prelim cat-colored cat-physics nav-push"><div class="related-title">29. From Light's Point of View, There Is No Journey</div></a>
-<a href="045-baldwin.html" class="related-card related-card-prelim cat-colored cat-biology nav-push"><div class="related-title">45. How Learning Becomes Hardwired: The Baldwin Effect</div></a></div>
-<div class="inbound-refs"><span class="inbound-label">4 inbound references</span><span class="inbound-links"><a href="023-stories.html" class="inbound-link nav-push cat-colored cat-consciousness" title="Reality Is Made of Stories, Not Atoms">23</a><a href="026-twotruths.html" class="inbound-link nav-push cat-colored cat-knowledge" title="Two Things Can Be True at Once">26</a><a href="029-lighttime.html" class="inbound-link nav-push cat-colored cat-physics" title="From Light's Point of View, There Is No Journey">29</a><a href="045-baldwin.html" class="inbound-link nav-push cat-colored cat-biology" title="How Learning Becomes Hardwired: The Baldwin Effect">45</a></span></div></div></section>
+<div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="013-enactment.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#F0A6F5"><div class="related-title">8.9. The Organism Enacts Its World</div></a>
+<a href="016-neuralnetwork.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#A6BFF5"><div class="related-title">5.3. The Network Is a Field Having Occasions</div></a>
+<a href="026-twotruths.html" class="related-card cat-colored nav-push" style="--cat-bg:#E3F5A6"><div class="related-title">6.4. Two Things Can Be True at Once</div></a>
+<a href="029-lighttime.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#F5A6BA"><div class="related-title">4.3. From Light's Point of View, There Is No Journey</div></a>
+<a href="045-baldwin.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#C2F5A6"><div class="related-title">10.3. How Learning Becomes Hardwired: The Baldwin Effect</div></a></div>
+<div class="inbound-refs"><span class="inbound-label">4 inbound references</span><span class="inbound-links"><a href="029-lighttime.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#F5A6BA" title="From Light's Point of View, There Is No Journey">4.3</a><a href="023-stories.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#E6F5A6" title="Reality Is Made of Stories, Not Atoms">6.3</a><a href="026-twotruths.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#E3F5A6" title="Two Things Can Be True at Once">6.4</a><a href="045-baldwin.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#C2F5A6" title="How Learning Becomes Hardwired: The Baldwin Effect">10.3</a></span></div></div>
 </div>
 <div class="page-end" id="page-end-version">
   <button class="page-end-logo" aria-label="Show page info"
@@ -151,6 +98,6 @@ Why it feels like anything at all is a different question, and a deeper one.
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">feeling · prelim · Edited 2026-04-27 01:06</span>
+  <span class="page-end-version" aria-hidden="true">prelim · Edited 2026-06-19 14:46</span>
 </div>
 </body></html>

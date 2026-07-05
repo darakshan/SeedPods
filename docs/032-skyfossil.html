@@ -3,83 +3,30 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Sky Is a Fossil Record · Untitled</title>
+<title>4.5 The Sky Is a Fossil Record · SeedPods</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;600&family=DM+Mono:wght@300;400&display=swap">
 <link rel="icon" href="logo.svg">
-<link rel="preload" href="nav.html" as="fetch" crossorigin>
 <link rel="stylesheet" href="site.css">
 <script src="pods.js"></script>
 <script src="nav.js"></script>
-<script>
-/* Live reload: subscribe to this project's build stream and hard-reload
-   when a build touches THIS page (or a shared asset) — so a user merely
-   *viewing* a shared project sees another user's edit without manually
-   refreshing. An unrelated page's change only advances the baseline; it
-   does not reload. A full rebuild, or a build missed while suspended /
-   back-forward-cached (reconnect snapshot), reloads unconditionally
-   since we can't safely diff it. EventSource auto-reconnects and the
-   server re-sends the current generation on every (re)connect. */
-(function(){
-  if(window.__gossLive)return;window.__gossLive=1;
-  var base=null,es=null;
-  var SHARED={"site.css":1,"nav.html":1,"nav.js":1,"pods.js":1,
-              "search-index.json":1,"logo.svg":1};
-  function myPage(){
-    var p;try{p=decodeURIComponent(location.pathname);}catch(_){p=location.pathname;}
-    var i=p.indexOf("/site/");
-    var rest=i>=0?p.slice(i+6):p.replace(/^\/+/,"");
-    if(rest===""||rest.charAt(rest.length-1)==="/")rest+="index.html";
-    return rest;
-  }
-  function relevant(list){
-    if(!list||!list.length)return false;
-    var me=myPage();
-    for(var k=0;k<list.length;k++){
-      if(list[k]===me||SHARED[list[k]])return true;
-    }
-    return false;
-  }
-  function handle(ev){
-    var d;try{d=JSON.parse(ev.data);}catch(_){return;}
-    var g=d.gen;if(typeof g!=="number")return;
-    if(base===null){base=g;return;}
-    if(g===base)return;
-    if(d.full===true){location.reload();return;}
-    if(Object.prototype.toString.call(d.changed)==="[object Array]"){
-      if(relevant(d.changed))location.reload();else base=g;
-      return;
-    }
-    location.reload(); /* snapshot after a missed build */
-  }
-  function open(){
-    if(es&&es.readyState!==2)return;
-    try{es=new EventSource("/site/__live");}catch(_){return;}
-    es.onmessage=handle;
-  }
-  open();
-  window.addEventListener("pageshow",function(e){if(e.persisted)open();});
-  document.addEventListener("visibilitychange",function(){
-    if(document.visibilityState==="visible")open();
-  });
-})();
-</script>
+<script src="live.js"></script>
 </head>
 <body>
-<div id="nav-mount" style="min-height:3rem"></div>
+<nav class="site-nav" data-pod-filename="032-skyfossil"><span class="nav-title">SeedPods</span><div class="nav-right"><a class="nav-home" href="toc.html" aria-label="Contents" title="Contents"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></a><button type="button" class="nav-search-btn" onclick="seedNavOpenSearch()" aria-label="Search" title="Search"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></button><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true" title="Previous"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true" title="Next"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></span></div></nav>
 <div class="wrap">
-  <div class="subject-header fade cat-colored cat-physics"><h1>The Sky Is a Fossil Record</h1><p class="premise">When you look at the night sky you are seeing not space but time, and not just time but evolution, each galaxy a thread of the universe’s directed process toward self-awareness, running in parallel across billions of branches.</p><div class="subject-nav-row" data-pod-filename="032-skyfossil"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Subject 32</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
-  <section id="_prolog" class="subject-section subject-prolog"><div class="prose"><p>Fossils of Primal Evolution</p>
+  <div class="subject-header fade cat-colored" style="--cat-bg:#F5A6B1"><h1>4.5 The Sky Is a Fossil Record</h1><p class="premise">When you look at the night sky you are seeing not space but time, and not just time but evolution, each galaxy a thread of the universe’s directed process toward self-awareness, running in parallel across billions of branches.</p></div>
+  <section id="_prolog" class="subject-section subject-prolog"><div class="prose"><p data-src-file="subjects/032-skyfossil.md" data-src-l0="3" data-src-l1="3">Fossils of Primal Evolution</p>
 </div></section>
-<section id="surface" class="subject-section"><h2 class="section-heading">Surface</h2><div class="prose"><p>When you look at the night sky you think you’re seeing space.
+<section id="surface" class="subject-section"><h2 class="section-heading">Surface</h2><div class="prose"><p data-src-file="subjects/032-skyfossil.md" data-src-l0="12" data-src-l1="16">When you look at the night sky you think you’re seeing space.
 You’re actually seeing time.
 But there’s a third thing you’re seeing that nobody told you, you’re seeing <em><a class="gloss-ref nav-push" id="term-032-skyfossil-1" href="glossary.html#evolution">evolution</a></em>.
 Not biological evolution.
 Something older.</p>
-<figure class="directive-image directive-image--left"><img src="images/032-skyfossil.jpg" alt=""><figcaption>The cosmic microwave background: the sky as fossil record <cite>Wikimedia Commons</cite></figcaption></figure>
+<figure id="image-032-skyfossil-1" class="directive-image directive-image--left"><img src="images/032-skyfossil-l.jpg" alt=""><figcaption>The cosmic microwave background: the sky as fossil record <cite>Wikimedia Commons</cite></figcaption></figure>
 </div></section>
-<section id="depth" class="subject-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>From the Big Bang, structure emerges, not randomly but directionally.
+<section id="depth" class="subject-section"><h2 class="section-heading">Depth</h2><div class="prose"><p data-src-file="subjects/032-skyfossil.md" data-src-l0="20" data-src-l1="28">From the Big Bang, structure emerges, not randomly but directionally.
 Each galaxy a thread of that process.
 Stars as moments in the thread.
 The telos isn’t survival.
@@ -89,23 +36,23 @@ Teilhard de Chardin<a class="bib-ref" id="ref-032-skyfossil-2" href="bibliograph
 Many Worlds suggests the attractor is deeper than any single thread, every branch feeling toward the same convergence from different directions.
 Whitehead’s<a class="bib-ref" id="ref-032-skyfossil-3" href="bibliography.html#ref-032-skyfossil-3">[whitehead]</a> creative advance into novelty is what this process looks like from inside each moment of it.</p>
 </div></section>
-<section id="provenance" class="subject-section"><div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="009-randomness.html" class="related-card cat-colored cat-biology nav-push"><div class="related-title">9. Structure Is What Randomness Does</div></a>
-<a href="028-network.html" class="related-card cat-colored cat-consciousness nav-push"><div class="related-title">28. The Network That Experiences Itself</div></a>
-<a href="036-universenoticing.html" class="related-card related-card-prelim cat-colored cat-consciousness nav-push"><div class="related-title">36. You Are the Universe Noticing Something</div></a>
-<a href="037-assembly.html" class="related-card related-card-prelim cat-colored cat-mathematics nav-push"><div class="related-title">37. The Architecture of Levels</div></a>
-<a href="058-galacticnets.html" class="related-card related-card-prelim cat-colored cat-ai-minds nav-push"><div class="related-title">58. Galaxies and AI Weight Matrices as Structural Homologs</div></a></div>
-<div class="inbound-refs"><span class="inbound-label">1 inbound reference</span><span class="inbound-links"><a href="036-universenoticing.html" class="inbound-link nav-push cat-colored cat-consciousness" title="You Are the Universe Noticing Something">36</a></span></div></div></section>
 <section id="script" class="subject-section"><h2 class="section-heading">Script</h2><div class="prose"><ol>
-<li><p>Time-lapse of galaxy formation. Pull back, not to show scale but to show the pattern.</p>
+<li data-src-file="subjects/032-skyfossil.md" data-src-l0="31" data-src-l1="32"><p data-src-file="subjects/032-skyfossil.md" data-src-l0="31" data-src-l1="31">Time-lapse of galaxy formation. Pull back, not to show scale but to show the pattern.</p>
 </li>
-<li><p>The same movement visible in an embryo developing. In a neural network training.</p>
+<li data-src-file="subjects/032-skyfossil.md" data-src-l0="33" data-src-l1="34"><p data-src-file="subjects/032-skyfossil.md" data-src-l0="33" data-src-l1="33">The same movement visible in an embryo developing. In a neural network training.</p>
 </li>
-<li><p>A person looking up at the night sky, recognizing themselves in it.</p>
+<li data-src-file="subjects/032-skyfossil.md" data-src-l0="35" data-src-l1="35"><p data-src-file="subjects/032-skyfossil.md" data-src-l0="35" data-src-l1="35">A person looking up at the night sky, recognizing themselves in it.</p>
 </li>
 </ol>
 </div></section>
-<section id="images" class="subject-section"><h2 class="section-heading">Images</h2><div class="prose"><p>Deep field galaxy images Cosmic web structure Embryo development sequence Neural network activation visualization</p>
+<section id="images" class="subject-section"><h2 class="section-heading">Images</h2><div class="prose"><p data-src-file="subjects/032-skyfossil.md" data-src-l0="38" data-src-l1="38">Deep field galaxy images Cosmic web structure Embryo development sequence Neural network activation visualization</p>
 </div></section>
+<div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="009-randomness.html" class="related-card cat-colored nav-push" style="--cat-bg:#F5A6D7"><div class="related-title">2.6. Structure Is What Randomness Does</div></a>
+<a href="028-network.html" class="related-card cat-colored nav-push" style="--cat-bg:#F5A6B5"><div class="related-title">4.4. The Network That Experiences Itself</div></a>
+<a href="036-universenoticing.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#F5A6AD"><div class="related-title">4.6. You Are the Universe Noticing Something</div></a>
+<a href="037-assembly.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#E3A6F5"><div class="related-title">8.5. The Architecture of Levels</div></a>
+<a href="058-galacticnets.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#B5F5A6"><div class="related-title">10.8. Galaxies and AI Weight Matrices as Structural Homologs</div></a></div>
+<div class="inbound-refs"><span class="inbound-label">1 inbound reference</span><span class="inbound-links"><a href="036-universenoticing.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#F5A6AD" title="You Are the Universe Noticing Something">4.6</a></span></div></div>
 </div>
 <div class="page-end" id="page-end-version">
   <button class="page-end-logo" aria-label="Show page info"
@@ -114,6 +61,6 @@ Whitehead’s<a class="bib-ref" id="ref-032-skyfossil-3" href="bibliography.html
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">physics · rough · Edited 2026-04-27 01:05</span>
+  <span class="page-end-version" aria-hidden="true">rough · Edited 2026-06-19 14:46</span>
 </div>
 </body></html>

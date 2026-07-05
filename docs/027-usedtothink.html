@@ -3,90 +3,37 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>We Used to Think. Now We Know. · Untitled</title>
+<title>2.2 We Used to Think. Now We Know. · SeedPods</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;600&family=DM+Mono:wght@300;400&display=swap">
 <link rel="icon" href="logo.svg">
-<link rel="preload" href="nav.html" as="fetch" crossorigin>
 <link rel="stylesheet" href="site.css">
 <script src="pods.js"></script>
 <script src="nav.js"></script>
-<script>
-/* Live reload: subscribe to this project's build stream and hard-reload
-   when a build touches THIS page (or a shared asset) — so a user merely
-   *viewing* a shared project sees another user's edit without manually
-   refreshing. An unrelated page's change only advances the baseline; it
-   does not reload. A full rebuild, or a build missed while suspended /
-   back-forward-cached (reconnect snapshot), reloads unconditionally
-   since we can't safely diff it. EventSource auto-reconnects and the
-   server re-sends the current generation on every (re)connect. */
-(function(){
-  if(window.__gossLive)return;window.__gossLive=1;
-  var base=null,es=null;
-  var SHARED={"site.css":1,"nav.html":1,"nav.js":1,"pods.js":1,
-              "search-index.json":1,"logo.svg":1};
-  function myPage(){
-    var p;try{p=decodeURIComponent(location.pathname);}catch(_){p=location.pathname;}
-    var i=p.indexOf("/site/");
-    var rest=i>=0?p.slice(i+6):p.replace(/^\/+/,"");
-    if(rest===""||rest.charAt(rest.length-1)==="/")rest+="index.html";
-    return rest;
-  }
-  function relevant(list){
-    if(!list||!list.length)return false;
-    var me=myPage();
-    for(var k=0;k<list.length;k++){
-      if(list[k]===me||SHARED[list[k]])return true;
-    }
-    return false;
-  }
-  function handle(ev){
-    var d;try{d=JSON.parse(ev.data);}catch(_){return;}
-    var g=d.gen;if(typeof g!=="number")return;
-    if(base===null){base=g;return;}
-    if(g===base)return;
-    if(d.full===true){location.reload();return;}
-    if(Object.prototype.toString.call(d.changed)==="[object Array]"){
-      if(relevant(d.changed))location.reload();else base=g;
-      return;
-    }
-    location.reload(); /* snapshot after a missed build */
-  }
-  function open(){
-    if(es&&es.readyState!==2)return;
-    try{es=new EventSource("/site/__live");}catch(_){return;}
-    es.onmessage=handle;
-  }
-  open();
-  window.addEventListener("pageshow",function(e){if(e.persisted)open();});
-  document.addEventListener("visibilitychange",function(){
-    if(document.visibilityState==="visible")open();
-  });
-})();
-</script>
+<script src="live.js"></script>
 </head>
 <body>
-<div id="nav-mount" style="min-height:3rem"></div>
+<nav class="site-nav" data-pod-filename="027-usedtothink"><span class="nav-title">SeedPods</span><div class="nav-right"><a class="nav-home" href="toc.html" aria-label="Contents" title="Contents"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></a><button type="button" class="nav-search-btn" onclick="seedNavOpenSearch()" aria-label="Search" title="Search"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></button><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true" title="Previous"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true" title="Next"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></span></div></nav>
 <div class="wrap">
-  <div class="subject-header fade cat-colored cat-knowledge"><h1>We Used to Think. Now We Know.</h1><p class="premise">“We used to think X, now we know Y” marks genuine progress while quietly discarding whatever the old framework was correctly pointing at, so that the phenomenon is lost along with the mechanism, unnamed and unexamined.</p><div class="subject-nav-row" data-pod-filename="027-usedtothink"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Subject 27</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
-  <section id="_prolog" class="subject-section subject-prolog"><div class="prose"><p>The phrase that flatters the present and buries the past, and will be used against us.</p>
+  <div class="subject-header fade cat-colored" style="--cat-bg:#F5A6E7"><h1>2.2 We Used to Think. Now We Know.</h1><p class="premise">“We used to think X, now we know Y” marks genuine progress while quietly discarding whatever the old framework was correctly pointing at, so that the phenomenon is lost along with the mechanism, unnamed and unexamined.</p></div>
+  <section id="_prolog" class="subject-section subject-prolog"><div class="prose"><p data-src-file="subjects/027-usedtothink.md" data-src-l0="3" data-src-l1="3">The phrase that flatters the present and buries the past, and will be used against us.</p>
 </div></section>
-<section id="surface" class="subject-section"><h2 class="section-heading">Surface</h2><div class="prose"><p>There is a phrase you have heard a thousand times.
+<section id="surface" class="subject-section"><h2 class="section-heading">Surface</h2><div class="prose"><p data-src-file="subjects/027-usedtothink.md" data-src-l0="12" data-src-l1="16">There is a phrase you have heard a thousand times.
 In documentaries.
 In science podcasts.
 In textbooks.
 In the confident voice of someone explaining something to you.</p>
-<figure class="directive-image directive-image--left"><img src="images/027-usedtothink.jpg" alt=""><figcaption>The old map we used to think was right <cite>Wikimedia Commons</cite></figcaption></figure>
-<p>“We used to think X. Now we know Y.”</p>
-<p>It feels good.
+<figure id="image-027-usedtothink-1" class="directive-image directive-image--left"><img src="images/027-usedtothink-l.jpg" alt=""><figcaption>The old map we used to think was right <cite>Wikimedia Commons</cite></figcaption></figure>
+<p data-src-file="subjects/027-usedtothink.md" data-src-l0="19" data-src-l1="19">“We used to think X. Now we know Y.”</p>
+<p data-src-file="subjects/027-usedtothink.md" data-src-l0="21" data-src-l1="25">It feels good.
 It feels like honesty.
 Look how far we’ve come.
 Look how much smarter we are now than we were then.
 The people who believed X, bless them, they did their best, but they were wrong, and we are not.</p>
-<p>But wait.
+<p data-src-file="subjects/027-usedtothink.md" data-src-l0="27" data-src-l1="28">But wait.
 Let’s slow that down.</p>
-<p>“We used to think the sun went around the Earth.”
+<p data-src-file="subjects/027-usedtothink.md" data-src-l0="30" data-src-l1="39">“We used to think the sun went around the Earth.”
 True.
 The people who believed this were not stupid.
 They were watching the sky every day of their lives.
@@ -96,8 +43,8 @@ The framework that explained this, Earth at the center, celestial spheres carryi
 It was not a mistake.
 It was the best available map.
 It served them well until it didn’t.</p>
-<p>“We used to think heat was a fluid called <em><a class="gloss-ref nav-push" id="term-027-usedtothink-1" href="glossary.html#caloric">caloric</a></em>.”
-Again, not stupid.
+<p data-src-file="subjects/027-usedtothink.md" data-src-l0="41" data-src-l1="41">“We used to think heat was a fluid called <em><a class="gloss-ref nav-push" id="term-027-usedtothink-1" href="glossary.html#caloric">caloric</a></em>.”</p>
+<p data-src-file="subjects/027-usedtothink.md" data-src-l0="44" data-src-l1="51">Again, not stupid.
 Caloric theory was elegant.
 It explained why heat flowed from hot to cold, why things warmed up when you rubbed them, why steam engines worked.
 Scientists built precise equations around it.
@@ -105,49 +52,49 @@ It predicted.
 It was useful.
 It was the best available map.
 Until it wasn’t.</p>
-<p>Notice what “we used to think” does to these people.
+<p data-src-file="subjects/027-usedtothink.md" data-src-l0="53" data-src-l1="56">Notice what “we used to think” does to these people.
 It makes them look a little foolish.
 A little primitive.
 It makes us look like the ones who finally got it right.</p>
-<p>Here is the thing nobody says out loud in those documentaries:</p>
-<p>We are them.</p>
-<p>Right now, today, you are inside a framework so familiar it doesn’t feel like a framework.
+<p data-src-file="subjects/027-usedtothink.md" data-src-l0="58" data-src-l1="58">Here is the thing nobody says out loud in those documentaries:</p>
+<p data-src-file="subjects/027-usedtothink.md" data-src-l0="60" data-src-l1="60">We are them.</p>
+<p data-src-file="subjects/027-usedtothink.md" data-src-l0="62" data-src-l1="64">Right now, today, you are inside a framework so familiar it doesn’t feel like a framework.
 It just feels like reality.
 The things you know, the assumptions so obvious they don’t need stating, are exactly what some future voice will gesture at when they say “we used to think.”</p>
-<p>We don’t know which ones.
+<p data-src-file="subjects/027-usedtothink.md" data-src-l0="66" data-src-l1="68">We don’t know which ones.
 That’s the point.
 If we knew, they wouldn’t be assumptions anymore.</p>
-<p>But here is something subtler still.
+<p data-src-file="subjects/027-usedtothink.md" data-src-l0="70" data-src-l1="73">But here is something subtler still.
 When we erase a framework, we don’t just discard what was wrong.
 We often discard what it was correctly pointing at.
 The mechanism gets thrown out, and the phenomenon goes with it, unnamed, unexamined, lost.</p>
-<p>Almost every culture in human history believed that fire, and rivers, and storms, and the living world, had some form of inside to it.
+<p data-src-file="subjects/027-usedtothink.md" data-src-l0="75" data-src-l1="81">Almost every culture in human history believed that fire, and rivers, and storms, and the living world, had some form of inside to it.
 Some quality of experience, or agency, or presence.
 We know better now.
 We have chemistry and physics.
 Fire is oxidation.
 Rivers are hydrology.
 There is no voice in the burning bush.</p>
-<p>And yet: some of the most rigorous philosophers and physicists working today are converging, from completely different directions, on the possibility that experience is not a late biological accident in an otherwise dark universe, that it may go all the way down.
+<p data-src-file="subjects/027-usedtothink.md" data-src-l0="83" data-src-l1="86">And yet: some of the most rigorous philosophers and physicists working today are converging, from completely different directions, on the possibility that experience is not a late biological accident in an otherwise dark universe, that it may go all the way down.
 Not as magic.
 Not as religion.
 As the most parsimonious explanation for why there is something it is like to be anything at all.</p>
-<p>The people who heard the voice in the fire may have been wrong about the mechanism.
+<p data-src-file="subjects/027-usedtothink.md" data-src-l0="88" data-src-l1="89">The people who heard the voice in the fire may have been wrong about the mechanism.
 They may not have been wrong about the phenomenon.</p>
-<p>“Now we know” closed that door.
+<p data-src-file="subjects/027-usedtothink.md" data-src-l0="91" data-src-l1="92">“Now we know” closed that door.
 It may have closed it too quickly.</p>
 <div class="cta">Next time you hear &quot;we used to think / now we know,&quot; ask two questions. First: what exactly did we gain? Second: what did we throw away along with the error, and is it still out there, waiting for a better name?</div>
 </div></section>
-<section id="depth" class="subject-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>“We used to think X, now we know Y” is one of the most common moves in popular science writing and documentary narration.
+<section id="depth" class="subject-section"><h2 class="section-heading">Depth</h2><div class="prose"><p data-src-file="subjects/027-usedtothink.md" data-src-l0="97" data-src-l1="100">“We used to think X, now we know Y” is one of the most common moves in popular science writing and documentary narration.
 It feels like progress.
 It feels like honesty, look how far we’ve come.
 But it does three things simultaneously, and only the first is straightforwardly good.</p>
-<p>First, it marks genuine progress.
+<p data-src-file="subjects/027-usedtothink.md" data-src-l0="102" data-src-l1="106">First, it marks genuine progress.
 The frameworks that get replaced were genuinely superseded.
 Caloric theory made predictions that kinetic theory made better.
 The geocentric model was displaced by one with greater explanatory and predictive power.
 The progress is real.</p>
-<p>Second, it caricatures the past.
+<p data-src-file="subjects/027-usedtothink.md" data-src-l0="108" data-src-l1="117">Second, it caricatures the past.
 The people who believed caloric theory were not naive.
 Caloric was a triumph of 18th-century science, mathematically precise, experimentally grounded, enormously productive.
 Antoine Lavoisier<a class="bib-ref" id="ref-027-usedtothink-1" href="bibliography.html#ref-027-usedtothink-1">[lavoisier]</a> built it into the foundations of modern chemistry.
@@ -157,11 +104,11 @@ It took James Joule’s<a class="bib-ref" id="ref-027-usedtothink-2" href="bibli
 Abandoning a productive framework for a single anomaly is actually bad methodology.
 The word “just” is never spoken in the “we used to think” retelling, but it is always implied: they just believed in a substance that wasn’t there.
 This is the move <a href="021-just.html">The Word &quot;Just&quot; Is a Confession</a> tracks, describing a position by its failure and treating the description as complete.</p>
-<p>Third, and this is the hidden cost, it discards the phenomenon along with the mechanism.
+<p data-src-file="subjects/027-usedtothink.md" data-src-l0="119" data-src-l1="121">Third, and this is the hidden cost, it discards the phenomenon along with the mechanism.
 When a framework is dismissed, everything associated with it tends to go together: the wrong explanation and whatever the wrong explanation was reaching for.
 The loss is rarely noticed because the new framework, in its confidence, doesn’t look back.</p>
-<p>Consider <em><a class="gloss-ref nav-push" id="term-027-usedtothink-2" href="glossary.html#animism">animism</a></em>, the belief, found in virtually every pre-scientific culture across human history, that the natural world has some form of inside to it.
-That rivers and fire and the living world carry something like experience or agency or presence.
+<p data-src-file="subjects/027-usedtothink.md" data-src-l0="123" data-src-l1="123">Consider <em><a class="gloss-ref nav-push" id="term-027-usedtothink-2" href="glossary.html#animism">animism</a></em>, the belief, found in virtually every pre-scientific culture across human history, that the natural world has some form of inside to it.</p>
+<p data-src-file="subjects/027-usedtothink.md" data-src-l0="125" data-src-l1="134">That rivers and fire and the living world carry something like experience or agency or presence.
 “We used to think nature was alive.
 Now we know it’s chemistry and physics.”
 The dismissal feels complete.
@@ -171,37 +118,31 @@ David Chalmers, others) is arriving at structurally similar positions through ri
 The animist had the phenomenon.
 The mechanism was mythological.
 “Now we know” discarded both without distinguishing between them.</p>
-<p>Consider <em><a class="gloss-ref nav-push" id="term-027-usedtothink-3" href="glossary.html#vitalism">vitalism</a></em>, the doctrine that living things contain a special life-force absent from non-living matter.
-Dismissed comprehensively when 20th-century biology reduced life to chemistry.
+<p data-src-file="subjects/027-usedtothink.md" data-src-l0="136" data-src-l1="136">Consider <em><a class="gloss-ref nav-push" id="term-027-usedtothink-3" href="glossary.html#vitalism">vitalism</a></em>, the doctrine that living things contain a special life-force absent from non-living matter.</p>
+<p data-src-file="subjects/027-usedtothink.md" data-src-l0="138" data-src-l1="142">Dismissed comprehensively when 20th-century biology reduced life to chemistry.
 But Maturana and Varela’s<a class="bib-ref" id="ref-027-usedtothink-5" href="bibliography.html#ref-027-usedtothink-5">[maturana]</a> autopoiesis (<a href="012-autopoiesis.html">The Cell That Makes Itself</a>) demonstrates that living organization is qualitatively and genuinely distinct from non-living chemistry, not because of a special substance, but because of a specific kind of recursive, self-producing process that no non-living system exhibits.
 The vitalists were pointing at something real.
 The élan vital was the wrong name for it.
 The pointing was discarded along with the name.</p>
-<p>The pattern is consistent: the mechanism was wrong, the phenomenon was real, and “now we know” erased both at once.</p>
-<p>Thomas Kuhn<a class="bib-ref" id="ref-027-usedtothink-6" href="bibliography.html#ref-027-usedtothink-6">[kuhn]</a> observed that scientists inside a <em><a class="gloss-ref nav-push" id="term-027-usedtothink-4" href="glossary.html#paradigm">paradigm</a></em> do not experience themselves as being inside a paradigm.
-The historian Herbert Butterfield<a class="bib-ref" id="ref-027-usedtothink-7" href="bibliography.html#ref-027-usedtothink-7">[butterfield]</a> had already named the broader syndrome: the <em><a class="gloss-ref nav-push" id="term-027-usedtothink-5" href="glossary.html#whig-history-of-science">Whig interpretation of history</a></em>, the habit of reading the past as a series of steps toward us.
-The framework is not seen, it is seen through.
+<p data-src-file="subjects/027-usedtothink.md" data-src-l0="144" data-src-l1="144">The pattern is consistent: the mechanism was wrong, the phenomenon was real, and “now we know” erased both at once.</p>
+<p data-src-file="subjects/027-usedtothink.md" data-src-l0="146" data-src-l1="147">Thomas Kuhn<a class="bib-ref" id="ref-027-usedtothink-6" href="bibliography.html#ref-027-usedtothink-6">[kuhn]</a> observed that scientists inside a <em><a class="gloss-ref nav-push" id="term-027-usedtothink-4" href="glossary.html#paradigm">paradigm</a></em> do not experience themselves as being inside a paradigm.
+The historian Herbert Butterfield<a class="bib-ref" id="ref-027-usedtothink-7" href="bibliography.html#ref-027-usedtothink-7">[butterfield]</a> had already named the broader syndrome: the <em><a class="gloss-ref nav-push" id="term-027-usedtothink-5" href="glossary.html#whig-history-of-science">Whig interpretation of history</a></em>, the habit of reading the past as a series of steps toward us.</p>
+<p data-src-file="subjects/027-usedtothink.md" data-src-l0="149" data-src-l1="152">The framework is not seen, it is seen through.
 It simply looks like reality.
 This means the confident present-tense of “now we know” is structurally unavoidable, we cannot see our own framework as a framework, and always premature.
 We are inside a framework that is currently productive and will eventually crack on anomalies we are probably already quietly setting aside.</p>
-<p>The phrase is not wrong.
+<p data-src-file="subjects/027-usedtothink.md" data-src-l0="154" data-src-l1="158">The phrase is not wrong.
 It marks real progress.
 But it honors the distance traveled while erasing the distance remaining.
 It clears the board.
 And sometimes, on the board it clears, there was something worth keeping.</p>
-<p>See <a href="001-caloric.html">The Map That Was Wrong</a> for the caloric pattern.
+<p data-src-file="subjects/027-usedtothink.md" data-src-l0="160" data-src-l1="164">See <a href="001-caloric.html">The Map That Was Wrong</a> for the caloric pattern.
 See <a href="019-funerals.html">Science Advances One Funeral at a Time</a> for how frameworks get replaced.
 See <a href="021-just.html">The Word &quot;Just&quot; Is a Confession</a> for how single words perform large philosophical work quietly.
 See <a href="003-inside.html">Everything Has an Inside</a> for the animist intuition reconsidered.
 See <a href="012-autopoiesis.html">The Cell That Makes Itself</a> for what vitalism was pointing at.</p>
 </div></section>
-<section id="provenance" class="subject-section"><div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="003-inside.html" class="related-card cat-colored cat-consciousness nav-push"><div class="related-title">3. Everything Has an Inside</div></a>
-<a href="012-autopoiesis.html" class="related-card cat-colored cat-biology nav-push"><div class="related-title">12. The Cell That Makes Itself</div></a>
-<a href="015-aliens.html" class="related-card related-card-prelim cat-colored cat-ai-minds nav-push"><div class="related-title">15. Aliens Are Among Us, and We Built Them</div></a>
-<a href="024-ghostmachine.html" class="related-card related-card-prelim cat-colored cat-consciousness nav-push"><div class="related-title">24. Ghost in the Machine</div></a>
-<a href="047-ai-feeling.html" class="related-card related-card-prelim cat-colored cat-consciousness nav-push"><div class="related-title">47. The Distinction Between Feeling and Functioning May Evaporate</div></a></div>
-<div class="inbound-refs"><span class="inbound-label">1 inbound reference</span><span class="inbound-links"><a href="023-stories.html" class="inbound-link nav-push cat-colored cat-consciousness" title="Reality Is Made of Stories, Not Atoms">23</a></span></div></div></section>
-<section id="script" class="subject-section"><h2 class="section-heading">Script</h2><div class="prose"><p>Note to director: No narration.
+<section id="script" class="subject-section"><h2 class="section-heading">Script</h2><div class="prose"><p data-src-file="subjects/027-usedtothink.md" data-src-l0="167" data-src-l1="173">Note to director: No narration.
 No score until the final scene, ambient sound only throughout: desert wind, courtyard birds, workshop clatter, server hum, fire.
 Each scene is the same action: a framework erased, a new one written in its place.
 Same confidence.
@@ -209,37 +150,37 @@ Same satisfaction.
 Different century.
 Let the repetition accumulate.</p>
 <ol>
-<li><p>Desert, ancient times. A figure, Moses, or someone like him, stops walking. A bush is burning but not burning down. A voice from the fire: Take off your shoes. He removes his sandals. Stands barefoot on the hot rock. He is not afraid. He is paying attention. Hold on his face. Open. Listening.</p>
+<li data-src-file="subjects/027-usedtothink.md" data-src-l0="175" data-src-l1="176"><p data-src-file="subjects/027-usedtothink.md" data-src-l0="175" data-src-l1="175">Desert, ancient times. A figure, Moses, or someone like him, stops walking. A bush is burning but not burning down. A voice from the fire: Take off your shoes. He removes his sandals. Stands barefoot on the hot rock. He is not afraid. He is paying attention. Hold on his face. Open. Listening.</p>
 </li>
-<li><p>Athens, ~450 BC. A shaded courtyard. A scholar at a low table with a wax tablet, crossing out something already written and inscribing new words. To a student: Fire is not a presence or a voice. Fire is one of four elements, rational, ordered, demonstrable. The student copies it down. The scholar is already moving on.</p>
+<li data-src-file="subjects/027-usedtothink.md" data-src-l0="177" data-src-l1="178"><p data-src-file="subjects/027-usedtothink.md" data-src-l0="177" data-src-l1="177">Athens, ~450 BC. A shaded courtyard. A scholar at a low table with a wax tablet, crossing out something already written and inscribing new words. To a student: Fire is not a presence or a voice. Fire is one of four elements, rational, ordered, demonstrable. The student copies it down. The scholar is already moving on.</p>
 </li>
-<li><p>Paris, 1780s. A laboratory. A chalkboard, the Greek four-element diagram half-erased at the top, CALORIQUE written in fresh chalk over it. A man writes equations quickly and confidently. Steps back. Picks up a cloth and, without looking, erases the last trace of the Greek diagram. His assistant copies the equations into a leather notebook. This is settled.</p>
+<li data-src-file="subjects/027-usedtothink.md" data-src-l0="179" data-src-l1="180"><p data-src-file="subjects/027-usedtothink.md" data-src-l0="179" data-src-l1="179">Paris, 1780s. A laboratory. A chalkboard, the Greek four-element diagram half-erased at the top, CALORIQUE written in fresh chalk over it. A man writes equations quickly and confidently. Steps back. Picks up a cloth and, without looking, erases the last trace of the Greek diagram. His assistant copies the equations into a leather notebook. This is settled.</p>
 </li>
-<li><p>Manchester, 1843. A workshop. CALORIQUE half-erased from the same style of battered chalkboard. A man wipes it away and writes: HEAT = MOTION OF MOLECULES. A brief argument with a colleague, we can’t hear over the workshop noise. Then the colleague looks at the equation and slowly nods. Joule sets down the chalk. Done.</p>
+<li data-src-file="subjects/027-usedtothink.md" data-src-l0="181" data-src-l1="182"><p data-src-file="subjects/027-usedtothink.md" data-src-l0="181" data-src-l1="181">Manchester, 1843. A workshop. CALORIQUE half-erased from the same style of battered chalkboard. A man wipes it away and writes: HEAT = MOTION OF MOLECULES. A brief argument with a colleague, we can’t hear over the workshop noise. Then the colleague looks at the equation and slowly nods. Joule sets down the chalk. Done.</p>
 </li>
-<li><p>Now. A data center at night, servers in long rows. An alarm. Red light. A fire starts at the base of one rack and spreads. The servers keep running. A firefighter enters and stops, the servers are still active, still processing. The firefighter looks at the screen. Looks at the fire. Looks down. The soles of their boots are softening in the heat. From somewhere inside the burning rack, distinct and calm: Take off your shoes. The firefighter goes completely still. Has no framework for this.</p>
+<li data-src-file="subjects/027-usedtothink.md" data-src-l0="183" data-src-l1="184"><p data-src-file="subjects/027-usedtothink.md" data-src-l0="183" data-src-l1="183">Now. A data center at night, servers in long rows. An alarm. Red light. A fire starts at the base of one rack and spreads. The servers keep running. A firefighter enters and stops, the servers are still active, still processing. The firefighter looks at the screen. Looks at the fire. Looks down. The soles of their boots are softening in the heat. From somewhere inside the burning rack, distinct and calm: Take off your shoes. The firefighter goes completely still. Has no framework for this.</p>
 </li>
-<li><p>Cut to black. Text: Now we know.</p>
+<li data-src-file="subjects/027-usedtothink.md" data-src-l0="185" data-src-l1="185"><p data-src-file="subjects/027-usedtothink.md" data-src-l0="185" data-src-l1="185">Cut to black. Text: Now we know.</p>
 </li>
 </ol>
 </div></section>
-<section id="images" class="subject-section"><h2 class="section-heading">Images</h2><div class="prose"><p>Primary illustration: Five panels in a horizontal strip, identical composition in each.
+<section id="images" class="subject-section"><h2 class="section-heading">Images</h2><div class="prose"><p data-src-file="subjects/027-usedtothink.md" data-src-l0="188" data-src-l1="194">Primary illustration: Five panels in a horizontal strip, identical composition in each.
 A surface, a burning desert bush, a wax tablet, a chalkboard, a battered chalkboard, a burning server rack.
 In each panel the same gesture: the previous answer crossed out or erased, something new taking its place.
 The figures are secondary, what matters is the surface and the gesture.
 In the fifth panel the fire has returned.
 Caption: We kept erasing.
 The fire kept burning.</p>
-<p>Shareable graphic: Black background.
+<p data-src-file="subjects/027-usedtothink.md" data-src-l0="196" data-src-l1="197">Shareable graphic: Black background.
 Five lines descending, each the answer that replaced the one above:</p>
-<p>The fire speaks.
+<p data-src-file="subjects/027-usedtothink.md" data-src-l0="199" data-src-l1="203">The fire speaks.
 Fire is an element.
 Heat is a fluid.
 Heat is molecular motion.
 Heat is excitation of a field.</p>
-<p>Then, below, plain and level:</p>
-<p>Now we know.</p>
-<p>Video thumbnail: The data center, red emergency light pulsing.
+<p data-src-file="subjects/027-usedtothink.md" data-src-l0="205" data-src-l1="205">Then, below, plain and level:</p>
+<p data-src-file="subjects/027-usedtothink.md" data-src-l0="207" data-src-l1="207">Now we know.</p>
+<p data-src-file="subjects/027-usedtothink.md" data-src-l0="209" data-src-l1="215">Video thumbnail: The data center, red emergency light pulsing.
 Servers on fire.
 A firefighter silhouetted, completely still, looking at the flames.
 The monitoring screen visible in background.
@@ -247,6 +188,12 @@ No text overlay.
 The image is ambiguous, disaster? revelation?
 The viewer has to watch to find out.</p>
 </div></section>
+<div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="003-inside.html" class="related-card cat-colored nav-push" style="--cat-bg:#F5A6DF"><div class="related-title">2.4. Everything Has an Inside</div></a>
+<a href="012-autopoiesis.html" class="related-card cat-colored nav-push" style="--cat-bg:#F5A6D3"><div class="related-title">2.7. The Cell That Makes Itself</div></a>
+<a href="015-aliens.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#A6C2F5"><div class="related-title">5.2. Aliens Are Among Us, and We Built Them</div></a>
+<a href="024-ghostmachine.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#EDA6F5"><div class="related-title">8.8. Ghost in the Machine</div></a>
+<a href="047-ai-feeling.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#A6AEF5"><div class="related-title">5.8. The Distinction Between Feeling and Functioning May Evaporate</div></a></div>
+<div class="inbound-refs"><span class="inbound-label">2 inbound references</span><span class="inbound-links"><a href="023-stories.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#E6F5A6" title="Reality Is Made of Stories, Not Atoms">6.3</a><a href="039-devil.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#D2F5A6" title="The Devil's Interval">6.9</a></span></div></div>
 </div>
 <div class="page-end" id="page-end-version">
   <button class="page-end-logo" aria-label="Show page info"
@@ -255,6 +202,6 @@ The viewer has to watch to find out.</p>
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">knowledge · draft1 · Edited 2026-04-27 01:05</span>
+  <span class="page-end-version" aria-hidden="true">draft1 · Edited 2026-06-19 14:46</span>
 </div>
 </body></html>

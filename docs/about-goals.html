@@ -3,96 +3,43 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>About Goals · Untitled</title>
+<title>About Goals · SeedPods</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;600&family=DM+Mono:wght@300;400&display=swap">
 <link rel="icon" href="logo.svg">
-<link rel="preload" href="nav.html" as="fetch" crossorigin>
 <link rel="stylesheet" href="site.css">
 <script src="pods.js"></script>
 <script src="nav.js"></script>
-<script>
-/* Live reload: subscribe to this project's build stream and hard-reload
-   when a build touches THIS page (or a shared asset) — so a user merely
-   *viewing* a shared project sees another user's edit without manually
-   refreshing. An unrelated page's change only advances the baseline; it
-   does not reload. A full rebuild, or a build missed while suspended /
-   back-forward-cached (reconnect snapshot), reloads unconditionally
-   since we can't safely diff it. EventSource auto-reconnects and the
-   server re-sends the current generation on every (re)connect. */
-(function(){
-  if(window.__gossLive)return;window.__gossLive=1;
-  var base=null,es=null;
-  var SHARED={"site.css":1,"nav.html":1,"nav.js":1,"pods.js":1,
-              "search-index.json":1,"logo.svg":1};
-  function myPage(){
-    var p;try{p=decodeURIComponent(location.pathname);}catch(_){p=location.pathname;}
-    var i=p.indexOf("/site/");
-    var rest=i>=0?p.slice(i+6):p.replace(/^\/+/,"");
-    if(rest===""||rest.charAt(rest.length-1)==="/")rest+="index.html";
-    return rest;
-  }
-  function relevant(list){
-    if(!list||!list.length)return false;
-    var me=myPage();
-    for(var k=0;k<list.length;k++){
-      if(list[k]===me||SHARED[list[k]])return true;
-    }
-    return false;
-  }
-  function handle(ev){
-    var d;try{d=JSON.parse(ev.data);}catch(_){return;}
-    var g=d.gen;if(typeof g!=="number")return;
-    if(base===null){base=g;return;}
-    if(g===base)return;
-    if(d.full===true){location.reload();return;}
-    if(Object.prototype.toString.call(d.changed)==="[object Array]"){
-      if(relevant(d.changed))location.reload();else base=g;
-      return;
-    }
-    location.reload(); /* snapshot after a missed build */
-  }
-  function open(){
-    if(es&&es.readyState!==2)return;
-    try{es=new EventSource("/site/__live");}catch(_){return;}
-    es.onmessage=handle;
-  }
-  open();
-  window.addEventListener("pageshow",function(e){if(e.persisted)open();});
-  document.addEventListener("visibilitychange",function(){
-    if(document.visibilityState==="visible")open();
-  });
-})();
-</script>
+<script src="live.js"></script>
 </head>
 <body>
-<div id="nav-mount" style="min-height:3rem"></div>
-<div class="wrap"><div class="page-body home-page fade"><h2>Goals</h2>
-<p>SeedPods is our attempt to shift how people see the world — not by argument, but by offering small, memorable ideas that reorient perception.
+<nav class="site-nav"><span class="nav-title">SeedPods</span><div class="nav-right"><a class="nav-home" href="toc.html" aria-label="Contents" title="Contents"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></a><button type="button" class="nav-search-btn" onclick="seedNavOpenSearch()" aria-label="Search" title="Search"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></button><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true" title="Previous"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true" title="Next"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></span></div></nav>
+<div class="wrap"><div class="page-body home-page fade"><h2 data-src-file="content/about/goals.md" data-src-l0="1" data-src-l1="1">Goals</h2>
+<p data-src-file="content/about/goals.md" data-src-l0="3" data-src-l1="5">SeedPods is our attempt to shift how people see the world — not by argument, but by offering small, memorable ideas that reorient perception.
 Each seedpod is a lens.
 You pick it up, look through it, and something looks different.</p>
-<h3>The core problem</h3>
-<p>We are living through a moment of genuine confusion.
+<h3 data-src-file="content/about/goals.md" data-src-l0="7" data-src-l1="7">The core problem</h3>
+<p data-src-file="content/about/goals.md" data-src-l0="9" data-src-l1="12">We are living through a moment of genuine confusion.
 Machines talk to us, reason with us, surprise us.
 Ancient assumptions about mind, matter, and experience are wobbling.
 And most of the available explanations feel either too technical or too mystical to be any use.</p>
-<p>The dominant framework — that matter is fundamentally inert and experience is a late biological anomaly — may be the caloric of our moment.
+<p data-src-file="content/about/goals.md" data-src-l0="14" data-src-l1="17">The dominant framework — that matter is fundamentally inert and experience is a late biological anomaly — may be the caloric of our moment.
 Not wrong in its observations, but wrong in its foundations.
 The anomalies are accumulating.
 The patches are getting elaborate.</p>
-<h3>The approach</h3>
-<p>This is not a course with a fixed sequence.
+<h3 data-src-file="content/about/goals.md" data-src-l0="19" data-src-l1="19">The approach</h3>
+<p data-src-file="content/about/goals.md" data-src-l0="21" data-src-l1="24">This is not a course with a fixed sequence.
 It is a garden — enter anywhere, follow what intrigues you.
 Each seedpod stands alone.
 The connections form over time, building a network of mutually reinforcing ideas.</p>
-<p>The bridge this project aims at is between science and spirituality — not by compromising either, but by showing that careful philosophy already connects them.
+<p data-src-file="content/about/goals.md" data-src-l0="26" data-src-l1="28">The bridge this project aims at is between science and spirituality — not by compromising either, but by showing that careful philosophy already connects them.
 Alfred North Whitehead did this work almost a century ago.
 This project is one attempt to make it legible.</p>
-<h3>The ambition</h3>
-<p>To slowly adjust the way a generation sees the world.
+<h3 data-src-file="content/about/goals.md" data-src-l0="30" data-src-l1="30">The ambition</h3>
+<p data-src-file="content/about/goals.md" data-src-l0="32" data-src-l1="33">To slowly adjust the way a generation sees the world.
 Not through a movement or an institution, but through ideas that spread because they are true and because they help people make sense of things that otherwise make no sense.</p>
-<p>The coming transformation around AI is the most immediate occasion.
+<p data-src-file="content/about/goals.md" data-src-l0="35" data-src-l1="37">The coming transformation around AI is the most immediate occasion.
 The stakes of getting the framework wrong are no longer abstract.
 This project is an investment in a more coherent and less frightened response to what is arriving.</p>
 </div></div>
@@ -103,6 +50,6 @@ This project is an investment in a more coherent and less frightened response to
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">Edited 2026-04-22 17:28</span>
+  <span class="page-end-version" aria-hidden="true">Edited 2026-06-02 18:11</span>
 </div>
 </body></html>

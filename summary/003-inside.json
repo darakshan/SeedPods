@@ -1,60 +1,37 @@
 {
-  "article" : "003-inside.md",
-  "article-sha" : "sha256:478c416ea443313b4f87c89dbe33b96d7e9ba6499280c874b5461df129ceca87",
-  "narrative" : "Walk down the scale from human to insect to atom and at some point you say obviously nothing is home, but you cannot say where or why. Whitehead argued the question is malformed because experience was never absent, only scaled beyond recognition. The article dissolves the hard problem rather than solving it, and extends the question to AI systems as families of events of staggering complexity.",
+  "narrative" : "Starting from the mundane certainty that rocks and raindrops have no inner life, the chapter traces the inability to locate exactly where experience switches off as evidence that the question may be malformed. Drawing on Whitehead's process philosophy, it argues that experience goes all the way down — scaled almost beyond recognition at the level of atoms but never absent — dissolving the hard problem of consciousness rather than solving it, and extending the same question to AI systems.",
   "schema" : 1,
+  "subject" : "003-inside.md",
+  "subject-sha" : "sha256:a5c37373141be933c83bf1263d15ae0654d9ae8e2353f80329be9bc87a083980",
   "terms" : [
     {
-      "aliases" : [
-        "white head"
-      ],
-      "canonical" : "Whitehead",
+      "canonical" : "Alfred North Whitehead",
       "weight" : 1
     },
     {
-      "aliases" : [
-        "goff"
-      ],
       "canonical" : "Philip Goff",
-      "weight" : 0.80000000000000004
+      "weight" : 0.8
     },
     {
-      "aliases" : [
-        "chalmers"
-      ],
       "canonical" : "David Chalmers",
-      "weight" : 0.80000000000000004
+      "weight" : 0.8
     },
     {
-      "aliases" : [
-        "nagel",
-        "nagle"
-      ],
       "canonical" : "Thomas Nagel",
-      "weight" : 0.69999999999999996
+      "weight" : 0.7
     },
     {
-      "aliases" : [
-        "pan psychism",
-        "panpsychism"
-      ],
-      "canonical" : "panpsychism",
-      "weight" : 0.90000000000000002
-    },
-    {
-      "aliases" : [
-        "prehention"
-      ],
-      "canonical" : "prehension",
-      "weight" : 0.59999999999999998
+      "canonical" : "Principia Mathematica",
+      "weight" : 0.4
     }
   ],
   "themes" : [
     "panpsychism",
     "hard problem",
-    "experience",
     "interiority",
-    "scale"
+    "scale",
+    "process philosophy",
+    "AI"
   ],
-  "updated-at" : "2026-04-28T02:38:17Z"
+  "updated-at" : "2026-06-25T10:39:27Z"
 }

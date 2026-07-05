@@ -3,131 +3,80 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>About SeedPods · Untitled</title>
+<title>1.2 About SeedPods · SeedPods</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;600&family=DM+Mono:wght@300;400&display=swap">
 <link rel="icon" href="logo.svg">
-<link rel="preload" href="nav.html" as="fetch" crossorigin>
 <link rel="stylesheet" href="site.css">
 <script src="pods.js"></script>
 <script src="nav.js"></script>
-<script>
-/* Live reload: subscribe to this project's build stream and hard-reload
-   when a build touches THIS page (or a shared asset) — so a user merely
-   *viewing* a shared project sees another user's edit without manually
-   refreshing. An unrelated page's change only advances the baseline; it
-   does not reload. A full rebuild, or a build missed while suspended /
-   back-forward-cached (reconnect snapshot), reloads unconditionally
-   since we can't safely diff it. EventSource auto-reconnects and the
-   server re-sends the current generation on every (re)connect. */
-(function(){
-  if(window.__gossLive)return;window.__gossLive=1;
-  var base=null,es=null;
-  var SHARED={"site.css":1,"nav.html":1,"nav.js":1,"pods.js":1,
-              "search-index.json":1,"logo.svg":1};
-  function myPage(){
-    var p;try{p=decodeURIComponent(location.pathname);}catch(_){p=location.pathname;}
-    var i=p.indexOf("/site/");
-    var rest=i>=0?p.slice(i+6):p.replace(/^\/+/,"");
-    if(rest===""||rest.charAt(rest.length-1)==="/")rest+="index.html";
-    return rest;
-  }
-  function relevant(list){
-    if(!list||!list.length)return false;
-    var me=myPage();
-    for(var k=0;k<list.length;k++){
-      if(list[k]===me||SHARED[list[k]])return true;
-    }
-    return false;
-  }
-  function handle(ev){
-    var d;try{d=JSON.parse(ev.data);}catch(_){return;}
-    var g=d.gen;if(typeof g!=="number")return;
-    if(base===null){base=g;return;}
-    if(g===base)return;
-    if(d.full===true){location.reload();return;}
-    if(Object.prototype.toString.call(d.changed)==="[object Array]"){
-      if(relevant(d.changed))location.reload();else base=g;
-      return;
-    }
-    location.reload(); /* snapshot after a missed build */
-  }
-  function open(){
-    if(es&&es.readyState!==2)return;
-    try{es=new EventSource("/site/__live");}catch(_){return;}
-    es.onmessage=handle;
-  }
-  open();
-  window.addEventListener("pageshow",function(e){if(e.persisted)open();});
-  document.addEventListener("visibilitychange",function(){
-    if(document.visibilityState==="visible")open();
-  });
-})();
-</script>
+<script src="live.js"></script>
 </head>
 <body>
-<div id="nav-mount" style="min-height:3rem"></div>
-<div class="wrap"><div class="page-body home-page fade"><h1>About SeedPods</h1>
-<p>SeedPods is an evolving collection of related ideas around our deepest questions.
+<nav class="site-nav" data-pod-filename="about"><span class="nav-title">SeedPods</span><div class="nav-right"><a class="nav-home" href="toc.html" aria-label="Contents" title="Contents"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></a><button type="button" class="nav-search-btn" onclick="seedNavOpenSearch()" aria-label="Search" title="Search"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></button><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true" title="Previous"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true" title="Next"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></span></div></nav>
+<div class="wrap">
+  <div class="subject-header fade cat-colored" style="--cat-bg:#A6D9F5"><h1>1.2 About SeedPods</h1></div>
+  <div class="page-body home-page fade"><p data-src-file="content/about/page.md" data-src-l0="3" data-src-l1="4">SeedPods is an evolving collection of related ideas around our deepest questions.
 The most complete ones are offered in multiple forms – surface, depth, dramatic script, visuals.</p>
-<p>It’s is a living archive of thoughts I’ve been gathering all his life.
+<p data-src-file="content/about/page.md" data-src-l0="6" data-src-l1="8">It’s is a living archive of thoughts I’ve been gathering all his life.
 SeedPods are being added and refined, links drawn, references clarified all the time.
 The newest ideas, disorganized thoughts I call protopods, are listed on More/Internal documentation.</p>
-<p>A deep purpose of this project is intuition repair — our own as much as anyone’s.
+<p data-src-file="content/about/page.md" data-src-l0="10" data-src-l1="14">A deep purpose of this project is intuition repair — our own as much as anyone’s.
 Most of these seedpods are not introducing new information.
 They are revisiting assumptions so familiar they’ve become invisible.
 Each seedpod earns its place by containing a genuine surprise: a moment where the world turns out to be slightly different from what we’d been assuming.
 The surprise is the point.</p>
-<p>Many of the ideas here will be well known to certain experts but might be surprises to you.
+<p data-src-file="content/about/page.md" data-src-l0="16" data-src-l1="19">Many of the ideas here will be well known to certain experts but might be surprises to you.
 Occasionally there will be a few fresh ideas, maybe original, often speculative, perhaps highly controversial, likely wrong.
 Mostly though, it’s about the connections between ideas.
 We hope you will find them surprising, fascinating, and enjoyable.</p>
-<p>This website is under construction.
+<p data-src-file="content/about/page.md" data-src-l0="21" data-src-l1="23">This website is under construction.
 It contains TBDs, Warnings, incompletene sections, and no doubt errors and hallucinations. <a href="about.html#caveat-lector">Caveat lector</a>.
 SeedPods is a work in progress and I’d love your feedback — reach me at darakshan@glenmuse.com.</p>
-<p>Some day, inshallah, some or all of these seedpods will turned into a book, or a movie, or a series of articles, or who knows what, in a linear progression.
+<p data-src-file="content/about/page.md" data-src-l0="25" data-src-l1="26">Some day, inshallah, some or all of these seedpods will turned into a book, or a movie, or a series of articles, or who knows what, in a linear progression.
 Time will tell.</p>
-<h2>More about SeedPods</h2>
+<h2 data-src-file="content/about/page.md" data-src-l0="28" data-src-l1="28">More about SeedPods</h2>
 <ul>
-<li><p><a href="about-goals.html">goals</a></p>
+<li data-src-file="content/about/page.md" data-src-l0="30" data-src-l1="30"><p data-src-file="content/about/page.md" data-src-l0="30" data-src-l1="30"><a href="about-goals.html">goals</a></p>
 </li>
-<li><p><a href="about-authors.html">authors</a></p>
+<li data-src-file="content/about/page.md" data-src-l0="31" data-src-l1="31"><p data-src-file="content/about/page.md" data-src-l0="31" data-src-l1="31"><a href="about-authors.html">authors</a></p>
 </li>
-<li><p><a href="about-audiences.html">audiences</a></p>
+<li data-src-file="content/about/page.md" data-src-l0="32" data-src-l1="32"><p data-src-file="content/about/page.md" data-src-l0="32" data-src-l1="32"><a href="about-audiences.html">audiences</a></p>
 </li>
-<li><p><a href="about-reviews.html">reviews</a></p>
+<li data-src-file="content/about/page.md" data-src-l0="33" data-src-l1="33"><p data-src-file="content/about/page.md" data-src-l0="33" data-src-l1="33"><a href="about-reviews.html">reviews</a></p>
 </li>
-<li><p><a href="about-personal.html">Personal</a></p>
+<li data-src-file="content/about/page.md" data-src-l0="34" data-src-l1="34"><p data-src-file="content/about/page.md" data-src-l0="34" data-src-l1="34"><a href="about-personal.html">Personal</a></p>
 </li>
-<li><p><a href="about-status.html">SeedPod Status Values</a></p>
+<li data-src-file="content/about/page.md" data-src-l0="35" data-src-l1="36"><p data-src-file="content/about/page.md" data-src-l0="35" data-src-l1="35"><a href="about-status.html">SeedPod Status Values</a></p>
 </li>
 </ul>
-<h2>Acknowledgements</h2>
-<p>This collection is partly inspired by Doug Hofstadter’s amazing 1979 book Gödel, Escher, Bach.
+<h2 data-src-file="content/about/page.md" data-src-l0="37" data-src-l1="37">Acknowledgements</h2>
+<p data-src-file="content/about/page.md" data-src-l0="39" data-src-l1="41">This collection is partly inspired by Doug Hofstadter’s amazing 1979 book Gödel, Escher, Bach.
 That book is a romp though many of the same ideas, but we’ve come along way.
 I can only hope to reflect some of its light.</p>
-<p>It’s also inspired by the rich and under-appreciated philosophy of Alfred North Whitehead, for instance in his seminal work Process and Reality, published in 1929.</p>
-<p>The format of SeedPods is inspired by Christopher Alexander’s classic “A Pattern Language”, which was written well before the the advent of global internet access and the appearance of hyperlinks, yet it clearly foresees that in its organization.
+<p data-src-file="content/about/page.md" data-src-l0="43" data-src-l1="43">It’s also inspired by the rich and under-appreciated philosophy of Alfred North Whitehead, for instance in his seminal work Process and Reality, published in 1929.</p>
+<p data-src-file="content/about/page.md" data-src-l0="45" data-src-l1="46">The format of SeedPods is inspired by Christopher Alexander’s classic “A Pattern Language”, which was written well before the the advent of global internet access and the appearance of hyperlinks, yet it clearly foresees that in its organization.
 The reader can choose their own path through the adventure.</p>
-<p>Indeed, all of the above works are relatively old and could benefit from all the advancements in technology that have been made since they were written.
+<p data-src-file="content/about/page.md" data-src-l0="48" data-src-l1="49">Indeed, all of the above works are relatively old and could benefit from all the advancements in technology that have been made since they were written.
 Some of these seedpods try to do that.</p>
-<p>So the elevator speech for SeedPods might be “A website about Process philosphy in the style of Godel, Escher, Bach and the form of A Pattern Language”.</p>
-<p>– Darakshan Farber, March 2026</p>
-<h2>Caveat Lector</h2>
-<p>(unfinished.
+<p data-src-file="content/about/page.md" data-src-l0="51" data-src-l1="51">So the elevator speech for SeedPods might be “A website about Process philosphy in the style of Godel, Escher, Bach and the form of A Pattern Language”.</p>
+<p data-src-file="content/about/page.md" data-src-l0="53" data-src-l1="53">– Darakshan Farber, March 2026</p>
+<h2 data-src-file="content/about/page.md" data-src-l0="56" data-src-l1="56">Caveat Lector</h2>
+<p data-src-file="content/about/page.md" data-src-l0="58" data-src-l1="62">(unfinished.
 Here’s what I wrote) Claude AI has helped me build this software and flesh out its content.
 Others may contribute in the future.
 Of course there will be inaccuracies and misunderstandings – mine as well as Claude’s.
 But since this is a <em>livng</em> archive, it can evolve and in the process ratchet up its quality over time.</p>
-<p>(and here’s what Claude wrote with me) Many of the ideas gathered here sit at the edge of what is settled.
+<p data-src-file="content/about/page.md" data-src-l0="64" data-src-l1="70">(and here’s what Claude wrote with me) Many of the ideas gathered here sit at the edge of what is settled.
 Some connections are speculative; some, if we are honest, may turn out to be pure fantasy — and a few may bear the fingerprints of an AI that occasionally confuses confidence with correctness.
 We have tried to distinguish intuition from established fact, but the line is not always clean, and we have not always drawn it perfectly.
 This is, in part, deliberate.
 The fragment and the conjecture have their own honorable tradition — from Heraclitean shards to the notebooks of Novalis — and some truths seem to require the poetic gesture before the formal proof arrives.
 We offer these seedpods not as conclusions but as invitations: seeds, not harvests.
 Where we have overreached, we hope the reach itself points somewhere worth going.</p>
-</div></div>
+</div>
+</div>
 <div class="page-end" id="page-end-version">
   <button class="page-end-logo" aria-label="Show page info"
     onmouseenter="typeof seedNavShowVersion==='function'&&seedNavShowVersion(true)"
@@ -135,6 +84,6 @@ Where we have overreached, we hope the reach itself points somewhere worth going
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">Edited 2026-04-22 17:28</span>
+  <span class="page-end-version" aria-hidden="true">Edited 2026-06-02 18:11</span>
 </div>
 </body></html>

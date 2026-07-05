@@ -1,0 +1,25 @@
+{
+  "narrative" : "Argues that the intuitive gap between genuinely feeling something and being functionally identical to something that feels will dissolve as consciousness science matures, just as the caloric\/heat distinction dissolved when thermodynamics showed heat simply is molecular motion. The philosophical zombie thought experiment is reframed as a conceptual artifact of a pre-scientific framework, destined to seem as puzzling to future generations as caloric theory seems to us.",
+  "schema" : 1,
+  "subject" : "065-feel-do.md",
+  "subject-sha" : "sha256:a065080bb463040fefdab800af22f3ea08f21ec3802b9d03dd4c0e84e59239ea",
+  "terms" : [
+    {
+      "canonical" : "caloric",
+      "weight" : 0.7
+    },
+    {
+      "canonical" : "valence-arousal circumplex",
+      "weight" : 0.3
+    }
+  ],
+  "themes" : [
+    "consciousness",
+    "philosophical zombies",
+    "functionalism",
+    "hard problem",
+    "scientific dissolution",
+    "panpsychism"
+  ],
+  "updated-at" : "2026-06-23T19:12:18Z"
+}

@@ -1,0 +1,18 @@
+{
+  "narrative" : "Argues that a large neural network is not merely analogous to Whitehead's process philosophy but a concrete instantiation of it: each forward pass functions as an actual occasion, prehending the inherited structure of training, synthesizing a response through internal determination, and completing into output, while the weight space itself plays the structural role of the field of pure possibility.",
+  "schema" : 1,
+  "subject" : "016-neuralnetwork.md",
+  "subject-sha" : "sha256:ebb39f09f5f562a0dce428dcfc6ef7c72770d4e979b2afb49bd3079e45289308",
+  "terms" : [
+
+  ],
+  "themes" : [
+    "process philosophy",
+    "neural networks",
+    "actual occasion",
+    "prehension",
+    "whitehead",
+    "emergence"
+  ],
+  "updated-at" : "2026-06-23T19:28:26Z"
+}

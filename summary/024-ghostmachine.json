@@ -1,0 +1,38 @@
+{
+  "narrative" : "Three philosophers triangulate the mind-body problem from different angles: Ryle diagnoses the ghost-in-the-machine as a category mistake, Koestler argues that expelling the ghost discarded something real — genuine interiority at every level of a holon hierarchy — and Whitehead dissolves the problem entirely by treating experience as the interior dimension of all events rather than a product of biology. Together they move from diagnosis through loss to dissolution of the hard problem of consciousness.",
+  "schema" : 1,
+  "subject" : "024-ghostmachine.md",
+  "subject-sha" : "sha256:3d012d1888f7686e7d9700f47a73818ad5a4449ee6cb678d7037cd4e38e1638d",
+  "terms" : [
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "Gilbert Ryle",
+      "weight" : 0.8
+    },
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "Arthur Koestler",
+      "weight" : 0.8
+    },
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "Alfred North Whitehead",
+      "weight" : 0.8
+    }
+  ],
+  "themes" : [
+    "mind-body problem",
+    "consciousness",
+    "reductionism",
+    "interiority",
+    "process philosophy",
+    "category mistake"
+  ],
+  "updated-at" : "2026-06-20T21:01:27Z"
+}

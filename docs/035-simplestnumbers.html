@@ -3,87 +3,34 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Simplest Numbers Come First · Untitled</title>
+<title>3.4 The Simplest Numbers Come First · SeedPods</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;600&family=DM+Mono:wght@300;400&display=swap">
 <link rel="icon" href="logo.svg">
-<link rel="preload" href="nav.html" as="fetch" crossorigin>
 <link rel="stylesheet" href="site.css">
 <script src="pods.js"></script>
 <script src="nav.js"></script>
-<script>
-/* Live reload: subscribe to this project's build stream and hard-reload
-   when a build touches THIS page (or a shared asset) — so a user merely
-   *viewing* a shared project sees another user's edit without manually
-   refreshing. An unrelated page's change only advances the baseline; it
-   does not reload. A full rebuild, or a build missed while suspended /
-   back-forward-cached (reconnect snapshot), reloads unconditionally
-   since we can't safely diff it. EventSource auto-reconnects and the
-   server re-sends the current generation on every (re)connect. */
-(function(){
-  if(window.__gossLive)return;window.__gossLive=1;
-  var base=null,es=null;
-  var SHARED={"site.css":1,"nav.html":1,"nav.js":1,"pods.js":1,
-              "search-index.json":1,"logo.svg":1};
-  function myPage(){
-    var p;try{p=decodeURIComponent(location.pathname);}catch(_){p=location.pathname;}
-    var i=p.indexOf("/site/");
-    var rest=i>=0?p.slice(i+6):p.replace(/^\/+/,"");
-    if(rest===""||rest.charAt(rest.length-1)==="/")rest+="index.html";
-    return rest;
-  }
-  function relevant(list){
-    if(!list||!list.length)return false;
-    var me=myPage();
-    for(var k=0;k<list.length;k++){
-      if(list[k]===me||SHARED[list[k]])return true;
-    }
-    return false;
-  }
-  function handle(ev){
-    var d;try{d=JSON.parse(ev.data);}catch(_){return;}
-    var g=d.gen;if(typeof g!=="number")return;
-    if(base===null){base=g;return;}
-    if(g===base)return;
-    if(d.full===true){location.reload();return;}
-    if(Object.prototype.toString.call(d.changed)==="[object Array]"){
-      if(relevant(d.changed))location.reload();else base=g;
-      return;
-    }
-    location.reload(); /* snapshot after a missed build */
-  }
-  function open(){
-    if(es&&es.readyState!==2)return;
-    try{es=new EventSource("/site/__live");}catch(_){return;}
-    es.onmessage=handle;
-  }
-  open();
-  window.addEventListener("pageshow",function(e){if(e.persisted)open();});
-  document.addEventListener("visibilitychange",function(){
-    if(document.visibilityState==="visible")open();
-  });
-})();
-</script>
+<script src="live.js"></script>
 </head>
 <body>
-<div id="nav-mount" style="min-height:3rem"></div>
+<nav class="site-nav" data-pod-filename="035-simplestnumbers"><span class="nav-title">SeedPods</span><div class="nav-right"><a class="nav-home" href="toc.html" aria-label="Contents" title="Contents"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></a><button type="button" class="nav-search-btn" onclick="seedNavOpenSearch()" aria-label="Search" title="Search"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></button><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true" title="Previous"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true" title="Next"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></span></div></nav>
 <div class="wrap">
-  <div class="subject-header fade cat-colored cat-feeling"><h1>The Simplest Numbers Come First</h1><p class="premise">The universe counts simply first, the Farey sequence orders fractions by complexity, Benford’s law finds the same hierarchy in empirical data, and every culture that ever made music independently discovered the simplest ratios before anything else.</p><div class="subject-nav-row" data-pod-filename="035-simplestnumbers"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Subject 35</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
-  <section id="_prolog" class="subject-section subject-prolog"><div class="prose"><p>Farey, Benford, and the Shape of Infinity</p>
+  <div class="subject-header fade cat-colored" style="--cat-bg:#F5E2A6"><h1>3.4 The Simplest Numbers Come First</h1><p class="premise">The universe counts simply first, the Farey sequence orders fractions by complexity, Benford’s law finds the same hierarchy in empirical data, and every culture that ever made music independently discovered the simplest ratios before anything else.</p></div>
+  <section id="_prolog" class="subject-section subject-prolog"><div class="prose"><p data-src-file="subjects/035-simplestnumbers.md" data-src-l0="3" data-src-l1="3">Farey, Benford, and the Shape of Infinity</p>
 </div></section>
-<section id="surface" class="subject-section"><h2 class="section-heading">Surface</h2><div class="prose"><figure class="directive-image directive-image--left"><img src="images/035-simplestnumbers.jpg" alt=""><figcaption>Benford's law: simpler numbers appear first in natural data <cite>Wikimedia Commons</cite></figcaption></figure>
+<section id="surface" class="subject-section"><h2 class="section-heading">Surface</h2><div class="prose"><figure id="image-035-simplestnumbers-1" class="directive-image directive-image--left"><img src="images/035-simplestnumbers-l.jpg" alt=""><figcaption>Benford's law: simpler numbers appear first in natural data <cite>Wikimedia Commons</cite></figcaption></figure>
 There are infinitely many numbers between 0 and 1.
 But they're not all equally there.
 Some are more fundamental than others.
 The fraction 1/2 is more there than 47/93.
-Music knew this before <em><a class="gloss-ref nav-push" id="term-035-simplestnumbers-1" href="glossary.html#mathematics">mathematics</a></em> did.
+Music knew this before 0 did.
 And so did accounting.
 </div></section>
-<section id="depth" class="subject-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>The <em><a class="gloss-ref nav-push" id="term-035-simplestnumbers-2" href="glossary.html#farey-sequence">Farey sequence</a></em><a class="bib-ref" id="ref-035-simplestnumbers-1" href="bibliography.html#ref-035-simplestnumbers-1">[farey]</a> counts all rational numbers between 0 and 1 in order of complexity, simplest fractions first, infinity packed into a bounded interval with a natural hierarchy.
+<section id="depth" class="subject-section"><h2 class="section-heading">Depth</h2><div class="prose"><p data-src-file="subjects/035-simplestnumbers.md" data-src-l0="21" data-src-l1="32">The <em><a class="gloss-ref nav-push" id="term-035-simplestnumbers-2" href="glossary.html#farey-sequence">Farey sequence</a></em><a class="bib-ref" id="ref-035-simplestnumbers-1" href="bibliography.html#ref-035-simplestnumbers-1">[farey]</a> counts all rational numbers between 0 and 1 in order of complexity, simplest fractions first, infinity packed into a bounded interval with a natural hierarchy.
 The most consonant musical intervals, the octave, the fifth, the fourth, are simply the simplest Farey fractions.
 Every culture that ever made music independently found them first.
-Meanwhile <em><a class="gloss-ref nav-push" id="term-035-simplestnumbers-3" href="glossary.html#benfords-law-benfords-law-tbd">Benfords Law, benfords-law, TBD</a></em><a class="bib-ref" id="ref-035-simplestnumbers-2" href="bibliography.html#ref-035-simplestnumbers-2">[benford]</a>, first noticed by Simon Newcomb<a class="bib-ref" id="ref-035-simplestnumbers-3" href="bibliography.html#ref-035-simplestnumbers-3">[newcomb]</a> in 1881, finds the same hierarchy in random collections of real world numbers, accounting figures, physical constants, census data.
+Meanwhile <em><a class="gloss-ref nav-push" id="term-035-simplestnumbers-3" href="glossary.html#benfords-law">Benford's law</a></em><a class="bib-ref" id="ref-035-simplestnumbers-2" href="bibliography.html#ref-035-simplestnumbers-2">[benford]</a>, first noticed by Simon Newcomb<a class="bib-ref" id="ref-035-simplestnumbers-3" href="bibliography.html#ref-035-simplestnumbers-3">[newcomb]</a> in 1881, finds the same hierarchy in random collections of real world numbers, accounting figures, physical constants, census data.
 Numbers beginning with 1 appear 30% of the time.
 Numbers beginning with 9 less than 5%.
 The distribution is logarithmic, the same logarithm that compresses infinite complexity into bounded space.
@@ -93,23 +40,23 @@ Complexity accumulates later.
 This isn’t a coincidence of mathematics, it’s the signature of a world built by <em><a class="gloss-ref nav-push" id="term-035-simplestnumbers-4" href="glossary.html#iteration">iteration</a></em> from a single rule.
 The formula for <em><a class="gloss-ref nav-push" id="term-035-simplestnumbers-5" href="glossary.html#virtual-dimension-formula">virtual dimensions</a></em> arising from actual ones, V(d,n) ~ (n²/π²)^d, carries this signature explicitly: π from the circular structure of consonance, the logarithm from the compression of the tree.</p>
 </div></section>
-<section id="provenance" class="subject-section"><div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="009-randomness.html" class="related-card cat-colored cat-biology nav-push"><div class="related-title">9. Structure Is What Randomness Does</div></a>
-<a href="010-largenumbers.html" class="related-card related-card-prelim cat-colored cat-knowledge nav-push"><div class="related-title">10. Our Intuitions About Large Numbers Are Completely Unreliable</div></a>
-<a href="034-onerule.html" class="related-card related-card-prelim cat-colored cat-mathematics nav-push"><div class="related-title">34. One Rule Is Enough</div></a>
-<a href="057-superfarey.html" class="related-card related-card-prelim cat-colored cat-ai-minds nav-push"><div class="related-title">57. Superposition in Neural Network Representations</div></a>
-<a href="062-branchingdice.html" class="related-card related-card-prelim cat-colored cat-mathematics nav-push"><div class="related-title">62. Branching Numbers as Finite Dice</div></a></div>
-<div class="inbound-refs"><span class="inbound-label">2 inbound references</span><span class="inbound-links"><a href="057-superfarey.html" class="inbound-link nav-push cat-colored cat-ai-minds" title="Superposition in Neural Network Representations">57</a><a href="070-harmony.html" class="inbound-link nav-push cat-colored cat-feeling" title="Harmony">70</a></span></div></div></section>
 <section id="script" class="subject-section"><h2 class="section-heading">Script</h2><div class="prose"><ol>
-<li><p>A musician tuning by ear. She finds the octave immediately. Then the fifth. Then the fourth. She’s not calculating. She’s finding the simplest numbers first.</p>
+<li data-src-file="subjects/035-simplestnumbers.md" data-src-l0="35" data-src-l1="36"><p data-src-file="subjects/035-simplestnumbers.md" data-src-l0="35" data-src-l1="35">A musician tuning by ear. She finds the octave immediately. Then the fifth. Then the fourth. She’s not calculating. She’s finding the simplest numbers first.</p>
 </li>
-<li><p>An accountant’s fraud detection software flagging a ledger where too many entries start with 7. The same hierarchy. Different domain.</p>
+<li data-src-file="subjects/035-simplestnumbers.md" data-src-l0="37" data-src-l1="38"><p data-src-file="subjects/035-simplestnumbers.md" data-src-l0="37" data-src-l1="37">An accountant’s fraud detection software flagging a ledger where too many entries start with 7. The same hierarchy. Different domain.</p>
 </li>
-<li><p>The Farey sequence written out: 0/1, 1/2, 1/3, 2/3, 1/4… Infinity, tamed.</p>
+<li data-src-file="subjects/035-simplestnumbers.md" data-src-l0="39" data-src-l1="39"><p data-src-file="subjects/035-simplestnumbers.md" data-src-l0="39" data-src-l1="39">The Farey sequence written out: 0/1, 1/2, 1/3, 2/3, 1/4… Infinity, tamed.</p>
 </li>
 </ol>
 </div></section>
-<section id="images" class="subject-section"><h2 class="section-heading">Images</h2><div class="prose"><p>Farey sequence visualization Benford’s Law distribution graph Stern-Brocot tree diagram Musical interval ratios on a number line</p>
+<section id="images" class="subject-section"><h2 class="section-heading">Images</h2><div class="prose"><p data-src-file="subjects/035-simplestnumbers.md" data-src-l0="42" data-src-l1="42">Farey sequence visualization Benford’s Law distribution graph Stern-Brocot tree diagram Musical interval ratios on a number line</p>
 </div></section>
+<div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="009-randomness.html" class="related-card cat-colored nav-push" style="--cat-bg:#F5A6D7"><div class="related-title">2.6. Structure Is What Randomness Does</div></a>
+<a href="010-largenumbers.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#DFF5A6"><div class="related-title">6.5. Our Intuitions About Large Numbers Are Completely Unreliable</div></a>
+<a href="034-onerule.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#F5E9A6"><div class="related-title">3.6. One Rule Is Enough</div></a>
+<a href="057-superfarey.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#A6F5C0"><div class="related-title">9.7. Superposition in Neural Network Representations</div></a>
+<a href="062-branchingdice.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#A6F5B4"><div class="related-title">9.3. Branching Numbers as Finite Dice</div></a></div>
+<div class="inbound-refs"><span class="inbound-label">3 inbound references</span><span class="inbound-links"><a href="039-devil.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#D2F5A6" title="The Devil's Interval">6.9</a><a href="070-harmony.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#BEA6F5" title="Harmony">7.5</a><a href="057-superfarey.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#A6F5C0" title="Superposition in Neural Network Representations">9.7</a></span></div></div>
 </div>
 <div class="page-end" id="page-end-version">
   <button class="page-end-logo" aria-label="Show page info"
@@ -118,6 +65,6 @@ The formula for <em><a class="gloss-ref nav-push" id="term-035-simplestnumbers-5
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">feeling · rough · Edited 2026-04-27 01:05</span>
+  <span class="page-end-version" aria-hidden="true">rough · Edited 2026-06-23 21:58</span>
 </div>
 </body></html>

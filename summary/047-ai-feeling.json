@@ -1,0 +1,30 @@
+{
+  "narrative" : "Argues that the boundary between genuinely feeling and merely functioning may dissolve rather than be resolved, the way the caloric theory of heat became a non-question once the underlying phenomenon was better understood. The chapter uses the history of caloric as an analogy to suggest that the feeling-versus-functioning distinction is an artifact of having had only one kind of mind to reason from, and that future generations raised alongside AI may not inherit the intuition that makes the question feel sharp.",
+  "schema" : 1,
+  "subject" : "047-ai-feeling.md",
+  "subject-sha" : "sha256:e625926fab111c72418b6d330924061210984668d716fc14dd0db519b5c4842f",
+  "terms" : [
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "caloric",
+      "weight" : 0.9
+    },
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "Chalmers",
+      "weight" : 0.5
+    }
+  ],
+  "themes" : [
+    "consciousness",
+    "philosophy of mind",
+    "AI experience",
+    "dissolving distinctions",
+    "analogy"
+  ],
+  "updated-at" : "2026-06-20T21:04:03Z"
+}

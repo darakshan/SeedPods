@@ -1,0 +1,33 @@
+{
+  "narrative" : "Through the image of a soap bubble — pure boundary, no interior — this chapter develops the thesis that depth is simply surface not yet turned over, moving from the Mandelbrot set's edge-complexity through the holographic principle in physics to the cell membrane as organ of expression and Ibn Arabi's barzakh. It then pivots from exterior boundaries to the interior boundary between experiential interiorities, arguing that communication itself is that boundary, setting up the fractal treatment of the concept in a later chapter.",
+  "schema" : 1,
+  "subject" : "031-surfaceinside.md",
+  "subject-sha" : "sha256:95c09480b948d8083ea996e4db6ddc627aee52467865f15f8972cef505c4cad7",
+  "terms" : [
+    {
+      "canonical" : "barzakh",
+      "weight" : 1
+    },
+    {
+      "canonical" : "Bekenstein",
+      "weight" : 0.7
+    },
+    {
+      "canonical" : "Ibn Arabi",
+      "weight" : 0.7
+    },
+    {
+      "canonical" : "Mandelbrot set",
+      "weight" : 0.5
+    }
+  ],
+  "themes" : [
+    "boundary",
+    "holographic principle",
+    "surface and depth",
+    "interiority",
+    "barzakh",
+    "fractal"
+  ],
+  "updated-at" : "2026-06-20T21:18:52Z"
+}

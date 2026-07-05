@@ -1,0 +1,1657 @@
+Test 2026-06-01.10-07-36:
+[pause]
+[fix] "I have now instrumented the dictation mechanism so that when something weird happens like it was happening last night, I could find a script to analyze the problem" -> NONE
+[mic] "I have now instrumented the dictation mechanism so that when something weird happens like it was happening last night, I could find a script to analyze the problem"
+[expect] "I have now instrumented the dictation mechanism so that when something weird happens like it was happening last night, I could find a script to analyze the problem"
+[send]
+
+Test 2026-06-01.10-21-59:
+[pause]
+[fix] "I have a newly instrument version" -> "I"
+[pause]
+[fix] "I have a newly instrument version this time. It will show what actually got sent because everything I lied before." -> "I have a new instrument version this time. It will show what actually got sent because everything I lied about before"
+[cur] 107
+[cur] 101
+[del] 5
+[cur] 100
+[del] 1
+[cur] 117
+[cur] 116
+[del] 1
+[key] " "
+[key] " "
+[del] 1
+[key] "."
+[key] " "
+[mic] "Looked right"
+[expect] "I have a newly instrument version this time. It will show what actually got sent because everything it logged before looked right. "
+[send]
+
+Test 2026-06-01.12-03-44:
+[key] "We"
+[key] " have"
+[key] " re-"
+[key] "Architexture"
+[cur] 20
+[del] 12
+[key] "architect"
+[pause]
+[fix] "We have re-architect" -> NONE
+[cur] 0
+[del] 20
+[key] "We have re-architect"
+[clear]
+[pause]
+[fix] "We have re-architected the" -> NONE
+[pause]
+[fix] "We have re-architected the dictation manager" -> NONE
+[key] "."
+[key] " "
+[pause]
+[fix] "We have re-architected the dictation manager. It seems there were several copies competing for." -> NONE
+[pause]
+[fix] "We have re-architected the dictation manager. It seems there were several copies competing for being the reliable ones." -> NONE
+[pause]
+[fix] "We have re-architected the dictation manager. It seems there were several copies competing for being the reliable ones now there is only one." -> NONE
+[mic] "We have re-architected the dictation manager. It seems there were several copies competing for being the reliable ones now there is only one authoritative version. Let's see if this works."
+[expect] "We have re-architected the dictation manager. It seems there were several copies competing for being the reliable ones now there is only one authoritative version. Let's see if this works.. "
+[send] "We have re-architected the dictation manager. It seems there were several copies competing for being the reliable ones now there is only one authoritative version. Let's see if this works.."
+
+Test 2026-06-01.12-04-43:
+[pause]
+[fix] "We are already doing that" -> NONE
+[key] "!"
+[key] " "
+[key] " "
+[pause]
+[fix] "We are already doing that so far so good" -> NONE
+[cur] 25
+[cur] 26
+[key] "!"
+[cur] 44
+[cur] 43
+[del] 1
+[cur] 42
+[del] 1
+[cur] 41
+[del] 1
+[key] "."
+[key] "."
+[cur] 42
+[del] 2
+[key] "…"
+[key] " "
+[pause]
+[fix] "so far so good… " -> NONE
+[mic] "Now, where were we?"
+[expect] "We are already doing that! so far so good… now, where were we?"
+[send] "We are already doing that! so far so good… now, where were we?"
+
+Test 2026-06-01.12-05-48:
+[key] "D"
+[key] "oes"
+[key] " crêpe"
+[cur] 0
+[cur] 10
+[key] "!"
+[cur] 4
+[del] 7
+[del] 4
+[key] "C"
+[key] "an yo"
+[key] "u"
+[key] "?"
+[cur] 0
+[cur] 8
+[cur] 7
+[del] 1
+[key] " "
+[key] "G"
+[key] "R"
+[key] "E"
+[key] "P"
+[key] " "
+[pause]
+[fix] "Can you GREP " -> NONE
+[key] "for"
+[key] " chip"
+[key] "?"
+[key] "s"
+[cur] 23
+[key] " for chips?"
+[cur] 34
+[key] " "
+[pause]
+[fix] "?" -> NONE
+[cur] 34
+[del] 1
+[key] "?"
+[mic] "Or does it ignore them?"
+[expect] "Can you GREP for chips for chips? Or does it ignore them??"
+[send] "Can you GREP for chips for chips? Or does it ignore them??"
+
+Test 2026-06-01.12-54-49:
+[key] "￼"
+[cur] 0
+[del] 1
+[key] " "
+[del] 1
+[key] "."
+[key] " "
+[pause]
+[fix] "I need a better way to search a conversation, but you can do it" -> NONE
+[pause]
+[fix] "I need a better way to search a conversation, but you can do it. Can you tell me the date and time?" -> "I need a better way to search a conversation, but you can do it. Can you"
+[pause]
+[fix] "I need a better way to search a conversation, but you can do it. Can you tell me the date and time you made the" -> "I need a better way to search a conversation, but you can do it. Can you tell me the date"
+[pause]
+[fix] "I need a better way to search a conversation, but you can do it. Can you tell me the date and time you made the 016 edit" -> "I need a better way to search a conversation, but you can do it. Can you tell me the date and time you made"
+[mic] "I need a better way to search a conversation, but you can do it. Can you tell me the date and time you made the 016 edit"
+[expect] "I need a better way to search a conversation, but you can do it. Can you tell me the date and time you made the 016 edit. "
+[send] "I need a better way to search a conversation, but you can do it. Can you tell me the date and time you made the 016 edit."
+
+Test 2026-06-01.13-04-26:
+[key] "Sor"
+[key] "ry"
+[key] ", I"
+[del] 3
+[key] " I wrote"
+[key] " the"
+[del] 11
+[key] ", I wrote the messag"
+[cur] 26
+[key] " Sorry, I wrote the message "
+[cur] 54
+[key] " "
+[cur] 53
+[del] 1
+[cur] 52
+[pause]
+[fix] "Sorry, I wrote the messag Sorry, I wrote the message e" -> NONE
+[cur] 5
+[cur] 2
+[cur] 6
+[cur] 5
+[cur] 6
+[del] 54
+[key] "So"
+[key] "rry"
+[key] " I wrote"
+[key] " the"
+[del] 11
+[key] ", I wrote the messag"
+[cur] 26
+[key] " Sorry, I wrote the message "
+[cur] 54
+[pause]
+[fix] "Sorry, I wrote the messag Sorry, I wrote the message e" -> NONE
+[cur] 26
+[del] 27
+[cur] 25
+[del] 1
+[cur] 26
+[key] " "
+[pause]
+[fix] "Sorry, I wrote the message " -> NONE
+[key] " "
+[del] 1
+[key] "."
+[key] " "
+[cur] 108
+[del] 1
+[cur] 107
+[del] 1
+[key] ":"
+[key] " "
+[key] "I found those zombie chip in 051. Just a pair of blank lines suggesting something in between might’ve been deleted"
+[cur] 111
+[pause]
+[fix] "Just a pair of blank lines suggesting something in between might’ve been deleted" -> NONE
+[cur] 109
+[cur] 110
+[key] "“"
+[cur] 224
+[cur] 223
+[del] 1
+[pause]
+[fix] "Just a pair of blank lines suggesting something in between might’ve been delete" -> NONE
+[key] "d"
+[key] "”"
+[key] " "
+[del] 1
+[key] "."
+[key] " "
+[key] " "
+[pause]
+[fix] "Just a pair of blank lines suggesting something in between might’ve been deleted”.  " -> NONE
+[key] "Wh"
+[key] "at"
+[key] " I"
+[key] " said"
+[key] " was"
+[key] " I found"
+[key] " no"
+[del] 11
+[key] ", I found no zombie"
+[key] " chip"
+[cur] 228
+[cur] 267
+[key] "."
+[key] "."
+[cur] 268
+[del] 2
+[key] "…"
+[expect] "Sorry, I wrote the message while you were writing the last message, it was referring to my previous message: “I found those zombie chip in 051. Just a pair of blank lines suggesting something in between might’ve been deleted”.  What I said was, I found no zombie chip…"
+[send] "Sorry, I wrote the message while you were writing the last message, it was referring to my previous message: “I found those zombie chip in 051. Just a pair of blank lines suggesting something in between might’ve been deleted”.  What I said was, I found no zombie chip…"
+
+Test 2026-06-01.15-25-42:
+[key] "I"
+[key] " don’t"
+[key] " see"
+[key] " you"
+[key] " made the"
+[key] " fix"
+[key] " after I"
+[key] " said"
+[key] " sure"
+[cur] 0
+[cur] 46
+[key] " "
+[del] 1
+[key] "."
+[key] " "
+[pause]
+[fix] "I don’t see you made the fix after I said sure. " -> "I don't see"
+[clear]
+[mic] on
+[mic] "I"
+[mic] "I don"
+[mic] "I don't"
+[mic] "I don't see"
+[mic] "I don't see that"
+[mic] "I don't see that you"
+[mic] "I don't see that you made"
+[mic] "I don't see that you made the"
+[mic] "I don't see that you made the fix"
+[mic] "I don't see that you made the fix after"
+[mic] "I don't see that you made the fix after I"
+[mic] "I don't see that you made the fix after I said"
+[mic] "I don't see that you made the fix after I said sure"
+[key] " "
+[del] 1
+[key] "."
+[key] " "
+[mic] "I don't see that you made the fix after I said sure now"
+[pause]
+[fix] "I don't see that you made the fix after I said sure" -> "I don't see"
+[pause]
+[fix] "I don't see that you made the fix after I said sure now" -> "I don't see that you made"
+[cur] 56
+[del] 1
+[cur] 55
+[del] 1
+[key] " "
+[mic] "Running"
+[mic] "Running a"
+[mic] "Running a new"
+[pause]
+[context] "I don't see that you made the fix after I said sure now "
+[fix] "running a new" -> NONE
+[mic] "Running a new version"
+[mic] "Running a new version that"
+[mic] "Running a new version that log"
+[mic] "Running a new version that logs"
+[mic] "Running a new version that logs everything"
+[mic] "Running a new version that logs everything so"
+[mic] "Running a new version that logs everything so we"
+[mic] "Running a new version that logs everything so we we forget"
+[mic] "Running a new version that logs everything so if we forget"
+[mic] "Running a new version that logs everything so if we forget more"
+[mic] "Running a new version that logs everything so if we forget more dictation"
+[mic] "Running a new version that logs everything so if we forget more dictation issues"
+[cur] 114
+[pause]
+[context] "I don't see that you made the fix after I said sure now "
+[fix] "running a new version that logs everything so if we forget more dictation issues" -> NONE
+[cur] 115
+[cur] 112
+[cur] 111
+[cur] 115
+[cur] 110
+[cur] 114
+[cur] 115
+[cur] 114
+[cur] 136
+[cur] 114
+[cur] 112
+[cur] 111
+[cur] 136
+[cur] 111
+[cur] 110
+[del] 1
+[cur] 109
+[del] 1
+[cur] 108
+[del] 1
+[cur] 133
+[key] " "
+[pause]
+[fix] "I don't see that you made the fix after I said sure now running a new version that logs everything so if we get more dictation issues " -> NONE
+[mic] "Maybe"
+[mic] "Maybe we"
+[mic] "Maybe we can"
+[pause]
+[context] "I don't see that you made the fix after I said sure now running a new version that logs everything so if we get more dictation issues "
+[fix] "maybe we can" -> NONE
+[key] " "
+[key] "dia"
+[key] "gnose"
+[key] " them"
+[key] " better"
+[key] "￼"
+[cur] 167
+[del] 1
+[cur] 146
+[cur] 147
+[cur] 167
+[pause]
+[fix] "I don't see that you made the fix after I said sure now running a new version that logs everything so if we get more dictation issues maybe we can diagnose them better" -> "I don't see that you made the fix. After I said sure, now running a new version that logs everything so if we get more dictation issues maybe we can diagnose them better."
+[cur] 100
+[cur] 101
+[key] ","
+[pause]
+[fix] "After I said sure, now running a new version that logs everything, so if we get more dictation issues maybe we can diagnose them better." -> NONE
+[mic] off
+[expect] "I don't see that you made the fix. After I said sure, now running a new version that logs everything, so if we get more dictation issues maybe we can diagnose them better."
+[send] "I don't see that you made the fix. After I said sure, now running a new version that logs everything, so if we get more dictation issues maybe we can diagnose them better."
+
+Test 2026-06-01.15-27-33:
+[key] "T"
+[key] "here"
+[key] " are"
+[key] " still plenty"
+[key] " of"
+[key] " note"
+[key] "s"
+[cur] 0
+[del] 31
+[key] "There are still plenty of notes"
+[mic] on
+[mic] "That"
+[mic] "That we"
+[mic] "That we could"
+[mic] "That we could fix"
+[pause]
+[context] "There are still plenty of notes "
+[fix] "that we could fix" -> NONE
+[mic] off
+[expect] "There are still plenty of notes that we could fix"
+[send] "There are still plenty of notes that we could fix"
+
+Test 2026-06-01.15-35-57:
+[key] " "
+[cur] 0
+[del] 1
+[key] "Le"
+[key] "t’s d"
+[key] "o"
+[key] " 20"
+[del] 1
+[key] "1"
+[cur] 0
+[cur] 11
+[key] " "
+[del] 1
+[key] "."
+[key] " "
+[key] "I"
+[key] " thi"
+[key] "nk"
+[key] " when you"
+[key] " said parents"
+[cur] 40
+[del] 7
+[key] "Perez"
+[key] " you meant"
+[key] " quotes"
+[cur] 13
+[cur] 57
+[cur] 40
+[del] 5
+[key] "p"
+[cur] 37
+[key] "a"
+[cur] 38
+[key] "r"
+[cur] 39
+[key] "e"
+[cur] 40
+[key] "n"
+[cur] 41
+[key] "s"
+[cur] 58
+[key] " "
+[del] 1
+[key] "."
+[key] " "
+[pause]
+[fix] "I think when you said parens you meant quotes. " -> NONE
+[key] "But"
+[key] " we can go"
+[key] " ahead"
+[key] " and"
+[key] " define."
+[del] 1
+[key] " the word"
+[key] " just"
+[key] " without"
+[key] " quotes."
+[cur] 60
+[cur] 120
+[key] " "
+[key] " "
+[key] "I"
+[key] " suggest"
+[key] " putting"
+[key] " the."
+[cur] 122
+[cur] 144
+[cur] 143
+[del] 1
+[key] " "
+[key] "@"
+[key] "t"
+[key] "e"
+[key] "r"
+[key] "m"
+[key] " "
+[pause]
+[fix] "I suggest putting the @term " -> NONE
+[key] "af"
+[key] "ter t"
+[key] "h"
+[key] "is "
+[key] "sen"
+[key] "ten"
+[key] "ce"
+[cur] 150
+[cur] 169
+[key] ";"
+[cur] 169
+[del] 1
+[key] ":"
+[key] " "
+[pause]
+[fix] "I suggest putting the @term after this sentence: " -> "I suggest putting the"
+[key] "That is what “just” does"
+[pause]
+[fix] "I suggest putting the @term after this sentence: That is what “just” does" -> NONE
+[expect] "Let’s do 21. I think when you said parens you meant quotes. But we can go ahead and define the word just without quotes.  I suggest putting the @term after this sentence: That is what “just” does"
+[send] "Let’s do 21. I think when you said parens you meant quotes. But we can go ahead and define the word just without quotes.  I suggest putting the @term after this sentence: That is what “just” does"
+
+Test 2026-06-01.15-37-12:
+[key] "I"
+[key] " did did"
+[del] 4
+[key] "n’t get"
+[key] " either"
+[key] " chip"
+[cur] 0
+[del] 24
+[key] "I didn’t get either chip"
+[expect] "I didn’t get either chip"
+[send] "I didn’t get either chip"
+
+Test 2026-06-01.15-38-27:
+[key] "Wh"
+[key] "y wou"
+[key] "l"
+[key] "d"
+[key] " you be"
+[key] " search"
+[key] "ing"
+[key] " for?"
+[cur] 0
+[cur] 31
+[cur] 30
+[del] 1
+[key] " "
+[key] "@"
+[key] "t"
+[key] "e"
+[key] "r"
+[key] "m"
+[key] "?"
+[key] " "
+[key] "Tha"
+[key] "t"
+[key] "’s what"
+[key] " you were"
+[cur] 56
+[del] 3
+[key] "’"
+[cur] 56
+[pause]
+[fix] "That’s what you’re" -> NONE
+[key] " "
+[pause]
+[fix] "That’s what you’re " -> NONE
+[mic] on
+[mic] "Add"
+[mic] "Adding"
+[mic] off
+[expect] "Why would you be searching for @term? That’s what you’re adding"
+[send] "Why would you be searching for @term? That’s what you’re adding"
+
+Test 2026-06-01.15-39-18:
+[key] "Sti"
+[key] "ll"
+[key] " no"
+[key] " chip"
+[cur] 0
+[del] 13
+[key] "Still no chip"
+[expect] "Still no chip"
+[send] "Still no chip"
+
+Test 2026-06-01.15-43-33:
+[key] "I"
+[key] " have an"
+[key] " idea"
+[cur] 0
+[cur] 14
+[key] " "
+[del] 1
+[key] "."
+[key] " "
+[key] "Wh"
+[key] "y"
+[key] " Don"
+[del] 3
+[key] "don’t you"
+[key] " just sum"
+[key] "marize"
+[key] " your status"
+[key] " and"
+[key] " the"
+[key] " scratch"
+[key] " pad"
+[key] "?"
+[cur] 16
+[cur] 77
+[key] " "
+[pause]
+[fix] "Why don’t you just summarize your status and the scratch pad? " -> NONE
+[key] "And "
+[key] "leave"
+[key] "."
+[del] 1
+[key] " key there"
+[key] "."
+[cur] 78
+[cur] 98
+[cur] 88
+[cur] 89
+[key] "a"
+[cur] 90
+[key] " "
+[cur] 100
+[pause]
+[fix] "And leave a key there." -> NONE
+[cur] 99
+[del] 1
+[key] " "
+[key] "wi"
+[key] "th"
+[key] " the"
+[key] " title"
+[cur] 100
+[cur] 114
+[key] " "
+[key] "“"
+[key] "r"
+[key] "e"
+[key] "a"
+[key] "d"
+[key] " "
+[key] "m"
+[key] "e"
+[cur] 122
+[del] 1
+[cur] 121
+[del] 1
+[cur] 120
+[del] 1
+[key] "-"
+[key] "m"
+[key] "e"
+[key] "”"
+[key] " "
+[del] 1
+[key] "."
+[key] " "
+[pause]
+[fix] "And leave a key there with the title “read-me”. " -> NONE
+[key] "M"
+[key] "aybe"
+[key] " that"
+[key] " will"
+[key] " be enough"
+[key] " to get"
+[key] " your"
+[key] " successor."
+[del] 1
+[key] " to catch"
+[key] " on"
+[key] " without"
+[key] " my"
+[key] " pro."
+[key] "dding"
+[cur] 206
+[key] " Maybe that will be enough to get your successor to catch on without my prodding."
+[pause]
+[fix] "Maybe that will be enough to get your successor to catch on without my prodding Maybe that will be enough to get your successor to catch on without my prodding.." -> "Maybe that will be enough to get your successor to catch on without my prodding."
+[cur] 35
+[cur] 36
+[key] "u"
+[cur] 35
+[del] 1
+[cur] 34
+[del] 1
+[cur] 33
+[del] 1
+[cur] 32
+[del] 1
+[cur] 31
+[del] 1
+[cur] 30
+[del] 1
+[cur] 44
+[del] 15
+[cur] 43
+[key] "our"
+[cur] 49
+[key] " to-do"
+[cur] 54
+[key] " list"
+[cur] 57
+[key] " in"
+[cur] 40
+[cur] 57
+[cur] 263
+[cur] 96
+[cur] 90
+[del] 6
+[cur] 222
+[pause]
+[fix] "Maybe that will be enough to get your successor to catch on without my prodding Maybe that will be enough to get your successor to catch on without my prodding.." -> "Maybe that will be enough to get your successor to catch on without my prodding."
+[cur] 173
+[cur] 168
+[cur] 169
+[key] "r"
+[cur] 170
+[key] "e"
+[cur] 171
+[key] "a"
+[cur] 172
+[key] "d"
+[cur] 173
+[key] " "
+[cur] 174
+[key] "o"
+[cur] 175
+[key] "t"
+[del] 1
+[key] "i"
+[cur] 175
+[key] "a"
+[cur] 176
+[key] "n"
+[cur] 177
+[key] "d"
+[cur] 178
+[key] " "
+[cur] 179
+[key] "m"
+[cur] 178
+[del] 1
+[cur] 177
+[del] 1
+[cur] 176
+[del] 1
+[cur] 175
+[del] 1
+[cur] 174
+[del] 1
+[cur] 181
+[key] " "
+[cur] 177
+[key] "a"
+[cur] 178
+[key] "n"
+[cur] 179
+[key] "d"
+[cur] 180
+[key] " "
+[cur] 208
+[cur] 209
+[key] "."
+[cur] 210
+[key] " "
+[cur] 216
+[pause]
+[fix] "Maybe that will be enough to get your successor to catch on without my prodding.." -> NONE
+[cur] 210
+[del] 82
+[expect] "I have an idea. Why don’t you summarize our to-do list in the scratch pad? And leave a key with the title “read-me”. Maybe that will be enough to get your successor to read it and catch on without my prodding. "
+[send] "I have an idea. Why don’t you summarize our to-do list in the scratch pad? And leave a key with the title “read-me”. Maybe that will be enough to get your successor to read it and catch on without my prodding."
+
+Test 2026-06-01.15-58-08:
+[key] "We"
+[key] " were"
+[del] 6
+[key] "hen we were cleaning"
+[cur] 19
+[del] 20
+[key] "e were cleaning up"
+[cur] 0
+[cur] 19
+[key] " "
+[pause]
+[fix] "We were cleaning up " -> NONE
+[key] "@"
+[key] "n"
+[key] "o"
+[key] "t"
+[key] "e"
+[key] "s"
+[key] " "
+[pause]
+[fix] "We were cleaning up @notes " -> NONE
+[key] "fro"
+[key] "m"
+[key] " the"
+[key] " built"
+[cur] 27
+[cur] 41
+[key] " "
+[key] "h"
+[key] "t"
+[key] "m"
+[key] "l"
+[key] " "
+[key] "f"
+[key] "i"
+[key] "l"
+[key] "e"
+[cur] 50
+[del] 1
+[key] "e"
+[key] " "
+[del] 1
+[key] "."
+[key] " "
+[pause]
+[fix] "We were cleaning up @notes from the built html file. " -> NONE
+[mic] on
+[mic] "I"
+[mic] "I don"
+[mic] "I don't"
+[mic] "I don't remember"
+[mic] "I don't remember if"
+[mic] "I don't remember if we"
+[mic] "I don't remember if we finished"
+[mic] off
+[expect] "We were cleaning up @notes from the built html file. I don't remember if we finished"
+[send] "We were cleaning up @notes from the built html file. I don't remember if we finished"
+
+Test 2026-06-01.15-59-40:
+[mic] on
+[mic] "There"
+[mic] "There are"
+[mic] "There are eight"
+[mic] "There are eight note"
+[mic] "There are eight notes"
+[mic] "There are eight notes in"
+[pause]
+[fix] "There are eight notes in" -> NONE
+[mic] "There are eight notes in do"
+[pause]
+[fix] "There are eight notes in do" -> NONE
+[key] "c"
+[key] "s"
+[key] "/"
+[key] "n"
+[key] "o"
+[key] "t"
+[key] "es"
+[cur] 33
+[del] 2
+[key] "e"
+[key] "s"
+[cur] 34
+[del] 1
+[key] "s"
+[key] "."
+[key] "h"
+[key] "t"
+[key] "m"
+[key] "l"
+[key] " "
+[del] 1
+[key] "."
+[key] " "
+[mic] "Do"
+[mic] "Do you"
+[mic] "Do you see"
+[mic] "Do you see?"
+[mic] "Do you see them"
+[mic] "Do you see them?"
+[mic] off
+[expect] "There are eight notes in docs/notes.html. Do you see them?"
+[send] "There are eight notes in docs/notes.html. Do you see them?"
+
+Test 2026-06-01.16-01-30:
+[mic] on
+[mic] "Number"
+[mic] "Number one"
+[mic] "Number one should"
+[mic] "Number one should be"
+[mic] "Number one should be remove"
+[mic] "Number one should be removed"
+[key] " "
+[del] 1
+[key] "."
+[key] " "
+[mic] "Number one should be removed number"
+[mic] "Number one should be removed numbers"
+[mic] "Number one should be removed numbers is two"
+[mic] "Number one should be removed number is two"
+[mic] "Number one should be removed numbers two and"
+[mic] "Number one should be removed numbers two and three"
+[mic] "Number one should be removed numbers two and three look"
+[mic] "Number one should be removed numbers two and three look like"
+[cur] 29
+[cur] 31
+[cur] 30
+[pause]
+[fix] "Number one should be removed numbers two and three look like. " -> "Number one should be removed; numbers two"
+[cur] 30
+[cur] 36
+[cur] 30
+[cur] 29
+[del] 1
+[cur] 30
+[key] "N"
+[cur] 28
+[pause]
+[fix] "Number one should be removed Numbers two and three look like. " -> "Number one should be removed. Numbers two"
+[key] "."
+[cur] 62
+[del] 1
+[cur] 61
+[del] 1
+[cur] 60
+[del] 1
+[key] " "
+[cur] 28
+[pause]
+[fix] "Number one should be removed Numbers two and three look like " -> "Number one should be removed. Numbers two"
+[key] ","
+[cur] 61
+[del] 1
+[cur] 28
+[cur] 29
+[key] "."
+[cur] 62
+[pause]
+[fix] "Numbers two and three look like " -> NONE
+[mic] "They"
+[mic] "They are"
+[mic] "They are with"
+[mic] "They are with discuss"
+[mic] "They are with discussing"
+[key] " "
+[del] 1
+[key] "."
+[key] " "
+[key] " "
+[key] " "
+[mic] "They are with discussing I"
+[mic] "They are with discussing I also"
+[mic] "They are with discussing I also wonder"
+[mic] "They are with discussing I also wonder if"
+[mic] "They are with discussing. I also wonder if the"
+[mic] "They are with discussing. I also wonder if the bi"
+[mic] "They are with discussing. I also wonder if the Biblia"
+[mic] "They are with discussing. I also wonder if the the"
+[mic] "They are with discussing. I also wonder if if the"
+[mic] "They are with discussing. I also wonder if the bibliography"
+[mic] "They are with discussing. I also wonder if the bibliography note"
+[mic] "They are with discussing. I also wonder if the bibliography notes"
+[mic] "They are with discussing. I also wonder if the bibliography notes."
+[pause]
+[context] "Number one should be removed. Numbers two and three look like "
+[fix] "they are with discussing. I also wonder if the bibliography notes." -> NONE
+[mic] "They are with discussing. I also wonder if the bibliography notes belong"
+[mic] "They are with discussing. I also wonder if the bibliography notes belong."
+[mic] "They are with discussing. I also wonder if the bibliography notes belong in"
+[mic] "They are with discussing. I also wonder if the bibliography notes belong in bi"
+[mic] "They are with discussing. I also wonder if the bibliography notes belong in Biblia"
+[mic] "They are with discussing. I also wonder if the bibliography notes belong in bibliography"
+[mic] "They are with discussing. I also wonder if the bibliography notes belong in bibliography reference"
+[mic] "They are with discussing. I also wonder if the bibliography notes belong in bibliography reference."
+[mic] "They are with discussing. I also wonder if the bibliography notes belong in bibliography references"
+[mic] "They are with discussing. I also wonder if the bibliography notes belong in bibliography references."
+[mic] "They are with discussing. I also wonder if the bibliography notes belong in bibliography references instead"
+[mic] "They are with discussing. I also wonder if the bibliography notes belong in bibliography references instead of"
+[mic] "They are with discussing. I also wonder if the bibliography notes belong in bibliography references instead of as"
+[mic] "They are with discussing. I also wonder if the bibliography notes belong in bibliography references instead of as."
+[cur] 179
+[del] 1
+[cur] 178
+[del] 1
+[cur] 177
+[del] 1
+[cur] 176
+[del] 1
+[key] "m"
+[key] " "
+[cur] 177
+[del] 1
+[cur] 176
+[del] 1
+[cur] 175
+[del] 1
+[key] " "
+[key] "@"
+[mic] "Note"
+[mic] "Notes"
+[cur] 178
+[pause]
+[context] "Number one should be removed. Numbers two and three look like they are with discussing. I also wonder if the bibliography notes belong in bibliography references instead of as @ "
+[fix] "notes" -> NONE
+[cur] 177
+[del] 1
+[mic] off
+[expect] "Number one should be removed. Numbers two and three look like they are with discussing. I also wonder if the bibliography notes belong in bibliography references instead of as @notes"
+[send] "Number one should be removed. Numbers two and three look like they are with discussing. I also wonder if the bibliography notes belong in bibliography references instead of as @notes"
+
+Test 2026-06-01.16-56-26:
+[mic] on
+[mic] "Fix"
+[mic] "Fix all"
+[mic] "Fix all number"
+[mic] "Fix all number two"
+[mic] "Fix all number two and"
+[mic] "Fix all number two and will"
+[mic] "Fix all number two and will come"
+[mic] "Fix all number two and will come back"
+[mic] "Fix all number two and will come back to"
+[mic] "Fix all number two and will come back to that"
+[mic] "Fix all but number two and will come back to that"
+[mic] off
+[expect] "Fix all but number two and will come back to that"
+[send] "Fix all but number two and will come back to that"
+
+Test 2026-06-01.16-57-49:
+[key] "Yes"
+[key] ", let"
+[key] "’s"
+[key] " figure"
+[key] " out"
+[key] " the"
+[key] " bi"
+[del] 2
+[key] "Biblia"
+[del] 6
+[key] "bibliography"
+[key] " Ria"
+[del] 3
+[key] "reshaping"
+[cur] 0
+[cur] 48
+[key] " "
+[del] 1
+[key] "."
+[key] " "
+[key] "I"
+[key] " think."
+[del] 1
+[key] " the question"
+[key] " is"
+[key] " whether"
+[key] " we"
+[key] " can"
+[key] " put."
+[pause]
+[fix] "I think the question is whether we can put." -> NONE
+[del] 1
+[key] " a Biblia"
+[del] 6
+[key] "bibliography"
+[key] " reference"
+[key] " inside."
+[cur] 50
+[cur] 125
+[cur] 124
+[del] 1
+[key] " "
+[pause]
+[fix] "I think the question is whether we can put a bibliography reference inside " -> NONE
+[key] "t"
+[key] "he"
+[key] " content"
+[key] " of another"
+[key] " Billy"
+[del] 4
+[key] "bibliograph"
+[pause]
+[fix] "I think the question is whether we can put a bibliography reference inside the content of another bibliography" -> NONE
+[key] " "
+[del] 1
+[key] "."
+[key] " "
+[pause]
+[fix] "I think the question is whether we can put a bibliography reference inside the content of another bibliography. " -> NONE
+[key] "It"
+[key] " should"
+[key] " work."
+[del] 1
+[key] " and if not"
+[key] " that"
+[del] 5
+[key] ", that’s a bug"
+[del] 25
+[key] ", and if not, that’s a bug I"
+[del] 28
+[key] " and if not, that’s a bug I should"
+[key] " fix."
+[del] 1
+[key] " so it does"
+[key] " work."
+[cur] 162
+[del] 69
+[key] "It should work and if not, that’s a bug I should fix so it does work."
+[expect] "Yes, let’s figure out the bibliography reshaping. I think the question is whether we can put a bibliography reference inside the content of another bibliography. It should work and if not, that’s a bug I should fix so it does work."
+[send] "Yes, let’s figure out the bibliography reshaping. I think the question is whether we can put a bibliography reference inside the content of another bibliography. It should work and if not, that’s a bug I should fix so it does work."
+
+Test 2026-06-01.17-28-16:
+[key] "D"
+[key] "i"
+[key] "d"
+[key] " "
+[key] "y"
+[key] "o"
+[key] "u"
+[cur] 6
+[del] 1
+[key] "u"
+[key] " "
+[key] "t"
+[key] "r"
+[key] "y"
+[key] "?"
+[expect] "Did you try?"
+[send] "Did you try?"
+
+Test 2026-06-01.17-30-23:
+[key] "The"
+[key] " note"
+[key] " on"
+[cur] 0
+[cur] 11
+[cur] 8
+[del] 3
+[cur] 3
+[del] 5
+[del] 3
+[key] "The"
+[key] " de"
+[key] "scription"
+[key] " on"
+[key] " every"
+[key] " bi"
+[del] 2
+[key] "Biblia"
+[del] 6
+[key] "bibliography"
+[key] " reference"
+[cur] 0
+[cur] 47
+[key] " "
+[key] "h"
+[key] "e’"
+[key] "s"
+[key] " already"
+[key] " pod"
+[key] " specific"
+[cur] 48
+[cur] 73
+[cur] 52
+[cur] 50
+[cur] 52
+[cur] 73
+[cur] 52
+[del] 4
+[key] "i"
+[cur] 50
+[key] "s"
+[cur] 71
+[pause]
+[fix] "The description on every bibliography reference is already pod specific" -> NONE
+[key] " "
+[pause]
+[fix] "The description on every bibliography reference is already pod specific " -> NONE
+[key] "wh"
+[key] "en"
+[key] " it land"
+[key] "s on the"
+[key] " Biblia"
+[del] 6
+[key] "bibliography"
+[cur] 72
+[cur] 105
+[key] " "
+[cur] 105
+[del] 1
+[key] ","
+[key] " "
+[pause]
+[fix] "The description on every bibliography reference is already pod specific when it lands on the bibliography, " -> NONE
+[key] "we’"
+[key] "re"
+[key] " just"
+[key] " ill"
+[del] 3
+[key] "eliminating"
+[key] " an"
+[del] 2
+[key] "An now"
+[key] " unnecessary"
+[pause]
+[fix] "The description on every bibliography reference is already pod specific when it lands on the bibliography, we’re just eliminating An now unnecessary" -> NONE
+[key] " middle"
+[key] "man"
+[cur] 107
+[cur] 158
+[cur] 133
+[del] 2
+[key] "a"
+[cur] 132
+[pause]
+[fix] "The description on every bibliography reference is already pod specific when it lands on the bibliography, we’re just eliminating a now unnecessary middleman" -> NONE
+[key] "("
+[cur] 147
+[cur] 148
+[key] ")"
+[cur] 159
+[cur] 158
+[del] 1
+[key] " "
+[pause]
+[fix] "The description on every bibliography reference is already pod specific when it lands on the bibliography, we’re just eliminating a now unnecessary) middleman " -> NONE
+[key] "th"
+[key] "at"
+[key] " I"
+[key] " in intro"
+[del] 6
+[key] "troduced"
+[key] " before"
+[key] " I"
+[key] " had"
+[key] " this better"
+[key] " solution"
+[cur] 159
+[del] 51
+[key] "that I introduced before I had this better solution"
+[expect] "The description on every bibliography reference is already pod specific when it lands on the bibliography, we’re just eliminating a now unnecessary) middleman that I introduced before I had this better solution"
+[send] "The description on every bibliography reference is already pod specific when it lands on the bibliography, we’re just eliminating a now unnecessary) middleman that I introduced before I had this better solution"
+
+Test 2026-06-01.17-33-48:
+[key] "@"
+[key] "g"
+[key] "e"
+[cur] 2
+[del] 1
+[cur] 1
+[del] 1
+[key] "r"
+[key] "e"
+[key] "f"
+[key] " "
+[mic] on
+[pause]
+[fix] "@ref " -> NONE
+[mic] "Take"
+[mic] "Takes"
+[mic] "Takes three"
+[mic] "Takes three argument"
+[mic] "Takes three arguments"
+[key] ":"
+[key] " "
+[mic] "Takes three arguments the"
+[mic] "Takes three arguments the tag"
+[mic] "Takes three arguments the tag which"
+[mic] "Takes three arguments the tag which must"
+[mic] "Takes three arguments the tag which must be"
+[mic] "Takes three arguments the tag which must be un"
+[mic] "Takes three arguments the tag which must be unique"
+[cur] 26
+[pause]
+[fix] "@ref takes three arguments the tag which must be unique: " -> NONE
+[key] ":"
+[cur] 26
+[pause]
+[fix] "@ref takes three arguments the tag which must be unique: :" -> NONE
+[key] ":"
+[cur] 26
+[pause]
+[fix] "@ref takes three arguments the tag which must be unique: ::" -> NONE
+[cur] 58
+[del] 1
+[cur] 57
+[del] 1
+[cur] 56
+[del] 1
+[cur] 55
+[del] 1
+[key] ","
+[key] " "
+[pause]
+[fix] "@ref takes three arguments the tag which must be unique, " -> NONE
+[mic] "The"
+[mic] "The reference"
+[pause]
+[context] "@ref takes three arguments the tag which must be unique, "
+[fix] "the reference" -> NONE
+[mic] "The reference meaning"
+[mic] "The reference meaning author"
+[mic] "The reference meaning author book"
+[mic] "The reference meaning author book title"
+[mic] "The reference meaning author book title et"
+[mic] "The reference meaning author book, title, etc."
+[key] ","
+[key] " "
+[mic] "The reference meaning author book, title, etc. and"
+[mic] "The reference meaning author book, title, etc., and a"
+[mic] "The reference meaning author book, title, etc., and a de"
+[mic] "The reference meaning author book, title, etc., and a description"
+[cur] 123
+[del] 1
+[cur] 122
+[del] 1
+[key] " "
+[del] 1
+[key] "."
+[key] " "
+[mic] "In"
+[mic] "In the"
+[mic] "In the bi"
+[mic] "In the Biblia"
+[mic] "In the bibliography"
+[pause]
+[context] "@ref takes three arguments the tag which must be unique, the reference meaning author book, title, etc., and a description. "
+[fix] "In the bibliography" -> NONE
+[mic] "In the bibliography each"
+[mic] "In the bibliography each individual"
+[mic] "In the bibliography each individual de"
+[mic] "In the bibliography each individual description"
+[mic] "In the bibliography, each individual description is"
+[mic] "In the bibliography, each individual description is list"
+[mic] "In the bibliography, each individual description is listed"
+[mic] "In the bibliography, each individual description is listed under"
+[mic] "In the bibliography, each individual description is listed under the"
+[mic] "In the bibliography, each individual description is listed under the reference"
+[pause]
+[context] "@ref takes three arguments the tag which must be unique, the reference meaning author book, title, etc., and a description. "
+[fix] "In the bibliography, each individual description is listed under the reference" -> NONE
+[mic] "In the bibliography, each individual description is listed under the reference with"
+[mic] "In the bibliography, each individual description is listed under the reference with back"
+[mic] "In the bibliography, each individual description is listed under the reference with back link"
+[mic] "In the bibliography, each individual description is listed under the reference with back links"
+[pause]
+[context] "@ref takes three arguments the tag which must be unique, the reference meaning author book, title, etc., and a description. "
+[fix] "In the bibliography, each individual description is listed under the reference with back links" -> NONE
+[cur] 169
+[cur] 172
+[cur] 218
+[del] 11
+[key] "t"
+[cur] 163
+[key] "a"
+[cur] 164
+[key] "g"
+[cur] 210
+[pause]
+[fix] "In the bibliography, each individual tag is listed under the reference with back links" -> NONE
+[key] " "
+[pause]
+[fix] "In the bibliography, each individual tag is listed under the reference with back links " -> NONE
+[key] "t"
+[key] "o"
+[key] "o anywhere it"
+[key] " was"
+[key] " used"
+[cur] 234
+[del] 1
+[pause]
+[fix] "In the bibliography, each individual tag is listed under the reference with back links to anywhere it was used" -> NONE
+[key] " "
+[key] "and "
+[key] "a"
+[key] " single"
+[key] " description"
+[cur] 235
+[cur] 259
+[key] " "
+[del] 1
+[key] "."
+[key] " "
+[key] "T"
+[key] "he"
+[key] " build"
+[key] "er"
+[key] " complains"
+[key] " if there is"
+[del] 3
+[key] "’s more"
+[key] " than"
+[key] " one de"
+[key] "scription"
+[key] " for"
+[key] " the same"
+[key] " tag"
+[key] "."
+[cur] 261
+[cur] 337
+[pause]
+[fix] "The builder complains if there’s more than one description for the same tag." -> NONE
+[mic] off
+[expect] "@ref takes three arguments the tag which must be unique, the reference meaning author book, title, etc., and a description. In the bibliography, each individual tag is listed under the reference with back links to anywhere it was used and a single description. The builder complains if there’s more than one description for the same tag."
+[send] "@ref takes three arguments the tag which must be unique, the reference meaning author book, title, etc., and a description. In the bibliography, each individual tag is listed under the reference with back links to anywhere it was used and a single description. The builder complains if there’s more than one description for the same tag."
+
+Test 2026-06-01.17-37-35:
+[key] "Bear"
+[cur] 0
+[cur] 4
+[key] ","
+[del] 5
+[key] "1"
+[key] "."
+[key] " "
+[pause]
+[fix] "1. " -> NONE
+[key] "We"
+[key] " have"
+[key] " done"
+[key] " that"
+[key] " in many"
+[key] " places"
+[key] "."
+[cur] 3
+[cur] 36
+[cur] 20
+[del] 3
+[cur] 18
+[key] "h"
+[cur] 19
+[key] "i"
+[cur] 20
+[key] "s"
+[cur] 21
+[key] " "
+[cur] 23
+[key] "as"
+[cur] 25
+[key] " I"
+[cur] 35
+[key] " described"
+[cur] 21
+[cur] 35
+[cur] 51
+[key] " "
+[pause]
+[fix] "We have done this as I described in many places. " -> NONE
+[key] "If"
+[del] 2
+[key] "A few need"
+[key] " to"
+[key] " be fixed"
+[key] "."
+[cur] 52
+[cur] 75
+[key] " "
+[pause]
+[fix] "A few need to be fixed. " -> NONE
+[key] "We"
+[key] " did"
+[key] "n’t"
+[key] " deal"
+[key] " with"
+[key] " these"
+[key] " ones"
+[key] " because"
+[key] " of"
+[key] " the"
+[key] " nest"
+[key] "."
+[key] "ed"
+[cur] 129
+[key] " We didn’t deal with these ones because of the nested."
+[cur] 183
+[key] " "
+[cur] 182
+[del] 1
+[cur] 181
+[del] 1
+[cur] 182
+[cur] 174
+[cur] 173
+[cur] 174
+[cur] 167
+[del] 15
+[key] " "
+[pause]
+[fix] "We didn’t deal with these ones because of the nested We didn’t deal with these ones because " -> NONE
+[key] "th"
+[key] "ey"
+[key] " were"
+[key] " too"
+[key] " complex"
+[cur] 168
+[cur] 189
+[key] " "
+[del] 1
+[key] "."
+[key] " "
+[key] " "
+[key] " "
+[key] "2"
+[key] "."
+[key] " "
+[cur] 160
+[pause]
+[fix] "2. " -> NONE
+[cur] 161
+[key] "b"
+[cur] 162
+[key] "e"
+[cur] 163
+[key] "f"
+[cur] 164
+[key] "o"
+[cur] 165
+[key] "r"
+[cur] 166
+[key] "e"
+[cur] 167
+[key] " "
+[cur] 203
+[key] "@"
+[key] "r"
+[key] "e"
+[key] "f"
+[key] " "
+[pause]
+[fix] "@ref " -> NONE
+[key] "a"
+[key] "lso"
+[key] " cr"
+[key] "eat"
+[key] "e"
+[key] " a foot"
+[key] " knot"
+[key] " style"
+[cur] 208
+[cur] 237
+[cur] 231
+[del] 4
+[key] "l"
+[cur] 227
+[del] 1
+[cur] 226
+[del] 1
+[cur] 225
+[del] 1
+[cur] 226
+[key] "t"
+[cur] 227
+[key] "n"
+[cur] 228
+[key] "o"
+[cur] 229
+[key] "t"
+[cur] 230
+[key] "e"
+[cur] 236
+[key] " "
+[pause]
+[fix] "@ref also create a footnote style " -> NONE
+[key] "poin"
+[key] "t"
+[key] "er"
+[key] " to the bi"
+[del] 2
+[key] "Biblia"
+[del] 6
+[key] "bibliography"
+[cur] 237
+[cur] 264
+[key] " "
+[del] 1
+[key] "."
+[key] " "
+[pause]
+[fix] "@ref also create a footnote style pointer to the bibliography. " -> "@ref also create a footnote style"
+[cur] 230
+[del] 14
+[cur] 227
+[key] "super"
+[cur] 233
+[key] "script"
+[cur] 222
+[cur] 233
+[cur] 242
+[cur] 241
+[cur] 239
+[cur] 241
+[del] 7
+[cur] 240
+[key] "refere"
+[cur] 243
+[key] "nce"
+[cur] 234
+[cur] 243
+[cur] 265
+[cur] 234
+[pause]
+[fix] "@ref also create a superscript reference to the bibliography. " -> "Also create a superscript reference to"
+[cur] 234
+[cur] 237
+[key] "hyp"
+[cur] 240
+[key] "er "
+[cur] 246
+[key] "linked"
+[cur] 246
+[cur] 257
+[key] " hyperlinked"
+[cur] 287
+[pause]
+[fix] "@ref also create a superscript hyperlinked hyperlinked reference to the bibliography. " -> "@ref also create a superscript hyperlinked reference to the bibliography"
+[cur] 242
+[cur] 245
+[cur] 289
+[mic] on
+[cur] 257
+[cur] 245
+[del] 12
+[mic] off
+[expect] "1. We have done this as I described in many places. A few need to be fixed. We didn’t deal with these ones because of the nested We didn’t deal with these ones before because they were too complex.   2. @ref also create a superscript hyperlinked reference to the bibliography. "
+[send] "1. We have done this as I described in many places. A few need to be fixed. We didn’t deal with these ones because of the nested We didn’t deal with these ones before because they were too complex.   2. @ref also create a superscript hyperlinked reference to the bibliography."
+
+Test 2026-06-01.17-43-21:
+[key] "1"
+[key] "."
+[key] " "
+[key] "Y"
+[key] "e"
+[key] "s"
+[key] " "
+[key] "2"
+[key] "."
+[key] " "
+[pause]
+[fix] "Yes 2. " -> NONE
+[key] "Sta"
+[key] "ck"
+[key] "ing should"
+[key] " be"
+[key] " fine."
+[cur] 10
+[cur] 34
+[key] " "
+[key] " "
+[pause]
+[fix] "Stacking should be fine.  " -> NONE
+[key] "We"
+[key] " may or"
+[key] " may not"
+[key] " need"
+[key] " a space"
+[key] " between them"
+[key] "."
+[key] " I’ll find"
+[key] " out."
+[cur] 36
+[del] 59
+[key] "We may or may not need a space between them. I’ll find out."
+[expect] "1. Yes 2. Stacking should be fine.  We may or may not need a space between them. I’ll find out."
+[send] "1. Yes 2. Stacking should be fine.  We may or may not need a space between them. I’ll find out."
+
+Test 2026-06-01.17-45-07:
+[key] "C"
+[key] "ont"
+[key] "inu"
+[key] "e"
+[cur] 0
+[del] 8
+[key] "Continue"
+[expect] "Continue"
+[send] "Continue"
+
+Test 2026-06-01.19-11-45:
+[key] "Yo"
+[key] "u"
+[key] " can"
+[key] " let the"
+[key] " build"
+[key] "er make"
+[key] " that check"
+[cur] 0
+[del] 39
+[key] "You can let the builder make that check"
+[expect] "You can let the builder make that check"
+[send] "You can let the builder make that check"
+

@@ -1,0 +1,37 @@
+{
+  "narrative" : "Explores how a single iterating rule — exemplified by the Mandelbrot set — generates infinite complexity without anything being added, and extends this intuition to Wheeler's one-electron universe and Whitehead's prehension, arguing that the complexity of reality is simply what iteration does over time.",
+  "schema" : 1,
+  "subject" : "034-onerule.md",
+  "subject-sha" : "sha256:fc57126de45ab2d0cfab1c99c5bb05dd61f6d3dbbde1b59c1853b215c3ec6687",
+  "terms" : [
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "Mandelbrot set",
+      "weight" : 1
+    },
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "one-electron universe",
+      "weight" : 0.7
+    },
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "Feynman",
+      "weight" : 0.4
+    }
+  ],
+  "themes" : [
+    "iteration",
+    "emergence",
+    "complexity",
+    "process philosophy",
+    "cosmology"
+  ],
+  "updated-at" : "2026-06-20T21:02:07Z"
+}

@@ -1,0 +1,38 @@
+{
+  "narrative" : "Explores interference as a single phenomenon appearing at multiple scales — musical consonance, the double-slit diffraction pattern, and neural electromagnetic activity — asking whether harmony, quantum wave behavior, and thought are genuinely identical in kind or merely share a formal mathematical description. The chapter presents the structural parallel and leaves the deeper question open, noting that the formal identity alone is striking.",
+  "schema" : 1,
+  "subject" : "030-interference.md",
+  "subject-sha" : "sha256:80bfff6194d060e9ac75667060370089d4f167cd246e09c27b2b006ef89eb9af",
+  "terms" : [
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "double-slit experiment",
+      "weight" : 1
+    },
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "Thomas Young",
+      "weight" : 0.4
+    },
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "Maxwell field",
+      "weight" : 0.4
+    }
+  ],
+  "themes" : [
+    "interference",
+    "wave phenomena",
+    "harmony",
+    "cognition",
+    "analogy vs identity",
+    "scale"
+  ],
+  "updated-at" : "2026-06-20T21:00:16Z"
+}

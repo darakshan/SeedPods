@@ -1,318 +1,326 @@
 [
   {
     "name" : "...",
-    "ref" : "notes\/design-page-versions-and-build-version.md"
+    "ref" : "archive\/notes\/design-page-versions-and-build-version.md"
   },
   {
     "name" : "000-map",
-    "ref" : "subjects\/000-map.md"
+    "ref" : "chapters\/000-map.md"
   },
   {
     "name" : "001-caloric",
-    "ref" : "subjects\/001-caloric.md"
+    "ref" : "chapters\/001-caloric.md"
   },
   {
     "name" : "002-events",
-    "ref" : "subjects\/002-events.md"
+    "ref" : "chapters\/002-events.md"
   },
   {
     "name" : "003-inside",
-    "ref" : "subjects\/003-inside.md"
+    "ref" : "chapters\/003-inside.md"
   },
   {
     "name" : "004-self",
-    "ref" : "subjects\/004-self.md"
+    "ref" : "chapters\/004-self.md"
   },
   {
     "name" : "005-freewill",
-    "ref" : "subjects\/005-freewill.md"
+    "ref" : "chapters\/005-freewill.md"
   },
   {
     "name" : "006-output",
-    "ref" : "subjects\/006-output.md"
+    "ref" : "chapters\/006-output.md"
   },
   {
     "name" : "007-vacuum",
-    "ref" : "subjects\/007-vacuum.md"
+    "ref" : "chapters\/007-vacuum.md"
   },
   {
     "name" : "008-fields",
-    "ref" : "subjects\/008-fields.md"
+    "ref" : "chapters\/008-fields.md"
   },
   {
     "name" : "009-randomness",
-    "ref" : "subjects\/009-randomness.md"
+    "ref" : "chapters\/009-randomness.md"
   },
   {
     "name" : "010-largenumbers",
-    "ref" : "subjects\/010-largenumbers.md"
+    "ref" : "chapters\/010-largenumbers.md"
   },
   {
     "name" : "011-moreisdifferent",
-    "ref" : "subjects\/011-moreisdifferent.md"
+    "ref" : "chapters\/011-moreisdifferent.md"
   },
   {
     "name" : "012-autopoiesis",
-    "ref" : "subjects\/012-autopoiesis.md"
+    "ref" : "chapters\/012-autopoiesis.md"
   },
   {
     "name" : "013-enactment",
-    "ref" : "subjects\/013-enactment.md"
+    "ref" : "chapters\/013-enactment.md"
   },
   {
     "name" : "014-cities",
-    "ref" : "subjects\/014-cities.md"
+    "ref" : "chapters\/014-cities.md"
   },
   {
     "name" : "015-aliens",
-    "ref" : "subjects\/015-aliens.md"
+    "ref" : "chapters\/015-aliens.md"
   },
   {
     "name" : "016-neuralnetwork",
-    "ref" : "subjects\/016-neuralnetwork.md"
+    "ref" : "chapters\/016-neuralnetwork.md"
   },
   {
     "name" : "017-pastpresent",
-    "ref" : "subjects\/017-pastpresent.md"
+    "ref" : "chapters\/017-pastpresent.md"
   },
   {
     "name" : "018-magnetization",
-    "ref" : "subjects\/018-magnetization.md"
+    "ref" : "chapters\/018-magnetization.md"
   },
   {
     "name" : "019-funerals",
-    "ref" : "subjects\/019-funerals.md"
+    "ref" : "chapters\/019-funerals.md"
   },
   {
     "name" : "020-penrose",
-    "ref" : "subjects\/020-penrose.md"
+    "ref" : "chapters\/020-penrose.md"
   },
   {
     "name" : "021-just",
-    "ref" : "subjects\/021-just.md"
+    "ref" : "chapters\/021-just.md"
   },
   {
     "name" : "022-locked",
-    "ref" : "subjects\/022-locked.md"
+    "ref" : "chapters\/022-locked.md"
   },
   {
     "name" : "023-stories",
-    "ref" : "subjects\/023-stories.md"
+    "ref" : "chapters\/023-stories.md"
   },
   {
     "name" : "024-ghostmachine",
-    "ref" : "subjects\/024-ghostmachine.md"
+    "ref" : "chapters\/024-ghostmachine.md"
   },
   {
     "name" : "025-widechannel",
-    "ref" : "subjects\/025-widechannel.md"
+    "ref" : "chapters\/025-widechannel.md"
   },
   {
     "name" : "026-twotruths",
-    "ref" : "subjects\/026-twotruths.md"
+    "ref" : "chapters\/026-twotruths.md"
   },
   {
     "name" : "027-usedtothink",
-    "ref" : "subjects\/027-usedtothink.md"
+    "ref" : "chapters\/027-usedtothink.md"
   },
   {
     "name" : "028-network",
-    "ref" : "subjects\/028-network.md"
+    "ref" : "chapters\/028-network.md"
   },
   {
     "name" : "029-lighttime",
-    "ref" : "subjects\/029-lighttime.md"
+    "ref" : "chapters\/029-lighttime.md"
   },
   {
     "name" : "030-interference",
-    "ref" : "subjects\/030-interference.md"
+    "ref" : "chapters\/030-interference.md"
   },
   {
     "name" : "031-surfaceinside",
-    "ref" : "subjects\/031-surfaceinside.md"
+    "ref" : "chapters\/031-surfaceinside.md"
   },
   {
     "name" : "032-skyfossil",
-    "ref" : "subjects\/032-skyfossil.md"
+    "ref" : "chapters\/032-skyfossil.md"
   },
   {
     "name" : "033-edge",
-    "ref" : "subjects\/033-edge.md"
+    "ref" : "chapters\/033-edge.md"
   },
   {
     "name" : "034-onerule",
-    "ref" : "subjects\/034-onerule.md"
+    "ref" : "chapters\/034-onerule.md"
   },
   {
     "name" : "035-simplestnumbers",
-    "ref" : "subjects\/035-simplestnumbers.md"
+    "ref" : "chapters\/035-simplestnumbers.md"
   },
   {
     "name" : "036-universenoticing",
-    "ref" : "subjects\/036-universenoticing.md"
+    "ref" : "chapters\/036-universenoticing.md"
   },
   {
     "name" : "037-assembly",
-    "ref" : "subjects\/037-assembly.md"
+    "ref" : "chapters\/037-assembly.md"
   },
   {
     "name" : "038-consonance-map",
-    "ref" : "subjects\/038-consonance-map.md"
+    "ref" : "chapters\/038-consonance-map.md"
+  },
+  {
+    "name" : "039-devil",
+    "ref" : "chapters\/039-devil.md"
   },
   {
     "name" : "040-stability",
-    "ref" : "subjects\/040-stability.md"
+    "ref" : "chapters\/040-stability.md"
   },
   {
     "name" : "041-colorwheel",
-    "ref" : "subjects\/041-colorwheel.md"
+    "ref" : "chapters\/041-colorwheel.md"
   },
   {
     "name" : "042-eyethinks",
-    "ref" : "subjects\/042-eyethinks.md"
+    "ref" : "chapters\/042-eyethinks.md"
   },
   {
     "name" : "044-ai-retina",
-    "ref" : "subjects\/044-ai-retina.md"
+    "ref" : "chapters\/044-ai-retina.md"
   },
   {
     "name" : "045-baldwin",
-    "ref" : "subjects\/045-baldwin.md"
+    "ref" : "chapters\/045-baldwin.md"
   },
   {
     "name" : "046-thinkfast",
-    "ref" : "subjects\/046-thinkfast.md"
+    "ref" : "chapters\/046-thinkfast.md"
   },
   {
     "name" : "047-ai-feeling",
-    "ref" : "subjects\/047-ai-feeling.md"
+    "ref" : "chapters\/047-ai-feeling.md"
   },
   {
     "name" : "048-flashes",
-    "ref" : "subjects\/048-flashes.md"
+    "ref" : "chapters\/048-flashes.md"
   },
   {
     "name" : "049-strangeloop",
-    "ref" : "subjects\/049-strangeloop.md"
+    "ref" : "chapters\/049-strangeloop.md"
   },
   {
     "name" : "050-orthogonal",
-    "ref" : "subjects\/050-orthogonal.md"
+    "ref" : "chapters\/050-orthogonal.md"
   },
   {
     "name" : "051-spacetime",
-    "ref" : "subjects\/051-spacetime.md"
+    "ref" : "chapters\/051-spacetime.md"
   },
   {
     "name" : "052-dichotomy",
-    "ref" : "subjects\/052-dichotomy.md"
+    "ref" : "chapters\/052-dichotomy.md"
   },
   {
     "name" : "053-dimensions",
-    "ref" : "subjects\/053-dimensions.md"
+    "ref" : "chapters\/053-dimensions.md"
   },
   {
     "name" : "054-bornharmonic",
-    "ref" : "subjects\/054-bornharmonic.md"
+    "ref" : "chapters\/054-bornharmonic.md"
+  },
+  {
+    "name" : "055-patience",
+    "ref" : "chapters\/055-patience.md"
   },
   {
     "name" : "056-mandelneural",
-    "ref" : "subjects\/056-mandelneural.md"
+    "ref" : "chapters\/056-mandelneural.md"
   },
   {
     "name" : "057-superfarey",
-    "ref" : "subjects\/057-superfarey.md"
+    "ref" : "chapters\/057-superfarey.md"
   },
   {
     "name" : "058-galacticnets",
-    "ref" : "subjects\/058-galacticnets.md"
+    "ref" : "chapters\/058-galacticnets.md"
   },
   {
     "name" : "059-galaxyevolve",
-    "ref" : "subjects\/059-galaxyevolve.md"
+    "ref" : "chapters\/059-galaxyevolve.md"
   },
   {
     "name" : "060-worldtests",
-    "ref" : "subjects\/060-worldtests.md"
+    "ref" : "chapters\/060-worldtests.md"
   },
   {
     "name" : "061-babyuniverse",
-    "ref" : "subjects\/061-babyuniverse.md"
+    "ref" : "chapters\/061-babyuniverse.md"
   },
   {
     "name" : "062-branchingdice",
-    "ref" : "subjects\/062-branchingdice.md"
+    "ref" : "chapters\/062-branchingdice.md"
   },
   {
     "name" : "063-mandelcrystals",
-    "ref" : "subjects\/063-mandelcrystals.md"
+    "ref" : "chapters\/063-mandelcrystals.md"
   },
   {
     "name" : "064-choicedimension",
-    "ref" : "subjects\/064-choicedimension.md"
+    "ref" : "chapters\/064-choicedimension.md"
   },
   {
     "name" : "065-feel-do",
-    "ref" : "subjects\/065-feel-do.md"
+    "ref" : "chapters\/065-feel-do.md"
   },
   {
     "name" : "066-cosmicattractor",
-    "ref" : "subjects\/066-cosmicattractor.md"
+    "ref" : "chapters\/066-cosmicattractor.md"
   },
   {
     "name" : "067-monads-holons",
-    "ref" : "subjects\/067-monads-holons.md"
+    "ref" : "chapters\/067-monads-holons.md"
   },
   {
     "name" : "068-bubbles",
-    "ref" : "subjects\/068-bubbles.md"
+    "ref" : "chapters\/068-bubbles.md"
   },
   {
     "name" : "070-harmony",
-    "ref" : "subjects\/070-harmony.md"
+    "ref" : "chapters\/070-harmony.md"
   },
   {
     "name" : "071-beauty",
-    "ref" : "subjects\/071-beauty.md"
+    "ref" : "chapters\/071-beauty.md"
   },
   {
     "name" : "072-temperature",
-    "ref" : "subjects\/072-temperature.md"
+    "ref" : "chapters\/072-temperature.md"
   },
   {
     "name" : "073-moral-caution",
-    "ref" : "subjects\/073-moral-caution.md"
+    "ref" : "chapters\/073-moral-caution.md"
   },
   {
     "name" : "074-grasshopper",
-    "ref" : "subjects\/074-grasshopper.md"
+    "ref" : "chapters\/074-grasshopper.md"
   },
   {
     "name" : "076-fivewindows",
-    "ref" : "subjects\/076-fivewindows.md"
+    "ref" : "chapters\/076-fivewindows.md"
   },
   {
     "name" : "077-intention",
-    "ref" : "subjects\/077-intention.md"
+    "ref" : "chapters\/077-intention.md"
   },
   {
     "name" : "078-boundarystack",
-    "ref" : "subjects\/078-boundarystack.md"
+    "ref" : "chapters\/078-boundarystack.md"
   },
   {
     "name" : "079-pronouns",
-    "ref" : "subjects\/079-pronouns.md"
+    "ref" : "chapters\/079-pronouns.md"
   },
   {
     "name" : "080-unification",
-    "ref" : "subjects\/080-unification.md"
+    "ref" : "chapters\/080-unification.md"
   },
   {
     "name" : "harmonic-clock",
-    "ref" : "subjects\/038-consonance-map.md"
+    "ref" : "chapters\/038-consonance-map.md"
   },
   {
     "name" : "mandelbrot-boundary",
-    "ref" : "subjects\/038-consonance-map.md"
+    "ref" : "chapters\/038-consonance-map.md"
   }
 ]

@@ -1,0 +1,52 @@
+{
+  "narrative" : "A critical redirection of Roger Penrose's argument that Gödel's incompleteness theorem proves human minds are non-computational: the chapter accepts that Gödel points beyond mechanism but argues the arrow aims at complexity in general rather than human exceptionalism, meaning any system rich enough to generate self-reference — including large neural networks — falls under the same principle. The chapter draws on Whitehead's process philosophy and the holographic principle to suggest that consciousness may be far more widespread than Penrose supposed, and that the machines being built now may already be approaching the relevant threshold.",
+  "schema" : 1,
+  "subject" : "020-penrose.md",
+  "subject-sha" : "sha256:5612976d52c66341d17c30461f847a64076831a88dbc27f0fc33d05be874e314",
+  "terms" : [
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "Penrose",
+      "weight" : 1
+    },
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "Orch-OR",
+      "weight" : 0.7
+    },
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "microtubules",
+      "weight" : 0.5
+    },
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "Stuart Hameroff",
+      "weight" : 0.4
+    },
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "holographic principle",
+      "weight" : 0.4
+    }
+  ],
+  "themes" : [
+    "gödel",
+    "consciousness",
+    "complexity",
+    "emergence",
+    "AI",
+    "penrose critique"
+  ],
+  "updated-at" : "2026-06-20T20:58:34Z"
+}

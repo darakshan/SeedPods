@@ -1,0 +1,29 @@
+{
+  "narrative" : "Argues that a fifth 'choice' dimension need not be a numerical field with multiplication — it only needs to branch, making a tree algebra fibered over spacetime the natural structure. Branching numbers are fixed by local Farey structure and probabilities supplied by harmonic measure, yielding a coherent mathematical object that may capture what the Many Worlds interpretation actually describes without requiring an impossible five-dimensional number system.",
+  "schema" : 1,
+  "subject" : "064-choicedimension.md",
+  "subject-sha" : "sha256:c15893946c803b145d75b37caa64dc51be75d938dd1f8b1d07325a80f565c27d",
+  "terms" : [
+    {
+      "canonical" : "grafting",
+      "weight" : 0.5
+    },
+    {
+      "canonical" : "Farey structure",
+      "weight" : 0.7
+    },
+    {
+      "canonical" : "Douady",
+      "weight" : 0.4
+    }
+  ],
+  "themes" : [
+    "tree algebra",
+    "branching",
+    "many worlds",
+    "choice dimension",
+    "farey structure",
+    "quantum mechanics"
+  ],
+  "updated-at" : "2026-06-23T19:13:28Z"
+}

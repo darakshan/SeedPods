@@ -1,0 +1,45 @@
+{
+  "narrative" : "A character named Darakshan visualizes the full landscape of musical consonance by scoring every interval ratio by simplicity and arranging them on a circle, only to discover the resulting shape is the Mandelbrot set — same bulb positions as Farey fractions, same size hierarchy as consonance rankings — because both are maps of stability under iteration. The chapter argues this convergence is structural, not coincidental: wherever you draw the boundary between order and complexity, the same shape appears, and it closes with an open question about whether neural network weight-space shares this boundary.",
+  "schema" : 1,
+  "subject" : "038-consonance-map.md",
+  "subject-sha" : "sha256:68bbc3a935636d42fc0c2fd6c9a4cb58ecbfc96f6657e354de0a6e92b33f4916",
+  "terms" : [
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "Darakshan",
+      "weight" : 0.9
+    },
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "harmonic clock",
+      "weight" : 0.6
+    },
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "Farey sequence",
+      "weight" : 0.5
+    },
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "monochord",
+      "weight" : 0.4
+    }
+  ],
+  "themes" : [
+    "consonance",
+    "fractals",
+    "music theory",
+    "mathematics",
+    "iteration",
+    "pattern recognition"
+  ],
+  "updated-at" : "2026-06-20T21:08:54Z"
+}

@@ -3,95 +3,42 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Virtual Dimensions Formula as a Publishable Conjecture · Untitled</title>
+<title>9.8 The Virtual Dimensions Formula as a Publishable Conjecture · SeedPods</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;600&family=DM+Mono:wght@300;400&display=swap">
 <link rel="icon" href="logo.svg">
-<link rel="preload" href="nav.html" as="fetch" crossorigin>
 <link rel="stylesheet" href="site.css">
 <script src="pods.js"></script>
 <script src="nav.js"></script>
-<script>
-/* Live reload: subscribe to this project's build stream and hard-reload
-   when a build touches THIS page (or a shared asset) — so a user merely
-   *viewing* a shared project sees another user's edit without manually
-   refreshing. An unrelated page's change only advances the baseline; it
-   does not reload. A full rebuild, or a build missed while suspended /
-   back-forward-cached (reconnect snapshot), reloads unconditionally
-   since we can't safely diff it. EventSource auto-reconnects and the
-   server re-sends the current generation on every (re)connect. */
-(function(){
-  if(window.__gossLive)return;window.__gossLive=1;
-  var base=null,es=null;
-  var SHARED={"site.css":1,"nav.html":1,"nav.js":1,"pods.js":1,
-              "search-index.json":1,"logo.svg":1};
-  function myPage(){
-    var p;try{p=decodeURIComponent(location.pathname);}catch(_){p=location.pathname;}
-    var i=p.indexOf("/site/");
-    var rest=i>=0?p.slice(i+6):p.replace(/^\/+/,"");
-    if(rest===""||rest.charAt(rest.length-1)==="/")rest+="index.html";
-    return rest;
-  }
-  function relevant(list){
-    if(!list||!list.length)return false;
-    var me=myPage();
-    for(var k=0;k<list.length;k++){
-      if(list[k]===me||SHARED[list[k]])return true;
-    }
-    return false;
-  }
-  function handle(ev){
-    var d;try{d=JSON.parse(ev.data);}catch(_){return;}
-    var g=d.gen;if(typeof g!=="number")return;
-    if(base===null){base=g;return;}
-    if(g===base)return;
-    if(d.full===true){location.reload();return;}
-    if(Object.prototype.toString.call(d.changed)==="[object Array]"){
-      if(relevant(d.changed))location.reload();else base=g;
-      return;
-    }
-    location.reload(); /* snapshot after a missed build */
-  }
-  function open(){
-    if(es&&es.readyState!==2)return;
-    try{es=new EventSource("/site/__live");}catch(_){return;}
-    es.onmessage=handle;
-  }
-  open();
-  window.addEventListener("pageshow",function(e){if(e.persisted)open();});
-  document.addEventListener("visibilitychange",function(){
-    if(document.visibilityState==="visible")open();
-  });
-})();
-</script>
+<script src="live.js"></script>
 </head>
 <body>
-<div id="nav-mount" style="min-height:3rem"></div>
+<nav class="site-nav" data-pod-filename="053-dimensions"><span class="nav-title">SeedPods</span><div class="nav-right"><a class="nav-home" href="toc.html" aria-label="Contents" title="Contents"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></a><button type="button" class="nav-search-btn" onclick="seedNavOpenSearch()" aria-label="Search" title="Search"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></button><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true" title="Previous"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true" title="Next"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></span></div></nav>
 <div class="wrap">
-  <div class="subject-header fade cat-colored cat-mathematics"><h1>The Virtual Dimensions Formula as a Publishable Conjecture</h1><p class="premise">Replace the arbitrary tolerance in high-dimensional near-orthogonality with a principled one drawn from the <em><a class="gloss-ref nav-push" href="glossary.html#farey-sequence">Farey sequence</a></em>, and a formula emerges, V(d,n) ~ (n²/π²)^d, that connects musical consonance, neural network superposition capacity, and quantum branching under one expression.</p><div class="subject-nav-row" data-pod-filename="053-dimensions"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Subject 53</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
-  <section id="proto" class="subject-section"><h2 class="section-heading">Proto</h2><div class="prose"><p>If you have a space with d actual dimensions, how many nearly-orthogonal directions can you fit in it?
+  <div class="subject-header fade cat-colored" style="--cat-bg:#A6F5C3"><h1>9.8 The Virtual Dimensions Formula as a Publishable Conjecture</h1><p class="premise">Replace the arbitrary tolerance in high-dimensional near-orthogonality with a principled one drawn from the <em><a class="gloss-ref nav-push" href="glossary.html#farey-sequence">Farey sequence</a></em>, and a formula emerges, V(d,n) ~ (n²/π²)^d, that connects musical consonance, neural network superposition capacity, and quantum branching under one expression.</p></div>
+  <section id="proto" class="subject-section"><h2 class="section-heading">Proto</h2><div class="prose"><p data-src-file="subjects/053-dimensions.md" data-src-l0="11" data-src-l1="12">If you have a space with d actual dimensions, how many nearly-orthogonal directions can you fit in it?
 The answer matters because nearly-orthogonal directions can carry independent information without crosstalk, like independent channels.</p>
-<figure class="directive-image directive-image--left"><img src="images/053-dimensions.jpg" alt=""><figcaption>High-dimensional geometry: virtual dimensions <cite>Wikimedia Commons</cite></figcaption></figure>
-<p>Standard mathematics (<em><a class="gloss-ref nav-push" id="term-053-dimensions-1" href="glossary.html#johnson-lindenstrauss">Johnson-Lindenstrauss</a></em><a class="bib-ref" id="ref-053-dimensions-1" href="bibliography.html#ref-053-dimensions-1">[johnson]</a>) already shows the answer is exponential in d. But the threshold for “nearly orthogonal” is arbitrary, you pick a tolerance ε and proceed.</p>
-<p>The conjecture: replace the arbitrary tolerance with a principled one drawn from the Farey sequence.
+<figure id="image-053-dimensions-1" class="directive-image directive-image--left"><img src="images/053-dimensions-l.jpg" alt=""><figcaption>High-dimensional geometry: virtual dimensions <cite>Wikimedia Commons</cite></figcaption></figure>
+<p data-src-file="subjects/053-dimensions.md" data-src-l0="15" data-src-l1="15">Standard mathematics (<em><a class="gloss-ref nav-push" id="term-053-dimensions-1" href="glossary.html#johnson-lindenstrauss">Johnson-Lindenstrauss</a></em><a class="bib-ref" id="ref-053-dimensions-1" href="bibliography.html#ref-053-dimensions-1">[johnson]</a>) already shows the answer is exponential in d. But the threshold for “nearly orthogonal” is arbitrary, you pick a tolerance ε and proceed.</p>
+<p data-src-file="subjects/053-dimensions.md" data-src-l0="17" data-src-l1="21">The conjecture: replace the arbitrary tolerance with a principled one drawn from the Farey sequence.
 The Farey sequence orders all rational numbers between 0 and 1 by complexity, simplest fractions first.
 It provides a natural hierarchy of distinguishability, exactly as the ear uses it to decide which musical intervals are consonant.
 The octave (1/2) and fifth (1/3) are shallow in the tree.
 Dissonant intervals are deep.</p>
-<p>The resulting formula:</p>
-<p><strong>V(d, n) ~ (n²/π²)^d</strong></p>
-<p>Where d is actual dimensions, n is <em><a class="gloss-ref nav-push" id="term-053-dimensions-2" href="glossary.html#farey-depth">Farey depth</a></em> (your consonance threshold), and n²/π² is the count of Farey fractions at depth n, with π entering naturally from the circular structure of the rationals, not by assumption.</p>
-<p>Applications: <em><a class="gloss-ref nav-push" id="term-053-dimensions-3" href="glossary.html#neural-networks">neural network</a></em> superposition capacity, <em><a class="gloss-ref nav-push" id="term-053-dimensions-4" href="glossary.html#many-worlds">Many Worlds</a></em> branch distinguishability, and potentially the information capacity of physical space itself.
+<p data-src-file="subjects/053-dimensions.md" data-src-l0="23" data-src-l1="23">The resulting formula:</p>
+<p data-src-file="subjects/053-dimensions.md" data-src-l0="25" data-src-l1="25"><strong>V(d, n) ~ (n²/π²)^d</strong></p>
+<p data-src-file="subjects/053-dimensions.md" data-src-l0="27" data-src-l1="27">Where d is actual dimensions, n is <em><a class="gloss-ref nav-push" id="term-053-dimensions-2" href="glossary.html#farey-depth">Farey depth</a></em> (your consonance threshold), and n²/π² is the count of Farey fractions at depth n, with π entering naturally from the circular structure of the rationals, not by assumption.</p>
+<p data-src-file="subjects/053-dimensions.md" data-src-l0="29" data-src-l1="31">Applications: <em><a class="gloss-ref nav-push" id="term-053-dimensions-3" href="glossary.html#neural-networks">neural network</a></em> superposition capacity, <em><a class="gloss-ref nav-push" id="term-053-dimensions-4" href="glossary.html#many-worlds">Many Worlds</a></em> branch distinguishability, and potentially the information capacity of physical space itself.
 The formula connects musical consonance, high-dimensional geometry, and quantum branching under one expression.
 That connection has not been made explicitly in the literature.</p>
 </div></section>
-<section id="provenance" class="subject-section"><div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="057-superfarey.html" class="related-card related-card-prelim cat-colored cat-ai-minds nav-push"><div class="related-title">57. Superposition in Neural Network Representations</div></a>
-<a href="060-worldtests.html" class="related-card related-card-prelim cat-colored cat-physics nav-push"><div class="related-title">60. Many Worlds as Parallel Evolutionary Experiments</div></a>
-<a href="038-consonance-map.html" class="related-card related-card-prelim cat-colored cat-feeling nav-push"><div class="related-title">38. The Surprising Consonance Map</div></a>
-<a href="054-bornharmonic.html" class="related-card related-card-prelim cat-colored cat-physics nav-push"><div class="related-title">54. The Born Rule as Harmonic Measure</div></a>
-<a href="056-mandelneural.html" class="related-card related-card-prelim cat-colored cat-ai-minds nav-push"><div class="related-title">56. Neural Networks as High-Dimensional Mandelbrot Sets</div></a></div>
-<div class="inbound-refs"><span class="inbound-label">4 inbound references</span><span class="inbound-links"><a href="038-consonance-map.html" class="inbound-link nav-push cat-colored cat-feeling" title="The Surprising Consonance Map">38</a><a href="054-bornharmonic.html" class="inbound-link nav-push cat-colored cat-physics" title="The Born Rule as Harmonic Measure">54</a><a href="056-mandelneural.html" class="inbound-link nav-push cat-colored cat-ai-minds" title="Neural Networks as High-Dimensional Mandelbrot Sets">56</a><a href="057-superfarey.html" class="inbound-link nav-push cat-colored cat-ai-minds" title="Superposition in Neural Network Representations">57</a></span></div></div></section>
+<div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="057-superfarey.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#A6F5C0"><div class="related-title">9.7. Superposition in Neural Network Representations</div></a>
+<a href="060-worldtests.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#A6F5BA"><div class="related-title">9.5. Many Worlds as Parallel Evolutionary Experiments</div></a>
+<a href="038-consonance-map.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#F5DEA6"><div class="related-title">3.3. The Surprising Consonance Map</div></a>
+<a href="054-bornharmonic.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#A6F5B1"><div class="related-title">9.2. The Born Rule as Harmonic Measure</div></a>
+<a href="056-mandelneural.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#A6F5BD"><div class="related-title">9.6. Neural Networks as High-Dimensional Mandelbrot Sets</div></a></div>
+<div class="inbound-refs"><span class="inbound-label">4 inbound references</span><span class="inbound-links"><a href="038-consonance-map.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#F5DEA6" title="The Surprising Consonance Map">3.3</a><a href="054-bornharmonic.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#A6F5B1" title="The Born Rule as Harmonic Measure">9.2</a><a href="056-mandelneural.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#A6F5BD" title="Neural Networks as High-Dimensional Mandelbrot Sets">9.6</a><a href="057-superfarey.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#A6F5C0" title="Superposition in Neural Network Representations">9.7</a></span></div></div>
 </div>
 <div class="page-end" id="page-end-version">
   <button class="page-end-logo" aria-label="Show page info"
@@ -100,6 +47,6 @@ That connection has not been made explicitly in the literature.</p>
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">mathematics · proto · Edited 2026-04-27 01:07</span>
+  <span class="page-end-version" aria-hidden="true">proto · Edited 2026-06-19 18:06</span>
 </div>
 </body></html>

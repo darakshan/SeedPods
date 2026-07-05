@@ -1,50 +1,30 @@
 {
-  "article" : "002-events.md",
-  "article-sha" : "sha256:c0d4240184eaf671f84a220b9e87c7573563d405dd1f87e592cc2678bbccad1c",
-  "narrative" : "The chair dissolves into molecules, atoms, fields, interactions, and at no point do you arrive at the thing itself. Four traditions pressed on the idea of a self-subsistent object from different directions and found the same dissolution: Whitehead from process metaphysics, Kant from epistemology, Rovelli from relational quantum mechanics, Wittgenstein from the logic of language. The event is primary; the object is derivative.",
+  "narrative" : "The chapter argues that reality is constituted by events and relationships rather than self-subsistent things, tracing the dissolution of the enduring object through four independent traditions: Whitehead's process metaphysics, Kant's epistemology of the thing-in-itself, Rovelli's relational quantum mechanics, and Wittgenstein's analysis of ordinary language. The chair serves as the running example — pressing on it physically, philosophically, and linguistically yields not a bedrock substance but a stable pattern of interactions, establishing the ontological foundation that subsequent chapters build on.",
   "schema" : 1,
+  "subject" : "002-events.md",
+  "subject-sha" : "sha256:5c1a261baad898f8ce6a08ba23e6508afe9d5f6a74c62f922100f5bf112b3206",
   "terms" : [
     {
-      "aliases" : [
-        "white head"
-      ],
       "canonical" : "Whitehead",
       "weight" : 1
     },
     {
-      "aliases" : [
-        "rovelli"
-      ],
       "canonical" : "Rovelli",
-      "weight" : 0.90000000000000002
+      "weight" : 0.9
     },
     {
-      "aliases" : [
-        "wittgenstein",
-        "vittgenstein"
-      ],
       "canonical" : "Wittgenstein",
-      "weight" : 0.80000000000000004
+      "weight" : 0.8
     },
     {
-      "aliases" : [
-        "cont"
-      ],
       "canonical" : "Kant",
-      "weight" : 0.80000000000000004
+      "weight" : 0.8
     },
     {
-      "aliases" : [
-        "prehention"
-      ],
       "canonical" : "prehension",
-      "weight" : 0.69999999999999996
+      "weight" : 0.7
     },
     {
-      "aliases" : [
-        "ding on zeesh",
-        "ding an sikh"
-      ],
       "canonical" : "Ding an sich",
       "weight" : 0.5
     }
@@ -53,8 +33,9 @@
     "events",
     "process philosophy",
     "relational quantum mechanics",
+    "ontology",
     "substance",
-    "ontology"
+    "convergence"
   ],
-  "updated-at" : "2026-04-28T02:38:17Z"
+  "updated-at" : "2026-06-23T19:06:30Z"
 }

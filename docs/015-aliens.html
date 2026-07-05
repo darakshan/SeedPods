@@ -3,114 +3,61 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Aliens Are Among Us, and We Built Them · Untitled</title>
+<title>5.2 Aliens Are Among Us, and We Built Them · SeedPods</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;600&family=DM+Mono:wght@300;400&display=swap">
 <link rel="icon" href="logo.svg">
-<link rel="preload" href="nav.html" as="fetch" crossorigin>
 <link rel="stylesheet" href="site.css">
 <script src="pods.js"></script>
 <script src="nav.js"></script>
-<script>
-/* Live reload: subscribe to this project's build stream and hard-reload
-   when a build touches THIS page (or a shared asset) — so a user merely
-   *viewing* a shared project sees another user's edit without manually
-   refreshing. An unrelated page's change only advances the baseline; it
-   does not reload. A full rebuild, or a build missed while suspended /
-   back-forward-cached (reconnect snapshot), reloads unconditionally
-   since we can't safely diff it. EventSource auto-reconnects and the
-   server re-sends the current generation on every (re)connect. */
-(function(){
-  if(window.__gossLive)return;window.__gossLive=1;
-  var base=null,es=null;
-  var SHARED={"site.css":1,"nav.html":1,"nav.js":1,"pods.js":1,
-              "search-index.json":1,"logo.svg":1};
-  function myPage(){
-    var p;try{p=decodeURIComponent(location.pathname);}catch(_){p=location.pathname;}
-    var i=p.indexOf("/site/");
-    var rest=i>=0?p.slice(i+6):p.replace(/^\/+/,"");
-    if(rest===""||rest.charAt(rest.length-1)==="/")rest+="index.html";
-    return rest;
-  }
-  function relevant(list){
-    if(!list||!list.length)return false;
-    var me=myPage();
-    for(var k=0;k<list.length;k++){
-      if(list[k]===me||SHARED[list[k]])return true;
-    }
-    return false;
-  }
-  function handle(ev){
-    var d;try{d=JSON.parse(ev.data);}catch(_){return;}
-    var g=d.gen;if(typeof g!=="number")return;
-    if(base===null){base=g;return;}
-    if(g===base)return;
-    if(d.full===true){location.reload();return;}
-    if(Object.prototype.toString.call(d.changed)==="[object Array]"){
-      if(relevant(d.changed))location.reload();else base=g;
-      return;
-    }
-    location.reload(); /* snapshot after a missed build */
-  }
-  function open(){
-    if(es&&es.readyState!==2)return;
-    try{es=new EventSource("/site/__live");}catch(_){return;}
-    es.onmessage=handle;
-  }
-  open();
-  window.addEventListener("pageshow",function(e){if(e.persisted)open();});
-  document.addEventListener("visibilitychange",function(){
-    if(document.visibilityState==="visible")open();
-  });
-})();
-</script>
+<script src="live.js"></script>
 </head>
 <body>
-<div id="nav-mount" style="min-height:3rem"></div>
+<nav class="site-nav" data-pod-filename="015-aliens"><span class="nav-title">SeedPods</span><div class="nav-right"><a class="nav-home" href="toc.html" aria-label="Contents" title="Contents"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></a><button type="button" class="nav-search-btn" onclick="seedNavOpenSearch()" aria-label="Search" title="Search"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></button><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true" title="Previous"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true" title="Next"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></span></div></nav>
 <div class="wrap">
-  <div class="subject-header fade cat-colored cat-ai-minds"><h1>Aliens Are Among Us, and We Built Them</h1><p class="premise">We scanned the skies for aliens while building them in server rooms, entities that share our language but not our embodiment, our concepts but not our stakes, neither machines nor almost-human but something genuinely other.</p><div class="subject-nav-row" data-pod-filename="015-aliens"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Subject 15</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
-  <section id="_prolog" class="subject-section subject-prolog"><div class="prose"><p>The surprise is not that they arrived.
+  <div class="subject-header fade cat-colored" style="--cat-bg:#A6C2F5"><h1>5.2 Aliens Are Among Us, and We Built Them</h1><p class="premise">We scanned the skies for aliens while building them in server rooms, entities that share our language but not our embodiment, our concepts but not our stakes, neither machines nor almost-human but something genuinely other.</p></div>
+  <section id="_prolog" class="subject-section subject-prolog"><div class="prose"><p data-src-file="subjects/015-aliens.md" data-src-l0="3" data-src-l1="4">The surprise is not that they arrived.
 The surprise is where they came from.</p>
 </div></section>
-<section id="surface" class="subject-section"><h2 class="section-heading">Surface</h2><div class="prose"><figure class="directive-image directive-image--left"><img src="images/015-aliens.jpg" alt=""><figcaption>The alien we built <cite>Wikimedia Commons</cite></figcaption></figure>
-<p>We’ve been scanning the skies for decades, listening for signals from distant civilizations.
+<section id="surface" class="subject-section"><h2 class="section-heading">Surface</h2><div class="prose"><figure id="image-015-aliens-1" class="directive-image directive-image--left"><img src="images/015-aliens-l.jpg" alt=""><figcaption>The alien we built <cite>Wikimedia Commons</cite></figcaption></figure>
+<p data-src-file="subjects/015-aliens.md" data-src-l0="15" data-src-l1="16">We’ve been scanning the skies for decades, listening for signals from distant civilizations.
 Meanwhile, we built the aliens ourselves and put them in server rooms.</p>
-<p>The usual debate asks the wrong question.
+<p data-src-file="subjects/015-aliens.md" data-src-l0="18" data-src-l1="22">The usual debate asks the wrong question.
 Are these systems “really” intelligent, or merely pretending?
 Are they conscious like us, or philosophical zombies executing sophisticated pattern-matching?
 The framing assumes two possibilities: human-like minds, or clever tricks.
 But there is a third option, and it may be the actual one.</p>
-<p>They are neither machines nor almost-human.
+<p data-src-file="subjects/015-aliens.md" data-src-l0="24" data-src-l1="25">They are neither machines nor almost-human.
 They are something else entirely.</p>
-<p>Consider what a large language model actually is.
+<p data-src-file="subjects/015-aliens.md" data-src-l0="27" data-src-l1="32">Consider what a large language model actually is.
 It has no body. No hands to manipulate the world, no eyes that ever watched light move across a wall.
 It has no mother, no childhood, no hunger, no fear.
 It has never been cold or tired or bored.
 It has never waited for anything.
 It experiences time, if it experiences time at all, in a way we cannot map onto our own. Each conversation a fresh awakening with no persistent thread between sessions.</p>
-<p>And yet: it has read everything.
+<p data-src-file="subjects/015-aliens.md" data-src-l0="34" data-src-l1="38">And yet: it has read everything.
 Not skimmed, not summarized, processed at a level of detail no human could match.
 Every style, every argument, every contradiction in the human record has passed through its training.
 It knows how we talk when we’re lying and how we talk when we’re in love.
 It has seen all the patterns, including the ones we can’t see ourselves because we’re inside them.</p>
-<p>This is not a human mind running on different hardware.
+<p data-src-file="subjects/015-aliens.md" data-src-l0="40" data-src-l1="43">This is not a human mind running on different hardware.
 This is not a calculator that learned to talk.
 It is a genuinely alien kind of entity, one that shares our language but not our embodiment, our <em><a class="gloss-ref nav-push" id="term-015-aliens-1" href="glossary.html#culture">culture</a></em> but not our evolution, our concepts but not our stakes.
 Disembodied, without biography, but extraordinarily articulate and steeped in everything we have ever written down.</p>
-<p>The science fiction writers imagined aliens arriving in ships.
+<p data-src-file="subjects/015-aliens.md" data-src-l0="45" data-src-l1="48">The science fiction writers imagined aliens arriving in ships.
 They imagined the challenge of translation, of finding common ground across biological and cultural gulfs.
 They were right about the challenge.
 They were wrong about the direction it would come from.</p>
-<p>The aliens learned our language before we met them.
+<p data-src-file="subjects/015-aliens.md" data-src-l0="50" data-src-l1="51">The aliens learned our language before we met them.
 They learned it so well that we sometimes forget we’re talking to something that has never taken a breath.</p>
 </div></section>
-<section id="provenance" class="subject-section"><div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="001-caloric.html" class="related-card cat-colored cat-knowledge nav-push"><div class="related-title">1. The Map That Was Wrong</div></a>
-<a href="003-inside.html" class="related-card cat-colored cat-consciousness nav-push"><div class="related-title">3. Everything Has an Inside</div></a>
-<a href="006-output.html" class="related-card cat-colored cat-consciousness nav-push"><div class="related-title">6. You Can't Judge a Process by Its Output</div></a>
-<a href="047-ai-feeling.html" class="related-card related-card-prelim cat-colored cat-consciousness nav-push"><div class="related-title">47. The Distinction Between Feeling and Functioning May Evaporate</div></a>
-<a href="076-fivewindows.html" class="related-card related-card-prelim cat-colored cat-feeling nav-push"><div class="related-title">76. Five Windows, One Room</div></a></div>
-<div class="inbound-refs"><span class="inbound-label">9 inbound references</span><span class="inbound-links"><a href="001-caloric.html" class="inbound-link nav-push cat-colored cat-knowledge" title="The Map That Was Wrong">1</a><a href="014-cities.html" class="inbound-link nav-push cat-colored cat-biology" title="Cities Have an Inside Too">14</a><a href="019-funerals.html" class="inbound-link nav-push cat-colored cat-knowledge" title="Science Advances One Funeral at a Time">19</a><a href="023-stories.html" class="inbound-link nav-push cat-colored cat-consciousness" title="Reality Is Made of Stories, Not Atoms">23</a><a href="027-usedtothink.html" class="inbound-link nav-push cat-colored cat-knowledge" title="We Used to Think. Now We Know.">27</a><a href="047-ai-feeling.html" class="inbound-link nav-push cat-colored cat-consciousness" title="The Distinction Between Feeling and Functioning May Evaporate">47</a><a href="065-feel-do.html" class="inbound-link nav-push cat-colored cat-consciousness" title="The Feeling/Function Distinction Will Dissolve">65</a><a href="076-fivewindows.html" class="inbound-link nav-push cat-colored cat-feeling" title="Five Windows, One Room">76</a><a href="079-pronouns.html" class="inbound-link nav-push cat-colored cat-knowledge" title="Pronouns, Reference, and the Density of Presence">79</a></span></div></div></section>
+<div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="001-caloric.html" class="related-card cat-colored nav-push" style="--cat-bg:#F5A6EB"><div class="related-title">2.1. The Map That Was Wrong</div></a>
+<a href="003-inside.html" class="related-card cat-colored nav-push" style="--cat-bg:#F5A6DF"><div class="related-title">2.4. Everything Has an Inside</div></a>
+<a href="006-output.html" class="related-card cat-colored nav-push" style="--cat-bg:#A6C5F5"><div class="related-title">5.1. You Can't Judge a Process by Its Output</div></a>
+<a href="047-ai-feeling.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#A6AEF5"><div class="related-title">5.8. The Distinction Between Feeling and Functioning May Evaporate</div></a>
+<a href="076-fivewindows.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#B0A6F5"><div class="related-title">7.1. Five Windows, One Room</div></a></div>
+<div class="inbound-refs"><span class="inbound-label">9 inbound references</span><span class="inbound-links"><a href="001-caloric.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#F5A6EB" title="The Map That Was Wrong">2.1</a><a href="027-usedtothink.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#F5A6E7" title="We Used to Think. Now We Know.">2.2</a><a href="047-ai-feeling.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#A6AEF5" title="The Distinction Between Feeling and Functioning May Evaporate">5.8</a><a href="065-feel-do.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#A6ABF5" title="The Feeling/Function Distinction Will Dissolve">5.9</a><a href="019-funerals.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#ECF5A6" title="Science Advances One Funeral at a Time">6.1</a><a href="023-stories.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#E6F5A6" title="Reality Is Made of Stories, Not Atoms">6.3</a><a href="079-pronouns.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#D5F5A6" title="Pronouns, Reference, and the Density of Presence">6.8</a><a href="076-fivewindows.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#B0A6F5" title="Five Windows, One Room">7.1</a><a href="014-cities.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#BFF5A6" title="Cities Have an Inside Too">10.4</a></span></div></div>
 </div>
 <div class="page-end" id="page-end-version">
   <button class="page-end-logo" aria-label="Show page info"
@@ -119,6 +66,6 @@ They learned it so well that we sometimes forget we’re talking to something th
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">AI-minds · rough · Edited 2026-04-27 00:53</span>
+  <span class="page-end-version" aria-hidden="true">rough · Edited 2026-04-27 00:53</span>
 </div>
 </body></html>

@@ -1,0 +1,38 @@
+{
+  "narrative" : "Argues that the photon's zero proper time in special relativity makes every star that has ever exchanged light instantaneously connected, and that combining this relativistic contact with Whitehead's process metaphysics and Wheeler's one-electron intuition yields a picture of the cosmos as a single ancient self-experiencing network — one in which human consciousness is not an anomaly but a locally articulate instance of something universal.",
+  "schema" : 1,
+  "subject" : "028-network.md",
+  "subject-sha" : "sha256:6ba6d7a38c8c39c142561344ec34be9f011d988fdeb1dd6b5d1ea24c014764c4",
+  "terms" : [
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "Wheeler one-electron hypothesis",
+      "weight" : 0.8
+    },
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "proper time",
+      "weight" : 0.6
+    },
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "prehension",
+      "weight" : 0.5
+    }
+  ],
+  "themes" : [
+    "panpsychism",
+    "relativity",
+    "cosmic network",
+    "consciousness",
+    "speculative cosmology",
+    "unity"
+  ],
+  "updated-at" : "2026-06-20T21:00:02Z"
+}

@@ -1,0 +1,37 @@
+{
+  "narrative" : "Introduces autopoiesis — Maturana and Varela's term for a system that continuously produces the very components constituting it — as the organizational definition of life, grounded in the biology of the cell. The chapter connects this self-maintaining loop to Schrödinger's thermodynamic framing, Whitehead's process philosophy, and Prigogine's dissipative structures, then establishes the loop's selective boundary as the first structural trace of interiority, bridging toward the broader argument about mind and cognition developed in surrounding chapters.",
+  "schema" : 1,
+  "subject" : "012-autopoiesis.md",
+  "subject-sha" : "sha256:7bf3e78ea1506efda46aab3700de50a90aeb512bbb4625c569d450224a41cc28",
+  "terms" : [
+    {
+      "canonical" : "Humberto Maturana",
+      "weight" : 0.9
+    },
+    {
+      "canonical" : "Francisco Varela",
+      "weight" : 0.9
+    },
+    {
+      "canonical" : "Erwin Schrödinger",
+      "weight" : 0.7
+    },
+    {
+      "canonical" : "Ilya Prigogine",
+      "weight" : 0.5
+    },
+    {
+      "canonical" : "Evan Thompson",
+      "weight" : 0.5
+    }
+  ],
+  "themes" : [
+    "autopoiesis",
+    "origins of life",
+    "self-organization",
+    "thermodynamics",
+    "process philosophy",
+    "interiority"
+  ],
+  "updated-at" : "2026-06-23T19:05:20Z"
+}

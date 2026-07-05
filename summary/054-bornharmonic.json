@@ -1,0 +1,25 @@
+{
+  "narrative" : "Proposes that the Born rule's squared-amplitude probabilities may not be a fundamental postulate but instead a geometric consequence of wavefunction branching structure analogous to harmonic measure on the Mandelbrot set's boundary — a measure that naturally weights simpler, more consonant branches more heavily without being imposed by hand. The chapter connects two separately unexplained mysteries, the origin of the Born rule in Many Worlds quantum mechanics and the natural probability measure on fractal branching trees, and asks whether they are the same phenomenon.",
+  "schema" : 1,
+  "subject" : "054-bornharmonic.md",
+  "subject-sha" : "sha256:7c3217de689a9a07a10b827bc26145556da075ee0f337d3d86ae8abb36f09caf",
+  "terms" : [
+    {
+      "canonical" : "Farey fractions",
+      "weight" : 0.4
+    },
+    {
+      "canonical" : "Everett",
+      "weight" : 0.5
+    }
+  ],
+  "themes" : [
+    "born rule",
+    "harmonic measure",
+    "many worlds",
+    "mandelbrot",
+    "quantum foundations",
+    "speculation"
+  ],
+  "updated-at" : "2026-06-23T19:21:33Z"
+}

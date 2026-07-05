@@ -1,0 +1,21 @@
+{
+  "narrative" : "Establishes the quantum vacuum as the foundational medium of possibility and event, drawing on virtual particles as a physical analogue of Whitehead's eternal objects, then extends the argument through Prigogine's dissipative structures to show how ordered patterns emerge and persist far from equilibrium. The chapter bridges physics, process philosophy, and thermodynamics to argue that fields and flows — not empty stages — are the substrate of all events.",
+  "schema" : 1,
+  "subject" : "007-vacuum.md",
+  "subject-sha" : "sha256:e1594e6ad593232b90031bd894af20c7cde58b5ddb2592df5c5ad30ffe156bb6",
+  "terms" : [
+    {
+      "canonical" : "Prigogine",
+      "weight" : 0.8
+    }
+  ],
+  "themes" : [
+    "quantum vacuum",
+    "process philosophy",
+    "dissipative structures",
+    "fields",
+    "emergence",
+    "thermodynamics"
+  ],
+  "updated-at" : "2026-06-25T10:34:51Z"
+}

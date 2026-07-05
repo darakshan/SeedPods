@@ -1,0 +1,37 @@
+{
+  "narrative" : "Argues that spacetime geometry is not fundamental but emergent from quantum entanglement and information structure, drawing on the holographic principle, Van Raamsdonk's entanglement-tears-spacetime result, and the ER=EPR conjecture. The chapter concludes that asking where consciousness sits in spacetime may be a malformed question, since both consciousness and spacetime could be emergent from something more fundamental that is simultaneously physical and experiential.",
+  "schema" : 1,
+  "subject" : "051-spacetime.md",
+  "subject-sha" : "sha256:3dfeadab5ead253af13631d879614bbd18507303c432e99f5a3ab4f1ecaf9ce3",
+  "terms" : [
+    {
+      "canonical" : "Van Raamsdonk",
+      "weight" : 0.8
+    },
+    {
+      "canonical" : "Maldacena",
+      "weight" : 0.7
+    },
+    {
+      "canonical" : "Susskind",
+      "weight" : 0.7
+    },
+    {
+      "canonical" : "Einstein-Rosen",
+      "weight" : 0.5
+    },
+    {
+      "canonical" : "Einstein-Podolsky-Rosen",
+      "weight" : 0.5
+    }
+  ],
+  "themes" : [
+    "emergence",
+    "spacetime",
+    "holographic principle",
+    "quantum entanglement",
+    "consciousness",
+    "information"
+  ],
+  "updated-at" : "2026-06-23T19:23:51Z"
+}

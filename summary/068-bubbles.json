@@ -1,0 +1,21 @@
+{
+  "narrative" : "Argues that the instinctive human attraction to soap bubbles is structural recognition rather than mere aesthetic pleasure: the bubble's pure surface with no hidden interior makes the holographic principle viscerally visible, and in stopping for it a child perceives, without knowing it, that her own existence has the same form.",
+  "schema" : 1,
+  "subject" : "068-bubbles.md",
+  "subject-sha" : "sha256:e809f408882e2a7453dfb6ffdd35a7075334a405851d6ee7bc85b98c636d73e5",
+  "terms" : [
+    {
+      "canonical" : "Salamfestschrift",
+      "weight" : 0.3
+    }
+  ],
+  "themes" : [
+    "holographic principle",
+    "recognition",
+    "surface and interiority",
+    "perception",
+    "cosmology",
+    "childhood"
+  ],
+  "updated-at" : "2026-06-23T19:08:48Z"
+}

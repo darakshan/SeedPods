@@ -1,0 +1,37 @@
+{
+  "narrative" : "Deep convolutional neural networks trained on natural images spontaneously develop opponent color channels and oriented edge detectors — the same structures evolution produced in biological retinas — because both processes are driven by the same underlying statistical pressures in natural scenes, as predicted by the efficient coding hypothesis. The chapter uses this convergence as evidence that the architecture of biological vision is a near-optimal solution to the mathematics of a sunlit world rather than a historical accident.",
+  "schema" : 1,
+  "subject" : "044-ai-retina.md",
+  "subject-sha" : "sha256:93142339bc3541a4aaf98bcdb6a97a7ea0509e727c8f1a548c0de3a6590edb50",
+  "terms" : [
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "convolutional neural networks",
+      "weight" : 0.8
+    },
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "gradient descent",
+      "weight" : 0.5
+    },
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "opponent color channels",
+      "weight" : 0.6
+    }
+  ],
+  "themes" : [
+    "convergent evolution",
+    "efficient coding",
+    "neural networks",
+    "color vision",
+    "natural image statistics"
+  ],
+  "updated-at" : "2026-06-20T21:03:24Z"
+}

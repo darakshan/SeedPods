@@ -3,155 +3,102 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Field Is the Medium of Feeling · Untitled</title>
+<title>3.1 The Field Is the Medium of Feeling · SeedPods</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;600&family=DM+Mono:wght@300;400&display=swap">
 <link rel="icon" href="logo.svg">
-<link rel="preload" href="nav.html" as="fetch" crossorigin>
 <link rel="stylesheet" href="site.css">
 <script src="pods.js"></script>
 <script src="nav.js"></script>
-<script>
-/* Live reload: subscribe to this project's build stream and hard-reload
-   when a build touches THIS page (or a shared asset) — so a user merely
-   *viewing* a shared project sees another user's edit without manually
-   refreshing. An unrelated page's change only advances the baseline; it
-   does not reload. A full rebuild, or a build missed while suspended /
-   back-forward-cached (reconnect snapshot), reloads unconditionally
-   since we can't safely diff it. EventSource auto-reconnects and the
-   server re-sends the current generation on every (re)connect. */
-(function(){
-  if(window.__gossLive)return;window.__gossLive=1;
-  var base=null,es=null;
-  var SHARED={"site.css":1,"nav.html":1,"nav.js":1,"pods.js":1,
-              "search-index.json":1,"logo.svg":1};
-  function myPage(){
-    var p;try{p=decodeURIComponent(location.pathname);}catch(_){p=location.pathname;}
-    var i=p.indexOf("/site/");
-    var rest=i>=0?p.slice(i+6):p.replace(/^\/+/,"");
-    if(rest===""||rest.charAt(rest.length-1)==="/")rest+="index.html";
-    return rest;
-  }
-  function relevant(list){
-    if(!list||!list.length)return false;
-    var me=myPage();
-    for(var k=0;k<list.length;k++){
-      if(list[k]===me||SHARED[list[k]])return true;
-    }
-    return false;
-  }
-  function handle(ev){
-    var d;try{d=JSON.parse(ev.data);}catch(_){return;}
-    var g=d.gen;if(typeof g!=="number")return;
-    if(base===null){base=g;return;}
-    if(g===base)return;
-    if(d.full===true){location.reload();return;}
-    if(Object.prototype.toString.call(d.changed)==="[object Array]"){
-      if(relevant(d.changed))location.reload();else base=g;
-      return;
-    }
-    location.reload(); /* snapshot after a missed build */
-  }
-  function open(){
-    if(es&&es.readyState!==2)return;
-    try{es=new EventSource("/site/__live");}catch(_){return;}
-    es.onmessage=handle;
-  }
-  open();
-  window.addEventListener("pageshow",function(e){if(e.persisted)open();});
-  document.addEventListener("visibilitychange",function(){
-    if(document.visibilityState==="visible")open();
-  });
-})();
-</script>
+<script src="live.js"></script>
 </head>
 <body>
-<div id="nav-mount" style="min-height:3rem"></div>
+<nav class="site-nav" data-pod-filename="008-fields"><span class="nav-title">SeedPods</span><div class="nav-right"><a class="nav-home" href="toc.html" aria-label="Contents" title="Contents"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></a><button type="button" class="nav-search-btn" onclick="seedNavOpenSearch()" aria-label="Search" title="Search"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></button><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true" title="Previous"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true" title="Next"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></span></div></nav>
 <div class="wrap">
-  <div class="subject-header fade cat-colored cat-feeling"><h1>The Field Is the Medium of Feeling</h1><p class="premise">Your nervous system does not merely use the electromagnetic field, it is a structure within it, the same field that carries light, and process philosophy arrived from pure argument at the same picture mathematical physics found in equations: a continuous medium through which events feel each other.</p><div class="subject-nav-row" data-pod-filename="008-fields"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Subject 8</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
-  <section id="_prolog" class="subject-section subject-prolog"><div class="prose"><p>Physics and Whitehead converged on the same discovery from opposite directions.</p>
+  <div class="subject-header fade cat-colored" style="--cat-bg:#F5D7A6"><h1>3.1 The Field Is the Medium of Feeling</h1><p class="premise">Your nervous system does not merely use the electromagnetic field, it is a structure within it, the same field that carries light, and process philosophy arrived from pure argument at the same picture mathematical physics found in equations: a continuous medium through which events feel each other.</p></div>
+  <section id="_prolog" class="subject-section subject-prolog"><div class="prose"><p data-src-file="subjects/008-fields.md" data-src-l0="3" data-src-l1="3">Physics and Whitehead converged on the same discovery from opposite directions.</p>
 </div></section>
-<section id="surface" class="subject-section"><h2 class="section-heading">Surface</h2><div class="prose"><p>You’ve been using light as a metaphor your whole life.</p>
-<figure class="directive-image directive-image--left"><img src="images/008-fields.jpg" alt=""><figcaption>The electromagnetic field made visible in iron filings <cite>Wikimedia Commons</cite></figcaption></figure>
-<p>Shine some light on it.
+<section id="surface" class="subject-section"><h2 class="section-heading">Surface</h2><div class="prose"><p data-src-file="subjects/008-fields.md" data-src-l0="12" data-src-l1="12">You’ve been using light as a metaphor your whole life.</p>
+<figure id="image-008-fields-1" class="directive-image directive-image--left"><img src="images/008-fields-l.jpg" alt=""><figcaption>The electromagnetic field made visible in iron filings <cite>Wikimedia Commons</cite></figcaption></figure>
+<p data-src-file="subjects/008-fields.md" data-src-l0="15" data-src-l1="18">Shine some light on it.
 I’m in the dark.
 Suddenly it all became clear.
 <em><a class="gloss-ref nav-push" id="term-008-fields-1" href="glossary.html#consciousness">Consciousness</a></em> is the light; ignorance is the darkness; attention is the beam of a flashlight.</p>
-<p>It’s a good metaphor.
+<p data-src-file="subjects/008-fields.md" data-src-l0="20" data-src-l1="21">It’s a good metaphor.
 But here’s something strange: when you look closely at what light actually is, the metaphor starts to feel less like poetry and more like <em><a class="gloss-ref nav-push" id="term-008-fields-2" href="glossary.html#physics">physics</a></em>.</p>
-<p>In the 1860s, James Clerk Maxwell noticed something remarkable.
+<p data-src-file="subjects/008-fields.md" data-src-l0="23" data-src-l1="25">In the 1860s, James Clerk Maxwell noticed something remarkable.
 Electric <em><a class="gloss-ref nav-push" id="term-008-fields-3" href="glossary.html#fields">fields</a></em> and magnetic fields, which everyone had been studying separately, were the same thing, caught at different moments.
-And that unified thing, the <em><a class="gloss-ref nav-push" id="term-008-fields-4" href="glossary.html#electromagnetic-field">electromagnetic field</a></em>, turned out to fill all of space.
-It doesn’t just connect objects that have electric charge; it pervades everything, a continuous medium with no gaps.
+And that unified thing, the <em><a class="gloss-ref nav-push" id="term-008-fields-4" href="glossary.html#electromagnetic-field">electromagnetic field</a></em>, turned out to fill all of space.</p>
+<p data-src-file="subjects/008-fields.md" data-src-l0="28" data-src-l1="30">It doesn’t just connect objects that have electric charge; it pervades everything, a continuous medium with no gaps.
 Light isn’t a separate phenomenon that travels through this field.
 Light is the field in motion, a disturbance propagating outward, the way a ripple is the pond in motion.</p>
-<p>Now here’s the part that should stop you.</p>
-<p>Your nervous system runs on electricity.
+<p data-src-file="subjects/008-fields.md" data-src-l0="32" data-src-l1="32">Now here’s the part that should stop you.</p>
+<p data-src-file="subjects/008-fields.md" data-src-l0="34" data-src-l1="38">Your nervous system runs on electricity.
 Every feeling, every thought, every moment of attention is an electrical event, a pattern of charge moving through your neurons.
 Which means your nervous system doesn’t just use the electromagnetic field.
 Your nervous system is a structure in the electromagnetic field.
 The same field that carries light.</p>
-<p>So when you said consciousness is like light, you may have been more right than you knew.
+<p data-src-file="subjects/008-fields.md" data-src-l0="40" data-src-l1="41">So when you said consciousness is like light, you may have been more right than you knew.
 Not because light is a good image for awareness, but because awareness and light are both things the electromagnetic field does.</p>
-<p>This doesn’t tell us that rocks are conscious or that the field thinks.
+<p data-src-file="subjects/008-fields.md" data-src-l0="43" data-src-l1="46">This doesn’t tell us that rocks are conscious or that the field thinks.
 But it does dissolve a boundary we were quietly assuming: the boundary between the physical medium and the thing that feels.
 We assumed the field was inert, a carrier, a substrate, a stage, and that feeling was something added on top, something extra that biology somehow conjures.
 That assumption is so deep most people never notice they’re making it.</p>
-<p>What if the field was never inert?</p>
-<p>What if “medium of feeling” isn’t a metaphor at all, just an accurate description of what a field is, observed from the inside?</p>
+<p data-src-file="subjects/008-fields.md" data-src-l0="48" data-src-l1="48">What if the field was never inert?</p>
+<p data-src-file="subjects/008-fields.md" data-src-l0="50" data-src-l1="50">What if “medium of feeling” isn’t a metaphor at all, just an accurate description of what a field is, observed from the inside?</p>
 <div class="cta">Next time you're in a room and you turn on a light, remember that the light reaching your eye and the signal traveling down your optic nerve are both disturbances in the same kind of field. The light didn't stop being physics when it became vision. Something continuous happened. What you call &quot;seeing&quot; is the field completing a circuit, from the source, through space, into the structure that notices.</div>
 </div></section>
-<section id="depth" class="subject-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>James Clerk Maxwell’s<sup class="footnote-mark" id="fn-008-fields-1-mark"><a href="footnotes.html#fn-008-fields-1">1</a></sup> unification of electricity and magnetism in 1865 revealed that light, electricity, and magnetism are all aspects of a single field, but the deeper surprise is what connects that field to <em><a class="gloss-ref nav-push" id="term-008-fields-5" href="glossary.html#radiation">radiation</a></em>.
+<section id="depth" class="subject-section"><h2 class="section-heading">Depth</h2><div class="prose"><p data-src-file="subjects/008-fields.md" data-src-l0="55" data-src-l1="60">James Clerk Maxwell’s<a class="bib-ref" id="ref-008-fields-1" href="bibliography.html#ref-008-fields-1">[maxwell]</a> unification of electricity and magnetism in 1865 revealed that light, electricity, and magnetism are all aspects of a single field, but the deeper surprise is what connects that field to <em><a class="gloss-ref nav-push" id="term-008-fields-5" href="glossary.html#radiation">radiation</a></em>.
 A stationary charge is quiet.
 A charge moving at constant velocity adds a magnetic component but still doesn’t radiate.
 Only a charge that accelerates, that changes its velocity, shakes the field, and that shake propagates outward as light.
 A star emits light because its atoms are in violent thermal motion, constantly accelerating and decelerating in collision.
 The light is not separate from the field; it is the field in motion, triggered by the event of acceleration.</p>
-<p>This matters for consciousness because the nervous system is not merely influenced by the electromagnetic field, it is a structure within it.
+<p data-src-file="subjects/008-fields.md" data-src-l0="62" data-src-l1="65">This matters for consciousness because the nervous system is not merely influenced by the electromagnetic field, it is a structure within it.
 Neural signals are electrochemical events: charge moving, accelerating, propagating.
 Every firing neuron is, in the precise physical sense, an antenna, disturbing the field, contributing to a pattern that extends beyond the neuron itself.
 The field doesn’t stop at the skull.</p>
-<p>Alfred North Whitehead<sup class="footnote-mark" id="fn-008-fields-2-mark"><a href="footnotes.html#fn-008-fields-2">2</a></sup> arrived at a structurally identical picture from pure philosophical argument, with no knowledge of neuroscience.
+<p data-src-file="subjects/008-fields.md" data-src-l0="67" data-src-l1="71">Alfred North Whitehead<a class="bib-ref" id="ref-008-fields-2" href="bibliography.html#ref-008-fields-2">[whitehead]</a> arrived at a structurally identical picture from pure philosophical argument, with no knowledge of neuroscience.
 His claim: every actual occasion, every event in nature, reaches out and takes in what surrounds it before it can become itself.
 He called this reaching prehension.
 The field, in Whitehead’s picture, is not a passive container but the medium through which occasions feel each other.
 He arrived at that conclusion without knowing Maxwell’s equations described exactly such a medium.</p>
-<p>The convergence is the point.
+<p data-src-file="subjects/008-fields.md" data-src-l0="73" data-src-l1="74">The convergence is the point.
 Two entirely different lines of inquiry, one tracing the mathematics of electromagnetism, one tracing the logic of what it means for anything to happen at all, arrived at the same structure: a continuous medium, primary over the particles and events that arise within it, through which those events are connected not just causally but, Whitehead would say, experientially.</p>
-<p><a href="008-fields.html">The Field Is the Medium of Feeling</a> doesn’t assert that the field is conscious. That question lives in <a href="003-inside.html">Everything Has an Inside</a>. What it asserts is more modest and stranger: that the boundary we assumed between the physical medium and the experiencing subject was never as clear as we thought. If prehension is real, if reaching and feeling go all the way down, then the field was never merely a medium. It was always the inside of what physics describes from the outside. That is a different investigation than the one we thought we were conducting.</p>
-<p>Richard Feynman’s Lectures on Physics<sup class="footnote-mark" id="fn-008-fields-3-mark"><a href="footnotes.html#fn-008-fields-3">3</a></sup> remain the clearest physical account of what electromagnetism actually says about the world.</p>
+<p data-src-file="subjects/008-fields.md" data-src-l0="76" data-src-l1="76"><a href="008-fields.html">The Field Is the Medium of Feeling</a> doesn’t assert that the field is conscious. That question lives in <a href="003-inside.html">Everything Has an Inside</a>. What it asserts is more modest and stranger: that the boundary we assumed between the physical medium and the experiencing subject was never as clear as we thought. If prehension is real, if reaching and feeling go all the way down, then the field was never merely a medium. It was always the inside of what physics describes from the outside. That is a different investigation than the one we thought we were conducting.</p>
+<p data-src-file="subjects/008-fields.md" data-src-l0="78" data-src-l1="78">Richard Feynman’s Lectures on Physics<a class="bib-ref" id="ref-008-fields-3" href="bibliography.html#ref-008-fields-3">[feynman]</a> remain the clearest physical account of what electromagnetism actually says about the world.</p>
 </div></section>
-<section id="provenance" class="subject-section"><div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="003-inside.html" class="related-card cat-colored cat-consciousness nav-push"><div class="related-title">3. Everything Has an Inside</div></a>
-<a href="007-vacuum.html" class="related-card related-card-prelim cat-colored cat-physics nav-push"><div class="related-title">7. The Vacuum Is Not Empty</div></a>
-<a href="016-neuralnetwork.html" class="related-card related-card-prelim cat-colored cat-ai-minds nav-push"><div class="related-title">16. The Network Is a Field Having Occasions</div></a>
-<a href="017-pastpresent.html" class="related-card related-card-prelim cat-colored cat-ai-minds nav-push"><div class="related-title">17. The Past Is Fully Present</div></a>
-<a href="029-lighttime.html" class="related-card related-card-prelim cat-colored cat-physics nav-push"><div class="related-title">29. From Light's Point of View, There Is No Journey</div></a></div>
-<div class="inbound-refs"><span class="inbound-label">13 inbound references</span><span class="inbound-links"><a href="002-events.html" class="inbound-link nav-push cat-colored cat-physics" title="Reality Is Events, Not Things">2</a><a href="003-inside.html" class="inbound-link nav-push cat-colored cat-consciousness" title="Everything Has an Inside">3</a><a href="004-self.html" class="inbound-link nav-push cat-colored cat-consciousness" title="The Self Is a Pattern, Not a Thing">4</a><a href="007-vacuum.html" class="inbound-link nav-push cat-colored cat-physics" title="The Vacuum Is Not Empty">7</a><a href="016-neuralnetwork.html" class="inbound-link nav-push cat-colored cat-ai-minds" title="The Network Is a Field Having Occasions">16</a><a href="017-pastpresent.html" class="inbound-link nav-push cat-colored cat-ai-minds" title="The Past Is Fully Present">17</a><a href="028-network.html" class="inbound-link nav-push cat-colored cat-consciousness" title="The Network That Experiences Itself">28</a><a href="029-lighttime.html" class="inbound-link nav-push cat-colored cat-physics" title="From Light's Point of View, There Is No Journey">29</a><a href="036-universenoticing.html" class="inbound-link nav-push cat-colored cat-consciousness" title="You Are the Universe Noticing Something">36</a><a href="048-flashes.html" class="inbound-link nav-push cat-colored cat-consciousness" title="Consciousness Comes in Flashes, For All of Us">48</a><a href="050-orthogonal.html" class="inbound-link nav-push cat-colored cat-consciousness" title="Consciousness as a Dimension Orthogonal to Spacetime">50</a><a href="051-spacetime.html" class="inbound-link nav-push cat-colored cat-physics" title="Spacetime as Emergent from Information Structure">51</a><a href="052-dichotomy.html" class="inbound-link nav-push cat-colored cat-mathematics" title="Discrete and Continuous as a False Dichotomy">52</a></span></div></div></section>
 <section id="script" class="subject-section"><h2 class="section-heading">Script</h2><div class="prose"><ol>
-<li><p>A summer night. A child on a porch, pressing her face against a screen door. A rhythmic, unidentifiable sound from inside, dim room beyond. Her body already receiving before she can resolve what it is.</p>
+<li data-src-file="subjects/008-fields.md" data-src-l0="81" data-src-l1="82"><p data-src-file="subjects/008-fields.md" data-src-l0="81" data-src-l1="81">A summer night. A child on a porch, pressing her face against a screen door. A rhythmic, unidentifiable sound from inside, dim room beyond. Her body already receiving before she can resolve what it is.</p>
 </li>
-<li><p>She retrieves her flashlight and shines it through the screen door. The mesh <em><a class="gloss-ref nav-push" id="term-008-fields-6" href="glossary.html#diffraction">diffracts</a></em> the beam, an interference pattern spreads across the far wall.</p>
+<li data-src-file="subjects/008-fields.md" data-src-l0="83" data-src-l1="86"><p data-src-file="subjects/008-fields.md" data-src-l0="83" data-src-l1="83">She retrieves her flashlight and shines it through the screen door. The mesh <em><a class="gloss-ref nav-push" id="term-008-fields-6" href="glossary.html#diffraction">diffracts</a></em> the beam, an interference pattern spreads across the far wall.</p>
 </li>
-<li><p>Inside, in the warm light: her grandmother in a rocking chair. The source of the sound. A presence continuously radiating, whether detected or not.</p>
+<li data-src-file="subjects/008-fields.md" data-src-l0="87" data-src-l1="88"><p data-src-file="subjects/008-fields.md" data-src-l0="87" data-src-l1="87">Inside, in the warm light: her grandmother in a rocking chair. The source of the sound. A presence continuously radiating, whether detected or not.</p>
 </li>
-<li><p>The interference pattern on the wall. Held. VO: [One line, the continuity between the light, the diffraction, and the seeing. The circuit completing. TBD.]</p>
+<li data-src-file="subjects/008-fields.md" data-src-l0="89" data-src-l1="89"><p data-src-file="subjects/008-fields.md" data-src-l0="89" data-src-l1="89">The interference pattern on the wall. Held. VO: [One line, the continuity between the light, the diffraction, and the seeing. The circuit completing. TBD.]</p>
 </li>
 </ol>
 </div></section>
-<section id="images" class="subject-section"><h2 class="section-heading">Images</h2><div class="prose"><p>Primary illustration: A screen door at night, seen from outside.
+<section id="images" class="subject-section"><h2 class="section-heading">Images</h2><div class="prose"><p data-src-file="subjects/008-fields.md" data-src-l0="92" data-src-l1="96">Primary illustration: A screen door at night, seen from outside.
 Through the mesh, warm interior light and the suggestion of a figure in a rocking chair.
 The mesh itself is rendered with enough detail to show its grid structure, the diffraction grating that the drama will activate.
 The outside is dark blue; the inside is amber.
 The threshold is the image.</p>
-<p>Shareable graphic: Black background.
+<p data-src-file="subjects/008-fields.md" data-src-l0="98" data-src-l1="101">Shareable graphic: Black background.
 A grid of light and dark bands, a diffraction pattern.
 Single line of text: “The light didn’t stop being physics when it became seeing.”
 Clean type, no other elements.</p>
-<p>Video thumbnail: A child’s face close to a screen door at night, one eye visible through the mesh, the interior light catching it.
+<p data-src-file="subjects/008-fields.md" data-src-l0="103" data-src-l1="105">Video thumbnail: A child’s face close to a screen door at night, one eye visible through the mesh, the interior light catching it.
 Looking in.
 The eye is the whole story.</p>
 </div></section>
+<div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="003-inside.html" class="related-card cat-colored nav-push" style="--cat-bg:#F5A6DF"><div class="related-title">2.4. Everything Has an Inside</div></a>
+<a href="007-vacuum.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#F5A6BE"><div class="related-title">4.2. The Vacuum Is Not Empty</div></a>
+<a href="016-neuralnetwork.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#A6BFF5"><div class="related-title">5.3. The Network Is a Field Having Occasions</div></a>
+<a href="017-pastpresent.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#A6BBF5"><div class="related-title">5.4. The Past Is Fully Present</div></a>
+<a href="029-lighttime.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#F5A6BA"><div class="related-title">4.3. From Light's Point of View, There Is No Journey</div></a></div>
+<div class="inbound-refs"><span class="inbound-label">13 inbound references</span><span class="inbound-links"><a href="003-inside.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#F5A6DF" title="Everything Has an Inside">2.4</a><a href="002-events.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#F5A6C2" title="Reality Is Events, Not Things">4.1</a><a href="007-vacuum.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#F5A6BE" title="The Vacuum Is Not Empty">4.2</a><a href="029-lighttime.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#F5A6BA" title="From Light's Point of View, There Is No Journey">4.3</a><a href="028-network.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#F5A6B5" title="The Network That Experiences Itself">4.4</a><a href="036-universenoticing.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#F5A6AD" title="You Are the Universe Noticing Something">4.6</a><a href="016-neuralnetwork.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#A6BFF5" title="The Network Is a Field Having Occasions">5.3</a><a href="017-pastpresent.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#A6BBF5" title="The Past Is Fully Present">5.4</a><a href="051-spacetime.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#E0A6F5" title="Spacetime as Emergent from Information Structure">8.4</a><a href="004-self.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#EAA6F5" title="The Self Is a Pattern, Not a Thing">8.7</a><a href="052-dichotomy.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#A6F5AE" title="Discrete and Continuous as a False Dichotomy">9.1</a><a href="050-orthogonal.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#B2F5A6" title="Consciousness as a Dimension Orthogonal to Spacetime">10.9</a><a href="048-flashes.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#AAF5A6" title="Consciousness Comes in Flashes, For All of Us">10.12</a></span></div></div>
 </div>
 <div class="page-end" id="page-end-version">
   <button class="page-end-logo" aria-label="Show page info"
@@ -160,6 +107,6 @@ The eye is the whole story.</p>
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">feeling · draft1 · Edited 2026-04-27 01:12</span>
+  <span class="page-end-version" aria-hidden="true">draft1 · Edited 2026-06-23 19:02</span>
 </div>
 </body></html>

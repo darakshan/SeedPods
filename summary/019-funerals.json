@@ -1,0 +1,19 @@
+{
+  "narrative" : "Draws on Planck's famous observation and Kuhn's account of paradigm shifts to argue that new scientific truths prevail not through persuasion but through generational replacement — the old map's holders retire and die while the next generation grows up inside the new framework as though it were obvious.",
+  "schema" : 1,
+  "subject" : "019-funerals.md",
+  "subject-sha" : "sha256:7b0cec757e0a05b16b4ce8464042abbbc7327fb22b1f02cb7f397cf1b168f9f9",
+  "terms" : [
+    {
+      "canonical" : "Max Planck",
+      "weight" : 0.9
+    }
+  ],
+  "themes" : [
+    "paradigm shift",
+    "generational replacement",
+    "scientific change",
+    "epistemic resistance"
+  ],
+  "updated-at" : "2026-06-23T19:26:09Z"
+}

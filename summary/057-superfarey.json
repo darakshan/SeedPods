@@ -1,0 +1,28 @@
+{
+  "narrative" : "Neural networks store far more concepts than their dimensional count by packing them as nearly-orthogonal directions — a phenomenon called superposition — and this chapter argues that the resulting hierarchy of representation quality mirrors the Farey sequence, Benford's Law, and musical structure. More important concepts receive cleaner, more orthogonal representations while less important ones are compressed into noisier directions, a natural order that emerges from geometry rather than explicit training.",
+  "schema" : 1,
+  "subject" : "057-superfarey.md",
+  "subject-sha" : "sha256:a3f9f397ece0a45a05a192d04455f94603416453354956889525ecb77c1c16a8",
+  "terms" : [
+    {
+      "canonical" : "Farey depth",
+      "weight" : 0.8
+    },
+    {
+      "canonical" : "Benford's Law",
+      "weight" : 0.5
+    },
+    {
+      "canonical" : "residual stream",
+      "weight" : 0.4
+    }
+  ],
+  "themes" : [
+    "superposition",
+    "mechanistic interpretability",
+    "farey sequence",
+    "neural geometry",
+    "representation hierarchy"
+  ],
+  "updated-at" : "2026-06-23T19:19:15Z"
+}

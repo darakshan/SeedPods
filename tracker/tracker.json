@@ -1,0 +1,19 @@
+{
+  "_comment": "Default tracker configuration. Shipped to <deployment>/admin/default-tracker/ by the deploy sidecar (see justfile); copied into <projectCodex>/tracker/ by /app/tracker/provision when a project opts in (or resets). The status set here is a small, sensible default — the SPA also has these as built-ins so an empty configuration still works, but a real file makes the project owner's intent explicit and the agent has something to read.",
+  "statuses": [
+    "📥 Inbox",
+    "🔄 In Progress",
+    "✅ Done",
+    "💭 Someday",
+    "🗑 Deleted"
+  ],
+  "statusGroups": {
+    "📥 Inbox": "limbo",
+    "🔄 In Progress": "active",
+    "✅ Done": "inactive",
+    "💭 Someday": "inactive",
+    "🗑 Deleted": "inactive"
+  },
+  "tags": [],
+  "views": []
+}

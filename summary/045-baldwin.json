@@ -1,0 +1,37 @@
+{
+  "narrative" : "Introduces the Baldwin effect as the mechanism by which learned behaviors become genetically assimilated across generations without Lamarckian inheritance, framing it as selection pressure that progressively narrows developmental starting points toward useful solutions. The chapter connects this to the book's broader argument that evolution, development, learning, and thought are the same fundamental algorithm — variation and selection — operating at different timescales.",
+  "schema" : 1,
+  "subject" : "045-baldwin.md",
+  "subject-sha" : "sha256:4662a203d21520490def2677818f0c978acd87619e816fcd212bff1742b458db",
+  "terms" : [
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "Baldwin effect",
+      "weight" : 1
+    },
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "Waddington",
+      "weight" : 0.4
+    },
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "Lamarckian",
+      "weight" : 0.5
+    }
+  ],
+  "themes" : [
+    "evolution",
+    "learning",
+    "genetic assimilation",
+    "timescales",
+    "mechanism"
+  ],
+  "updated-at" : "2026-06-20T21:03:37Z"
+}

@@ -1,0 +1,38 @@
+{
+  "narrative" : "The color wheel is revealed as a construction of the mind rather than a feature of light: the visual system invents purple and magenta to close the open-ended spectrum into a circle, performing this transformation in retinal tissue that is embryologically brain. The chapter traces color experience through four distinct levels — physics, pigment chemistry, cone sampling, and opponent-channel recombination — showing why painters and physicists disagree about primary colors, why yellow feels primary despite having no dedicated cone, and how both co-evolution and deep neural networks converge on the same two opponent axes in response to the statistical structure of a sun-lit world.",
+  "schema" : 1,
+  "subject" : "041-colorwheel.md",
+  "subject-sha" : "sha256:10a0cd20086cf5369354b863f0e2762a9df7e34c0afb012d23362c3bf9ab26ba",
+  "terms" : [
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "Munsell",
+      "weight" : 0.4
+    },
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "Ewald Hering",
+      "weight" : 0.6
+    },
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "J.D. Mollon",
+      "weight" : 0.5
+    }
+  ],
+  "themes" : [
+    "perception",
+    "color vision",
+    "opponent processing",
+    "evolution",
+    "mind constructs reality",
+    "layers of explanation"
+  ],
+  "updated-at" : "2026-06-20T21:09:11Z"
+}

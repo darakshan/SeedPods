@@ -1,0 +1,24 @@
+{
+  "narrative" : "Traces a structural parallel between Leibniz's monadology — each indivisible unit containing a complete representation of the universe from its own perspective — and Maldacena's AdS\/CFT correspondence, in which every point on a lower-dimensional boundary encodes the entire higher-dimensional interior. The chapter argues that the holographic principle may be the physics of what Leibniz was gesturing at philosophically, with pre-established harmony recast as the consistency of holographic encoding.",
+  "schema" : 1,
+  "subject" : "067-monads-holons.md",
+  "subject-sha" : "sha256:03df1426aa28685ebd87883d947d3ba00a0afbc4a308747c8e0e1fda3d9e86f0",
+  "terms" : [
+    {
+      "canonical" : "Maldacena",
+      "weight" : 0.8
+    },
+    {
+      "canonical" : "Monadology",
+      "weight" : 0.5
+    }
+  ],
+  "themes" : [
+    "holography",
+    "metaphysics",
+    "philosophy of physics",
+    "interiority",
+    "correspondence"
+  ],
+  "updated-at" : "2026-06-23T19:09:57Z"
+}

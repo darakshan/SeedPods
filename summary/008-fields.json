@@ -1,0 +1,29 @@
+{
+  "narrative" : "Traces the convergence of Maxwell's electromagnetism and Whitehead's process philosophy toward a single structural claim: the electromagnetic field is not an inert carrier of signals but a continuous medium through which events feel each other, and the nervous system is a structure within that same field rather than something separate from it. The chapter challenges the assumption that physical medium and experiencing subject are distinct categories, arguing the boundary was never as clear as presumed.",
+  "schema" : 1,
+  "subject" : "008-fields.md",
+  "subject-sha" : "sha256:74a833c4354a805b6992afbb7f89bc6befa16cfd68babe014273381c245034bd",
+  "terms" : [
+    {
+      "canonical" : "Maxwell",
+      "weight" : 0.8
+    },
+    {
+      "canonical" : "Whitehead",
+      "weight" : 0.8
+    },
+    {
+      "canonical" : "Feynman",
+      "weight" : 0.4
+    }
+  ],
+  "themes" : [
+    "electromagnetism",
+    "field theory",
+    "prehension",
+    "consciousness",
+    "process philosophy",
+    "convergence"
+  ],
+  "updated-at" : "2026-06-25T10:33:42Z"
+}

@@ -9,7 +9,6 @@ Start with @link(000, A Map of the Territory), which will orient you and point y
 
 The essays are also organized by category, another way to browse the same landscape:
 
-@categories
 
 ### Work in progress
 

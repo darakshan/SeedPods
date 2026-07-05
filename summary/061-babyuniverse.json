@@ -1,0 +1,20 @@
+{
+  "narrative" : "The cosmic microwave background is framed as the universe's literal baby picture — the oldest observable light whose one-part-in-100,000 quantum fluctuations, amplified by inflation, seeded all subsequent structure including the neural patterns that now observe them. The chapter's central argument is that a person looking at a CMB map is a causal descendant of those fluctuations, making the universe's self-observation not metaphor but a precise description of a physical causal chain spanning fourteen billion years.",
+  "schema" : 1,
+  "subject" : "061-babyuniverse.md",
+  "subject-sha" : "sha256:d439e8070715bf2382a73b96af730d4758a01f479672906d33edb483244b11d8",
+  "terms" : [
+    {
+      "canonical" : "WMAP",
+      "weight" : 0.5
+    }
+  ],
+  "themes" : [
+    "cosmology",
+    "self-reference",
+    "origins",
+    "causality",
+    "consciousness"
+  ],
+  "updated-at" : "2026-06-23T19:16:55Z"
+}

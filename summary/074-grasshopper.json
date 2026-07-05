@@ -1,0 +1,33 @@
+{
+  "narrative" : "A reappraisal of Aesop's fable argues that the grasshopper was not failing to be an ant but operating in a categorically different mode — frame-free, will-suspended play — that directed effort structurally cannot access. The chapter builds from phenomenological observation (Feynman's drumming, Burning Man) through the explore-exploit tradeoff and AI temperature parameters to a deeper structural claim: that any tightly coupled system, mechanical, mathematical, or cognitive, may need a small permission to move off its primary axis in order to avoid destroying itself through rigidity.",
+  "schema" : 1,
+  "subject" : "074-grasshopper.md",
+  "subject-sha" : "sha256:dd32adbcdcb73278f2bb930393fe9e39610ea8ec029bd0f11e13d4b64666a680",
+  "terms" : [
+    {
+      "canonical" : "Aesop",
+      "weight" : 0.5
+    },
+    {
+      "canonical" : "Feynman",
+      "weight" : 0.7
+    },
+    {
+      "canonical" : "Burning Man",
+      "weight" : 0.5
+    },
+    {
+      "canonical" : "Milo Winter",
+      "weight" : 0.3
+    }
+  ],
+  "themes" : [
+    "play",
+    "will-suspension",
+    "creativity",
+    "optimization",
+    "rest vs play",
+    "emergence"
+  ],
+  "updated-at" : "2026-06-21T00:11:06Z"
+}

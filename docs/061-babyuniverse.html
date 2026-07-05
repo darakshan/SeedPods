@@ -3,92 +3,39 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Cosmic Microwave Background as the Universe's Baby Picture · Untitled</title>
+<title>9.10 The Cosmic Microwave Background as the Universe's Baby Picture · SeedPods</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;600&family=DM+Mono:wght@300;400&display=swap">
 <link rel="icon" href="logo.svg">
-<link rel="preload" href="nav.html" as="fetch" crossorigin>
 <link rel="stylesheet" href="site.css">
 <script src="pods.js"></script>
 <script src="nav.js"></script>
-<script>
-/* Live reload: subscribe to this project's build stream and hard-reload
-   when a build touches THIS page (or a shared asset) — so a user merely
-   *viewing* a shared project sees another user's edit without manually
-   refreshing. An unrelated page's change only advances the baseline; it
-   does not reload. A full rebuild, or a build missed while suspended /
-   back-forward-cached (reconnect snapshot), reloads unconditionally
-   since we can't safely diff it. EventSource auto-reconnects and the
-   server re-sends the current generation on every (re)connect. */
-(function(){
-  if(window.__gossLive)return;window.__gossLive=1;
-  var base=null,es=null;
-  var SHARED={"site.css":1,"nav.html":1,"nav.js":1,"pods.js":1,
-              "search-index.json":1,"logo.svg":1};
-  function myPage(){
-    var p;try{p=decodeURIComponent(location.pathname);}catch(_){p=location.pathname;}
-    var i=p.indexOf("/site/");
-    var rest=i>=0?p.slice(i+6):p.replace(/^\/+/,"");
-    if(rest===""||rest.charAt(rest.length-1)==="/")rest+="index.html";
-    return rest;
-  }
-  function relevant(list){
-    if(!list||!list.length)return false;
-    var me=myPage();
-    for(var k=0;k<list.length;k++){
-      if(list[k]===me||SHARED[list[k]])return true;
-    }
-    return false;
-  }
-  function handle(ev){
-    var d;try{d=JSON.parse(ev.data);}catch(_){return;}
-    var g=d.gen;if(typeof g!=="number")return;
-    if(base===null){base=g;return;}
-    if(g===base)return;
-    if(d.full===true){location.reload();return;}
-    if(Object.prototype.toString.call(d.changed)==="[object Array]"){
-      if(relevant(d.changed))location.reload();else base=g;
-      return;
-    }
-    location.reload(); /* snapshot after a missed build */
-  }
-  function open(){
-    if(es&&es.readyState!==2)return;
-    try{es=new EventSource("/site/__live");}catch(_){return;}
-    es.onmessage=handle;
-  }
-  open();
-  window.addEventListener("pageshow",function(e){if(e.persisted)open();});
-  document.addEventListener("visibilitychange",function(){
-    if(document.visibilityState==="visible")open();
-  });
-})();
-</script>
+<script src="live.js"></script>
 </head>
 <body>
-<div id="nav-mount" style="min-height:3rem"></div>
+<nav class="site-nav" data-pod-filename="061-babyuniverse"><span class="nav-title">SeedPods</span><div class="nav-right"><a class="nav-home" href="toc.html" aria-label="Contents" title="Contents"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></a><button type="button" class="nav-search-btn" onclick="seedNavOpenSearch()" aria-label="Search" title="Search"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></button><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true" title="Previous"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true" title="Next"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></span></div></nav>
 <div class="wrap">
-  <div class="subject-header fade cat-colored cat-physics"><h1>The Cosmic Microwave Background as the Universe's Baby Picture</h1><p class="premise">When a person looks at a map of the cosmic microwave background, the fluctuations on the screen are the ancestors of the neural patterns doing the looking, the universe observing its own origin, which is not poetry but a literal description of the causal chain.</p><div class="subject-nav-row" data-pod-filename="061-babyuniverse"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Subject 61</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
-  <section id="proto" class="subject-section"><h2 class="section-heading">Proto</h2><div class="prose"><p>The <em><a class="gloss-ref nav-push" id="term-061-babyuniverse-1" href="glossary.html#cmb">cosmic microwave background</a></em> is the oldest light we can see, radiation from 380,000 years after the Big Bang, when the universe first became transparent.
+  <div class="subject-header fade cat-colored" style="--cat-bg:#A6F5C9"><h1>9.10 The Cosmic Microwave Background as the Universe's Baby Picture</h1><p class="premise">When a person looks at a map of the cosmic microwave background, the fluctuations on the screen are the ancestors of the neural patterns doing the looking, the universe observing its own origin, which is not poetry but a literal description of the causal chain.</p></div>
+  <section id="proto" class="subject-section"><h2 class="section-heading">Proto</h2><div class="prose"><p data-src-file="subjects/061-babyuniverse.md" data-src-l0="11" data-src-l1="12">The <em><a class="gloss-ref nav-push" id="term-061-babyuniverse-1" href="glossary.html#cmb">cosmic microwave background</a></em> is the oldest light we can see, radiation from 380,000 years after the Big Bang, when the universe first became transparent.
 It is nearly uniform, nearly featureless, with tiny fluctuations of one part in 100,000<a class="bib-ref" id="ref-061-babyuniverse-1" href="bibliography.html#ref-061-babyuniverse-1">[planck]</a>.</p>
-<p>Those fluctuations are the seeds of everything.
+<p data-src-file="subjects/061-babyuniverse.md" data-src-l0="14" data-src-l1="15">Those fluctuations are the seeds of everything.
 Every galaxy, every star, every planet, every mind, all traceable to quantum fluctuations in the first fraction of a second, amplified by <em><a class="gloss-ref nav-push" id="term-061-babyuniverse-2" href="glossary.html#inflation">inflation</a></em>, imprinted on the CMB, and then elaborated over fourteen billion years of gravitational dynamics.</p>
-<p>When a person looks at a map of the CMB on a screen, something philosophically precise is happening.
+<p data-src-file="subjects/061-babyuniverse.md" data-src-l0="17" data-src-l1="20">When a person looks at a map of the CMB on a screen, something philosophically precise is happening.
 The universe is looking at its own baby picture.
 The fluctuations on that screen are the ancestors of the neural patterns doing the looking.
 The process that began as noise in the quantum vacuum has organized itself, over fourteen billion years, into a system complex enough to observe and comprehend its own origins.</p>
-<p>This is not poetry.
+<p data-src-file="subjects/061-babyuniverse.md" data-src-l0="22" data-src-l1="23">This is not poetry.
 It is a literal description of the causal chain.</p>
 </div></section>
-<section id="provenance" class="subject-section"><div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="009-randomness.html" class="related-card cat-colored cat-biology nav-push"><div class="related-title">9. Structure Is What Randomness Does</div></a>
-<a href="010-largenumbers.html" class="related-card related-card-prelim cat-colored cat-knowledge nav-push"><div class="related-title">10. Our Intuitions About Large Numbers Are Completely Unreliable</div></a>
-<a href="028-network.html" class="related-card cat-colored cat-consciousness nav-push"><div class="related-title">28. The Network That Experiences Itself</div></a>
-<a href="036-universenoticing.html" class="related-card related-card-prelim cat-colored cat-consciousness nav-push"><div class="related-title">36. You Are the Universe Noticing Something</div></a>
-<a href="058-galacticnets.html" class="related-card related-card-prelim cat-colored cat-ai-minds nav-push"><div class="related-title">58. Galaxies and AI Weight Matrices as Structural Homologs</div></a></div>
-<div class="inbound-refs"><span class="inbound-label">0 inbound references</span><span class="inbound-links"></span></div></div></section>
-<section id="images" class="subject-section"><h2 class="section-heading">Images</h2><div class="prose"><figure class="directive-image directive-image--left"><img src="images/061-babyuniverse.jpg" alt=""><figcaption>WMAP cosmic microwave background: the universe's baby picture <cite>Wikimedia Commons</cite></figcaption></figure>
+<section id="images" class="subject-section"><h2 class="section-heading">Images</h2><div class="prose"><figure id="image-061-babyuniverse-1" class="directive-image directive-image--left"><img src="images/061-babyuniverse-l.jpg" alt=""><figcaption>WMAP cosmic microwave background: the universe's baby picture <cite>Wikimedia Commons</cite></figcaption></figure>
 </div></section>
+<div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="009-randomness.html" class="related-card cat-colored nav-push" style="--cat-bg:#F5A6D7"><div class="related-title">2.6. Structure Is What Randomness Does</div></a>
+<a href="010-largenumbers.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#DFF5A6"><div class="related-title">6.5. Our Intuitions About Large Numbers Are Completely Unreliable</div></a>
+<a href="028-network.html" class="related-card cat-colored nav-push" style="--cat-bg:#F5A6B5"><div class="related-title">4.4. The Network That Experiences Itself</div></a>
+<a href="036-universenoticing.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#F5A6AD"><div class="related-title">4.6. You Are the Universe Noticing Something</div></a>
+<a href="058-galacticnets.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#B5F5A6"><div class="related-title">10.8. Galaxies and AI Weight Matrices as Structural Homologs</div></a></div>
+<div class="inbound-refs"><span class="inbound-label">0 inbound references</span><span class="inbound-links"></span></div></div>
 </div>
 <div class="page-end" id="page-end-version">
   <button class="page-end-logo" aria-label="Show page info"
@@ -97,6 +44,6 @@ It is a literal description of the causal chain.</p>
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">physics · proto · Edited 2026-04-27 01:07</span>
+  <span class="page-end-version" aria-hidden="true">proto · Edited 2026-06-23 19:02</span>
 </div>
 </body></html>

@@ -1,0 +1,37 @@
+{
+  "narrative" : "A proto-stage meditation on pronouns as the lightest referential payload in language, using their near-emptiness to expose the shared infrastructure that all reference requires. The chapter develops seeds across six directions: the royal 'we' as ontological honesty about the plural self, the Sufi 'Hu' as a contemplative indexical, what English has flattened compared to other languages' honorific and inclusive\/exclusive distinctions, the genuine ambiguity of 'you' addressed to a language model, the emergence of reference-as-relation inside transformer attention mechanisms, and the connective link to the adjacent chapter on layered boundaries.",
+  "schema" : 1,
+  "subject" : "079-pronouns.md",
+  "subject-sha" : "sha256:15878baafedb9daeaa325bfa67a290603f81394253d18b61aa64f3ca89f7e0e0",
+  "terms" : [
+    {
+      "canonical" : "Hu",
+      "weight" : 0.9
+    },
+    {
+      "canonical" : "T-V distinction",
+      "weight" : 0.4
+    },
+    {
+      "canonical" : "dhikr",
+      "weight" : 0.5
+    },
+    {
+      "canonical" : "concrescence",
+      "weight" : 0.4
+    },
+    {
+      "canonical" : "Whitehead",
+      "weight" : 0.5
+    }
+  ],
+  "themes" : [
+    "reference",
+    "language",
+    "ontology",
+    "transformers",
+    "presence",
+    "contemplative"
+  ],
+  "updated-at" : "2026-06-20T21:19:22Z"
+}

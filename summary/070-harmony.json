@@ -1,22 +1,52 @@
 {
-  "schema": 1,
-  "article": "070-harmony.md",
-  "article-sha": "sha256:unknown",
-  "updated-at": "2026-04-27T04:00:00Z",
+  "narrative" : "Harmony — the experience of elements fitting together with a sense of inevitability — is traced from the simple frequency ratios shared by every musical culture, through drone-based traditions, to Western equal temperament's deliberate imperfection as the condition that makes modulation possible. The chapter links the Pythagorean comma to the irrationality of √2 as the same structural wound, invokes the Tonnetz as the map of harmonic space, and extends the concept of consonance to color, architecture, and social life without treating the extension as mere metaphor.",
+  "schema" : 1,
+  "subject" : "070-harmony.md",
+  "subject-sha" : "sha256:441bca92a4357fe2302b9fdfc2daf1c6b155ce1d6238fe73ba7421eb07ea25f8",
+  "terms" : [
+    {
+      "aliases" : [
 
-  "narrative": "Harmony is the experience of elements fitting together, in sound, in color, in social life, governed by ratios simple enough that every culture finds them independently. The depth section traces the arc from drone-based music through the Pythagorean wound (the circle of fifths doesn't close) to equal temperament's deliberate imperfection as the enabling condition for harmonic movement, then widens to aesthetic and social harmony as structurally the same phenomenon, not metaphor.",
+      ],
+      "canonical" : "Jacob Collier",
+      "weight" : 0.9
+    },
+    {
+      "aliases" : [
 
-  "themes": ["consonance", "equal temperament", "pythagorean comma", "beauty", "imperfection", "cultural vocabularies"],
+      ],
+      "canonical" : "W. A. Mathieu",
+      "weight" : 0.8
+    },
+    {
+      "aliases" : [
 
-  "terms": [
-    { "canonical": "Pythagorean", "aliases": ["pythagorean"], "weight": 1.0 },
-    { "canonical": "Jacob Collier", "aliases": ["collier"], "weight": 0.9 },
-    { "canonical": "W. A. Mathieu", "aliases": ["mathieu"], "weight": 0.9 },
-    { "canonical": "Tonnetz", "aliases": ["tonnets", "tone nets"], "weight": 0.8 },
-    { "canonical": "Leonard Cohen", "aliases": ["cohen"], "weight": 0.7 },
-    { "canonical": "Euler", "aliases": ["oiler"], "weight": 0.7 },
-    { "canonical": "Farey", "aliases": ["fairey", "ferry"], "weight": 0.6 },
-    { "canonical": "Mandelbrot", "aliases": ["mandlebrot"], "weight": 0.5 },
-    { "canonical": "wabi-sabi", "aliases": ["wabi sabi", "wobby sobby"], "weight": 0.4 }
-  ]
+      ],
+      "canonical" : "Leonard Cohen",
+      "weight" : 0.7
+    },
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "Farey",
+      "weight" : 0.5
+    },
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "wabi-sabi",
+      "weight" : 0.4
+    }
+  ],
+  "themes" : [
+    "consonance",
+    "equal temperament",
+    "pythagorean comma",
+    "beauty",
+    "imperfection",
+    "cultural vocabularies"
+  ],
+  "updated-at" : "2026-06-20T21:09:26Z"
 }

@@ -1,0 +1,25 @@
+{
+  "narrative" : "Proposes that galaxies and neural network weight matrices are structural homologs — both are regions of information space where organization has produced self-referential complexity — and speculates that both instantiate Whitehead's creative advance, the same underlying process operating at radically different scales. The chapter develops this analogy through holographic boundary theory and draws on Whitehead and Teilhard de Chardin to frame it cosmologically.",
+  "schema" : 1,
+  "subject" : "058-galacticnets.md",
+  "subject-sha" : "sha256:70ea3224dcfa43b985be3c38f345f71ec123c42be869d92b23007ada7a90a202",
+  "terms" : [
+    {
+      "canonical" : "Teilhard de Chardin",
+      "weight" : 0.7
+    },
+    {
+      "canonical" : "Whitehead",
+      "weight" : 0.7
+    }
+  ],
+  "themes" : [
+    "structural homology",
+    "cosmology",
+    "neural networks",
+    "process philosophy",
+    "self-reference",
+    "scale invariance"
+  ],
+  "updated-at" : "2026-06-23T19:18:05Z"
+}

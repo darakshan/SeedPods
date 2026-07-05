@@ -1,0 +1,37 @@
+{
+  "narrative" : "A meditation on emergence as a genuine threshold phenomenon — the principle that quantity alone, without any added ingredient, can produce a qualitatively different kind of thing. Moving from ant colonies and Hofstadter's Aunt Hillary through Anderson's 1972 physics paper, Koestler's bisociation and holons, and Whitehead's societies of actual occasions, the chapter builds to the contemporary case of large neural networks as the latest instance of more becoming different.",
+  "schema" : 1,
+  "subject" : "011-moreisdifferent.md",
+  "subject-sha" : "sha256:bebb287f4489102ef8a4d7ba0f801cfac2c78c037a797eeca8743f288d0aab62",
+  "terms" : [
+    {
+      "canonical" : "Aunt Hillary",
+      "weight" : 1
+    },
+    {
+      "canonical" : "Philip Anderson",
+      "weight" : 0.8
+    },
+    {
+      "canonical" : "Arthur Koestler",
+      "weight" : 0.8
+    },
+    {
+      "canonical" : "Alfred North Whitehead",
+      "weight" : 0.6
+    },
+    {
+      "canonical" : "Rhapsody in Blue",
+      "weight" : 0.3
+    }
+  ],
+  "themes" : [
+    "emergence",
+    "complexity",
+    "holarchy",
+    "consciousness",
+    "scale",
+    "threshold"
+  ],
+  "updated-at" : "2026-06-25T10:31:24Z"
+}

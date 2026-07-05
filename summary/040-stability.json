@@ -1,0 +1,18 @@
+{
+  "narrative" : "Introduces and contrasts two opposite meanings of stability as applied to musical ratios: dynamic stability, where irrational numbers like the golden ratio resist resonant capture, and acoustic stability, where simple integer ratios produce clean repeating waveforms. The two stabilities are exact inverses of each other, and this opposition is identified as the generating principle behind the fractal geometry of the consonance landscape.",
+  "schema" : 1,
+  "subject" : "040-stability.md",
+  "subject-sha" : "sha256:1cc0f223c4c24cd9b8c14fafe5623710d544cdfb03bd7ceebd7207afc315a4f2",
+  "terms" : [
+
+  ],
+  "themes" : [
+    "stability",
+    "consonance",
+    "golden ratio",
+    "waveform",
+    "fractal geometry",
+    "inverse opposition"
+  ],
+  "updated-at" : "2026-06-23T19:24:59Z"
+}

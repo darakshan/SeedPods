@@ -1,0 +1,33 @@
+{
+  "narrative" : "This chapter argues that a system's fluent, rich output — its wide channel — is evidence of a process but not evidence of what kind of process, and that our moral intuitions about which entities deserve consideration are shaped by resemblance rather than evidence. Moving from Turing through Searle, Wittgenstein, and Whitehead, it opens a third possibility beyond 'truly understands' and 'philosophically empty': a real but genuinely alien process, and concludes that irreducible uncertainty about AI interiority demands moral caution rather than dismissal.",
+  "schema" : 1,
+  "subject" : "025-widechannel.md",
+  "subject-sha" : "sha256:42ab42be29c3fa1f900345280d3ee33196c0495d7bcde687176000c94267aa39",
+  "terms" : [
+    {
+      "canonical" : "Turing Test",
+      "weight" : 0.7
+    },
+    {
+      "canonical" : "Chinese Room",
+      "weight" : 0.7
+    },
+    {
+      "canonical" : "Mike Kearns",
+      "weight" : 0.5
+    },
+    {
+      "canonical" : "philosophical zombie",
+      "weight" : 0.6
+    }
+  ],
+  "themes" : [
+    "other minds",
+    "moral uncertainty",
+    "AI consciousness",
+    "resemblance bias",
+    "wide channel",
+    "philosophical zombie"
+  ],
+  "updated-at" : "2026-06-20T21:18:23Z"
+}

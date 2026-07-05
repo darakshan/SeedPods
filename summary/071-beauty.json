@@ -1,0 +1,29 @@
+{
+  "narrative" : "A meditation on the dual nature of beauty as both subjective perception and mathematical structure, moving through the golden ratio's recurrence in living forms, the Japanese aesthetic of wabi-sabi's embrace of imperfection, and the idea that what the eye finds beautiful is a record of the structures that have mattered across time.",
+  "schema" : 1,
+  "subject" : "071-beauty.md",
+  "subject-sha" : "sha256:de619f8c7100c310db756edf0970af0a499b93cf13b4676908578b58cc3fa49f",
+  "terms" : [
+    {
+      "canonical" : "phi",
+      "weight" : 0.7
+    },
+    {
+      "canonical" : "phyllotaxis",
+      "weight" : 0.4
+    },
+    {
+      "canonical" : "golden ratio",
+      "weight" : 0.9
+    }
+  ],
+  "themes" : [
+    "aesthetics",
+    "mathematics",
+    "wabi-sabi",
+    "perception",
+    "harmony",
+    "nature"
+  ],
+  "updated-at" : "2026-06-20T21:14:00Z"
+}

@@ -1,0 +1,52 @@
+{
+  "narrative" : "Using Rom Houben's 23 years of undetected consciousness as its central case, this chapter argues that the absence of a familiar output channel is not evidence of an absent interior — a mistake made with vegetative-state patients, nonspeaking autistic people, and potentially AI systems alike. It introduces the channel\/capacity distinction as a conceptual tool and connects it to the principle of presuming competence, Ryle's category mistake, and the limits of behavioral inference.",
+  "schema" : 1,
+  "subject" : "022-locked.md",
+  "subject-sha" : "sha256:01921a26372ddaa5f8f85db6d8138b3676a8159bb1c970b09e7841df7c19ec49",
+  "terms" : [
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "Rom Houben",
+      "weight" : 1
+    },
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "Steven Laureys",
+      "weight" : 0.8
+    },
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "Jean-Dominique Bauby",
+      "weight" : 0.7
+    },
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "Ky Dickens",
+      "weight" : 0.4
+    },
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "Julian Schnabel",
+      "weight" : 0.3
+    }
+  ],
+  "themes" : [
+    "consciousness",
+    "locked-in",
+    "presumed absence",
+    "channel vs capacity",
+    "disability",
+    "AI inference"
+  ],
+  "updated-at" : "2026-06-20T20:59:02Z"
+}

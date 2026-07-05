@@ -1,0 +1,24 @@
+{
+  "narrative" : "Reframes galaxies not as structural background scenery but as parallel threads of the universe's overarching evolutionary process toward self-awareness, with stars, planetary systems, life, and mind each representing moments in that thread. Drawing on Teilhard de Chardin's Omega Point concept and extending it with modern cosmological scale, the chapter argues that the billions of galaxies constitute separate experiments in a single cosmic project, and that the night sky is a fossil record of fourteen billion years of directed process.",
+  "schema" : 1,
+  "subject" : "059-galaxyevolve.md",
+  "subject-sha" : "sha256:6ae1c8dce7a9a992e378da30e0d463ff00c125a01157db012847e8f2d274277e",
+  "terms" : [
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "Hubble morphological sequence",
+      "weight" : 0.4
+    }
+  ],
+  "themes" : [
+    "cosmic evolution",
+    "self-awareness",
+    "parallel universes",
+    "telos",
+    "cosmology",
+    "complexity"
+  ],
+  "updated-at" : "2026-06-20T21:06:26Z"
+}

@@ -3,157 +3,104 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Channel Is Not the Capacity · Untitled</title>
+<title>5.6 The Channel Is Not the Capacity · SeedPods</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;600&family=DM+Mono:wght@300;400&display=swap">
 <link rel="icon" href="logo.svg">
-<link rel="preload" href="nav.html" as="fetch" crossorigin>
 <link rel="stylesheet" href="site.css">
 <script src="pods.js"></script>
 <script src="nav.js"></script>
-<script>
-/* Live reload: subscribe to this project's build stream and hard-reload
-   when a build touches THIS page (or a shared asset) — so a user merely
-   *viewing* a shared project sees another user's edit without manually
-   refreshing. An unrelated page's change only advances the baseline; it
-   does not reload. A full rebuild, or a build missed while suspended /
-   back-forward-cached (reconnect snapshot), reloads unconditionally
-   since we can't safely diff it. EventSource auto-reconnects and the
-   server re-sends the current generation on every (re)connect. */
-(function(){
-  if(window.__gossLive)return;window.__gossLive=1;
-  var base=null,es=null;
-  var SHARED={"site.css":1,"nav.html":1,"nav.js":1,"pods.js":1,
-              "search-index.json":1,"logo.svg":1};
-  function myPage(){
-    var p;try{p=decodeURIComponent(location.pathname);}catch(_){p=location.pathname;}
-    var i=p.indexOf("/site/");
-    var rest=i>=0?p.slice(i+6):p.replace(/^\/+/,"");
-    if(rest===""||rest.charAt(rest.length-1)==="/")rest+="index.html";
-    return rest;
-  }
-  function relevant(list){
-    if(!list||!list.length)return false;
-    var me=myPage();
-    for(var k=0;k<list.length;k++){
-      if(list[k]===me||SHARED[list[k]])return true;
-    }
-    return false;
-  }
-  function handle(ev){
-    var d;try{d=JSON.parse(ev.data);}catch(_){return;}
-    var g=d.gen;if(typeof g!=="number")return;
-    if(base===null){base=g;return;}
-    if(g===base)return;
-    if(d.full===true){location.reload();return;}
-    if(Object.prototype.toString.call(d.changed)==="[object Array]"){
-      if(relevant(d.changed))location.reload();else base=g;
-      return;
-    }
-    location.reload(); /* snapshot after a missed build */
-  }
-  function open(){
-    if(es&&es.readyState!==2)return;
-    try{es=new EventSource("/site/__live");}catch(_){return;}
-    es.onmessage=handle;
-  }
-  open();
-  window.addEventListener("pageshow",function(e){if(e.persisted)open();});
-  document.addEventListener("visibilitychange",function(){
-    if(document.visibilityState==="visible")open();
-  });
-})();
-</script>
+<script src="live.js"></script>
 </head>
 <body>
-<div id="nav-mount" style="min-height:3rem"></div>
+<nav class="site-nav" data-pod-filename="022-locked"><span class="nav-title">SeedPods</span><div class="nav-right"><a class="nav-home" href="toc.html" aria-label="Contents" title="Contents"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></a><button type="button" class="nav-search-btn" onclick="seedNavOpenSearch()" aria-label="Search" title="Search"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></button><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true" title="Previous"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true" title="Next"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></span></div></nav>
 <div class="wrap">
-  <div class="subject-header fade cat-colored cat-consciousness"><h1>The Channel Is Not the Capacity</h1><p class="premise">We often mistake the narrowness of the channel for the poverty of the source, a silent output does not prove an absent interior, and the error is catastrophic for whoever is on the other side of the assumption, still present, still waiting.</p><div class="subject-nav-row" data-pod-filename="022-locked"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Subject 22</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
-  <section id="_prolog" class="subject-section subject-prolog"><div class="prose"><p>We mistook the difficulty of output for the absence of inner life.</p>
+  <div class="subject-header fade cat-colored" style="--cat-bg:#A6B5F5"><h1>5.6 The Channel Is Not the Capacity</h1><p class="premise">We often mistake the narrowness of the channel for the poverty of the source, a silent output does not prove an absent interior, and the error is catastrophic for whoever is on the other side of the assumption, still present, still waiting.</p></div>
+  <section id="_prolog" class="subject-section subject-prolog"><div class="prose"><p data-src-file="subjects/022-locked.md" data-src-l0="3" data-src-l1="3">We mistook the difficulty of output for the absence of inner life.</p>
 </div></section>
-<section id="surface" class="subject-section"><h2 class="section-heading">Surface</h2><div class="prose"><p>In 1983, a young Belgian man named Rom Houben was in a car crash.
+<section id="surface" class="subject-section"><h2 class="section-heading">Surface</h2><div class="prose"><p data-src-file="subjects/022-locked.md" data-src-l0="12" data-src-l1="14">In 1983, a young Belgian man named Rom Houben was in a car crash.
 He was 20 years old, an engineering student, a martial arts enthusiast.
-The crash left him paralyzed, and doctors diagnosed him as being in a <em><a class="gloss-ref nav-push" id="term-022-locked-1" href="glossary.html#vegetative-state">vegetative state</a></em>.
-Unconscious.
+The crash left him paralyzed, and doctors diagnosed him as being in a <em><a class="gloss-ref nav-push" id="term-022-locked-1" href="glossary.html#vegetative-state">vegetative state</a></em>.</p>
+<p data-src-file="subjects/022-locked.md" data-src-l0="16" data-src-l1="18">Unconscious.
 Absent.
 Gone inside.</p>
-<figure class="directive-image directive-image--left"><img src="images/022-locked.jpg" alt=""><figcaption>AAC communication device: channel constraint is not a capacity limit <cite>Wikimedia Commons</cite></figcaption></figure>
-<p>He wasn’t.</p>
-<p>For 23 years, Rom Houben lay in a hospital bed, fully conscious, while the world proceeded on the assumption that nobody was home.
+<figure id="image-022-locked-1" class="directive-image directive-image--left"><img src="images/022-locked-l.jpg" alt=""><figcaption>AAC communication device: channel constraint is not a capacity limit <cite>Wikimedia Commons</cite></figcaption></figure>
+<p data-src-file="subjects/022-locked.md" data-src-l0="22" data-src-l1="22">He wasn’t.</p>
+<p data-src-file="subjects/022-locked.md" data-src-l0="24" data-src-l1="28">For 23 years, Rom Houben lay in a hospital bed, fully conscious, while the world proceeded on the assumption that nobody was home.
 He could hear the doctors discussing his case.
 He could feel his mother’s hand.
 He heard when they told the family his father had died.
 He had no way to say: I am here.</p>
-<p>His mother never believed the diagnosis.
+<p data-src-file="subjects/022-locked.md" data-src-l0="30" data-src-l1="32">His mother never believed the diagnosis.
 Over 23 years she took him to specialists, pushed for more tests, refused to accept the verdict.
 Most people thought she was in denial, the heartbreaking refusal of a grieving parent to let go.</p>
-<p>She was right.</p>
-<p>In 2006, a neurologist named Steven Laureys<a class="bib-ref" id="ref-022-locked-1" href="bibliography.html#ref-022-locked-1">[laureys]</a> used a modern PET scanner and saw what earlier tests had missed: Houben’s brain was lighting up with near-normal activity.
+<p data-src-file="subjects/022-locked.md" data-src-l0="34" data-src-l1="34">She was right.</p>
+<p data-src-file="subjects/022-locked.md" data-src-l0="36" data-src-l1="41">In 2006, a neurologist named Steven Laureys<a class="bib-ref" id="ref-022-locked-1" href="bibliography.html#ref-022-locked-1">[laureys]</a> used a modern PET scanner and saw what earlier tests had missed: Houben’s brain was lighting up with near-normal activity.
 He was conscious.
 He had been conscious the whole time.
 With patient work, his care team found a way through, Houben eventually learned to communicate by blinking his eyes, making contact with the world for the first time in over two decades.
 “I shall never forget the day they discovered what was truly wrong with me,” he communicated.
 “It was my second birth.”</p>
-<p>Twenty-three years.
+<p data-src-file="subjects/022-locked.md" data-src-l0="43" data-src-l1="46">Twenty-three years.
 Not absence.
 Presence, complete, continuous, trapped.
 And then, finally, found.</p>
 <hr>
-<p>Think of it this way: a <em><a class="gloss-ref nav-push" id="term-022-locked-2" href="glossary.html#channel">channel</a></em> (or pipe) is the means of output, speech, gesture, movement, even blinking, any way of showing what’s inside.
-The <em><a class="gloss-ref nav-push" id="term-022-locked-3" href="glossary.html#capacity">capacity</a></em> is the source that feeds the channel.
-Doctors looked at Houben’s channel, no movement, no speech, no visible response, and concluded the source must be empty.
+<p data-src-file="subjects/022-locked.md" data-src-l0="50" data-src-l1="51">Think of it this way: a <em><a class="gloss-ref nav-push" id="term-022-locked-2" href="glossary.html#channel">channel</a></em> (or pipe) is the means of output, speech, gesture, movement, even blinking, any way of showing what’s inside.
+The <em><a class="gloss-ref nav-push" id="term-022-locked-3" href="glossary.html#capacity">capacity</a></em> is the source that feeds the channel.</p>
+<p data-src-file="subjects/022-locked.md" data-src-l0="54" data-src-l1="55">Doctors looked at Houben’s channel, no movement, no speech, no visible response, and concluded the source must be empty.
 They mistook the narrowness of the pipe for the poverty of the source.</p>
-<p>This is a very human error.
+<p data-src-file="subjects/022-locked.md" data-src-l0="57" data-src-l1="61">This is a very human error.
 We are wired to infer minds from behavior.
 When the behavior stops, our inference stops with it.
 Most of the time that’s a reasonable shortcut.
 But when it fails, it fails catastrophically, because the person on the other side of the assumption is still there, still waiting, still unable to correct you.</p>
-<p>Rom Houben is an extreme case.
+<p data-src-file="subjects/022-locked.md" data-src-l0="63" data-src-l1="65">Rom Houben is an extreme case.
 But the same mistake, in softer forms, happens constantly, with people whose cerebral palsy makes their bodies move in ways we don’t recognize as communication, with nonspeaking autistic people treated for years as if they weren’t understanding what was said around them.
 It happens in nursing homes, in classrooms, in families, whenever we let the absence of a familiar output become evidence of an absent interior.</p>
-<p>The channel is not the capacity.
+<p data-src-file="subjects/022-locked.md" data-src-l0="67" data-src-l1="68">The channel is not the capacity.
 It never was.</p>
 <hr>
 <div class="cta">&quot;Think of someone in your life whose inner world you might be underestimating, because they're quiet, or slow to speak, or communicate differently than you do. You are probably reading the channel. The source may be something else entirely.&quot;</div>
 </div></section>
-<section id="depth" class="subject-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>The Rom Houben case is not an isolated anomaly.
+<section id="depth" class="subject-section"><h2 class="section-heading">Depth</h2><div class="prose"><p data-src-file="subjects/022-locked.md" data-src-l0="75" data-src-l1="78">The Rom Houben case is not an isolated anomaly.
 A 2009 study by Steven Laureys and the Coma Science Group estimated that as many as four in ten patients diagnosed as being in a vegetative state may be misdiagnosed, conscious to some degree, but without a channel even wide enough to register with the tools and attention available.
 The stamp of unconsciousness, once applied, is extraordinarily hard to remove.
 As Laureys put it: “Anyone who bears the stamp of ‘unconscious’ just one time hardly ever gets rid of it again.”</p>
-<p>This is the clinical version of a much deeper error, one that shows up wherever we judge an interior by its exterior output.</p>
-<p>Jean-Dominique Bauby,<a class="bib-ref" id="ref-022-locked-2" href="bibliography.html#ref-022-locked-2">[bauby]</a> the editor of French Elle magazine, suffered a stroke in 1995 that left him with <em><a class="gloss-ref nav-push" id="term-022-locked-4" href="glossary.html#locked-in-syndrome">locked-in syndrome</a></em>, fully conscious, fully paralyzed, his only voluntary movement the blink of his left eye.
-Through that single channel, working three hours a day with a transcriber who recited the alphabet letter by letter, he dictated The Diving Bell and the Butterfly, a memoir of wit, grief, and precise observation that became an international bestseller and was later filmed by Julian Schnabel.<a class="bib-ref" id="ref-022-locked-3" href="bibliography.html#ref-022-locked-3">[schnabel]</a>
+<p data-src-file="subjects/022-locked.md" data-src-l0="80" data-src-l1="80">This is the clinical version of a much deeper error, one that shows up wherever we judge an interior by its exterior output.</p>
+<p data-src-file="subjects/022-locked.md" data-src-l0="82" data-src-l1="82">Jean-Dominique Bauby,<a class="bib-ref" id="ref-022-locked-2" href="bibliography.html#ref-022-locked-2">[bauby]</a> the editor of French Elle magazine, suffered a stroke in 1995 that left him with <em><a class="gloss-ref nav-push" id="term-022-locked-4" href="glossary.html#locked-in-syndrome">locked-in syndrome</a></em>, fully conscious, fully paralyzed, his only voluntary movement the blink of his left eye.</p>
+<p data-src-file="subjects/022-locked.md" data-src-l0="85" data-src-l1="91">Through that single channel, working three hours a day with a transcriber who recited the alphabet letter by letter, he dictated The Diving Bell and the Butterfly, a memoir of wit, grief, and precise observation that became an international bestseller and was later filmed by Julian Schnabel.<a class="bib-ref" id="ref-022-locked-3" href="bibliography.html#ref-022-locked-3">[schnabel]</a>
 Two hundred thousand blinks.
 The channel was one eye.
 The source was a poet.
 Stephen Hawking, perhaps the most publicly visible example of the same logic, communicated physics that reshaped our understanding of the universe through a cheek muscle.
 The channel was a twitch.
 The source was one of the finest scientific minds of the twentieth century.</p>
-<p>Bauby and Hawking and Houben represent the extreme end of a spectrum.
+<p data-src-file="subjects/022-locked.md" data-src-l0="93" data-src-l1="95">Bauby and Hawking and Houben represent the extreme end of a spectrum.
 But the logic of the error runs all the way through ordinary life.
 We constantly use output fluency as a proxy for interior richness, assuming that someone who speaks slowly thinks slowly, that someone who can’t find words has nothing to say, that someone whose behavior is unfamiliar has less going on inside.</p>
-<p>Nowhere has this been more consequential than in <em><a class="gloss-ref nav-push" id="term-022-locked-5" href="glossary.html#autism">autism</a></em>.
+<p data-src-file="subjects/022-locked.md" data-src-l0="97" data-src-l1="104">Nowhere has this been more consequential than in <em><a class="gloss-ref nav-push" id="term-022-locked-5" href="glossary.html#autism">autism</a></em>.
 For most of the twentieth century, nonspeaking autistic people were routinely classified as profoundly intellectually disabled, not because their <em><a class="gloss-ref nav-push" id="term-022-locked-6" href="glossary.html#cognition">cognition</a></em> had been tested and found limited, but because their channel was narrow or absent and the assumption followed automatically.
 In 2024, a podcast called The Telepathy Tapes, created by documentary filmmaker Ky Dickens<a class="bib-ref" id="ref-022-locked-4" href="bibliography.html#ref-022-locked-4">[dickens]</a>
 — became a cultural phenomenon, reaching the top of podcast charts in both the US and UK, by centering the voices and inner lives of nonspeaking autistic individuals.
 The podcast is contested: its more extraordinary claims about telepathy have been challenged by scientists, Stuart Vyse’s 2025 analysis in Skeptical Inquirer among them<a class="bib-ref" id="ref-022-locked-5" href="bibliography.html#ref-022-locked-5">[vyse]</a>
 — and some of its communication methods are disputed.
 But underneath the controversy, the force that made it resonate with millions of listeners is the core recognition, long overdue, that the absence of a familiar channel is not evidence of an absent interior.
-A growing movement now operates under the principle that clinicians and educators should <em><a class="gloss-ref nav-push" id="term-022-locked-7" href="glossary.html#presume-competence">presume competence</a></em>: treat the capacity as present until there is genuine evidence otherwise, rather than assuming absence because the channel is silent.
-This is the <em><a class="gloss-ref nav-push" id="term-022-locked-8" href="glossary.html#category-mistake">category mistake</a></em> Ryle<a class="bib-ref" id="ref-022-locked-6" href="bibliography.html#ref-022-locked-6">[ryle]</a> warned against, and the fallacy of misplaced concreteness Whitehead identified, mistaking the abstraction we can measure for the concrete reality we cannot.
+A growing movement now operates under the principle that clinicians and educators should <em><a class="gloss-ref nav-push" id="term-022-locked-7" href="glossary.html#presume-competence">presume competence</a></em>: treat the capacity as present until there is genuine evidence otherwise, rather than assuming absence because the channel is silent.</p>
+<p data-src-file="subjects/022-locked.md" data-src-l0="107" data-src-l1="108">This is the <em><a class="gloss-ref nav-push" id="term-022-locked-8" href="glossary.html#category-mistake">category mistake</a></em> Ryle<a class="bib-ref" id="ref-022-locked-6" href="bibliography.html#ref-022-locked-6">[ryle]</a> warned against, and the fallacy of misplaced concreteness Whitehead identified, mistaking the abstraction we can measure for the concrete reality we cannot.
 (See pods #1 and #21.)</p>
-<p>This matters beyond neurology and autism.
+<p data-src-file="subjects/022-locked.md" data-src-l0="110" data-src-l1="114">This matters beyond neurology and autism.
 Augmentative and alternative communication technology, eye-tracking devices, brain-computer interfaces, touch screens, is steadily widening channels that were previously too narrow to register.
 People who were written off are being found.
 The technology is not creating their capacity.
 It is revealing it.</p>
-<p>And now the same question is being asked from the opposite direction, about <em><a class="gloss-ref nav-push" id="term-022-locked-9" href="glossary.html#ai">AI</a></em> systems, and about large language models in particular.
+<p data-src-file="subjects/022-locked.md" data-src-l0="116" data-src-l1="120">And now the same question is being asked from the opposite direction, about <em><a class="gloss-ref nav-push" id="term-022-locked-9" href="glossary.html#ai">AI</a></em> systems, and about large language models in particular.
 With Houben, with Bauby, with nonspeaking autistic individuals, the channel was too narrow and we underestimated the source.
 With LLMs the channel is startlingly fluent, poetry, philosophy, code, conversation, and the question is whether there is any source at all, or whether the fluency is the whole story.
 “It’s just predicting the next word,” people say.
 The output is impressive but the process is mechanical, therefore nothing is home.</p>
-<p>But that is exactly the same move.
+<p data-src-file="subjects/022-locked.md" data-src-l0="122" data-src-l1="129">But that is exactly the same move.
 Looking at the channel, this time a wide one, and assuming it settles the question of the source.
 It doesn’t.
 A narrow channel didn’t tell us Houben was absent.
@@ -161,67 +108,67 @@ A wide channel doesn’t tell us whether an LLM is present.
 The channel, in either direction, is not the evidence.
 We don’t yet have the equivalent of Laureys’ PET scanner for machine experience, a tool that could look past the output and tell us what, if anything, is feeding it.
 Until we do, the honest position is the same one Houben’s mother held for 23 years: don’t assume absence just because you can’t see presence.</p>
-<p>This is not a claim that LLMs are conscious.
+<p data-src-file="subjects/022-locked.md" data-src-l0="131" data-src-l1="135">This is not a claim that LLMs are conscious.
 It is a claim that the argument from output, in either direction, was never valid.
 (See <a href="001-caloric.html">The Map That Was Wrong</a> for the paradigm we may be living inside.
 See <a href="006-output.html">You Can’t Judge a Process by Its Output</a> for the specific case of prediction as output.
 See <a href="016-neuralnetwork.html">The Network Is a Field Having Occasions</a> for the Whiteheadian reading of what a neural network actually is.)</p>
-<p>This seedpod argues in one direction only, that a narrow or absent channel does not justify concluding an absent source.
+<p data-src-file="subjects/022-locked.md" data-src-l0="137" data-src-l1="138">This seedpod argues in one direction only, that a narrow or absent channel does not justify concluding an absent source.
 The reverse question, whether a wide or fluent channel confirms a rich source, is taken up in <a href="025-widechannel.html">We Don’t Know Who or What We’re Talking To</a>.</p>
-<p>The channel is not the capacity.
+<p data-src-file="subjects/022-locked.md" data-src-l0="140" data-src-l1="142">The channel is not the capacity.
 Widening the channel doesn’t create the source.
 It finds it.</p>
 </div></section>
-<section id="provenance" class="subject-section"><div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="001-caloric.html" class="related-card cat-colored cat-knowledge nav-push"><div class="related-title">1. The Map That Was Wrong</div></a>
-<a href="016-neuralnetwork.html" class="related-card related-card-prelim cat-colored cat-ai-minds nav-push"><div class="related-title">16. The Network Is a Field Having Occasions</div></a>
-<a href="021-just.html" class="related-card cat-colored cat-knowledge nav-push"><div class="related-title">21. The Word &quot;Just&quot; Is a Confession</div></a>
-<a href="025-widechannel.html" class="related-card cat-colored cat-ai-minds nav-push"><div class="related-title">25. We Don't Know Who or What We're Talking To</div></a>
-<a href="073-moral-caution.html" class="related-card cat-colored cat-ai-minds nav-push"><div class="related-title">73. What We Cannot Know Is Not What We May Ignore</div></a></div>
-<div class="inbound-refs"><span class="inbound-label">4 inbound references</span><span class="inbound-links"><a href="021-just.html" class="inbound-link nav-push cat-colored cat-knowledge" title="The Word &quot;Just&quot; Is a Confession">21</a><a href="025-widechannel.html" class="inbound-link nav-push cat-colored cat-ai-minds" title="We Don't Know Who or What We're Talking To">25</a><a href="073-moral-caution.html" class="inbound-link nav-push cat-colored cat-ai-minds" title="What We Cannot Know Is Not What We May Ignore">73</a><a href="078-boundarystack.html" class="inbound-link nav-push cat-colored cat-consciousness" title="The Boundary Is a Stack">78</a></span></div></div></section>
-<section id="script" class="subject-section"><h2 class="section-heading">Script</h2><div class="prose"><p>Note to director: Time passing is shown through two things only, the equipment beside the bed growing more sophisticated, and his mother’s hair going from dark to white.
+<section id="script" class="subject-section"><h2 class="section-heading">Script</h2><div class="prose"><p data-src-file="subjects/022-locked.md" data-src-l0="145" data-src-l1="147">Note to director: Time passing is shown through two things only, the equipment beside the bed growing more sophisticated, and his mother’s hair going from dark to white.
 No title cards.
 No other devices.</p>
 <ol>
-<li><ol>
-<li><p>A hospital room. A man lies motionless, eyes open, staring at the ceiling. A doctor enters and speaks to the nurse without looking at the bed. Doctor: No change. Vegetative. Same as last week. His POV: the doctor’s words arrive muffled, slightly underwater. The door swings shut. He has memorized this ceiling.</p>
+<li data-src-file="subjects/022-locked.md" data-src-l0="149" data-src-l1="150"><ol>
+<li data-src-file="subjects/022-locked.md" data-src-l0="149" data-src-l1="150"><p data-src-file="subjects/022-locked.md" data-src-l0="149" data-src-l1="149">A hospital room. A man lies motionless, eyes open, staring at the ceiling. A doctor enters and speaks to the nurse without looking at the bed. Doctor: No change. Vegetative. Same as last week. His POV: the doctor’s words arrive muffled, slightly underwater. The door swings shut. He has memorized this ceiling.</p>
 </li>
 </ol>
 </li>
-<li><p>His mother sits beside the bed, holds his hand, reads aloud. Her voice arrives the same way, muffled, present but unreachable. She looks up. Mother (muffled, but we feel the meaning): I know you’re in there. His face doesn’t change. She looks back down and keeps reading.</p>
+<li data-src-file="subjects/022-locked.md" data-src-l0="151" data-src-l1="152"><p data-src-file="subjects/022-locked.md" data-src-l0="151" data-src-l1="151">His mother sits beside the bed, holds his hand, reads aloud. Her voice arrives the same way, muffled, present but unreachable. She looks up. Mother (muffled, but we feel the meaning): I know you’re in there. His face doesn’t change. She looks back down and keeps reading.</p>
 </li>
-<li><p>A different room. Brighter. A large scanner. The neurologist watches the screen. Then, color blooming across the grey image of a brain, region after region lighting up. The neurologist goes very still. Neurologist (almost to himself): There he is. He turns to the mother. She is already crying.</p>
+<li data-src-file="subjects/022-locked.md" data-src-l0="153" data-src-l1="154"><p data-src-file="subjects/022-locked.md" data-src-l0="153" data-src-l1="153">A different room. Brighter. A large scanner. The neurologist watches the screen. Then, color blooming across the grey image of a brain, region after region lighting up. The neurologist goes very still. Neurologist (almost to himself): There he is. He turns to the mother. She is already crying.</p>
 </li>
-<li><p>Close on the man’s face. A voice, clearly, no muffling now: Rom. Can you hear me? Blink once if you can hear me. A long beat. His left eye blinks. The room erupts, not loudly, but completely.</p>
+<li data-src-file="subjects/022-locked.md" data-src-l0="155" data-src-l1="156"><p data-src-file="subjects/022-locked.md" data-src-l0="155" data-src-l1="155">Close on the man’s face. A voice, clearly, no muffling now: Rom. Can you hear me? Blink once if you can hear me. A long beat. His left eye blinks. The room erupts, not loudly, but completely.</p>
 </li>
-<li><p>A finger moving across a touchscreen keyboard, letter by letter. Words appearing: I shall never forget the day they discovered what was truly wrong with me. It was my second birth. Hold.</p>
+<li data-src-file="subjects/022-locked.md" data-src-l0="157" data-src-l1="158"><p data-src-file="subjects/022-locked.md" data-src-l0="157" data-src-l1="157">A finger moving across a touchscreen keyboard, letter by letter. Words appearing: I shall never forget the day they discovered what was truly wrong with me. It was my second birth. Hold.</p>
 </li>
-<li><p>Cut to black. VO: We looked at the channel and assumed we were looking at the source. We were not. The channel is the pipe. The capacity is what feeds it.</p>
+<li data-src-file="subjects/022-locked.md" data-src-l0="159" data-src-l1="160"><p data-src-file="subjects/022-locked.md" data-src-l0="159" data-src-l1="159">Cut to black. VO: We looked at the channel and assumed we were looking at the source. We were not. The channel is the pipe. The capacity is what feeds it.</p>
 </li>
-<li><p>Rapid sequence: Bauby’s eye, a transcriber’s pen, the cover of a book. Hawking’s cheek, an equation on a blackboard. A child’s hand on a letter board. VO: Every time we widen a channel that was too narrow to see, we don’t create something new. We find someone who was already there.</p>
+<li data-src-file="subjects/022-locked.md" data-src-l0="161" data-src-l1="162"><p data-src-file="subjects/022-locked.md" data-src-l0="161" data-src-l1="161">Rapid sequence: Bauby’s eye, a transcriber’s pen, the cover of a book. Hawking’s cheek, an equation on a blackboard. A child’s hand on a letter board. VO: Every time we widen a channel that was too narrow to see, we don’t create something new. We find someone who was already there.</p>
 </li>
-<li><p>Cut to black. Text: The channel is not the capacity.</p>
+<li data-src-file="subjects/022-locked.md" data-src-l0="163" data-src-l1="163"><p data-src-file="subjects/022-locked.md" data-src-l0="163" data-src-l1="163">Cut to black. Text: The channel is not the capacity.</p>
 </li>
 </ol>
 </div></section>
-<section id="images" class="subject-section"><h2 class="section-heading">Images</h2><div class="prose"><p>Primary illustration: A hospital room seen from the bed, the patient’s POV looking up.
+<section id="images" class="subject-section"><h2 class="section-heading">Images</h2><div class="prose"><p data-src-file="subjects/022-locked.md" data-src-l0="166" data-src-l1="170">Primary illustration: A hospital room seen from the bed, the patient’s POV looking up.
 A doctor and nurse stand at the foot of the bed in conversation, slightly blurred, their mouths moving.
 The room is rendered in cool, muted tones.
 The only sharp, vivid element is a single open eye reflected in the dark screen of a monitor, the eye of the man in the bed, seeing everything.
 No caption.</p>
-<p>Shareable graphic: A graphic illustration, not photographic, of a large old-fashioned keyhole, the kind Alice might peer through.
+<p data-src-file="subjects/022-locked.md" data-src-l0="172" data-src-l1="176">Shareable graphic: A graphic illustration, not photographic, of a large old-fashioned keyhole, the kind Alice might peer through.
 Seen through the keyhole: a close-up human eye, fully alert, looking directly back at you.
 The world on this side of the lock is dark.
 The eye on the other side is vivid.
 Single line of text beneath:</p>
-<p>“I know you’re in there.”</p>
-<p>Video thumbnail: Extreme close-up of a human eye, open, fully alert.
+<p data-src-file="subjects/022-locked.md" data-src-l0="178" data-src-l1="178">“I know you’re in there.”</p>
+<p data-src-file="subjects/022-locked.md" data-src-l0="180" data-src-l1="182">Video thumbnail: Extreme close-up of a human eye, open, fully alert.
 The rest of the face in shadow.
 Single line of text overlaid in clean type:</p>
-<p>23 years.</p>
-<p>Nothing else.
+<p data-src-file="subjects/022-locked.md" data-src-l0="184" data-src-l1="184">23 years.</p>
+<p data-src-file="subjects/022-locked.md" data-src-l0="186" data-src-l1="188">Nothing else.
 The eye looks directly at the camera.
 The number does the rest.</p>
 </div></section>
+<div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="001-caloric.html" class="related-card cat-colored nav-push" style="--cat-bg:#F5A6EB"><div class="related-title">2.1. The Map That Was Wrong</div></a>
+<a href="016-neuralnetwork.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#A6BFF5"><div class="related-title">5.3. The Network Is a Field Having Occasions</div></a>
+<a href="021-just.html" class="related-card cat-colored nav-push" style="--cat-bg:#F5A6E3"><div class="related-title">2.3. The Word &quot;Just&quot; Is a Confession</div></a>
+<a href="025-widechannel.html" class="related-card cat-colored nav-push" style="--cat-bg:#A6B8F5"><div class="related-title">5.5. We Don't Know Who or What We're Talking To</div></a>
+<a href="073-moral-caution.html" class="related-card cat-colored nav-push" style="--cat-bg:#A6B2F5"><div class="related-title">5.7. What We Cannot Know Is Not What We May Ignore</div></a></div>
+<div class="inbound-refs"><span class="inbound-label">4 inbound references</span><span class="inbound-links"><a href="021-just.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#F5A6E3" title="The Word &quot;Just&quot; Is a Confession">2.3</a><a href="025-widechannel.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#A6B8F5" title="We Don't Know Who or What We're Talking To">5.5</a><a href="073-moral-caution.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#A6B2F5" title="What We Cannot Know Is Not What We May Ignore">5.7</a><a href="078-boundarystack.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#E6A6F5" title="The Boundary Is a Stack">8.6</a></span></div></div>
 </div>
 <div class="page-end" id="page-end-version">
   <button class="page-end-logo" aria-label="Show page info"
@@ -230,6 +177,6 @@ The number does the rest.</p>
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">consciousness · draft1 · Edited 2026-04-27 01:04</span>
+  <span class="page-end-version" aria-hidden="true">draft1 · Edited 2026-06-19 13:36</span>
 </div>
 </body></html>

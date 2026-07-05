@@ -1,0 +1,25 @@
+{
+  "narrative" : "Explores the paradox that all five senses share a single physical substrate — vibration in space and time — yet produce irreducibly distinct qualitative experiences, framing this as the hard problem of consciousness at its sharpest. The chapter moves from the unified physics of perception through the differentiation of qualia within and across senses, and closes by noting that AI systems have sharpened rather than resolved this ancient question.",
+  "schema" : 1,
+  "subject" : "076-fivewindows.md",
+  "subject-sha" : "sha256:65326bdc3597e7e332d68b64f866ce99a1502df05d72949fc79f763a385c1a2d",
+  "terms" : [
+    {
+      "canonical" : "Hard Problem",
+      "weight" : 0.8
+    },
+    {
+      "canonical" : "proprioception",
+      "weight" : 0.4
+    }
+  ],
+  "themes" : [
+    "hard problem",
+    "qualia",
+    "perception",
+    "consciousness",
+    "unity and differentiation",
+    "vibration"
+  ],
+  "updated-at" : "2026-06-20T21:17:53Z"
+}

@@ -1,0 +1,873 @@
+Test 2026-06-18.17-53-37:
+[key] "H"
+[key] "ere"
+[key] " is"
+[cur] 6
+[del] 2
+[key] "’"
+[key] " another"
+[key] " big"
+[key] " task"
+[cur] 0
+[cur] 23
+[key] " "
+[del] 1
+[key] "."
+[key] " "
+[key] "Our"
+[key] " bi"
+[del] 2
+[key] "Biblia"
+[del] 6
+[key] "bibliography"
+[key] " is"
+[key] " sub"
+[key] "s"
+[key] "tantial"
+[key] " and I’m"
+[key] " changing"
+[key] " the for"
+[key] "m"
+[key] " out of."
+[cur] 25
+[cur] 90
+[key] " "
+[cur] 90
+[del] 1
+[cur] 89
+[del] 1
+[cur] 88
+[del] 1
+[cur] 87
+[del] 1
+[cur] 86
+[del] 1
+[cur] 85
+[del] 1
+[cur] 84
+[del] 1
+[cur] 83
+[del] 1
+[cur] 82
+[del] 1
+[key] "a"
+[key] "t"
+[key] " "
+[key] "o"
+[key] "f"
+[key] " "
+[key] "@"
+[key] "r"
+[key] "e"
+[key] "f"
+[key] "("
+[key] "."
+[key] "."
+[cur] 94
+[del] 2
+[key] "…"
+[key] ")"
+[key] " "
+[cur] 95
+[del] 1
+[key] " "
+[del] 1
+[key] "."
+[key] " "
+[key] " "
+[key] "Goi"
+[key] "ng"
+[key] " forward"
+[key] " it will take"
+[key] " three"
+[key] " require"
+[key] "d"
+[key] " and"
+[key] " one"
+[key] " option"
+[key] "al argument"
+[key] "."
+[cur] 98
+[cur] 166
+[key] " "
+[key] " "
+[key] "Requ"
+[key] "ire"
+[key] "d"
+[key] " argument"
+[key] "s"
+[key] " are."
+[del] 1
+[key] ","
+[key] " author."
+[del] 1
+[key] "s"
+[key] ","
+[key] " title."
+[cur] 168
+[cur] 207
+[key] " tech"
+[cur] 212
+[del] 3
+[cur] 193
+[key] "a"
+[cur] 194
+[key] "g"
+[cur] 211
+[key] " "
+[cur] 211
+[del] 1
+[cur] 210
+[del] 1
+[key] ","
+[key] " "
+[key] "wher"
+[key] "e"
+[key] " title"
+[key] " includes"
+[key] " date"
+[key] " publish"
+[del] 8
+[key] ", publisher"
+[key] ", etc."
+[cur] 212
+[cur] 254
+[key] " "
+[key] " "
+[key] "The"
+[key] " final"
+[key] " option"
+[key] "al argument"
+[key] " is"
+[key] " comment"
+[key] "s."
+[cur] 256
+[cur] 296
+[key] " "
+[key] " "
+[cur] 297
+[del] 1
+[cur] 296
+[del] 1
+[cur] 295
+[del] 1
+[key] ","
+[key] " "
+[key] "w"
+[key] "hic"
+[key] "h"
+[key] " would"
+[key] " include a"
+[key] " chapter"
+[key] " number"
+[key] " or page"
+[key] " reference"
+[key] ", etc."
+[cur] 297
+[cur] 357
+[key] " "
+[key] " "
+[key] "B"
+[key] "reak"
+[key] "ing"
+[key] " out the"
+[key] " author"
+[key] "s from"
+[key] " the"
+[key] " title"
+[key] " will"
+[key] " make"
+[key] " the"
+[key] " for"
+[key] "matting"
+[key] " much"
+[key] " cleaner"
+[cur] 359
+[cur] 436
+[key] " "
+[del] 1
+[key] "."
+[key] " "
+[key] " "
+[key] " "
+[key] "W"
+[key] "e"
+[key] " have"
+[key] " a ton"
+[key] " of"
+[cur] 440
+[cur] 456
+[key] " "
+[key] "@"
+[key] "r"
+[key] "e"
+[key] "g"
+[cur] 460
+[del] 1
+[key] "f"
+[key] "("
+[key] ")"
+[key] " "
+[key] "in "
+[key] "our"
+[key] " A.D."
+[del] 3
+[key] "idy"
+[key] " articles"
+[cur] 464
+[cur] 484
+[cur] 475
+[cur] 476
+[key] "￼"
+[cur] 475
+[del] 1
+[cur] 473
+[cur] 475
+[del] 4
+[key] "8"
+[cur] 473
+[key] "0"
+[cur] 482
+[key] " "
+[del] 1
+[key] "."
+[key] " "
+[key] "Some"
+[key] "day"
+[key] " back"
+[key] " to the"
+[key] " one"
+[key] " argument"
+[key] " format"
+[key] "."
+[cur] 484
+[cur] 524
+[key] " "
+[cur] 491
+[cur] 490
+[del] 1
+[cur] 489
+[del] 1
+[cur] 488
+[del] 1
+[cur] 489
+[key] " "
+[cur] 490
+[key] "d"
+[cur] 491
+[key] "a"
+[cur] 492
+[key] "t"
+[cur] 493
+[key] "e"
+[cur] 527
+[key] "I"
+[key] " would like"
+[key] " you"
+[key] " to."
+[key] " find them"
+[cur] 557
+[key] " "
+[cur] 558
+[key] "al"
+[cur] 560
+[key] "l"
+[cur] 561
+[key] " and set up a"
+[cur] 574
+[key] " to"
+[cur] 577
+[key] "-do list"
+[cur] 557
+[cur] 584
+[cur] 564
+[cur] 560
+[del] 4
+[cur] 561
+[key] ","
+[cur] 582
+[cur] 530
+[cur] 529
+[cur] 582
+[del] 56
+[key] " "
+[key] "Y"
+[key] "ou"
+[key] " could"
+[key] " go through"
+[key] " the"
+[key] " subject"
+[key] " one at a"
+[key] " time"
+[key] "."
+[key] ","
+[cur] 575
+[cur] 574
+[del] 1
+[key] " "
+[mic] on
+[mic] "And"
+[mic] "And correct"
+[mic] "And correct all"
+[mic] "And correct all of"
+[mic] "And correct all of the"
+[key] " "
+[key] "@"
+[key] "r"
+[key] "e"
+[key] "f"
+[key] " "
+[mic] "And correct all of the direct"
+[mic] "And correct all of the directive"
+[mic] "And correct all of the directives"
+[mic] "And correct all of the directives in"
+[mic] "And correct all of the directives in each"
+[mic] "And correct all of the directives in each one"
+[cur] 622
+[del] 5
+[cur] 598
+[cur] 604
+[key] " @ref "
+[pause]
+[fix] "You could go through the subject, one at a time and correct all of the  @ref directives in each one " -> "You could go through the subject, one at a time, and correct all of the @ref directives in each one."
+[cur] 558
+[cur] 559
+[cur] 604
+[cur] 614
+[cur] 559
+[cur] 560
+[key] "s"
+[pause]
+[fix] "You could go through the subjects, one at a time, and correct all of the @ref directives in each one." -> NONE
+[cur] 527
+[mic] "Please"
+[mic] off
+[expect] "Here’s another big task. Our bibliography is substantial and I’m changing the format of @ref(…).  Going forward it will take three required and one optional argument.  Required arguments are tag, authors, title, where title includes date, publisher, etc.  The final optional argument is comments, which would include a chapter number or page reference, etc.  Breaking out the authors from the title will make the formatting much cleaner.   We have a ton of @ref() in our 80 articles. Some date back to the one argument format. Please go through the subjects, one at a time, and correct all of the @ref directives in each one."
+[send] "Here’s another big task. Our bibliography is substantial and I’m changing the format of @ref(…).  Going forward it will take three required and one optional argument.  Required arguments are tag, authors, title, where title includes date, publisher, etc.  The final optional argument is comments, which would include a chapter number or page reference, etc.  Breaking out the authors from the title will make the formatting much cleaner.   We have a ton of @ref() in our 80 articles. Some date back to the one argument format. Please go through the subjects, one at a time, and correct all of the @ref directives in each one."
+
+Test 2026-06-18.17-55-08:
+[key] "I"
+[key] " was"
+[key] " hoping"
+[key] " the"
+[key] " new"
+[key] " harness"
+[key] " reminder"
+[key] " would"
+[key] " help you"
+[cur] 0
+[cur] 52
+[key] " "
+[key] "b"
+[key] "e a"
+[key] "ble"
+[key] " to"
+[key] " make"
+[cur] 53
+[cur] 68
+[key] " "
+[key] "to"
+[key] "ol"
+[key] " call"
+[key] "s"
+[key] " when you"
+[key] " say"
+[key] " you"
+[key] "’re about"
+[key] " to"
+[cur] 69
+[cur] 108
+[key] " "
+[del] 1
+[key] "."
+[key] " "
+[key] "I"
+[key] "t"
+[key] " doesn’t"
+[key] " seem"
+[key] " to be"
+[key] " working."
+[cur] 110
+[del] 30
+[key] "It doesn’t seem to be working."
+[expect] "I was hoping the new harness reminder would help you be able to make tool calls when you say you’re about to. It doesn’t seem to be working."
+[send] "I was hoping the new harness reminder would help you be able to make tool calls when you say you’re about to. It doesn’t seem to be working."
+
+Test 2026-06-18.17-56-52:
+[key] "Here’s another big task. Our bibliography is substantial and I’m changing the format of @ref(…).  Going forward it will take three required and one optional argument.  Required arguments are tag, authors, title, where title includes date, publisher, etc.  The final optional argument is comments, which would include a chapter number or page reference, etc.  Breaking out the authors from the title will make the formatting much cleaner.   We have a ton of @ref() in our 80 articles. Some date back to the one argument format. Please go through the subjects, one at a time, and correct all of the @ref directives in each one."
+[cur] 14
+[cur] 13
+[del] 1
+[cur] 12
+[del] 1
+[cur] 11
+[del] 1
+[cur] 10
+[del] 1
+[cur] 9
+[del] 1
+[cur] 8
+[del] 1
+[cur] 465
+[cur] 468
+[cur] 465
+[cur] 468
+[cur] 465
+[cur] 468
+[cur] 467
+[del] 1
+[cur] 468
+[key] "+"
+[cur] 469
+[key] " "
+[expect] "Here’s a big task. Our bibliography is substantial and I’m changing the format of @ref(…).  Going forward it will take three required and one optional argument.  Required arguments are tag, authors, title, where title includes date, publisher, etc.  The final optional argument is comments, which would include a chapter number or page reference, etc.  Breaking out the authors from the title will make the formatting much cleaner.   We have a ton of @ref() in our 80+ articles. Some date back to the one argument format. Please go through the subjects, one at a time, and correct all of the @ref directives in each one."
+[send] "Here’s a big task. Our bibliography is substantial and I’m changing the format of @ref(…).  Going forward it will take three required and one optional argument.  Required arguments are tag, authors, title, where title includes date, publisher, etc.  The final optional argument is comments, which would include a chapter number or page reference, etc.  Breaking out the authors from the title will make the formatting much cleaner.   We have a ton of @ref() in our 80+ articles. Some date back to the one argument format. Please go through the subjects, one at a time, and correct all of the @ref directives in each one."
+
+Test 2026-06-18.17-59-39:
+[key] "1"
+[key] "."
+[key] " "
+[key] "Y"
+[key] "e"
+[key] "s"
+[key] " "
+[key] "2"
+[key] "."
+[key] " "
+[key] "Y"
+[key] "e"
+[key] "s"
+[key] " "
+[key] "3"
+[key] "."
+[key] "K"
+[key] "i"
+[key] "h"
+[key] "n"
+[key] ","
+[key] " "
+[key] "T"
+[key] "h"
+[key] "o"
+[key] "m"
+[key] "a"
+[key] "s"
+[del] 1
+[key] "u"
+[cur] 16
+[cur] 17
+[key] " "
+[cur] 29
+[key] " "
+[key] "a"
+[key] "n"
+[key] "d"
+[cur] 32
+[del] 1
+[key] "d"
+[key] "."
+[key] "."
+[cur] 34
+[del] 2
+[key] "…"
+[key] " "
+[key] "4"
+[key] "."
+[key] " "
+[key] "Y"
+[key] "e"
+[key] "s"
+[key] " "
+[key] "5"
+[key] "."
+[key] " "
+[key] "O"
+[key] "n"
+[key] "e"
+[key] " "
+[key] "s"
+[key] "u"
+[key] "b"
+[key] "j"
+[key] "e"
+[key] "c"
+[key] "t"
+[key] " "
+[key] "a"
+[key] "t"
+[key] " "
+[key] "a time"
+[cur] 60
+[del] 6
+[key] "a"
+[key] " time"
+[cur] 61
+[del] 5
+[key] " "
+[key] "time"
+[cur] 62
+[del] 4
+[key] "y"
+[key] "o"
+[key] "n"
+[key] "d"
+[del] 4
+[key] "time"
+[expect] "1. Yes 2. Yes 3. Kuhn, Thomas and… 4. Yes 5. One subject at a time"
+[send] "1. Yes 2. Yes 3. Kuhn, Thomas and… 4. Yes 5. One subject at a time"
+
+Test 2026-06-18.18-10-55:
+[key] "T"
+[key] "hat"
+[key] " sounds"
+[key] " good"
+[cur] 0
+[cur] 16
+[key] " "
+[del] 1
+[key] "."
+[key] " "
+[key] "Yo"
+[key] "u"
+[key] " found"
+[key] " a."
+[cur] 18
+[cur] 30
+[cur] 29
+[del] 1
+[cur] 28
+[del] 1
+[key] "an "
+[key] "in"
+[key] "consistent"
+[del] 1
+[key] "cy"
+[key] " in"
+[key] " the way"
+[key] "."
+[del] 1
+[key] " bi"
+[key] "bliographic"
+[key] " reference"
+[key] "s."
+[del] 1
+[key] " have"
+[key] " been"
+[key] " added"
+[key] "."
+[cur] 28
+[cur] 97
+[key] " "
+[key] "Th"
+[key] "is"
+[key] " is a"
+[key] " good"
+[key] " time to"
+[key] " clean it up"
+[key] "."
+[cur] 98
+[cur] 133
+[key] " "
+[key] "I"
+[key] " agree that"
+[key] " Alf"
+[key] "red"
+[key] " North"
+[key] " is"
+[key] " better"
+[key] " than"
+[key] " a N."
+[cur] 134
+[cur] 179
+[del] 1
+[key] "A"
+[cur] 177
+[key] "."
+[cur] 180
+[key] " "
+[key] " "
+[cur] 180
+[cur] 181
+[key] " "
+[cur] 182
+[key] " "
+[cur] 184
+[key] "Re"
+[cur] 186
+[key] "gar"
+[cur] 189
+[key] "din"
+[cur] 191
+[key] "g"
+[cur] 193
+[key] " the"
+[cur] 197
+[key] " nested"
+[cur] 204
+[key] " thing"
+[cur] 210
+[key] " in"
+[cur] 213
+[key] " Wood"
+[del] 3
+[key] "ien"
+[cur] 218
+[key] "stein"
+[cur] 182
+[cur] 221
+[cur] 211
+[del] 10
+[cur] 210
+[del] 1
+[cur] 211
+[key] "n"
+[cur] 212
+[key] " "
+[cur] 213
+[key] "V"
+[cur] 215
+[key] "an"
+[cur] 217
+[del] 2
+[key] "Wittenstei"
+[cur] 212
+[cur] 223
+[cur] 224
+[key] ","
+[cur] 225
+[key] " "
+[cur] 226
+[cur] 225
+[cur] 180
+[cur] 225
+[cur] 226
+[key] "￼"
+[cur] 225
+[del] 1
+[cur] 226
+[cur] 208
+[cur] 225
+[cur] 226
+[cur] 217
+[cur] 181
+[cur] 215
+[cur] 216
+[cur] 217
+[key] "g"
+[cur] 226
+[cur] 228
+[key] "th"
+[cur] 230
+[key] "ere"
+[cur] 233
+[key] " are"
+[cur] 237
+[key] " other"
+[cur] 243
+[key] " example"
+[cur] 250
+[key] "s"
+[cur] 252
+[key] " of"
+[cur] 255
+[key] " nest"
+[cur] 260
+[key] "ed term"
+[cur] 266
+[key] "s"
+[cur] 268
+[key] " in Biblia"
+[cur] 278
+[del] 6
+[key] "bibliography"
+[cur] 284
+[key] " reference"
+[cur] 293
+[key] "s"
+[cur] 295
+[key] ", so it seems"
+[cur] 308
+[del] 13
+[key] " so it seems to"
+[cur] 310
+[del] 15
+[key] ", so it seems to work in"
+[cur] 319
+[key] " general"
+[cur] 226
+[cur] 325
+[cur] 326
+[key] " "
+[del] 1
+[key] "."
+[cur] 327
+[key] " "
+[cur] 328
+[key] "B"
+[cur] 330
+[key] "ut"
+[cur] 332
+[key] " I"
+[cur] 334
+[key] " think"
+[cur] 340
+[key] " there is"
+[cur] 349
+[del] 3
+[key] "’s something"
+[cur] 358
+[key] " wrong"
+[cur] 364
+[key] " with"
+[cur] 369
+[key] " this"
+[cur] 374
+[key] " one."
+[cur] 327
+[cur] 377
+[cur] 376
+[del] 1
+[cur] 377
+[key] " "
+[cur] 379
+[key] "bec"
+[cur] 382
+[key] "aus"
+[cur] 384
+[key] "e"
+[cur] 386
+[key] " it"
+[cur] 389
+[key] "’s not"
+[cur] 395
+[key] " showing up"
+[cur] 406
+[key] " in the"
+[cur] 413
+[key] " final"
+[cur] 419
+[key] " Biblia"
+[cur] 426
+[del] 6
+[key] "bibliography"
+[cur] 377
+[cur] 430
+[cur] 431
+[key] ","
+[cur] 432
+[key] " "
+[cur] 434
+[key] "no"
+[cur] 436
+[del] 2
+[key] "Noor is"
+[cur] 441
+[del] 7
+[key] "nor is it"
+[cur] 443
+[key] " id"
+[cur] 446
+[key] "ent"
+[cur] 449
+[key] "ified"
+[cur] 454
+[key] " in"
+[cur] 457
+[key] " the"
+[cur] 461
+[key] " error"
+[cur] 467
+[key] " list"
+[cur] 432
+[cur] 470
+[cur] 471
+[key] " "
+[cur] 472
+[key] " "
+[cur] 469
+[cur] 470
+[cur] 472
+[del] 4
+[key] "o"
+[cur] 468
+[key] "u"
+[cur] 469
+[key] "t"
+[cur] 470
+[key] "p"
+[cur] 471
+[key] "u"
+[key] "t"
+[cur] 471
+[del] 1
+[cur] 472
+[key] "t"
+[cur] 453
+[cur] 455
+[key] "as"
+[cur] 456
+[key] " "
+[cur] 458
+[key] "a "
+[cur] 466
+[key] "problem "
+[cur] 453
+[del] 13
+[cur] 466
+[key] "as a problem "
+[expect] "That sounds good. You found an inconsistency in the way bibliographic references have been added. This is a good time to clean it up. I agree that Alfred North is better than A. N.  Regarding the nested thing in Wittgenstein, there are other examples of nested terms in bibliography references, so it seems to work in general. But I think there’s something wrong with this one because it’s not showing up in the final bibliography, nor is it identified as a problem in the error output    "
+[send] "That sounds good. You found an inconsistency in the way bibliographic references have been added. This is a good time to clean it up. I agree that Alfred North is better than A. N.  Regarding the nested thing in Wittgenstein, there are other examples of nested terms in bibliography references, so it seems to work in general. But I think there’s something wrong with this one because it’s not showing up in the final bibliography, nor is it identified as a problem in the error output"
+
+Test 2026-06-18.18-48-55:
+[key] "P"
+[key] "l"
+[key] "e"
+[key] "a"
+[key] "se"
+[cur] 4
+[del] 2
+[key] "s"
+[key] "e"
+[cur] 5
+[del] 1
+[key] "e"
+[key] " "
+[cur] 6
+[del] 1
+[cur] 5
+[del] 1
+[cur] 4
+[del] 1
+[cur] 3
+[del] 1
+[cur] 2
+[del] 1
+[cur] 1
+[del] 1
+[cur] 0
+[del] 1
+[key] "They"
+[key] " are"
+[key] " auto"
+[key] "mat"
+[key] "ically"
+[key] " accept"
+[key] "ed"
+[cur] 0
+[cur] 31
+[key] " "
+[del] 1
+[key] "."
+[key] " "
+[key] "But"
+[key] " that did"
+[key] "n’t seem to"
+[key] " wake you"
+[key] " up"
+[key] "."
+[cur] 33
+[del] 36
+[key] "But that didn’t seem to wake you up."
+[expect] "They are automatically accepted. But that didn’t seem to wake you up."
+[send] "They are automatically accepted. But that didn’t seem to wake you up."
+

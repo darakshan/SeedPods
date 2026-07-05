@@ -1,0 +1,25 @@
+{
+  "narrative" : "At every Mandelbrot bifurcation the number of branches is fixed by local algebra and equals the period of the bulb, turning the boundary into a tree of finite dice. Assigning uniform probability 1\/n to each n-fold branch yields a harmonic measure that naturally weights simpler, lower-period branches more heavily — grounding the consonance hierarchy in the structure of the set rather than in imposed musical convention.",
+  "schema" : 1,
+  "subject" : "062-branchingdice.md",
+  "subject-sha" : "sha256:5bfcafaadd5ecb6823bceaa9d82610789085ab586ed643f67212148ebd0c2ae2",
+  "terms" : [
+    {
+      "canonical" : "Douady",
+      "weight" : 0.4
+    },
+    {
+      "canonical" : "Hubbard",
+      "weight" : 0.4
+    }
+  ],
+  "themes" : [
+    "branching",
+    "harmonic measure",
+    "consonance",
+    "probability",
+    "Mandelbrot boundary",
+    "tree structure"
+  ],
+  "updated-at" : "2026-06-23T19:15:46Z"
+}

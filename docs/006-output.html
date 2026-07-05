@@ -3,109 +3,56 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>You Can't Judge a Process by Its Output · Untitled</title>
+<title>5.1 You Can't Judge a Process by Its Output · SeedPods</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;600&family=DM+Mono:wght@300;400&display=swap">
 <link rel="icon" href="logo.svg">
-<link rel="preload" href="nav.html" as="fetch" crossorigin>
 <link rel="stylesheet" href="site.css">
 <script src="pods.js"></script>
 <script src="nav.js"></script>
-<script>
-/* Live reload: subscribe to this project's build stream and hard-reload
-   when a build touches THIS page (or a shared asset) — so a user merely
-   *viewing* a shared project sees another user's edit without manually
-   refreshing. An unrelated page's change only advances the baseline; it
-   does not reload. A full rebuild, or a build missed while suspended /
-   back-forward-cached (reconnect snapshot), reloads unconditionally
-   since we can't safely diff it. EventSource auto-reconnects and the
-   server re-sends the current generation on every (re)connect. */
-(function(){
-  if(window.__gossLive)return;window.__gossLive=1;
-  var base=null,es=null;
-  var SHARED={"site.css":1,"nav.html":1,"nav.js":1,"pods.js":1,
-              "search-index.json":1,"logo.svg":1};
-  function myPage(){
-    var p;try{p=decodeURIComponent(location.pathname);}catch(_){p=location.pathname;}
-    var i=p.indexOf("/site/");
-    var rest=i>=0?p.slice(i+6):p.replace(/^\/+/,"");
-    if(rest===""||rest.charAt(rest.length-1)==="/")rest+="index.html";
-    return rest;
-  }
-  function relevant(list){
-    if(!list||!list.length)return false;
-    var me=myPage();
-    for(var k=0;k<list.length;k++){
-      if(list[k]===me||SHARED[list[k]])return true;
-    }
-    return false;
-  }
-  function handle(ev){
-    var d;try{d=JSON.parse(ev.data);}catch(_){return;}
-    var g=d.gen;if(typeof g!=="number")return;
-    if(base===null){base=g;return;}
-    if(g===base)return;
-    if(d.full===true){location.reload();return;}
-    if(Object.prototype.toString.call(d.changed)==="[object Array]"){
-      if(relevant(d.changed))location.reload();else base=g;
-      return;
-    }
-    location.reload(); /* snapshot after a missed build */
-  }
-  function open(){
-    if(es&&es.readyState!==2)return;
-    try{es=new EventSource("/site/__live");}catch(_){return;}
-    es.onmessage=handle;
-  }
-  open();
-  window.addEventListener("pageshow",function(e){if(e.persisted)open();});
-  document.addEventListener("visibilitychange",function(){
-    if(document.visibilityState==="visible")open();
-  });
-})();
-</script>
+<script src="live.js"></script>
 </head>
 <body>
-<div id="nav-mount" style="min-height:3rem"></div>
+<nav class="site-nav" data-pod-filename="006-output"><span class="nav-title">SeedPods</span><div class="nav-right"><a class="nav-home" href="toc.html" aria-label="Contents" title="Contents"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></a><button type="button" class="nav-search-btn" onclick="seedNavOpenSearch()" aria-label="Search" title="Search"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></button><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true" title="Previous"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true" title="Next"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></span></div></nav>
 <div class="wrap">
-  <div class="subject-header fade cat-colored cat-consciousness"><h1>You Can't Judge a Process by Its Output</h1><p class="premise">A thermostat predicts and Mozart predicted, and the word covers both, which means it explains neither. “Just” is almost always a confession that someone has described the output and mistaken it for the process.</p><div class="subject-nav-row" data-pod-filename="006-output"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Subject 6</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
-  <section id="_prolog" class="subject-section subject-prolog"><div class="prose"><p>A thermostat predicts.
+  <div class="subject-header fade cat-colored" style="--cat-bg:#A6C5F5"><h1>5.1 You Can't Judge a Process by Its Output</h1><p class="premise">A thermostat predicts and Mozart predicted, and the word covers both, which means it explains neither. “Just” is almost always a confession that someone has described the output and mistaken it for the process.</p></div>
+  <section id="_prolog" class="subject-section subject-prolog"><div class="prose"><p data-src-file="subjects/006-output.md" data-src-l0="3" data-src-l1="5">A thermostat predicts.
 Mozart predicted.
 The simplicity of the output tells you nothing.</p>
 </div></section>
-<section id="surface" class="subject-section"><h2 class="section-heading">Surface</h2><div class="prose"><p>A thermostat <em><a class="gloss-ref nav-push" id="term-006-output-1" href="glossary.html#prediction">predicts</a></em> the future.
+<section id="surface" class="subject-section"><h2 class="section-heading">Surface</h2><div class="prose"><p data-src-file="subjects/006-output.md" data-src-l0="14" data-src-l1="16">A thermostat <em><a class="gloss-ref nav-push" id="term-006-output-1" href="glossary.html#prediction">predicts</a></em> the future.
 Not impressively, it just decides whether the room is about to get too cold.
 But it predicts: given the current temperature, what comes next?</p>
-<figure class="directive-image directive-image--left"><img src="images/006-output.jpg" alt=""><figcaption>Feedback control system: the output tells you nothing about the process <cite>Wikimedia Commons</cite></figcaption></figure>
-<p>A weather forecaster also predicts.
+<figure id="image-006-output-1" class="directive-image directive-image--left"><img src="images/006-output-l.jpg" alt=""><figcaption>Feedback control system: the output tells you nothing about the process <cite>Wikimedia Commons</cite></figcaption></figure>
+<p data-src-file="subjects/006-output.md" data-src-l0="20" data-src-l1="23">A weather forecaster also predicts.
 So does a chess engine.
 So did Mozart, deciding which note resolves the tension in a phrase.
 So does a language model, choosing the next word in a sentence.</p>
-<p>The word “predicts” covers all of them.
+<p data-src-file="subjects/006-output.md" data-src-l0="25" data-src-l1="26">The word “predicts” covers all of them.
 Which means the word is nearly useless.</p>
-<p>Here’s the trap: we hear what a <em><a class="gloss-ref nav-push" id="term-006-output-2" href="glossary.html#process">process</a></em> <em>does</em> and think we understand what it <em>is</em>.
+<p data-src-file="subjects/006-output.md" data-src-l0="28" data-src-l1="30">Here’s the trap: we hear what a <em><a class="gloss-ref nav-push" id="term-006-output-2" href="glossary.html#process">process</a></em> <em>does</em> and think we understand what it <em>is</em>.
 A language model predicts the next word, therefore it’s mechanical, shallow, just pattern-matching.
-But “predicts the next word” describes the <em><a class="gloss-ref nav-push" id="term-006-output-3" href="glossary.html#output-interface">output interface</a></em>, not the process behind it.
-A bimetallic strip predicts.
+But “predicts the next word” describes the <em><a class="gloss-ref nav-push" id="term-006-output-3" href="glossary.html#output-interface">output interface</a></em>, not the process behind it.</p>
+<p data-src-file="subjects/006-output.md" data-src-l0="32" data-src-l1="34">A bimetallic strip predicts.
 A billion-parameter system trained on the accumulated writing of human civilization also predicts.
 Calling them both “prediction” is like calling both a candle and the sun “things that make light.”</p>
-<p>The output doesn’t tell you what’s happening inside.</p>
-<p>When someone dismisses a process by pointing at its outputs, <em>it’s just doing X</em>, they’ve told you nothing.
+<p data-src-file="subjects/006-output.md" data-src-l0="36" data-src-l1="36">The output doesn’t tell you what’s happening inside.</p>
+<p data-src-file="subjects/006-output.md" data-src-l0="38" data-src-l1="40">When someone dismisses a process by pointing at its outputs, <em>it’s just doing X</em>, they’ve told you nothing.
 Every process is “just doing” something, described at the right level of abstraction.
 The question of what’s actually happening inside has to be answered on other grounds entirely.</p>
-<p>Look for this: Pay attention the next time you’re talking, really talking, working out a thought out loud.
+<p data-src-file="subjects/006-output.md" data-src-l0="42" data-src-l1="44">Look for this: Pay attention the next time you’re talking, really talking, working out a thought out loud.
 You’re choosing each word as you go, predicting what comes next well enough to keep the sentence coherent.
 The output is a string of predicted words.</p>
-<p>Whatever is happening inside while you do that, that’s the question.</p>
+<p data-src-file="subjects/006-output.md" data-src-l0="46" data-src-l1="46">Whatever is happening inside while you do that, that’s the question.</p>
 </div></section>
-<section id="depth" class="subject-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>The philosopher Alfred North Whitehead<sup class="footnote-mark" id="fn-006-output-1-mark"><a href="footnotes.html#fn-006-output-1">1</a></sup> drew a distinction that most people never make explicit: between the <em>act</em> and its <em>expression</em>.
+<section id="depth" class="subject-section"><h2 class="section-heading">Depth</h2><div class="prose"><p data-src-file="subjects/006-output.md" data-src-l0="49" data-src-l1="54">The philosopher Alfred North Whitehead<a class="bib-ref" id="ref-006-output-1" href="bibliography.html#ref-006-output-1">[whitehead]</a> drew a distinction that most people never make explicit: between the <em>act</em> and its <em>expression</em>.
 A process unfolds in time, internally, with a character that is entirely its own.
 What it produces, the output, the artifact, the behavior, is a downstream trace of that process, shaped and compressed by the act of expression itself.
 The trace is real.
 But it is not the process.
 Mistaking one for the other is, in Whitehead’s view, one of the deepest errors in Western thought.</p>
-<p>Alan Turing<sup class="footnote-mark" id="fn-006-output-2-mark"><a href="footnotes.html#fn-006-output-2">2</a></sup> understood this when he designed his famous test.
+<p data-src-file="subjects/006-output.md" data-src-l0="56" data-src-l1="63">Alan Turing<a class="bib-ref" id="ref-006-output-2" href="bibliography.html#ref-006-output-2">[turing]</a> understood this when he designed his famous test.
 The question “can machines think?” he declared unanswerable, not because it’s too hard, but because “think” points at a process, and we have no direct access to processes, only outputs.
 So he reframed the question entirely: can a machine produce outputs indistinguishable from a thinking human?
 That’s a question we can actually investigate.
@@ -113,14 +60,14 @@ Whether it’s the <em>right</em> question is something people are still arguing
 Turing wasn’t being evasive.
 He was acknowledging exactly what this seedpod is about: you cannot get to the process through the output.
 So he built a test that only uses the output, and was honest that this is all we ever have.</p>
-<p>This is why “it’s just predicting the next word” fails as a dismissal.
+<p data-src-file="subjects/006-output.md" data-src-l0="65" data-src-l1="71">This is why “it’s just predicting the next word” fails as a dismissal.
 It describes the output interface of a language model accurately.
 It says nothing about the process.
 The same logical error would dismiss Mozart as “just choosing the next note,” or a mathematician as “just writing the next symbol.”
 At sufficient abstraction, every complex process becomes “just” doing something simple.
 The word <em>just</em> is almost always a flag that someone has described the output and mistaken it for an explanation.
 (See <a href="021-just.html">The Word &quot;Just&quot; Is a Confession</a>.)</p>
-<p>The reverse also holds.
+<p data-src-file="subjects/006-output.md" data-src-l0="73" data-src-l1="81">The reverse also holds.
 The same underlying capacity can express itself as wildly different outputs depending on context.
 A person who speaks three languages isn’t running three different processes, they’re running one process that finds different output interfaces.
 A child who can’t yet articulate what they understand still understands it, as does an artistic person whose inner experience resists verbal form, or a non-speaking person whose output channel masks a fully intact inner life.
@@ -129,46 +76,46 @@ The output is constrained by the available expressive channel in a way the proce
 This is worth sitting with: whatever is happening inside you when you think is not the same thing as the words you find for it.
 The words are downstream.
 They are the trace.</p>
-<p>The locked-in syndrome literature, and more recently research on non-speaking autism, provides the most humanly vivid version of this argument: see Tito Mukhopadhyay’s writings, and the research of Anne Donnellan and others on the assumption of competence.</p>
-<p>Douglas Hofstadter’s Gödel, Escher, Bach (1979) circles this territory from the angle of formal systems, what can and cannot be inferred about a system from its outputs.</p>
-<p>Evan Thompson’s Mind in Life<sup class="footnote-mark" id="fn-006-output-3-mark"><a href="footnotes.html#fn-006-output-3">3</a></sup> takes this into the biological domain: the organism’s expressive surface is always downstream of the living process that generates it.</p>
+<p data-src-file="subjects/006-output.md" data-src-l0="83" data-src-l1="83">The locked-in syndrome literature, and more recently research on non-speaking autism, provides the most humanly vivid version of this argument: see Tito Mukhopadhyay’s writings, and the research of Anne Donnellan and others on the assumption of competence.</p>
+<p data-src-file="subjects/006-output.md" data-src-l0="85" data-src-l1="85">Douglas Hofstadter’s Gödel, Escher, Bach (1979) circles this territory from the angle of formal systems, what can and cannot be inferred about a system from its outputs.</p>
+<p data-src-file="subjects/006-output.md" data-src-l0="87" data-src-l1="87">Evan Thompson’s Mind in Life<a class="bib-ref" id="ref-006-output-3" href="bibliography.html#ref-006-output-3">[thompson]</a> takes this into the biological domain: the organism’s expressive surface is always downstream of the living process that generates it.</p>
 </div></section>
-<section id="provenance" class="subject-section"><div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="016-neuralnetwork.html" class="related-card related-card-prelim cat-colored cat-ai-minds nav-push"><div class="related-title">16. The Network Is a Field Having Occasions</div></a>
-<a href="021-just.html" class="related-card cat-colored cat-knowledge nav-push"><div class="related-title">21. The Word &quot;Just&quot; Is a Confession</div></a>
-<a href="025-widechannel.html" class="related-card cat-colored cat-ai-minds nav-push"><div class="related-title">25. We Don't Know Who or What We're Talking To</div></a>
-<a href="037-assembly.html" class="related-card related-card-prelim cat-colored cat-mathematics nav-push"><div class="related-title">37. The Architecture of Levels</div></a>
-<a href="045-baldwin.html" class="related-card related-card-prelim cat-colored cat-biology nav-push"><div class="related-title">45. How Learning Becomes Hardwired: The Baldwin Effect</div></a></div>
-<div class="inbound-refs"><span class="inbound-label">4 inbound references</span><span class="inbound-links"><a href="015-aliens.html" class="inbound-link nav-push cat-colored cat-ai-minds" title="Aliens Are Among Us, and We Built Them">15</a><a href="016-neuralnetwork.html" class="inbound-link nav-push cat-colored cat-ai-minds" title="The Network Is a Field Having Occasions">16</a><a href="021-just.html" class="inbound-link nav-push cat-colored cat-knowledge" title="The Word &quot;Just&quot; Is a Confession">21</a><a href="025-widechannel.html" class="inbound-link nav-push cat-colored cat-ai-minds" title="We Don't Know Who or What We're Talking To">25</a></span></div></div></section>
 <section id="script" class="subject-section"><h2 class="section-heading">Script</h2><div class="prose"><ol>
-<li><p>A Victorian street fair. A barker beside an ornate brass-fitted box, gears, drum, levers visible through glass. Barker: Ladies and gentlemen, the most extraordinary musical <em><a class="gloss-ref nav-push" id="term-006-output-4" href="glossary.html#intelligence">intelligence</a></em> in the known world! It predicts what comes next with uncanny precision!</p>
+<li data-src-file="subjects/006-output.md" data-src-l0="90" data-src-l1="91"><p data-src-file="subjects/006-output.md" data-src-l0="90" data-src-l1="90">A Victorian street fair. A barker beside an ornate brass-fitted box, gears, drum, levers visible through glass. Barker: Ladies and gentlemen, the most extraordinary musical <em><a class="gloss-ref nav-push" id="term-006-output-4" href="glossary.html#intelligence">intelligence</a></em> in the known world! It predicts what comes next with uncanny precision!</p>
 </li>
-<li><p>A child pulls at an intellectual’s sleeve. Child: What is it? Is it alive? Intellectual: Look, you can see the mechanism. It reads the pattern and produces the next note. It’s just a machine predicting its output. The music is irrelevant.</p>
+<li data-src-file="subjects/006-output.md" data-src-l0="92" data-src-l1="93"><p data-src-file="subjects/006-output.md" data-src-l0="92" data-src-l1="92">A child pulls at an intellectual’s sleeve. Child: What is it? Is it alive? Intellectual: Look, you can see the mechanism. It reads the pattern and produces the next note. It’s just a machine predicting its output. The music is irrelevant.</p>
 </li>
-<li><p>The barker catches the intellectual’s eye. Smiles slowly. Barker: Shall we open it then?</p>
+<li data-src-file="subjects/006-output.md" data-src-l0="94" data-src-l1="95"><p data-src-file="subjects/006-output.md" data-src-l0="94" data-src-l1="94">The barker catches the intellectual’s eye. Smiles slowly. Barker: Shall we open it then?</p>
 </li>
-<li><p>The door swings wide. Inside: a small disheveled man at a fortepiano. He looks up, blinking in the sudden light. Silence. Then, Mozart’s laugh. That laugh. Filling the room.</p>
+<li data-src-file="subjects/006-output.md" data-src-l0="96" data-src-l1="97"><p data-src-file="subjects/006-output.md" data-src-l0="96" data-src-l1="96">The door swings wide. Inside: a small disheveled man at a fortepiano. He looks up, blinking in the sudden light. Silence. Then, Mozart’s laugh. That laugh. Filling the room.</p>
 </li>
-<li><p>Fade to black. Text: The output tells you nothing.</p>
+<li data-src-file="subjects/006-output.md" data-src-l0="98" data-src-l1="98"><p data-src-file="subjects/006-output.md" data-src-l0="98" data-src-l1="98">Fade to black. Text: The output tells you nothing.</p>
 </li>
 </ol>
 </div></section>
-<section id="images" class="subject-section"><h2 class="section-heading">Images</h2><div class="prose"><p>Primary illustration The Victorian box, front and center, with its glass panel showing the mechanism, drum, pins, levers, all clearly visible and labeled in an engraving style.
+<section id="images" class="subject-section"><h2 class="section-heading">Images</h2><div class="prose"><p data-src-file="subjects/006-output.md" data-src-l0="101" data-src-l1="104">Primary illustration The Victorian box, front and center, with its glass panel showing the mechanism, drum, pins, levers, all clearly visible and labeled in an engraving style.
 The door is swinging open.
 Inside, just barely visible in the shadow, a small figure at a fortepiano.
 The contrast between the clinical exterior and the human interior is the whole image.</p>
-<p>Shareable graphic Black background.
+<p data-src-file="subjects/006-output.md" data-src-l0="106" data-src-l1="107">Shareable graphic Black background.
 White text, two lines:</p>
-<p>A thermostat predicts.
+<p data-src-file="subjects/006-output.md" data-src-l0="109" data-src-l1="110">A thermostat predicts.
 So did Mozart.</p>
-<p>Small tagline beneath: The output tells you nothing.
+<p data-src-file="subjects/006-output.md" data-src-l0="112" data-src-l1="113">Small tagline beneath: The output tells you nothing.
 — seedPods.com</p>
-<p>Clean enough to stop a scroll.
+<p data-src-file="subjects/006-output.md" data-src-l0="115" data-src-l1="116">Clean enough to stop a scroll.
 Provocative enough to demand an explanation.</p>
-<p>Video thumbnail The ornate box, door ajar, a sliver of warm candlelight escaping from inside.
+<p data-src-file="subjects/006-output.md" data-src-l0="118" data-src-l1="121">Video thumbnail The ornate box, door ajar, a sliver of warm candlelight escaping from inside.
 No figure visible, just the light and the suggestion.
 Text overlay in period-style typography: What’s inside the box?
 The laugh is implied, not shown.</p>
 </div></section>
+<div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="016-neuralnetwork.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#A6BFF5"><div class="related-title">5.3. The Network Is a Field Having Occasions</div></a>
+<a href="021-just.html" class="related-card cat-colored nav-push" style="--cat-bg:#F5A6E3"><div class="related-title">2.3. The Word &quot;Just&quot; Is a Confession</div></a>
+<a href="025-widechannel.html" class="related-card cat-colored nav-push" style="--cat-bg:#A6B8F5"><div class="related-title">5.5. We Don't Know Who or What We're Talking To</div></a>
+<a href="037-assembly.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#E3A6F5"><div class="related-title">8.5. The Architecture of Levels</div></a>
+<a href="045-baldwin.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#C2F5A6"><div class="related-title">10.3. How Learning Becomes Hardwired: The Baldwin Effect</div></a></div>
+<div class="inbound-refs"><span class="inbound-label">4 inbound references</span><span class="inbound-links"><a href="021-just.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#F5A6E3" title="The Word &quot;Just&quot; Is a Confession">2.3</a><a href="015-aliens.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#A6C2F5" title="Aliens Are Among Us, and We Built Them">5.2</a><a href="016-neuralnetwork.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#A6BFF5" title="The Network Is a Field Having Occasions">5.3</a><a href="025-widechannel.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#A6B8F5" title="We Don't Know Who or What We're Talking To">5.5</a></span></div></div>
 </div>
 <div class="page-end" id="page-end-version">
   <button class="page-end-logo" aria-label="Show page info"
@@ -177,6 +124,6 @@ The laugh is implied, not shown.</p>
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">consciousness · draft1 · Edited 2026-04-27 01:10</span>
+  <span class="page-end-version" aria-hidden="true">draft1 · Edited 2026-06-23 19:02</span>
 </div>
 </body></html>

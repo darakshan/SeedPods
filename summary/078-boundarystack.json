@@ -1,0 +1,33 @@
+{
+  "narrative" : "Argues that the boundary between two interiorities is not a surface but a layered stack of serial transductions — communication itself — and that this stack is fractal, with the same structure of inside-meeting-inside recurring at every scale from synaptic transmission to philosophical dialogue. The chapter distinguishes exterior boundaries (surfaces) from interior boundaries (acts), introduces the boundary-stack as the apparatus through which contact is possible at all, and draws on the OSI model, Koestler's holons, and Mandelbrot's self-similarity to show that the mystery of communication is not failure but that anything gets through.",
+  "schema" : 1,
+  "subject" : "078-boundarystack.md",
+  "subject-sha" : "sha256:bd9c2eb7c449322f997c8593b2b2cd00343d324c11b1c4f15bb9301c257b6c5f",
+  "terms" : [
+    {
+      "canonical" : "OSI reference model",
+      "weight" : 0.5
+    },
+    {
+      "canonical" : "Mandelbrot",
+      "weight" : 0.4
+    },
+    {
+      "canonical" : "Koestler",
+      "weight" : 0.4
+    },
+    {
+      "canonical" : "Whitehead",
+      "weight" : 0.5
+    }
+  ],
+  "themes" : [
+    "communication",
+    "fractality",
+    "interiority",
+    "holons",
+    "transduction",
+    "boundary"
+  ],
+  "updated-at" : "2026-06-20T21:19:07Z"
+}

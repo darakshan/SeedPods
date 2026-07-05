@@ -1,0 +1,45 @@
+{
+  "narrative" : "Pairs Whitehead's process philosophy — experience as an intrinsic feature of every event, all the way down — with Teilhard de Chardin's directional cosmology pointing toward the Omega Point, arguing that consciousness is not an accident of the universe but its culminating act of self-discovery. The chapter frames human awareness as the universe arriving at something it was always developing toward, and positions Sagan's famous phrase as the surface expression of a deeper metaphysical claim.",
+  "schema" : 1,
+  "subject" : "036-universenoticing.md",
+  "subject-sha" : "sha256:34e8bfaae0c46a586b7504dcc453799e2eed10d045149aea0067200b6ff285df",
+  "terms" : [
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "Teilhard de Chardin",
+      "weight" : 1
+    },
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "Whitehead",
+      "weight" : 1
+    },
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "Carl Sagan",
+      "weight" : 0.5
+    },
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "cosmic microwave background",
+      "weight" : 0.4
+    }
+  ],
+  "themes" : [
+    "cosmology",
+    "consciousness",
+    "process philosophy",
+    "evolution",
+    "self-awareness",
+    "teleology"
+  ],
+  "updated-at" : "2026-06-20T21:02:34Z"
+}

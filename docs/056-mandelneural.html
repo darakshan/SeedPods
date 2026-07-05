@@ -3,93 +3,40 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Neural Networks as High-Dimensional Mandelbrot Sets · Untitled</title>
+<title>9.6 Neural Networks as High-Dimensional Mandelbrot Sets · SeedPods</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;600&family=DM+Mono:wght@300;400&display=swap">
 <link rel="icon" href="logo.svg">
-<link rel="preload" href="nav.html" as="fetch" crossorigin>
 <link rel="stylesheet" href="site.css">
 <script src="pods.js"></script>
 <script src="nav.js"></script>
-<script>
-/* Live reload: subscribe to this project's build stream and hard-reload
-   when a build touches THIS page (or a shared asset) — so a user merely
-   *viewing* a shared project sees another user's edit without manually
-   refreshing. An unrelated page's change only advances the baseline; it
-   does not reload. A full rebuild, or a build missed while suspended /
-   back-forward-cached (reconnect snapshot), reloads unconditionally
-   since we can't safely diff it. EventSource auto-reconnects and the
-   server re-sends the current generation on every (re)connect. */
-(function(){
-  if(window.__gossLive)return;window.__gossLive=1;
-  var base=null,es=null;
-  var SHARED={"site.css":1,"nav.html":1,"nav.js":1,"pods.js":1,
-              "search-index.json":1,"logo.svg":1};
-  function myPage(){
-    var p;try{p=decodeURIComponent(location.pathname);}catch(_){p=location.pathname;}
-    var i=p.indexOf("/site/");
-    var rest=i>=0?p.slice(i+6):p.replace(/^\/+/,"");
-    if(rest===""||rest.charAt(rest.length-1)==="/")rest+="index.html";
-    return rest;
-  }
-  function relevant(list){
-    if(!list||!list.length)return false;
-    var me=myPage();
-    for(var k=0;k<list.length;k++){
-      if(list[k]===me||SHARED[list[k]])return true;
-    }
-    return false;
-  }
-  function handle(ev){
-    var d;try{d=JSON.parse(ev.data);}catch(_){return;}
-    var g=d.gen;if(typeof g!=="number")return;
-    if(base===null){base=g;return;}
-    if(g===base)return;
-    if(d.full===true){location.reload();return;}
-    if(Object.prototype.toString.call(d.changed)==="[object Array]"){
-      if(relevant(d.changed))location.reload();else base=g;
-      return;
-    }
-    location.reload(); /* snapshot after a missed build */
-  }
-  function open(){
-    if(es&&es.readyState!==2)return;
-    try{es=new EventSource("/site/__live");}catch(_){return;}
-    es.onmessage=handle;
-  }
-  open();
-  window.addEventListener("pageshow",function(e){if(e.persisted)open();});
-  document.addEventListener("visibilitychange",function(){
-    if(document.visibilityState==="visible")open();
-  });
-})();
-</script>
+<script src="live.js"></script>
 </head>
 <body>
-<div id="nav-mount" style="min-height:3rem"></div>
+<nav class="site-nav" data-pod-filename="056-mandelneural"><span class="nav-title">SeedPods</span><div class="nav-right"><a class="nav-home" href="toc.html" aria-label="Contents" title="Contents"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></a><button type="button" class="nav-search-btn" onclick="seedNavOpenSearch()" aria-label="Search" title="Search"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></button><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true" title="Previous"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true" title="Next"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></span></div></nav>
 <div class="wrap">
-  <div class="subject-header fade cat-colored cat-ai-minds"><h1>Neural Networks as High-Dimensional Mandelbrot Sets</h1><p class="premise"><em><a class="gloss-ref nav-push" href="glossary.html#training">Training</a></em> a <em><a class="gloss-ref nav-push" href="glossary.html#neural-networks">neural network</a></em> is computing a <em><a class="gloss-ref nav-push" href="glossary.html#mandelbrot-set">Mandelbrot set</a></em> in hundreds of thousands of dimensions, weight space is the complex plane, the loss landscape is the iteration, and the best models sit on the boundary between convergence and escape, which is not metaphor but structural homology.</p><div class="subject-nav-row" data-pod-filename="056-mandelneural"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Subject 56</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
-  <section id="proto" class="subject-section"><h2 class="section-heading">Proto</h2><div class="prose"><p>Training a neural network is, in a precise sense, computing a Mandelbrot set in a space of hundreds of thousands of dimensions.</p>
-<p>The <em><a class="gloss-ref nav-push" id="term-056-mandelneural-1" href="glossary.html#weight-space">weight space</a></em> is the high-dimensional analog of the complex plane.
+  <div class="subject-header fade cat-colored" style="--cat-bg:#A6F5BD"><h1>9.6 Neural Networks as High-Dimensional Mandelbrot Sets</h1><p class="premise"><em><a class="gloss-ref nav-push" href="glossary.html#training">Training</a></em> a <em><a class="gloss-ref nav-push" href="glossary.html#neural-networks">neural network</a></em> is computing a <em><a class="gloss-ref nav-push" href="glossary.html#mandelbrot-set">Mandelbrot set</a></em> in hundreds of thousands of dimensions, weight space is the complex plane, the loss landscape is the iteration, and the best models sit on the boundary between convergence and escape, which is not metaphor but structural homology.</p></div>
+  <section id="proto" class="subject-section"><h2 class="section-heading">Proto</h2><div class="prose"><p data-src-file="subjects/056-mandelneural.md" data-src-l0="11" data-src-l1="11">Training a neural network is, in a precise sense, computing a Mandelbrot set in a space of hundreds of thousands of dimensions.</p>
+<p data-src-file="subjects/056-mandelneural.md" data-src-l0="13" data-src-l1="15">The <em><a class="gloss-ref nav-push" id="term-056-mandelneural-1" href="glossary.html#weight-space">weight space</a></em> is the high-dimensional analog of the complex plane.
 The loss landscape is the iteration, each training step applies the rule, adjusts the weights, and checks whether the system is converging or diverging.
 The trained network is a point that didn’t escape, a stable attractor in weight space.</p>
-<p>The boundary between convergence and divergence in weight space is where the interesting behavior lives.
+<p data-src-file="subjects/056-mandelneural.md" data-src-l0="17" data-src-l1="19">The boundary between convergence and divergence in weight space is where the interesting behavior lives.
 Models near that boundary generalize well, they are poised between memorizing training data (stable interior) and failing to learn anything (escape to infinity).
 The best models sit on the edge.</p>
-<p>The bulbs of the Mandelbrot set correspond to the <em><a class="gloss-ref nav-push" id="term-056-mandelneural-2" href="glossary.html#basin-of-attraction">basins of attraction</a></em>, the regions of weight space that converge to good solutions.
+<p data-src-file="subjects/056-mandelneural.md" data-src-l0="21" data-src-l1="23">The bulbs of the Mandelbrot set correspond to the <em><a class="gloss-ref nav-push" id="term-056-mandelneural-2" href="glossary.html#basin-of-attraction">basins of attraction</a></em>, the regions of weight space that converge to good solutions.
 Larger bulbs correspond to more robust solutions, reachable from a wider range of starting points.
 The branching structure of the boundary corresponds to the fine structure of <em><a class="gloss-ref nav-push" id="term-056-mandelneural-3" href="glossary.html#generalization">generalization</a></em>, the increasingly subtle distinctions a deep model can make.</p>
-<p>This is not a metaphor.
+<p data-src-file="subjects/056-mandelneural.md" data-src-l0="25" data-src-l1="26">This is not a metaphor.
 It is a structural homology between two iterative dynamical systems, one in two dimensions and one in hundreds of thousands.</p>
-<figure class="directive-image directive-image--left"><img src="images/056-mandelneural.jpg" alt=""><figcaption>Julia set: neural network state space as fractal geometry <cite>Wikimedia Commons</cite></figcaption></figure>
+<figure id="image-056-mandelneural-1" class="directive-image directive-image--left"><img src="images/056-mandelneural-l.jpg" alt=""><figcaption>Julia set: neural network state space as fractal geometry <cite>Wikimedia Commons</cite></figcaption></figure>
 </div></section>
-<section id="provenance" class="subject-section"><div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="009-randomness.html" class="related-card cat-colored cat-biology nav-push"><div class="related-title">9. Structure Is What Randomness Does</div></a>
-<a href="011-moreisdifferent.html" class="related-card related-card-prelim cat-colored cat-consciousness nav-push"><div class="related-title">11. More Is Different</div></a>
-<a href="034-onerule.html" class="related-card related-card-prelim cat-colored cat-mathematics nav-push"><div class="related-title">34. One Rule Is Enough</div></a>
-<a href="038-consonance-map.html" class="related-card related-card-prelim cat-colored cat-feeling nav-push"><div class="related-title">38. The Surprising Consonance Map</div></a>
-<a href="053-dimensions.html" class="related-card related-card-prelim cat-colored cat-mathematics nav-push"><div class="related-title">53. The Virtual Dimensions Formula as a Publishable Conjecture</div></a></div>
-<div class="inbound-refs"><span class="inbound-label">7 inbound references</span><span class="inbound-links"><a href="018-magnetization.html" class="inbound-link nav-push cat-colored cat-knowledge" title="Ideas Magnetize Through a Group Like Iron">18</a><a href="033-edge.html" class="inbound-link nav-push cat-colored cat-feeling" title="The Edge Is Where Everything Happens">33</a><a href="038-consonance-map.html" class="inbound-link nav-push cat-colored cat-feeling" title="The Surprising Consonance Map">38</a><a href="049-strangeloop.html" class="inbound-link nav-push cat-colored cat-consciousness" title="The Strange Loop That Contains Itself">49</a><a href="053-dimensions.html" class="inbound-link nav-push cat-colored cat-mathematics" title="The Virtual Dimensions Formula as a Publishable Conjecture">53</a><a href="063-mandelcrystals.html" class="inbound-link nav-push cat-colored cat-mathematics" title="Mandelbrot Structure in Physical Crystals">63</a><a href="072-temperature.html" class="inbound-link nav-push cat-colored cat-feeling" title="Temperature">72</a></span></div></div></section>
+<div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="009-randomness.html" class="related-card cat-colored nav-push" style="--cat-bg:#F5A6D7"><div class="related-title">2.6. Structure Is What Randomness Does</div></a>
+<a href="011-moreisdifferent.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#F5A6DB"><div class="related-title">2.5. More Is Different</div></a>
+<a href="034-onerule.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#F5E9A6"><div class="related-title">3.6. One Rule Is Enough</div></a>
+<a href="038-consonance-map.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#F5DEA6"><div class="related-title">3.3. The Surprising Consonance Map</div></a>
+<a href="053-dimensions.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#A6F5C3"><div class="related-title">9.8. The Virtual Dimensions Formula as a Publishable Conjecture</div></a></div>
+<div class="inbound-refs"><span class="inbound-label">7 inbound references</span><span class="inbound-links"><a href="038-consonance-map.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#F5DEA6" title="The Surprising Consonance Map">3.3</a><a href="033-edge.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#F5E5A6" title="The Edge Is Where Everything Happens">3.5</a><a href="018-magnetization.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#E9F5A6" title="Ideas Magnetize Through a Group Like Iron">6.2</a><a href="072-temperature.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#C9A6F5" title="Temperature">7.8</a><a href="053-dimensions.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#A6F5C3" title="The Virtual Dimensions Formula as a Publishable Conjecture">9.8</a><a href="063-mandelcrystals.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#A6F5C6" title="Mandelbrot Structure in Physical Crystals">9.9</a><a href="049-strangeloop.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#AFF5A6" title="The Strange Loop That Contains Itself">10.10</a></span></div></div>
 </div>
 <div class="page-end" id="page-end-version">
   <button class="page-end-logo" aria-label="Show page info"
@@ -98,6 +45,6 @@ It is a structural homology between two iterative dynamical systems, one in two 
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">AI-minds · proto · Edited 2026-04-27 01:07</span>
+  <span class="page-end-version" aria-hidden="true">proto · Edited 2026-06-23 19:02</span>
 </div>
 </body></html>

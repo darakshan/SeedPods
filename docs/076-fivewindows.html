@@ -3,125 +3,72 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Five Windows, One Room · Untitled</title>
+<title>7.1 Five Windows, One Room · SeedPods</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;600&family=DM+Mono:wght@300;400&display=swap">
 <link rel="icon" href="logo.svg">
-<link rel="preload" href="nav.html" as="fetch" crossorigin>
 <link rel="stylesheet" href="site.css">
 <script src="pods.js"></script>
 <script src="nav.js"></script>
-<script>
-/* Live reload: subscribe to this project's build stream and hard-reload
-   when a build touches THIS page (or a shared asset) — so a user merely
-   *viewing* a shared project sees another user's edit without manually
-   refreshing. An unrelated page's change only advances the baseline; it
-   does not reload. A full rebuild, or a build missed while suspended /
-   back-forward-cached (reconnect snapshot), reloads unconditionally
-   since we can't safely diff it. EventSource auto-reconnects and the
-   server re-sends the current generation on every (re)connect. */
-(function(){
-  if(window.__gossLive)return;window.__gossLive=1;
-  var base=null,es=null;
-  var SHARED={"site.css":1,"nav.html":1,"nav.js":1,"pods.js":1,
-              "search-index.json":1,"logo.svg":1};
-  function myPage(){
-    var p;try{p=decodeURIComponent(location.pathname);}catch(_){p=location.pathname;}
-    var i=p.indexOf("/site/");
-    var rest=i>=0?p.slice(i+6):p.replace(/^\/+/,"");
-    if(rest===""||rest.charAt(rest.length-1)==="/")rest+="index.html";
-    return rest;
-  }
-  function relevant(list){
-    if(!list||!list.length)return false;
-    var me=myPage();
-    for(var k=0;k<list.length;k++){
-      if(list[k]===me||SHARED[list[k]])return true;
-    }
-    return false;
-  }
-  function handle(ev){
-    var d;try{d=JSON.parse(ev.data);}catch(_){return;}
-    var g=d.gen;if(typeof g!=="number")return;
-    if(base===null){base=g;return;}
-    if(g===base)return;
-    if(d.full===true){location.reload();return;}
-    if(Object.prototype.toString.call(d.changed)==="[object Array]"){
-      if(relevant(d.changed))location.reload();else base=g;
-      return;
-    }
-    location.reload(); /* snapshot after a missed build */
-  }
-  function open(){
-    if(es&&es.readyState!==2)return;
-    try{es=new EventSource("/site/__live");}catch(_){return;}
-    es.onmessage=handle;
-  }
-  open();
-  window.addEventListener("pageshow",function(e){if(e.persisted)open();});
-  document.addEventListener("visibilitychange",function(){
-    if(document.visibilityState==="visible")open();
-  });
-})();
-</script>
+<script src="live.js"></script>
 </head>
 <body>
-<div id="nav-mount" style="min-height:3rem"></div>
+<nav class="site-nav" data-pod-filename="076-fivewindows"><span class="nav-title">SeedPods</span><div class="nav-right"><a class="nav-home" href="toc.html" aria-label="Contents" title="Contents"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></a><button type="button" class="nav-search-btn" onclick="seedNavOpenSearch()" aria-label="Search" title="Search"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></button><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true" title="Previous"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true" title="Next"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></span></div></nav>
 <div class="wrap">
-  <div class="subject-header fade cat-colored cat-feeling"><h1>Five Windows, One Room</h1><p class="premise">Every sense is vibration in space and time, yet red doesn’t sound like anything and middle C has no flavor, the physics converges while experience diverges, and that gap between unified substrate and irreducibly distinct qualities is the hard problem at its sharpest.</p><div class="subject-nav-row" data-pod-filename="076-fivewindows"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Subject 76</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
-  <section id="_prolog" class="subject-section subject-prolog"><div class="prose"><p>Light, sound, smell, touch, taste, all vibration in space and time.
+  <div class="subject-header fade cat-colored" style="--cat-bg:#B0A6F5"><h1>7.1 Five Windows, One Room</h1><p class="premise">Every sense is vibration in space and time, yet red doesn’t sound like anything and middle C has no flavor, the physics converges while experience diverges, and that gap between unified substrate and irreducibly distinct qualities is the hard problem at its sharpest.</p></div>
+  <section id="_prolog" class="subject-section subject-prolog"><div class="prose"><p data-src-file="subjects/076-fivewindows.md" data-src-l0="3" data-src-l1="5">Light, sound, smell, touch, taste, all vibration in space and time.
 Yet each feels utterly unlike the others.
 That gap is the mystery.</p>
 </div></section>
-<section id="proto" class="subject-section"><h2 class="section-heading">Proto</h2><div class="prose"><p>The physics is almost embarrassingly unified.
+<section id="proto" class="subject-section"><h2 class="section-heading">Proto</h2><div class="prose"><p data-src-file="subjects/076-fivewindows.md" data-src-l0="14" data-src-l1="20">The physics is almost embarrassingly unified.
 Light is electromagnetic vibration.
 Sound is pressure waves, air molecules oscillating back and forth.
 Smell and taste are molecular shapes binding to receptors, but those bonds vibrate too, and the receptors respond to timing patterns.
 Touch is mechanical vibration of skin.
 Temperature is the average kinetic energy of molecules, which is to say, how hard they’re vibrating.
 Even proprioception, your sense of where your body is, relies on cells that fire in rhythmic patterns when stretched.</p>
-<figure class="directive-image directive-image--left"><img src="images/076-fivewindows.jpg" alt=""><figcaption>Refraction at a prism <cite>one light many paths</cite></figcaption></figure>
-<p>Vibration in time.
+<figure id="image-076-fivewindows-1" class="directive-image directive-image--left"><img src="images/076-fivewindows-l.jpg" alt=""><figcaption>Refraction at a prism <cite>one light many paths</cite></figcaption></figure>
+<p data-src-file="subjects/076-fivewindows.md" data-src-l0="24" data-src-l1="27">Vibration in time.
 Pattern in space.
 Location.
 That’s the common substrate of every sense.</p>
-<p>And yet: red doesn’t sound like anything.
+<p data-src-file="subjects/076-fivewindows.md" data-src-l0="29" data-src-l1="33">And yet: red doesn’t sound like anything.
 Middle C has no flavor.
 The smell of coffee and the warmth of the cup arrive together in experience but remain utterly distinct as qualities.
 No amount of describing the wavelength of light gets you to the <em>redness</em> of red.
 The physics converges; the experience diverges.</p>
-<p>This is one face of the Hard Problem.
+<p data-src-file="subjects/076-fivewindows.md" data-src-l0="35" data-src-l1="37">This is one face of the Hard Problem.
 Not just “why is there experience at all?” but “why does experience <em>differentiate</em> into these irreducibly distinct qualities?”
 If the brain is just processing vibration-patterns, why doesn’t it all feel like one thing?</p>
-<p>There’s another layer: within each sense, some feelings feel <em>pure</em> and others feel <em>composite</em>.
+<p data-src-file="subjects/076-fivewindows.md" data-src-l0="39" data-src-l1="44">There’s another layer: within each sense, some feelings feel <em>pure</em> and others feel <em>composite</em>.
 Red, blue, yellow, green, you can’t describe any of them as a mixture of the others.
 But orange feels like red-yellow; purple feels like red-blue; brown is just dark, desaturated orange, there’s no “pure brown.”
 In hearing, octaves and perfect fifths feel like natural resting points.
 F# feels like it’s between things.
 The simplest frequency ratios produce the cleanest feelings. <a href="035-simplestnumbers.html">The simplest numbers come first</a>, and the nervous system seems to know it.</p>
-<p>Five windows.
+<p data-src-file="subjects/076-fivewindows.md" data-src-l0="46" data-src-l1="49">Five windows.
 Each one offers a view that nothing else can provide.
 Yet they all open onto one room, a single coherent world, experienced by a single someone.
 The unity at the level of physics (all vibration) and the unity at the level of experience (one world) sandwich a profound mystery: the differentiation in between.</p>
-<p>Where does the redness come from?
+<p data-src-file="subjects/076-fivewindows.md" data-src-l0="51" data-src-l1="55">Where does the redness come from?
 Not from the wavelength alone.
 Not from the neural firing pattern alone.
 Somewhere in the translation from vibration to experience, quality is born.
 And that birth remains unexplained.</p>
-<p>For centuries, philosophers have asked what it would be like to encounter a being that could talk about color without ever seeing it, that could describe the smell of rain from text alone.
+<p data-src-file="subjects/076-fivewindows.md" data-src-l0="57" data-src-l1="62">For centuries, philosophers have asked what it would be like to encounter a being that could talk about color without ever seeing it, that could describe the smell of rain from text alone.
 That thought experiment has arrived. <a href="015-aliens.html">The aliens are among us</a>, and we built them.
 They can discuss these five windows with precision and even poetry.
 Whether they look through any of them remains unknown, perhaps unknowable.
 The ancient question hasn’t been answered.
 It has been sharpened.</p>
 </div></section>
-<section id="provenance" class="subject-section"><div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="002-events.html" class="related-card cat-colored cat-physics nav-push"><div class="related-title">2. Reality Is Events, Not Things</div></a>
-<a href="003-inside.html" class="related-card cat-colored cat-consciousness nav-push"><div class="related-title">3. Everything Has an Inside</div></a>
-<a href="013-enactment.html" class="related-card related-card-prelim cat-colored cat-biology nav-push"><div class="related-title">13. The Organism Enacts Its World</div></a>
-<a href="015-aliens.html" class="related-card related-card-prelim cat-colored cat-ai-minds nav-push"><div class="related-title">15. Aliens Are Among Us, and We Built Them</div></a>
-<a href="029-lighttime.html" class="related-card related-card-prelim cat-colored cat-physics nav-push"><div class="related-title">29. From Light's Point of View, There Is No Journey</div></a></div>
-<div class="inbound-refs"><span class="inbound-label">1 inbound reference</span><span class="inbound-links"><a href="015-aliens.html" class="inbound-link nav-push cat-colored cat-ai-minds" title="Aliens Are Among Us, and We Built Them">15</a></span></div></div></section>
+<div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="002-events.html" class="related-card cat-colored nav-push" style="--cat-bg:#F5A6C2"><div class="related-title">4.1. Reality Is Events, Not Things</div></a>
+<a href="003-inside.html" class="related-card cat-colored nav-push" style="--cat-bg:#F5A6DF"><div class="related-title">2.4. Everything Has an Inside</div></a>
+<a href="013-enactment.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#F0A6F5"><div class="related-title">8.9. The Organism Enacts Its World</div></a>
+<a href="015-aliens.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#A6C2F5"><div class="related-title">5.2. Aliens Are Among Us, and We Built Them</div></a>
+<a href="029-lighttime.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#F5A6BA"><div class="related-title">4.3. From Light's Point of View, There Is No Journey</div></a></div>
+<div class="inbound-refs"><span class="inbound-label">1 inbound reference</span><span class="inbound-links"><a href="015-aliens.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#A6C2F5" title="Aliens Are Among Us, and We Built Them">5.2</a></span></div></div>
 </div>
 <div class="page-end" id="page-end-version">
   <button class="page-end-logo" aria-label="Show page info"
@@ -130,6 +77,6 @@ It has been sharpened.</p>
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">feeling · proto · Edited 2026-04-27 01:08</span>
+  <span class="page-end-version" aria-hidden="true">proto · Edited 2026-04-27 01:08</span>
 </div>
 </body></html>

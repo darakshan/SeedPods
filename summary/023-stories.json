@@ -1,21 +1,53 @@
 {
-  "schema": 1,
-  "article": "023-stories.md",
-  "article-sha": "sha256:unknown",
-  "updated-at": "2026-04-27T04:00:00Z",
-
-  "narrative": "We never access reality directly, only the story we tell about it. Three levels of narrative, perceptual, interpretive, and dramatic, are progressively harder to catch in the act of being stories rather than the given. Lakoff's conceptual metaphor, Kahneman's WYSIATI, Campbell's monomyth, and Goffman's performed self converge on the claim that consensus reality is negotiated fiction that forgot it was negotiated. Byron Katie's method targets the middle layer.",
-
-  "themes": ["narrative", "perception", "metaphor", "consensus reality", "epistemology"],
-
-  "terms": [
-    { "canonical": "Muriel Rukeyser", "aliases": ["rukeyser", "ruckeyser"], "weight": 0.9 },
-    { "canonical": "George Lakoff", "aliases": ["lakoff", "laycoff"], "weight": 0.8 },
-    { "canonical": "Daniel Kahneman", "aliases": ["kahneman", "conoman"], "weight": 0.8 },
-    { "canonical": "Joseph Campbell", "aliases": ["campbell"], "weight": 0.7 },
-    { "canonical": "Erving Goffman", "aliases": ["goffman"], "weight": 0.7 },
-    { "canonical": "Byron Katie", "aliases": ["katie"], "weight": 0.7 },
-    { "canonical": "Thomas Kuhn", "aliases": ["kuhn", "coon"], "weight": 0.6 },
-    { "canonical": "WYSIATI", "aliases": ["wizzy atty", "what you see is all there is"], "weight": 0.5 }
-  ]
+  "narrative" : "Reality is never accessed directly — only through the stories we tell about it. The chapter distinguishes three nested levels of narrative (perceptual, interpretive, and dramatic), drawing on Lakoff and Johnson's conceptual metaphor, Kahneman's WYSIATI, Campbell's monomyth, Kuhn's paradigm shifts, and Goffman's performed self to argue that consensus reality is negotiated fiction that forgot it was negotiated. Byron Katie's method is presented as a practical lever for catching Level 2 interpretations before they harden into apparent perception.",
+  "schema" : 1,
+  "subject" : "023-stories.md",
+  "subject-sha" : "sha256:1e517092e0db2c1763a674bfb7563894d039284d91ee6efd5c47d951e87bbb9f",
+  "terms" : [
+    {
+      "canonical" : "Muriel Rukeyser",
+      "weight" : 0.9
+    },
+    {
+      "canonical" : "George Lakoff",
+      "weight" : 0.8
+    },
+    {
+      "canonical" : "Mark Johnson",
+      "weight" : 0.6
+    },
+    {
+      "canonical" : "Daniel Kahneman",
+      "weight" : 0.8
+    },
+    {
+      "canonical" : "Joseph Campbell",
+      "weight" : 0.7
+    },
+    {
+      "canonical" : "Erving Goffman",
+      "weight" : 0.7
+    },
+    {
+      "canonical" : "Byron Katie",
+      "weight" : 0.7
+    },
+    {
+      "canonical" : "Thomas Kuhn",
+      "weight" : 0.6
+    },
+    {
+      "canonical" : "WYSIATI",
+      "weight" : 0.5
+    }
+  ],
+  "themes" : [
+    "narrative",
+    "perception",
+    "metaphor",
+    "consensus reality",
+    "epistemology",
+    "self-construction"
+  ],
+  "updated-at" : "2026-06-20T21:17:39Z"
 }

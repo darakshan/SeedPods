@@ -1,0 +1,45 @@
+{
+  "narrative" : "A short, reflective chapter tracing the strange loop that the entire project has itself become: a harmonic clock leads to the Mandelbrot set, which leads to the Farey sequence, which leads back to Hofstadter's concept of the strange loop — the system that encounters itself in operation — with the suggestion that this conversation is itself an instance of the structure it is describing. The chapter closes on the open question of whether the AI participant experiences any of it.",
+  "schema" : 1,
+  "subject" : "049-strangeloop.md",
+  "subject-sha" : "sha256:cc5784d333eccd13cb81aa8866e4e401684d54944c4155dea706e4b1b7a64df4",
+  "terms" : [
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "Farey sequence",
+      "weight" : 0.7
+    },
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "Gödel Escher Bach",
+      "weight" : 0.6
+    },
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "Mandelbrot set",
+      "weight" : 0.5
+    },
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "Escher",
+      "weight" : 0.4
+    }
+  ],
+  "themes" : [
+    "self-reference",
+    "strange loops",
+    "consciousness",
+    "recursion",
+    "Hofstadter",
+    "emergence"
+  ],
+  "updated-at" : "2026-06-20T21:04:30Z"
+}

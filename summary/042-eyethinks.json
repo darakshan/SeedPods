@@ -1,0 +1,44 @@
+{
+  "narrative" : "Explains how the retina — embryologically brain tissue — performs opponent-channel recombination of cone signals before any information leaves the eye, establishing that visual interpretation begins one synapse past the photoreceptors, not in the cortex.",
+  "schema" : 1,
+  "subject" : "042-eyethinks.md",
+  "subject-sha" : "sha256:9b656f39c9e791c95b8137dd89590bdec6bd66862c28dc312e66e12e890245ff",
+  "terms" : [
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "Hurvich",
+      "weight" : 0.4
+    },
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "Jameson",
+      "weight" : 0.4
+    },
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "bipolar cells",
+      "weight" : 0.5
+    },
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "retinal ganglion cells",
+      "weight" : 0.5
+    }
+  ],
+  "themes" : [
+    "vision",
+    "perception",
+    "retina",
+    "opponent processing",
+    "early computation"
+  ],
+  "updated-at" : "2026-06-20T21:03:11Z"
+}

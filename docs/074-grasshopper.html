@@ -3,204 +3,151 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Grasshopper Was Right · Untitled</title>
+<title>6.7 The Grasshopper Was Right · SeedPods</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;600&family=DM+Mono:wght@300;400&display=swap">
 <link rel="icon" href="logo.svg">
-<link rel="preload" href="nav.html" as="fetch" crossorigin>
 <link rel="stylesheet" href="site.css">
 <script src="pods.js"></script>
 <script src="nav.js"></script>
-<script>
-/* Live reload: subscribe to this project's build stream and hard-reload
-   when a build touches THIS page (or a shared asset) — so a user merely
-   *viewing* a shared project sees another user's edit without manually
-   refreshing. An unrelated page's change only advances the baseline; it
-   does not reload. A full rebuild, or a build missed while suspended /
-   back-forward-cached (reconnect snapshot), reloads unconditionally
-   since we can't safely diff it. EventSource auto-reconnects and the
-   server re-sends the current generation on every (re)connect. */
-(function(){
-  if(window.__gossLive)return;window.__gossLive=1;
-  var base=null,es=null;
-  var SHARED={"site.css":1,"nav.html":1,"nav.js":1,"pods.js":1,
-              "search-index.json":1,"logo.svg":1};
-  function myPage(){
-    var p;try{p=decodeURIComponent(location.pathname);}catch(_){p=location.pathname;}
-    var i=p.indexOf("/site/");
-    var rest=i>=0?p.slice(i+6):p.replace(/^\/+/,"");
-    if(rest===""||rest.charAt(rest.length-1)==="/")rest+="index.html";
-    return rest;
-  }
-  function relevant(list){
-    if(!list||!list.length)return false;
-    var me=myPage();
-    for(var k=0;k<list.length;k++){
-      if(list[k]===me||SHARED[list[k]])return true;
-    }
-    return false;
-  }
-  function handle(ev){
-    var d;try{d=JSON.parse(ev.data);}catch(_){return;}
-    var g=d.gen;if(typeof g!=="number")return;
-    if(base===null){base=g;return;}
-    if(g===base)return;
-    if(d.full===true){location.reload();return;}
-    if(Object.prototype.toString.call(d.changed)==="[object Array]"){
-      if(relevant(d.changed))location.reload();else base=g;
-      return;
-    }
-    location.reload(); /* snapshot after a missed build */
-  }
-  function open(){
-    if(es&&es.readyState!==2)return;
-    try{es=new EventSource("/site/__live");}catch(_){return;}
-    es.onmessage=handle;
-  }
-  open();
-  window.addEventListener("pageshow",function(e){if(e.persisted)open();});
-  document.addEventListener("visibilitychange",function(){
-    if(document.visibilityState==="visible")open();
-  });
-})();
-</script>
+<script src="live.js"></script>
 </head>
 <body>
-<div id="nav-mount" style="min-height:3rem"></div>
+<nav class="site-nav" data-pod-filename="074-grasshopper"><span class="nav-title">SeedPods</span><div class="nav-right"><a class="nav-home" href="toc.html" aria-label="Contents" title="Contents"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></a><button type="button" class="nav-search-btn" onclick="seedNavOpenSearch()" aria-label="Search" title="Search"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></button><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true" title="Previous"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true" title="Next"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></span></div></nav>
 <div class="wrap">
-  <div class="subject-header fade cat-colored cat-knowledge"><h1>The Grasshopper Was Right</h1><p class="premise">The fable taught us that <em><a class="gloss-ref nav-push" href="glossary.html#play">play</a></em> is what you do instead of working, but the grasshopper was doing something the ant structurally cannot, operating in the frame-free, <em><a class="gloss-ref nav-push" href="glossary.html#will-suspension">will-suspended</a></em> mode where certain things happen that directed effort will never reach.</p><div class="subject-nav-row" data-pod-filename="074-grasshopper"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Subject 74</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
-  <section id="_prolog" class="subject-section subject-prolog"><div class="prose"><p>The fable taught us that play is what you do instead of working.
+  <div class="subject-header fade cat-colored" style="--cat-bg:#D9F5A6"><h1>6.7 The Grasshopper Was Right</h1><p class="premise">The fable taught us that <em><a class="gloss-ref nav-push" href="glossary.html#play">play</a></em> is what you do instead of working, but the grasshopper was doing something the ant structurally cannot, operating in the frame-free, <em><a class="gloss-ref nav-push" href="glossary.html#will-suspension">will-suspended</a></em> mode where certain things happen that directed effort will never reach.</p></div>
+  <section id="_prolog" class="subject-section subject-prolog"><div class="prose"><p data-src-file="subjects/074-grasshopper.md" data-src-l0="3" data-src-l1="4">The fable taught us that play is what you do instead of working.
 It was wrong.</p>
 </div></section>
-<section id="surface" class="subject-section"><h2 class="section-heading">Surface</h2><div class="prose"><p>You probably learned Aesop’s fable the same way most of us did.
+<section id="surface" class="subject-section"><h2 class="section-heading">Surface</h2><div class="prose"><p data-src-file="subjects/074-grasshopper.md" data-src-l0="14" data-src-l1="20">You probably learned Aesop’s fable the same way most of us did.
 The ant works all summer storing food.
 The grasshopper sings and plays.
 Winter comes.
 The grasshopper suffers.
 The moral is clear: stop playing, start working.
 Play is what you do when you should be doing something else.</p>
-<figure class="directive-image directive-image--left"><img src="images/074-grasshopper.jpg" alt=""><figcaption>The Ant and the Grasshopper <cite>Milo Winter 1919</cite></figcaption></figure>
-<p>A word about what we mean by play.
+<figure id="image-074-grasshopper-1" class="directive-image directive-image--left"><img src="images/074-grasshopper-l.jpg" alt=""><figcaption>The Ant and the Grasshopper <cite>Milo Winter 1919</cite></figcaption></figure>
+<p data-src-file="subjects/074-grasshopper.md" data-src-l0="24" data-src-l1="29">A word about what we mean by play.
 Not competitive sport, not organized games, not exercise with a target.
 Those are perfectly good things, but the will is very much in charge of them, there is a score, a goal, a criterion for success.
 The play we mean is something else: the kind where none of that applies.
 What a child does when no one has organized anything.
 What happens when you follow something simply because it’s interesting right now, with no plan for where it leads.</p>
-<p>But here is what the fable never asks: what was the grasshopper actually doing?</p>
-<p>Not failing to be an ant.
+<p data-src-file="subjects/074-grasshopper.md" data-src-l0="31" data-src-l1="31">But here is what the fable never asks: what was the grasshopper actually doing?</p>
+<p data-src-file="subjects/074-grasshopper.md" data-src-l0="33" data-src-l1="39">Not failing to be an ant.
 Something that requires the will to step back, to stop driving, stop optimizing, stop asking “is this useful?”
 The grasshopper wasn’t exploring the meadow in order to find something.
 The grasshopper was just in the meadow.
 Present.
 Available.
 With no deliverable.</p>
-<p>That state turns out to be one the brain needs, at any age, to do certain things that directed effort cannot reach.</p>
-<p>Richard Feynman, one of the great physicists of the twentieth century, was also a bongo drummer.
+<p data-src-file="subjects/074-grasshopper.md" data-src-l0="41" data-src-l1="41">That state turns out to be one the brain needs, at any age, to do certain things that directed effort cannot reach.</p>
+<p data-src-file="subjects/074-grasshopper.md" data-src-l0="43" data-src-l1="48">Richard Feynman, one of the great physicists of the twentieth century, was also a bongo drummer.
 Not as a creative exercise, not to cross-pollinate ideas across domains.
 He drummed because drumming was completely other.
 A place where he was not Feynman the Nobel laureate, not building toward anything, not even particularly accomplished.
 The value wasn’t what drumming gave to physics.
 The value was the existence of a space where his will was genuinely offline.</p>
-<p>And it isn’t only solitary.
+<p data-src-file="subjects/074-grasshopper.md" data-src-l0="50" data-src-l1="54">And it isn’t only solitary.
 Every year tens of thousands of adults travel to the Nevada desert to build a temporary city with no commerce, no spectators, and no fixed program.
 They make absurd things.
 They encounter strangers outside the normal categories of society, let alone work.
 Burning Man is, among other things, a collective attempt to create a space where the productive frame is genuinely suspended, where the grasshopper mode is not just permitted but is the whole point.</p>
-<p>Children do this naturally.
+<p data-src-file="subjects/074-grasshopper.md" data-src-l0="56" data-src-l1="57">Children do this naturally.
 Adults generally have to travel to the desert, or close the door of a small room with a drum kit, to give themselves permission.</p>
-<p>Modern life has a slot for work and a slot for rest.
+<p data-src-file="subjects/074-grasshopper.md" data-src-l0="59" data-src-l1="61">Modern life has a slot for work and a slot for rest.
 It does not have a slot for this, for the frame-free, will-suspended state where something happens that effort cannot produce.
 And the cost of that missing slot accumulates quietly, in ways that are hard to measure precisely because the thing being lost has no output.</p>
-<p>The grasshopper wasn’t the story’s failure.
+<p data-src-file="subjects/074-grasshopper.md" data-src-l0="63" data-src-l1="64">The grasshopper wasn’t the story’s failure.
 The grasshopper was doing something the ant structurally cannot.</p>
 <div class="cta">&quot;Try this: Think of something you do, or used to do, where the question 'is this productive?' genuinely doesn't apply. Not rest, not hobby-as-self-improvement. Something where your will steps back. Notice how hard it is to protect time for it, and what that tells you about which mode your life is organized around.&quot;</div>
 </div></section>
-<section id="depth" class="subject-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>The fable’s error runs deeper than “play is also valuable.”
+<section id="depth" class="subject-section"><h2 class="section-heading">Depth</h2><div class="prose"><p data-src-file="subjects/074-grasshopper.md" data-src-l0="69" data-src-l1="70">The fable’s error runs deeper than “play is also valuable.”
 Its deeper error is an assumption so embedded it’s nearly invisible: that value only accrues when the will is in charge.</p>
-<p>The ant’s will is always in charge.
+<p data-src-file="subjects/074-grasshopper.md" data-src-l0="72" data-src-l1="77">The ant’s will is always in charge.
 Even the scout ant exploring unfamiliar territory is serving a goal the colony already has.
 Exploration, in this sense, is still ant-mode, the explore pole of Richard Sutton’s <em><a class="gloss-ref nav-push" id="term-074-grasshopper-1" href="glossary.html#explore-exploit-tradeoff">explore-exploit tradeoff</a></em>, goal-directed search within a frame.
 The grasshopper is doing something categorically different: operating outside any frame, with no criterion for success except the intrinsic pull of the moment.
 This is not a different strategy for finding food.
 It is a different relationship to the question of what you’re doing at all.</p>
-<p>The brain, it turns out, has something to say about this distinction.
+<p data-src-file="subjects/074-grasshopper.md" data-src-l0="79" data-src-l1="84">The brain, it turns out, has something to say about this distinction.
 There is a long tradition of observation, from mathematicians, artists, scientists, that certain kinds of insight arrive not during directed effort but in its aftermath: in the bath, on the walk, in the middle of the night.
 This is sometimes described as the unconscious “working on” a problem, which smuggles the ant back in.
 A more precise description may be that the will’s suspension changes what the brain has access to, opens registers that goal-directed search keeps closed.
 Feynman’s drumming worked not because it fed his physics but because it genuinely wasn’t physics.
 The separation was the point.</p>
 <div class="warn-notice">The claim about brain states and will-suspension is observational and phenomenological, not established neuroscience. Treat with appropriate tentativeness.</div>
-<p>The question of whether artificial systems can do anything analogous is one we, as authors of this seedpod, hold as genuinely open.
-When the temperature parameter of a language model is raised, the model samples more broadly, reaching further down the landscape of possibilities, past the most probable and into the less expected.
+<p data-src-file="subjects/074-grasshopper.md" data-src-l0="88" data-src-l1="93">The question of whether artificial systems can do anything analogous is one we, as authors of this seedpod, hold as genuinely open.
+When the <em><a class="gloss-ref nav-push" id="term-074-grasshopper-2" href="glossary.html#temperature-ai">temperature</a></em> parameter of a language model is raised, the model samples more broadly, reaching further down the landscape of possibilities, past the most probable and into the less expected.
 In a narrow sense this resembles wandering: more surprise, less predictability.
 But whether it constitutes genuine frame-suspension, or just wider search within the same goal, we cannot say.
 The temperature dial is the closest thing engineers have built to a playfulness knob.
 Whether it captures the thing or only mimics it from the outside remains unclear to us.</p>
-<p>What it does show is that the engineers knew they had a problem: a model at zero temperature loops, stagnates, loses the capacity for surprise.
+<p data-src-file="subjects/074-grasshopper.md" data-src-l0="95" data-src-l1="96">What it does show is that the engineers knew they had a problem: a model at zero temperature loops, stagnates, loses the capacity for surprise.
 The grasshopper had to be added deliberately, because pure optimization had crowded it out.</p>
-<p>The fable, read this way, is not a children’s story about saving for winter.
+<p data-src-file="subjects/074-grasshopper.md" data-src-l0="98" data-src-l1="100">The fable, read this way, is not a children’s story about saving for winter.
 It is a cultural compression of a framework that has no slot for the will stepping back, and therefore no way to value what happens in that slot.
 As with other frameworks that turn out to be too small for the reality they’re describing (as in <a href="001-caloric.html">The Map That Was Wrong</a>), the cost is hidden until it isn’t.</p>
-<h2>1. Mechanical play</h2>
-<p>The word “play” is also used in engineering to describe looseness between coupled parts, the slight freedom of movement between a gear and its shaft, a joint and its socket.
+<h2 data-src-file="subjects/074-grasshopper.md" data-src-l0="102" data-src-l1="102">1. Mechanical play</h2>
+<p data-src-file="subjects/074-grasshopper.md" data-src-l0="104" data-src-l1="106">The word “play” is also used in engineering to describe looseness between coupled parts, the slight freedom of movement between a gear and its shaft, a joint and its socket.
 This is not sloppiness.
 In many machines, a small amount of play is not merely tolerated but required: without it, thermal expansion cracks the housing, vibration shears the bolt, the whole tight system destroys itself through its own rigidity.</p>
-<p>The language is doing something interesting here.
+<p data-src-file="subjects/074-grasshopper.md" data-src-l0="108" data-src-l1="111">The language is doing something interesting here.
 Engineers reached for the same word, play, that children use.
 The intuition may be the same: a small permission to move in a direction that wasn’t the primary direction of intention, and the system functions better for it.
 The tightly bound machine and the tightly scheduled life share a failure mode.</p>
-<p>This could extend the seedpod’s argument from the phenomenological (what the brain needs) to the structural (what any tightly coupled system needs).
+<p data-src-file="subjects/074-grasshopper.md" data-src-l0="113" data-src-l1="114">This could extend the seedpod’s argument from the phenomenological (what the brain needs) to the structural (what any tightly coupled system needs).
 Or it could seed a separate seedpod, the engineering meaning of play as a lens on resilience more broadly.</p>
-<p>Addendum.
+<p data-src-file="subjects/074-grasshopper.md" data-src-l0="118" data-src-l1="119">Addendum.
 The imaginary dimension, complex analysis</p>
-<p>A real-valued function, constrained to the number line, can behave in ways that seem arbitrary or inexplicable, a convergence that stops for no apparent reason, a series that refuses to behave.
+<p data-src-file="subjects/074-grasshopper.md" data-src-l0="121" data-src-l1="124">A real-valued function, constrained to the number line, can behave in ways that seem arbitrary or inexplicable, a convergence that stops for no apparent reason, a series that refuses to behave.
 Extend that function by even an infinitesimal permission to move into the imaginary dimension, and the reasons become visible.
 The full structure, invisible on the line, unfolds in the plane.
 What looked like an arbitrary boundary on the real axis turns out to be the shadow of a pole or a branch cut in the complex plane, something that was always there, just out of reach of the one-dimensional view.</p>
-<p>This is one of the most striking facts in mathematics: that granting a function permission to take imaginary values, values that seem like a relaxation of “real” constraints, reveals the hidden architecture of the real-valued function itself.
+<p data-src-file="subjects/074-grasshopper.md" data-src-l0="126" data-src-l1="128">This is one of the most striking facts in mathematics: that granting a function permission to take imaginary values, values that seem like a relaxation of “real” constraints, reveals the hidden architecture of the real-valued function itself.
 The imaginary extension doesn’t distort the reality.
 It explains it.</p>
-<p>The resonance with the seedpod’s argument: play is not a departure from the real work.
+<p data-src-file="subjects/074-grasshopper.md" data-src-l0="130" data-src-l1="131">The resonance with the seedpod’s argument: play is not a departure from the real work.
 It may be the dimension in which the real work’s hidden structure becomes visible.</p>
-<p>Both extensions share an underlying structure: a system constrained to n dimensions, given a small permission to move in dimension n+1, reveals or enables something that was impossible in the original constraint.
+<p data-src-file="subjects/074-grasshopper.md" data-src-l0="135" data-src-l1="138">Both extensions share an underlying structure: a system constrained to n dimensions, given a small permission to move in dimension n+1, reveals or enables something that was impossible in the original constraint.
 Mechanical play is literal: the part moves slightly off-axis.
 Complex extension is mathematical: the function moves into the imaginary axis.
 Grasshopper play is cognitive/experiential: the will moves off the axis of goal-direction.</p>
-<p>The same word, play, may be pointing at the same deep structure in three different domains.</p>
+<p data-src-file="subjects/074-grasshopper.md" data-src-l0="140" data-src-l1="140">The same word, play, may be pointing at the same deep structure in three different domains.</p>
 </div></section>
-<section id="provenance" class="subject-section"><div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="005-freewill.html" class="related-card related-card-prelim cat-colored cat-consciousness nav-push"><div class="related-title">5. Freedom Is What Nature Does Everywhere</div></a>
-<a href="009-randomness.html" class="related-card cat-colored cat-biology nav-push"><div class="related-title">9. Structure Is What Randomness Does</div></a>
-<a href="046-thinkfast.html" class="related-card related-card-prelim cat-colored cat-ai-minds nav-push"><div class="related-title">46. Thought as Evolution in Milliseconds</div></a>
-<a href="052-dichotomy.html" class="related-card related-card-prelim cat-colored cat-mathematics nav-push"><div class="related-title">52. Discrete and Continuous as a False Dichotomy</div></a>
-<a href="072-temperature.html" class="related-card related-card-prelim cat-colored cat-feeling nav-push"><div class="related-title">72. Temperature</div></a></div>
-<div class="inbound-refs"><span class="inbound-label">0 inbound references</span><span class="inbound-links"></span></div></div></section>
 <section id="script" class="subject-section"><h2 class="section-heading">Script</h2><div class="prose"><ol>
-<li><p>A child in a summer field, watching an insect, following it a few steps, losing interest, lying back. The sky is very large. No voiceover. Just the unhurried quality of time when nothing is required.</p>
+<li data-src-file="subjects/074-grasshopper.md" data-src-l0="143" data-src-l1="144"><p data-src-file="subjects/074-grasshopper.md" data-src-l0="143" data-src-l1="143">A child in a summer field, watching an insect, following it a few steps, losing interest, lying back. The sky is very large. No voiceover. Just the unhurried quality of time when nothing is required.</p>
 </li>
-<li><p>The Aesop fable rendered briefly, almost diagrammatic: ant carrying grain, grasshopper on a stem, snow, grasshopper at the ant’s door. VO: The moral was clear. Stop playing. Start working. But what was the grasshopper actually doing?</p>
+<li data-src-file="subjects/074-grasshopper.md" data-src-l0="145" data-src-l1="146"><p data-src-file="subjects/074-grasshopper.md" data-src-l0="145" data-src-l1="145">The Aesop fable rendered briefly, almost diagrammatic: ant carrying grain, grasshopper on a stem, snow, grasshopper at the ant’s door. VO: The moral was clear. Stop playing. Start working. But what was the grasshopper actually doing?</p>
 </li>
-<li><p>A man at a drum kit in a small room, playing with real absorption. Nothing professional, he is just there. VO: Feynman was one of the great physicists of the twentieth century. He was also a bongo drummer. Not to think better. Not to cross-pollinate. To be somewhere his will was genuinely offline. The separation was the point.</p>
+<li data-src-file="subjects/074-grasshopper.md" data-src-l0="147" data-src-l1="148"><p data-src-file="subjects/074-grasshopper.md" data-src-l0="147" data-src-l1="147">A man at a drum kit in a small room, playing with real absorption. Nothing professional, he is just there. VO: Feynman was one of the great physicists of the twentieth century. He was also a bongo drummer. Not to think better. Not to cross-pollinate. To be somewhere his will was genuinely offline. The separation was the point.</p>
 </li>
-<li><p>The Nevada desert at dusk. An improbable structure. People in elaborate costumes encountering each other, making something absurd. No commerce, no program, no audience. Two strangers looking at something together with no use. VO: The grasshopper mode isn’t lost. It requires, for most adults, a journey to find.</p>
+<li data-src-file="subjects/074-grasshopper.md" data-src-l0="149" data-src-l1="150"><p data-src-file="subjects/074-grasshopper.md" data-src-l0="149" data-src-l1="149">The Nevada desert at dusk. An improbable structure. People in elaborate costumes encountering each other, making something absurd. No commerce, no program, no audience. Two strangers looking at something together with no use. VO: The grasshopper mode isn’t lost. It requires, for most adults, a journey to find.</p>
 </li>
-<li><p>A terminal. A language model at zero temperature, looping, the same phrase, the same safe answer. An engineer raises a dial. The output opens. VO: The engineers called it temperature. They had to build the grasshopper in deliberately. Whether what they built is genuinely the grasshopper, or only its shadow, we don’t know.</p>
+<li data-src-file="subjects/074-grasshopper.md" data-src-l0="151" data-src-l1="152"><p data-src-file="subjects/074-grasshopper.md" data-src-l0="151" data-src-l1="151">A terminal. A language model at zero temperature, looping, the same phrase, the same safe answer. An engineer raises a dial. The output opens. VO: The engineers called it temperature. They had to build the grasshopper in deliberately. Whether what they built is genuinely the grasshopper, or only its shadow, we don’t know.</p>
 </li>
-<li><p>The child in the field again. Still doing nothing in particular. The insect is back. VO: The fable said grow out of this. Hold on the child’s face, absorbed, present, somewhere the will is not driving. The child is gone. The insect remains. The camera holds until the image is just the field. Fade.</p>
+<li data-src-file="subjects/074-grasshopper.md" data-src-l0="153" data-src-l1="153"><p data-src-file="subjects/074-grasshopper.md" data-src-l0="153" data-src-l1="153">The child in the field again. Still doing nothing in particular. The insect is back. VO: The fable said grow out of this. Hold on the child’s face, absorbed, present, somewhere the will is not driving. The child is gone. The insect remains. The camera holds until the image is just the field. Fade.</p>
 </li>
 </ol>
 </div></section>
-<section id="images" class="subject-section"><h2 class="section-heading">Images</h2><div class="prose"><p>Primary illustration: Two panels.
+<section id="images" class="subject-section"><h2 class="section-heading">Images</h2><div class="prose"><p data-src-file="subjects/074-grasshopper.md" data-src-l0="156" data-src-l1="159">Primary illustration: Two panels.
 Left: an ant in close-up, carrying something, perfectly purposeful, beautiful in its efficiency, but contained within a single vector of intention.
 Right: a grasshopper on a stem, apparently doing nothing, but the composition gives it the larger sky, the more open frame.
 Not a moral contrast, an observation about the shape of the two modes.</p>
-<p>Social graphic: White text on dark field, “The fable had no slot for the will stepping back.”
+<p data-src-file="subjects/074-grasshopper.md" data-src-l0="161" data-src-l1="162">Social graphic: White text on dark field, “The fable had no slot for the will stepping back.”
 Grasshopper silhouette, very spare.</p>
-<p>Video thumbnail: A temperature dial, a slider between two poles.
+<p data-src-file="subjects/074-grasshopper.md" data-src-l0="164" data-src-l1="167">Video thumbnail: A temperature dial, a slider between two poles.
 One end labeled “exploit.”
 The other end deliberately left unlabeled.
 The unlabeled end is the question.</p>
 </div></section>
+<div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="005-freewill.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#C7F5A6"><div class="related-title">10.1. Freedom Is What Nature Does Everywhere</div></a>
+<a href="009-randomness.html" class="related-card cat-colored nav-push" style="--cat-bg:#F5A6D7"><div class="related-title">2.6. Structure Is What Randomness Does</div></a>
+<a href="046-thinkfast.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#C4F5A6"><div class="related-title">10.2. Thought as Evolution in Milliseconds</div></a>
+<a href="052-dichotomy.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#A6F5AE"><div class="related-title">9.1. Discrete and Continuous as a False Dichotomy</div></a>
+<a href="072-temperature.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#C9A6F5"><div class="related-title">7.8. Temperature</div></a></div>
+<div class="inbound-refs"><span class="inbound-label">0 inbound references</span><span class="inbound-links"></span></div></div>
 </div>
 <div class="page-end" id="page-end-version">
   <button class="page-end-logo" aria-label="Show page info"
@@ -209,6 +156,6 @@ The unlabeled end is the question.</p>
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">knowledge · draft1 · Edited 2026-04-27 01:08</span>
+  <span class="page-end-version" aria-hidden="true">draft1 · Edited 2026-06-17 18:24</span>
 </div>
 </body></html>

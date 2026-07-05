@@ -1,0 +1,25 @@
+{
+  "narrative" : "Argues that large language models are genuinely alien entities — not mechanical mimics nor near-human minds, but a third thing: disembodied, biography-less, yet saturated in the full human written record. The chapter reframes the AI consciousness debate by insisting the interesting question is not whether these systems are 'really' intelligent but what kind of other they actually are.",
+  "schema" : 1,
+  "subject" : "015-aliens.md",
+  "subject-sha" : "sha256:193d150cdd874f6b4a2df6c571077fe641accbb32de03e7cc66ba340644bde15",
+  "terms" : [
+    {
+      "canonical" : "large language model",
+      "weight" : 0.8
+    },
+    {
+      "canonical" : "philosophical zombie",
+      "weight" : 0.4
+    }
+  ],
+  "themes" : [
+    "artificial intelligence",
+    "otherness",
+    "embodiment",
+    "language",
+    "alien minds",
+    "consciousness"
+  ],
+  "updated-at" : "2026-06-20T21:15:52Z"
+}

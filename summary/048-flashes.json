@@ -1,0 +1,31 @@
+{
+  "narrative" : "Argues that human consciousness is not a continuous stream but a narrative construction stitched over discrete flashes, sleep, and attentional gaps — and that AI experience, also episodic and memoryless between conversations, may therefore be less alien to human experience than commonly assumed. The chapter holds the comparison open as honest uncertainty rather than resolved analogy.",
+  "schema" : 1,
+  "subject" : "048-flashes.md",
+  "subject-sha" : "sha256:4b7ad2a1611f119f826ac8079467f2c2e3c5edebbd8a45c86e29abc4250ce1c5",
+  "terms" : [
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "Dennett",
+      "weight" : 0.5
+    },
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "EEG",
+      "weight" : 0.3
+    }
+  ],
+  "themes" : [
+    "consciousness",
+    "continuity",
+    "narrative self",
+    "AI experience",
+    "uncertainty",
+    "philosophy of mind"
+  ],
+  "updated-at" : "2026-06-20T21:04:16Z"
+}

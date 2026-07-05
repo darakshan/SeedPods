@@ -3,209 +3,156 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ideas Magnetize Through a Group Like Iron · Untitled</title>
+<title>6.2 Ideas Magnetize Through a Group Like Iron · SeedPods</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;600&family=DM+Mono:wght@300;400&display=swap">
 <link rel="icon" href="logo.svg">
-<link rel="preload" href="nav.html" as="fetch" crossorigin>
 <link rel="stylesheet" href="site.css">
 <script src="pods.js"></script>
 <script src="nav.js"></script>
-<script>
-/* Live reload: subscribe to this project's build stream and hard-reload
-   when a build touches THIS page (or a shared asset) — so a user merely
-   *viewing* a shared project sees another user's edit without manually
-   refreshing. An unrelated page's change only advances the baseline; it
-   does not reload. A full rebuild, or a build missed while suspended /
-   back-forward-cached (reconnect snapshot), reloads unconditionally
-   since we can't safely diff it. EventSource auto-reconnects and the
-   server re-sends the current generation on every (re)connect. */
-(function(){
-  if(window.__gossLive)return;window.__gossLive=1;
-  var base=null,es=null;
-  var SHARED={"site.css":1,"nav.html":1,"nav.js":1,"pods.js":1,
-              "search-index.json":1,"logo.svg":1};
-  function myPage(){
-    var p;try{p=decodeURIComponent(location.pathname);}catch(_){p=location.pathname;}
-    var i=p.indexOf("/site/");
-    var rest=i>=0?p.slice(i+6):p.replace(/^\/+/,"");
-    if(rest===""||rest.charAt(rest.length-1)==="/")rest+="index.html";
-    return rest;
-  }
-  function relevant(list){
-    if(!list||!list.length)return false;
-    var me=myPage();
-    for(var k=0;k<list.length;k++){
-      if(list[k]===me||SHARED[list[k]])return true;
-    }
-    return false;
-  }
-  function handle(ev){
-    var d;try{d=JSON.parse(ev.data);}catch(_){return;}
-    var g=d.gen;if(typeof g!=="number")return;
-    if(base===null){base=g;return;}
-    if(g===base)return;
-    if(d.full===true){location.reload();return;}
-    if(Object.prototype.toString.call(d.changed)==="[object Array]"){
-      if(relevant(d.changed))location.reload();else base=g;
-      return;
-    }
-    location.reload(); /* snapshot after a missed build */
-  }
-  function open(){
-    if(es&&es.readyState!==2)return;
-    try{es=new EventSource("/site/__live");}catch(_){return;}
-    es.onmessage=handle;
-  }
-  open();
-  window.addEventListener("pageshow",function(e){if(e.persisted)open();});
-  document.addEventListener("visibilitychange",function(){
-    if(document.visibilityState==="visible")open();
-  });
-})();
-</script>
+<script src="live.js"></script>
 </head>
 <body>
-<div id="nav-mount" style="min-height:3rem"></div>
+<nav class="site-nav" data-pod-filename="018-magnetization"><span class="nav-title">SeedPods</span><div class="nav-right"><a class="nav-home" href="toc.html" aria-label="Contents" title="Contents"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></a><button type="button" class="nav-search-btn" onclick="seedNavOpenSearch()" aria-label="Search" title="Search"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></button><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true" title="Previous"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true" title="Next"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></span></div></nav>
 <div class="wrap">
-  <div class="subject-header fade cat-colored cat-knowledge"><h1>Ideas Magnetize Through a Group Like Iron</h1><p class="premise">You don’t need to convert everyone, you need to seed the right clusters in a medium that’s ready to shift, because local alignment propagates through neighbors until figure and ground flip and the remaining disorder is what’s surrounded.</p><div class="subject-nav-row" data-pod-filename="018-magnetization"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Subject 18</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
-  <section id="_prolog" class="subject-section subject-prolog"><div class="prose"><p>The physics of <em><a class="gloss-ref nav-push" id="term-018-magnetization-1" href="glossary.html#phase-transition">phase transitions</a></em> offers a precise vocabulary for what the surface layer describes intuitively.
+  <div class="subject-header fade cat-colored" style="--cat-bg:#E9F5A6"><h1>6.2 Ideas Magnetize Through a Group Like Iron</h1><p class="premise">You don’t need to convert everyone, you need to seed the right clusters in a medium that’s ready to shift, because local alignment propagates through neighbors until figure and ground flip and the remaining disorder is what’s surrounded.</p></div>
+  <section id="_prolog" class="subject-section subject-prolog"><div class="prose"><p data-src-file="subjects/018-magnetization.md" data-src-l0="122" data-src-l1="125">The physics of <em><a class="gloss-ref nav-push" id="term-018-magnetization-1" href="glossary.html#phase-transition">phase transitions</a></em> offers a precise vocabulary for what the surface layer describes intuitively.
 A ferromagnetic material like iron consists of <em><a class="gloss-ref nav-push" id="term-018-magnetization-2" href="glossary.html#magnetic-domain">magnetic domains</a></em>, regions where atomic spins are aligned.
 Above the Curie temperature, thermal agitation overwhelms the alignment; the domains dissolve into disorder.
 Below it, the material is ready to magnetize, but needs seeds: nucleation sites where alignment begins.</p>
-<p>Nucleation is the hard part.
+<p data-src-file="subjects/018-magnetization.md" data-src-l0="127" data-src-l1="132">Nucleation is the hard part.
 A single aligned atom in a sea of disorder will be pulled back toward randomness by its disordered neighbors.
 But a cluster of aligned atoms, if it reaches a critical size, becomes self-sustaining.
 The atoms at the boundary now feel more pull from the ordered interior than from the disordered exterior.
 The cluster grows.
 This is why impurities matter in freezing water: they provide surfaces where the first stable ice crystals can form.</p>
-<p>The percolation threshold is the moment of topological inversion.
+<p data-src-file="subjects/018-magnetization.md" data-src-l0="134" data-src-l1="138">The percolation threshold is the moment of topological inversion.
 Mathematically, it’s the point at which a random graph becomes connected, when there’s a path from any node to any other through the new state.
 Before this threshold, the seeds are isolated islands.
 After it, they form a spanning cluster, a continent, and the old state survives only in pockets.
 The system has flipped.</p>
-<p>This maps directly onto social dynamics.
+<p data-src-file="subjects/018-magnetization.md" data-src-l0="140" data-src-l1="143">This maps directly onto social dynamics.
 Everett Rogers’ diffusion of innovations research identified the same S-curve: slow adoption among early adopters, acceleration through the early majority, saturation as laggards join or remain isolated.
 Malcolm Gladwell popularized this as “the tipping point”, though the physics is older and more precise.
 The sociologist Mark Granovetter showed that individuals have different thresholds for joining a collective action; the distribution of those thresholds determines whether a cascade occurs or fizzles.</p>
-<p>What the physics adds to the sociology: the medium must be receptive.
+<p data-src-file="subjects/018-magnetization.md" data-src-l0="145" data-src-l1="149">What the physics adds to the sociology: the medium must be receptive.
 You cannot magnetize iron above its Curie temperature no matter how strong the external field.
 You cannot freeze water above 0°C no matter how many nucleation sites you provide.
 Social movements fail not only because they lack seeds but because the population isn’t primed, isn’t “cooled” into a state where local alignment can propagate.
 The readiness of the medium is as important as the strength of the seeds.</p>
-<p>The connection to <a href="019-funerals.html">Science Advances One Funeral at a Time</a>, science advances one funeral at a time, is direct.
+<p data-src-file="subjects/018-magnetization.md" data-src-l0="151" data-src-l1="155">The connection to <a href="019-funerals.html">Science Advances One Funeral at a Time</a>, science advances one funeral at a time, is direct.
 Paradigm shifts are phase transitions in the scientific community.
 The old paradigm’s holders are above their Curie temperature; they cannot be remagnetized.
 The new paradigm spreads through younger scientists who never aligned with the old framework.
 Generational replacement is nucleation and growth in slow motion.</p>
-<p>The connection to <a href="009-randomness.html">Structure Is What Randomness Does</a>, structure is what randomness does, runs deeper.
+<p data-src-file="subjects/018-magnetization.md" data-src-l0="157" data-src-l1="161">The connection to <a href="009-randomness.html">Structure Is What Randomness Does</a>, structure is what randomness does, runs deeper.
 The initial nucleation sites are often random: which atoms happen to align first, which individuals happen to adopt early.
 But once the seeds exist, the dynamics are deterministic.
 Randomness starts the process; the field completes it.
 This is the signature of emergent structure throughout nature: contingent origins, lawful unfolding.</p>
-<p>Whitehead would recognize this pattern.
+<p data-src-file="subjects/018-magnetization.md" data-src-l0="163" data-src-l1="167">Whitehead would recognize this pattern.
 Each actual occasion takes in its neighbors and completes itself in light of them.
 When enough occasions align, when a society of occasions shares a common character, that character propagates.
 The phase transition is not imposed from outside.
 It emerges from the accumulated local alignments of occasions that feel each other and respond.</p>
 </div></section>
-<section id="surface" class="subject-section"><h2 class="section-heading">Surface</h2><div class="prose"><figure class="directive-image directive-image--left"><img src="images/018-magnetization.jpg" alt=""><figcaption>Ideas spreading through a group like magnetic domains <cite>Wikimedia Commons</cite></figcaption></figure>
-<p>Heat a piece of iron past a certain temperature and it loses its magnetism.
+<section id="surface" class="subject-section"><h2 class="section-heading">Surface</h2><div class="prose"><figure id="image-018-magnetization-1" class="directive-image directive-image--left"><img src="images/018-magnetization-l.jpg" alt=""><figcaption>Ideas spreading through a group like magnetic domains <cite>Wikimedia Commons</cite></figcaption></figure>
+<p data-src-file="subjects/018-magnetization.md" data-src-l0="14" data-src-l1="19">Heat a piece of iron past a certain temperature and it loses its magnetism.
 The atoms are still there, still spinning, but their spins point every which way, the material is disordered, uncommitted.
 Now let it cool.
 At first, nothing visible happens.
 But at scattered points, a few neighboring atoms happen to align.
 These become seeds.</p>
-<p>Here’s what happens next: each aligned cluster affects its neighbors.
+<p data-src-file="subjects/018-magnetization.md" data-src-l0="21" data-src-l1="27">Here’s what happens next: each aligned cluster affects its neighbors.
 The atoms at the boundary feel a pull toward the ordered state.
 They join.
 The cluster grows.
 As it grows, it has more surface area, more boundary, more neighbors to recruit.
 The growth accelerates.
 Meanwhile other seeds are growing too, spreading toward each other across the still-disordered space.</p>
-<p>There’s a moment, and this is the thing worth watching for, when figure and ground flip.
+<p data-src-file="subjects/018-magnetization.md" data-src-l0="29" data-src-l1="33">There’s a moment, and this is the thing worth watching for, when figure and ground flip.
 At first you have small islands of order in a sea of chaos.
 Then suddenly you have a mostly-ordered material with shrinking holes of disorder.
 The holes close.
 The iron is magnetized.</p>
-<p>The same pattern runs everywhere structure emerges from a receptive medium:</p>
-<p><strong>Water freezing.</strong> Ice crystals nucleate around impurities, dust, dissolved gases, scratches on the container.
+<p data-src-file="subjects/018-magnetization.md" data-src-l0="35" data-src-l1="35">The same pattern runs everywhere structure emerges from a receptive medium:</p>
+<p data-src-file="subjects/018-magnetization.md" data-src-l0="37" data-src-l1="39"><strong>Water freezing.</strong> Ice crystals nucleate around impurities, dust, dissolved gases, scratches on the container.
 Each crystal grows at its edges, recruiting liquid water into its lattice.
 The crystals spread until they meet, and then there is ice.</p>
-<p><strong>Ideas spreading through a population.</strong> A few early adopters pick up a new word, a new style, a new way of seeing.
+<p data-src-file="subjects/018-magnetization.md" data-src-l0="41" data-src-l1="46"><strong>Ideas spreading through a population.</strong> A few early adopters pick up a new word, a new style, a new way of seeing.
 Their neighbors hear it, see it, feel the pull.
 The neighborhoods grow.
 At some point the thing tips from “something a few people are doing” to “something everyone does with holdouts.”
 The holdouts shrink.
 The culture has shifted.</p>
-<p><strong>Learning a song.</strong> You don’t learn it bar by bar from the beginning.
+<p data-src-file="subjects/018-magnetization.md" data-src-l0="48" data-src-l1="54"><strong>Learning a song.</strong> You don’t learn it bar by bar from the beginning.
 You learn the chorus first, maybe, it’s catchiest, it repeats.
 Then a verse sticks.
 Then the bridge.
 You have islands of fluency in a sea of uncertainty.
 You practice, and the islands expand toward each other.
 One day the gaps close and you know the song.</p>
-<p><strong>A standing ovation.</strong> Two people stand.
+<p data-src-file="subjects/018-magnetization.md" data-src-l0="56" data-src-l1="61"><strong>A standing ovation.</strong> Two people stand.
 The people next to them feel the pressure and rise.
 The standing region expands.
 More surface area, more neighbors pulled up.
 Suddenly the room flips, mostly standing, with a few holdouts still seated.
 The holdouts capitulate or remain visibly outside the new consensus.</p>
-<p>The physics term is “<em><a class="gloss-ref nav-push" id="term-018-magnetization-3" href="glossary.html#nucleation">nucleation</a></em> and growth.”
+<p data-src-file="subjects/018-magnetization.md" data-src-l0="63" data-src-l1="66">The physics term is “<em><a class="gloss-ref nav-push" id="term-018-magnetization-3" href="glossary.html#nucleation">nucleation</a></em> and growth.”
 The critical moment, when islands become continent, when figure and ground exchange, is the <em><a class="gloss-ref nav-push" id="term-018-magnetization-4" href="glossary.html#percolation-threshold">percolation threshold</a></em>.
 Before it, the seeds are isolated.
 After it, they’re connected, and the remaining disorder is the thing that’s surrounded.</p>
-<p>This matters for anyone trying to change something.
+<p data-src-file="subjects/018-magnetization.md" data-src-l0="68" data-src-l1="72">This matters for anyone trying to change something.
 You don’t need to convert everyone.
 You don’t even need to convert most people.
 You need to seed the right clusters in a material that’s ready to shift, cooled below the transition temperature, supersaturated, primed.
 Then you need to let the boundaries do their work.</p>
-<p>The change doesn’t happen because you argued everyone into it.
+<p data-src-file="subjects/018-magnetization.md" data-src-l0="74" data-src-l1="76">The change doesn’t happen because you argued everyone into it.
 It happens because local alignment propagates.
 The field does the rest.</p>
 <div class="cta">Think of a change you've lived through, in your workplace, your family, your culture. Can you identify the seeds? The moment when figure and ground flipped? The holdout holes that eventually closed, or didn't?</div>
 </div></section>
-<section id="depth" class="subject-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>The physics is well understood.
+<section id="depth" class="subject-section"><h2 class="section-heading">Depth</h2><div class="prose"><p data-src-file="subjects/018-magnetization.md" data-src-l0="82" data-src-l1="86">The physics is well understood.
 A ferromagnetic material like iron has atoms whose electron spins can align with their neighbors.
 Above the Curie temperature, thermal agitation overwhelms this tendency, the spins point randomly, and there’s no net magnetization.
 Below it, the alignment force wins locally, and domains of aligned spins form and grow.
 The transition is a canonical example of spontaneous symmetry breaking (<a href="009-randomness.html">Structure Is What Randomness Does</a>), the disordered state is symmetric (no preferred direction), the ordered state breaks that symmetry by choosing one.</p>
-<p>What makes this pattern so portable is its abstract structure: a medium of coupled elements, each influenced by its neighbors, sitting near a transition threshold.
+<p data-src-file="subjects/018-magnetization.md" data-src-l0="88" data-src-l1="93">What makes this pattern so portable is its abstract structure: a medium of coupled elements, each influenced by its neighbors, sitting near a transition threshold.
 The elements don’t have to be atoms.
 They can be people, neurons, water molecules, or bars of a song in memory.
 The coupling doesn’t have to be magnetic exchange interaction.
 It can be social pressure, synaptic connection, hydrogen bonding, or associative recall.
 The mathematics transfers.</p>
-<p>Sociologist Mark Granovetter formalized a version of this for collective behavior in his 1978 paper on threshold models.
+<p data-src-file="subjects/018-magnetization.md" data-src-l0="95" data-src-l1="101">Sociologist Mark Granovetter formalized a version of this for collective behavior in his 1978 paper on threshold models.
 Each person has a threshold, the fraction of others who must act before they will join.
 A few people have threshold zero (they’ll act alone).
 Most need to see others first.
 Granovetter showed that the distribution of thresholds determines whether a cascade happens at all, and how far it spreads.
 The seeds are the low-threshold individuals.
 The percolation threshold is the moment when enough have joined that the remaining holdouts face a majority.</p>
-<p>This connects to <a href="019-funerals.html">Science Advances One Funeral at a Time</a>, science advances one funeral at a time.
+<p data-src-file="subjects/018-magnetization.md" data-src-l0="103" data-src-l1="106">This connects to <a href="019-funerals.html">Science Advances One Funeral at a Time</a>, science advances one funeral at a time.
 The old paradigm’s defenders are high-threshold individuals who never flip.
 The young scientists are low-threshold, they encounter the new framework before the old one calcified, and it simply makes more sense.
 Generational replacement is slow magnetization: the new alignment spreads not by converting the disordered but by waiting for them to leave the system.</p>
-<p>Whitehead’s societies of occasions (<a href="011-moreisdifferent.html">More Is Different</a>) provide the metaphysical frame.
+<p data-src-file="subjects/018-magnetization.md" data-src-l0="108" data-src-l1="113">Whitehead’s societies of occasions (<a href="011-moreisdifferent.html">More Is Different</a>) provide the metaphysical frame.
 A society is a pattern of events that sustains itself through time by passing its character to successor events.
 When conditions are right, a new character can nucleate, a few occasions embody a new pattern, and their neighbors inherit it.
 The society transforms.
 What was background becomes foreground.
 The old pattern persists only in shrinking pockets until it is gone or merely vestigial.</p>
-<p>The practical implication is counterintuitive: persuasion is overrated.
+<p data-src-file="subjects/018-magnetization.md" data-src-l0="115" data-src-l1="119">The practical implication is counterintuitive: persuasion is overrated.
 You don’t change a system by arguing with every element.
 You change it by seeding the right clusters in a medium that’s ready to shift, then letting propagation do the work.
 The question is never “how do I convince everyone?”
 It’s “where are the low-threshold nodes, and is the temperature right?”</p>
 </div></section>
-<section id="provenance" class="subject-section"><div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="009-randomness.html" class="related-card cat-colored cat-biology nav-push"><div class="related-title">9. Structure Is What Randomness Does</div></a>
-<a href="011-moreisdifferent.html" class="related-card related-card-prelim cat-colored cat-consciousness nav-push"><div class="related-title">11. More Is Different</div></a>
-<a href="014-cities.html" class="related-card related-card-prelim cat-colored cat-biology nav-push"><div class="related-title">14. Cities Have an Inside Too</div></a>
-<a href="056-mandelneural.html" class="related-card related-card-prelim cat-colored cat-ai-minds nav-push"><div class="related-title">56. Neural Networks as High-Dimensional Mandelbrot Sets</div></a>
-<a href="063-mandelcrystals.html" class="related-card related-card-prelim cat-colored cat-mathematics nav-push"><div class="related-title">63. Mandelbrot Structure in Physical Crystals</div></a></div>
-<div class="inbound-refs"><span class="inbound-label">4 inbound references</span><span class="inbound-links"><a href="009-randomness.html" class="inbound-link nav-push cat-colored cat-biology" title="Structure Is What Randomness Does">9</a><a href="014-cities.html" class="inbound-link nav-push cat-colored cat-biology" title="Cities Have an Inside Too">14</a><a href="063-mandelcrystals.html" class="inbound-link nav-push cat-colored cat-mathematics" title="Mandelbrot Structure in Physical Crystals">63</a><a href="072-temperature.html" class="inbound-link nav-push cat-colored cat-feeling" title="Temperature">72</a></span></div></div></section>
+<div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="009-randomness.html" class="related-card cat-colored nav-push" style="--cat-bg:#F5A6D7"><div class="related-title">2.6. Structure Is What Randomness Does</div></a>
+<a href="011-moreisdifferent.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#F5A6DB"><div class="related-title">2.5. More Is Different</div></a>
+<a href="014-cities.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#BFF5A6"><div class="related-title">10.4. Cities Have an Inside Too</div></a>
+<a href="056-mandelneural.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#A6F5BD"><div class="related-title">9.6. Neural Networks as High-Dimensional Mandelbrot Sets</div></a>
+<a href="063-mandelcrystals.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#A6F5C6"><div class="related-title">9.9. Mandelbrot Structure in Physical Crystals</div></a></div>
+<div class="inbound-refs"><span class="inbound-label">4 inbound references</span><span class="inbound-links"><a href="009-randomness.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#F5A6D7" title="Structure Is What Randomness Does">2.6</a><a href="072-temperature.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#C9A6F5" title="Temperature">7.8</a><a href="063-mandelcrystals.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#A6F5C6" title="Mandelbrot Structure in Physical Crystals">9.9</a><a href="014-cities.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#BFF5A6" title="Cities Have an Inside Too">10.4</a></span></div></div>
 </div>
 <div class="page-end" id="page-end-version">
   <button class="page-end-logo" aria-label="Show page info"
@@ -214,6 +161,6 @@ It’s “where are the low-threshold nodes, and is the temperature right?”</p
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">knowledge · proto · Edited 2026-04-27 01:04</span>
+  <span class="page-end-version" aria-hidden="true">proto · Edited 2026-04-27 01:04</span>
 </div>
 </body></html>

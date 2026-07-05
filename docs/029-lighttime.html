@@ -3,135 +3,63 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>From Light's Point of View, There Is No Journey · Untitled</title>
+<title>4.3 From Light's Point of View, There Is No Journey · SeedPods</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;600&family=DM+Mono:wght@300;400&display=swap">
 <link rel="icon" href="logo.svg">
-<link rel="preload" href="nav.html" as="fetch" crossorigin>
 <link rel="stylesheet" href="site.css">
 <script src="pods.js"></script>
 <script src="nav.js"></script>
-<script>
-/* Live reload: subscribe to this project's build stream and hard-reload
-   when a build touches THIS page (or a shared asset) — so a user merely
-   *viewing* a shared project sees another user's edit without manually
-   refreshing. An unrelated page's change only advances the baseline; it
-   does not reload. A full rebuild, or a build missed while suspended /
-   back-forward-cached (reconnect snapshot), reloads unconditionally
-   since we can't safely diff it. EventSource auto-reconnects and the
-   server re-sends the current generation on every (re)connect. */
-(function(){
-  if(window.__gossLive)return;window.__gossLive=1;
-  var base=null,es=null;
-  var SHARED={"site.css":1,"nav.html":1,"nav.js":1,"pods.js":1,
-              "search-index.json":1,"logo.svg":1};
-  function myPage(){
-    var p;try{p=decodeURIComponent(location.pathname);}catch(_){p=location.pathname;}
-    var i=p.indexOf("/site/");
-    var rest=i>=0?p.slice(i+6):p.replace(/^\/+/,"");
-    if(rest===""||rest.charAt(rest.length-1)==="/")rest+="index.html";
-    return rest;
-  }
-  function relevant(list){
-    if(!list||!list.length)return false;
-    var me=myPage();
-    for(var k=0;k<list.length;k++){
-      if(list[k]===me||SHARED[list[k]])return true;
-    }
-    return false;
-  }
-  function handle(ev){
-    var d;try{d=JSON.parse(ev.data);}catch(_){return;}
-    var g=d.gen;if(typeof g!=="number")return;
-    if(base===null){base=g;return;}
-    if(g===base)return;
-    if(d.full===true){location.reload();return;}
-    if(Object.prototype.toString.call(d.changed)==="[object Array]"){
-      if(relevant(d.changed))location.reload();else base=g;
-      return;
-    }
-    location.reload(); /* snapshot after a missed build */
-  }
-  function open(){
-    if(es&&es.readyState!==2)return;
-    try{es=new EventSource("/site/__live");}catch(_){return;}
-    es.onmessage=handle;
-  }
-  open();
-  window.addEventListener("pageshow",function(e){if(e.persisted)open();});
-  document.addEventListener("visibilitychange",function(){
-    if(document.visibilityState==="visible")open();
-  });
-})();
-</script>
+<script src="live.js"></script>
 </head>
 <body>
-<div id="nav-mount" style="min-height:3rem"></div>
+<nav class="site-nav" data-pod-filename="029-lighttime"><span class="nav-title">SeedPods</span><div class="nav-right"><a class="nav-home" href="toc.html" aria-label="Contents" title="Contents"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></a><button type="button" class="nav-search-btn" onclick="seedNavOpenSearch()" aria-label="Search" title="Search"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></button><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true" title="Previous"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true" title="Next"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></span></div></nav>
 <div class="wrap">
-  <div class="subject-header fade cat-colored cat-physics"><h1>From Light's Point of View, There Is No Journey</h1><p class="premise">A photon leaves a star and arrives at your eye, and from the photon’s perspective these are the same moment, no journey, no duration, no distance, which is not a paradox to be dissolved but a genuine feature of how connection works at the boundary of the physical.</p><div class="subject-nav-row" data-pod-filename="029-lighttime"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Subject 29</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
-  <section id="_prolog" class="subject-section subject-prolog"><div class="prose"><p>A photon leaves a star and arrives at your eye.
+  <div class="subject-header fade cat-colored" style="--cat-bg:#F5A6BA"><h1>4.3 From Light's Point of View, There Is No Journey</h1><p class="premise">A photon leaves a star and arrives at your eye, and from the photon’s perspective these are the same moment, no journey, no duration, no distance, which is not a paradox to be dissolved but a genuine feature of how connection works at the boundary of the physical.</p></div>
+  <section id="_prolog" class="subject-section subject-prolog"><div class="prose"><p data-src-file="subjects/029-lighttime.md" data-src-l0="3" data-src-l1="4">A photon leaves a star and arrives at your eye.
 From the photon’s perspective, these are the same moment.</p>
 </div></section>
-<section id="depth" class="subject-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>In special <em><a class="gloss-ref nav-push" id="term-029-lighttime-1" href="glossary.html#relativity">relativity</a></em>, <em><a class="gloss-ref nav-push" id="term-029-lighttime-2" href="glossary.html#time">time</a></em> dilation reaches its limit at the speed of <em><a class="gloss-ref nav-push" id="term-029-lighttime-3" href="glossary.html#light">light</a></em>: a photon has no <em><a class="gloss-ref nav-push" id="term-029-lighttime-4" href="glossary.html#proper-time">proper time</a></em>.
+<section id="depth" class="subject-section"><h2 class="section-heading">Depth</h2><div class="prose"><p data-src-file="subjects/029-lighttime.md" data-src-l0="13" data-src-l1="18">In special <em><a class="gloss-ref nav-push" id="term-029-lighttime-1" href="glossary.html#relativity">relativity</a></em>, <em><a class="gloss-ref nav-push" id="term-029-lighttime-2" href="glossary.html#time">time</a></em> dilation reaches its limit at the speed of <em><a class="gloss-ref nav-push" id="term-029-lighttime-3" href="glossary.html#light">light</a></em>: a photon has no <em><a class="gloss-ref nav-push" id="term-029-lighttime-4" href="glossary.html#proper-time">proper time</a></em>.
 From the photon’s reference frame, to the extent that frame is meaningful, emission and absorption are the same event.
 No duration elapses.
 The mirror a light-year away reflects the beam back; two years pass for the observer; zero time passes for the light.
 The journey, from light’s perspective, does not exist.
 And yet the circuit completes.</p>
-<figure class="directive-image directive-image--left"><img src="images/029-lighttime.jpg" alt=""><figcaption>A light beam: from its point of view <cite>no journey</cite></figcaption></figure>
-<p>This is not a paradox to be dissolved but a genuine feature of how time and connection work at the boundary of the physical.
+<figure id="image-029-lighttime-1" class="directive-image directive-image--left"><img src="images/029-lighttime-l.jpg" alt=""><figcaption>A light beam: from its point of view <cite>no journey</cite></figcaption></figure>
+<p data-src-file="subjects/029-lighttime.md" data-src-l0="21" data-src-l1="22">This is not a paradox to be dissolved but a genuine feature of how time and connection work at the boundary of the physical.
 It wants integration with Whitehead’s view that the past is fully present in each new occasion, and with the question of what “connection” means when the connecting medium experiences no interval.</p>
-<p>The image of a mirror flags something further: the circuit implies a return.
+<p data-src-file="subjects/029-lighttime.md" data-src-l0="24" data-src-l1="28">The image of a mirror flags something further: the circuit implies a return.
 The light goes out, meets a surface, comes back.
 Something completes.
 What is the relationship between a circuit, a mirror, and the kind of connection that requires a response?
 That question is left open here as a seed for further thinking.</p>
-<p>Light is also unlike sound in a way that keeps mattering.
+<p data-src-file="subjects/029-lighttime.md" data-src-l0="30" data-src-l1="33">Light is also unlike sound in a way that keeps mattering.
 When a string vibrates or air moves through a tube, the <em><a class="gloss-ref nav-push" id="term-029-lighttime-5" href="glossary.html#harmonics">harmonics</a></em> are integer multiples of the fundamental: 2x, 3x, 4x.
 The octave (2:1) appears naturally in the <em><a class="gloss-ref nav-push" id="term-029-lighttime-6" href="glossary.html#overtone-series">overtone series</a></em> of any vibrating physical object, it is baked into the physics of classical mechanical vibration in a bounded medium.
 This is why the consonance hierarchy is not merely a perceptual construction: it is physically real, built into the nature of sound itself, and the ear evolved to recognize something that was already there.</p>
-<p>Light does not work this way.
+<p data-src-file="subjects/029-lighttime.md" data-src-l0="35" data-src-l1="40">Light does not work this way.
 An atom emitting light produces one specific frequency determined by its quantum energy transition, not a fundamental plus overtones, but a single discrete event.
 The harmonic series is a feature of classical vibration in a bounded medium.
 Light is not that.
 Each photon is a quantum of a <em><a class="gloss-ref nav-push" id="term-029-lighttime-7" href="glossary.html#fields">field</a></em>, not a standing wave in a tube.
 The octave of visible red falls in the ultraviolet, outside our perceptual window entirely, and not naturally co-produced with the red in the first place.</p>
-<p>This is one reason the visual system had to invent its circle rather than inherit one from physics.
+<p data-src-file="subjects/029-lighttime.md" data-src-l0="42" data-src-l1="45">This is one reason the visual system had to invent its circle rather than inherit one from physics.
 Sound gave the ear a natural hierarchy to discover.
 Light gave the eye a line and left it to close the loop on its own.
 [041]</p>
-<p>Light keeps turning out to be the place where classical intuitions break down, no rest frame, no harmonic series, quantized emission, the speed limit of the universe.
+<p data-src-file="subjects/029-lighttime.md" data-src-l0="47" data-src-l1="50">Light keeps turning out to be the place where classical intuitions break down, no rest frame, no harmonic series, quantum transitions instead of standing waves, the speed limit of the universe.
 Each of these is a separate surprise.
 Together they suggest that light is not just fast and wavy.
 It is structurally different from the classical world in ways we are still mapping.</p>
-<p>Starlight is hitting you right now, even at noon on a bright sunny day.
-The photons from distant stars don’t stop arriving just because the sun is up.
-What changes is the signal-to-noise ratio, not the signal.
-The sun floods your retinas and the atmosphere with so much visible light that the comparatively faint stellar photons are simply drowned out, your eyes can’t detect the contrast.
-But the photons are physically impinging on you all the same.</p>
-<p>A few layers to this:</p>
-<p>The atmosphere scatters sunlight in all directions.
-This is why the daytime sky is bright blue rather than black, Rayleigh scattering fills the whole sky dome with scattered solar photons.
-That diffuse brightness is what makes stars invisible in the daytime, not any absence of starlight.</p>
-<p>From space or at high altitude, stars are visible in daytime.
-Astronauts on the ISS, if they shade their eyes from direct sunlight, can see stars at any hour.
-On very high mountains the sky is a deeper blue for the same reason, less atmosphere to scatter.</p>
-<p>Radio telescopes observe stars 24/7.
-At wavelengths where the sun isn’t overwhelming, astronomers don’t distinguish day from night at all.
-The electromagnetic radiation from distant stars arrives continuously.</p>
-<p>Your skin is also receiving it.
-Not just your eyes, every square centimeter of your body is being struck by photons from thousands of stars simultaneously, all the time, day or night, clouds or clear.
-The flux is just extraordinarily low compared to solar radiation.</p>
-<p>So the starlight is never not shining on you.
-The sun’s presence is an observational obstacle, not a physical one.</p>
+<p data-src-file="subjects/029-lighttime.md" data-src-l0="52" data-src-l1="52"><sup class="note-mark"><a id="note-029-lighttime-1" href="notes.html#note-029-lighttime-1">1</a></sup></p>
 </div></section>
-<section id="provenance" class="subject-section"><div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="008-fields.html" class="related-card cat-colored cat-feeling nav-push"><div class="related-title">8. The Field Is the Medium of Feeling</div></a>
-<a href="017-pastpresent.html" class="related-card related-card-prelim cat-colored cat-ai-minds nav-push"><div class="related-title">17. The Past Is Fully Present</div></a>
-<a href="028-network.html" class="related-card cat-colored cat-consciousness nav-push"><div class="related-title">28. The Network That Experiences Itself</div></a>
-<a href="038-consonance-map.html" class="related-card related-card-prelim cat-colored cat-feeling nav-push"><div class="related-title">38. The Surprising Consonance Map</div></a>
-<a href="041-colorwheel.html" class="related-card related-card-prelim cat-colored cat-feeling nav-push"><div class="related-title">41. The Surprising Color Wheel</div></a></div>
-<div class="inbound-refs"><span class="inbound-label">8 inbound references</span><span class="inbound-links"><a href="008-fields.html" class="inbound-link nav-push cat-colored cat-feeling" title="The Field Is the Medium of Feeling">8</a><a href="017-pastpresent.html" class="inbound-link nav-push cat-colored cat-ai-minds" title="The Past Is Fully Present">17</a><a href="028-network.html" class="inbound-link nav-push cat-colored cat-consciousness" title="The Network That Experiences Itself">28</a><a href="030-interference.html" class="inbound-link nav-push cat-colored cat-feeling" title="The Pattern Is What the Waves Do Together">30</a><a href="041-colorwheel.html" class="inbound-link nav-push cat-colored cat-feeling" title="The Surprising Color Wheel">41</a><a href="069-love.html" class="inbound-link nav-push cat-colored cat-feeling" title="Love">69</a><a href="076-fivewindows.html" class="inbound-link nav-push cat-colored cat-feeling" title="Five Windows, One Room">76</a><a href="080-unification.html" class="inbound-link nav-push cat-colored cat-consciousness" title="The Many Become One">80</a></span></div></div></section>
+<div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="008-fields.html" class="related-card cat-colored nav-push" style="--cat-bg:#F5D7A6"><div class="related-title">3.1. The Field Is the Medium of Feeling</div></a>
+<a href="017-pastpresent.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#A6BBF5"><div class="related-title">5.4. The Past Is Fully Present</div></a>
+<a href="028-network.html" class="related-card cat-colored nav-push" style="--cat-bg:#F5A6B5"><div class="related-title">4.4. The Network That Experiences Itself</div></a>
+<a href="038-consonance-map.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#F5DEA6"><div class="related-title">3.3. The Surprising Consonance Map</div></a>
+<a href="041-colorwheel.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#BAA6F5"><div class="related-title">7.4. The Surprising Color Wheel</div></a></div>
+<div class="inbound-refs"><span class="inbound-label">8 inbound references</span><span class="inbound-links"><a href="008-fields.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#F5D7A6" title="The Field Is the Medium of Feeling">3.1</a><a href="030-interference.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#F5DAA6" title="The Pattern Is What the Waves Do Together">3.2</a><a href="069-love.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#F5F0A6" title="Love">3.8</a><a href="028-network.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#F5A6B5" title="The Network That Experiences Itself">4.4</a><a href="017-pastpresent.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#A6BBF5" title="The Past Is Fully Present">5.4</a><a href="076-fivewindows.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#B0A6F5" title="Five Windows, One Room">7.1</a><a href="041-colorwheel.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#BAA6F5" title="The Surprising Color Wheel">7.4</a><a href="080-unification.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#ADF5A6" title="The Many Become One">10.11</a></span></div></div>
 </div>
 <div class="page-end" id="page-end-version">
   <button class="page-end-logo" aria-label="Show page info"
@@ -140,6 +68,6 @@ The sun’s presence is an observational obstacle, not a physical one.</p>
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">physics · proto · Edited 2026-04-27 01:05</span>
+  <span class="page-end-version" aria-hidden="true">proto · Edited 2026-06-19 19:23</span>
 </div>
 </body></html>

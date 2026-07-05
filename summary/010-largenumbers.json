@@ -1,0 +1,24 @@
+{
+  "narrative" : "Uses Gödel's incompleteness theorem as the central example to argue that human intuition fails at large numbers — that routine recursive operations, accumulated far enough, produce qualitatively new phenomena invisible in the parts. The chapter frames this as emergence: the same pattern by which arithmetic becomes self-referential is the pattern by which chemistry becomes life.",
+  "schema" : 1,
+  "subject" : "010-largenumbers.md",
+  "subject-sha" : "sha256:38eeba456ece0aaeb4c176981ec1c948ded6d25ae6e5dcdd66969b33c484d28b",
+  "terms" : [
+    {
+      "aliases" : [
+
+      ],
+      "canonical" : "Mandelbrot set",
+      "weight" : 0.4
+    }
+  ],
+  "themes" : [
+    "emergence",
+    "large numbers",
+    "self-reference",
+    "incompleteness",
+    "intuition",
+    "recursion"
+  ],
+  "updated-at" : "2026-06-20T20:57:09Z"
+}

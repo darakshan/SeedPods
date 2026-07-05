@@ -3,124 +3,71 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Harmony · Untitled</title>
+<title>7.5 Harmony · SeedPods</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;600&family=DM+Mono:wght@300;400&display=swap">
 <link rel="icon" href="logo.svg">
-<link rel="preload" href="nav.html" as="fetch" crossorigin>
 <link rel="stylesheet" href="site.css">
 <script src="pods.js"></script>
 <script src="nav.js"></script>
-<script>
-/* Live reload: subscribe to this project's build stream and hard-reload
-   when a build touches THIS page (or a shared asset) — so a user merely
-   *viewing* a shared project sees another user's edit without manually
-   refreshing. An unrelated page's change only advances the baseline; it
-   does not reload. A full rebuild, or a build missed while suspended /
-   back-forward-cached (reconnect snapshot), reloads unconditionally
-   since we can't safely diff it. EventSource auto-reconnects and the
-   server re-sends the current generation on every (re)connect. */
-(function(){
-  if(window.__gossLive)return;window.__gossLive=1;
-  var base=null,es=null;
-  var SHARED={"site.css":1,"nav.html":1,"nav.js":1,"pods.js":1,
-              "search-index.json":1,"logo.svg":1};
-  function myPage(){
-    var p;try{p=decodeURIComponent(location.pathname);}catch(_){p=location.pathname;}
-    var i=p.indexOf("/site/");
-    var rest=i>=0?p.slice(i+6):p.replace(/^\/+/,"");
-    if(rest===""||rest.charAt(rest.length-1)==="/")rest+="index.html";
-    return rest;
-  }
-  function relevant(list){
-    if(!list||!list.length)return false;
-    var me=myPage();
-    for(var k=0;k<list.length;k++){
-      if(list[k]===me||SHARED[list[k]])return true;
-    }
-    return false;
-  }
-  function handle(ev){
-    var d;try{d=JSON.parse(ev.data);}catch(_){return;}
-    var g=d.gen;if(typeof g!=="number")return;
-    if(base===null){base=g;return;}
-    if(g===base)return;
-    if(d.full===true){location.reload();return;}
-    if(Object.prototype.toString.call(d.changed)==="[object Array]"){
-      if(relevant(d.changed))location.reload();else base=g;
-      return;
-    }
-    location.reload(); /* snapshot after a missed build */
-  }
-  function open(){
-    if(es&&es.readyState!==2)return;
-    try{es=new EventSource("/site/__live");}catch(_){return;}
-    es.onmessage=handle;
-  }
-  open();
-  window.addEventListener("pageshow",function(e){if(e.persisted)open();});
-  document.addEventListener("visibilitychange",function(){
-    if(document.visibilityState==="visible")open();
-  });
-})();
-</script>
+<script src="live.js"></script>
 </head>
 <body>
-<div id="nav-mount" style="min-height:3rem"></div>
+<nav class="site-nav" data-pod-filename="070-harmony"><span class="nav-title">SeedPods</span><div class="nav-right"><a class="nav-home" href="toc.html" aria-label="Contents" title="Contents"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></a><button type="button" class="nav-search-btn" onclick="seedNavOpenSearch()" aria-label="Search" title="Search"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></button><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true" title="Previous"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true" title="Next"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></span></div></nav>
 <div class="wrap">
-  <div class="subject-header fade cat-colored cat-feeling"><h1>Harmony</h1><p class="premise"><em><a class="gloss-ref nav-push" href="glossary.html#harmony">Harmony</a></em> is the experience of elements fitting together, in sound, in color, in a room full of people, and it works the same way everywhere: a sense of home, the tension of departure, the resolution of return, all governed by ratios simple enough that every culture finds them independently, and all made possible by an imperfection the Pythagoreans thought would destroy them.</p><div class="subject-nav-row" data-pod-filename="070-harmony"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Subject 70</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
-  <section id="depth" class="subject-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>Jacob Collier says melody is like dialogue and harmony is like the plot <a class="bib-ref" id="ref-070-harmony-1" href="bibliography.html#ref-070-harmony-1">[collier-1]</a>.
+  <div class="subject-header fade cat-colored" style="--cat-bg:#BEA6F5"><h1>7.5 Harmony</h1><p class="premise"><em><a class="gloss-ref nav-push" href="glossary.html#harmony">Harmony</a></em> is the experience of elements fitting together, in sound, in color, in a room full of people, and it works the same way everywhere: a sense of home, the tension of departure, the resolution of return, all governed by ratios simple enough that every culture finds them independently, and all made possible by an imperfection the Pythagoreans thought would destroy them.</p></div>
+  <section id="depth" class="subject-section"><h2 class="section-heading">Depth</h2><div class="prose"><p data-src-file="subjects/070-harmony.md" data-src-l0="12" data-src-l1="15">Jacob Collier says melody is like dialogue and harmony is like the plot <a class="bib-ref" id="ref-070-harmony-1" href="bibliography.html#ref-070-harmony-1">[collier-1]</a>.
 The distinction is immediate to anyone who has listened closely: melody is the voice that holds your attention, the figure against the ground, but harmony is what gives that figure somewhere to go.
 Without it, a melody floats.
 With it, the melody means something, because harmony supplies the sense of home, and everything in music is defined by its distance from home and the promise of return.</p>
-<p>The simplest harmonic relationships, the tonic, the fourth, the fifth, I-IV-V in the language of music theory, correspond to the simplest frequency ratios: 1:1, 4:3, 3:2.
+<p data-src-file="subjects/070-harmony.md" data-src-l0="17" data-src-l1="20">The simplest harmonic relationships, the tonic, the fourth, the fifth, I-IV-V in the language of music theory, correspond to the simplest frequency ratios: 1:1, 4:3, 3:2.
 These are not Western inventions.
 They are the ratios every culture that ever made music arrived at first, because they are the ratios the ear finds most consonant, which is to say most stable, which is to say simplest.
 The same hierarchy appears in the Farey sequence, in Benford’s law, in the bulb sizes of the Mandelbrot set, the simplest numbers always come first, and consonance is what simplicity sounds like (<a href="069-love.html">Love</a>, <a href="035-simplestnumbers.html">The Simplest Numbers Come First</a>, <a href="038-consonance-map.html">The Surprising Consonance Map</a>).</p>
-<p>Much of the world’s music is built on a drone, a fixed tonic, an immovable home, around which melodies can become astonishingly intricate and playful.
+<p data-src-file="subjects/070-harmony.md" data-src-l0="22" data-src-l1="23">Much of the world’s music is built on a drone, a fixed tonic, an immovable home, around which melodies can become astonishingly intricate and playful.
 Indian classical music, Scottish pibroch, the tambura’s hum beneath a raga: these are not primitive precursors to Western harmony but vast creative traditions in their own right, exploring what is possible when the center holds.</p>
-<p>But Western music took a different path.
+<p data-src-file="subjects/070-harmony.md" data-src-l0="25" data-src-l1="31">But Western music took a different path.
 It learned to move home itself, to shift the tonic, to modulate, and this was a difference not of degree but of kind, like moving from the number line to the complex plane.
 The enabling condition was <em><a class="gloss-ref nav-push" id="term-070-harmony-1" href="glossary.html#equal-temperament">equal temperament</a></em>, which closes the circle of fifths by distributing the Pythagorean comma, the tiny, irreducible gap between twelve perfect fifths and seven octaves, equally across all twelve steps.
 Every interval becomes slightly impure.
 No fifth is quite right.
 No third is quite right.
 The circle closes only because we agreed to make every note a little wrong.</p>
-<p>The Pythagoreans would have recognized this as catastrophe.
+<p data-src-file="subjects/070-harmony.md" data-src-l0="33" data-src-l1="36">The Pythagoreans would have recognized this as catastrophe.
 They had staked everything on the rationality of the cosmos, the same impulse that made the discovery of √2 an existential crisis serious enough to seal as a secret on pain of death.
 The circle of fifths not closing was the same wound in a different place: the music of the spheres, the very domain where they had found the cosmos most orderly, was irrational too.
 The diagonal of the square and the spiral of fifths are the same crack.</p>
-<p>But as Leonard Cohen sang, “There is a crack in everything, that’s how the light gets in” <a class="bib-ref" id="ref-070-harmony-2" href="bibliography.html#ref-070-harmony-2">[cohen-1]</a>.
+<p data-src-file="subjects/070-harmony.md" data-src-l0="38" data-src-l1="43">But as Leonard Cohen sang, “There is a crack in everything, that’s how the light gets in” <a class="bib-ref" id="ref-070-harmony-2" href="bibliography.html#ref-070-harmony-2">[cohen-1]</a>.
 Equal temperament’s deliberate imperfection is what lets the system explore.
 A drone pins you to one place with perfect purity; equal temperament lets you travel, at the cost of never being quite pure anywhere.
 This is the same trade-off that appears when you add a temperature parameter to a neural network or noise to an evolutionary search, the imperfection is not a defect but the condition that makes exploration possible (<a href="072-temperature.html">Temperature</a>).
 W. A. Mathieu, in <em>Harmonic Experience</em>, maps the pathways that great composers found through this tempered space, Bach, Beethoven, Coltrane, plotting their harmonic journeys on a two-dimensional lattice of thirds and fifths that Leonhard Euler first described in 1739 as the <em><em><a class="gloss-ref nav-push" id="term-070-harmony-2" href="glossary.html#tonnetz">Tonnetz</a></em></em> and that extends, in principle, without limit <a class="bib-ref" id="ref-070-harmony-3" href="bibliography.html#ref-070-harmony-3">[mathieu-1]</a> <a class="bib-ref" id="ref-070-harmony-4" href="bibliography.html#ref-070-harmony-4">[euler-1]</a>.
 Jacob Collier lives natively in that lattice, navigating by ear through regions most musicians reach only by theory.</p>
-<p>The word <em>harmony</em> extends beyond music without becoming metaphor.
+<p data-src-file="subjects/070-harmony.md" data-src-l0="45" data-src-l1="51">The word <em>harmony</em> extends beyond music without becoming metaphor.
 Colors are called harmonious when they fit together with a sense of inevitability; architecture and landscapes can be harmonious; a relationship or a society can be harmonious.
 In each case the intuition is the same: the elements are consonant, they belong together, they resolve rather than clash.
 What differs is how easy it is to say <em>why</em>.
 For sound waves the explanation is precise: simple frequency ratios produce stable, repeating waveforms.
 For colors it is less precise but still grounded in the physics of opponent processing and the statistics of natural scenes (<a href="042-eyethinks.html">Opponent Processing: The Eye Thinks Before the Brain Does</a>).
 For people it is hardest of all, and yet the word persists, because the experience it names is real even where the mechanism is opaque.</p>
-<p>Cultures develop their own vocabularies of consonance, much as languages develop their own phonologies, which sounds are permitted, which combinations are legal, which sequences feel natural.
+<p data-src-file="subjects/070-harmony.md" data-src-l0="53" data-src-l1="55">Cultures develop their own vocabularies of consonance, much as languages develop their own phonologies, which sounds are permitted, which combinations are legal, which sequences feel natural.
 The elements become a vocabulary, and what counts as harmonious is defined within that vocabulary, not outside it (<a href="037-assembly.html">The Architecture of Levels</a>).
 Whether these vocabularies are invented or discovered is a question deliberately left open, perhaps because the polarity itself is too simple for what actually happens, which looks more like arriving at something that was always available but never inevitable.</p>
-<p>Harmony is a source of beauty, possibly its deepest source, possibly not its only one (<a href="071-beauty.html">Beauty</a>).
+<p data-src-file="subjects/070-harmony.md" data-src-l0="57" data-src-l1="61">Harmony is a source of beauty, possibly its deepest source, possibly not its only one (<a href="071-beauty.html">Beauty</a>).
 To say “beauty is in the eye of the beholder” and leave it there is to miss the other half: beauty is also in the mathematics of the thing beheld.
 The golden ratio keeps turning up in living forms; the simplest frequency ratios keep turning up in every musical tradition; wabi-sabi finds beauty in the imperfect and the transient.
 All of these are beautiful, and the question of whether a single principle underlies them all is one this article opens but does not close.
 It is enough to notice that harmony, the fitting-together of elements, is present in every case, and that the crack the Pythagoreans feared turns out to be inseparable from the grace they were looking for.</p>
 </div></section>
-<section id="provenance" class="subject-section"><div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="035-simplestnumbers.html" class="related-card related-card-prelim cat-colored cat-feeling nav-push"><div class="related-title">35. The Simplest Numbers Come First</div></a>
-<a href="037-assembly.html" class="related-card related-card-prelim cat-colored cat-mathematics nav-push"><div class="related-title">37. The Architecture of Levels</div></a>
-<a href="038-consonance-map.html" class="related-card related-card-prelim cat-colored cat-feeling nav-push"><div class="related-title">38. The Surprising Consonance Map</div></a>
-<a href="071-beauty.html" class="related-card related-card-prelim cat-colored cat-feeling nav-push"><div class="related-title">71. Beauty</div></a>
-<a href="072-temperature.html" class="related-card related-card-prelim cat-colored cat-feeling nav-push"><div class="related-title">72. Temperature</div></a></div>
-<div class="inbound-refs"><span class="inbound-label">1 inbound reference</span><span class="inbound-links"><a href="040-stability.html" class="inbound-link nav-push cat-colored cat-mathematics" title="Two Opposite Kinds of Stability">40</a></span></div></div></section>
-<section id="images" class="subject-section"><h2 class="section-heading">Images</h2><div class="prose"><figure class="directive-image directive-image--left"><img src="images/070-harmony.jpg" alt=""><figcaption>Lissajous figure: harmonic frequency ratios made visible <cite>Wikimedia Commons</cite></figcaption></figure>
+<section id="images" class="subject-section"><h2 class="section-heading">Images</h2><div class="prose"><figure id="image-070-harmony-1" class="directive-image directive-image--left"><img src="images/070-harmony-l.jpg" alt=""><figcaption>Lissajous figure: harmonic frequency ratios made visible <cite>Wikimedia Commons</cite></figcaption></figure>
 </div></section>
+<div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="035-simplestnumbers.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#F5E2A6"><div class="related-title">3.4. The Simplest Numbers Come First</div></a>
+<a href="037-assembly.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#E3A6F5"><div class="related-title">8.5. The Architecture of Levels</div></a>
+<a href="038-consonance-map.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#F5DEA6"><div class="related-title">3.3. The Surprising Consonance Map</div></a>
+<a href="071-beauty.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#C5A6F5"><div class="related-title">7.7. Beauty</div></a>
+<a href="072-temperature.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#C9A6F5"><div class="related-title">7.8. Temperature</div></a></div>
+<div class="inbound-refs"><span class="inbound-label">2 inbound references</span><span class="inbound-links"><a href="039-devil.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#D2F5A6" title="The Devil's Interval">6.9</a><a href="040-stability.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#C1A6F5" title="Two Opposite Kinds of Stability">7.6</a></span></div></div>
 </div>
 <div class="page-end" id="page-end-version">
   <button class="page-end-logo" aria-label="Show page info"
@@ -129,6 +76,6 @@ It is enough to notice that harmony, the fitting-together of elements, is presen
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">feeling · prelim · Edited 2026-04-27 01:08</span>
+  <span class="page-end-version" aria-hidden="true">prelim · Edited 2026-06-19 14:46</span>
 </div>
 </body></html>

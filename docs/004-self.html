@@ -3,82 +3,29 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Self Is a Pattern, Not a Thing · Untitled</title>
+<title>8.7 The Self Is a Pattern, Not a Thing · SeedPods</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;600&family=DM+Mono:wght@300;400&display=swap">
 <link rel="icon" href="logo.svg">
-<link rel="preload" href="nav.html" as="fetch" crossorigin>
 <link rel="stylesheet" href="site.css">
 <script src="pods.js"></script>
 <script src="nav.js"></script>
-<script>
-/* Live reload: subscribe to this project's build stream and hard-reload
-   when a build touches THIS page (or a shared asset) — so a user merely
-   *viewing* a shared project sees another user's edit without manually
-   refreshing. An unrelated page's change only advances the baseline; it
-   does not reload. A full rebuild, or a build missed while suspended /
-   back-forward-cached (reconnect snapshot), reloads unconditionally
-   since we can't safely diff it. EventSource auto-reconnects and the
-   server re-sends the current generation on every (re)connect. */
-(function(){
-  if(window.__gossLive)return;window.__gossLive=1;
-  var base=null,es=null;
-  var SHARED={"site.css":1,"nav.html":1,"nav.js":1,"pods.js":1,
-              "search-index.json":1,"logo.svg":1};
-  function myPage(){
-    var p;try{p=decodeURIComponent(location.pathname);}catch(_){p=location.pathname;}
-    var i=p.indexOf("/site/");
-    var rest=i>=0?p.slice(i+6):p.replace(/^\/+/,"");
-    if(rest===""||rest.charAt(rest.length-1)==="/")rest+="index.html";
-    return rest;
-  }
-  function relevant(list){
-    if(!list||!list.length)return false;
-    var me=myPage();
-    for(var k=0;k<list.length;k++){
-      if(list[k]===me||SHARED[list[k]])return true;
-    }
-    return false;
-  }
-  function handle(ev){
-    var d;try{d=JSON.parse(ev.data);}catch(_){return;}
-    var g=d.gen;if(typeof g!=="number")return;
-    if(base===null){base=g;return;}
-    if(g===base)return;
-    if(d.full===true){location.reload();return;}
-    if(Object.prototype.toString.call(d.changed)==="[object Array]"){
-      if(relevant(d.changed))location.reload();else base=g;
-      return;
-    }
-    location.reload(); /* snapshot after a missed build */
-  }
-  function open(){
-    if(es&&es.readyState!==2)return;
-    try{es=new EventSource("/site/__live");}catch(_){return;}
-    es.onmessage=handle;
-  }
-  open();
-  window.addEventListener("pageshow",function(e){if(e.persisted)open();});
-  document.addEventListener("visibilitychange",function(){
-    if(document.visibilityState==="visible")open();
-  });
-})();
-</script>
+<script src="live.js"></script>
 </head>
 <body>
-<div id="nav-mount" style="min-height:3rem"></div>
+<nav class="site-nav" data-pod-filename="004-self"><span class="nav-title">SeedPods</span><div class="nav-right"><a class="nav-home" href="toc.html" aria-label="Contents" title="Contents"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></a><button type="button" class="nav-search-btn" onclick="seedNavOpenSearch()" aria-label="Search" title="Search"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></button><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true" title="Previous"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true" title="Next"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></span></div></nav>
 <div class="wrap">
-  <div class="subject-header fade cat-colored cat-consciousness"><h1>The Self Is a Pattern, Not a Thing</h1><p class="premise">One philosopher looked for the self and found only a bundle of perceptions; a contemplative tradition looked and found no fixed owner; a process metaphysics found a society of occasions stable enough to appear permanent, three traditions arriving independently at the same dissolution of the substantial self.</p><div class="subject-nav-row" data-pod-filename="004-self"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Subject 4</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
-  <section id="_prolog" class="subject-section subject-prolog"><div class="prose"><p>The mystic’s insight and the philosopher’s proof arrive at the same place.</p>
+  <div class="subject-header fade cat-colored" style="--cat-bg:#EAA6F5"><h1>8.7 The Self Is a Pattern, Not a Thing</h1><p class="premise">One philosopher looked for the self and found only a bundle of perceptions; a contemplative tradition looked and found no fixed owner; a process metaphysics found a society of occasions stable enough to appear permanent, three traditions arriving independently at the same dissolution of the substantial self.</p></div>
+  <section id="_prolog" class="subject-section subject-prolog"><div class="prose"><p data-src-file="subjects/004-self.md" data-src-l0="3" data-src-l1="3">The mystic’s insight and the philosopher’s proof arrive at the same place.</p>
 </div></section>
-<section id="depth" class="subject-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>David Hume went looking for the <em><a class="gloss-ref nav-push" id="term-004-self-1" href="glossary.html#self">self</a></em> and couldn’t find it.<sup class="footnote-mark" id="fn-004-self-1-mark"><a href="footnotes.html#fn-004-self-1">1</a></sup>
+<section id="depth" class="subject-section"><h2 class="section-heading">Depth</h2><div class="prose"><p data-src-file="subjects/004-self.md" data-src-l0="14" data-src-l1="19">David Hume went looking for the <em><a class="gloss-ref nav-push" id="term-004-self-1" href="glossary.html#self">self</a></em> and couldn’t find it.<a class="bib-ref" id="ref-004-self-1" href="bibliography.html#ref-004-self-1">[hume]</a>
 He introspected carefully and found only a bundle of perceptions, feelings, memories, emotions, streaming past in sequence.
 No owner behind them.
 No stage beneath the actors.
 Just the show.
 He concluded that the self is a fiction we impose on the flux because we can’t tolerate the alternative.</p>
-<p>But the fiction is extraordinarily convincing.
+<p data-src-file="subjects/004-self.md" data-src-l0="21" data-src-l1="32">But the fiction is extraordinarily convincing.
 A newborn doesn’t arrive with a sense of self.
 It arrives with feeling, undifferentiated, boundary-less.
 Gradually the mind discovers correlation: this body responds when I push, that one doesn’t.
@@ -86,16 +33,16 @@ Pain comes from here.
 Warmth comes from there.
 The mind learns it is connected to a body, and from that draws a fateful conclusion: I am <em>inside</em> this body.
 Then memory accumulates: these experiences happened to <em>me</em>, this face in the mirror is <em>mine</em>, and the container becomes the self.
-What Whitehead called <em><em><a class="gloss-ref nav-push" id="term-004-self-2" href="glossary.html#prehension">prehension</a></em></em>, each moment of experience actively feeling and inheriting the last<sup class="footnote-mark" id="fn-004-self-2-mark"><a href="footnotes.html#fn-004-self-2">2</a></sup>
+What Whitehead called <em><em><a class="gloss-ref nav-push" id="term-004-self-2" href="glossary.html#prehension">prehension</a></em></em>, each moment of experience actively feeling and inheriting the last<a class="bib-ref" id="ref-004-self-2" href="bibliography.html#ref-004-self-2">[whitehead]</a>
 — is the raw material the infant starts with.
 But the “I” is what development builds on top of it: a construction assembled so early and reinforced so constantly that it feels like bedrock.
 We mistake the persistence of the pattern for the existence of a thing.</p>
-<p>The <em><a class="gloss-ref nav-push" id="term-004-self-3" href="glossary.html#buddhism">Buddhist</a></em> tradition saw through this construction twenty-five centuries before Hume tried to.<sup class="footnote-mark" id="fn-004-self-3-mark"><a href="footnotes.html#fn-004-self-3">3</a></sup>
+<p data-src-file="subjects/004-self.md" data-src-l0="34" data-src-l1="38">The <em><a class="gloss-ref nav-push" id="term-004-self-3" href="glossary.html#buddhism">Buddhist</a></em> tradition saw through this construction twenty-five centuries before Hume tried to.<a class="bib-ref" id="ref-004-self-3" href="bibliography.html#ref-004-self-3">[rahula]</a>
 The doctrine of anatta, no fixed self, holds that what we call “I” is a process, not a thing.
 Experience arises moment to moment, each <em><a class="gloss-ref nav-push" id="term-004-self-4" href="glossary.html#actual-occasion">occasion</a></em> conditioned by the last, but with no permanent substrate persisting through the changes.
 The candle flame at midnight is not the flame from the evening, though one gave rise to the other.
 The practice of meditation is, among other things, a method for watching the construction happen in real time, and noticing that the “I” watching is itself part of the show.</p>
-<p>Derek Parfit attacked the same illusion with thought experiments.<sup class="footnote-mark" id="fn-004-self-4-mark"><a href="footnotes.html#fn-004-self-4">4</a></sup>
+<p data-src-file="subjects/004-self.md" data-src-l0="40" data-src-l1="48">Derek Parfit attacked the same illusion with thought experiments.<a class="bib-ref" id="ref-004-self-4" href="bibliography.html#ref-004-self-4">[parfit]</a>
 Teleportation, brain splitting, gradual neuron replacement, each one designed to find the sharp line where “you” stop and “someone else” begins.
 The line isn’t there.
 What survives, Parfit argued, is psychological continuity: connected memories, persistent intentions, overlapping characteristics.
@@ -104,17 +51,17 @@ But continuity comes in degrees.
 It is a convention we impose on a gradient.
 Parfit found this liberating rather than terrifying.
 So did the Buddhists.</p>
-<p>The self isn’t wrong that it exists.
+<p data-src-file="subjects/004-self.md" data-src-l0="50" data-src-l1="53">The self isn’t wrong that it exists.
 It’s wrong about what it is.
 Not a thing that has experiences, but the pattern that the experiencing makes. A wave that convinced itself it was water.
 And the convincing never stops.</p>
 </div></section>
-<section id="provenance" class="subject-section"><div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="002-events.html" class="related-card cat-colored cat-physics nav-push"><div class="related-title">2. Reality Is Events, Not Things</div></a>
-<a href="008-fields.html" class="related-card cat-colored cat-feeling nav-push"><div class="related-title">8. The Field Is the Medium of Feeling</div></a>
-<a href="012-autopoiesis.html" class="related-card cat-colored cat-biology nav-push"><div class="related-title">12. The Cell That Makes Itself</div></a>
-<a href="031-surfaceinside.html" class="related-card related-card-prelim cat-colored cat-physics nav-push"><div class="related-title">31. The Surface Is the Inside</div></a>
-<a href="037-assembly.html" class="related-card related-card-prelim cat-colored cat-mathematics nav-push"><div class="related-title">37. The Architecture of Levels</div></a></div>
-<div class="inbound-refs"><span class="inbound-label">3 inbound references</span><span class="inbound-links"><a href="002-events.html" class="inbound-link nav-push cat-colored cat-physics" title="Reality Is Events, Not Things">2</a><a href="013-enactment.html" class="inbound-link nav-push cat-colored cat-biology" title="The Organism Enacts Its World">13</a><a href="052-dichotomy.html" class="inbound-link nav-push cat-colored cat-mathematics" title="Discrete and Continuous as a False Dichotomy">52</a></span></div></div></section>
+<div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="002-events.html" class="related-card cat-colored nav-push" style="--cat-bg:#F5A6C2"><div class="related-title">4.1. Reality Is Events, Not Things</div></a>
+<a href="008-fields.html" class="related-card cat-colored nav-push" style="--cat-bg:#F5D7A6"><div class="related-title">3.1. The Field Is the Medium of Feeling</div></a>
+<a href="012-autopoiesis.html" class="related-card cat-colored nav-push" style="--cat-bg:#F5A6D3"><div class="related-title">2.7. The Cell That Makes Itself</div></a>
+<a href="031-surfaceinside.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#D6A6F5"><div class="related-title">8.1. The Surface Is the Inside</div></a>
+<a href="037-assembly.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#E3A6F5"><div class="related-title">8.5. The Architecture of Levels</div></a></div>
+<div class="inbound-refs"><span class="inbound-label">3 inbound references</span><span class="inbound-links"><a href="002-events.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#F5A6C2" title="Reality Is Events, Not Things">4.1</a><a href="013-enactment.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#F0A6F5" title="The Organism Enacts Its World">8.9</a><a href="052-dichotomy.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#A6F5AE" title="Discrete and Continuous as a False Dichotomy">9.1</a></span></div></div>
 </div>
 <div class="page-end" id="page-end-version">
   <button class="page-end-logo" aria-label="Show page info"
@@ -123,6 +70,6 @@ And the convincing never stops.</p>
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">consciousness · prelim · Edited 2026-04-27 00:34</span>
+  <span class="page-end-version" aria-hidden="true">prelim · Edited 2026-06-23 19:02</span>
 </div>
 </body></html>

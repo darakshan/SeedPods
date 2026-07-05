@@ -1,72 +1,44 @@
 {
-  "article" : "001-caloric.md",
-  "article-sha" : "sha256:35ccda7b2861e68e3591e3e55aeecb4229e499ab83865bc6096312aed10a94d6",
-  "narrative" : "Caloric and the ether were invisible substances that explained everything perfectly until they didn't. The pattern by which such frameworks dissolve is specific and repeatable: anomalies accumulate, patches grow elaborate, and eventually someone removes the flawed primitive. The article argues we are inside exactly such a moment now, with the assumption that matter is experienceless playing the role caloric once did, and AI making the crisis acute.",
+  "narrative" : "Uses the historical dissolution of caloric and the luminiferous ether — two invisible substances once considered obvious — to establish the book's central pattern: frameworks become invisible, anomalies accumulate, patches grow elaborate, and eventually someone removes the flawed primitive rather than defending it. The chapter argues that the assumption of experienceless matter is today's caloric, and that AI has made the crisis acute by forcing the question of whether experience requires biological substrate.",
   "schema" : 1,
+  "subject" : "001-caloric.md",
+  "subject-sha" : "sha256:d0a169670f027b81034407b687dd3eabf44c4a9eebcd900ad96f8d694943e978",
   "terms" : [
     {
-      "aliases" : [
-        "white head"
-      ],
-      "canonical" : "Whitehead",
-      "weight" : 0.90000000000000002
+      "canonical" : "caloric",
+      "weight" : 1
     },
     {
-      "aliases" : [
-        "kuhn",
-        "coon"
-      ],
-      "canonical" : "Thomas Kuhn",
-      "weight" : 0.80000000000000004
-    },
-    {
-      "aliases" : [
-        "plonk"
-      ],
-      "canonical" : "Max Planck",
-      "weight" : 0.69999999999999996
-    },
-    {
-      "aliases" : [
-        "rumford"
-      ],
       "canonical" : "Count Rumford",
-      "weight" : 0.69999999999999996
+      "weight" : 0.7
     },
     {
-      "aliases" : [
-        "goff"
-      ],
-      "canonical" : "Philip Goff",
-      "weight" : 0.59999999999999998
+      "canonical" : "Max Planck",
+      "weight" : 0.7
     },
     {
-      "aliases" : [
-
-      ],
-      "canonical" : "Annaka Harris",
-      "weight" : 0.5
+      "canonical" : "Thomas Kuhn",
+      "weight" : 0.8
     },
     {
-      "aliases" : [
-        "lavoisier"
-      ],
-      "canonical" : "Lavoisier",
-      "weight" : 0.5
+      "canonical" : "Alfred North Whitehead",
+      "weight" : 0.9
     },
     {
-      "aliases" : [
-        "michelson morley"
-      ],
       "canonical" : "Michelson-Morley",
       "weight" : 0.5
     },
     {
-      "aliases" : [
-        "caloric"
-      ],
-      "canonical" : "caloric",
-      "weight" : 1
+      "canonical" : "Philip Goff",
+      "weight" : 0.6
+    },
+    {
+      "canonical" : "Annaka Harris",
+      "weight" : 0.5
+    },
+    {
+      "canonical" : "Antoine Lavoisier",
+      "weight" : 0.5
     }
   ],
   "themes" : [
@@ -77,5 +49,5 @@
     "frameworks",
     "AI"
   ],
-  "updated-at" : "2026-04-28T02:38:17Z"
+  "updated-at" : "2026-06-23T19:07:40Z"
 }

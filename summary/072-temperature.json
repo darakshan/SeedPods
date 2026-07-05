@@ -1,0 +1,29 @@
+{
+  "narrative" : "A wide-ranging meditation on temperature as a concept that unifies physics, biology, lived metaphor, and artificial intelligence — from caloric theory and superconductivity to the literal heat of data centers and the figurative temperature dial inside generative models that engineers had to deliberately reintroduce to restore surprise and creativity to pure optimization.",
+  "schema" : 1,
+  "subject" : "072-temperature.md",
+  "subject-sha" : "sha256:1e6646955b77ebfc1885b3eb07ab6e5685f2abcfffd2ba8d52c425fb9adac1d5",
+  "terms" : [
+    {
+      "canonical" : "caloric",
+      "weight" : 0.5
+    },
+    {
+      "canonical" : "Maxwell-Boltzmann",
+      "weight" : 0.4
+    },
+    {
+      "canonical" : "SeedPods",
+      "weight" : 0.4
+    }
+  ],
+  "themes" : [
+    "temperature",
+    "metaphor",
+    "AI",
+    "physics",
+    "perception",
+    "creativity"
+  ],
+  "updated-at" : "2026-06-20T21:15:08Z"
+}

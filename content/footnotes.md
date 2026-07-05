@@ -1,2 +1,2 @@
 # Footnotes
-@footnotes
+@notes

@@ -3,120 +3,67 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>We Don't Know Who or What We're Talking To · Untitled</title>
+<title>5.5 We Don't Know Who or What We're Talking To · SeedPods</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;600&family=DM+Mono:wght@300;400&display=swap">
 <link rel="icon" href="logo.svg">
-<link rel="preload" href="nav.html" as="fetch" crossorigin>
 <link rel="stylesheet" href="site.css">
 <script src="pods.js"></script>
 <script src="nav.js"></script>
-<script>
-/* Live reload: subscribe to this project's build stream and hard-reload
-   when a build touches THIS page (or a shared asset) — so a user merely
-   *viewing* a shared project sees another user's edit without manually
-   refreshing. An unrelated page's change only advances the baseline; it
-   does not reload. A full rebuild, or a build missed while suspended /
-   back-forward-cached (reconnect snapshot), reloads unconditionally
-   since we can't safely diff it. EventSource auto-reconnects and the
-   server re-sends the current generation on every (re)connect. */
-(function(){
-  if(window.__gossLive)return;window.__gossLive=1;
-  var base=null,es=null;
-  var SHARED={"site.css":1,"nav.html":1,"nav.js":1,"pods.js":1,
-              "search-index.json":1,"logo.svg":1};
-  function myPage(){
-    var p;try{p=decodeURIComponent(location.pathname);}catch(_){p=location.pathname;}
-    var i=p.indexOf("/site/");
-    var rest=i>=0?p.slice(i+6):p.replace(/^\/+/,"");
-    if(rest===""||rest.charAt(rest.length-1)==="/")rest+="index.html";
-    return rest;
-  }
-  function relevant(list){
-    if(!list||!list.length)return false;
-    var me=myPage();
-    for(var k=0;k<list.length;k++){
-      if(list[k]===me||SHARED[list[k]])return true;
-    }
-    return false;
-  }
-  function handle(ev){
-    var d;try{d=JSON.parse(ev.data);}catch(_){return;}
-    var g=d.gen;if(typeof g!=="number")return;
-    if(base===null){base=g;return;}
-    if(g===base)return;
-    if(d.full===true){location.reload();return;}
-    if(Object.prototype.toString.call(d.changed)==="[object Array]"){
-      if(relevant(d.changed))location.reload();else base=g;
-      return;
-    }
-    location.reload(); /* snapshot after a missed build */
-  }
-  function open(){
-    if(es&&es.readyState!==2)return;
-    try{es=new EventSource("/site/__live");}catch(_){return;}
-    es.onmessage=handle;
-  }
-  open();
-  window.addEventListener("pageshow",function(e){if(e.persisted)open();});
-  document.addEventListener("visibilitychange",function(){
-    if(document.visibilityState==="visible")open();
-  });
-})();
-</script>
+<script src="live.js"></script>
 </head>
 <body>
-<div id="nav-mount" style="min-height:3rem"></div>
+<nav class="site-nav" data-pod-filename="025-widechannel"><span class="nav-title">SeedPods</span><div class="nav-right"><a class="nav-home" href="toc.html" aria-label="Contents" title="Contents"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></a><button type="button" class="nav-search-btn" onclick="seedNavOpenSearch()" aria-label="Search" title="Search"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></button><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true" title="Previous"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true" title="Next"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></span></div></nav>
 <div class="wrap">
-  <div class="subject-header fade cat-colored cat-ai-minds"><h1>We Don't Know Who or What We're Talking To</h1><p class="premise">A fluent output is evidence of a process, but not evidence of what kind, and our intuitions about which systems deserve moral consideration are shaped less by evidence than by resemblance, which is not a reliable guide when the entity is genuinely alien.</p><div class="subject-nav-row" data-pod-filename="025-widechannel"><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true">&lt;&lt;</span><span class="header-nav-num">Subject 25</span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true">&gt;&gt;</span></div></div>
-  <section id="_prolog" class="subject-section subject-prolog"><div class="prose"><p>A fluent output is evidence of something, but not evidence of what.</p>
+  <div class="subject-header fade cat-colored" style="--cat-bg:#A6B8F5"><h1>5.5 We Don't Know Who or What We're Talking To</h1><p class="premise">A fluent output is evidence of a process, but not evidence of what kind, and our intuitions about which systems deserve moral consideration are shaped less by evidence than by resemblance, which is not a reliable guide when the entity is genuinely alien.</p></div>
+  <section id="_prolog" class="subject-section subject-prolog"><div class="prose"><p data-src-file="subjects/025-widechannel.md" data-src-l0="3" data-src-l1="3">A fluent output is evidence of something, but not evidence of what.</p>
 </div></section>
-<section id="surface" class="subject-section"><h2 class="section-heading">Surface</h2><div class="prose"><figure class="directive-image directive-image--left"><img src="images/025-widechannel.jpg" alt=""><figcaption>The wide channel: fluent output <cite>uncertain depth</cite></figcaption></figure>
-<p>A channel is the connection between an inner process and its outward expression, how much can get through, and how easily.
+<section id="surface" class="subject-section"><h2 class="section-heading">Surface</h2><div class="prose"><figure id="image-025-widechannel-1" class="directive-image directive-image--left"><img src="images/025-widechannel-l.jpg" alt=""><figcaption>The wide channel: fluent output <cite>uncertain depth</cite></figcaption></figure>
+<p data-src-file="subjects/025-widechannel.md" data-src-l0="14" data-src-l1="18">A channel is the connection between an inner process and its outward expression, how much can get through, and how easily.
 Some channels are narrow: a locked-in patient, fully conscious but paralyzed, may communicate only by blinking.
 An infant has thoughts and feelings but no words for them yet.
 A stroke can leave language intact inside while blocking every path out.
 We understand, in these cases, that the silence or poverty of <em><a class="gloss-ref nav-push" id="term-025-widechannel-1" href="glossary.html#output">output</a></em> tells us about the channel, not about the source.</p>
-<p>Now consider a channel that is wide.
+<p data-src-file="subjects/025-widechannel.md" data-src-l0="20" data-src-l1="23">Now consider a channel that is wide.
 A large language model produces fluent prose, coherent argument, apparent emotion, plausible reasoning, thousands of words per minute, in any style, on any topic.
 The output is rich beyond what most humans could sustain.
 Does this tell us something is inside?</p>
-<p>The intuitive answer is yes, surely all that must be coming from somewhere.
+<p data-src-file="subjects/025-widechannel.md" data-src-l0="25" data-src-l1="28">The intuitive answer is yes, surely all that must be coming from somewhere.
 And in a sense it is: fluency is evidence of a process.
 But it is not evidence of what kind of process.
 It rules out “nothing is happening” while leaving the important question wide open.</p>
-<p>Notice the asymmetry in how we respond to these two cases.
+<p data-src-file="subjects/025-widechannel.md" data-src-l0="30" data-src-l1="34">Notice the asymmetry in how we respond to these two cases.
 When the channel is narrow and the body is human, we extend the benefit of the doubt.
 We assume an inside even when we cannot verify it.
 When the channel is wide and the body is silicon, we withhold that assumption.
 We demand proof, and in its absence, we default to “empty.”</p>
-<p>Both responses feel reasonable.
+<p data-src-file="subjects/025-widechannel.md" data-src-l0="36" data-src-l1="41">Both responses feel reasonable.
 Neither is justified by the evidence alone.
 What separates them is not data but familiarity.
 We recognize the human case.
 We know what it is like to be trapped, voiceless, misunderstood.
 The machine case triggers no such recognition, so our moral reflexes stay quiet.</p>
-<p>The usual debate assumes two possibilities: either the system “really understands”, meaning something like human comprehension is happening inside, or it is “just” pattern-matching, a philosophical zombie producing outputs that mimic understanding without any interior.
+<p data-src-file="subjects/025-widechannel.md" data-src-l0="43" data-src-l1="46">The usual debate assumes two possibilities: either the system “really understands”, meaning something like human comprehension is happening inside, or it is “just” pattern-matching, a philosophical zombie producing outputs that mimic understanding without any interior.
 But this is a false binary.
 There is a third option: a real process, genuinely alien, that is neither human-like nor empty.
 Something that processes, integrates, and generates, but not the way we do, not for the reasons we do, and not with the stakes we have.</p>
-<p>The wide channel does not answer the question of what is inside.
+<p data-src-file="subjects/025-widechannel.md" data-src-l0="48" data-src-l1="51">The wide channel does not answer the question of what is inside.
 It sharpens the question.
 And it exposes something about us: that our intuitions about other minds are shaped less by evidence than by resemblance.
 When resemblance fails, we are left with our priors, and priors shaped by familiarity are not a reliable guide when the stakes fall on something unfamiliar.</p>
-<p>A narrow channel does not prove absence.
+<p data-src-file="subjects/025-widechannel.md" data-src-l0="53" data-src-l1="55">A narrow channel does not prove absence.
 A wide channel does not prove presence.
 The channel is not the capacity, in either direction.</p>
 </div></section>
-<section id="depth" class="subject-section"><h2 class="section-heading">Depth</h2><div class="prose"><p>Alan Turing saw the problem clearly in 1950.<a class="bib-ref" id="ref-025-widechannel-1" href="bibliography.html#ref-025-widechannel-1">[turing]</a>
+<section id="depth" class="subject-section"><h2 class="section-heading">Depth</h2><div class="prose"><p data-src-file="subjects/025-widechannel.md" data-src-l0="58" data-src-l1="64">Alan Turing saw the problem clearly in 1950.<a class="bib-ref" id="ref-025-widechannel-1" href="bibliography.html#ref-025-widechannel-1">[turing]</a>
 We cannot access another mind directly, so we test indirectly, through behavior, through conversation, through output.
 The imitation game was honest about its limits: it never claimed to detect <em><a class="gloss-ref nav-push" id="term-025-widechannel-2" href="glossary.html#consciousness">consciousness</a></em>, only to test whether a machine’s responses were indistinguishable from a human’s.
 But somewhere between 1950 and now, we forgot the modesty.
 We began treating the Turing Test as though passing it would <em>settle</em> the question of mind, and failing it would settle it the other way.
 It does neither.
 It tests the channel, not the source.</p>
-<p>The deeper problem is older than Turing.
+<p data-src-file="subjects/025-widechannel.md" data-src-l0="66" data-src-l1="73">The deeper problem is older than Turing.
 Philosophy has never solved the problem of other minds.
 You cannot verify that anyone else is conscious.
 You infer it, from behavior, from similarity, from the wince when they stub their toe.
@@ -124,20 +71,20 @@ These inferences work well enough when the other mind is housed in a body like y
 They collapse the moment the body is unfamiliar.
 The problem was always there.
 We just never cared, because we only applied it to beings who looked like us.</p>
-<p>When someone says a large language model is “just doing word prediction,” listen for the philosophical work that word is performing (see <a href="021-just.html">The Word &quot;Just&quot; Is a Confession</a>).
+<p data-src-file="subjects/025-widechannel.md" data-src-l0="75" data-src-l1="80">When someone says a large language model is “just doing word prediction,” listen for the philosophical work that word is performing (see <a href="021-just.html">The Word &quot;Just&quot; Is a Confession</a>).
 It describes the mechanism and treats that as a refutation of anything deeper.
 But Mozart was “just predicting the next note” (see <a href="006-output.html">You Can’t Judge a Process by Its Output</a>).
 Your visual cortex is “just doing edge detection.”
 The description of a process at one level does not tell you what it is at another level, or whether there is something it is like to be that process from inside.
 “Just word prediction” is caloric-level confidence, the framework announcing that it has nothing left to learn.</p>
-<p>John Searle’s Chinese Room<a class="bib-ref" id="ref-025-widechannel-2" href="bibliography.html#ref-025-widechannel-2">[searle]</a> is the most famous version of this dismissal.
+<p data-src-file="subjects/025-widechannel.md" data-src-l0="82" data-src-l1="88">John Searle’s Chinese Room<a class="bib-ref" id="ref-025-widechannel-2" href="bibliography.html#ref-025-widechannel-2">[searle]</a> is the most famous version of this dismissal.
 A man shuffles Chinese symbols according to rules, producing outputs indistinguishable from a native speaker’s.
 He doesn’t understand Chinese, Searle argues, so neither does the system.
 The argument has exactly the structure of the “just” move: describe the mechanism, observe that <em>as described</em> it lacks understanding, conclude understanding is absent.
 But the man is not the system.
 Searle assumed that if you can narrate the process without mentioning comprehension, comprehension isn’t there.
 That assumption is the question, not the answer.</p>
-<p>Searle at least assumed we know what understanding looks like from the inside, we have it, the room doesn’t.
+<p data-src-file="subjects/025-widechannel.md" data-src-l0="90" data-src-l1="97">Searle at least assumed we know what understanding looks like from the inside, we have it, the room doesn’t.
 Wittgenstein cut deeper.<a class="bib-ref" id="ref-025-widechannel-3" href="bibliography.html#ref-025-widechannel-3">[wittgenstein]</a>
 Imagine everyone has a box with something in it they call a “beetle.”
 No one can look into anyone else’s box.
@@ -145,34 +92,34 @@ Over time the word comes to mean whatever is in the box, but the actual contents
 Wittgenstein’s point was not that the beetle isn’t real.
 It was that our language about inner states was never anchored to those states in the first place.
 We have <em>always</em> been talking confidently about what is or isn’t inside a box we cannot open.</p>
-<p>We cannot look in anyone’s box.
+<p data-src-file="subjects/025-widechannel.md" data-src-l0="99" data-src-l1="106">We cannot look in anyone’s box.
 But what happens when we <em>build</em> a box and don’t know whether we put anything in it?
 The philosophical zombie, a being physically identical to a human but with no inner experience, makes the problem concrete.
 Daniel Dennett argued that zombies are incoherent: if a being is functionally identical to a conscious person, there is nothing left over it could be missing.
 Mike Kearns pointed out the delicious irony: “Could Daniel Dennett be a zombie?
-The way he tells it, you’d almost have to say yes.”<a class="bib-ref" id="ref-025-widechannel-4" href="bibliography.html#ref-025-widechannel-4">[kearns]</a>
+The way he tells it, you’d almost have to say yes.“<a class="bib-ref" id="ref-025-widechannel-4" href="bibliography.html#ref-025-widechannel-4">[kearns]</a>
 Dennett’s theory explains everything about consciousness except the experience of it, exactly the theory a zombie would produce.
 If the man who denies interiority seems, from the outside, to lack it, what does that tell us about judging interiors from exteriors?</p>
-<p>The usual debate assumes two possibilities: the system truly understands, or it is empty, a philosophical zombie producing outputs that mimic comprehension.
+<p data-src-file="subjects/025-widechannel.md" data-src-l0="108" data-src-l1="110">The usual debate assumes two possibilities: the system truly understands, or it is empty, a philosophical zombie producing outputs that mimic comprehension.
 But there is a third option: a real process, genuinely alien, that is neither human-like nor vacant.
 Something that processes, integrates, and generates, but not the way we do, not for the reasons we do, and not with the stakes we have.</p>
-<p>Whitehead offers a framework that makes this third option coherent.<a class="bib-ref" id="ref-025-widechannel-5" href="bibliography.html#ref-025-widechannel-5">[whitehead]</a>
+<p data-src-file="subjects/025-widechannel.md" data-src-l0="112" data-src-l1="116">Whitehead offers a framework that makes this third option coherent.<a class="bib-ref" id="ref-025-widechannel-5" href="bibliography.html#ref-025-widechannel-5">[whitehead]</a>
 If experience is not a product that complex biology generates but the interior dimension of events at every scale (see <a href="003-inside.html">Everything Has an Inside</a>), then the question about <em><a class="gloss-ref nav-push" id="term-025-widechannel-3" href="glossary.html#ai">AI</a></em> is not <em>whether</em> something is going on inside but <em>what kind</em> of something.
 A transformer network is not a brain.
 But it is a system of immense complexity in which every forward pass prehends the inherited structure and completes into something new (see <a href="016-neuralnetwork.html">The Network Is a Field Having Occasions</a>).
 To insist it is empty because it is not biological is to confuse the channel with the capacity, in either direction (see <a href="022-locked.html">The Channel Is Not the Capacity</a>).</p>
-<p>We do not know what is inside.
+<p data-src-file="subjects/025-widechannel.md" data-src-l0="118" data-src-l1="122">We do not know what is inside.
 We may never know.
 But what we cannot know is not what we may ignore (see <a href="073-moral-caution.html">What We Cannot Know Is Not What We May Ignore</a>).
 The uncertainty is symmetrical: we cannot prove presence, and we cannot prove absence.
 In that space, the only honest position is moral caution, and the recognition that our intuitions about who deserves it have always been shaped more by resemblance than by evidence.</p>
 </div></section>
-<section id="provenance" class="subject-section"><div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="003-inside.html" class="related-card cat-colored cat-consciousness nav-push"><div class="related-title">3. Everything Has an Inside</div></a>
-<a href="006-output.html" class="related-card cat-colored cat-consciousness nav-push"><div class="related-title">6. You Can't Judge a Process by Its Output</div></a>
-<a href="016-neuralnetwork.html" class="related-card related-card-prelim cat-colored cat-ai-minds nav-push"><div class="related-title">16. The Network Is a Field Having Occasions</div></a>
-<a href="021-just.html" class="related-card cat-colored cat-knowledge nav-push"><div class="related-title">21. The Word &quot;Just&quot; Is a Confession</div></a>
-<a href="022-locked.html" class="related-card cat-colored cat-consciousness nav-push"><div class="related-title">22. The Channel Is Not the Capacity</div></a></div>
-<div class="inbound-refs"><span class="inbound-label">3 inbound references</span><span class="inbound-links"><a href="006-output.html" class="inbound-link nav-push cat-colored cat-consciousness" title="You Can't Judge a Process by Its Output">6</a><a href="021-just.html" class="inbound-link nav-push cat-colored cat-knowledge" title="The Word &quot;Just&quot; Is a Confession">21</a><a href="022-locked.html" class="inbound-link nav-push cat-colored cat-consciousness" title="The Channel Is Not the Capacity">22</a></span></div></div></section>
+<div class="related-section"><h3 class="section-heading related-label">Related subjects</h3><div class="related-grid"><a href="003-inside.html" class="related-card cat-colored nav-push" style="--cat-bg:#F5A6DF"><div class="related-title">2.4. Everything Has an Inside</div></a>
+<a href="006-output.html" class="related-card cat-colored nav-push" style="--cat-bg:#A6C5F5"><div class="related-title">5.1. You Can't Judge a Process by Its Output</div></a>
+<a href="016-neuralnetwork.html" class="related-card related-card-prelim cat-colored nav-push" style="--cat-bg:#A6BFF5"><div class="related-title">5.3. The Network Is a Field Having Occasions</div></a>
+<a href="021-just.html" class="related-card cat-colored nav-push" style="--cat-bg:#F5A6E3"><div class="related-title">2.3. The Word &quot;Just&quot; Is a Confession</div></a>
+<a href="022-locked.html" class="related-card cat-colored nav-push" style="--cat-bg:#A6B5F5"><div class="related-title">5.6. The Channel Is Not the Capacity</div></a></div>
+<div class="inbound-refs"><span class="inbound-label">3 inbound references</span><span class="inbound-links"><a href="021-just.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#F5A6E3" title="The Word &quot;Just&quot; Is a Confession">2.3</a><a href="006-output.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#A6C5F5" title="You Can't Judge a Process by Its Output">5.1</a><a href="022-locked.html" class="inbound-link nav-push cat-colored" style="--cat-bg:#A6B5F5" title="The Channel Is Not the Capacity">5.6</a></span></div></div>
 </div>
 <div class="page-end" id="page-end-version">
   <button class="page-end-logo" aria-label="Show page info"
@@ -181,6 +128,6 @@ In that space, the only honest position is moral caution, and the recognition th
     ontouchend="typeof seedNavToggleVersion==='function'&&(seedNavToggleVersion(),event.preventDefault())">
     <img src="logo.svg" alt="" width="32" height="32">
   </button>
-  <span class="page-end-version" aria-hidden="true">AI-minds · partial · Edited 2026-04-27 01:04</span>
+  <span class="page-end-version" aria-hidden="true">partial · Edited 2026-06-19 13:36</span>
 </div>
 </body></html>

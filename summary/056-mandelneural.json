@@ -1,0 +1,24 @@
+{
+  "narrative" : "Argues that training a neural network is structurally homologous to computing a Mandelbrot set in high-dimensional weight space: the loss landscape plays the role of the iteration, trained networks are points that did not escape, and the fractal boundary between convergence and divergence corresponds to the generalization frontier. The chapter insists this is not metaphor but a precise parallel between two iterative dynamical systems.",
+  "schema" : 1,
+  "subject" : "056-mandelneural.md",
+  "subject-sha" : "sha256:3b9ec0fda29f024c3b6e2ab8245af423b58c759deb2c8a3f302693db5cf86e47",
+  "terms" : [
+    {
+      "canonical" : "Mandelbrot set",
+      "weight" : 1
+    },
+    {
+      "canonical" : "Julia set",
+      "weight" : 0.5
+    }
+  ],
+  "themes" : [
+    "fractal geometry",
+    "dynamical systems",
+    "generalization",
+    "weight space",
+    "structural homology"
+  ],
+  "updated-at" : "2026-06-23T19:20:24Z"
+}
