@@ -1,0 +1,64 @@
+{
+  "tasks": [
+    {
+      "dateEntered": "2026-05-22T00:00:00Z",
+      "dateModified": "05/22/26",
+      "description": "If you can see this row on https://dev.gossamerapp.com/admin/track (or wherever dev is), AdminTrack is reading ~/dev/projects/GossDocs/tracker/tasks.json \u2014 i.e. the path fix landed.",
+      "labels": [
+        "dev-fixture"
+      ],
+      "name": "DEV TEST 1: confirm /admin/track loads this file",
+      "number": 1,
+      "priority": "p2",
+      "resolution": "",
+      "status": "\ud83d\udce5 Inbox",
+      "triage": true,
+      "version": ""
+    },
+    {
+      "dateEntered": "2026-05-22T00:00:00Z",
+      "dateModified": "2026-05-22T23:36:52Z",
+      "description": "Round-trips the write path: TrackStore.apply \u2192 atomic write \u2192 reload should keep the edit.",
+      "labels": [
+        "dev-fixture"
+      ],
+      "name": "DEV TEST 2: edit this row, then refresh",
+      "number": 2,
+      "priority": "p3",
+      "resolution": "",
+      "status": "\u2705 Done",
+      "triage": false,
+      "version": ""
+    },
+    {
+      "dateEntered": "2026-05-22T00:00:00Z",
+      "dateModified": "05/22/26",
+      "description": "Prod's tracker has 334 real tasks. Dev should only show these three DEV TEST rows.",
+      "labels": [
+        "dev-fixture"
+      ],
+      "name": "DEV TEST 3: this is the dev fixture, not the real bug list",
+      "number": 3,
+      "priority": "p4",
+      "resolution": "",
+      "status": "\u2705 Done",
+      "triage": false,
+      "version": ""
+    },
+    {
+      "dateEntered": "2026-05-22T23:36:52Z",
+      "dateModified": "2026-05-22T23:37:36Z",
+      "description": "Created by the agent via TRACKER-SYNC to test the create op.",
+      "labels": [
+        "dev-fixture"
+      ],
+      "name": "DEV TEST 4: agent-created task",
+      "number": 4,
+      "priority": "p4",
+      "status": "\ud83d\udce5 Inbox",
+      "version": "0.1.0",
+      "resolution": "",
+      "triage": false
+    }
+  ]
+}
