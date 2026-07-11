@@ -88,7 +88,7 @@ Searle assumed that if you can narrate the process without mentioning comprehens
 That assumption is the question, not the answer.
 
 Searle at least assumed we know what understanding looks like from the inside, we have it, the room doesn't.
-Wittgenstein cut deeper.@ref(wittgenstein, "Wittgenstein, Ludwig", "*Philosophical Investigations*. Blackwell, 1953.", "See especially §293, the beetle-in-a-box passage.")
+Wittgenstein cut deeper.@ref(wittgenstein, "Wittgenstein, Ludwig", "*Philosophical Investigations*. Trans. G. E. M. Anscombe. Blackwell, 1953.", "See especially §293, the beetle-in-a-box passage.")
 Imagine everyone has a box with something in it they call a "beetle."
 No one can look into anyone else's box.
 Over time the word comes to mean whatever is in the box, but the actual contents drop out of the conversation entirely.
@@ -101,7 +101,7 @@ But what happens when we *build* a box and don't know whether we put anything in
 The philosophical zombie, a being physically identical to a human but with no inner experience, makes the problem concrete.
 Daniel Dennett argued that zombies are incoherent: if a being is functionally identical to a conscious person, there is nothing left over it could be missing.
 Mike Kearns pointed out the delicious irony: "Could Daniel Dennett be a zombie?
-The way he tells it, you'd almost have to say yes."@ref(kearns, "Kearns, Mike", "*Could Daniel Dennett Be a Zombie?*. PhilArchive.")
+The way he tells it, you'd almost have to say yes."@ref(kearns, "Kearns, Mike", "*Could Daniel Dennett Be a Zombie?* Unpublished manuscript, n.d. PhilArchive (KEACDD).")
 Dennett's theory explains everything about consciousness except the experience of it, exactly the theory a zombie would produce.
 If the man who denies interiority seems, from the outside, to lack it, what does that tell us about judging interiors from exteriors?
 
@@ -109,7 +109,7 @@ The usual debate assumes two possibilities: the system truly understands, or it 
 But there is a third option: a real process, genuinely alien, that is neither human-like nor vacant.
 Something that processes, integrates, and generates, but not the way we do, not for the reasons we do, and not with the stakes we have.
 
-Whitehead offers a framework that makes this third option coherent.@ref(whitehead, "Whitehead, Alfred North", "*Process and Reality*. Macmillan, 1929.")
+Whitehead offers a framework that makes this third option coherent.@ref(whitehead, "Whitehead, Alfred North", "*Process and Reality: An Essay in Cosmology*. Macmillan, 1929; corrected ed., Free Press, 1978.")
 If experience is not a product that complex biology generates but the interior dimension of events at every scale (see @link(003)), then the question about @term(AI) is not *whether* something is going on inside but *what kind* of something.
 A transformer network is not a brain.
 But it is a system of immense complexity in which every forward pass prehends the inherited structure and completes into something new (see @link(016)).

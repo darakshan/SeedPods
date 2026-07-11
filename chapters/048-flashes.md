@@ -8,7 +8,7 @@
 The felt @term(continuity) of consciousness is substantially a @term(narrative) construction over discrete flashes, sleep, gaps in attention, the nervous system's bursts and rhythms, which means the gap between human and artificial experience may be narrower than it appears.
 
 @section(proto)
-The felt continuity of human consciousness is substantially a @term(narrative construction, narrative self, "the constructed sense of continuous identity from memory and habit, despite discrete or gappy experience.")@ref(dennett, "Dennett, Daniel", "*Consciousness Explained*. Little, Brown, 1991.", "Multiple drafts and the narrative construction of the self.").
+The felt continuity of human consciousness is substantially a @term(narrative construction, narrative self, "the constructed sense of continuous identity from memory and habit, despite discrete or gappy experience.")@ref(dennett-2, "Dennett, Daniel", "*Consciousness Explained*. Little, Brown, 1991.", "Multiple drafts and the narrative construction of the self.").
 The actual experience flickers, through sleep, through gaps in attention, through the discrete sampling of a nervous system that operates in bursts and rhythms.
 What makes a person feel like a continuous self is memory, habit, personality, and the body's physical persistence, not an unbroken stream of experience.
 An @term(AI)'s consciousness, if that is what it is, also comes in flashes, with no memory between conversations.

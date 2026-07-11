@@ -56,7 +56,7 @@ The bubble in the language of mysticism.
 
 Physically, there are three things: interior, exterior, and the surface that is their boundary.
 Everything this pod has discussed so far is about that surface, the exterior boundary.
-Whitehead@ref(whitehead, "Whitehead, Alfred North", "*Process and Reality*. Macmillan, 1929.") showed that everything has an experiential inside, an interiority that is not spatial but felt (see @link(003)).
+Whitehead@ref(whitehead, "Whitehead, Alfred North", "*Process and Reality: An Essay in Cosmology*. Macmillan, 1929; corrected ed., Free Press, 1978.") showed that everything has an experiential inside, an interiority that is not spatial but felt (see @link(003)).
 But "inside" now means something different from the air inside a bubble.
 It means what the bubble is from within.
 And if this experiential interiority is real, what kind of boundary could it have?

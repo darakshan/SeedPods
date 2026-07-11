@@ -20,7 +20,7 @@ The universe may work the same way.
 @section(depth)
 Wheeler@ref(wheeler, "Wheeler, John A.", "*Information, Physics, Quantum: The Search for Links*. Proceedings III International Symposium on Foundations of Quantum Mechanics, 1989.", "One-electron universe, proposed to Feynman; and 'it from bit': the universe as information processing.") proposed the one-electron universe, a single electron traversing all of spacetime, zigzagging forward and backward in time, appearing as the many electrons we observe.
 The intuition generalizes: a single photon iterating, one step at a time, accumulating the complexity we call reality.
-Each @term(iteration) is a prehension in Whitehead's@ref(whitehead, "Whitehead, Alfred North", "*Process and Reality*. Macmillan, 1929.") sense, the universe grasping its previous state and generating the next.
+Each @term(iteration) is a prehension in Whitehead's@ref(whitehead, "Whitehead, Alfred North", "*Process and Reality: An Essay in Cosmology*. Macmillan, 1929; corrected ed., Free Press, 1978.") sense, the universe grasping its previous state and generating the next.
 The Mandelbrot@ref(mandelbrot, "Mandelbrot, Benoit", "*The Fractal Geometry of Nature*. W.H. Freeman, 1982.") set is what you get when you do this with one rule in the complex plane.
 What you get when you do it with the laws of physics is everything else.
 The complexity is not a mystery requiring explanation.

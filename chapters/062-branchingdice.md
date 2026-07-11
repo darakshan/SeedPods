@@ -17,7 +17,7 @@ It is a tree of finite dice.
 At each node you roll a die whose number of sides is fixed by the mathematics.
 The dice get more sided as you go deeper, main bulbs have small periods, and as you zoom into the boundary the periods grow.
 
-Assigning uniform @term(probability) 1/n to each branch of an n-branching node gives a natural probability measure on the boundary, the @term(harmonic measure, harmonic measure, "the natural probability measure on the Mandelbrot boundary; uniform 1/n at each n-fold branch gives consonant weighting.")@ref(douady, "Douady, Adrien and Hubbard, John H.", "*On the Dynamics of Polynomial-like Maps*. Annales scientifiques de l'École Normale Supérieure, 1985.", "Harmonic measure and the boundary.").
+Assigning uniform @term(probability) 1/n to each branch of an n-branching node gives a natural probability measure on the boundary, the @term(harmonic measure, harmonic measure, "the natural probability measure on the Mandelbrot boundary; uniform 1/n at each n-fold branch gives consonant weighting.")@ref(douady, "Douady, Adrien and Hubbard, John H.", "*On the Dynamics of Polynomial-like Mappings*. Annales scientifiques de l'École Normale Supérieure, 4e série, 18(2):287–343, 1985.", "Harmonic measure and the boundary.").
 This measure weights simpler branches more heavily.
 The octave gets more probability than the minor seventh.
 Which is exactly what the ear already knows.

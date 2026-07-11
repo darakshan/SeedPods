@@ -22,12 +22,12 @@ The bulbs of The Mandelbrot@ref(mandelbrot, "Mandelbrot, Benoit", "*The Fractal 
 @ref(farey, "Farey, John", "*On a Curious Property of Vulgar Fractions*. Philosophical Magazine, 1816.", "Rational numbers ordered by denominator size, governing bulb positions.") and Stern-Brocot tree, the same mathematics that governs musical @term(consonance).
 The 1/2 bulb corresponds to the octave.
 The 1/3 bulb to the fifth.
-Stability under iteration justifies music, and justifies Pythagoras's@ref(pythagoras, "Pythagoras", "Consonance as simple integer ratios, 6th century BCE.", "Now understood as stability under iteration.") ancient observation that the consonant intervals correspond to simple ratios.
+Stability under iteration justifies music, and justifies Pythagoras's@ref(pythagoras, "Burkert, Walter", "*Lore and Science in Ancient Pythagoreanism*. Trans. Edwin L. Minar Jr. Harvard University Press, 1972.", "Ch. V on Pythagorean musical theory. The identification of consonance with simple integer ratios is genuinely Pythagorean; it is now understood as stability under iteration. Pythagoras himself left no writings, so the tradition must be cited through its later reporters.") ancient observation that the consonant intervals correspond to simple ratios.
 Each bulb sprouts branching structures whose branching number equals the bulb's period, the complexity of the resonance determines the complexity of the choices that emerge from it.
 Those branches are bifurcations.
-Each bifurcation is a world-split in Everett's@ref(everett, "Everett, Hugh", "*Relative State Formulation of Quantum Mechanics*. Reviews of Modern Physics, 1957.", "Bifurcations at the boundary as world-splits.") sense.
+Each bifurcation is a world-split in Everett's@ref(everett, "Everett, Hugh, III", "*'Relative State' Formulation of Quantum Mechanics*. Reviews of Modern Physics, 29(3):454–462, 1957.", "Bifurcations at the boundary as world-splits.") sense.
 The entire @term(fractal) boundary is a map of possibility space, the holographic surface between the stable interior and the infinite branching exterior.
-Consciousness may be what it feels like to be a point on that boundary.@ref(stern-brocot, "Stern, Moritz and Brocot, Achille", "*Stern-Brocot tree*. 1858-1861.", "The complete ordered tree of rational numbers, mediating consonance and bulb structure.")
+Consciousness may be what it feels like to be a point on that boundary.@ref(stern-brocot, "Stern, Moritz and Brocot, Achille", "Stern, *Über eine zahlentheoretische Funktion*, Journal für die reine und angewandte Mathematik, 55:193–220, 1858; Brocot, *Calcul des rouages par approximation*, Revue Chronométrique, 3:186–194, 1861.", "The complete ordered tree of rational numbers, mediating consonance and bulb structure. Stern and Brocot never collaborated: the tree is named for two independent constructions, Stern's in number theory and Brocot's for clockwork gear ratios.")
 
 @section(script)
 1. Zoom into The Mandelbrot boundary. Deeper. Deeper. It never resolves. At every scale the same complexity returns.

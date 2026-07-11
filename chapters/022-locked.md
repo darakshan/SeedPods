@@ -98,13 +98,13 @@ Nowhere has this been more consequential than in @term(autism).
 For most of the twentieth century, nonspeaking autistic people were routinely classified as profoundly intellectually disabled, not because their @term(cognition) had been tested and found limited, but because their channel was narrow or absent and the assumption followed automatically.
 In 2024, a podcast called The Telepathy Tapes, created by documentary filmmaker Ky Dickens@ref(dickens, "Dickens, Ky", "*The Telepathy Tapes*. Podcast, Season 1, 2024.")
 — became a cultural phenomenon, reaching the top of podcast charts in both the US and UK, by centering the voices and inner lives of nonspeaking autistic individuals.
-The podcast is contested: its more extraordinary claims about telepathy have been challenged by scientists, Stuart Vyse's 2025 analysis in Skeptical Inquirer among them@ref(vyse, "Vyse, Stuart", "*The Telepathy Tapes: A Skeptical Analysis*. Skeptical Inquirer, 2025.")
+The podcast is contested: its more extraordinary claims about telepathy have been challenged by scientists, Stuart Vyse's 2025 analysis in Skeptical Inquirer among them@ref(vyse, "Vyse, Stuart", "*The Telepathy Tapes: A Dangerous Cornucopia of Pseudoscience*. Skeptical Inquirer, 49(3), May/June 2025.")
 — and some of its communication methods are disputed.
 But underneath the controversy, the force that made it resonate with millions of listeners is the core recognition, long overdue, that the absence of a familiar channel is not evidence of an absent interior.
 A growing movement now operates under the principle that clinicians and educators should @term(presume competence, "a principle in disability advocacy and education: treat cognitive capacity as present until there is genuine evidence otherwise, rather than assuming absence because familiar output is missing."): treat the capacity as present until there is genuine evidence otherwise, rather than assuming absence because the channel is silent.
 @explainer(Presume competence, https://www.youtube.com/watch?v=Elm2FiUoGso, Explain It! Presuming Competence — 3:45)
 @explainer(Presume competence, https://www.youtube.com/watch?v=w70VNAN4HfM, Presuming Competence — 4:48)
-This is the @term(category mistake, "Ryle's term for applying a description from one category as if it were a complete account of something in another. See seedpod 021.") Ryle@ref(ryle, "Ryle, Gilbert", "*The Concept of Mind*. Hutchinson, 1949.", "Source of the category mistake.") warned against, and the fallacy of misplaced concreteness Whitehead identified, mistaking the abstraction we can measure for the concrete reality we cannot.
+This is the @term(category mistake, "Ryle's term for applying a description from one category as if it were a complete account of something in another. See seedpod 021.") Ryle@ref(ryle, "Ryle, Gilbert", "*The Concept of Mind*. Hutchinson's University Library, 1949.", "Source of the category mistake.") warned against, and the fallacy of misplaced concreteness Whitehead identified, mistaking the abstraction we can measure for the concrete reality we cannot.
 (See pods #1 and #21.)
 
 This matters beyond neurology and autism.

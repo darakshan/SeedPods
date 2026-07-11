@@ -21,7 +21,7 @@ The field is continuous.
 The excitation is discrete.
 Both descriptions are correct and neither is complete.
 
-Apply this to consciousness: Whitehead's discrete occasions are excitations of a continuous consciousness field@ref(whitehead, "Whitehead, Alfred North", "*Process and Reality*. Macmillan, 1929.", "Occasions and societies.")@ref(peskin, "Peskin, Michael and Schroeder, Daniel", "*An Introduction to Quantum Field Theory*. Westview Press, 1995.", "Standard graduate text; the field/excitation picture this pod borrows.").
+Apply this to consciousness: Whitehead's discrete occasions are excitations of a continuous consciousness field@ref(whitehead, "Whitehead, Alfred North", "*Process and Reality: An Essay in Cosmology*. Macmillan, 1929; corrected ed., Free Press, 1978.", "Occasions and societies.")@ref(peskin, "Peskin, Michael and Schroeder, Daniel", "*An Introduction to Quantum Field Theory*. Westview Press, 1995.", "Standard graduate text; the field/excitation picture this pod borrows.").
 The field is always there.
 The occasions are what the field does when it organizes itself into events.
 This makes Whitehead more coherent, not less, his "societies of occasions" are stable excitation patterns in the field, exactly as particles are stable excitation patterns in quantum fields.

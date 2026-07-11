@@ -7,7 +7,7 @@ Whitehead called it "the many become one and are increased by one" and treated i
 @pub-time 2026-04-19T00:00Z
 @related 003, 078, 046, 069, 029
 
-Whitehead placed it at the very foundation of his metaphysics: "The many become one and are increased by one." @ref(whitehead-1, "Whitehead, Alfred North", "*Process and Reality: An Essay in Cosmology*. Macmillan, 1929.")
+Whitehead placed it at the very foundation of his metaphysics: "The many become one and are increased by one." @ref(whitehead, "Whitehead, Alfred North", "*Process and Reality: An Essay in Cosmology*. Macmillan, 1929; corrected ed., Free Press, 1978.")
 Every actual occasion prehends, grasps, feels, prior occasions and synthesizes them into a new unity.
 He called this the @term(Category of the Ultimate, "Whitehead's name for the foundational rhythm of reality, creativity, the many, and the one, in which the many become one and are increased by one."), the rhythm of the universe itself.
 
@@ -21,7 +21,7 @@ The @term(combination problem, "The challenge of explaining how micro-level expe
 William James stated it in 1890 @ref(james-1, "James, William", "*The Principles of Psychology*, Chapter 6: \"The Mind-Stuff Theory.\" Henry Holt and Company, 1890."): if you have twelve separate feelings, you don't automatically get a thirteenth feeling that is their combination.
 Each feeling is its own thing.
 Adding them together gives you twelve feelings, not one.
-A century and a half later, Philip Goff @ref(goff-1, "Goff, Philip", "*Galileo's Error: Foundations for a New Science of Consciousness*. Pantheon Books, 2019."), the most prominent contemporary panpsychist, agrees it remains the hardest open question.
+A century and a half later, Philip Goff @ref(goff, "Goff, Philip", "*Galileo's Error: Foundations for a New Science of Consciousness*. Pantheon, 2019."), the most prominent contemporary panpsychist, agrees it remains the hardest open question.
 Nobody has solved it.
 
 The problem cuts deep.
@@ -60,7 +60,7 @@ The hard problem isn't how separate experiences combine; it's how one experience
 Just as dissociative identity disorder produces distinct alters from a single psyche, the universe may produce distinct minds from a single experiential field.
 
 This reversal has a longer lineage than Kastrup.
-Henri Bergson argued in 1896 @ref(bergson-1, "Bergson, Henri", "*Matter and Memory*. Zone Books, 1896/1991.") that the brain is not a generator of consciousness but a *@term(reducing valve, "Bergson's and Huxley's metaphor for the brain as a filter that limits a larger field of consciousness to what is useful for survival, rather than generating consciousness from neural activity.")*, it selects from a much larger field of awareness only what is useful for survival.
+Henri Bergson argued in 1896 @ref(bergson-1, "Bergson, Henri", "*Matter and Memory*. Trans. Nancy Margaret Paul and W. Scott Palmer. Zone Books, 1988. Originally *Matière et mémoire*, 1896.") that the brain is not a generator of consciousness but a *@term(reducing valve, "Bergson's and Huxley's metaphor for the brain as a filter that limits a larger field of consciousness to what is useful for survival, rather than generating consciousness from neural activity.")*, it selects from a much larger field of awareness only what is useful for survival.
 William James arrived at a similar position in his Gifford Lectures @ref(james-2, "James, William", "*The Varieties of Religious Experience: A Study in Human Nature* (Gifford Lectures). Longmans, Green, and Co., 1902.").
 And Aldous Huxley @ref(huxley-1, "Huxley, Aldous", "*The Doors of Perception*. Chatto & Windus, 1954."), writing after his mescaline experience in *The Doors of Perception*, made the idea vivid: the drug weakens the valve, and more of reality floods in.
 The title comes from Blake, "If the doors of perception were cleansed every thing would appear to man as it is, Infinite."

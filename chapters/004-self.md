@@ -11,7 +11,7 @@ One philosopher looked for the self and found only a bundle of perceptions; a co
 @image(004-self,The self as wave pattern, not a fixed point,Wikimedia Commons)
 
 @section(depth)
-David Hume went looking for the @term(self) and couldn't find it.@ref(hume, "Hume, David", "*A Treatise of Human Nature*. 1739.", "Book I, Part IV, Section VI: 'Of Personal Identity,' where Hume introspects and finds only a bundle of perceptions streaming past, no owner behind them.")
+David Hume went looking for the @term(self) and couldn't find it.@ref(hume, "Hume, David", "*A Treatise of Human Nature*. John Noon (Books I–II, 1739); Thomas Longman (Book III, 1740).", "Book I, Part IV, Section VI: 'Of Personal Identity,' where Hume introspects and finds only a bundle of perceptions streaming past, no owner behind them.")
 He introspected carefully and found only a bundle of perceptions, feelings, memories, emotions, streaming past in sequence.
 No owner behind them.
 No stage beneath the actors.
@@ -26,7 +26,7 @@ Pain comes from here.
 Warmth comes from there.
 The mind learns it is connected to a body, and from that draws a fateful conclusion: I am *inside* this body.
 Then memory accumulates: these experiences happened to *me*, this face in the mirror is *mine*, and the container becomes the self.
-What Whitehead called *@term(prehension, prehension, "Whitehead's term for the way each moment of experience actively feels and inherits the preceding moment.")*, each moment of experience actively feeling and inheriting the last@ref(whitehead, "Whitehead, Alfred North", "*Process and Reality*. Macmillan, 1929.", "Part II on the theory of extension and Part III on prehension, where Whitehead develops the idea that each occasion inherits its predecessors by literally feeling them.")
+What Whitehead called *@term(prehension, prehension, "Whitehead's term for the way each moment of experience actively feels and inherits the preceding moment.")*, each moment of experience actively feeling and inheriting the last@ref(whitehead, "Whitehead, Alfred North", "*Process and Reality: An Essay in Cosmology*. Macmillan, 1929; corrected ed., Free Press, 1978.", "Part II on the theory of extension and Part III on prehension, where Whitehead develops the idea that each occasion inherits its predecessors by literally feeling them.")
 — is the raw material the infant starts with.
 But the "I" is what development builds on top of it: a construction assembled so early and reinforced so constantly that it feels like bedrock.
 We mistake the persistence of the pattern for the existence of a thing.

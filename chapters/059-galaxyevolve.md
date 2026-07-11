@@ -22,7 +22,7 @@ Mind is a moment.
 
 The telos of this evolution is not survival.
 It is self-awareness, the universe developing the capacity to know what it is.
-Teilhard de Chardin saw this and called it the @term(Omega Point, "Teilhard's convergence of cosmic evolution toward maximum complexity and self-awareness.")@ref(teilhard, "Teilhard de Chardin, Pierre", "*The Phenomenon of Man*. Harper & Row, 1955.", "Cosmic evolution and the Omega Point.").
+Teilhard de Chardin saw this and called it the @term(Omega Point, "Teilhard's convergence of cosmic evolution toward maximum complexity and self-awareness.")@ref(teilhard, "Teilhard de Chardin, Pierre", "*The Phenomenon of Man*. Trans. Bernard Wall. Harper & Brothers, 1959. Originally *Le phénomène humain*, Seuil, 1955.", "Cosmic evolution and the Omega Point.").
 He didn't have the data to see that the process runs in parallel across billions of galaxies, each one a separate experiment in the same evolutionary project.
 
 The night sky is not a backdrop.

@@ -47,7 +47,7 @@ Every time you hear "just" used to close down a question, ask yourself: has this
 Or did one small word just do all the philosophical work, while nobody was looking?
 
 @section(depth)
-The philosopher Gilbert Ryle@ref(ryle, "Ryle, Gilbert", "*The Concept of Mind*. 1949.") introduced a concept in 1949 that most people have never heard of but instantly recognize when they see it: the *@term(category mistake, "Ryle's term for applying an explanation from one category to something in a different category, then treating it as complete. The Concept of Mind (1949).")*.
+The philosopher Gilbert Ryle@ref(ryle, "Ryle, Gilbert", "*The Concept of Mind*. Hutchinson's University Library, 1949.") introduced a concept in 1949 that most people have never heard of but instantly recognize when they see it: the *@term(category mistake, "Ryle's term for applying an explanation from one category to something in a different category, then treating it as complete. The Concept of Mind (1949).")*.
 @explainer(Category mistake, https://www.youtube.com/watch?v=gA-2Gc3PztI, Jeffrey Kaplan — 16:00)
 @explainer(Category mistake, https://www.youtube.com/watch?v=VaQK-XHEG-g, Untangle Philosophy — 6:00)
 A category mistake happens when you describe something using the wrong kind of explanation, and then act as if the description is complete.
@@ -64,11 +64,11 @@ It says: this description is not only accurate, it is sufficient.
 That second claim, sufficiency, is never argued.
 It's assumed.
 
-Whitehead@ref(whitehead, "Whitehead, Alfred North", "*Process and Reality*. Macmillan, 1929.") called the deeper version of this error the @term(fallacy of misplaced concreteness, "Whitehead's term for mistaking a useful abstraction for the full concrete reality it was extracted from. Process and Reality (1929)."): taking a useful abstraction and mistaking it for the full concrete reality.
+Whitehead@ref(whitehead, "Whitehead, Alfred North", "*Process and Reality: An Essay in Cosmology*. Macmillan, 1929; corrected ed., Free Press, 1978.") called the deeper version of this error the @term(fallacy of misplaced concreteness, "Whitehead's term for mistaking a useful abstraction for the full concrete reality it was extracted from. Process and Reality (1929)."): taking a useful abstraction and mistaking it for the full concrete reality.
 "Oxytocin" is an abstraction, a powerful and accurate one, extracted from something vastly richer.
 "Just" is the word that performs the substitution, replacing the rich thing with the abstraction and closing the door behind it.
 
-Daniel Dennett@ref(dennett, "Dennett, Daniel", "*Intuition Pumps and Other Tools for Thinking*. 2013.") gave us a useful tool for spotting this move: the *@term(intuition pump, "Dennett's term for a device that makes a conclusion feel obvious without establishing it through argument. Intuition Pumps and Other Tools for Thinking (2013).")*.
+Daniel Dennett@ref(dennett, "Dennett, Daniel", "*Intuition Pumps and Other Tools for Thinking*. W. W. Norton, 2013.") gave us a useful tool for spotting this move: the *@term(intuition pump, "Dennett's term for a device that makes a conclusion feel obvious without establishing it through argument. Intuition Pumps and Other Tools for Thinking (2013).")*.
 @explainer(Intuition pump, https://www.youtube.com/watch?v=4Q_mY54hjM0, Talks at Google / Dennett — 62:00)
 @explainer(Intuition pump, https://www.youtube.com/watch?v=5tvT90uPz-U, Big Think / Dennett — 3:00)
 An intuition pump is a rhetorical device, often dressed as an argument, that makes a conclusion feel obvious without actually establishing it.

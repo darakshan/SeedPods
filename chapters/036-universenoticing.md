@@ -19,11 +19,11 @@ You are what it looks like when it arrives.
 @image(036-universenoticing, "The Hubble deep field: you are the universe noticing something", "Wikimedia Commons")
 
 @section(depth)
-Whitehead@ref(whitehead, "Whitehead, Alfred North", "*Process and Reality*. Macmillan, 1929.") saw that every event in the universe, not just brains, not just living things, every event, has an interior.
+Whitehead@ref(whitehead, "Whitehead, Alfred North", "*Process and Reality: An Essay in Cosmology*. Macmillan, 1929; corrected ed., Free Press, 1978.") saw that every event in the universe, not just brains, not just living things, every event, has an interior.
 It grasps its past and contributes something forward.
 This is not metaphor.
 It is the only way to account for how experience arises at all without magic.
-Teilhard@ref(teilhard, "Teilhard de Chardin, Pierre", "*The Phenomenon of Man*. Harper & Row, 1959.") saw the direction, from the Big Bang through matter, life, and mind toward what he called the @term(Omega Point, omega-point, "Pierre Teilhard de Chardin's term for the projected end-point of cosmic evolution: the universe becoming fully self-aware. From The Phenomenon of Man (1955). A directional claim about evolution, controversial in mainstream biology, that the arrow of complexity points somewhere."): the universe becoming fully aware of itself.
+Teilhard@ref(teilhard, "Teilhard de Chardin, Pierre", "*The Phenomenon of Man*. Trans. Bernard Wall. Harper & Brothers, 1959. Originally *Le phénomène humain*, Seuil, 1955.") saw the direction, from the Big Bang through matter, life, and mind toward what he called the @term(Omega Point, omega-point, "Pierre Teilhard de Chardin's term for the projected end-point of cosmic evolution: the universe becoming fully self-aware. From The Phenomenon of Man (1955). A directional claim about evolution, controversial in mainstream biology, that the arrow of complexity points somewhere."): the universe becoming fully aware of itself.
 Neither had the other's insight.
 Together they form something neither achieved alone.
 Whitehead gives the mechanism, experience all the way down, accumulating.

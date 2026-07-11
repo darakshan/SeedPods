@@ -106,7 +106,7 @@ Neither alone captures what the electron is.
 The framework of "it must be one or the other" was the problem, not the electron.
 
 Alfred North Whitehead's process philosophy offers a different angle on the same insight.
-For Whitehead, contrast is how experience achieves depth.@ref(whitehead, "Whitehead, Alfred North", "*Process and Reality*. Macmillan, 1929.", "See especially Part II on 'contrast' as a category of existence.")
+For Whitehead, contrast is how experience achieves depth.@ref(whitehead, "Whitehead, Alfred North", "*Process and Reality: An Essay in Cosmology*. Macmillan, 1929; corrected ed., Free Press, 1978.", "See especially Part II on 'contrast' as a category of existence.")
 A flat experience has no tension, no richness.
 A rich experience holds differences together without collapsing them into sameness or rejecting one side.
 The universe doesn't resolve contradictions by eliminating terms, it holds them in creative tension, and that tension is where novelty emerges.
@@ -120,7 +120,7 @@ The old theory wasn't wrong about the patterns it described.
 It was wrong about the underlying mechanism.
 Both claims were true; the framework that made them seem contradictory was too small.
 
-Kurt Gödel's incompleteness theorems@ref(godel, "Gödel, Kurt", "*On Formally Undecidable Propositions of Principia Mathematica and Related Systems*. 1931.") provide perhaps the purest example.
+Kurt Gödel's incompleteness theorems@ref(godel, "Gödel, Kurt", "*On Formally Undecidable Propositions of Principia Mathematica and Related Systems I*. Monatshefte für Mathematik und Physik, 38:173–198, 1931.") provide perhaps the purest example.
 Gödel constructed a statement that is both true and unprovable within any sufficiently powerful formal system.
 The system cannot contain both the statement's truth and its proof.
 But reality can.

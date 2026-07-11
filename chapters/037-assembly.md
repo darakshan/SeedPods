@@ -23,14 +23,14 @@ Of course more is different: because at sufficient complexity the sentences stab
 
 Three frameworks describe the same architecture from different angles:
 
-Arthur Koestler's@ref(koestler, "Koestler, Arthur", "*The Ghost in the Machine*. Hutchinson, 1967.", "Holons and the hierarchy of whole/part.") @term(holons, holon, "Koestler's whole/part; the stable \"sentence\" at one level becomes the \"word\" at the next.") (@link(011), @link(024)): entities that are simultaneously wholes and parts of larger wholes.
+Arthur Koestler's@ref(koestler-2, "Koestler, Arthur", "*The Ghost in the Machine*. Hutchinson, 1967.", "Holons and the hierarchy of whole/part.") @term(holons, holon, "Koestler's whole/part; the stable \"sentence\" at one level becomes the \"word\" at the next.") (@link(011), @link(024)): entities that are simultaneously wholes and parts of larger wholes.
 The holon is the stable sentence that becomes the next level's word.
 
 Alfred North Whitehead's @term(societies of actual occasions, society of occasions, "Whitehead's persistent pattern of events that functions as vocabulary for the next level."): stable patterns of events that persist through time and become the inherited world of the next level of events.
 The society is the sentence.
 The next society prehends it as vocabulary.
 
-Sara Walker's @term(assembly theory, assembly theory, "Walker et al.: complexity measured by assembly index (steps to construct\); high-index, high-copy objects signal life.")@ref(walker, "Walker, Sara Imari et al.", "*Assembly theory*. Nature, 2023.", "Assembly index and the signature of life."): complex objects can only exist if assembled through a sequence of steps.
+Sara Walker's @term(assembly theory, assembly theory, "Walker et al.: complexity measured by assembly index (steps to construct\); high-index, high-copy objects signal life.")@ref(sharma, "Sharma, Abhishek and Czégel, Dániel and Lachmann, Michael and Kempes, Christopher P. and Walker, Sara I. and Cronin, Leroy", "*Assembly theory explains and quantifies selection and evolution*. Nature, 622(7982):321–328, 2023.", "Assembly index and the signature of life."): complex objects can only exist if assembled through a sequence of steps.
 The assembly index measures complexity by the length of that sequence.
 High assembly index objects that reproduce at high copy number are the signature of life.
 The history is stored in the structure, the sentence is still present in the word, compressed.

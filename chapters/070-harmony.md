@@ -9,7 +9,7 @@
 
 @section(depth)
 
-Jacob Collier says melody is like dialogue and harmony is like the plot @ref(collier-1, "Collier, Jacob", "Interview (source TBD).", "On melody as dialogue and harmony as plot.").
+Jacob Collier says melody is like dialogue and harmony is like the plot @ref(collier-1, "Collier, Jacob", "Interview. Source unconfirmed.", "On melody as dialogue and harmony as plot. UNVERIFIED: this exact formulation could not be located in any indexed Collier interview. Citable Collier-on-harmony sources that do exist: WIRED, *Musician Explains One Concept in 5 Levels of Difficulty* (2018); NPR TED Radio Hour, *The Language of Harmony* (2022). Either confirm the source or recast the line in the author's own voice.").
 The distinction is immediate to anyone who has listened closely: melody is the voice that holds your attention, the figure against the ground, but harmony is what gives that figure somewhere to go.
 Without it, a melody floats.
 With it, the melody means something, because harmony supplies the sense of home, and everything in music is defined by its distance from home and the promise of return.

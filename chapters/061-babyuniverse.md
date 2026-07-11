@@ -9,7 +9,7 @@ When a person looks at a map of the cosmic microwave background, the fluctuation
 
 @section(proto)
 The @term(cosmic microwave background, CMB, "the oldest observable light, from 380,000 years after the Big Bang, when the universe first became transparent.") is the oldest light we can see, radiation from 380,000 years after the Big Bang, when the universe first became transparent.
-It is nearly uniform, nearly featureless, with tiny fluctuations of one part in 100,000@ref(planck, "Planck Collaboration", "*Planck 2018 results*. Astronomy & Astrophysics, 2018.", "The CMB and the seeds of structure.").
+It is nearly uniform, nearly featureless, with tiny fluctuations of one part in 100,000@ref(planckcollab, "Planck Collaboration", "*Planck 2018 results. VI. Cosmological parameters*. Astronomy & Astrophysics, 641:A6, 2020.", "The CMB and the seeds of structure.").
 
 Those fluctuations are the seeds of everything.
 Every galaxy, every star, every planet, every mind, all traceable to quantum fluctuations in the first fraction of a second, amplified by @term(inflation, inflation, "the early-universe phase of exponential expansion that amplified quantum fluctuations into cosmic structure."), imprinted on the CMB, and then elaborated over fourteen billion years of gravitational dynamics.

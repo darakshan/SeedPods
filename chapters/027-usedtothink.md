@@ -108,7 +108,7 @@ The progress is real.
 Second, it caricatures the past.
 The people who believed caloric theory were not naive.
 Caloric was a triumph of 18th-century science, mathematically precise, experimentally grounded, enormously productive.
-Antoine Lavoisier@ref(lavoisier, "Lavoisier, Antoine", "*Elements of Chemistry*. 1789.", "The work that formalized caloric theory, a reminder that the theory was scientifically serious.") built it into the foundations of modern chemistry.
+Antoine Lavoisier@ref(lavoisier, "Lavoisier, Antoine", "*Elements of Chemistry*. Trans. Robert Kerr. William Creech, 1790. Originally *Traité élémentaire de chimie*, Cuchet, 1789.", "The work that formalized caloric theory, a reminder that the theory was scientifically serious.") built it into the foundations of modern chemistry.
 It served the scientific community well for decades.
 When anomalies appeared, the caloric theorists patched the theory rather than abandoning it, which was not stubbornness but good scientific practice.
 It took James Joule's@ref(joule, "Joule, James Prescott", "*On the Mechanical Equivalent of Heat*. Philosophical Transactions of the Royal Society, 1850.", "The experimental work that displaced caloric theory.") precise measurement of the mechanical equivalent of heat in the 1840s to finally close the case.
@@ -126,8 +126,8 @@ That rivers and fire and the living world carry something like experience or age
 "We used to think nature was alive.
 Now we know it's chemistry and physics."
 The dismissal feels complete.
-But Whitehead's@ref(whitehead, "Whitehead, Alfred North", "*Process and Reality*. Macmillan, 1929.", "The primary source for the claim that experience is constitutive of reality at every scale.") process philosophy, developed not from mysticism but from the same mathematical tradition that produced Principia Mathematica, argues that experience is constitutive of reality at every scale, not a biological anomaly that appears late in an otherwise dark universe.
-And contemporary panpsychism (Philip Goff,@ref(goff, "Goff, Philip", "*Galileo's Error*. Pantheon, 2019.", "Reconstructs panpsychism in contemporary analytic idiom; the rehabilitation of the animist intuition in respectable philosophical form.")
+But Whitehead's@ref(whitehead, "Whitehead, Alfred North", "*Process and Reality: An Essay in Cosmology*. Macmillan, 1929; corrected ed., Free Press, 1978.", "The primary source for the claim that experience is constitutive of reality at every scale.") process philosophy, developed not from mysticism but from the same mathematical tradition that produced Principia Mathematica, argues that experience is constitutive of reality at every scale, not a biological anomaly that appears late in an otherwise dark universe.
+And contemporary panpsychism (Philip Goff,@ref(goff, "Goff, Philip", "*Galileo's Error: Foundations for a New Science of Consciousness*. Pantheon, 2019.", "Reconstructs panpsychism in contemporary analytic idiom; the rehabilitation of the animist intuition in respectable philosophical form.")
 David Chalmers, others) is arriving at structurally similar positions through rigorous analytic argument.
 The animist had the phenomenon.
 The mechanism was mythological.

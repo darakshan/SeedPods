@@ -60,7 +60,7 @@ We might catch ourselves constructing Level 3 arcs.
 Level 2 interpretations already feel like shrewd perception.
 Level 1 labels do not feel like narrative at all; they feel like the given, like the world showing up as it is.
 
-This is where Byron Katie's intervention finds its leverage. @ref(katie, "Katie, Byron", "*Loving What Is: Four Questions That Can Change Your Life*. Harmony Books, 2002.", '"The Work" as a method for questioning interpretive narratives.')
+This is where Byron Katie's intervention finds its leverage. @ref(katie, "Katie, Byron and Mitchell, Stephen", "*Loving What Is: Four Questions That Can Change Your Life*. Harmony Books, 2002.", '"The Work" as a method for questioning interpretive narratives.')
 Her method, "The Work," targets Level 2: notice that "she's jealous" is a thought, not a perception.
 Question it.
 Is it true?

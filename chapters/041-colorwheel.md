@@ -25,7 +25,7 @@ The mind does to the visual spectrum what it does to the musical spectrum: finds
 This happens before your brain is ever informed about what you are seeing.
 At the first layer of your retina, three cone types, roughly tuned to red, green, and blue, receive light.
 But they do not forward those raw signals.
-At the very next layer, still within the retina, those three signals are immediately recombined into two @term(opponent channels, opponent processing, "the transformation performed by the second layer of the retina, recombining the three raw cone signals into two opponent channels, red vs green and blue vs yellow, before any signal leaves the eye."): red against green, and blue against yellow, a transformation first identified by Ewald Hering@ref(hering, "Hering, Ewald", "*Outlines of a Theory of the Light Sense*. 1892.", "The original proposal that color experience is organized around opposing pairs.") in 1892.
+At the very next layer, still within the retina, those three signals are immediately recombined into two @term(opponent channels, opponent processing, "the transformation performed by the second layer of the retina, recombining the three raw cone signals into two opponent channels, red vs green and blue vs yellow, before any signal leaves the eye."): red against green, and blue against yellow, a transformation first identified by Ewald Hering@ref(hering, "Hering, Ewald", "*Zur Lehre vom Lichtsinne*. Carl Gerold's Sohn, 1878. The mature statement is the posthumous *Grundzüge der Lehre vom Lichtsinn* (Springer, 1920), trans. Leo M. Hurvich and Dorothea Jameson as *Outlines of a Theory of the Light Sense*, Harvard University Press, 1964.", "The original proposal that color experience is organized around opposing pairs.") in 1878.
 By the time visual information reaches the optic nerve, the world has already been transformed.
 The retina is not a camera.
 It is a processor.
@@ -61,7 +61,7 @@ Each is incomplete without the others.
 
 Why these two opponent axes and not others?
 Here is one compelling idea, though not one we can claim as settled, developed in detail by J.D.
-Mollon@ref(mollon, "Mollon, John D.", "*The Uses and Origins of Primate Colour Vision*. Journal of Experimental Biology, 1989.", "The fruit and co-evolution hypothesis.") among others: the red-green axis may record one of the longest conversations in the history of life, plants developing color to attract animals, animals refining the axis to read it, each driving the other forward.
+Mollon@ref(mollon, "Mollon, John D.", "*‘Tho’ she kneel’d in that place where they grew…’ The Uses and Origins of Primate Colour Vision*. Journal of Experimental Biology, 146(1):21–38, 1989.", "The fruit and co-evolution hypothesis.") among others: the red-green axis may record one of the longest conversations in the history of life, plants developing color to attract animals, animals refining the axis to read it, each driving the other forward.
 Flowers and fruit did not merely happen to be red and yellow.
 They @term(evolved, evolution) to be seen.
 And the eye evolved to see them.

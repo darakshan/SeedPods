@@ -23,8 +23,8 @@ The orthogonal dimension proposal takes experience as primitive, the way physics
 What follows is that the universe has always had an interior.
 Not just since brains arrived.
 From the beginning.
-Whitehead called this @term(prehension, prehension, "Whitehead's term for how occasions take in their world; the interior dimension of process.")@ref(whitehead, "Whitehead, Alfred North", "*Process and Reality*. Macmillan, 1929.", "Prehension and the interiority of occasions.").
-Teilhard called it the @term(within, Within, "Teilhard de Chardin's term for the interior aspect of matter, present from the beginning.") of things@ref(teilhard, "Teilhard de Chardin, Pierre", "*The Phenomenon of Man*. Harper & Row, 1955.", "The within of things.").
+Whitehead called this @term(prehension, prehension, "Whitehead's term for how occasions take in their world; the interior dimension of process.")@ref(whitehead, "Whitehead, Alfred North", "*Process and Reality: An Essay in Cosmology*. Macmillan, 1929; corrected ed., Free Press, 1978.", "Prehension and the interiority of occasions.").
+Teilhard called it the @term(within, Within, "Teilhard de Chardin's term for the interior aspect of matter, present from the beginning.") of things@ref(teilhard, "Teilhard de Chardin, Pierre", "*The Phenomenon of Man*. Trans. Bernard Wall. Harper & Brothers, 1959. Originally *Le phénomène humain*, Seuil, 1955.", "The within of things.").
 Neither had the language of orthogonal dimensions.
 The language helps.
 

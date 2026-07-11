@@ -47,7 +47,7 @@ Two bodies across emptiness, pulled toward each other.
 We speak of *falling* in love.
 The same word because the same felt geometry.
 
-David Deida@ref(deida, "Deida, David", "*Blue Truth: A Spiritual Guide to Life &amp; Death and Love &amp; Sex*. Sounds True / St. Martin's Essentials, 2004.") distilled it: *Light is what Love looks like.
+David Deida@ref(deida, "Deida, David", "*Blue Truth: A Spiritual Guide to Life & Death and Love & Sex*. Sounds True, 2004.") distilled it: *Light is what Love looks like.
 Love is what Light feels like.*
 
 Outside and inside of the same phenomenon.

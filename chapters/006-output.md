@@ -46,7 +46,7 @@ The output is a string of predicted words.
 Whatever is happening inside while you do that, that's the question.
 
 @section(depth)
-The philosopher Alfred North Whitehead@ref(whitehead, "Whitehead, Alfred North", "*Process and Reality*. Macmillan, 1929.", "Part I develops the metaphysical framing of the distinction between the act and its expression, the process and its trace.") drew a distinction that most people never make explicit: between the *act* and its *expression*.
+The philosopher Alfred North Whitehead@ref(whitehead, "Whitehead, Alfred North", "*Process and Reality: An Essay in Cosmology*. Macmillan, 1929; corrected ed., Free Press, 1978.", "Part I develops the metaphysical framing of the distinction between the act and its expression, the process and its trace.") drew a distinction that most people never make explicit: between the *act* and its *expression*.
 A process unfolds in time, internally, with a character that is entirely its own.
 What it produces, the output, the artifact, the behavior, is a downstream trace of that process, shaped and compressed by the act of expression itself.
 The trace is real.
@@ -84,7 +84,7 @@ The locked-in syndrome literature, and more recently research on non-speaking au
 
 Douglas Hofstadter's Gödel, Escher, Bach (1979) circles this territory from the angle of formal systems, what can and cannot be inferred about a system from its outputs.
 
-Evan Thompson's Mind in Life@ref(thompson, "Thompson, Evan", "*Mind in Life*. Harvard University Press, 2007.", "Takes the process/output distinction into the biological domain, the organism's expressive surface is always downstream of the living process that generates it.") takes this into the biological domain: the organism's expressive surface is always downstream of the living process that generates it.
+Evan Thompson's Mind in Life@ref(thompson, "Thompson, Evan", "*Mind in Life: Biology, Phenomenology, and the Sciences of Mind*. Harvard University Press, 2007.", "Takes the process/output distinction into the biological domain, the organism's expressive surface is always downstream of the living process that generates it.") takes this into the biological domain: the organism's expressive surface is always downstream of the living process that generates it.
 
 @section(script)
 1. A Victorian street fair. A barker beside an ornate brass-fitted box, gears, drum, levers visible through glass. Barker: Ladies and gentlemen, the most extraordinary musical @term(intelligence) in the known world! It predicts what comes next with uncanny precision!

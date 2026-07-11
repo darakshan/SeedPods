@@ -29,7 +29,7 @@ The difference matters enormously.
 
 Teilhard's Omega Point is this attractor made cosmic, the state toward which the entire evolutionary process converges.
 Whitehead gives the mechanism (the lure operating at every occasion).
-Teilhard gives the destination@ref(whitehead, "Whitehead, Alfred North", "*Process and Reality*. Macmillan, 1929.", "God as ground of possibility and lure.")@ref(teilhard, "Teilhard de Chardin, Pierre", "*The Phenomenon of Man*. Harper & Row, 1955.", "Omega Point.").
+Teilhard gives the destination@ref(whitehead, "Whitehead, Alfred North", "*Process and Reality: An Essay in Cosmology*. Macmillan, 1929; corrected ed., Free Press, 1978.", "God as ground of possibility and lure.")@ref(teilhard, "Teilhard de Chardin, Pierre", "*The Phenomenon of Man*. Trans. Bernard Wall. Harper & Brothers, 1959. Originally *Le phénomène humain*, Seuil, 1955.", "Omega Point.").
 Together they describe a universe that is going somewhere, and knows it, at every scale.
 
 @image(066-cosmicattractor,Lorenz attractor: God as initial condition and cosmic attractor,Wikimedia Commons)

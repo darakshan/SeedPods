@@ -120,7 +120,7 @@ The creationist intuition that pure randomness couldn't build an eye is actually
 Pure randomness builds nothing.
 But that was never the claim.
 Randomness plus a filter that accumulates improvements across millions of generations builds an eye, a wing, an immune system, a brain.
-Stuart Kauffman@ref(kauffman, "Kauffman, Stuart", "*The Origins of Order*. Oxford University Press, 1993.", "Technical treatment of autocatalytic sets and \"order for free,\" how chemistry at sufficient complexity spontaneously organizes without external direction.")
+Stuart Kauffman@ref(kauffman, "Kauffman, Stuart", "*The Origins of Order: Self-Organization and Selection in Evolution*. Oxford University Press, 1993.", "Technical treatment of autocatalytic sets and \"order for free,\" how chemistry at sufficient complexity spontaneously organizes without external direction.")
 showed that chemistry at sufficient @term(complexity) spontaneously organizes itself into "@term(autocatalytic sets, autocatalytic set, "a network of molecules in which each member's production is catalyzed by other members of the set. Stuart Kauffman's demonstration that chemistry at sufficient complexity spontaneously organizes itself without external direction.")," self-sustaining networks where each molecule's production is catalyzed by others in the set.
 @explainer(Autocatalytic set)
 @term(autopoiesis, "the property of living systems that continuously produce the very components that sustain them; coined by Maturana and Varela. The cell does not merely use its components but makes them, circularly, as the condition of its own continued existence."), the property by which living cells continuously produce the very components that sustain them, is this same logic carried one level further.
@@ -141,7 +141,7 @@ NASA has used genetic algorithms, literally simulating evolution, to design ante
 Randomness is not the enemy of good solutions.
 In many domains it is the only way to find them.
 
-Alfred North Whitehead@ref(whitehead, "Whitehead, Alfred North", "*Process and Reality*. Macmillan, 1929.", "Part I, Category of the Ultimate, where Whitehead grounds the creative advance into novelty as the irreducible self-determination at the heart of each occasion.") saw this as fundamental.
+Alfred North Whitehead@ref(whitehead, "Whitehead, Alfred North", "*Process and Reality: An Essay in Cosmology*. Macmillan, 1929; corrected ed., Free Press, 1978.", "Part I, Category of the Ultimate, where Whitehead grounds the creative advance into novelty as the irreducible self-determination at the heart of each occasion.") saw this as fundamental.
 His "@term(creative advance into novelty, creative advance into novelty, "Whitehead's term for the irreducible self-determination at the heart of each actual occasion; the source of genuine newness in the universe that cannot be fully predicted from prior causes.")," the irreducible self-determination at the heart of each "@term(actual occasion, actual occasion, "Whitehead's term for the fundamental unit of reality; a moment of experience that takes in its world, reaches a decision, and completes into the next occasion's inheritance.")," is not a flaw in the system.
 @explainer(Creative advance into novelty)
 It is the engine.

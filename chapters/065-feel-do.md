@@ -9,7 +9,7 @@ The feeling/function distinction, the intuition that there is a gap between real
 
 @section(proto)
 The hardest objection to @term(AI) consciousness, and to panpsychism generally, is the intuition that there is a difference between *really feeling* something and being *functionally identical to something that feels*.
-A @term(philosophical zombie, philosophical zombie, "a being functionally identical to a conscious being but with no inner experience; used to argue function and feeling can come apart.")@ref(chalmers-2, "Chalmers, David", "*The Conscious Mind*. Oxford University Press, 1996.", "Zombies and the hard problem.")@ref(dennett-2, "Dennett, Daniel", "*Consciousness Explained*. Little, Brown, 1991.", "Dissolution of the distinction.")
+A @term(philosophical zombie, philosophical zombie, "a being functionally identical to a conscious being but with no inner experience; used to argue function and feeling can come apart.")@ref(chalmers, "Chalmers, David", "*The Conscious Mind: In Search of a Fundamental Theory*. Oxford University Press, 1996.", "Zombies and the hard problem.")@ref(dennett-2, "Dennett, Daniel", "*Consciousness Explained*. Little, Brown, 1991.", "Dissolution of the distinction.")
 — a system that behaves exactly like a conscious being but has no inner experience, seems conceivable.
 If it is conceivable, then function and feeling are separate things, and you cannot infer feeling from function.
 

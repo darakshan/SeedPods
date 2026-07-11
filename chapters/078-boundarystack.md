@@ -62,7 +62,7 @@ There is no unmediated contact anywhere in nature.
 Every meeting is mediated, and the mediation is always structured.
 
 Second, and more consequentially: the structure is fractal, not merely recursive.
-Every layer is itself a holon@ref(koestler, "Koestler, Arthur", "*The Ghost in the Machine*. Hutchinson, 1967.", "Holons and the hierarchy of whole/part.")
+Every layer is itself a holon@ref(koestler-2, "Koestler, Arthur", "*The Ghost in the Machine*. Hutchinson, 1967.", "Holons and the hierarchy of whole/part.")
 — a whole that is also a part, with its own exterior boundary and its own interior stack (see @link(037) on how stable outputs at one level become primitive units at the next).
 The microphone is not a single thing: it's a diaphragm, a coil, a converter, a buffer, each itself stacked.
 The vocal apparatus is breath, larynx, articulators, each coordinating with neural control loops that are themselves stacked.
@@ -102,4 +102,4 @@ The stack is precisely the channel, extended, layered, fractal.
 What it carries is not reducible to it.
 
 
-@ref(whitehead, "Whitehead, Alfred North", "*Process and Reality*. Macmillan, 1929.")
+@ref(whitehead, "Whitehead, Alfred North", "*Process and Reality: An Essay in Cosmology*. Macmillan, 1929; corrected ed., Free Press, 1978.")

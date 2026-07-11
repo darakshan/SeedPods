@@ -24,7 +24,7 @@ It maintains a steady internal temperature.
 It farms fungus.
 It wages war with tactical sophistication.
 It has a character: some colonies are aggressive, some cautious, some remarkably adaptable.
-The philosopher Douglas Hofstadter@ref(hofstadter, "Hofstadter, Douglas", "*Gödel, Escher, Bach*. Basic Books, 1979.", "Chapter XI introduces Aunt Hillary, the ant colony with opinions, moods, and a personality, as an exploration of strange loops and emergent levels.") gave the name Aunt Hillary to one particular colony's personality.
+The philosopher Douglas Hofstadter@ref(hofstadter, "Hofstadter, Douglas", "*Gödel, Escher, Bach: An Eternal Golden Braid*. Basic Books, 1979.", "Chapter XI introduces Aunt Hillary, the ant colony with opinions, moods, and a personality, as an exploration of strange loops and emergent levels.") gave the name Aunt Hillary to one particular colony's personality.
 Aunt Hillary has opinions.
 Aunt Hillary has moods.
 No ant has ever met Aunt Hillary.
@@ -142,7 +142,7 @@ It is emergence, experienced from the inside, in real time.
 
 ---
 
-Alfred North Whitehead's@ref(whitehead, "Whitehead, Alfred North", "*Process and Reality*. Macmillan, 1929.", "Societies of actual occasions as the basis of enduring entities. What Koestler calls a holon, Whitehead calls a society organized around a common characteristic that persists through time.") vocabulary makes this precise.
+Alfred North Whitehead's@ref(whitehead, "Whitehead, Alfred North", "*Process and Reality: An Essay in Cosmology*. Macmillan, 1929; corrected ed., Free Press, 1978.", "Societies of actual occasions as the basis of enduring entities. What Koestler calls a holon, Whitehead calls a society organized around a common characteristic that persists through time.") vocabulary makes this precise.
 What Koestler calls a holon, Whitehead calls a @term(society of actual occasions, society of actual occasions, "Whitehead's term for a stable pattern of events organized around a common characteristic that persists through time. Ant colonies, cities, brains, and neural networks are all societies in this sense."), a stable pattern of events organized around a common characteristic that persists through time.
 @explainer(Society of actual occasions)
 Aunt Hillary is a society.
