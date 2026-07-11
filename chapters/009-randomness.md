@@ -120,11 +120,8 @@ The creationist intuition that pure randomness couldn't build an eye is actually
 Pure randomness builds nothing.
 But that was never the claim.
 Randomness plus a filter that accumulates improvements across millions of generations builds an eye, a wing, an immune system, a brain.
-<<<original>>>
 Stuart Kauffman@ref(kauffman, "Kauffman, Stuart", "*The Origins of Order*. Oxford University Press, 1993.", "Technical treatment of autocatalytic sets and \"order for free,\" how chemistry at sufficient complexity spontaneously organizes without external direction.")
-<<<proposed>>>
-Stuart Kauffman@ref(kauffman, "Kauffman, S. The Origins of Order. Oxford University Press, 1993.", "Technical treatment of autocatalytic sets and \"order for free,\" how chemistry at sufficient complexity spontaneously organizes without external direction.")@ref(kauffman-2, "Kauffman, S. At Home in the Universe. Oxford University Press, 1995.", "Accessible version of the autocatalytic sets argument.")
-<<<end>>> showed that chemistry at sufficient @term(complexity) spontaneously organizes itself into "@term(autocatalytic sets, autocatalytic set, "a network of molecules in which each member's production is catalyzed by other members of the set. Stuart Kauffman's demonstration that chemistry at sufficient complexity spontaneously organizes itself without external direction.")," self-sustaining networks where each molecule's production is catalyzed by others in the set.
+showed that chemistry at sufficient @term(complexity) spontaneously organizes itself into "@term(autocatalytic sets, autocatalytic set, "a network of molecules in which each member's production is catalyzed by other members of the set. Stuart Kauffman's demonstration that chemistry at sufficient complexity spontaneously organizes itself without external direction.")," self-sustaining networks where each molecule's production is catalyzed by others in the set.
 @explainer(Autocatalytic set)
 @term(autopoiesis, "the property of living systems that continuously produce the very components that sustain them; coined by Maturana and Varela. The cell does not merely use its components but makes them, circularly, as the condition of its own continued existence."), the property by which living cells continuously produce the very components that sustain them, is this same logic carried one level further.
 @explainer(Autopoiesis)

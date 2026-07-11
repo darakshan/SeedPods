@@ -1,5 +1,5 @@
-_sys/last_write_at=2026-07-03T22:25:40-07:00
-_sys/last_write_key=notes/2026-07-03/toc-resources-merge
+_sys/last_write_at=2026-07-03T22:42:07-07:00
+_sys/last_write_key=style/transitions
 facts/bugs/history=Edit pipeline has been the source of many bugs throughout May-June 2026. Major findings: (1) CONTINUE replies vanishing — fixed (clear conversation revealed the bug, caused by stale conversation state); (2) backtick escaping for directives — fixed; (3) dual conversation handlers running in parallel — fixed; (4) dual server subscriptions — fixed; (5) chip-invisible bug where outcome=accepted is returned but no chip appears (tracker #543); (6) find-text matcher operates on raw bytes including @edit-proposal envelopes (tracker #545); (7) chips returning could-not-build error but succeeding silently anyway, observed 2026-06-01. When EDIT outcomes are confusing, re-read the file to see the actual state — outcome signals are not always trustworthy.
 facts/build/errors-design=Build errors should go in context/ as JSON (not content/ as markdown). Dialog pops up after edit/rebuild; Settings shows a badge with severity. The content/errors.md approach was a v1 shortcut that mixed builder output with site content.
 facts/owner/name=Darakshan — developer and mystic, creator of SeedPods and Gossamer. Capricorn from Wenatchee WA.

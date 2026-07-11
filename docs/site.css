@@ -60,11 +60,11 @@ nav{display:flex;flex-direction:column;align-items:stretch;border-bottom:1px sol
    on every page; only the leading title differs. `.site-nav` (class) overrides the
    generic `nav` element rule (which is flex-column and grey). */
 .site-nav{display:flex;flex-direction:row;align-items:center;gap:.75rem;padding:.35rem clamp(.75rem,3vw,2rem);position:sticky;top:0;z-index:100;background:var(--paper);border-bottom:1px solid rgba(0,0,0,.12)}
-.site-nav .nav-right{display:flex;align-items:center;gap:.72rem;flex:0 0 auto}
+.site-nav .nav-right{display:flex;align-items:center;gap:1.15rem;flex:0 0 auto}
 .site-nav .nav-home,.site-nav .nav-search-btn{display:flex;align-items:center;background:none;border:none;cursor:pointer;line-height:0;padding:.1rem .15rem;text-decoration:none;color:var(--nav-gray)}
 .site-nav .nav-home:hover,.site-nav .nav-search-btn:hover{opacity:.6}
-.site-nav .nav-ico{display:block;width:1.08rem;height:1.08rem}
-.site-nav .nav-title{flex:1 1 auto;min-width:0;text-align:left;font-family:'Inter',system-ui,sans-serif;font-weight:400;font-size:.82rem;letter-spacing:.09em;text-transform:uppercase;color:var(--nav-gray);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.site-nav .nav-ico{display:block;width:1.296rem;height:1.296rem}
+.site-nav .nav-title{flex:1 1 auto;min-width:0;text-align:left;font-family:'Inter',system-ui,sans-serif;font-weight:400;font-size:.984rem;letter-spacing:.09em;text-transform:uppercase;color:var(--nav-gray);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .site-nav .header-nav-prev,.site-nav .header-nav-next{display:flex;align-items:center;line-height:0;color:var(--nav-gray);padding:.1rem .15rem;text-decoration:none;cursor:pointer}
 .site-nav a.header-nav-prev:hover,.site-nav a.header-nav-next:hover{opacity:.6}
 .site-nav .header-nav-disabled{color:color-mix(in srgb, var(--nav-gray) 35%, transparent);pointer-events:none;cursor:default}
@@ -233,7 +233,10 @@ a.bib-ref:hover{color:var(--accent)}
 /* Depth indent rides on each row's own left padding (set inline, by depth), NOT on a
    margin of the nested list — that keeps every row's hue background flush to the left
    margin so the colour fills the row full-width with only the text pushed in. */
-.toc-chapter,.toc-section-head,.toc-section-line{display:flex;align-items:baseline;gap:.1rem;padding:.22rem 0}
+/* `-webkit-touch-callout` off so a long press on a leaf `<a>` opens the chapter (our gesture)
+   rather than raising iOS/WKWebView's link-preview menu; `user-select` off so the press doesn't
+   start a text selection. */
+.toc-chapter,.toc-section-head,.toc-section-line{display:flex;align-items:baseline;gap:.1rem;padding:.22rem 0;-webkit-touch-callout:none;-webkit-user-select:none;user-select:none}
 .toc-section{line-height:1.5}
 .toc-num{display:inline-block;min-width:3ch;font-family:'DM Mono',monospace;font-size:.8rem;color:var(--warm)}
 .toc-filenum{font-family:'DM Mono',monospace;font-size:.62rem;color:var(--dim)}
