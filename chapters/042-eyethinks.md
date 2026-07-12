@@ -5,7 +5,7 @@
 @edit-time 2026-06-19T14:46Z
 
 @argument
-The @term(retina), which is embryologically brain tissue that migrated into the eye, recombines three raw cone signals into @term(opponent channels, opponent process, "recombination of cone signals into red/green, blue/yellow, and light/dark channels within the retina.") before any signal leaves the eye, so that the world has already been interpreted one synapse past the photoreceptors.
+The @term(retina, "the light-sensitive layer at the back of the eye, embryologically brain tissue that migrated outward; it computes, recombining cone signals into opponent channels before any signal leaves the eye."), which is embryologically brain tissue that migrated into the eye, recombines three raw cone signals into @term(opponent channels, opponent process, "recombination of cone signals into red/green, blue/yellow, and light/dark channels within the retina.") before any signal leaves the eye, so that the world has already been interpreted one synapse past the photoreceptors.
 
 @section(proto)
 The retina performs a surprising computation before any signal leaves the eye.

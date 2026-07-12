@@ -87,7 +87,7 @@ Douglas Hofstadter's Gödel, Escher, Bach (1979) circles this territory from the
 Evan Thompson's Mind in Life@ref(thompson, "Thompson, Evan", "*Mind in Life: Biology, Phenomenology, and the Sciences of Mind*. Harvard University Press, 2007.", "Ch. 4, The Structure of Behavior, where behavior is treated as the expression of an organism's form rather than a detachable output, with Ch. 6, Life and Mind: The Philosophy of the Organism, supplying the continuity claim underneath. The living surface is legible only as the trace of the process that throws it off.") takes this into the biological domain: the organism's expressive surface is always downstream of the living process that generates it.
 
 @section(script)
-1. A Victorian street fair. A barker beside an ornate brass-fitted box, gears, drum, levers visible through glass. Barker: Ladies and gentlemen, the most extraordinary musical @term(intelligence) in the known world! It predicts what comes next with uncanny precision!
+1. A Victorian street fair. A barker beside an ornate brass-fitted box, gears, drum, levers visible through glass. Barker: Ladies and gentlemen, the most extraordinary musical @term(intelligence, "the capacity to fit response to circumstance; judged in practice by output, though the same output can issue from processes with entirely different interiors.") in the known world! It predicts what comes next with uncanny precision!
 
 2. A child pulls at an intellectual's sleeve. Child: What is it? Is it alive? Intellectual: Look, you can see the mechanism. It reads the pattern and produces the next note. It's just a machine predicting its output. The music is irrelevant.
 

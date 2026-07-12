@@ -19,7 +19,7 @@ It reproduces.
 All true.
 But those are behaviors.
 They describe what life does.
-They don't say what @term(life) is.
+They don't say what @term(life, "not a list of behaviors but an organization: a system that continuously produces the components that constitute it; defined by self-production rather than by any special substance.") is.
 
 Try this instead.
 Imagine a single @term(cell, cells, "the smallest unit of life that maintains itself: a membrane-bounded chemical system that continuously produces the very molecules its existence depends on. All living things are made of cells; the simplest, bacteria, are themselves living."), the simplest living thing you can find, a bacterium smaller than anything you'll ever see with your naked eye.
@@ -51,7 +51,7 @@ It is a storm.
 Thousands of molecular machines, each one a protein folded into a precise shape, grabbing passing molecules, transforming them, releasing them, all of it happening millions of times per second, in a space you could fit ten thousand of inside the period at the end of this sentence.
 The circle holds not despite that chaos but through it.
 
-Two biologists, Humberto Maturana and Francisco Varela, gave this a name in the 1970s: @term(autopoiesis, "Maturana and Varela's term for a system that continuously produces the very components that constitute and maintain it. The defining organizational property of living systems.").
+Two biologists, Humberto Maturana and Francisco Varela, gave this a name in the 1970s: @term(autopoiesis).
 From the Greek: auto, self; poiesis, making.
 A self-making system.
 
@@ -60,7 +60,7 @@ The universe is not on the cell's side.
 Heat disperses.
 Molecules drift.
 Radiation breaks chemical bonds.
-@term(Entropy, entropy, TBD), the tendency of everything to fall apart, spread out, and go inert, is relentless.
+@term(Entropy, entropy, "the tendency of energy to disperse and structure to decay toward equilibrium; relentless by the second law of thermodynamics, and what every living system must continuously outrun."), the tendency of everything to fall apart, spread out, and go inert, is relentless.
 The cell holds its shape against all of that, not by being rigid, but by continuously remaking itself faster than it dissolves.
 That loop, stable enough to persist against everything trying to disrupt it, flexible enough to respond when conditions shift: that is what @term(evolution) found. @link(009) shows how structure emerges from random process; a self-maintaining loop is one of the structures that emerged.
 

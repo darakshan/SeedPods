@@ -10,7 +10,7 @@ From the photon's perspective, these are the same moment.
 A photon leaves a star and arrives at your eye, and from the photon's perspective these are the same moment, no journey, no duration, no distance, which is not a paradox to be dissolved but a genuine feature of how connection works at the boundary of the physical.
 
 @section(depth)
-In special @term(relativity), @term(time) dilation reaches its limit at the speed of @term(light): a photon has no @term(proper time, "in special relativity, the time elapsed as measured by a clock traveling with an object. For a photon traveling at the speed of light, proper time is zero, emission and absorption are the same event from the photon's perspective.").
+In special @term(relativity), @term(time, "duration between events, what clocks measure; relativity makes it observer-dependent, dilating with speed and vanishing entirely at the speed of light.") dilation reaches its limit at the speed of @term(light, "electromagnetic radiation, the field's own propagating disturbance, traveling at the universe's maximum speed; no proper time elapses along its path."): a photon has no @term(proper time).
 From the photon's reference frame, to the extent that frame is meaningful, emission and absorption are the same event.
 No duration elapses.
 The mirror a light-year away reflects the beam back; two years pass for the observer; zero time passes for the light.
@@ -28,7 +28,7 @@ What is the relationship between a circuit, a mirror, and the kind of connection
 That question is left open here as a seed for further thinking.
 
 Light is also unlike sound in a way that keeps mattering.
-When a string vibrates or air moves through a tube, the @term(harmonics) are integer multiples of the fundamental: 2x, 3x, 4x.
+When a string vibrates or air moves through a tube, the @term(harmonics, "the integer multiples of a fundamental frequency (2x, 3x, 4x) produced by any vibrating body; the physical basis of the consonance hierarchy.") are integer multiples of the fundamental: 2x, 3x, 4x.
 The octave (2:1) appears naturally in the @term(overtone series, "the set of frequencies naturally produced by a vibrating physical object, string, air column, membrane. Integer multiples of the fundamental frequency: 2x (octave\), 3x (fifth plus octave\), 4x (two octaves\), and so on. The physical basis of musical consonance.") of any vibrating physical object, it is baked into the physics of classical mechanical vibration in a bounded medium.
 This is why the consonance hierarchy is not merely a perceptual construction: it is physically real, built into the nature of sound itself, and the ear evolved to recognize something that was already there.
 
@@ -36,7 +36,7 @@ Light does not work this way.
 An atom emitting light produces one specific frequency determined by its quantum energy transition, not a fundamental plus overtones, but a single discrete event.
 The harmonic series is a feature of classical vibration in a bounded medium.
 Light is not that.
-Each photon is a quantum of a @term(field, fields, "in quantum field theory, the fundamental entity from which particles arise as localized excitations. The electromagnetic field pervades all space and is the medium through which charged particles interact. A photon is not a thing traveling through the field; it is a quantum of the field itself."), not a standing wave in a tube.
+Each photon is a quantum of a @term(field, fields), not a standing wave in a tube.
 The octave of visible red falls in the ultraviolet, outside our perceptual window entirely, and not naturally co-produced with the red in the first place.
 
 This is one reason the visual system had to invent its circle rather than inherit one from physics.

@@ -85,7 +85,7 @@ A note on language: from here on, we'll sometimes say "things" because that's ho
 @section(depth)
 Alfred North Whitehead@ref(whitehead, "Whitehead, Alfred North", "*Process and Reality: An Essay in Cosmology*. Macmillan, 1929; corrected ed., Free Press, 1978.", "Part I, Ch. I, section III, where the fallacy of misplaced concreteness is named as the error of mistaking an abstraction for the concrete thing, and Part I, Ch. II, section I, where actual entities are introduced as the final real things of which the world is made. Whitehead's own footnote at the first passage points back to Science and the Modern World, Ch. III.")@ref(whitehead-smw, "Whitehead, Alfred North", "*Science and the Modern World*. Macmillan, 1925.", "Ch. III, The Century of Genius, where simple location and the substance-quality pair are dismantled and the fallacy of misplaced concreteness is named for the first time; scientific materialism is christened earlier, in Ch. I. The critique arrives here without the categoreal machinery of Process and Reality, which is why it is the chapter to send a reader to first.")
 (1861–1947), mathematician, co-author with Bertrand Russell of the Principia Mathematica, and late in his career a philosopher of nature, argued that Western thought had made a specific and consequential error at the foundation of modern science.
-He called it the @term(fallacy of misplaced concreteness, fallacy of misplaced concreteness, "Alfred North Whitehead's term for the error of treating an abstraction as if it were the concrete reality. The paradigm case: treating the particle, a scientific abstraction useful for calculation, as the fundamental unit of nature, while forgetting that it was abstracted from the concrete flow of events."): taking an abstraction and treating it as if it were the concrete reality.
+He called it the @term(fallacy of misplaced concreteness, fallacy of misplaced concreteness): taking an abstraction and treating it as if it were the concrete reality.
 
 The abstraction in question is the thing, the enduring object, the particle, the substance with fixed properties.
 Science proceeded by abstracting objects from the flow of events, assigning them stable properties, and calculating their interactions.
@@ -97,7 +97,7 @@ The event, the happening, the moment of occurrence, was demoted to something tha
 
 Whitehead's inversion: the event is primary.
 The particle is what you get when certain kinds of events are stable and repeating enough to seem permanent.
-A rock is not a thing that endures, it is a family of events (Whitehead's technical term: a "society of @term(actual occasions, actual occasion, \"Whitehead's term for the fundamental unit of reality: a discrete event of becoming. Enduring objects are families (Whitehead: 'societies') of actual occasions whose pattern is stable enough to appear permanent. The occasion is primary; the object is derivative.\")") that keeps reproducing its own pattern closely enough that we rightly call it a rock.
+A rock is not a thing that endures, it is a family of events (Whitehead's technical term: a "society of @term(actual occasions, actual occasion)") that keeps reproducing its own pattern closely enough that we rightly call it a rock.
 @explainer(Actual occasion)
 The pattern is real.
 The underlying rock-substance is the abstraction.

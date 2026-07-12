@@ -6,7 +6,7 @@ The mind closes the line into a circle.
 @related 013, 016, 026, 029, 045
 
 @argument
-The visible spectrum is a line, but the mind closes it into a circle by inventing @term(colors, color, TBD), purple, magenta, that correspond to no wavelength, and this closure happens before the brain is even informed, in retinal tissue that is embryologically brain.
+The visible spectrum is a line, but the mind closes it into a circle by inventing @term(colors, color, "the mind's construction from three cone signals rather than a property of light itself; purple and magenta correspond to no wavelength, invented to close the linear spectrum into a circle."), purple, magenta, that correspond to no wavelength, and this closure happens before the brain is even informed, in retinal tissue that is embryologically brain.
 
 @section(depth)
 @image(041-colorwheel,Munsell hue wheel: the mind closes the spectrum into a circle,Wikimedia Commons)

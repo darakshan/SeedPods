@@ -5,7 +5,7 @@
 @edit-time 2026-06-23T19:02Z
 
 @argument
-The @term(choice) dimension doesn't need to multiply, it only needs to branch, and a @term(tree algebra, tree algebra, "algebra of branching trees with grafting rather than multiplication; candidate for a \"choice\" dimension.") fibered over spacetime, with branching numbers fixed by local Farey structure and probabilities given by @term(harmonic measure, harmonic measure, "probability on the tree from uniform 1/n at each n-fold branch; links to Born rule and consonance."), may be the right mathematical object for what @term(Many Worlds, many-worlds, "Hugh Everett's 1957 interpretation of quantum mechanics in which the wavefunction never collapses. Every quantum measurement causes the universe to branch, with each possible outcome realized in a separate world. No special role for observers; no mysterious collapse mechanism. The cost is an explosion of unobservable branches; the benefit is a strictly unitary, deterministic theory.") is actually describing.
+The @term(choice, "the resolution of branching possibility into one actual path; proposed here as a dimension of reality with tree structure rather than metric structure.") dimension doesn't need to multiply, it only needs to branch, and a @term(tree algebra, tree algebra, "algebra of branching trees with grafting rather than multiplication; candidate for a \"choice\" dimension.") fibered over spacetime, with branching numbers fixed by local Farey structure and probabilities given by @term(harmonic measure, harmonic measure), may be the right mathematical object for what @term(Many Worlds, many-worlds) is actually describing.
 
 @section(proto)
 The proposal to add "choice" as a fifth dimension, alongside space, time, runs into a mathematical obstacle.

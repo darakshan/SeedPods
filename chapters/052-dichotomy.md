@@ -5,7 +5,7 @@
 @edit-time 2026-06-23T19:02Z
 
 @argument
-The electron is neither particle nor wave but an excitation of a @term(quantum field, quantum field, "continuous field whose excitations are particles; model for consciousness as field with occasional events."), the field is continuous, the excitation is discrete, both descriptions are correct, and @term(consciousness) may work the same way, with Whitehead's @term(discrete occasions, actual occasion, "Whitehead's discrete unit of experience; here interpreted as excitation of a continuous field.") as excitations of a continuous experiential field.
+The electron is neither particle nor wave but an excitation of a @term(quantum field, quantum field), the field is continuous, the excitation is discrete, both descriptions are correct, and @term(consciousness) may work the same way, with Whitehead's @term(discrete occasions, actual occasion) as excitations of a continuous experiential field.
 
 @section(proto)
 Physics already resolved this, and the resolution is worth stating cleanly because it keeps coming up in philosophy of mind.
@@ -14,7 +14,7 @@ The question "is consciousness discrete or continuous" seems to demand an answer
 Whitehead said discrete, the universe advances in quantum steps of experience, each occasion arising, achieving its synthesis, and perishing.
 Pure panpsychists tend to say continuous, experience is a field, not a sequence of events.
 
-But physics shows us the @term(dichotomy, discrete-continuous, TBD) is false.
+But physics shows us the @term(dichotomy, discrete-continuous, "the apparent opposition between step-like and smooth accounts of reality; quantum field theory dissolves it: the field is continuous, its excitations discrete.") is false.
 An electron is not a particle that sometimes acts like a wave, or a wave that sometimes acts like a particle.
 It is an excitation of a quantum field.
 The field is continuous.

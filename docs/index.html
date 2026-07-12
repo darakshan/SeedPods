@@ -54,7 +54,10 @@
   document.addEventListener("click",function(e){if(lpNav)return;if(lpFired){lpFired=false;e.preventDefault();e.stopPropagation();return;}var t=targetOf(e.target);if(t&&!t.classList.contains("toc-section-head")){e.preventDefault();e.stopPropagation();}},true);
 })();
 </script><script>(function(){
-  var VK="toc-view-v1",SK="toc-table-sort-v1";
+  // SK is at v2 because v1 was written on *every* applySort, including the one that ran on load —
+  // so a reader who never touched a column header still had a sort persisted for them. Only an
+  // explicit header click persists now, and the fresh key discards those phantom preferences.
+  var VK="toc-view-v1",SK="toc-table-sort-v2";
   function init(){
     var tree=document.getElementById("toc-tree-view");
     var table=document.getElementById("toc-table-view");
@@ -77,16 +80,18 @@
       if(col==="chap"){var p=chapArr(a.getAttribute("data-chap")),q=chapArr(b.getAttribute("data-chap")),n=Math.max(p.length,q.length);for(var i=0;i<n;i++){var d=(p[i]||0)-(q[i]||0);if(d)return d;}return 0;}
       return String(a.getAttribute("data-title")).localeCompare(String(b.getAttribute("data-title")));
     }
-    function applySort(col,dir){
+    function applySort(col,dir,persist){
       var rows=Array.prototype.slice.call(body.querySelectorAll("tr"));
       rows.sort(function(a,b){var c=cmp(col,a,b);return dir==="desc"?-c:c;});
       rows.forEach(function(r){body.appendChild(r);});
       ths.forEach(function(th){var on=th.getAttribute("data-col")===col;th.setAttribute("aria-sort",on?(dir==="desc"?"descending":"ascending"):"none");th.classList.toggle("toc-th-active",on);th.classList.toggle("toc-th-desc",on&&dir==="desc");});
-      try{localStorage.setItem(SK,JSON.stringify({col:col,dir:dir}));}catch(e){}
+      if(persist){try{localStorage.setItem(SK,JSON.stringify({col:col,dir:dir}));}catch(e){}}
     }
-    var saved={col:"chap",dir:"asc"};try{var s=JSON.parse(localStorage.getItem(SK));if(s&&s.col)saved=s;}catch(e){}
-    applySort(saved.col,saved.dir);
-    ths.forEach(function(th){th.addEventListener("click",function(){var col=th.getAttribute("data-col");var cur=th.getAttribute("aria-sort");var dir=cur==="ascending"?"desc":"asc";applySort(col,dir);});});
+    // The By-pod view opens sorted by pod — that's the whole point of the view. A column the
+    // reader actually clicked outranks that default and is remembered per device.
+    var saved={col:"pod",dir:"asc"};try{var s=JSON.parse(localStorage.getItem(SK));if(s&&s.col)saved=s;}catch(e){}
+    applySort(saved.col,saved.dir,false);
+    ths.forEach(function(th){th.addEventListener("click",function(){var col=th.getAttribute("data-col");var cur=th.getAttribute("aria-sort");var dir=cur==="ascending"?"desc":"asc";applySort(col,dir,true);});});
   }
   if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",init);}else{init();}
 })();</script></div>

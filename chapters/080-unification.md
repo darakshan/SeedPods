@@ -31,7 +31,7 @@ A pile of sand is in the same bucket, and it is not one experience.
 What makes the difference?
 What is it about certain physical configurations that turns a collection into a unity?
 
-Whitehead's @term(prehension, "Whitehead's term for the process by which each actual occasion grasps, feels, and incorporates prior occasions into a new unity, the mechanism by which the many become one.") says each new occasion *grasps* the old ones.
+Whitehead's @term(prehension) says each new occasion *grasps* the old ones.
 Tononi's Integrated Information Theory @ref(tononi-1, "Tononi, Giulio", "*An Information Integration Theory of Consciousness*. BMC Neuroscience 5:42, 2004.", "Presentation of the hypothesis, the subsections Consciousness as information integration and Measuring the capacity to integrate information: the Phi of a complex. The first states that consciousness corresponds to the capacity to integrate information; the second defines Phi as the effective information carried across a subset's weakest informational link, which is the non-decomposability the passage is after.") says consciousness corresponds to @term(integrated information, integrated information (Φ), "Tononi's measure of the degree to which a system's parts are informationally integrated in a way that cannot be decomposed into independent subsystems; proposed as a measure of consciousness."), a system is conscious to the degree its parts are informationally bound in a way that can't be decomposed, measured as Φ (phi).
 Both are pointing at the same intuition: that unification is an active process, not a passive sum.
 But neither explains what the process *is* at the physical level.

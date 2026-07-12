@@ -5,11 +5,7 @@
 @edit-time 2026-06-23T19:02Z
 
 @argument
-@term(quasicrystals, quasicrystal, "ordered but non-periodic structure; often with golden-ratio and Farey-related geometry."), magnetic domain walls, and charge density waves all produce Mandelbrot-like @replace-from(73BA050A-30A3-4BC8-BECA-1833E3BF70A2)
-@term(fractal, fractals, TBD)
-@replace-with(73BA050A-30A3-4BC8-BECA-1833E3BF70A2)
-@term(fractal, fractals, "a structure whose detail at small scales resembles its structure at larger scales; self-similar under zoom. Produced when a simple iterative rule is applied repeatedly. The Mandelbrot set is the canonical mathematical example; coastlines, river networks, lungs, lightning, and the boundaries of magnetic domains are physical examples.")
-@replace(73BA050A-30A3-4BC8-BECA-1833E3BF70A2) structure, not by computing a formula but by obeying local iterative rules, because that structure is what local iteration produces at its boundaries regardless of substrate.
+@term(quasicrystals, quasicrystal, "ordered but non-periodic structure; often with golden-ratio and Farey-related geometry."), magnetic domain walls, and charge density waves all produce Mandelbrot-like @term(fractal, fractals) structure, not by computing a formula but by obeying local iterative rules, because that structure is what local iteration produces at its boundaries regardless of substrate.
 
 @section(proto)
 @term(Mandelbrot, mandelbrot-set)-like fractal structure has been found in physical systems, not as visual coincidence but as a consequence of the same iterative mathematics running in physical substrates.

@@ -5,13 +5,13 @@
 @edit-time 2026-06-23T19:02Z
 
 @argument
-Process theology's @term(God, god, TBD) is both the ground of possibility, holding all unrealized potentials available for occasions to select from, and the lure each occasion feels toward greater complexity, which in the language of dynamical systems makes God both the initial condition and the @term(attractor).
+Process theology's @term(God, god, "in Whitehead's process theology, not a person who intervenes but the ground of possibility and the lure toward complexity; in dynamical-systems language, both initial condition and attractor.") is both the ground of possibility, holding all unrealized potentials available for occasions to select from, and the lure each occasion feels toward greater complexity, which in the language of dynamical systems makes God both the initial condition and the @term(attractor).
 
 @section(proto)
 Whitehead's God is not the God of theism, not a person who intervenes in history or answers prayers.
 God in Whitehead's system plays two roles in the metaphysics of process.
 
-First, God is the ground of possibility, the one who holds all @term(unrealized potentials, eternal objects, "the realm of possibility that God holds available; occasions select from it in their self-determination.") available for actual occasions to select from.
+First, God is the ground of possibility, the one who holds all @term(unrealized potentials, eternal objects) available for actual occasions to select from.
 Without this role, there is no account of where possibilities come from.
 An occasion can only actualize what is genuinely available to it.
 God makes possibilities available.

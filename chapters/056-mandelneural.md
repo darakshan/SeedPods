@@ -5,7 +5,7 @@
 @edit-time 2026-06-23T19:02Z
 
 @argument
-@term(Training, training, TBD) a @term(neural network, neural-networks, "a layered system of artificial neurons whose weighted connections are adjusted by training on data. The dominant substrate of modern AI. Loosely inspired by biological neurons but architecturally and operationally distinct; the resemblance is more analogical than mechanistic.") is computing a @term(Mandelbrot set, mandelbrot-set) in hundreds of thousands of dimensions, weight space is the complex plane, the loss landscape is the iteration, and the best models sit on the boundary between convergence and escape, which is not metaphor but structural homology.
+@term(Training, training, "the iterative adjustment of a neural network's weights against a loss function, gradient descent over data; the process whose dynamics carve basins of convergence in weight space.") a @term(neural network, neural-networks) is computing a @term(Mandelbrot set, mandelbrot-set) in hundreds of thousands of dimensions, weight space is the complex plane, the loss landscape is the iteration, and the best models sit on the boundary between convergence and escape, which is not metaphor but structural homology.
 
 @section(proto)
 Training a neural network is, in a precise sense, computing a Mandelbrot set in a space of hundreds of thousands of dimensions.
@@ -20,7 +20,7 @@ The best models sit on the edge.
 
 The bulbs of the Mandelbrot set correspond to the @term(basins of attraction, basin of attraction, "region of initial conditions that converge to the same attractor; analog of Mandelbrot bulbs."), the regions of weight space that converge to good solutions.
 Larger bulbs correspond to more robust solutions, reachable from a wider range of starting points.
-The branching structure of the boundary corresponds to the fine structure of @term(generalization), the increasingly subtle distinctions a deep model can make.
+The branching structure of the boundary corresponds to the fine structure of @term(generalization, "a trained model's capacity to handle inputs it never saw; the fine structure of what transfers and what does not."), the increasingly subtle distinctions a deep model can make.
 
 This is not a metaphor.
 It is a structural homology between two iterative dynamical systems, one in two dimensions and one in hundreds of thousands.

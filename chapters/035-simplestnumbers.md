@@ -14,7 +14,7 @@ There are infinitely many numbers between 0 and 1.
 But they're not all equally there.
 Some are more fundamental than others.
 The fraction 1/2 is more there than 47/93.
-Music knew this before @term(mathematics) did.
+Music knew this before @term(mathematics, "the study of structure itself, independent of substrate; where music, physics, and perception keep turning out to be reading the same map.") did.
 And so did accounting.
 
 @section(depth)
@@ -29,7 +29,7 @@ Benford is the empirical shadow of what Farey makes precise.
 The universe counts simply first.
 Complexity accumulates later.
 This isn't a coincidence of mathematics, it's the signature of a world built by @term(iteration) from a single rule.
-The formula for @term(virtual dimensions, virtual-dimension-formula, TBD) arising from actual ones, V(d,n) ~ (n²/π²)^d, carries this signature explicitly: π from the circular structure of consonance, the logarithm from the compression of the tree.
+The formula for @term(virtual dimensions, virtual-dimension-formula, "V(d,n) ~ (n²/π²)^d, the number of nearly-orthogonal virtual dimensions that d actual dimensions support at Farey depth n; π enters from the circular structure of consonance.") arising from actual ones, V(d,n) ~ (n²/π²)^d, carries this signature explicitly: π from the circular structure of consonance, the logarithm from the compression of the tree.
 
 @section(script)
 1. A musician tuning by ear. She finds the octave immediately. Then the fifth. Then the fourth. She's not calculating. She's finding the simplest numbers first.

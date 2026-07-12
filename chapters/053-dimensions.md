@@ -24,8 +24,8 @@ The resulting formula:
 
 **V(d, n) ~ (n²/π²)^d**
 
-Where d is actual dimensions, n is @term(Farey depth, "The complexity level in the Farey hierarchy; used here as a principled threshold for \"nearly orthogonal.\"") (your consonance threshold), and n²/π² is the count of Farey fractions at depth n, with π entering naturally from the circular structure of the rationals, not by assumption.
+Where d is actual dimensions, n is @term(Farey depth, "The complexity level in the Farey hierarchy; used here as a principled threshold for \"nearly orthogonal,\" determining how many concepts fit at each level.") (your consonance threshold), and n²/π² is the count of Farey fractions at depth n, with π entering naturally from the circular structure of the rationals, not by assumption.
 
-Applications: @term(neural network, neural-networks, "a layered system of artificial neurons whose weighted connections are adjusted by training on data. The dominant substrate of modern AI. Loosely inspired by biological neurons but architecturally and operationally distinct; the resemblance is more analogical than mechanistic.") superposition capacity, @term(Many Worlds, many-worlds, "Hugh Everett's 1957 interpretation of quantum mechanics in which the wavefunction never collapses. Every quantum measurement causes the universe to branch, with each possible outcome realized in a separate world. No special role for observers; no mysterious collapse mechanism. The cost is an explosion of unobservable branches; the benefit is a strictly unitary, deterministic theory.") branch distinguishability, and potentially the information capacity of physical space itself.
+Applications: @term(neural network, neural-networks) superposition capacity, @term(Many Worlds, many-worlds) branch distinguishability, and potentially the information capacity of physical space itself.
 The formula connects musical consonance, high-dimensional geometry, and quantum branching under one expression.
 That connection has not been made explicitly in the literature.

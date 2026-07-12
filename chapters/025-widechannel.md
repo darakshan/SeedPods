@@ -15,7 +15,7 @@ A channel is the connection between an inner process and its outward expression,
 Some channels are narrow: a locked-in patient, fully conscious but paralyzed, may communicate only by blinking.
 An infant has thoughts and feelings but no words for them yet.
 A stroke can leave language intact inside while blocking every path out.
-We understand, in these cases, that the silence or poverty of @term(output) tells us about the channel, not about the source.
+We understand, in these cases, that the silence or poverty of @term(output, "what crosses the channel from an inner process to the world; evidence about the channel at least as much as about the source.") tells us about the channel, not about the source.
 
 Now consider a channel that is wide.
 A large language model produces fluent prose, coherent argument, apparent emotion, plausible reasoning, thousands of words per minute, in any style, on any topic.

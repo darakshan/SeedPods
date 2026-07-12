@@ -15,7 +15,7 @@ Here is what everyone knows: matter is dark inside.
 @image(003-inside,A geode opened: the inside revealed,Wikimedia Commons)
 
 A rock (events, as in @link(002)) doesn't feel the sun on it.
-A raindrop doesn't @term(experience) falling.
+A raindrop doesn't @term(experience, "what it is like from the inside; the felt aspect of a process, taken in this book as a candidate fundamental feature of reality rather than a late biological product.") falling.
 The carbon in your bones has no inner life. It's just carbon.
 Somewhere along the way, in a few special biological cases, matter arranged itself into nervous systems, and nervous systems somehow produce experience.
 How?
@@ -89,9 +89,9 @@ Alfred North Whitehead@ref(whitehead, "Whitehead, Alfred North", "*Process and R
 It is constitutive of what it means for anything to happen at all.
 
 Whitehead's position is not the soft version of this claim, that maybe complex systems feel something.
-It is stronger: every @term(actual occasion, actual occasion, "Alfred North Whitehead's term for the fundamental unit of reality: a discrete event of becoming that takes in its environment, integrates it, and completes itself. Enduring objects are families (Whitehead: \"societies\") of actual occasions stable enough to appear permanent."), his term for the fundamental event of reality, does not merely occur externally.
+It is stronger: every @term(actual occasion, actual occasion, "Alfred North Whitehead's term for the fundamental unit of reality: a discrete event of becoming that takes in its environment, integrates it, and completes itself. Enduring objects are families (Whitehead: \"societies\") of actual occasions stable enough to appear permanent. The occasion is primary; the object is derivative."), his term for the fundamental event of reality, does not merely occur externally.
 It takes in what surrounds it, integrates that intake, and completes itself.
-He called this taking-in a "feeling," or in his technical vocabulary, a @term(prehension, prehension, "Whitehead's term for the way each actual occasion takes in and registers what surrounds it before completing itself. Plain English equivalent: feeling, taking-in. The root is the same as \"apprehend.\""), from the same root as "apprehend."
+He called this taking-in a "feeling," or in his technical vocabulary, a @term(prehension, prehension, "Whitehead's term for the way each actual occasion takes in and registers what surrounds it before completing itself; the basic relational act of reality. Plain English equivalent: feeling, taking-in. The root is the same as \"apprehend.\""), from the same root as "apprehend."
 The feeling is the inside of the event.
 Not metaphor.
 Not projection.

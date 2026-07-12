@@ -118,7 +118,7 @@ Patches become increasingly elaborate and implausible.
 Eventually someone removes the flawed primitive assumption rather than defending it.
 The revolution is never just additive. It requires giving something up.
 
-Alfred North Whitehead identified what he called the @term(fallacy of misplaced concreteness, fallacy of misplaced concreteness, "Whitehead's term for the error of mistaking a useful abstraction for the underlying concrete reality. Appears throughout Process and Reality (1929).") as the deepest version of this error: mistaking an abstraction for the concrete reality.
+Alfred North Whitehead identified what he called the @term(fallacy of misplaced concreteness, fallacy of misplaced concreteness, "Whitehead's term for the error of mistaking a useful abstraction for the concrete reality it was abstracted from. The paradigm case: treating the particle, an abstraction useful for calculation, as the fundamental unit of nature. Appears throughout Process and Reality (1929).") as the deepest version of this error: mistaking an abstraction for the concrete reality.
 @explainer(Fallacy of misplaced concreteness, https://www.youtube.com/watch?v=lG9hSB0EuqU, map vs territory, Achology — 12:00)
 Caloric was a reification: taking the useful concept of heat flowing and mistaking it for an actual substance.
 The ether was a reification of the idea that waves require a medium.

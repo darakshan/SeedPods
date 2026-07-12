@@ -7,7 +7,7 @@ Recognize the shape.
 @related 010, 034, 053, 056, 062
 
 @argument
-Draw every musical interval on a circle, score each by the simplicity of its ratio, and what appears is not a chart but The @term(Mandelbrot set, mandelbrot, TBD), bulb positions matching @term(Farey fractions, farey sequence, "the set of all fractions between 0 and 1 ordered by complexity, simplest denominators first. Governs both the positions of bulbs on The Mandelbrot cardioid and the hierarchy of consonant intervals in music."), consonance ranking matching bulb size, because both are maps of stability under iteration.
+Draw every musical interval on a circle, score each by the simplicity of its ratio, and what appears is not a chart but The @term(Mandelbrot set, mandelbrot-set), bulb positions matching @term(Farey fractions, farey sequence), consonance ranking matching bulb size, because both are maps of stability under iteration.
 
 @section(depth)
 @image(038-consonance-map,Fourier harmonics: the overtone series underlying musical consonance,Wikimedia Commons)
@@ -22,7 +22,7 @@ They didn't have a graph.
 They had a single string and a remarkable idea: that number and harmony are the same thing.
 Every culture that has independently developed @term(music) has found the simple ratios first.
 The octave (2:1), the fifth (3:2), the fourth (4:3), these are universal.
-But what does the full landscape of @term(consonance) look like?
+But what does the full landscape of @term(consonance, "the perceived stability of tones sounding together, governed by the simplicity of their frequency ratio; the simpler the ratio, the more consonant the interval.") look like?
 How are all the intervals related to each other, all at once?
 
 Darakshan had wanted to see that map for a long time.

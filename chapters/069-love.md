@@ -9,7 +9,7 @@ Love is what Light feels like.
 @related 002, 003, 029, 036, 066
 
 @argument
-Physicists describe @term(light) and mystics describe @term(love), and they keep reaching for the same words, attraction, radiance, union, the dissolution of distance, not because one is borrowing from the other but because they may be describing the outside and inside of the same phenomenon.
+Physicists describe @term(light) and mystics describe @term(love, "attraction, radiance, union, the dissolution of distance; read here as the interior of the same relational structure whose exterior physics describes as light."), and they keep reaching for the same words, attraction, radiance, union, the dissolution of distance, not because one is borrowing from the other but because they may be describing the outside and inside of the same phenomenon.
 
 @section(surface)
 Physicists describe light: electromagnetic radiation, photons crossing space at the maximum speed the universe allows.

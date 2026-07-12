@@ -26,7 +26,7 @@ Stability under iteration justifies music, and justifies Pythagoras's@ref(pythag
 Each bulb sprouts branching structures whose branching number equals the bulb's period, the complexity of the resonance determines the complexity of the choices that emerge from it.
 Those branches are bifurcations.
 Each bifurcation is a world-split in Everett's@ref(everett, "Everett, Hugh, III", "*'Relative State' Formulation of Quantum Mechanics*. Reviews of Modern Physics, 29(3):454–462, 1957.", "Section 5, Observation, where the observer state is said to branch with each measurement and the trajectory of the memory configuration becomes not a linear sequence but a branching tree with all outcomes existing simultaneously. The Note added in proof attached to that passage answers the objection that only one branch can be real: on the theory there is no transition from possible to actual, and no branch can register the splitting.") sense.
-The entire @term(fractal) boundary is a map of possibility space, the holographic surface between the stable interior and the infinite branching exterior.
+The entire @term(fractal, fractals, "a structure whose detail at small scales resembles its structure at larger scales; self-similar under zoom. Produced when a simple iterative rule is applied repeatedly. The Mandelbrot set is the canonical mathematical example; coastlines, river networks, lungs, lightning, and the boundaries of magnetic domains are physical examples.") boundary is a map of possibility space, the holographic surface between the stable interior and the infinite branching exterior.
 Consciousness may be what it feels like to be a point on that boundary.
 
 @section(script)
