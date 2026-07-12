@@ -39,7 +39,7 @@ Every translation risks loss.
 The whole apparatus is an extended boundary composed of serial transductions, each requiring trust that what arrives still resembles what was sent.
 
 The network engineer's term for this is the protocol stack.
-The OSI reference model@ref(osi, "ISO/IEC", "*ISO/IEC 7498-1: Information technology — Open Systems Interconnection — Basic Reference Model*. 1994.") decomposes communication into seven layers, physical, data link, network, transport, session, presentation, application, each handling one kind of translation.
+The OSI reference model@ref(osi, "ISO/IEC", "*ISO/IEC 7498-1: Information technology — Open Systems Interconnection — Basic Reference Model*. 1994.", "Clause 6.1 enumerates the seven layers and clause 7 describes each in turn, from 7.1 application down to 7.7 physical. The structural claim the passage borrows is not in either: it is in clause 5, concepts of a layered architecture, and above all 5.2, principles of layering, where a layer is defined by the service it offers upward and the service it consumes from below.") decomposes communication into seven layers, physical, data link, network, transport, session, presentation, application, each handling one kind of translation.
 The model is an engineering abstraction, but it describes something real: communication is never a single act, always a cascade of transductions.
 What makes the model useful here is not its specific layers but its structural claim, that every act of communication passes through a stack of translations, each layer trusting the one below it and serving the one above.
 
@@ -62,7 +62,7 @@ There is no unmediated contact anywhere in nature.
 Every meeting is mediated, and the mediation is always structured.
 
 Second, and more consequentially: the structure is fractal, not merely recursive.
-Every layer is itself a holon@ref(koestler-2, "Koestler, Arthur", "*The Ghost in the Machine*. Hutchinson, 1967.", "Holons and the hierarchy of whole/part.")
+Every layer is itself a holon@ref(koestler-2, "Koestler, Arthur", "*The Ghost in the Machine*. Hutchinson, 1967.", "Part One, Ch. III, The Holon, where the word is coined and the sections Enter Janus and The Basic Polarity establish the two-faced character of every holon, a whole facing down and a part facing up. Ch. VII carries the section A Holarchy of Holons, and Appendix I puts the Janus Effect first among the general properties of open hierarchical systems.")
 — a whole that is also a part, with its own exterior boundary and its own interior stack (see @link(037) on how stable outputs at one level become primitive units at the next).
 The microphone is not a single thing: it's a diaphragm, a coil, a converter, a buffer, each itself stacked.
 The vocal apparatus is breath, larynx, articulators, each coordinating with neural control loops that are themselves stacked.
@@ -102,4 +102,4 @@ The stack is precisely the channel, extended, layered, fractal.
 What it carries is not reducible to it.
 
 
-@ref(whitehead, "Whitehead, Alfred North", "*Process and Reality: An Essay in Cosmology*. Macmillan, 1929; corrected ed., Free Press, 1978.")
+@ref(whitehead, "Whitehead, Alfred North", "*Process and Reality: An Essay in Cosmology*. Macmillan, 1929; corrected ed., Free Press, 1978.", "Unanchored, and I cannot fix a locator honestly. This entry sits at the foot of the chapter with no citation attached to any sentence, so there is no claim to locate it against. Were it meant to underwrite the chapter's picture of interiorities meeting through layered apparatus, the division would be Part III, The Theory of Prehensions, Ch. I on the theory of feelings and Ch. III on the transmission of feelings, where the completed occasion becomes datum for the next; but that is a reconstruction of intent, not a reading of the text.")

@@ -9,7 +9,7 @@ A @term(neural network, neural-networks, "a layered system of artificial neurons
 
 @section(proto)
 A neural network with d dimensions in its residual stream can represent far more than d independent concepts.
-This is called @term(superposition, superposition, "storing more than d concepts in d dimensions by using nearly-orthogonal directions; studied in mechanistic interpretability.") and it has been studied carefully in the mechanistic @term(interpretability) literature@ref(elhage, "Elhage, Nelson et al.", "*Toy Models of Superposition*. Transformer Circuits Thread, Anthropic, 2022.", "Mechanistic interpretability work on how networks pack concepts into nearly-orthogonal directions.").
+This is called @term(superposition, superposition, "storing more than d concepts in d dimensions by using nearly-orthogonal directions; studied in mechanistic interpretability.") and it has been studied carefully in the mechanistic @term(interpretability) literature@ref(elhage, "Elhage, Nelson et al.", "*Toy Models of Superposition*. Transformer Circuits Thread, Anthropic, 2022.", "The section Definitions and Motivation: Features, Directions, and Superposition, particularly the subsections Features as Directions and The Superposition Hypothesis, where the Johnson-Lindenstrauss bound gives an n-dimensional space exponentially many almost-orthogonal directions, and then the section Demonstrating Superposition, where the toy models show a trained network actually doing it.").
 @image(057-superfarey,Superposition in high-dimensional neural representations,Wikimedia Commons)
 
 The mechanism: concepts are stored as nearly-orthogonal directions in the representation space.

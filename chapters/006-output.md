@@ -46,14 +46,14 @@ The output is a string of predicted words.
 Whatever is happening inside while you do that, that's the question.
 
 @section(depth)
-The philosopher Alfred North Whitehead@ref(whitehead, "Whitehead, Alfred North", "*Process and Reality: An Essay in Cosmology*. Macmillan, 1929; corrected ed., Free Press, 1978.", "Part I develops the metaphysical framing of the distinction between the act and its expression, the process and its trace.") drew a distinction that most people never make explicit: between the *act* and its *expression*.
+The philosopher Alfred North Whitehead@ref(whitehead, "Whitehead, Alfred North", "*Process and Reality: An Essay in Cosmology*. Macmillan, 1929; corrected ed., Free Press, 1978.", "The act and its expression is Whitehead's concrescence and objectification: Part II, Ch. X, Process, section I, on the two kinds of fluency, and Part III, Ch. I, section I, on genetic versus morphological analysis. The process can be divided one way and the trace another, which is exactly the asymmetry the chapter turns on. The deepest-error gloss belongs to Part I, Ch. I, section III.") drew a distinction that most people never make explicit: between the *act* and its *expression*.
 A process unfolds in time, internally, with a character that is entirely its own.
 What it produces, the output, the artifact, the behavior, is a downstream trace of that process, shaped and compressed by the act of expression itself.
 The trace is real.
 But it is not the process.
 Mistaking one for the other is, in Whitehead's view, one of the deepest errors in Western thought.
 
-Alan Turing@ref(turing, "Turing, Alan", "*Computing Machinery and Intelligence*. Mind, 1950.", "Short, readable, still radical, the opening pages dispatch the question \"can machines think?\" as unanswerable and replace it with something testable.") understood this when he designed his famous test.
+Alan Turing@ref(turing, "Turing, Alan", "*Computing Machinery and Intelligence*. Mind, 1950.", "Section 1, where the question whether machines can think is set aside as unanswerable and replaced by the imitation game, and the opening of section 6, p. 442, where Turing calls the original question too meaningless to deserve discussion. The reframing is precisely a retreat from process to output.") understood this when he designed his famous test.
 The question "can machines think?" he declared unanswerable, not because it's too hard, but because "think" points at a process, and we have no direct access to processes, only outputs.
 So he reframed the question entirely: can a machine produce outputs indistinguishable from a thinking human?
 That's a question we can actually investigate.
@@ -84,7 +84,7 @@ The locked-in syndrome literature, and more recently research on non-speaking au
 
 Douglas Hofstadter's Gödel, Escher, Bach (1979) circles this territory from the angle of formal systems, what can and cannot be inferred about a system from its outputs.
 
-Evan Thompson's Mind in Life@ref(thompson, "Thompson, Evan", "*Mind in Life: Biology, Phenomenology, and the Sciences of Mind*. Harvard University Press, 2007.", "Takes the process/output distinction into the biological domain, the organism's expressive surface is always downstream of the living process that generates it.") takes this into the biological domain: the organism's expressive surface is always downstream of the living process that generates it.
+Evan Thompson's Mind in Life@ref(thompson, "Thompson, Evan", "*Mind in Life: Biology, Phenomenology, and the Sciences of Mind*. Harvard University Press, 2007.", "Ch. 4, The Structure of Behavior, where behavior is treated as the expression of an organism's form rather than a detachable output, with Ch. 6, Life and Mind: The Philosophy of the Organism, supplying the continuity claim underneath. The living surface is legible only as the trace of the process that throws it off.") takes this into the biological domain: the organism's expressive surface is always downstream of the living process that generates it.
 
 @section(script)
 1. A Victorian street fair. A barker beside an ornate brass-fitted box, gears, drum, levers visible through glass. Barker: Ladies and gentlemen, the most extraordinary musical @term(intelligence) in the known world! It predicts what comes next with uncanny precision!

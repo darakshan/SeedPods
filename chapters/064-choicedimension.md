@@ -24,7 +24,7 @@ You attach one tree to a node of another.
 If the choice dimension is a tree-algebra fibered over the four dimensions of spacetime, meaning at every point in spacetime there hangs a finite branching tree of possible next steps, with branching numbers determined by local Farey structure and probabilities given by harmonic measure, then you have a coherent mathematical object.
 Not a five-dimensional number system, but a four-dimensional spacetime with a tree-valued fifth coordinate.
 
-This may be the right mathematical structure for what the Many Worlds interpretation@ref(everett, "Everett, Hugh, III", "*'Relative State' Formulation of Quantum Mechanics*. Reviews of Modern Physics, 29(3):454–462, 1957.")@ref(douady, "Douady, Adrien and Hubbard, John H.", "*On the Dynamics of Polynomial-like Mappings*. Annales scientifiques de l'École Normale Supérieure, 4e série, 18(2):287–343, 1985.") is actually describing.
+This may be the right mathematical structure for what the Many Worlds interpretation@ref(everett, "Everett, Hugh, III", "*'Relative State' Formulation of Quantum Mechanics*. Reviews of Modern Physics, 29(3):454–462, 1957.", "Section 4, Concept of Relative State, for the formalism, read with the branching-tree passage in section 5 and the closing discussion in section 6. The relative-state construction never posits worlds; it yields a superposition whose elements each carry a definite observer and a definite outcome, and the tree is what that superposition looks like when it is traced through a sequence of measurements.") is actually describing.
 
 
 @section(images)

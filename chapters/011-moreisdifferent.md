@@ -24,7 +24,7 @@ It maintains a steady internal temperature.
 It farms fungus.
 It wages war with tactical sophistication.
 It has a character: some colonies are aggressive, some cautious, some remarkably adaptable.
-The philosopher Douglas Hofstadter@ref(hofstadter, "Hofstadter, Douglas", "*Gödel, Escher, Bach: An Eternal Golden Braid*. Basic Books, 1979.", "Chapter XI introduces Aunt Hillary, the ant colony with opinions, moods, and a personality, as an exploration of strange loops and emergent levels.") gave the name Aunt Hillary to one particular colony's personality.
+The philosopher Douglas Hofstadter@ref(hofstadter, "Hofstadter, Douglas", "*Gödel, Escher, Bach: An Eternal Golden Braid*. Basic Books, 1979.", "The dialogue Ant Fugue, which follows Ch. X, Levels of Description, and Computer Systems, and precedes Ch. XI, Brains and Thoughts. Aunt Hillary belongs to the dialogue and not to the chapter: it is the Anteater's conversation, not the exposition, that gives the colony its moods, its opinions, and a level of description the ants themselves know nothing about.") gave the name Aunt Hillary to one particular colony's personality.
 Aunt Hillary has opinions.
 Aunt Hillary has moods.
 No ant has ever met Aunt Hillary.
@@ -43,7 +43,7 @@ Above it: something that behaves, from the outside, like a mind.
 Aunt Hillary has moods.
 Whether she feels them is a question nobody has answered.
 
-This is what the physicist Philip Anderson@ref(anderson, "Anderson, Philip W.", "*More Is Different*. Science, 177(4047), 1972.", "Four pages. Still radical. Anderson argues that each level of complexity has genuinely new properties that cannot be derived from the level below.") meant when he wrote, in 1972, three words that still haven't been fully absorbed: @term(more is different, more is different, "Philip Anderson\'s phrase (1972) for the principle that each level of complexity has emergent properties that cannot be derived from the level below. Not a violation of lower-level laws, but genuinely new phenomena requiring their own description.").
+This is what the physicist Philip Anderson@ref(anderson, "Anderson, Philip W.", "*More Is Different*. Science, 177(4047), 1972.", "Science 177, pp. 393-394, the opening argument and the two-column table of sciences. Four pages, no sections, and the whole claim lives in one distinction: Anderson grants the reductionist hypothesis and denies the constructionist one. You may have the fundamental laws and still be unable to walk back up.") meant when he wrote, in 1972, three words that still haven't been fully absorbed: @term(more is different, more is different, "Philip Anderson\'s phrase (1972) for the principle that each level of complexity has emergent properties that cannot be derived from the level below. Not a violation of lower-level laws, but genuinely new phenomena requiring their own description.").
 @explainer(More is different)
 Not just more of the same.
 A different kind of thing altogether.
@@ -79,7 +79,7 @@ The funny isn't in the punchline. Every comedian knows this.
 A punchline without setup is a non-sequitur.
 Setup without punchline is just a story.
 The laugh lives in the relationship between all of them, and that relationship is nowhere until suddenly it's everywhere.
-The writer Arthur Koestler@ref(koestler, "Koestler, Arthur", "*The Act of Creation*. Hutchinson, 1964.", "Bisociation as the common structure of humor, discovery, and art.") spent a whole book, The Act of Creation (1964), arguing that this moment of collision between two accumulated frames of meaning is the same deep structure as scientific discovery and artistic insight.
+The writer Arthur Koestler@ref(koestler, "Koestler, Arthur", "*The Act of Creation*. Hutchinson, 1964.", "Book One, Part One, The Jester, Ch. I, The Logic of Laughter, where bisociation is coined and defined, and Ch. IV, From Humour to Discovery, which carries the structure from the joke to the theorem. The triptych of Jester, Sage and Artist is the architecture of Book One: one act seen three times.") spent a whole book, The Act of Creation (1964), arguing that this moment of collision between two accumulated frames of meaning is the same deep structure as scientific discovery and artistic insight.
 More accumulated.
 Something different arrived.
 
@@ -120,7 +120,7 @@ This was a physicist making a philosopher's argument, and it landed hard in comp
 ---
 
 Arthur Koestler had arrived at a structurally identical conclusion from the opposite direction, through psychology, biology, and the history of science, and given it a precise name.
-In The Ghost in the Machine (1967)@ref(koestler-2, "Koestler, Arthur", "*The Ghost in the Machine*. Hutchinson, 1967.", "Introduces the concept of the holon and develops the nested hierarchy of wholes-within-wholes. See also @link(024).") he introduced the concept of the @term(holon, holon, "Arthur Koestler's term for any entity that is simultaneously a whole in its own right and a part of a larger whole. Reality in Koestler's picture is a nested hierarchy of holons rather than parts assembling into wholes."): any entity that is simultaneously a whole in its own right and a part of a larger whole.
+In The Ghost in the Machine (1967)@ref(koestler-2, "Koestler, Arthur", "*The Ghost in the Machine*. Hutchinson, 1967.", "Part One, Order, Ch. III, The Holon, pp. 45-58, and its sections Enter Janus and Social Holons; Appendix I restates the properties formally. Janus is the whole point: every node faces downward as a whole and upward as a part, and neither face is the real one.") he introduced the concept of the @term(holon, holon, "Arthur Koestler's term for any entity that is simultaneously a whole in its own right and a part of a larger whole. Reality in Koestler's picture is a nested hierarchy of holons rather than parts assembling into wholes."): any entity that is simultaneously a whole in its own right and a part of a larger whole.
 @explainer(Holon)
 An ant is a whole organism and a part of a colony.
 A word is a complete unit and a part of a sentence.
@@ -142,7 +142,7 @@ It is emergence, experienced from the inside, in real time.
 
 ---
 
-Alfred North Whitehead's@ref(whitehead, "Whitehead, Alfred North", "*Process and Reality: An Essay in Cosmology*. Macmillan, 1929; corrected ed., Free Press, 1978.", "Societies of actual occasions as the basis of enduring entities. What Koestler calls a holon, Whitehead calls a society organized around a common characteristic that persists through time.") vocabulary makes this precise.
+Alfred North Whitehead's@ref(whitehead, "Whitehead, Alfred North", "*Process and Reality: An Essay in Cosmology*. Macmillan, 1929; corrected ed., Free Press, 1978.", "Part II, Ch. III, The Order of Nature, section II, where a society is defined by a common characteristic inherited genetically across its members, and section V, on enduring objects and structured societies. A society is not a thing that has a history; it is a pattern that keeps re-electing itself.") vocabulary makes this precise.
 What Koestler calls a holon, Whitehead calls a @term(society of actual occasions, society of actual occasions, "Whitehead's term for a stable pattern of events organized around a common characteristic that persists through time. Ant colonies, cities, brains, and neural networks are all societies in this sense."), a stable pattern of events organized around a common characteristic that persists through time.
 @explainer(Society of actual occasions)
 Aunt Hillary is a society.

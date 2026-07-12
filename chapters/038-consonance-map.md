@@ -39,7 +39,7 @@ To understand why, you need one idea: the @term(attractor, "a value or region to
 Some mathematical processes, when you repeat them, converge, they settle toward a stable value no matter where you start.
 Others diverge, they spiral outward to infinity.
 The boundary between the two is where things get interesting.
-In the 1970s and 80s, Benoît Mandelbrot@ref(mandelbrot, "Mandelbrot, Benoit", "*The Fractal Geometry of Nature*. W.H. Freeman, 1982.", "The boundary between convergence and escape as infinitely complex attractor.") was studying exactly this boundary for a deceptively simple formula, apply a rule, feed the result back in, repeat, and ask: does this converge or escape?
+In the 1970s and 80s, Benoît Mandelbrot@ref(mandelbrot, "Mandelbrot, Benoit", "*The Fractal Geometry of Nature*. W.H. Freeman, 1982.", "Ch. 19, Cantor and Fatou Dusts; Self-Squared Dragons, this time for the boundary between bounded and escaping orbits and the plates that display it. The chapter carries the mathematics but not the anecdote: the expectation of a smooth boundary and the suspicion of a computer bug come from Mandelbrot's later reminiscences and are nowhere in this book.") was studying exactly this boundary for a deceptively simple formula, apply a rule, feed the result back in, repeat, and ask: does this converge or escape?
 He expected the boundary to be smooth and unremarkable.
 When the image came back, he thought the computer had a bug.
 The boundary was infinitely complex, self-similar at every scale, inexhaustible.
@@ -64,7 +64,7 @@ The more consonant the interval, the wider the moat of complexity surrounding it
 This structure has a name, the Farey sequence, and the @term(mathematics) behind it belongs in the references.
 What matters here is that musicians have always felt it.
 The fifth sounds like itself, and nothing nearby sounds close.
-The moat is arithmetic, not psychology.@ref(farey, "Farey, John", "*On a Curious Property of Vulgar Fractions*. Philosophical Magazine, 1816.", "Sequence of rationals ordered by denominator size; the Farey gap property.")
+The moat is arithmetic, not psychology.@ref(farey, "Farey, John", "*On a Curious Property of Vulgar Fractions*. Philosophical Magazine, 1816.", "pp. 385-386, the whole letter, which asserts the mediant property and proves nothing. The gap property this passage leans on, that neighbours a/b and c/d differ by exactly 1/bd so a simple ratio sits isolated in its own moat, was proved by Cauchy and is set out at Hardy and Wright, Ch. III, Theorems 28 to 30. Farey is the eponym, not the support.")
 
 Mandelbrot applied a formula and found a shape he didn't expect.
 Darakshan drew a map long wanted and found the same shape looking back.

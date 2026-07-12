@@ -99,14 +99,14 @@ But real disagreements are rarely about propositions in that clean sense.
 They're about how to frame a situation, which aspects to weight, what counts as relevant context.
 Two people can agree on every fact and still reach opposite conclusions because their frameworks organize those facts differently.
 
-Niels Bohr's complementarity principle@ref(bohr, "Bohr, Niels", "*The Quantum Postulate and the Recent Development of Atomic Theory*. Nature, 1928.", "The original statement of complementarity.") emerged from exactly this situation.
+Niels Bohr's complementarity principle@ref(bohr, "Bohr, Niels", "*The Quantum Postulate and the Recent Development of Atomic Theory*. Nature, 1928.", "Section 1, Quantum Postulate and Causality, where space-time coordination and the claim of causality are called complementary but exclusive features of the description, and Section 5, Wave Mechanics and Quantum Postulate, where wave and particle become complementary pictures that only together generalize the classical account. Mutually exclusive in use, jointly exhaustive in content, is Bohr's own formulation.") emerged from exactly this situation.
 Wave and particle descriptions are both necessary for a complete account of quantum phenomena.
 They're mutually exclusive in application, you can't use both simultaneously in the same experimental setup, but jointly exhaustive.
 Neither alone captures what the electron is.
 The framework of "it must be one or the other" was the problem, not the electron.
 
 Alfred North Whitehead's process philosophy offers a different angle on the same insight.
-For Whitehead, contrast is how experience achieves depth.@ref(whitehead, "Whitehead, Alfred North", "*Process and Reality: An Essay in Cosmology*. Macmillan, 1929; corrected ed., Free Press, 1978.", "See especially Part II on 'contrast' as a category of existence.")
+For Whitehead, contrast is how experience achieves depth.@ref(whitehead, "Whitehead, Alfred North", "*Process and Reality: An Essay in Cosmology*. Macmillan, 1929; corrected ed., Free Press, 1978.", "Contrast is the eighth Category of Existence, defined in Part I, Ch. II, section II. But the doctrine this passage needs is Part II, Ch. IV, sections I to III, where depth of experience is defined as incompatibility resolved into contrast. Flat experience lacks tension; rich experience holds differences together without collapsing them into one another.")
 A flat experience has no tension, no richness.
 A rich experience holds differences together without collapsing them into sameness or rejecting one side.
 The universe doesn't resolve contradictions by eliminating terms, it holds them in creative tension, and that tension is where novelty emerges.
@@ -120,7 +120,7 @@ The old theory wasn't wrong about the patterns it described.
 It was wrong about the underlying mechanism.
 Both claims were true; the framework that made them seem contradictory was too small.
 
-Kurt Gödel's incompleteness theorems@ref(godel, "Gödel, Kurt", "*On Formally Undecidable Propositions of Principia Mathematica and Related Systems I*. Monatshefte für Mathematik und Physik, 38:173–198, 1931.") provide perhaps the purest example.
+Kurt Gödel's incompleteness theorems@ref(godel, "Gödel, Kurt", "*On Formally Undecidable Propositions of Principia Mathematica and Related Systems I*. Monatshefte für Mathematik und Physik, 38:173–198, 1931.", "Section 1 sketches the self-referential construction informally; Section 2 proves it as Theorem VI. The sentence produced there is true and unprovable within the system, so truth and provability come apart exactly where the passage says they do.") provide perhaps the purest example.
 Gödel constructed a statement that is both true and unprovable within any sufficiently powerful formal system.
 The system cannot contain both the statement's truth and its proof.
 But reality can.

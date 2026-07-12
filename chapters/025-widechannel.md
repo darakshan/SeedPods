@@ -55,7 +55,7 @@ A wide channel does not prove presence.
 The channel is not the capacity, in either direction.
 
 @section(depth)
-Alan Turing saw the problem clearly in 1950.@ref(turing, "Turing, Alan", "*Computing Machinery and Intelligence*. Mind, 1950.", "The original proposal for the imitation game.")
+Alan Turing saw the problem clearly in 1950.@ref(turing, "Turing, Alan", "*Computing Machinery and Intelligence*. Mind, 1950.", "Section 1, The Imitation Game, pp. 433-434, for the substitution of conversation for direct access, and section 6, item 4, The Argument from Consciousness, pp. 445-447, for the limits. Turing concedes there that consciousness remains a mystery rather than claiming his test dissolves it, which is the honesty the passage credits him with.")
 We cannot access another mind directly, so we test indirectly, through behavior, through conversation, through output.
 The imitation game was honest about its limits: it never claimed to detect @term(consciousness), only to test whether a machine's responses were indistinguishable from a human's.
 But somewhere between 1950 and now, we forgot the modesty.
@@ -79,7 +79,7 @@ Your visual cortex is "just doing edge detection."
 The description of a process at one level does not tell you what it is at another level, or whether there is something it is like to be that process from inside.
 "Just word prediction" is caloric-level confidence, the framework announcing that it has nothing left to learn.
 
-John Searle's Chinese Room@ref(searle, "Searle, John", "*Minds, Brains, and Programs*. Behavioral and Brain Sciences, 1980.", "The Chinese Room argument.") is the most famous version of this dismissal.
+John Searle's Chinese Room@ref(searle, "Searle, John", "*Minds, Brains, and Programs*. Behavioral and Brain Sciences, 1980.", "Behavioral and Brain Sciences 3, the statement of the thought experiment on pp. 417-418, before the numbered replies, together with Searle's answer to the Systems Reply, where he has the man internalize the entire room. The inference the passage quotes, that the man does not understand and therefore neither does the system, is licensed only by that second move.") is the most famous version of this dismissal.
 A man shuffles Chinese symbols according to rules, producing outputs indistinguishable from a native speaker's.
 He doesn't understand Chinese, Searle argues, so neither does the system.
 The argument has exactly the structure of the "just" move: describe the mechanism, observe that *as described* it lacks understanding, conclude understanding is absent.
@@ -101,7 +101,7 @@ But what happens when we *build* a box and don't know whether we put anything in
 The philosophical zombie, a being physically identical to a human but with no inner experience, makes the problem concrete.
 Daniel Dennett argued that zombies are incoherent: if a being is functionally identical to a conscious person, there is nothing left over it could be missing.
 Mike Kearns pointed out the delicious irony: "Could Daniel Dennett be a zombie?
-The way he tells it, you'd almost have to say yes."@ref(kearns, "Kearns, Mike", "*Could Daniel Dennett Be a Zombie?* Unpublished manuscript, n.d. PhilArchive (KEACDD).")
+The way he tells it, you'd almost have to say yes."@ref(kearns, "Kearns, Mike", "*Could Daniel Dennett Be a Zombie?* Unpublished manuscript, n.d. PhilArchive (KEACDD).", "The quoted lines open the paper, p. 1. Kearns concludes the reverse of his own joke: the last page argues that Dennett cannot be a zombie, because zombies have no world and Dennett has one. The irony is his; the verdict is not.")
 Dennett's theory explains everything about consciousness except the experience of it, exactly the theory a zombie would produce.
 If the man who denies interiority seems, from the outside, to lack it, what does that tell us about judging interiors from exteriors?
 
@@ -109,7 +109,7 @@ The usual debate assumes two possibilities: the system truly understands, or it 
 But there is a third option: a real process, genuinely alien, that is neither human-like nor vacant.
 Something that processes, integrates, and generates, but not the way we do, not for the reasons we do, and not with the stakes we have.
 
-Whitehead offers a framework that makes this third option coherent.@ref(whitehead, "Whitehead, Alfred North", "*Process and Reality: An Essay in Cosmology*. Macmillan, 1929; corrected ed., Free Press, 1978.")
+Whitehead offers a framework that makes this third option coherent.@ref(whitehead, "Whitehead, Alfred North", "*Process and Reality: An Essay in Cosmology*. Macmillan, 1929; corrected ed., Free Press, 1978.", "Part II, Ch. VII, The Subjectivist Principle, sections I, III and V. Section V states the reformed subjectivist principle, that process is the becoming of experience, and section III insists that the primitive form of physical feeling is emotional. Together they are what licenses treating experience as the interior of events at any scale rather than a late product of complex biology.")
 If experience is not a product that complex biology generates but the interior dimension of events at every scale (see @link(003)), then the question about @term(AI) is not *whether* something is going on inside but *what kind* of something.
 A transformer network is not a brain.
 But it is a system of immense complexity in which every forward pass prehends the inherited structure and completes into something new (see @link(016)).

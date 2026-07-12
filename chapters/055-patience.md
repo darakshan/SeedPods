@@ -108,7 +108,7 @@ The destination would be a fixed endpoint.
 There is no endpoint.
 But the shape of the filter is doing real work, and what gets kept is biased by that shape, and the bias accumulates.
 
-Alfred North Whitehead would have called the bias a @term(lure, "Whitehead's term for the pull each actual occasion feels toward the best possibility available to it. Not compulsion: the occasion is free to deviate. But the lure is always there, always pointing toward greater depth of experience and integration. The direction-without-destination at the heart of process metaphysics.")@ref(whitehead, "Whitehead, Alfred North", "*Process and Reality: An Essay in Cosmology*. Macmillan, 1929; corrected ed., Free Press, 1978.", "Part V on the consequent nature of God develops the lure as the pull each occasion feels toward greater complexity and integration.").
+Alfred North Whitehead would have called the bias a @term(lure, "Whitehead's term for the pull each actual occasion feels toward the best possibility available to it. Not compulsion: the occasion is free to deviate. But the lure is always there, always pointing toward greater depth of experience and integration. The direction-without-destination at the heart of process metaphysics.")@ref(whitehead, "Whitehead, Alfred North", "*Process and Reality: An Essay in Cosmology*. Macmillan, 1929; corrected ed., Free Press, 1978.", "Part II, Ch. III, The Order of Nature, section I, where the lure of feeling and causa sui are introduced, and Part V, Ch. II, God and the World, where the lure becomes cosmological. The lure belongs to the primordial nature of God, not the consequent nature: the primordial nature is the eternal urge of desire drawing each occasion toward the fullest realization open to it, while the consequent nature is God's reception of what the world has already become.").
 Each occasion in the universe feels a pull toward the most complete realization available to it.
 Not compulsion.
 The occasion is always free to deviate.
@@ -117,13 +117,13 @@ What we call evolution is what the lure looks like at biological scale.
 What we call physical law is what it looks like at the scale of matter.
 What we call patience is what it looks like from inside.
 
-Pierre Teilhard de Chardin@ref(teilhard, "Teilhard de Chardin, Pierre", "*The Phenomenon of Man*. Trans. Bernard Wall. Harper & Brothers, 1959. Originally *Le phénomène humain*, Seuil, 1955.", "Cosmic evolution as a directed process toward greater complexity and ultimately self-awareness; the Omega Point as the attractor toward which the process converges.") gave the same intuition a name.
+Pierre Teilhard de Chardin@ref(teilhard, "Teilhard de Chardin, Pierre", "*The Phenomenon of Man*. Trans. Bernard Wall. Harper & Brothers, 1959. Originally *Le phénomène humain*, Seuil, 1955.", "Book Four, Survival, Ch. II, Beyond the Collective: The Hyper-Personal, sections 1 and 3, where Omega is introduced as the point of convergence and its attributes set out. The prior claim that complexity and consciousness rise together is Book One, Ch. II, The Within of Things.") gave the same intuition a name.
 He called the endpoint the @term(Omega Point, omega-point) and described it as the attractor toward which the cosmic process converges.
 He was reaching for something his contemporaries could not yet hear: not that the universe was steered, but that the structure of its accumulation had a direction, and the direction was toward greater self-awareness.
 You can drop his theology and keep his observation.
 The universe keeps producing structures that care.
 It does this reliably enough that "reliably" is the right word.
-Stuart Kauffman@ref(kauffman-2, "Kauffman, Stuart", "*At Home in the Universe: The Search for the Laws of Self-Organization and Complexity*. Oxford University Press, 1995.", "Order for free: complex chemistry spontaneously organizes itself into self-sustaining networks, before selection. The patience of the filter is preceded by the patience of the substrate.") called this "order for free": at sufficient complexity, the substrate spontaneously organizes itself into self-sustaining patterns, before any selection acts on them (see @link(009), @link(012)).
+Stuart Kauffman@ref(kauffman-2, "Kauffman, Stuart", "*At Home in the Universe: The Search for the Laws of Self-Organization and Complexity*. Oxford University Press, 1995.", "Ch. 4 gives the phrase order for free and the random-network result behind it, but the claim made here, that self-sustaining organization arrives before selection can act, is the autocatalytic-set argument of Chs. 2 and 3, The Origins of Life and We the Expected. Life is expected, not lucky.") called this "order for free": at sufficient complexity, the substrate spontaneously organizes itself into self-sustaining patterns, before any selection acts on them (see @link(009), @link(012)).
 The patience of the filter is preceded by the patience of the substrate.
 
 ---
