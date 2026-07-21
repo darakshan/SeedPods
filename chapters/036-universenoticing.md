@@ -19,11 +19,11 @@ You are what it looks like when it arrives.
 @image(036-universenoticing, "The Hubble deep field: you are the universe noticing something", "Wikimedia Commons")
 
 @section(depth)
-Whitehead@ref(whitehead, "Whitehead, Alfred North", "*Process and Reality*. Macmillan, 1929.") saw that every event in the universe, not just brains, not just living things, every event, has an interior.
+Whitehead@ref(whitehead, "Whitehead, Alfred North", "*Process and Reality: An Essay in Cosmology*. Macmillan, 1929; corrected ed., Free Press, 1978.", "Part II, chapter VII, The Subjectivist Principle, sections I and II, for the reformed subjectivist principle that apart from the experiences of subjects there is nothing, and Part II, chapter X, Process, for concrescence and objective immortality. Together they give the passage what it claims: an occasion inherits its past, becomes, and perishes into the datum of what comes next, and this holds of every occasion, not only the ones with nervous systems.") saw that every event in the universe, not just brains, not just living things, every event, has an interior.
 It grasps its past and contributes something forward.
 This is not metaphor.
 It is the only way to account for how experience arises at all without magic.
-Teilhard@ref(teilhard, "Teilhard de Chardin, Pierre", "*The Phenomenon of Man*. Harper & Row, 1959.") saw the direction, from the Big Bang through matter, life, and mind toward what he called the @term(Omega Point, omega-point, "Pierre Teilhard de Chardin's term for the projected end-point of cosmic evolution: the universe becoming fully self-aware. From The Phenomenon of Man (1955). A directional claim about evolution, controversial in mainstream biology, that the arrow of complexity points somewhere."): the universe becoming fully aware of itself.
+Teilhard@ref(teilhard, "Teilhard de Chardin, Pierre", "*The Phenomenon of Man*. Trans. Bernard Wall. Harper & Brothers, 1959. Originally *Le phénomène humain*, Seuil, 1955.", "Book Four, chapter II, section 1, on the convergence of the person and the Omega Point, reached through Book One, chapter II, The Within of Things, and Book Three, chapter I, The Birth of Thought. The arc from matter through life to thought is not a sequence of accidents for Teilhard but a single movement of the universe toward self-possession.") saw the direction, from the Big Bang through matter, life, and mind toward what he called the @term(Omega Point, omega-point): the universe becoming fully aware of itself.
 Neither had the other's insight.
 Together they form something neither achieved alone.
 Whitehead gives the mechanism, experience all the way down, accumulating.
@@ -34,7 +34,7 @@ Every actual occasion a step.
 Every mind a threshold crossed.
 You are not in the universe observing it.
 You are the universe, at a particular moment of its self-discovery.
-Carl Sagan@ref(sagan, "Sagan, Carl", "*Cosmos*. Random House, 1980.", "'We are a way for the cosmos to know itself' — the surface version of this idea.") gave this idea its most quotable form: we are a way for the cosmos to know itself.
+Carl Sagan@ref(sagan, "Sagan, Carl", "*Cosmos*. Random House, 1980.", "Chapter 1, The Shores of the Cosmic Ocean, in the passage that runs from star stuff to the cosmos knowing itself. Sagan states the conclusion beautifully and leaves the metaphysics unargued, which is exactly the division of labor the passage assigns him.") gave this idea its most quotable form: we are a way for the cosmos to know itself.
 Teilhard and Whitehead are the deeper argument for why that is not a metaphor.
 
 *Note: Teilhard and Whitehead were near-contemporaries.

@@ -4,7 +4,7 @@
 @edit-time 2026-04-27T01:08Z
 
 @argument
-@term(Temperature, temperature, TBD) bridges @term(physics), @term(perception), and now @term(AI), from caloric's intuitive flow to superconductivity's frictionless relation to the generative model's temperature dial that engineers had to build in deliberately because pure optimization had crowded out surprise.
+@term(Temperature, temperature, "macroscopically, what heat flow equalizes; microscopically, the intensity of random molecular motion. In generative AI, the dial that reintroduces controlled randomness into sampling.") bridges @term(physics), @term(perception, "the organism's construction of a world from sensory signals; interpretation that begins in the sense organs themselves rather than passive reception."), and now @term(AI), from caloric's intuitive flow to superconductivity's frictionless relation to the generative model's temperature dial that engineers had to build in deliberately because pure optimization had crowded out surprise.
 
 @section(proto)
 Temperature is another phenomenon that bridges physics, biology, and lived experience, and now AI.

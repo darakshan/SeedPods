@@ -5,7 +5,7 @@
 @edit-time 2026-04-27T01:08Z
 
 @argument
-@term(Beauty, beauty, TBD) is in the eye of the beholder and in the @term(mathematics) of the thing beheld, the golden ratio keeps appearing in living forms, @term(wabi-sabi) finds beauty in imperfection and transience, and both are beautiful because what the eye finds beautiful is a record of the structures that have mattered.
+@term(Beauty, beauty, "the felt pull of significant structure, in the eye of the beholder and in the mathematics of the thing beheld; what the eye finds beautiful is a record of the structures that have mattered.") is in the eye of the beholder and in the @term(mathematics) of the thing beheld, the golden ratio keeps appearing in living forms, @term(wabi-sabi, "the Japanese aesthetic that finds beauty in imperfection, impermanence, and incompleteness; the worn bowl, the weathered wood, the asymmetric branch.") finds beauty in imperfection and transience, and both are beautiful because what the eye finds beautiful is a record of the structures that have mattered.
 
 @section(proto)
 Beauty is in the eye of the beholder, and also in the mathematics of the thing beheld.

@@ -19,7 +19,7 @@ It reproduces.
 All true.
 But those are behaviors.
 They describe what life does.
-They don't say what @term(life) is.
+They don't say what @term(life, "not a list of behaviors but an organization: a system that continuously produces the components that constitute it; defined by self-production rather than by any special substance.") is.
 
 Try this instead.
 Imagine a single @term(cell, cells, "the smallest unit of life that maintains itself: a membrane-bounded chemical system that continuously produces the very molecules its existence depends on. All living things are made of cells; the simplest, bacteria, are themselves living."), the simplest living thing you can find, a bacterium smaller than anything you'll ever see with your naked eye.
@@ -51,7 +51,7 @@ It is a storm.
 Thousands of molecular machines, each one a protein folded into a precise shape, grabbing passing molecules, transforming them, releasing them, all of it happening millions of times per second, in a space you could fit ten thousand of inside the period at the end of this sentence.
 The circle holds not despite that chaos but through it.
 
-Two biologists, Humberto Maturana and Francisco Varela, gave this a name in the 1970s: @term(autopoiesis, "Maturana and Varela's term for a system that continuously produces the very components that constitute and maintain it. The defining organizational property of living systems.").
+Two biologists, Humberto Maturana and Francisco Varela, gave this a name in the 1970s: @term(autopoiesis).
 From the Greek: auto, self; poiesis, making.
 A self-making system.
 
@@ -60,7 +60,7 @@ The universe is not on the cell's side.
 Heat disperses.
 Molecules drift.
 Radiation breaks chemical bonds.
-@term(Entropy, entropy, TBD), the tendency of everything to fall apart, spread out, and go inert, is relentless.
+@term(Entropy, entropy, "the tendency of energy to disperse and structure to decay toward equilibrium; relentless by the second law of thermodynamics, and what every living system must continuously outrun."), the tendency of everything to fall apart, spread out, and go inert, is relentless.
 The cell holds its shape against all of that, not by being rigid, but by continuously remaking itself faster than it dissolves.
 That loop, stable enough to persist against everything trying to disrupt it, flexible enough to respond when conditions shift: that is what @term(evolution) found. @link(009) shows how structure emerges from random process; a self-maintaining loop is one of the structures that emerged.
 
@@ -78,8 +78,8 @@ Things that help that process are, for the cell, different from things that don'
 
 @section(depth)
 Most definitions of life are lists of behaviors: metabolism, reproduction, response to stimuli.
-Humberto Maturana and Francisco Varela's@ref(maturana, "Maturana, Humberto and Varela, Francisco", "*Autopoiesis and Cognition*. Reidel, 1980.", "The founding text. Defines autopoiesis as the organizational property necessary and sufficient for life.") definition is structural.
-For a more accessible treatment that develops the cognitive implications, see @ref(maturana-2, "Maturana, Humberto and Varela, Francisco", "*The Tree of Knowledge*. Shambhala, 1987.").
+Humberto Maturana and Francisco Varela's@ref(maturana, "Maturana, Humberto and Varela, Francisco", "*Autopoiesis and Cognition*. Reidel, 1980.", "The 1972 monograph reprinted in this volume, Autopoiesis: The Organization of the Living, Ch. I, On Machines, Living and Otherwise, where machines in general are defined in section 1 and living machines are characterized as autopoietic in section 2. The definition is organizational rather than behavioral: not a list of what living things do, but the single closure condition a network of processes must satisfy to produce the components that constitute it.") definition is structural.
+For a more accessible treatment that develops the cognitive implications, see @ref(maturana-2, "Maturana, Humberto and Varela, Francisco", "*The Tree of Knowledge*. Shambhala, 1987.", "Ch. 2, The Organization of Living Things, which restates autopoiesis without the 1972 formalism, read with Ch. 1, Knowing How We Know, and Ch. 7, The Nervous System and Cognition. The cognitive implication is already in the opening aphorism that all doing is knowing and all knowing is doing; living and cognizing are one operation described twice.").
 In their 1972 paper coining the term autopoiesis, they asked: what organization is necessary and sufficient for a system to be living?
 Their answer: a network of processes that produces the very components that constitute and maintain the network.
 Remove the organization and you have chemistry.
@@ -94,7 +94,7 @@ Protocells in origin-of-life research approach the boundary, and viruses have be
 Maturana himself resisted extending the concept to social systems, ecosystems, or machines.
 The cell remains the sole confirmed instance.
 
-Whitehead@ref(whitehead, "Whitehead, Alfred North", "*Process and Reality*. Macmillan, 1929.", "The metaphysical framework. @term(society of occasions, society of occasions, \"Whitehead's term for a persistent pattern of actual occasions organized with sufficient coherence and closure to act as a unit through time. The metaphysical counterpart to the autopoietic organization.\") as the counterpart of autopoietic organization. A living cell in Whiteheadian terms is a society of occasions organized with enough coherence and closure to constitute a persistent center of activity.") arrived at a related insight from a completely different direction.
+Whitehead@ref(whitehead, "Whitehead, Alfred North", "*Process and Reality: An Essay in Cosmology*. Macmillan, 1929; corrected ed., Free Press, 1978.", "Part II, Ch. III, The Order of Nature, section II, where a society is defined by its defining characteristic and genetic inheritance, and sections V through XI, which carry the definition through enduring objects, structured societies, life, and living persons. A society is not a thing that persists but a pattern of occasions each inheriting the defining characteristic from its predecessors, which is why it is the metaphysical twin of autopoietic closure rather than a mere analogy to it.") arrived at a related insight from a completely different direction.
 @explainer(Society of occasions)
 In his process philosophy, the fundamental units of reality are events rather than things (@link(002)), occasions that arise, integrate what came before, and perish into the next occasion.
 A living cell, in Whiteheadian terms, is a society of such occasions organized with enough coherence and closure to constitute a persistent center of activity.
@@ -116,7 +116,7 @@ An autopoietic system acts to replenish its own substrates. It is oriented towar
 That reorientation is not a small difference.
 It is the difference that creates life.
 
-Schrödinger@ref(schrodinger, "Schrödinger, Erwin", "*What is Life?* Cambridge University Press, 1944.", "The thermodynamic framing that set the question: what distinguishes living matter from dead matter? Schrödinger's answer: living systems import order (negative entropy) from their environment to offset internal disorder.") asked in 1944 what distinguished living matter from dead matter thermodynamically.
+Schrödinger@ref(schrodinger, "Schrödinger, Erwin", "*What is Life?* Cambridge University Press, 1944.", "Ch. 6, Order, Disorder and Entropy, in particular the sections It Feeds on Negative Entropy and Organization Maintained by Extracting Order from the Environment, with the Note to Ch. 6 where Schrodinger concedes that free energy is the physicist's term. The thermodynamic point is subtractive: the organism does not resist decay so much as continuously export it, staying far from equilibrium by drawing order in.") asked in 1944 what distinguished living matter from dead matter thermodynamically.
 His answer: living systems survive by continuously importing order from their environment (what he called @term(negative entropy, "Schrödinger's term for the ordered structure that living systems import from their environment to offset internal disorder. The thermodynamic face of what autopoiesis achieves organizationally.")) and using it to offset the disorder that would otherwise accumulate inside.
 @explainer(Negative entropy)
 Autopoiesis is the organizational answer to Schrödinger's thermodynamic question: this is the loop that does the importing.
@@ -138,16 +138,16 @@ The thermodynamic background was laid by Erwin Schrödinger in What is Life?
 Ilya Prigogine's work on dissipative structures (Nobel Prize, 1977) provided the deeper bridge: he showed that far-from-equilibrium systems can spontaneously generate and maintain complex ordered patterns, sustained by a continuous flow of energy.
 The autopoietic cell is the biological instance of a dissipative structure that has closed upon itself.
 
-Evan Thompson's Mind in Life (2007)@ref(thompson, "Thompson, Evan", "*Mind in Life*. Harvard University Press, 2007.", "The full development of enactivism. Extends Maturana and Varela's framework into consciousness studies, arguing that the same organizational principles that define life also underlie mind. The essential bridge between autopoiesis and @link(003).") extends Maturana and Varela's framework into consciousness studies, arguing that the same organizational principles that define life also underlie mind.
+Evan Thompson's Mind in Life (2007)@ref(thompson, "Thompson, Evan", "*Mind in Life: Biology, Phenomenology, and the Sciences of Mind*. Harvard University Press, 2007.", "Part II, Life in Mind, Ch. 5, Autopoiesis: The Organization of the Living, and Ch. 6, Life and Mind: The Philosophy of the Organism, with Ch. 3, Autonomy and Emergence, for the enactive framing. Ch. 6 is where the deep continuity thesis is argued: the organizational principles that constitute a living system are the same ones that constitute a cognizing one, which is precisely the bridge this seedpod needs.") extends Maturana and Varela's framework into consciousness studies, arguing that the same organizational principles that define life also underlie mind.
 Thompson draws the line from autopoiesis through enactivism to phenomenology.
 This is the bridge between the biology of this seedpod and the broader claims of @link(003) and @link(013).
 
 Whitehead's process philosophy runs as a parallel current throughout.
 His concept of a society of occasions, a persistent pattern of events with sufficient internal coherence to act as a unit, maps directly onto the autopoietic organization, though Whitehead arrived at it through metaphysics rather than biology.
 
-Varela, Thompson, and Rosch's The Embodied Mind@ref(varela, "Varela, Francisco and Thompson, Evan and Rosch, Eleanor", "*The Embodied Mind*. MIT Press, 1991.", "Extends autopoiesis into cognitive science and phenomenology. Shows how the same organizational principles that define life also structure cognition.") extends autopoiesis into cognitive science and phenomenology, showing how the same organizational principles that define life also structure cognition.
+Varela, Thompson, and Rosch's The Embodied Mind@ref(varela, "Varela, Francisco and Thompson, Evan and Rosch, Eleanor", "*The Embodied Mind*. MIT Press, 1991.", "Part IV, Steps to a Middle Way, Ch. 8, Enaction: Embodied Cognition, especially the section Self-Organization Revisited, together with Ch. 7's Representation Revisited, where operational closure is introduced as the successor to representation. A system with operational closure is one whose processes produce those processes; cognition on this account is not extraction of a pregiven world but the enactment of a domain by an autonomous network.") extends autopoiesis into cognitive science and phenomenology, showing how the same organizational principles that define life also structure cognition.
 
-Prigogine's dissipative structures work@ref(prigogine, "Prigogine, Ilya and Stengers, Isabelle", "*Order Out of Chaos*. Bantam, 1984.", "Dissipative structures and the thermodynamics of living systems. Prigogine showed that systems far from equilibrium spontaneously generate and maintain complex ordered patterns. The autopoietic cell is the biological instance of a dissipative structure that has closed upon itself.") provides the deeper bridge: systems far from equilibrium spontaneously generate and maintain complex ordered patterns, sustained by a continuous flow of energy.
+Prigogine's dissipative structures work@ref(prigogine, "Prigogine, Ilya and Stengers, Isabelle", "*Order Out of Chaos*. Bantam, 1984.", "Book Two, The Science of Complexity, Ch. V, The Three Stages of Thermodynamics, sections 3 and 4 on far-from-equilibrium conditions and the threshold of chemical instability, extended in Ch. VI, Order Through Fluctuations. Order here is not imposed but sustained: past the instability threshold a fluctuation is amplified rather than damped, and the resulting structure exists only while the energy flow does.") provides the deeper bridge: systems far from equilibrium spontaneously generate and maintain complex ordered patterns, sustained by a continuous flow of energy.
 
 
 

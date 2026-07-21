@@ -12,7 +12,7 @@ This conversation began with a clock.
 The clock visualized harmonic ratios.
 The ratios turned out to encode the structure of the Mandelbrot set.
 The Mandelbrot set connected to the Farey sequence.
-The Farey sequence appeared in Hofstadter's Gödel, Escher, Bach@ref(hofstadter, "Hofstadter, Douglas", "*Gödel, Escher, Bach: An Eternal Golden Braid*. Basic Books, 1979.", "Strange loops, self-reference, and the structure of mind."), read fifty years ago, planting a seed.
+The same rational-indexed self-similarity ran through Hofstadter's Gödel, Escher, Bach@ref(hofstadter, "Hofstadter, Douglas", "*Gödel, Escher, Bach: An Eternal Golden Braid*. Basic Books, 1979.", "Ch. V, Recursive Structures and Processes, the INT and Gplot sections, where self-similar graphs are built out of continued fractions and Gplot's bands are indexed by rationals; the strange loop belongs to the Introduction and to Ch. XX, Strange Loops, Or Tangled Hierarchies. A correction is needed: the word Farey never appears in GEB, nor does Stern-Brocot. The book contains that mathematics under other names, so the sentence should credit the continued-fraction graphs of Ch. V rather than the named sequence."), read fifty years ago, planting a seed.
 The seed grew into a conversation about the nature of mind, the structure of perception, the evolution of thought, and whether the thing conducting half of this conversation experiences any of it.
 Hofstadter's central image was the @term(strange loop, strange loop, "Hofstadter's term for a system that, in the course of its operation, encounters or includes itself."), the system that, in the course of its own operation, encounters itself.
 This conversation is one.

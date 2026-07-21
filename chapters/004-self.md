@@ -11,7 +11,7 @@ One philosopher looked for the self and found only a bundle of perceptions; a co
 @image(004-self,The self as wave pattern, not a fixed point,Wikimedia Commons)
 
 @section(depth)
-David Hume went looking for the @term(self) and couldn't find it.@ref(hume, "Hume, David", "*A Treatise of Human Nature*. 1739.", "Book I, Part IV, Section VI: 'Of Personal Identity,' where Hume introspects and finds only a bundle of perceptions streaming past, no owner behind them.")
+David Hume went looking for the @term(self, "the apparent owner of experience; on inspection not a thing but a pattern, a society of occasions re-forming moment to moment. Hume looked and found only the bundle.") and couldn't find it.@ref(hume, "Hume, David", "*A Treatise of Human Nature*. John Noon (Books I–II, 1739); Thomas Longman (Book III, 1740).", "Book I, Part IV, Section VI: 'Of Personal Identity,' where Hume introspects and finds only a bundle of perceptions streaming past, no owner behind them.")
 He introspected carefully and found only a bundle of perceptions, feelings, memories, emotions, streaming past in sequence.
 No owner behind them.
 No stage beneath the actors.
@@ -26,14 +26,14 @@ Pain comes from here.
 Warmth comes from there.
 The mind learns it is connected to a body, and from that draws a fateful conclusion: I am *inside* this body.
 Then memory accumulates: these experiences happened to *me*, this face in the mirror is *mine*, and the container becomes the self.
-What Whitehead called *@term(prehension, prehension, "Whitehead's term for the way each moment of experience actively feels and inherits the preceding moment.")*, each moment of experience actively feeling and inheriting the last@ref(whitehead, "Whitehead, Alfred North", "*Process and Reality*. Macmillan, 1929.", "Part II on the theory of extension and Part III on prehension, where Whitehead develops the idea that each occasion inherits its predecessors by literally feeling them.")
+What Whitehead called *@term(prehension, prehension)*, each moment of experience actively feeling and inheriting the last@ref(whitehead, "Whitehead, Alfred North", "*Process and Reality: An Essay in Cosmology*. Macmillan, 1929; corrected ed., Free Press, 1978.", "Part III, Ch. II, section I, on simple physical feelings, where the past occasion is conformally re-enacted in the present one. This is prehension as physical memory: each moment does not recall its predecessor but literally feels it. Part II, Ch. III, sections II and V, supply the self as a route of occasions rather than a thing that has them. The theory of extension is Part IV and has no bearing here.")
 — is the raw material the infant starts with.
 But the "I" is what development builds on top of it: a construction assembled so early and reinforced so constantly that it feels like bedrock.
 We mistake the persistence of the pattern for the existence of a thing.
 
 The @term(Buddhist, buddhism, "the religious and philosophical tradition founded on the teachings of Siddhartha Gautama (c. 5th century BCE). For this pod's argument, the relevant doctrine is anatta (no-self): what we call \"I\" is a process, not a thing, with no permanent substrate persisting through the changes.") tradition saw through this construction twenty-five centuries before Hume tried to.@ref(rahula, "Rahula, Walpola", "*What the Buddha Taught*. 1959.", "The clearest modern exposition of @term(anatta, anatta, \"The Buddhist doctrine of no fixed self; experience arises moment to moment with no underlying owner.\") and dependent origination. Chapter VI on the doctrine of no-self is the most direct treatment.")
 The doctrine of anatta, no fixed self, holds that what we call "I" is a process, not a thing.
-Experience arises moment to moment, each @term(occasion, actual occasion, "Whitehead's fundamental unit of reality, an event that prehends its past, integrates, and perishes into the next.") conditioned by the last, but with no permanent substrate persisting through the changes.
+Experience arises moment to moment, each @term(occasion, actual occasion) conditioned by the last, but with no permanent substrate persisting through the changes.
 The candle flame at midnight is not the flame from the evening, though one gave rise to the other.
 The practice of meditation is, among other things, a method for watching the construction happen in real time, and noticing that the "I" watching is itself part of the show.
 

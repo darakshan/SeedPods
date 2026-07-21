@@ -9,7 +9,7 @@ Love is what Light feels like.
 @related 002, 003, 029, 036, 066
 
 @argument
-Physicists describe @term(light) and mystics describe @term(love), and they keep reaching for the same words, attraction, radiance, union, the dissolution of distance, not because one is borrowing from the other but because they may be describing the outside and inside of the same phenomenon.
+Physicists describe @term(light) and mystics describe @term(love, "attraction, radiance, union, the dissolution of distance; read here as the interior of the same relational structure whose exterior physics describes as light."), and they keep reaching for the same words, attraction, radiance, union, the dissolution of distance, not because one is borrowing from the other but because they may be describing the outside and inside of the same phenomenon.
 
 @section(surface)
 Physicists describe light: electromagnetic radiation, photons crossing space at the maximum speed the universe allows.
@@ -47,7 +47,7 @@ Two bodies across emptiness, pulled toward each other.
 We speak of *falling* in love.
 The same word because the same felt geometry.
 
-David Deida@ref(deida, "Deida, David", "*Blue Truth: A Spiritual Guide to Life &amp; Death and Love &amp; Sex*. Sounds True / St. Martin's Essentials, 2004.") distilled it: *Light is what Love looks like.
+David Deida@ref(deida, "Deida, David", "*Blue Truth: A Spiritual Guide to Life & Death and Love & Sex*. Sounds True, 2004.", "Unverified attribution. The line, light is what love looks like and love is what light feels like, cannot be located in Blue Truth, which runs as short chapters across Part One, Life and Death, and Part Two, Love and Sex; no chapter, published excerpt, or quotation record carries the sentence, and no other Deida source does either. The wording needs to be checked against the print text, or the citation reassigned, before a locator can be given.")@note(The quoted couplet could not be traced to Deida or to anyone else. Either locate it in the text, or drop the attribution and let the line stand unascribed.) distilled it: *Light is what Love looks like.
 Love is what Light feels like.*
 
 Outside and inside of the same phenomenon.
