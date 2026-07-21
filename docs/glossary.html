@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>12.2 Glossary · darakshan</title>
+<title>12.2 Glossary · SeedPods</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;600&family=DM+Mono:wght@300;400&display=swap">
@@ -14,7 +14,7 @@
 <script src="live.js"></script>
 </head>
 <body>
-<nav class="site-nav" data-pod-filename="glossary"><span class="nav-title">darakshan</span><div class="nav-right"><a class="nav-home" href="toc.html" aria-label="Contents" title="Contents"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></a><button type="button" class="nav-search-btn" onclick="seedNavOpenSearch()" aria-label="Search" title="Search"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></button><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true" title="Previous"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true" title="Next"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></span></div></nav>
+<nav class="site-nav" data-pod-filename="glossary"><span class="nav-title">SeedPods</span><div class="nav-right"><a class="nav-home" href="toc.html" aria-label="Contents" title="Contents"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></a><button type="button" class="nav-search-btn" onclick="seedNavOpenSearch()" aria-label="Search" title="Search"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></button><span class="header-nav-prev header-nav-disabled" data-pod-nav="prev" aria-hidden="true" title="Previous"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></span><span class="header-nav-next header-nav-disabled" data-pod-nav="next" aria-hidden="true" title="Next"><svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></span></div></nav>
 <div class="wrap">
   <div class="subject-header fade cat-colored" style="--cat-bg:#F5BAA6"><h1>12.2 Glossary</h1></div>
   <div class="page-body home-page fade"><p data-src-file="content/glossary.md" data-src-l0="3" data-src-l1="3">Key terms from all seedpods.</p>
@@ -44,7 +44,7 @@ function explainers(exs){
 function termEntry(e){
   var defs=(e.definitions||[]).map(defBlock).join("");
   var body=defs?'<div class="gloss-defs">'+defs+'</div>':'';
-  return '<div class="gloss-entry" id="'+esc(e.slug)+'">'+
+  return '<div class="gloss-entry" id="'+esc(e.slug)+'" data-gloss-slug="'+esc(e.slug)+'">'+
     '<div class="gloss-term-line"><strong class="gloss-term">'+esc(e.term)+'</strong></div>'+
     body+explainers(e.explainers)+'</div>';
 }
@@ -52,13 +52,16 @@ function chapterDivider(podNum,href){
   var lb=__tn[podNum]||podNum;
   return '<div class="gloss-chapter-head"><a class="nav-push" href="'+esc(href)+'">'+esc(lb)+'</a></div>';
 }
-function chapterTermEntry(term,defs){
+function chapterTermEntry(slug,term,defs){
   // "By chapter" reuses the by-term entry layout (.gloss-entry/.gloss-defs/.gloss-def-block):
   // the term on its own line (black, bold), each definition on an indented line beneath,
   // prefixed with an em-dash.
+  // No `id` here: a term cited in three chapters renders three times, and repeating the slug
+  // as an id would be three duplicates. `data-gloss-slug` is what `reveal()` matches on, in
+  // both modes — it lands on the first chapter that cites the term.
   var blocks=(defs||[]).map(function(t){return '<div class="gloss-def-block"><span class="gloss-def">— '+esc(t)+'</span></div>';}).join("");
   var body=blocks?'<div class="gloss-defs">'+blocks+'</div>':'';
-  return '<div class="gloss-entry">'+
+  return '<div class="gloss-entry" data-gloss-slug="'+esc(slug)+'">'+
     '<div class="gloss-term-line"><strong class="gloss-term">'+esc(term)+'</strong></div>'+
     body+'</div>';
 }
@@ -81,20 +84,35 @@ function renderG(mode){
     groups.sort(function(a,b){return tnCmp(a.podNum,b.podNum);});
     root.innerHTML=groups.map(function(g){
       var slugs=g.order.slice().sort(function(x,y){return g.terms[x].term.toLowerCase().localeCompare(g.terms[y].term.toLowerCase());});
-      return chapterDivider(g.podNum,g.href)+slugs.map(function(s){return chapterTermEntry(g.terms[s].term,g.terms[s].defs);}).join("");
+      return chapterDivider(g.podNum,g.href)+slugs.map(function(s){return chapterTermEntry(s,g.terms[s].term,g.terms[s].defs);}).join("");
     }).join("");
     return;
   }
   var sorted=data.slice().sort(function(a,b){return String(a.term).toLowerCase().localeCompare(String(b.term).toLowerCase());});
   root.innerHTML=sorted.map(termEntry).join("");
 }
+// The entries don't exist when the browser does its own fragment scroll — the mount point is
+// empty until renderG() fills it — so an inbound `#term` link has to be re-resolved by hand
+// after every render. The reader's chosen order is the page's state: a `@term` link scrolls to
+// the term wherever it currently sits, it never re-sorts the page.
+function reveal(){
+  var h=(window.location.hash||"").slice(1);
+  if(!h)return;
+  var root=document.getElementById("gloss-entries-root");
+  if(!root)return;
+  var rows=root.querySelectorAll("[data-gloss-slug]");
+  for(var i=0;i<rows.length;i++){
+    if(rows[i].getAttribute("data-gloss-slug")===h){rows[i].scrollIntoView();return;}
+  }
+}
 function init(){
   var btns=document.querySelectorAll(".gloss-sort-toggle .sort-btn");
   var K="gloss-sort-v3";
   var sv=localStorage.getItem(K);
   if(sv!=="term"&&sv!=="pod")sv="term";
-  function set(m){renderG(m);btns.forEach(function(b){var on=b.getAttribute("data-sort")===m;b.classList.toggle("sort-btn-active",on);b.setAttribute("aria-pressed",on?"true":"false");});}
-  if(!btns.length){renderG("term");return;}
+  function set(m){renderG(m);btns.forEach(function(b){var on=b.getAttribute("data-sort")===m;b.classList.toggle("sort-btn-active",on);b.setAttribute("aria-pressed",on?"true":"false");});reveal();}
+  window.addEventListener("hashchange",reveal);
+  if(!btns.length){renderG("term");reveal();return;}
   btns.forEach(function(b){b.addEventListener("click",function(){var m=b.getAttribute("data-sort");localStorage.setItem(K,m);set(m);});});
   set(sv);
 }

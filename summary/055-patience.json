@@ -1,12 +1,20 @@
 {
-  "narrative" : "This chapter reframes patience as the phenomenological inside view of what randomness plus selective memory produces over time — the ratchet that keeps almost all gains while losing almost none permanently. Moving from Leo Spiegel's CEO boulder-rolling through evolutionary biology to Whitehead's lure and Teilhard's Omega Point, it argues that the universe's filter is precisely patient: it accepts only what holds, waits as long as needed, and accumulates structures capable of reflection — culminating in the claim that love is what patience builds toward when reflectors complex enough to notice meet each other.",
+  "narrative" : "Reframes patience as the inside view of randomness filtered by selective memory — the ratchet that keeps almost all gains while losing almost none permanently. Moving from Leo Spiegel's CEO boulder-rolling image through evolutionary biology to Whitehead's lure and Teilhard's Omega Point, the chapter argues that the universe's filter is exactly patient: it accepts only what holds, waits as long as needed, and accumulates structures capable of reflection — culminating in the claim that love is what patience builds toward when two reflectors complex enough to notice meet each other.",
   "schema" : 1,
   "subject" : "055-patience.md",
-  "subject-sha" : "sha256:555e518fe87a27d6a07f117a9fd831d2e0ecd94cbb36996a4bef1f4a59368289",
+  "subject-sha" : "sha256:2bddf8df49f1e1ff45a7d8300749cf3a9245603e6642eb6d9ecbeca6c0504ce5",
   "terms" : [
     {
       "canonical" : "Leo Spiegel",
       "weight" : 0.8
+    },
+    {
+      "canonical" : "Alfred North Whitehead",
+      "weight" : 0.6
+    },
+    {
+      "canonical" : "Teilhard de Chardin",
+      "weight" : 0.6
     },
     {
       "canonical" : "Omega Point",
@@ -15,14 +23,6 @@
     {
       "canonical" : "Stuart Kauffman",
       "weight" : 0.5
-    },
-    {
-      "canonical" : "Teilhard de Chardin",
-      "weight" : 0.6
-    },
-    {
-      "canonical" : "Alfred North Whitehead",
-      "weight" : 0.6
     }
   ],
   "themes" : [
@@ -33,5 +33,5 @@
     "randomness",
     "reflection"
   ],
-  "updated-at" : "2026-06-20T21:20:19Z"
+  "updated-at" : "2026-07-19T08:45:26Z"
 }

@@ -2,7 +2,7 @@
   "narrative" : "This chapter argues that structure is not opposed to randomness but is its direct product — that galaxies, dunes, snowflakes, eyes, and brains all arise from the same logic: a near-uniform starting condition, a tiny random break in that uniformity, and a force that amplifies small differences rather than smoothing them away. Moving from cosmology through biology to computation and philosophy, it shows that the creationist and the naive skeptic share a common error — imagining randomness as the alternative to order rather than its engine — and builds to Whitehead's claim that genuine novelty, the creative advance into novelty, is constitutive of reality at every scale.",
   "schema" : 1,
   "subject" : "009-randomness.md",
-  "subject-sha" : "sha256:fcdce3ca5e75aeb839b312503f7e71a5fb69ffe352ed8e8f900918e800bf9a2e",
+  "subject-sha" : "sha256:cefa96bbc6e0f35913751e721354819d9bb9b34373ad0f50a0dd25d39b061c4e",
   "terms" : [
     {
       "canonical" : "spontaneous symmetry breaking",
@@ -33,5 +33,5 @@
     "evolution",
     "self-organization"
   ],
-  "updated-at" : "2026-06-25T10:32:34Z"
+  "updated-at" : "2026-07-19T08:43:03Z"
 }

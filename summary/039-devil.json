@@ -2,7 +2,7 @@
   "narrative" : "Traces the cultural history of labeling unfamiliar harmonics as forbidden or wrong — from the medieval diabolus in musica through equal temperament's systematic exclusion of the seventh harmonic — and argues that the bent notes of blues, jazz, barbershop, and global vocal traditions were not departures from correct tuning but approaches toward consonances older and simpler than the equal-tempered grid could reach. The chapter connects the mathematical irrationality of the Pythagorean comma to the same structural crisis as the incommensurable diagonal, frames the keyboard as a narrow transduction channel that discards what the voice can keep, and reads Western musicology's vocabulary of error as a framework defending its own cartoon against the physics it had suppressed.",
   "schema" : 1,
   "subject" : "039-devil.md",
-  "subject-sha" : "sha256:0165998fbeaad8928cc3dfeb226462ed2cc6e0b5df96c12adbe171479a7c7e7f",
+  "subject-sha" : "sha256:884fb71a8c0624ed5bc9ed4912b8a2ae7bc468e177d1adad04276047a117b052",
   "terms" : [
     {
       "canonical" : "diabolus in musica",
@@ -33,5 +33,5 @@
     "framework and suppression",
     "Pythagorean crisis"
   ],
-  "updated-at" : "2026-06-25T10:30:14Z"
+  "updated-at" : "2026-07-19T08:46:37Z"
 }

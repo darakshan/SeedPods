@@ -1,18 +1,25 @@
 {
-  "narrative" : "The collection's entry point and navigation hub, introducing the central thesis that experience may be fundamental to reality rather than a late biological accident, then laying out nine named reading trails through the archive, each organized around a distinct philosophical question, with every article appearing on exactly one trail.",
+  "narrative" : "The collection's entry point and navigation hub, introducing the central thesis that experience may be fundamental to reality rather than a late biological accident, then laying out nine named reading trails through the archive — Epistemology, Frameworks, Feeling, Perception, Cosmic, Emergence, Boundary, AI, and Fractal — each organized around a distinct philosophical question, with every seedpod appearing on exactly one trail. Readers are invited to follow the trails sequentially or wander freely by numbered links, with the map dissolving into a web as connections accumulate.",
   "schema" : 1,
   "subject" : "000-map.md",
-  "subject-sha" : "sha256:0f633db8c201e86be806d8f165b375253b39471446fdfabf3f18a86cd93e5fa9",
+  "subject-sha" : "sha256:4cd91c7c5bb86b2d038ba9717bb601e113d5b51d9147ca4ad9f00a594d8facf5",
   "terms" : [
-
+    {
+      "canonical" : "SeedPods",
+      "weight" : 0.7
+    },
+    {
+      "canonical" : "Mandelbrot",
+      "weight" : 0.4
+    }
   ],
   "themes" : [
     "orientation",
     "navigation",
     "trails",
     "overview",
-    "epistemology",
-    "consciousness"
+    "consciousness",
+    "interconnection"
   ],
-  "updated-at" : "2026-06-20T21:16:23Z"
+  "updated-at" : "2026-07-19T08:44:15Z"
 }

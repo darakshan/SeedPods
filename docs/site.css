@@ -204,6 +204,7 @@ a.bib-ref:hover{color:var(--accent)}
 .bib-chapter-head a:hover{color:var(--accent)}
 .bib-row-chapter{margin:.3rem 0 .9rem 0;line-height:1.55;font-size:.95rem}
 .bib-row-chapter[id]{scroll-margin-top:5rem}
+.bib-row-author[data-bib-ids],.gloss-entry[data-gloss-slug]{scroll-margin-top:5rem}
 .bib-author-link{color:var(--ink)}
 .bib-author-link:hover .bib-authors{color:var(--warm)}
 /* Bibliography annotations (migrated footnote prose), indented like glossary defs */
