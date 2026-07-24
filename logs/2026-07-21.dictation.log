@@ -1,0 +1,213 @@
+Test 2026-07-21.11-36-43:
+[key] "I"
+[key] " had"
+[key] " an"
+[key] " interesting"
+[key] " conversation"
+[key] " yesterday"
+[key] " which"
+[key] " we wrote"
+[key] " up"
+[cur] 0
+[cur] 61
+[key] " "
+[del] 1
+[key] "."
+[key] " "
+[cur] 2
+[cur] 3
+[cur] 1
+[cur] 0
+[cur] 2
+[cur] 0
+[cur] 1
+[key] "G"
+[cur] 2
+[key] "e"
+[cur] 3
+[key] "m"
+[cur] 4
+[key] "i"
+[cur] 5
+[key] "n"
+[cur] 6
+[key] "i"
+[cur] 7
+[key] " "
+[cur] 8
+[key] "a"
+[cur] 9
+[key] "n"
+[cur] 10
+[key] "d"
+[cur] 11
+[key] " "
+[cur] 74
+[key] " "
+[key] "I"
+[key] " just"
+[key] " attached it."
+[cur] 75
+[cur] 94
+[key] " "
+[key] " "
+[key] "P"
+[key] "erh"
+[key] "aps"
+[key] " we can"
+[key] "."
+[del] 1
+[key] " add"
+[key] " this"
+[key] " as a"
+[key] " chapter"
+[key] " somewhere."
+[cur] 96
+[del] 47
+[key] "Perhaps we can add this as a chapter somewhere."
+[expect] "Gemini and I had an interesting conversation yesterday which we wrote up.  I just attached it.  Perhaps we can add this as a chapter somewhere."
+[send] "Gemini and I had an interesting conversation yesterday which we wrote up.  I just attached it.  Perhaps we can add this as a chapter somewhere."
+
+Test 2026-07-21.11-40-14:
+[key] "I"
+[key] " agree"
+[key] " with"
+[key] " you that"
+[key] " this"
+[key] " belongs"
+[key] " in"
+[key] " section"
+[key] "s"
+[cur] 0
+[cur] 46
+[key] " "
+[del] 1
+[key] "."
+[key] " "
+[key] "I"
+[key] " think"
+[key] " appetition"
+[del] 9
+[key] " petition belongs"
+[key] " in."
+[cur] 48
+[cur] 78
+[cur] 58
+[cur] 57
+[del] 1
+[cur] 58
+[key] "p"
+[cur] 78
+[cur] 77
+[del] 1
+[key] " "
+[key] "t"
+[key] "h"
+[key] "e"
+[key] " "
+[key] "F"
+[key] "e"
+[key] "e"
+[key] "l"
+[key] "i"
+[key] "n"
+[key] "g"
+[key] "s"
+[key] " "
+[key] "s"
+[key] "e"
+[key] "ction"
+[cur] 93
+[del] 5
+[key] "c"
+[key] "tion"
+[cur] 94
+[del] 4
+[key] "t"
+[key] "ion"
+[cur] 95
+[del] 3
+[key] "i"
+[key] "on"
+[cur] 96
+[del] 2
+[key] "o"
+[key] "n"
+[cur] 97
+[del] 1
+[key] "n"
+[key] ","
+[key] " "
+[key] "an"
+[key] "d o"
+[key] "f"
+[key] " course"
+[key] ", the"
+[del] 5
+[key] " the pup"
+[key] "pets"
+[key] " discussion"
+[key] " belong"
+[del] 30
+[key] ", the puppets discussion belongs in the"
+[key] " A"
+[key] "I"
+[key] " section"
+[cur] 100
+[cur] 163
+[key] " "
+[del] 1
+[key] "."
+[key] " "
+[key] "I"
+[key] " like the"
+[key] " idea"
+[key] " of"
+[key] " keeping"
+[key] " the"
+[key] " conversation"
+[key] " as the"
+[key] " main"
+[key] " content."
+[del] 1
+[key] " of"
+[key] " each"
+[key] " chapter."
+[cur] 165
+[cur] 245
+[key] " "
+[key] " "
+[key] "Dial"
+[key] "ogue is a"
+[key] " nice"
+[key] " way"
+[key] " to"
+[key] " prevent some"
+[key] " of"
+[key] " these"
+[key] " idea"
+[del] 23
+[key] "sent some of these ideas."
+[cur] 247
+[cur] 301
+[cur] 300
+[del] 1
+[key] ","
+[key] " "
+[key] "k"
+[key] "i"
+[key] "nd "
+[key] "of"
+[key] " like"
+[key] " the"
+[key] " Greek"
+[key] "s"
+[cur] 302
+[cur] 325
+[key] " "
+[del] 1
+[key] "."
+[key] " "
+[expect] "I agree with you that this belongs in sections. I think appetition belongs in the Feelings section, and of course, the puppets discussion belongs in the AI section. I like the idea of keeping the conversation as the main content of each chapter.  Dialogue is a nice way to present some of these ideas, kind of like the Greeks. "
+[send] "I agree with you that this belongs in sections. I think appetition belongs in the Feelings section, and of course, the puppets discussion belongs in the AI section. I like the idea of keeping the conversation as the main content of each chapter.  Dialogue is a nice way to present some of these ideas, kind of like the Greeks."
+

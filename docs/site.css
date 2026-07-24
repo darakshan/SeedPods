@@ -231,21 +231,26 @@ a.bib-ref:hover{color:var(--accent)}
 /* Table of contents (@toc) — nested numbered list */
 .toc-root{font-size:.98rem}
 .toc-list{list-style:none;margin:0;padding:0}
-/* Depth indent rides on each row's own left padding (set inline, by depth), NOT on a
-   margin of the nested list — that keeps every row's hue background flush to the left
-   margin so the colour fills the row full-width with only the text pushed in. */
-/* `-webkit-touch-callout` off so a long press on a leaf `<a>` opens the chapter (our gesture)
-   rather than raising iOS/WKWebView's link-preview menu; `user-select` off so the press doesn't
-   start a text selection. */
-.toc-chapter,.toc-section-head,.toc-section-line{display:flex;align-items:baseline;gap:.1rem;padding:.22rem 0;-webkit-touch-callout:none;-webkit-user-select:none;user-select:none}
+/* Depth indent rides on the row *body*'s left padding (set inline, by depth), NOT on the row
+   container — that keeps the left arrow column (`.toc-gutter`) aligned in one column at every
+   depth while the hue background still fills the row full-width, only the text pushed in.
+   `user-select` off so clicking an arrow/row doesn't start a text selection. */
+.toc-chapter,.toc-section-head,.toc-section-line{display:flex;align-items:baseline;gap:.1rem;padding:.22rem .45rem;-webkit-user-select:none;user-select:none}
 .toc-section{line-height:1.5}
 .toc-num{display:inline-block;min-width:3ch;font-family:'DM Mono',monospace;font-size:.8rem;color:var(--warm)}
 .toc-filenum{font-family:'DM Mono',monospace;font-size:.62rem;color:var(--dim)}
 .toc-section-name{font-weight:600;color:var(--ink)}
 .toc-chapter-title{color:var(--link)}
-/* The clickable body fills the row so the whole row (everything but the toggle arrow)
-   is the hit target; it opens the page (chapter / section Overview) or, for a nested
-   section with no Overview page, toggles like the arrow. */
+/* The left arrow column: a fixed-width strip painted a slightly darker shade of the row hue
+   (the translucent overlay darkens whatever `--toc-hue` sits behind it). It holds the caret on
+   collapsible sections and is empty elsewhere; the negative margins pull it flush to the row's
+   left edge and over the row's vertical padding so it reads as one continuous column. */
+.toc-gutter{align-self:stretch;display:flex;align-items:center;justify-content:center;flex-shrink:0;width:1.8rem;margin:-.22rem .35rem -.22rem -.45rem;border-radius:5px 0 0 5px;background:rgba(0,0,0,.06);border:none;padding:0;color:inherit;font:inherit}
+.toc-gutter-toggle{cursor:pointer}
+.toc-gutter-toggle:hover{background:rgba(0,0,0,.11)}
+.toc-gutter-toggle:hover .toc-arrow{color:var(--warm)}
+/* The clickable body fills the rest of the row: it opens the page (chapter / section Overview)
+   or, for a nested section with no Overview page, toggles like the arrow. */
 .toc-row-body{flex:1 1 auto;display:flex;align-items:baseline;gap:.4rem;min-width:0;background:none;border:none;font:inherit;color:inherit;text-align:left;cursor:pointer;padding:0}
 .toc-row-static{cursor:default}
 .toc-row-body:hover .toc-section-name,.toc-row-body:hover .toc-chapter-title{color:var(--warm)}
@@ -254,12 +259,8 @@ a.bib-ref:hover{color:var(--accent)}
 .toc-controls{display:flex;gap:.5rem;margin-bottom:.7rem}
 .toc-ctl-btn{font-family:'DM Mono',monospace;font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;color:var(--dim);background:none;border:1px solid var(--line);border-radius:3px;padding:.2rem .5rem;cursor:pointer}
 .toc-ctl-btn:hover{color:var(--warm);border-color:var(--warm)}
-.toc-toggle{display:inline-flex;align-items:baseline;gap:.1rem;flex-shrink:0;background:none;border:none;color:inherit;font:inherit;cursor:pointer;padding:0;text-align:left}
-/* The caret itself: a fixed-width, larger glyph so the arrow reads clearly and
-   every row's number aligns to the same column (leaf rows use a same-width spacer). */
-.toc-arrow{display:inline-block;flex-shrink:0;width:1.6rem;text-align:center;color:var(--dim);font-size:1.4rem;line-height:1;transition:transform .15s}
-.toc-toggle-spacer{display:inline-block;flex-shrink:0;width:1.6rem}
-.toc-toggle:hover .toc-arrow,.toc-row-toggle:hover .toc-arrow{color:var(--warm)}
+/* The caret itself: a larger glyph, centred in the arrow column, that rotates when collapsed. */
+.toc-arrow{display:inline-block;color:var(--dim);font-size:1.4rem;line-height:1;transition:transform .15s}
 .toc-collapsed > .toc-section-head .toc-arrow{transform:rotate(-90deg)}
 .toc-collapsed > .toc-list{display:none}
 /* By-pod table view: sortable header columns (click to sort, arrow shows direction). */

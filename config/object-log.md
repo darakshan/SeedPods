@@ -807,3 +807,18 @@ Source of truth for attachment metadata (see docs/future/attachments-design.md).
 - file-count: 1
 - outcome: stored
 
+## Gemini and me on prehension and appetition.pdf
+- received: 2026-07-21T11:36:08
+- source-name: Gemini and me on prehension and appetition.pdf
+- bytes-received: 40897
+- sha256: 4a93a13caebd879faf8eb5b6a6adfc6fa6ec4e2abbee6558572872dad77f6ac9
+- kind: file
+- file-count: 1
+- outcome: stored
+
+## Gemini and me on prehension and appetition.pdf → markdown cac061b78cbd
+- normalized: 2026-07-21T11:36:09
+- normal-form: markdown cac061b78cbd
+- normalize-tool: mutool
+- normalize-outcome: success
+

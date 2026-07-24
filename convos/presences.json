@@ -5,5 +5,12 @@
     "index" : 0,
     "userId" : "darakshan",
     "userName" : "Darakshan"
+  },
+  {
+    "deviceId" : "B0581587-AE05-4629-B3B0-46756C7EDE91",
+    "deviceName" : "Darakshans-MacBook-Air",
+    "index" : 1,
+    "userId" : "darakshan",
+    "userName" : "Darakshan"
   }
 ]
